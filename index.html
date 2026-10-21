@@ -967,6 +967,38 @@ body:not(.tones) .tone-opts{opacity:.55}
 .mz-acts{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px}
 .mz-acts .meta{font-size:12.5px;color:var(--muted)}
 .mz-acts .btn[aria-pressed="true"]{border-color:var(--acc);color:var(--acc)}
+/* dictionary */
+.dictbtn{display:inline-flex;align-items:center;gap:5px;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:6px 11px;background:var(--surface);font-size:12.5px;cursor:pointer;margin-left:auto}
+.dictbtn svg{width:16px;height:16px}
+@media (max-width:640px){ .dictbtn{position:absolute;top:4px;right:92px;padding:5px 9px;margin:0} .brand{padding-right:190px} }
+.dict-modal{max-width:600px;min-height:min(640px,86vh)}
+.dic-in{display:flex;gap:6px;align-items:center}
+.dic-in input{flex:1;min-width:0;font-size:18px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:inherit;font-family:var(--f-word)}
+.dic-in .ib{border-color:var(--line);width:42px;height:42px}
+.dic-in .ib[aria-pressed="true"]{border-color:var(--acc);color:var(--acc);background:var(--acc-soft)}
+.dic-in .ib.live{border-color:var(--bad);color:var(--bad)}
+.dic-pad{display:grid;justify-items:center;gap:8px;margin-top:12px}
+.dic-cv{position:relative;width:min(300px,78vw);aspect-ratio:1;background:var(--surface);border-radius:6px;touch-action:none}
+.dic-cv canvas{position:absolute;inset:0;width:100%;height:100%;cursor:crosshair;touch-action:none}
+.dic-cands{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;min-height:46px}
+.dic-cands button{font-family:var(--f-cn);font-size:24px;width:46px;height:46px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:inherit;cursor:pointer}
+.dic-cands button:first-child{border-color:var(--acc)}
+.dic-padacts{display:flex;gap:8px}
+.dic-msg{margin:10px 0 0}
+.dic-res{display:grid;gap:2px;margin-top:10px}
+.dic-res .it{display:grid;grid-template-columns:auto 1fr;gap:2px 14px;align-items:baseline;text-align:left;border:0;border-bottom:1px solid var(--line);background:none;color:inherit;padding:10px 2px;cursor:pointer;font:inherit}
+.dic-res .it:hover{background:var(--sunk)}
+.dic-res .it .w{font-family:var(--f-cn);font-size:22px;grid-row:span 2}
+.dic-res .it .p{color:var(--acc);font-size:14px}
+.dic-res .it .m{font-size:14px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dic-det .hd{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:6px}
+.dic-det .hd .w{font-family:var(--f-cn);font-size:44px;line-height:1.1}
+.dic-det .hd .p{font-size:20px;color:var(--acc)}
+.dic-det .rd{border-left:2px solid var(--acc-soft);padding:2px 0 2px 12px;margin-top:12px;display:grid;gap:2px;font-size:15px}
+.dic-det .rd .p{font-weight:600;color:var(--acc)}
+.dic-det .rd .k{display:inline-block;min-width:2.2em;font-size:11px;font-weight:600;color:var(--muted);letter-spacing:.06em}
+.dic-det .acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.dic-det .src{font-size:12px;color:var(--muted);margin-top:10px}
 .mg-sheet .zgl-l .k{display:inline-block;min-width:2.2em;font-size:11px;font-weight:600;color:var(--muted);letter-spacing:.06em}
 .ex .t.zc{font-family:var(--f-cn);font-size:18px}
 .ex .py{font-size:12.5px;color:var(--muted);margin-top:1px}
@@ -983,6 +1015,7 @@ body:not(.tones) .tone-opts{opacity:.55}
       <div><h1><span data-noi18n class="brand-zh">字里</span><span class="alt" data-noi18n>Zili</span></h1></div>
     </div>
     <div class="langsw" role="group" aria-label="学习语言" id="langsw" hidden><button data-l="zh" aria-pressed="true"><b>中文</b><small>HSK 1–6</small></button></div>
+    <button class="dictbtn" id="dict-open" type="button" aria-label="字典" title="字典"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg><span>字典</span></button>
     <label class="uilang" title="界面语言"><span class="sr">界面语言</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>
       <b id="ui-code">中文</b><select id="ui-lang" aria-label="界面语言"><option value="de" data-raw>Deutsch</option><option value="en" data-raw>English</option><option value="zh" data-raw>简体中文</option><option value="zht" data-raw>繁體中文</option></select></label>
   </header>
@@ -2260,7 +2293,7 @@ function recRowsHTML(prefix,has){
 /* ---------- detail modal ---------- */
 let detailOpen=null;
 function openDetail(id){ const c=BYID.get(id); if(!c) return; detailOpen=id; document.body.classList.add("modal-open"); renderDetail(); }
-function closeDetail(){ cancelRec(); detailOpen=null; document.body.classList.remove("modal-open"); $("#detail-root").innerHTML="";
+function closeDetail(){ cancelRec(); dicStop(); detailOpen=null; document.body.classList.remove("modal-open"); $("#detail-root").innerHTML="";
   if(cur==="today") renderCard(); else if(cur==="browse") renderBrowse(); else if(cur==="pile") renderPile(); }
 function renderDetail(note){
   const id=detailOpen, c=BYID.get(id); if(!c) return;
@@ -2950,6 +2983,167 @@ function mzMount(c){
     if(b.id==="mz-write"){ b.blur(); if(MZ.quiz&&MZ.hw){ MZ.hw.cancelQuiz(); MZ.quiz=false; MZ.hw.showCharacter(); b.setAttribute("aria-pressed","false"); } else mzWrite(); } });
   mzShow(0,"play");
 }
+
+/* ---------- dictionary: search by characters, pinyin, English/German; handwriting (offline) or speech ---------- */
+const DIC={py:null,pyKeys:null,pyP:null,tpl:null,tplP:null,strokes:[],cur:null,last:"",sr:null,view:"list"};
+const SR=window.SpeechRecognition||window.webkitSpeechRecognition||null;
+function dicLoadPy(){ if(DIC.pyP) return DIC.pyP;
+  DIC.pyP=fetch("dict/py.txt").then(r=>r.ok?r.text():Promise.reject()).then(t=>{ const m=new Map(); for(const l of t.split("\n")){ const i=l.indexOf("\t"); if(i>0) m.set(l.slice(0,i),l.slice(i+1)); } DIC.py=m; DIC.pyKeys=[...m.keys()]; return m; }).catch(()=>{ DIC.pyP=null; return null; });
+  return DIC.pyP; }
+const B64I=(()=>{ const a="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/", o={}; [...a].forEach((c,i)=>o[c]=i); return o; })();
+function dicLoadTpl(){ if(DIC.tplP) return DIC.tplP;
+  DIC.tplP=fetch("dict/hw.txt").then(r=>r.ok?r.text():Promise.reject()).then(t=>{ const out=[]; let rank=0;
+    for(const l of t.split("\n")){ if(!l) continue; const ch=String.fromCodePoint(l.codePointAt(0)), code=l.slice(ch.length), n=code.length/12, a=new Float32Array(code.length);
+      for(let i=0;i<code.length;i++) a[i]=B64I[code[i]]; out.push({c:ch,n,a,r:rank++}); }
+    DIC.tpl=out; return out; }).catch(()=>{ DIC.tplP=null; return null; });
+  return DIC.tplP; }
+/* handwriting: strokes → 6 points each in a 0–63 box → DP alignment against every template with a similar stroke count */
+function hwResample(pts,n){ if(pts.length<2) return Array.from({length:n},()=>pts[0]);
+  const seg=[]; let L=0; for(let i=1;i<pts.length;i++){ const d=Math.hypot(pts[i][0]-pts[i-1][0],pts[i][1]-pts[i-1][1]); seg.push(d); L+=d; }
+  if(!L) return Array.from({length:n},()=>pts[0]);
+  const out=[]; for(let k=0;k<n;k++){ const t=L*k/(n-1); let acc=0, i=0; while(i<seg.length-1&&acc+seg[i]<t){ acc+=seg[i]; i++; }
+    const f=seg[i]?Math.min(1,Math.max(0,(t-acc)/seg[i])):0; out.push([pts[i][0]+f*(pts[i+1][0]-pts[i][0]),pts[i][1]+f*(pts[i+1][1]-pts[i][1])]); }
+  return out; }
+function hwNorm(strokes){
+  const all=strokes.flat(); let x0=1e9,y0=1e9,x1=-1e9,y1=-1e9; for(const [x,y] of all){ x0=Math.min(x0,x); y0=Math.min(y0,y); x1=Math.max(x1,x); y1=Math.max(y1,y); }
+  const size=Math.max(x1-x0,y1-y0,1), ox=(size-(x1-x0))/2, oy=(size-(y1-y0))/2;
+  return strokes.map(s=>{ const r=hwResample(s,6), a=new Float32Array(12); r.forEach(([x,y],i)=>{ a[i*2]=(x-x0+ox)/size*63; a[i*2+1]=(y-y0+oy)/size*63; }); return a; }); }
+function hwMatch(strokes,k){
+  if(!DIC.tpl||!strokes.length) return [];
+  const D=hwNorm(strokes), n=D.length, res=[], GD=22, GT=12;
+  for(const t of DIC.tpl){
+    const m=t.n; if(Math.abs(m-n)>Math.max(2,Math.round(n*.25))) continue;
+    let prev=new Float32Array(m+1), cur=new Float32Array(m+1);
+    for(let j=1;j<=m;j++) prev[j]=j*GT;
+    for(let i=1;i<=n;i++){ cur[0]=i*GD; const a=D[i-1];
+      for(let j=1;j<=m;j++){ const o=(j-1)*12; let d=0;
+        for(let q=0;q<12;q+=2){ d+=Math.hypot(a[q]-t.a[o+q],a[q+1]-t.a[o+q+1]); }
+        d/=6; cur[j]=Math.min(prev[j-1]+d,prev[j]+GD,cur[j-1]+GT); }
+      [prev,cur]=[cur,prev]; }
+    res.push({c:t.c,s:prev[m]/Math.max(n,m)+Math.log(t.r+2)*.35});
+  }
+  res.sort((a,b)=>a.s-b.s); return res.slice(0,k).map(x=>x.c); }
+/* pinyin input: "zhong1guo2", "zhōngguó", "zhong guo", "lv", "lü" → {key:"zhongguo", tones:"12"} */
+const TMARK={"\u0304":"1","\u0301":"2","\u030c":"3","\u0300":"4"};
+function pyParse(q){ let key="", tones=""; const d=String(q).toLowerCase().replace(/u:/g,"v").normalize("NFD");
+  for(const ch of d){ if(TMARK[ch]) tones+=TMARK[ch]; else if(ch==="\u0308"){ if(key.endsWith("u")) key=key.slice(0,-1)+"v"; } else if(/[a-z]/.test(ch)) key+=ch; else if(/[1-5]/.test(ch)) tones+=ch; }
+  return {key,tones}; }
+function dicBankFind(q){ // English / German → words in the word bank
+  const re=new RegExp("(^|[^\\p{L}])"+q.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+"($|[^\\p{L}])","iu"), out=[];
+  for(const c of ALL){ if(c.lang!=="zh") continue; const en=String(c.en||""), de=String(c.de||"");
+    if(re.test(en)||re.test(de)){ const exact=en.toLowerCase().split(/;\s*/).includes(q.toLowerCase())||de.toLowerCase().split(/[;,]\s*/).some(x=>x.replace(/^(der|die|das)\s+/,"")===q.toLowerCase());
+      out.push({w:c.w,py:c.py||c.extra,m:[en,de].filter(Boolean).join(" · "),sc:(exact?0:10)+LV_ORDER.indexOf(c.lvl)}); } }
+  return out.sort((a,b)=>a.sc-b.sc).slice(0,40); }
+async function dicSearch(q){
+  q=String(q||"").trim(); DIC.last=q; DIC.view="list"; const msg=$("#dic-msg"), res=$("#dic-res"); if(!res) return;
+  if(!q){ res.innerHTML=""; if(msg) msg.textContent=trOne("可以输入汉字、拼音（带不带声调都行）、英文或德文，也可以手写或者说出来。")||""; return; }
+  if(msg) msg.textContent="";
+  let items=[];
+  if(HAN.test(q)){
+    const han=q.replace(/[^\u3400-\u9fff\uf900-\ufaff]/g,"");
+    if(await zdGet(han)){ if(DIC.last===q) dicShow(han); return; }
+    await zdLoad(); const parts=[...new Set(zSeg(han).filter(t=>!t.punct).map(t=>t.w))];
+    items=parts.map(w=>({w,py:zPy(w)}));
+  } else {
+    const {key,tones}=pyParse(q);
+    await dicLoadPy(); if(DIC.last!==q) return;
+    if(key&&DIC.py){
+      let line=DIC.py.get(key); let rows=line?line.split(" ").map(x=>{ const i=x.lastIndexOf(":"); return {w:x.slice(0,i),t:x.slice(i+1)}; }):[];
+      if(tones) rows=rows.filter(r=>r.t.startsWith(tones));
+      var pyPrefix=false;
+      if(!rows.length&&key.length>=2&&!/\s/.test(q)){ pyPrefix=true; for(const k of DIC.pyKeys){ if(k.startsWith(key)&&k!==key){ const l=DIC.py.get(k).split(" ").slice(0,2); l.forEach(x=>{ const i=x.lastIndexOf(":"); rows.push({w:x.slice(0,i),t:x.slice(i+1)}); }); if(rows.length>=30) break; } } }
+      const seen=new Set(); items=rows.filter(r=>!seen.has(r.w)&&seen.add(r.w)).slice(0,40).map(r=>({w:r.w,py:zPy(r.w)}));
+    }
+    if(/^[a-zäöüß' -]{2,}$/i.test(q)&&!tones){ const bank=dicBankFind(q); const seen=new Set(items.map(x=>x.w)); const extra=bank.filter(b=>!seen.has(b.w));
+      items=(typeof pyPrefix!=="undefined"&&pyPrefix)||!items.length?extra.concat(items.filter(x=>!extra.some(b=>b.w===x.w))):items.concat(extra); }
+  }
+  if(DIC.last!==q) return;
+  if(!items.length){ res.innerHTML=`<p class="small muted">${esc(trOne("没有找到。")||"没有找到。")}</p>`; return; }
+  res.innerHTML=`<div class="dic-res" data-noi18n>${items.map(x=>`<button class="it" type="button" data-dw="${esc(x.w)}"><span class="w">${zToneText(x.w,x.py)}</span><span class="p">${zTonePy(x.py)}</span><span class="m" data-dm="${esc(x.w)}">${esc(x.m||"")}</span></button>`).join("")}</div>`;
+  // meanings for the first results (word bank first, else dictionary shard)
+  items.slice(0,12).forEach(async x=>{ if(x.m) return; const c=syFind("zh",x.w); let m=c?[c.en,c.de].filter(Boolean).join(" · "):"";
+    if(!m){ const rows=await zdGet(x.w); if(rows&&rows[0]) m=[zdShort(rows[0][1]),zdShort(rows[0][2])].filter(Boolean).join(" · "); }
+    const el=document.querySelector(`[data-dm="${CSS.escape(x.w)}"]`); if(el&&m) el.textContent=m; });
+}
+async function dicShow(w){
+  const rows=await zdGet(w), res=$("#dic-res"); if(!res) return; DIC.view="word"; DIC.cur=w;
+  if(!rows){ res.innerHTML=`<p class="small muted">${esc(trOne("词典里没有这个词。")||"词典里没有这个词。")}</p>`; return; }
+  const gl=glSel().concat(["en","de"].filter(k=>!glSel().includes(k))), hsk=rows[0][3]||0, have=syFind("zh",w);
+  res.innerHTML=`<div class="dic-det">${DIC.last&&DIC.last!==w?`<button class="btn ghost sm" type="button" id="dic-back">← ${esc(trOne("返回")||"返回")}</button>`:""}
+    <div class="hd" data-noi18n><span class="w">${zToneText(w,rows[0][0])}</span><span class="p">${zTonePy(rows[0][0])}</span>${hsk?`<span class="zd-h" style="font-size:12px;border:1px solid var(--line);border-radius:999px;padding:0 8px;color:var(--acc)">HSK ${hsk}</span>`:""}</div>
+    ${rows.map(r=>`<div class="rd" data-noi18n><span class="p">${esc(r[0])}</span>${gl.filter(k=>k==="en"?r[1]:r[2]).map(k=>`<div lang="${k}"><span class="k">${GLS[k]}</span>${esc(k==="en"?r[1]:r[2])}</div>`).join("")}</div>`).join("")}
+    <div class="acts"><button class="btn sm" type="button" id="dic-say">${I.spk}<span>朗读</span></button><button class="btn primary sm" type="button" id="dic-save">${have?"放进生词堆":"收进生词"}</button></div>
+    ${mzHtml({lang:"zh",w,id:"dic:"+w})}
+    <p class="dic-det src" data-noi18n>CC-CEDICT · HanDeDict · Make Me a Hanzi</p></div>`;
+  mzMount({lang:"zh",w,id:"dic:"+w});
+}
+function dicSave(){ const w=DIC.cur; if(!w) return; zdGet(w).then(rows=>{ if(!rows) return; const r=rows[0];
+  const v={lang:"zh",word:w,lemma:w,py:r[0],en:zdShort(r[1]),de:zdShort(r[2]),source:"字典",level:r[3]?"HSK"+r[3]:undefined};
+  if(!v.en&&!v.de) v.en=r[1]||r[2]; const x=addFromReader(v);
+  toast(x==="ok"?"已收进「"+zs(w)+"」，在生词堆里":x==="dup"?"已经在词库里，放进了生词堆":"没有保存"); }); }
+/* handwriting pad */
+function dicPadHtml(){ return `<div class="dic-pad" id="dic-pad"><div class="dic-cv" id="dic-cv"><svg class="mz-grid" viewBox="0 0 100 100" aria-hidden="true"><rect x="1" y="1" width="98" height="98" rx="4"/><path d="M50 1V99M1 50H99M1 1L99 99M99 1L1 99"/></svg><canvas id="dic-canvas"></canvas></div>
+  <div class="dic-cands" id="dic-cands" data-noi18n></div><div class="dic-padacts"><button class="btn ghost sm" type="button" id="dic-undo">撤销一笔</button><button class="btn ghost sm" type="button" id="dic-clear">清除</button></div></div>`; }
+function dicPadMount(){
+  const cv=$("#dic-canvas"); if(!cv) return; const box=cv.parentElement, dpr=window.devicePixelRatio||1;
+  const W=box.clientWidth; cv.width=W*dpr; cv.height=W*dpr; const g=cv.getContext("2d"); g.scale(dpr,dpr);
+  const ink=getComputedStyle(document.body).getPropertyValue("--ink").trim()||"#1c2930";
+  const redraw=()=>{ g.clearRect(0,0,W,W); g.strokeStyle=ink; g.lineWidth=Math.max(4,W/40); g.lineCap="round"; g.lineJoin="round";
+    for(const s of DIC.strokes){ g.beginPath(); s.forEach(([x,y],i)=>i?g.lineTo(x,y):g.moveTo(x,y)); if(s.length===1) g.lineTo(s[0][0]+.1,s[0][1]); g.stroke(); } };
+  DIC.redraw=redraw; redraw();
+  let cur=null; const pos=e=>{ const r=cv.getBoundingClientRect(); return [e.clientX-r.left,e.clientY-r.top]; };
+  cv.onpointerdown=e=>{ e.preventDefault(); cv.setPointerCapture(e.pointerId); cur=[pos(e)]; DIC.strokes.push(cur); redraw(); };
+  cv.onpointermove=e=>{ if(!cur) return; const p=pos(e), l=cur[cur.length-1]; if(Math.hypot(p[0]-l[0],p[1]-l[1])>=2){ cur.push(p); redraw(); } };
+  cv.onpointerup=cv.onpointercancel=()=>{ if(!cur) return; cur=null; dicCands(); };
+  dicLoadTpl().then(()=>dicCands());
+}
+function dicCands(){ const el=$("#dic-cands"); if(!el) return;
+  if(!DIC.tpl){ el.innerHTML=`<span class="small muted">${esc(trOne("正在载入手写数据…")||"")}</span>`; return; }
+  const cs=hwMatch(DIC.strokes,10); el.innerHTML=cs.map(c=>`<button type="button" data-cand="${esc(c)}">${esc(zs(c))}</button>`).join(""); }
+function dicClearPad(){ DIC.strokes=[]; DIC.redraw&&DIC.redraw(); dicCands(); }
+/* speech */
+function dicStop(){ if(DIC.sr){ try{ DIC.sr.abort(); }catch(e){} DIC.sr=null; } const b=$("#dic-mic"); if(b) b.classList.remove("live"); }
+function dicListen(){
+  if(DIC.sr){ dicStop(); return; }
+  if(!SR){ toast(trOne("这个浏览器不支持语音输入。可以用键盘上的麦克风听写。")||""); return; }
+  const r=new SR(); r.lang="zh-CN"; r.interimResults=true; r.maxAlternatives=1; DIC.sr=r;
+  const b=$("#dic-mic"); if(b) b.classList.add("live"); const msg=$("#dic-msg"); if(msg) msg.textContent=trOne("请说中文…")||"";
+  r.onresult=e=>{ let t=""; for(const x of e.results) t+=x[0].transcript; t=t.replace(/[，。！？、,.!?\s]/g,""); const q=$("#dic-q"); if(q) q.value=t; if(e.results[e.results.length-1].isFinal) dicSearch(t); };
+  r.onerror=e=>{ const m=$("#dic-msg"); if(m) m.textContent=e.error==="not-allowed"||e.error==="service-not-allowed"?(trOne("没有麦克风或语音识别权限。")||""):(trOne("没听清，再试一次。")||""); };
+  r.onend=()=>{ DIC.sr=null; const b=$("#dic-mic"); if(b) b.classList.remove("live"); };
+  try{ r.start(); }catch(e){ dicStop(); }
+}
+function dicOpen(){
+  { const m=$("#card-area #mz"); if(m) m.remove(); }
+  detailOpen="__dict"; document.body.classList.add("modal-open"); DIC.strokes=[];
+  $("#detail-root").innerHTML=`<div class="scrim" id="d-scrim"><div class="modal dict-modal" role="dialog" aria-modal="true" aria-label="字典">
+    <div class="mhead"><h2 style="flex:1;font-size:20px">字典</h2><button class="ib" id="d-close" aria-label="关闭">${I.x}</button></div>
+    <div class="dic-in"><input type="search" id="dic-q" placeholder="汉字 · pinyin · English · Deutsch" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search">
+      <button class="ib" type="button" id="dic-hwb" aria-pressed="false" aria-label="手写" title="手写">${I.pen}</button>
+      <button class="ib" type="button" id="dic-mic" aria-label="说" title="说">${I.mic}</button></div>
+    <div id="dic-padwrap"></div>
+    <p class="small muted dic-msg" id="dic-msg"></p><div id="dic-res"></div></div></div>`;
+  const root=$("#d-scrim");
+  root.addEventListener("mousedown",e=>{ if(e.target.id==="d-scrim") closeDetail(); });
+  $("#d-close").onclick=closeDetail;
+  const q=$("#dic-q"); let tm=null;
+  q.addEventListener("input",()=>{ clearTimeout(tm); tm=setTimeout(()=>dicSearch(q.value),220); });
+  q.addEventListener("keydown",e=>{ if(e.key==="Enter"){ e.preventDefault(); clearTimeout(tm); dicSearch(q.value); q.blur(); } });
+  root.addEventListener("click",e=>{ const b=e.target.closest("button"); if(!b) return;
+    if(b.dataset.dw){ dicShow(b.dataset.dw); return; }
+    if(b.dataset.cand!=null){ q.value=(q.value||"")+b.dataset.cand; dicClearPad(); dicSearch(q.value); return; }
+    if(b.id==="dic-hwb"){ const on=b.getAttribute("aria-pressed")!=="true"; b.setAttribute("aria-pressed",on); $("#dic-padwrap").innerHTML=on?dicPadHtml():""; if(on){ DIC.strokes=[]; dicPadMount(); } return; }
+    if(b.id==="dic-undo"){ DIC.strokes.pop(); DIC.redraw&&DIC.redraw(); dicCands(); return; }
+    if(b.id==="dic-clear"){ dicClearPad(); return; }
+    if(b.id==="dic-mic"){ dicListen(); return; }
+    if(b.id==="dic-back"){ q.value=DIC.last; dicSearch(DIC.last); return; }
+    if(b.id==="dic-say"&&DIC.cur){ speak(DIC.cur); return; }
+    if(b.id==="dic-save"){ dicSave(); return; }
+  });
+  dicSearch(""); zdLoad(); dicLoadPy();
+  setTimeout(()=>{ try{ q.focus({preventScroll:true}); }catch(e){} },60);
+}
+$("#dict-open").addEventListener("click",dicOpen);
 /* word sheet */
 function mgSentenceOf(node){ const s=node&&(node.closest?node.closest(".s"):node.parentElement&&node.parentElement.closest(".s")); return s?zPlain(s):""; }
 function mgOpen(word,sentence){
@@ -4246,6 +4440,21 @@ const UI_DICT=[
 ["笔顺", "Stroke order", "Strichfolge", "Ordem dos traços", "筆順"],
 ["画", "strokes", "Striche", "traços", "畫"],
 ["描", "Trace", "Nachfahren", "Traçar", "描"],
+["字典", "Dictionary", "Wörterbuch", "Dicionário", "字典"],
+["手写", "Handwriting", "Handschrift", "Escrita à mão", "手寫"],
+["说", "Speak", "Sprechen", "Falar", "說"],
+["撤销一笔", "Undo stroke", "Strich zurück", "Desfazer traço", "撤銷一筆"],
+["清除", "Clear", "Löschen", "Limpar", "清除"],
+["返回", "Back", "Zurück", "Voltar", "返回"],
+["朗读", "Read aloud", "Vorlesen", "Ler em voz alta", "朗讀"],
+["没有找到。", "Nothing found.", "Nichts gefunden.", "Nada encontrado.", "沒有找到。"],
+["词典里没有这个词。", "This word isn’t in the dictionary.", "Dieses Wort steht nicht im Wörterbuch.", "Esta palavra não está no dicionário.", "詞典裡沒有這個詞。"],
+["正在载入手写数据…", "Loading handwriting data…", "Handschriftdaten werden geladen…", "Carregando dados de escrita…", "正在載入手寫資料…"],
+["请说中文…", "Say it in Chinese…", "Sag es auf Chinesisch…", "Diga em chinês…", "請說中文…"],
+["没听清，再试一次。", "Didn’t catch that — try again.", "Nicht verstanden – noch einmal.", "Não entendi — tente de novo.", "沒聽清，再試一次。"],
+["没有麦克风或语音识别权限。", "No permission for the microphone or speech recognition.", "Keine Berechtigung für Mikrofon oder Spracherkennung.", "Sem permissão para microfone ou reconhecimento de voz.", "沒有麥克風或語音辨識權限。"],
+["这个浏览器不支持语音输入。可以用键盘上的麦克风听写。", "This browser has no speech input. Use the microphone key on your keyboard to dictate.", "Dieser Browser kann keine Spracheingabe. Nutze die Diktiertaste der Tastatur.", "Este navegador não tem entrada de voz. Use o microfone do teclado para ditar.", "這個瀏覽器不支援語音輸入。可以用鍵盤上的麥克風聽寫。"],
+["可以输入汉字、拼音（带不带声调都行）、英文或德文，也可以手写或者说出来。", "Type characters, pinyin (with or without tones), English or German — or write or say it.", "Gib Zeichen, Pinyin (mit oder ohne Töne), Englisch oder Deutsch ein – oder schreib bzw. sprich es.", "Digite caracteres, pinyin (com ou sem tons), inglês ou alemão — ou escreva ou fale.", "可以輸入漢字、拼音（帶不帶聲調都行）、英文或德文，也可以手寫或者說出來。"],
 ["看笔顺", "Watch strokes", "Strichfolge ansehen", "Ver traços", "看筆順"],
 ["跟着写", "Write along", "Mitschreiben", "Escrever junto", "跟著寫"],
 ["生词卡翻面后显示笔顺米字格", "Show the stroke-order grid on the back of flashcards", "Strichfolge-Raster auf der Kartenrückseite zeigen", "Mostrar a grade de traços no verso dos cartões", "生詞卡翻面後顯示筆順米字格"],
