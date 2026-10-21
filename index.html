@@ -31,7 +31,7 @@
   --f-cn:"LXGW WenKai", "Kaiti SC", "STKaiti", "EL Hei", serif; /* Chinese content: LXGW WenKai (Traditional: LXGW WenKai TC) */
   --f-cnui:"EL Hei", "PingFang SC", "Microsoft YaHei", sans-serif; /* logo and interface */
   --f-mono:"Source Sans 3", "EL Hei", sans-serif;
-  --tone:#0f8a80; --t1:var(--t1l,var(--tone)); --t2:var(--t2l,var(--tone)); --t3:var(--t3l,var(--tone)); --t4:var(--t4l,var(--tone));
+  --tone:#4f948c; --t1:var(--t1l,var(--tone)); --t2:var(--t2l,var(--tone)); --t3:var(--t3l,var(--tone)); --t4:var(--t4l,var(--tone));
   --r:12px; color-scheme:light;
 }
 @media (prefers-color-scheme: dark){ :root{
@@ -40,7 +40,7 @@
   --der:#9fb6dd; --die:#e08a7c; --das:#86c9a4;
   --a1:#9cc77f; --a2:#7cc4bd; --b1:#9fb6dd; --b2:#b7a3e0; --c1:#e09bbb; --c2:#e0a184;
   --ok:#86c9a4; --ok-soft:#1b3328; --warn:#d6ad5c; --warn-soft:#352a14; --bad:#e08a7c; --bad-soft:#3a201c;
-  --scrim:rgba(0,0,0,.55); --pt-mark:#2c6b64; --rule:#c9d2d4; --tone:#4fd1c5; --t1:var(--t1d,var(--tone)); --t2:var(--t2d,var(--tone)); --t3:var(--t3d,var(--tone)); --t4:var(--t4d,var(--tone)); color-scheme:dark }}
+  --scrim:rgba(0,0,0,.55); --pt-mark:#2c6b64; --rule:#c9d2d4; --tone:#7fb3ab; --t1:var(--t1d,var(--tone)); --t2:var(--t2d,var(--tone)); --t3:var(--t3d,var(--tone)); --t4:var(--t4d,var(--tone)); color-scheme:dark }}
 
 html{-webkit-text-size-adjust:100%;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 body{margin:0;--acc:var(--pt);--acc-soft:var(--pt-soft);background:var(--bg);color:var(--ink);font-family:var(--f-ui);font-size:15px;line-height:1.55}
@@ -1514,12 +1514,12 @@ function zPy(w){ const a=zPyArr(w); if(w.length>1&&w.endsWith("儿")&&!ER_X.test
 function zTone(syl){ // 1–4 from the tone mark, 5 = neutral
   const m=String(syl||"").normalize("NFD").match(/[\u0304\u0301\u030c\u0300]/); return m?{"\u0304":1,"\u0301":2,"\u030c":3,"\u0300":4}[m[0]]:5; }
 const tonesOn=()=>S.settings.tones===true;
-const TPAL=[["teal","#0f8a80","#4fd1c5"],["coral","#d0483f","#f08a7e"],["amber","#b7740c","#f2b84b"],["green","#2e8540","#7fd08f"],["blue","#2f63c4","#8db3f3"],["violet","#7448c9","#b9a2f5"],["rose","#c03f78","#f09bbd"]]; // name, light, dark
+const TPAL=[["teal","#4f948c","#7fb3ab"],["coral","#c0766e","#c99590"],["amber","#9e8048","#c0a97c"],["green","#6e9670","#93b394"],["blue","#6a84b3","#95a8c9"],["violet","#8a7bb8","#aa9fcb"],["rose","#b07591","#c49bad"]]; // name, light, dark
 const toneSel=()=>{ const t=S.settings.toneSel; return Array.isArray(t)?t.filter(k=>k>=1&&k<=4):[3]; };
 const toneCol=k=>(S.settings.toneCol||{})[k]||"teal"; // a palette name or "#rrggbb"
 function toneVars(){ const st=document.documentElement.style;
   for(const k of [1,2,3,4]){ const c=toneCol(k), p=TPAL.find(x=>x[0]===c);
-    const l=p?p[1]:/^#[0-9a-f]{6}$/i.test(c)?c:TPAL[0][1], d=p?p[2]:/^#[0-9a-f]{6}$/i.test(c)?`color-mix(in srgb, ${c} 62%, white)`:TPAL[0][2];
+    const l=p?p[1]:/^#[0-9a-f]{6}$/i.test(c)?c:TPAL[0][1], d=p?p[2]:/^#[0-9a-f]{6}$/i.test(c)?`color-mix(in srgb, ${c} 70%, #c9d2d4)`:TPAL[0][2];
     st.setProperty("--t"+k+"l",l); st.setProperty("--t"+k+"d",d); } }
 function renderToneSw(){ $$("[data-sw]").forEach(el=>{ const k=+el.dataset.sw, cur=toneCol(k), custom=/^#/.test(cur);
   el.innerHTML=TPAL.map(([n,l])=>`<button type="button" data-swk="${k}" data-swc="${n}" style="background:${l}" aria-label="${n}" aria-pressed="${cur===n}"></button>`).join("")+`<label class="cust${custom?" on":""}" title="自定义颜色"><input type="color" data-swk="${k}" value="${custom?cur:"#0f8a80"}" aria-label="自定义颜色"></label>`; }); }
