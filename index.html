@@ -5,52 +5,57 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>字里 Zili</title>
 <meta name="apple-mobile-web-app-title" content="字里 Zili">
-<meta name="theme-color" content="#f7f1e8">
+<meta name="theme-color" content="#f2f4f3">
 <meta name="description" content="字里 — Chinesisch lesen und lernen, Schritt für Schritt.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=2">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,500;0,600;1,500&display=swap">
 <style>
+/* Look follows Entrelinhas (字里行间): cool paper, ink-slate text, hairlines, one muted teal accent, serif headings. */
 :root{
-  --paper:#f7f1e8; --surface:#ffffff; --ink:#2b2420; --muted:#7a6e64; --line:#e7dccd;
-  --accent:#e0772a; --accent-soft:#fbe5d1; --shade:rgba(43,36,32,.18);
-  --t1:#d1342f; --t2:#2e8b57; --t3:#2c6fd1; --t4:#8e44ad; --t5:#7a6e64;
+  --paper:#f2f4f3; --surface:#ffffff; --sunk:#e7ebea; --ink:#1c2930; --muted:#5d6a70; --line:#d5dbda; --rule:#1c2930;
+  --accent:#2c6b64; --accent-soft:#dbeae6; --on-acc:#ffffff; --pt-mark:#7ebdb2; --shade:rgba(20,30,34,.32);
+  --t1:#b5402f; --t2:#2f7a55; --t3:#3b5b86; --t4:#6a5598; --t5:#5d6a70;
+  --f-word:"Source Serif 4", Georgia, "EL Hei", "PingFang SC", sans-serif;
+  --f-ui:"Source Sans 3", "EL Hei", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
   --f-cn:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
   --f-cnt:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
-  --f-ui:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --zh-size:24px;
+  --r:12px;
 }
-html[data-mode="adult"]{ --accent:#2f6f66; --accent-soft:#dcece9; --paper:#f5f6f5; --zh-size:20px; }
+html[data-mode="adult"]{ --zh-size:20px; }
 html[lang="zh-Hans"] .hz, html .hz{font-family:var(--f-cn)}
 html[data-trad="1"] .hz{font-family:var(--f-cnt)}
 @media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){ --paper:#1c1a18; --surface:#27231f; --ink:#f3ebe0; --muted:#a79b8e; --line:#3b342e; --accent-soft:#3d2a1b; --shade:rgba(0,0,0,.5); }
+  :root:not([data-theme="light"]){ --paper:#12181b; --surface:#1a2226; --sunk:#0e1316; --ink:#e3eaeb; --muted:#93a1a6; --line:#2b373b; --rule:#c9d2d4; --accent:#7ebdb2; --accent-soft:#1f3735; --on-acc:#0f1a19; --pt-mark:#2c6b64; --shade:rgba(0,0,0,.55); --t1:#e08a7c; --t2:#86c9a4; --t3:#9fb6dd; --t4:#b7a3e0; --t5:#93a1a6; }
 }
-:root[data-theme="dark"]{ --paper:#1c1a18; --surface:#27231f; --ink:#f3ebe0; --muted:#a79b8e; --line:#3b342e; --accent-soft:#3d2a1b; --shade:rgba(0,0,0,.5); }
+:root[data-theme="dark"]{ --paper:#12181b; --surface:#1a2226; --sunk:#0e1316; --ink:#e3eaeb; --muted:#93a1a6; --line:#2b373b; --rule:#c9d2d4; --accent:#7ebdb2; --accent-soft:#1f3735; --on-acc:#0f1a19; --pt-mark:#2c6b64; --shade:rgba(0,0,0,.55); --t1:#e08a7c; --t2:#86c9a4; --t3:#9fb6dd; --t4:#b7a3e0; --t5:#93a1a6; }
 *{box-sizing:border-box}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-ui);font-size:16px;line-height:1.6;-webkit-text-size-adjust:100%}
 button{font:inherit;color:inherit;cursor:pointer}
 .wrap{max-width:720px;margin:0 auto;padding:0 16px}
 header.top{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
 .brand{display:flex;align-items:center;gap:10px;padding:12px 0 6px}
-.brand h1{margin:0;font-size:20px;font-weight:700}
-.brand .sub{font-size:12px;color:var(--muted)}
+.brand h1{margin:0;font-family:var(--f-word);font-size:21px;font-weight:600;line-height:1.1;letter-spacing:-.005em}
+.brand h1 > span:first-child{font-family:var(--f-cn);letter-spacing:.02em}
+.brand h1 .alt{font-family:var(--f-word);font-style:italic;font-weight:500;color:var(--muted);font-size:.78em;margin-left:.5em}
+.brand .sub{font-size:13px;color:var(--muted)}
 .tabs{display:flex;gap:4px;overflow-x:auto}
 .tabs button{background:none;border:0;padding:10px 12px;color:var(--muted);font-weight:500;border-bottom:2px solid transparent;white-space:nowrap}
 .tabs button[aria-current="true"]{color:var(--ink);border-bottom-color:var(--accent)}
 main{padding:20px 0 90px}
-h2{font-size:22px;margin:4px 0 6px}
+h2{font-family:var(--f-word);font-weight:600;font-size:24px;margin:4px 0 6px;letter-spacing:-.005em}
 .eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0}
 .lede{color:var(--muted);margin:6px 0 16px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;margin:12px 0}
-.btn{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:9px 16px;font-weight:500}
-.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin:12px 0}
+.btn{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:9px 16px;font-weight:500}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--on-acc)}
 .btn.sm{padding:6px 12px;font-size:14px}
 .btn.danger{color:#b3261e}
-.seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--surface)}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--surface)}
 .seg button{border:0;background:none;padding:8px 14px;color:var(--muted)}
 .seg button[aria-pressed="true"]{background:var(--accent-soft);color:var(--ink);font-weight:600}
 .row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
@@ -62,7 +67,7 @@ h2{font-size:22px;margin:4px 0 6px}
 .mascot{width:84px;height:84px;flex:none}
 .bar{height:10px;background:var(--line);border-radius:999px;overflow:hidden;margin-top:8px}
 .bar>i{display:block;height:100%;background:var(--accent)}
-.artitem{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:14px;margin:10px 0;width:100%;text-align:left}
+.artitem{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);margin:10px 0;width:100%;text-align:left}
 .artitem .t{font-size:var(--zh-size);font-weight:500}
 .artitem .d{font-size:13px;color:var(--muted)}
 .badge{font-size:12px;padding:2px 8px;border-radius:999px;background:var(--accent-soft);white-space:nowrap}
@@ -98,7 +103,7 @@ input[type=number]{width:84px;padding:8px 10px;border:1px solid var(--line);bord
 <header class="top"><div class="wrap">
   <div class="brand">
     <svg width="36" height="36" viewBox="0 0 512 512" aria-hidden="true"><rect width="512" height="512" rx="112" fill="#1c2930"/><text x="256" y="262" font-family="'Noto Serif CJK SC','Noto Serif SC','Songti SC',serif" font-size="268" font-weight="700" text-anchor="middle" fill="#f2f4f3">字</text><path d="M120 378 q 33 -30 66 0 t 66 0 t 66 0 t 66 0 t 66 0" fill="none" stroke="#7ebdb2" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    <div><h1 id="appName">字里 Zili</h1><div class="sub" id="appSub"></div></div>
+    <div><h1 id="appName"><span>字里</span><span class="alt">Zili</span></h1><div class="sub" id="appSub"></div></div>
   </div>
   <nav class="tabs" id="tabs"></nav>
 </div></header>
