@@ -1,6 +1,46 @@
 {
- "updated": "2026-10-21T15:50:41Z",
+ "updated": "2026-10-21T15:52:35Z",
  "days": [
+  {
+   "date": "2026-10-22",
+   "items": [
+    {
+     "i": 0,
+     "lang": "zh",
+     "title": "学校的新朋友",
+     "kind": "story",
+     "level": "HSK1"
+    },
+    {
+     "i": 1,
+     "lang": "zh",
+     "title": "晚上的中文课",
+     "kind": "dialogue",
+     "level": "HSK2"
+    },
+    {
+     "i": 2,
+     "lang": "zh",
+     "title": "一边上学，一边工作",
+     "kind": "feature",
+     "level": "HSK3"
+    },
+    {
+     "i": 3,
+     "lang": "zh",
+     "title": "在家办公的一天",
+     "kind": "feature",
+     "level": "HSK4"
+    },
+    {
+     "i": 4,
+     "lang": "zh",
+     "title": "花钱买一个安静的座位",
+     "kind": "feature",
+     "level": "HSK5"
+    }
+   ]
+  },
   {
    "date": "2026-10-21",
    "items": [

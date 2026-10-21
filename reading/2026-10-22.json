@@ -1,0 +1,688 @@
+{
+ "date": "2026-10-22",
+ "createdBy": "claude",
+ "items": [
+  {
+   "lang": "zh",
+   "level": "HSK1",
+   "kind": "story",
+   "section": "学校",
+   "topic": "kids",
+   "title": "学校的新朋友",
+   "title_en": "A new friend at school",
+   "title_de": "Eine neue Freundin in der Schule",
+   "paragraphs": [
+    "今天是星期一。小月去学校，她有一点儿不高兴，因为她在这个学校没有朋友。",
+    "上课的时候，一个女孩子坐在她前面。女孩子说：“你好，我叫丽丽。你叫什么名字？”",
+    "小月说：“我叫小月。”下课了，她们一起吃苹果，一起看书。",
+    "回家的时候，小月很高兴。她对妈妈说：“妈妈，我有新朋友了！”"
+   ],
+   "paragraphs_en": [
+    "Today is Monday. Xiaoyue goes to school. She is a little unhappy, because she has no friends at this school.",
+    "During the lesson, a girl sits in front of her. The girl says: “Hello, I'm Lili. What's your name?”",
+    "Xiaoyue says: “I'm Xiaoyue.” When the lesson is over, they eat apples together and read books together.",
+    "On the way home, Xiaoyue is very happy. She says to her mum: “Mum, I have a new friend!”"
+   ],
+   "paragraphs_de": [
+    "Heute ist Montag. Xiaoyue geht in die Schule. Sie ist ein bisschen traurig, weil sie an dieser Schule keine Freunde hat.",
+    "Im Unterricht sitzt ein Mädchen vor ihr. Das Mädchen sagt: „Hallo, ich heiße Lili. Wie heißt du?“",
+    "Xiaoyue sagt: „Ich heiße Xiaoyue.“ Nach der Stunde essen sie zusammen Äpfel und lesen zusammen Bücher.",
+    "Auf dem Heimweg ist Xiaoyue sehr froh. Sie sagt zu ihrer Mama: „Mama, ich habe eine neue Freundin!“"
+   ],
+   "glossary": [
+    {
+     "w": "星期一",
+     "p": "xīng qī yī",
+     "en": "Monday",
+     "de": "der Montag"
+    },
+    {
+     "w": "学校",
+     "p": "xué xiào",
+     "en": "school",
+     "de": "die Schule"
+    },
+    {
+     "w": "有一点儿",
+     "p": "yǒu yì diǎnr",
+     "en": "a little, a bit",
+     "de": "ein bisschen"
+    },
+    {
+     "w": "因为",
+     "p": "yīn wèi",
+     "en": "because",
+     "de": "weil"
+    },
+    {
+     "w": "上课",
+     "p": "shàng kè",
+     "en": "to have a lesson; class starts",
+     "de": "Unterricht haben"
+    },
+    {
+     "w": "女孩子",
+     "p": "nǚ hái zi",
+     "en": "girl",
+     "de": "das Mädchen"
+    },
+    {
+     "w": "名字",
+     "p": "míng zi",
+     "en": "name",
+     "de": "der Name"
+    },
+    {
+     "w": "下课",
+     "p": "xià kè",
+     "en": "class is over",
+     "de": "Unterrichtsschluss; die Stunde ist aus"
+    },
+    {
+     "w": "一起",
+     "p": "yì qǐ",
+     "en": "together",
+     "de": "zusammen"
+    },
+    {
+     "w": "新",
+     "p": "xīn",
+     "en": "new",
+     "de": "neu"
+    }
+   ],
+   "grammar": "有一点儿 + adjective means “a little …” and is mostly used for things we don't like: 有一点儿不高兴 “a bit unhappy”. 因为 introduces the reason and often comes after the result. （有一点儿＋形容词，多用于不太好的感觉）",
+   "grammar_de": "有一点儿 + Adjektiv heißt „ein bisschen …“ und steht meist bei unangenehmen Dingen: 有一点儿不高兴 „ein bisschen traurig“. 因为 leitet den Grund ein und steht oft nach dem Ergebnis.",
+   "questions": [
+    "小月为什么不高兴？",
+    "她的新朋友叫什么名字？",
+    "下课了，她们一起做什么？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "dialogue",
+   "section": "学习",
+   "title": "晚上的中文课",
+   "title_en": "Chinese class in the evening",
+   "title_de": "Chinesischkurs am Abend",
+   "dek": "安娜在汉诺威的一所语言学校学中文。",
+   "paragraphs": [
+    "安娜：王老师，您好！对不起，我来晚了。",
+    "王老师：没关系，安娜。今天的公共汽车很慢吧？",
+    "安娜：是的，下雨了，路上车很多。",
+    "王老师：快坐吧。我们今天学习怎么介绍自己的工作。",
+    "安娜：太好了！我在一家公司工作，我的同事有很多是中国人。",
+    "王老师：那你可以用中文跟他们说话了。",
+    "安娜：可是我的汉语还不太好，我怕说错。",
+    "王老师：说错也没关系。每天说一点儿，你会越来越好的。",
+    "安娜：谢谢老师！下个星期，我想用中文请同事喝咖啡。",
+    "王老师：好主意！到时候告诉我他们说了什么。"
+   ],
+   "paragraphs_en": [
+    "Anna: Hello, Ms Wang! Sorry I'm late.",
+    "Ms Wang: That's all right, Anna. The bus was slow today, wasn't it?",
+    "Anna: Yes, it was raining and there was a lot of traffic.",
+    "Ms Wang: Sit down, quick. Today we're learning how to talk about our jobs.",
+    "Anna: Great! I work at a company, and many of my colleagues are Chinese.",
+    "Ms Wang: Then you can speak Chinese with them.",
+    "Anna: But my Chinese isn't very good yet. I'm afraid of making mistakes.",
+    "Ms Wang: Mistakes don't matter. If you speak a little every day, you'll get better and better.",
+    "Anna: Thank you! Next week I want to invite my colleagues for a coffee — in Chinese.",
+    "Ms Wang: Good idea! Then tell me what they said."
+   ],
+   "paragraphs_de": [
+    "Anna: Guten Abend, Frau Wang! Entschuldigung, ich bin zu spät.",
+    "Frau Wang: Kein Problem, Anna. Der Bus war heute langsam, oder?",
+    "Anna: Ja, es hat geregnet, und auf den Straßen war viel los.",
+    "Frau Wang: Setz dich schnell. Heute lernen wir, wie man seine Arbeit vorstellt.",
+    "Anna: Super! Ich arbeite in einer Firma, und viele meiner Kolleginnen und Kollegen sind Chinesen.",
+    "Frau Wang: Dann kannst du ja Chinesisch mit ihnen sprechen.",
+    "Anna: Aber mein Chinesisch ist noch nicht so gut. Ich habe Angst, Fehler zu machen.",
+    "Frau Wang: Fehler sind nicht schlimm. Wenn du jeden Tag ein bisschen sprichst, wirst du immer besser.",
+    "Anna: Danke! Nächste Woche möchte ich meine Kollegen auf Chinesisch zum Kaffee einladen.",
+    "Frau Wang: Gute Idee! Erzähl mir dann, was sie gesagt haben."
+   ],
+   "glossary": [
+    {
+     "w": "来晚",
+     "p": "lái wǎn",
+     "en": "to arrive late",
+     "de": "zu spät kommen"
+    },
+    {
+     "w": "没关系",
+     "p": "méi guān xi",
+     "en": "it doesn't matter",
+     "de": "macht nichts"
+    },
+    {
+     "w": "公共汽车",
+     "p": "gōng gòng qì chē",
+     "en": "bus",
+     "de": "der Bus"
+    },
+    {
+     "w": "介绍",
+     "p": "jiè shào",
+     "en": "to introduce; to present",
+     "de": "vorstellen"
+    },
+    {
+     "w": "自己",
+     "p": "zì jǐ",
+     "en": "oneself; one's own",
+     "de": "selbst; eigen"
+    },
+    {
+     "w": "公司",
+     "p": "gōng sī",
+     "en": "company",
+     "de": "die Firma"
+    },
+    {
+     "w": "同事",
+     "p": "tóng shì",
+     "en": "colleague",
+     "de": "der Kollege / die Kollegin"
+    },
+    {
+     "w": "怕",
+     "p": "pà",
+     "en": "to be afraid of",
+     "de": "Angst haben vor"
+    },
+    {
+     "w": "越来越",
+     "p": "yuè lái yuè",
+     "en": "more and more",
+     "de": "immer mehr"
+    },
+    {
+     "w": "主意",
+     "p": "zhǔ yi",
+     "en": "idea",
+     "de": "die Idee"
+    },
+    {
+     "w": "到时候",
+     "p": "dào shí hou",
+     "en": "when the time comes; then",
+     "de": "dann, wenn es so weit ist"
+    }
+   ],
+   "grammar": "越来越 + adjective means “more and more …”: 越来越好 “better and better”. 会……的 at the end makes a confident prediction: 你会越来越好的 “you will surely get better”. （越来越＋形容词；会……的 表示有把握的推测）",
+   "grammar_de": "越来越 + Adjektiv heißt „immer …“: 越来越好 „immer besser“. 会……的 drückt eine sichere Vermutung aus: 你会越来越好的 „du wirst bestimmt immer besser“.",
+   "questions": [
+    "安娜为什么来晚了？",
+    "安娜的同事是哪国人？",
+    "下个星期安娜想做什么？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK3",
+   "kind": "feature",
+   "section": "工作",
+   "title": "一边上学，一边工作",
+   "title_en": "Studying and working at the same time",
+   "title_de": "Studieren und nebenbei arbeiten",
+   "dek": "在德国，很多大学生每个星期都去公司上几天班。",
+   "paragraphs": [
+    "在德国，很多大学生一边上学，一边在公司工作。德国人把这种学生叫作“工作学生”。他们不是实习生，而是公司的正式员工，只是每个星期工作的时间比较短。",
+    "李明是汉诺威的一名大学生，学的是计算机。每个星期，他在一家公司工作二十个小时。他的工作不太难：帮同事检查数据，有时候也要参加会议。",
+    "李明觉得，这份工作对他很有帮助。第一，他可以挣一些钱，交房租的时候不用太担心。第二，他能提前了解公司是怎么工作的，毕业以后找工作会更容易。",
+    "当然，一边学习一边工作也很累。考试以前，他常常要请假复习。不过他说：“虽然很忙，但是我学到了很多书本上没有的东西。”"
+   ],
+   "paragraphs_en": [
+    "In Germany, many university students work at a company while they study. Germans call these students “Werkstudenten” (working students). They are not interns but regular employees of the company — they just work fewer hours a week.",
+    "Li Ming is a student in Hanover studying computer science. Every week he works twenty hours at a company. His job isn't very hard: he helps his colleagues check data, and sometimes he also attends meetings.",
+    "Li Ming feels this job helps him a lot. First, he can earn some money, so he doesn't have to worry too much when the rent is due. Second, he can learn early on how a company works, which will make it easier to find a job after he graduates.",
+    "Of course, studying and working at the same time is also tiring. Before exams he often has to take time off to revise. Still, he says: “I'm busy, but I've learned a lot that isn't in any book.”"
+   ],
+   "paragraphs_de": [
+    "In Deutschland arbeiten viele Studierende neben dem Studium in einer Firma. Man nennt sie Werkstudentinnen und Werkstudenten. Sie sind keine Praktikanten, sondern reguläre Angestellte – sie arbeiten nur weniger Stunden pro Woche.",
+    "Li Ming studiert in Hannover Informatik. Jede Woche arbeitet er zwanzig Stunden in einer Firma. Seine Arbeit ist nicht besonders schwer: Er hilft den Kollegen, Daten zu prüfen, und manchmal nimmt er auch an Besprechungen teil.",
+    "Li Ming findet, dass ihm diese Stelle viel bringt. Erstens verdient er etwas Geld und muss sich bei der Miete nicht so viele Sorgen machen. Zweitens lernt er schon früh, wie eine Firma funktioniert, und wird nach dem Abschluss leichter eine Stelle finden.",
+    "Natürlich ist es auch anstrengend, gleichzeitig zu studieren und zu arbeiten. Vor Prüfungen muss er oft freinehmen, um zu lernen. Trotzdem sagt er: „Ich bin zwar sehr beschäftigt, aber ich habe viel gelernt, was in keinem Buch steht.“"
+   ],
+   "glossary": [
+    {
+     "w": "一边",
+     "p": "yì biān",
+     "en": "while (doing two things at once: 一边A一边B)",
+     "de": "während; gleichzeitig (一边A一边B)"
+    },
+    {
+     "w": "叫作",
+     "p": "jiào zuò",
+     "en": "to be called",
+     "de": "nennen; heißen"
+    },
+    {
+     "w": "实习生",
+     "p": "shí xí shēng",
+     "en": "intern",
+     "de": "der Praktikant / die Praktikantin"
+    },
+    {
+     "w": "正式",
+     "p": "zhèng shì",
+     "en": "formal; regular (employee)",
+     "de": "offiziell; regulär"
+    },
+    {
+     "w": "员工",
+     "p": "yuán gōng",
+     "en": "employee",
+     "de": "der/die Angestellte"
+    },
+    {
+     "w": "计算机",
+     "p": "jì suàn jī",
+     "en": "computer; computer science",
+     "de": "der Computer; die Informatik"
+    },
+    {
+     "w": "检查",
+     "p": "jiǎn chá",
+     "en": "to check; to inspect",
+     "de": "prüfen, kontrollieren"
+    },
+    {
+     "w": "数据",
+     "p": "shù jù",
+     "en": "data",
+     "de": "die Daten"
+    },
+    {
+     "w": "挣钱",
+     "p": "zhèng qián",
+     "en": "to earn money",
+     "de": "Geld verdienen"
+    },
+    {
+     "w": "房租",
+     "p": "fáng zū",
+     "en": "rent",
+     "de": "die Miete"
+    },
+    {
+     "w": "提前",
+     "p": "tí qián",
+     "en": "in advance; early",
+     "de": "im Voraus; früher"
+    },
+    {
+     "w": "毕业",
+     "p": "bì yè",
+     "en": "to graduate",
+     "de": "den Abschluss machen"
+    },
+    {
+     "w": "请假",
+     "p": "qǐng jià",
+     "en": "to ask for leave; take time off",
+     "de": "freinehmen, Urlaub nehmen"
+    },
+    {
+     "w": "复习",
+     "p": "fù xí",
+     "en": "to revise; to review",
+     "de": "wiederholen, lernen"
+    }
+   ],
+   "grammar": "一边A，一边B: doing A and B at the same time — 一边上学，一边工作 “studying while working”. Note also 把A叫作B “to call A B”, a 把 sentence. （一边……一边……：两件事同时做）",
+   "grammar_de": "一边A，一边B: A und B gleichzeitig tun – 一边上学，一边工作 „neben dem Studium arbeiten“. Außerdem 把A叫作B „A als B bezeichnen“, ein 把-Satz.",
+   "questions": [
+    "李明每个星期工作多少个小时？",
+    "他觉得这份工作有哪两个好处？",
+    "考试以前他常常要做什么？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK4",
+   "kind": "feature",
+   "section": "工作",
+   "title": "在家办公的一天",
+   "title_en": "A day working from home",
+   "title_de": "Ein Tag im Homeoffice",
+   "dek": "在家工作听起来很舒服，可是真的那么轻松吗？",
+   "paragraphs": [
+    "自从公司允许员工每周在家办公两天，林小姐的生活发生了不少变化。以前她每天早上六点半就得起床，坐四十分钟的地铁去上班；现在，在家办公的日子里，她可以多睡半个小时，还能慢慢地吃一顿早饭。",
+    "不过，在家工作并不像很多人想象的那么轻松。刚开始的时候，林小姐常常一边开视频会议，一边想着洗衣服、收快递，注意力很难集中。有时候到了晚上八点，她还在回复邮件，工作和生活好像没有了界限。",
+    "后来，她给自己定了几条规矩：每天九点准时坐到书桌前，穿上正式一点儿的衣服；工作的时候把手机放在另一个房间；下午六点关上电脑，就算是“下班”了。她还把客厅的一个角落布置成了小办公室，只在那里工作。",
+    "对公司来说，在家办公也有好处：办公室不再需要那么多座位，每个月能省下一笔租金。不过，也有经理担心，看不见员工，就不太容易了解大家的工作进度。",
+    "现在，林小姐觉得在家办公的效率甚至比在办公室还高。但她也发现，自己有点儿想念和同事们一起喝咖啡、聊天的时光。所以，她最喜欢的安排是：一半时间在家，一半时间去公司。"
+   ],
+   "paragraphs_en": [
+    "Since her company began allowing staff to work from home two days a week, Ms Lin's life has changed quite a bit. She used to get up at half past six every morning and ride the underground for forty minutes to work; now, on home-office days, she can sleep half an hour longer and eat breakfast in peace.",
+    "Working from home, however, is not as easy as many people imagine. At first, during video meetings Ms Lin would often be thinking about doing the laundry or collecting a parcel, and she found it hard to concentrate. Sometimes she was still answering emails at eight in the evening, as if there were no line between work and life.",
+    "So she set herself a few rules: sit down at her desk at nine sharp, in slightly smarter clothes; keep her phone in another room while working; shut the laptop at six — and that counts as “leaving the office”. She also turned a corner of the living room into a small office and works only there.",
+    "For the company, working from home has advantages too: the office no longer needs as many desks, which saves a sum in rent every month. Some managers, however, worry that when they can't see their staff, it is harder to keep track of how the work is progressing.",
+    "Now Ms Lin finds she is even more productive at home than in the office. But she has also noticed that she misses having coffee and chatting with her colleagues. So her favourite arrangement is half the time at home, half the time at the office."
+   ],
+   "paragraphs_de": [
+    "Seit ihre Firma den Mitarbeitenden erlaubt, zwei Tage pro Woche von zu Hause zu arbeiten, hat sich Frau Lins Leben ziemlich verändert. Früher musste sie jeden Morgen um halb sieben aufstehen und vierzig Minuten mit der U-Bahn zur Arbeit fahren; an Homeoffice-Tagen kann sie jetzt eine halbe Stunde länger schlafen und in Ruhe frühstücken.",
+    "Allerdings ist Arbeiten zu Hause nicht so entspannt, wie viele glauben. Am Anfang dachte Frau Lin in Videokonferenzen oft ans Wäschewaschen oder an ein Paket, das abzuholen war, und konnte sich kaum konzentrieren. Manchmal beantwortete sie um acht Uhr abends noch E-Mails – Arbeit und Freizeit schienen keine Grenze mehr zu haben.",
+    "Deshalb hat sie sich ein paar Regeln gegeben: Um Punkt neun sitzt sie am Schreibtisch, in etwas ordentlicherer Kleidung; während der Arbeit liegt das Handy in einem anderen Zimmer; um sechs klappt sie den Laptop zu – das gilt als „Feierabend“. Außerdem hat sie eine Ecke im Wohnzimmer als kleines Büro eingerichtet und arbeitet nur dort.",
+    "Auch für die Firma hat Homeoffice Vorteile: Im Büro braucht man nicht mehr so viele Plätze, das spart jeden Monat einiges an Miete. Manche Vorgesetzte fürchten allerdings, dass sie den Arbeitsstand schlechter überblicken, wenn sie ihre Leute nicht sehen.",
+    "Inzwischen findet Frau Lin, dass sie zu Hause sogar effizienter arbeitet als im Büro. Sie merkt aber auch, dass sie die Kaffeepausen und Gespräche mit den Kollegen ein bisschen vermisst. Am liebsten ist ihr deshalb: halb zu Hause, halb in der Firma."
+   ],
+   "glossary": [
+    {
+     "w": "自从",
+     "p": "zì cóng",
+     "en": "since (a point in time)",
+     "de": "seit"
+    },
+    {
+     "w": "允许",
+     "p": "yǔn xǔ",
+     "en": "to allow; to permit",
+     "de": "erlauben"
+    },
+    {
+     "w": "办公",
+     "p": "bàn gōng",
+     "en": "to work (in an office)",
+     "de": "im Büro arbeiten"
+    },
+    {
+     "w": "发生",
+     "p": "fā shēng",
+     "en": "to happen; to occur",
+     "de": "geschehen, sich ereignen"
+    },
+    {
+     "w": "想象",
+     "p": "xiǎng xiàng",
+     "en": "to imagine",
+     "de": "sich vorstellen"
+    },
+    {
+     "w": "视频会议",
+     "p": "shì pín huì yì",
+     "en": "video conference",
+     "de": "die Videokonferenz"
+    },
+    {
+     "w": "快递",
+     "p": "kuài dì",
+     "en": "parcel; express delivery",
+     "de": "das Paket; der Lieferdienst"
+    },
+    {
+     "w": "注意力",
+     "p": "zhù yì lì",
+     "en": "attention; concentration",
+     "de": "die Aufmerksamkeit"
+    },
+    {
+     "w": "集中",
+     "p": "jí zhōng",
+     "en": "to concentrate; to focus",
+     "de": "konzentrieren"
+    },
+    {
+     "w": "回复",
+     "p": "huí fù",
+     "en": "to reply",
+     "de": "antworten, beantworten"
+    },
+    {
+     "w": "界限",
+     "p": "jiè xiàn",
+     "en": "boundary; dividing line",
+     "de": "die Grenze"
+    },
+    {
+     "w": "规矩",
+     "p": "guī ju",
+     "en": "rule",
+     "de": "die Regel"
+    },
+    {
+     "w": "准时",
+     "p": "zhǔn shí",
+     "en": "on time; punctual",
+     "de": "pünktlich"
+    },
+    {
+     "w": "布置",
+     "p": "bù zhì",
+     "en": "to arrange; to set up (a room)",
+     "de": "einrichten, gestalten"
+    },
+    {
+     "w": "效率",
+     "p": "xiào lǜ",
+     "en": "efficiency",
+     "de": "die Effizienz"
+    },
+    {
+     "w": "甚至",
+     "p": "shèn zhì",
+     "en": "even",
+     "de": "sogar"
+    },
+    {
+     "w": "想念",
+     "p": "xiǎng niàn",
+     "en": "to miss (sb/sth)",
+     "de": "vermissen"
+    },
+    {
+     "w": "省下",
+     "p": "shěng xià",
+     "en": "to save (money, time)",
+     "de": "einsparen"
+    },
+    {
+     "w": "租金",
+     "p": "zū jīn",
+     "en": "rent",
+     "de": "die Miete"
+    },
+    {
+     "w": "进度",
+     "p": "jìn dù",
+     "en": "progress; pace of work",
+     "de": "der Fortschritt, der Arbeitsstand"
+    }
+   ],
+   "grammar": "A 并不像……那么 + adjective: “A is not as … as (people think)” — 并不像很多人想象的那么轻松 “not as easy as many imagine”; 并 stresses that the expectation is wrong. Compare 甚至比……还……: “even more … than …”. （并不像……那么……：否定别人的看法）",
+   "grammar_de": "A 并不像……那么 + Adjektiv: „A ist nicht so …, wie (man denkt)“ – 并不像很多人想象的那么轻松 „nicht so entspannt, wie viele glauben“; 并 betont, dass die Erwartung falsch ist. Vergleiche 甚至比……还……: „sogar noch … als …“.",
+   "questions": [
+    "在家办公的日子里，林小姐早上有什么不一样？",
+    "刚开始在家工作时，她遇到了什么问题？",
+    "她给自己定了哪些规矩？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK5",
+   "kind": "feature",
+   "section": "学习",
+   "title": "花钱买一个安静的座位",
+   "title_en": "Paying for a quiet seat",
+   "title_de": "Ein ruhiger Platz gegen Geld",
+   "dek": "付费自习室在中国不少城市流行起来。人们买的到底是什么？",
+   "paragraphs": [
+    "这几年，在中国的不少城市里，出现了一种新的学习场所——付费自习室。它看上去有点儿像咖啡馆，又有点儿像图书馆：灯光柔和，一排排座位被隔板分开，每个人面前都有一盏小台灯。不同的是，这里禁止聊天，连敲键盘的声音都要尽量放轻。顾客按小时或者按月付费，价格从十几块到几十块不等。",
+    "来这里的都是什么人呢？有准备研究生考试的大学生，有利用下班时间考证书的上班族，也有只想在周末安安静静读几本书的普通人。一位常来的顾客说，在家里她总是忍不住躺在床上刷手机；而在自习室里，看到身边的人都在认真学习，自己也就不好意思偷懒了。",
+    "有些自习室还有自己的小规矩：进门以前要把手机交给前台“保管”，或者在桌上放一张卡片，写下当天的学习目标。到了晚上，有人会在留言墙上贴一张便利贴，比如“今天背完了两百个单词”，或者“明天继续加油”。陌生人之间虽然一句话也不说，却好像在互相陪伴。",
+    "也有人觉得奇怪：图书馆是免费的，为什么还要花钱？经营者的解释是，公共图书馆座位有限，开放时间也比较短，到了考试季节，常常要排队抢座位；而自习室可以提前预约，有的晚上甚至开到十二点。说到底，顾客买的不只是一张桌子，更是一种让人不得不专心的环境。",
+    "在德国，大学图书馆在考试期间同样一座难求，不过很少有人愿意为自习花钱。倒是有些城市的咖啡馆里，开始有人组织“安静读书会”：大家坐在一起，各读各的书，一个小时之内谁也不说话。这种差别背后，也许是不同的学习压力和消费习惯。但可以肯定的是，无论在哪里，找到一个能让自己静下心来的地方，都是很多学习者共同的愿望。"
+   ],
+   "paragraphs_en": [
+    "In recent years a new kind of place to study has appeared in quite a few Chinese cities: the paid study room. It looks a bit like a café and a bit like a library — soft lighting, rows of seats separated by partitions, a small desk lamp in front of each person. The difference is that talking is forbidden here, and even typing has to be kept as quiet as possible. Customers pay by the hour or by the month, from a little over ten to several dozen yuan.",
+    "Who comes here? University students preparing for postgraduate entrance exams, office workers using their free evenings to study for certificates, and ordinary people who just want to read a few books in peace at the weekend. One regular says that at home she can never resist lying on the bed scrolling through her phone; in the study room, seeing everyone around her working hard, she would feel embarrassed to slack off.",
+    "Some study rooms have their own little rules: you hand your phone to the front desk for “safekeeping” as you come in, or you put a card on your desk with the day's study goal. In the evening, people stick notes on a message wall — “Learned two hundred words today”, or “Keep going tomorrow”. The strangers never exchange a word, yet they seem to keep one another company.",
+    "Some people find it odd: libraries are free, so why pay? The operators explain that public libraries have a limited number of seats and shorter opening hours, and in exam season people often queue and scramble for a place; study rooms can be booked in advance, and some even stay open until midnight. In the end, customers aren't just buying a desk — they're buying an environment that makes them concentrate.",
+    "In Germany, university libraries are just as packed during exams, but few people would pay to study. In some cities, though, people have started organising “silent reading” meetups in cafés: everyone sits together, each reading their own book, and for an hour nobody says a word. Behind this difference may lie different levels of academic pressure and different spending habits. What is certain is that, wherever they are, many learners share the same wish: to find a place where they can settle their minds."
+   ],
+   "paragraphs_de": [
+    "In den letzten Jahren ist in etlichen chinesischen Städten ein neuer Lernort entstanden: der kostenpflichtige Lernraum. Er sieht ein bisschen aus wie ein Café und ein bisschen wie eine Bibliothek – gedämpftes Licht, Reihen von Plätzen, durch Trennwände abgeteilt, vor jedem eine kleine Schreibtischlampe. Der Unterschied: Hier ist Reden verboten, sogar das Tippen soll möglichst leise sein. Man bezahlt pro Stunde oder pro Monat, je nach Angebot zwischen gut zehn und mehreren Dutzend Yuan.",
+    "Wer kommt hierher? Studierende, die sich auf die Masterprüfung vorbereiten, Berufstätige, die nach Feierabend für Zertifikate lernen, und ganz normale Leute, die am Wochenende in Ruhe ein paar Bücher lesen wollen. Eine Stammkundin erzählt, zu Hause lande sie immer im Bett mit dem Handy; im Lernraum, umgeben von Menschen, die konzentriert arbeiten, wäre es ihr peinlich, zu faulenzen.",
+    "Manche Lernräume haben ihre eigenen kleinen Regeln: Am Eingang gibt man das Handy an der Theke zur „Verwahrung“ ab, oder man stellt ein Kärtchen mit dem Lernziel des Tages auf den Tisch. Abends kleben manche einen Zettel an eine Pinnwand – „Heute zweihundert Vokabeln gelernt“ oder „Morgen geht’s weiter“. Die Fremden sprechen kein Wort miteinander und leisten sich doch irgendwie Gesellschaft.",
+    "Manche finden das seltsam: Bibliotheken sind kostenlos, warum also zahlen? Die Betreiber erklären, öffentliche Bibliotheken hätten nur begrenzt Plätze und kürzere Öffnungszeiten; in der Prüfungszeit müsse man oft anstehen und um einen Platz kämpfen. Lernräume kann man dagegen vorab reservieren, manche haben sogar bis Mitternacht geöffnet. Letztlich kaufen die Kunden nicht nur einen Tisch, sondern eine Umgebung, in der man gar nicht anders kann, als sich zu konzentrieren.",
+    "Auch in Deutschland sind Unibibliotheken in der Prüfungsphase heiß begehrt, doch kaum jemand würde fürs Lernen bezahlen. Dafür treffen sich in manchen Städten Leute in Cafés zum „stillen Lesen“: Alle sitzen zusammen, jeder liest sein eigenes Buch, und eine Stunde lang sagt niemand ein Wort. Hinter diesem Unterschied stecken vielleicht ein anderer Leistungsdruck und andere Konsumgewohnheiten. Sicher ist aber: Wo auch immer – einen Ort zu finden, an dem man zur Ruhe kommt, wünschen sich viele Lernende."
+   ],
+   "glossary": [
+    {
+     "w": "场所",
+     "p": "chǎng suǒ",
+     "en": "place; venue",
+     "de": "der Ort, die Stätte"
+    },
+    {
+     "w": "付费",
+     "p": "fù fèi",
+     "en": "to pay (a fee)",
+     "de": "bezahlen; kostenpflichtig"
+    },
+    {
+     "w": "自习室",
+     "p": "zì xí shì",
+     "en": "study room",
+     "de": "der Lernraum"
+    },
+    {
+     "w": "柔和",
+     "p": "róu hé",
+     "en": "soft; gentle (light, colour)",
+     "de": "sanft, gedämpft"
+    },
+    {
+     "w": "隔板",
+     "p": "gé bǎn",
+     "en": "partition; divider",
+     "de": "die Trennwand"
+    },
+    {
+     "w": "禁止",
+     "p": "jìn zhǐ",
+     "en": "to forbid; to prohibit",
+     "de": "verbieten"
+    },
+    {
+     "w": "尽量",
+     "p": "jǐn liàng",
+     "en": "as far as possible",
+     "de": "möglichst"
+    },
+    {
+     "w": "不等",
+     "p": "bù děng",
+     "en": "to vary; ranging from",
+     "de": "variieren; zwischen … und …"
+    },
+    {
+     "w": "证书",
+     "p": "zhèng shū",
+     "en": "certificate",
+     "de": "das Zertifikat"
+    },
+    {
+     "w": "上班族",
+     "p": "shàng bān zú",
+     "en": "office workers; commuters",
+     "de": "die Berufstätigen"
+    },
+    {
+     "w": "忍不住",
+     "p": "rěn bú zhù",
+     "en": "can't help (doing)",
+     "de": "nicht anders können als"
+    },
+    {
+     "w": "偷懒",
+     "p": "tōu lǎn",
+     "en": "to slack off; be lazy",
+     "de": "faulenzen"
+    },
+    {
+     "w": "经营者",
+     "p": "jīng yíng zhě",
+     "en": "operator; business owner",
+     "de": "der Betreiber"
+    },
+    {
+     "w": "有限",
+     "p": "yǒu xiàn",
+     "en": "limited",
+     "de": "begrenzt"
+    },
+    {
+     "w": "预约",
+     "p": "yù yuē",
+     "en": "to book; to reserve",
+     "de": "reservieren, buchen"
+    },
+    {
+     "w": "说到底",
+     "p": "shuō dào dǐ",
+     "en": "in the final analysis",
+     "de": "letztlich"
+    },
+    {
+     "w": "一座难求",
+     "p": "yí zuò nán qiú",
+     "en": "hard to get a seat",
+     "de": "heiß begehrt, kaum ein Platz zu bekommen"
+    },
+    {
+     "w": "消费",
+     "p": "xiāo fèi",
+     "en": "consumption; to spend",
+     "de": "der Konsum; konsumieren"
+    },
+    {
+     "w": "愿望",
+     "p": "yuàn wàng",
+     "en": "wish; desire",
+     "de": "der Wunsch"
+    },
+    {
+     "w": "保管",
+     "p": "bǎo guǎn",
+     "en": "to keep safe; to look after",
+     "de": "aufbewahren, verwahren"
+    },
+    {
+     "w": "便利贴",
+     "p": "biàn lì tiē",
+     "en": "sticky note",
+     "de": "der Haftzettel"
+    },
+    {
+     "w": "陌生人",
+     "p": "mò shēng rén",
+     "en": "stranger",
+     "de": "der/die Fremde"
+    },
+    {
+     "w": "陪伴",
+     "p": "péi bàn",
+     "en": "to keep sb company",
+     "de": "Gesellschaft leisten, begleiten"
+    }
+   ],
+   "grammar": "连……都……: “even …” — 连敲键盘的声音都要尽量放轻 “even the sound of typing must be kept low”. The thing after 连 is the most extreme case; 都 (or 也) follows before the verb. （连……都/也……：强调极端的情况）",
+   "grammar_de": "连……都……: „sogar …“ – 连敲键盘的声音都要尽量放轻 „sogar das Tippen soll möglichst leise sein“. Nach 连 steht der extremste Fall; 都 (oder 也) folgt vor dem Verb.",
+   "questions": [
+    "付费自习室和咖啡馆、图书馆有什么相同和不同？",
+    "为什么有人愿意花钱去自习室？",
+    "作者认为德国和中国的差别可能是什么原因？"
+   ],
+   "sources": []
+  }
+ ]
+}
