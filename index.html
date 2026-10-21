@@ -1010,6 +1010,37 @@ body:not(.tones) .tone-opts{opacity:.55}
 .dic-det .rd .k{display:inline-block;min-width:2.2em;font-size:11px;font-weight:600;color:var(--muted);letter-spacing:.06em}
 .dic-det .acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .dic-det .src{font-size:12px;color:var(--muted);margin-top:10px}
+/* onboarding */
+.onb-modal{max-width:520px}
+.onb-steps{display:flex;gap:6px;margin:0 0 16px}
+.onb-steps i{flex:1;height:3px;border-radius:2px;background:var(--line)}
+.onb-steps i.on{background:var(--acc)}
+.onb-q{font-family:var(--f-word);font-size:22px;margin:0 0 4px}
+.onb-sub{color:var(--muted);margin:0 0 14px}
+.onb-opts{display:grid;gap:8px}
+.onb-opts button{display:grid;gap:2px;text-align:left;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:inherit;padding:12px 14px;cursor:pointer;font:inherit}
+.onb-opts button b{font-size:16px}
+.onb-opts button span{font-size:13.5px;color:var(--muted)}
+.onb-opts button[aria-pressed="true"]{border-color:var(--acc);background:var(--acc-soft)}
+.onb-opts.row4{grid-template-columns:repeat(2,minmax(0,1fr))}
+.onb-opts.row4 .s{font-family:var(--f-cn);font-size:22px}
+.onb-gl{display:flex;gap:6px;align-items:center;margin:14px 0 0;flex-wrap:wrap}
+.onb-gl button{border:1px solid var(--line);border-radius:999px;background:var(--surface);color:inherit;padding:5px 12px;cursor:pointer;font:inherit;font-size:14px}
+.onb-gl button[aria-pressed="true"]{border-color:var(--acc);color:var(--acc);background:var(--acc-soft)}
+.onb-foot{display:flex;justify-content:space-between;align-items:center;margin-top:18px;gap:10px}
+.onb-day{border:1px solid var(--acc-soft);background:color-mix(in srgb,var(--acc) 6%,var(--surface));border-radius:14px;padding:14px 16px;margin:0 0 14px}
+.onb-day h3{margin:0 0 2px;font-size:16px}
+.onb-day .sub{font-size:13px;color:var(--muted);margin:0 0 8px}
+.onb-day ol{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.onb-day li{display:flex;gap:10px;align-items:center}
+.onb-day li .ck{width:20px;height:20px;border-radius:50%;border:1.5px solid var(--line);flex:none;display:grid;place-items:center;color:var(--muted);font-size:11.5px;font-weight:600}
+.onb-day li.done .ck{color:var(--on-acc,#fff)}
+.onb-day li.done .ck{background:var(--acc);border-color:var(--acc)}
+.onb-day li.done .tx{color:var(--muted);text-decoration:line-through}
+.onb-day li button{margin-left:auto}
+.onb-day .x{float:right;margin:-4px -6px 0 0}
+.onb-tip{display:flex;gap:8px;align-items:flex-start;font-size:14px;background:var(--acc-soft);color:var(--ink);border-radius:10px;padding:8px 12px;margin:0 0 12px}
+.onb-tip b{color:var(--acc)}
 .mg-sheet .zgl-l .k{display:inline-block;min-width:2.2em;font-size:11px;font-weight:600;color:var(--muted);letter-spacing:.06em}
 .ex .t.zc{font-family:var(--f-cn);font-size:18px}
 .ex .py{font-size:12.5px;color:var(--muted);margin-top:1px}
@@ -1083,6 +1114,7 @@ body:not(.tones) .tone-opts{opacity:.55}
   <!-- TODAY -->
   <section id="tab-today" class="grid">
     <div class="panel">
+      <div id="onb-day"></div>
       <div class="sesshead"><h2 id="sess-title">今日学习</h2><div class="row" id="sess-actions"></div></div>
       <div class="bar"><i id="sess-bar"></i></div>
       <div id="card-area"><div class="empty"><b>正在载入词库…</b></div></div>
@@ -1572,11 +1604,16 @@ function zSeg(s,extra){ // with the dictionary: best split by word frequency; be
   }
   flush(); return out;
 }
+const ZPART={"得":"de","地":"de","着":"zhe"};
 function zSents(p){ return String(p).split(/(?<=[。！？!?…；]+[”」』）"]?)/).filter(x=>x.trim()); }
 function zWrap(text,own,extra){ // a paragraph → sentences → tappable words with pinyin
   return zSents(text).map(sen=>{
     const py=zPyArr(sen); let k=0;
-    const toks=zSeg(sen,extra).map(t=>{ let a=py.slice(k,k+t.w.length); k+=t.w.length; const f=!t.punct&&t.w.length>1&&PYFIX.get(t.w); if(f){ const y=f.split(" "); if(y.length===t.w.length) a=y; } return {...t,py:a}; });
+    const toks0=zSeg(sen,extra);
+    const toks=toks0.map((t,i)=>{ let a=py.slice(k,k+t.w.length); k+=t.w.length; const f=!t.punct&&t.w.length>1&&PYFIX.get(t.w); if(f){ const y=f.split(" "); if(y.length===t.w.length) a=y; }
+      // structural particles after a word: 跑得快 de, 慢慢地 de, 看着 zhe (pinyin-pro often says dé / dì / zháo)
+      if(t.w.length===1&&ZPART[t.w]&&i>0&&!toks0[i-1].punct&&!(t.w==="得"&&toks0[i+1]&&/^到/.test(toks0[i+1].w))) a=[ZPART[t.w]];
+      return {...t,py:a}; });
     // words are nowrap (a word never splits over two lines), so the line-break chance between two words is given explicitly with <wbr>; none before punctuation, so ，。 never start a line
     return `<span class="s" data-t="${esc(sen)}">`+toks.map((t,i)=>{
       if(t.punct) return esc(zs(t.w));
@@ -2249,7 +2286,8 @@ function renderCard(){
   area.querySelectorAll(".rate button").forEach(b=>b.onclick=()=>grade(+b.dataset.g));
   if(sess.flipped) mzMount(c);
 }
-function renderDone(area){
+function renderDone(area){ if(sess&&sess.mode==="daily") onbTick("cards"); renderDone0(area); }
+function renderDone0(area){
   const log=lg(), d=LANG[lang()], fp=freshPool().length, due=dueList().length;
   let h;
   if(sess&&sess.mode!=="daily"){
@@ -2464,7 +2502,7 @@ $("#n-form").addEventListener("submit",async e=>{
   const LL=L(); LL.custom.push({id,lvl:lv,w:o.w,pos:"",extra:o.py,py:o.py,en:o.mean,de:"",mean:o.mean,ex:o.ex,exzh:"",exen:"",exde:""});
   const memo=$("#n-memo").value.trim(); if(memo) LL.memo[id]=memo;
   rebuildCards(); save(); if(sess&&sess.mode==="daily"&&!sess.flipped) buildDaily(); renderStrip();
-  const w=o.w; clearDraft(false); $("#n-msg").textContent="「"+zs(w)+"」已保存（"+lv+"），会作为新词优先出现。"; $("#n-w").focus();
+  const w=o.w; clearDraft(false); $("#n-msg").textContent="「"+zs(w)+"」已保存（"+lv+"），会作为新词优先出现。"; $("#n-w").focus(); onbTick("save");
 });
 function guessPos(w){ const l=lang(); if(l==="fr"){ if(/^le\s/i.test(w)) return "m"; if(/^la\s/i.test(w)) return "f"; } if(l==="pt"){ if(/^o\s/i.test(w)) return "m"; if(/^a\s/i.test(w)) return "f"; } else if(l==="de"){ const m=w.match(/^(der|die|das)\s/); if(m) return {der:"m",die:"f",das:"n"}[m[1]]; } return ""; }
 $("#bulk-btn").addEventListener("click",async()=>{ // 汉字 | 释义 | 例句 — pinyin and level are filled in
@@ -2504,7 +2542,8 @@ const ART=/^(der|die|das|o|a|os|as|the)\s+/;
 function syFind(l,w){ const lw=String(w||"").toLowerCase().trim(), bare=lw.replace(ART,"");
   const hit=c=>{ const x=String(c.w||"").toLowerCase(); return x===lw||x.replace(ART,"")===bare; };
   return S[l].custom.find(hit)||(DATA[l]||[]).find(hit)||null; }
-function addFromReader(v){
+function addFromReader(v){ const r=addFromReader0(v); if(r==="ok"||r==="dup") onbTick("save"); return r; }
+function addFromReader0(v){
   const l=v.lang; if(!LANG[l]) return "bad";
   if(l==="zh"){
     const w=String(v.lemma||v.word||"").trim(); if(!w||!(v.en||v.de)) return "bad";
@@ -2614,6 +2653,7 @@ async function mgRender(){
     <h2 data-noi18n lang="zh-CN" class="zh2 zc">${zWrap(it.title,own,gx)}</h2>${(()=>{ const t=glSel().map(k=>it["title_"+k]).filter(Boolean); return t.length?`<p class="mg-tt" data-noi18n>${t.map(esc).join(" · ")}</p>`:""; })()}
     ${it.dek?`<p class="mg-dek zc" data-noi18n lang="zh-CN">${esc(zs(it.dek))}</p>`:""}
     <div class="mg-tools"><button class="tb" id="mg-say" aria-label="朗读全文">${I.spk}<span>朗读</span></button>${it.paragraphs_en&&it.paragraphs_en.length?`<button class="tb" id="mg-enb" aria-pressed="${MG.tr==="en"}" aria-label="English translation">English</button>`:""}${it.paragraphs_de&&it.paragraphs_de.length?`<button class="tb" id="mg-deb" aria-pressed="${MG.tr==="de"}" aria-label="Deutsche Übersetzung">Deutsch</button>`:""}<span class="spacer"></span><button class="tb" id="mg-py" aria-pressed="${pyOn()}">拼音</button><button class="tb" id="mg-tone" aria-pressed="${tonesOn()}">声调</button><button class="tb" id="mg-scr" aria-pressed="${scr()==="t"}" data-noi18n>${scr()==="t"?"繁體":"简体"}</button></div>
+    ${onbActive()&&!(onb().t||{}).read?`<p class="onb-tip">💡 <span>点任何一个词，看读音、意思和笔顺，还可以收进生词。</span></p>`:""}
     <div class="mg-body zhb zc${easy?" easy":""}${it.kind==="dialogue"?" dlg":""}" id="mg-body" data-noi18n lang="zh-CN">${(it.paragraphs||[]).map((p,k)=>`<p>${zWrap(p,own,gx)}</p>${MG.tr&&it["paragraphs_"+MG.tr]&&it["paragraphs_"+MG.tr][k]?`<span class="mg-zh mg-tr-${MG.tr}" lang="${MG.tr}">${esc(it["paragraphs_"+MG.tr][k])}</span>`:""}`).join("")}</div>
     ${it.kind==="picks"?mgPicks(it):""}
     ${it.grammar||it.grammar_de?`<div class="mg-blk"><h3>语法</h3><div class="mg-gram" data-noi18n>${esc((UIL==="de"&&it.grammar_de)||it.grammar||it.grammar_de)}</div></div>`:""}
@@ -2936,7 +2976,7 @@ const MZ={key:"",cs:[],i:0,hw:null,quiz:false};
 const cardStkOn=()=>S.settings.cardStk!==false;
 function mzHtml(c){
   if(c.lang!=="zh"||!cardStkOn()) return ""; const cs=zStkChars(c.w); if(!cs.length) return "";
-  return `<div class="mz" id="mz">${cs.length>1?`<div class="mz-chips" data-noi18n>${cs.map((ch,i)=>`<button type="button" data-mzi="${i}" aria-pressed="${i===0}">${esc(ch)}</button>`).join("")}</div>`:""}
+  return `<div class="mz" id="mz">${onbActive()&&!(onb().t||{}).write?`<p class="onb-tip" style="margin:0">✍️ <span>先看一遍笔顺，再点「跟着写」，用手指在格子里写。</span></p>`:""}${cs.length>1?`<div class="mz-chips" data-noi18n>${cs.map((ch,i)=>`<button type="button" data-mzi="${i}" aria-pressed="${i===0}">${esc(ch)}</button>`).join("")}</div>`:""}
     <div class="mz-box" id="mz-box" data-noi18n><svg class="mz-grid" viewBox="0 0 100 100" aria-hidden="true"><rect x="1" y="1" width="98" height="98" rx="4"/><path d="M50 1V99M1 50H99M1 1L99 99M99 1L1 99"/></svg></div>
     <div class="mz-acts"><span class="meta" id="mz-meta" data-noi18n></span><button class="btn sm" type="button" id="mz-play">${I.play}<span>看笔顺</span></button><button class="btn sm" type="button" id="mz-write" aria-pressed="false">${I.pen}<span>跟着写</span></button></div></div>`; }
 async function mzShow(i,then){
@@ -2957,7 +2997,7 @@ async function mzShow(i,then){
 }
 function mzWrite(){ const hw=MZ.hw; if(!hw) return; MZ.quiz=true; const w=$("#mz-write"); if(w) w.setAttribute("aria-pressed","true");
   hw.quiz({showHintAfterMisses:2,highlightOnComplete:true,onComplete:()=>{ MZ.quiz=false; const b=$("#mz-write"); if(b) b.setAttribute("aria-pressed","false");
-    const nx=MZ.i+1; toast((trOne("写对了！")||"写对了！")+" "+MZ.cs[MZ.i]); if(nx<MZ.cs.length){ const key=MZ.key; setTimeout(()=>{ if(MZ.key===key) mzShow(nx,"play"); },900); } }}); }
+    onbTick("write"); const nx=MZ.i+1; toast((trOne("写对了！")||"写对了！")+" "+MZ.cs[MZ.i]); if(nx<MZ.cs.length){ const key=MZ.key; setTimeout(()=>{ if(MZ.key===key) mzShow(nx,"play"); },900); } }}); }
 function mzMount(c){
   const el=$("#mz"); if(!el) return; MZ.key=c.id+"|"+scr()+"|"+Date.now(); MZ.cs=zStkChars(c.w);
   ["pointerdown","pointerup","click","touchstart","touchend","mousedown"].forEach(ev=>el.addEventListener(ev,e=>e.stopPropagation()));
@@ -3131,11 +3171,71 @@ function dicOpen(){
 }
 $("#dict-open").addEventListener("click",dicOpen);
 setTimeout(()=>{ const go=()=>{ try{ dicPreload(); }catch(e){} }; if("requestIdleCallback" in window) requestIdleCallback(go,{timeout:6000}); else go(); },3500);
+
+/* ---------- first day: three quick questions, then a checklist on Today ---------- */
+const onb=()=>S.settings.onb||null;
+const onbActive=()=>{ const o=onb(); if(!o||o.hide) return false; const days=Math.round((new Date(today())-new Date(o.start))/864e5); return days<=1; };
+const ONB_TASKS=[["read","读一篇短文，点一个不认识的词","read"],["save","把一个词收进生词","read"],["cards","学完今天的新词卡","today"],["write","在米字格里跟着写一个字","today"]];
+function onbTick(k){ const o=onb(); if(!o||o.hide||(o.t&&o.t[k])) return; o.t=Object.assign({},o.t,{[k]:Date.now()}); save(); onbDay();
+  const left=ONB_TASKS.filter(([x])=>!o.t[x]).length; if(!left) toast(trOne("第一天完成了！明天回来复习今天的词。")||""); }
+function onbDay(){ const el=$("#onb-day"); if(!el) return; const o=onb();
+  if(!onbActive()){ el.innerHTML=""; return; }
+  const t=o.t||{}, done=ONB_TASKS.filter(([k])=>t[k]).length, all=done===ONB_TASKS.length;
+  el.innerHTML=`<div class="onb-day"><button class="ib sm x" type="button" id="onb-hide" aria-label="关闭">${I.x}</button>
+    <h3>${all?"第一天完成了 🎉":"你的第一天"}</h3><p class="sub">${all?"明天打开字里，会先复习今天学过的词。":`<span data-noi18n>${done} / ${ONB_TASKS.length}</span>`}</p>
+    <ol>${ONB_TASKS.map(([k,txt,tab],i)=>`<li class="${t[k]?"done":""}"><span class="ck">${t[k]?"✓":i+1}</span><span class="tx">${txt}</span>${!t[k]&&tab==="read"&&cur!=="read"&&ONB_TASKS.find(([x,,tb])=>tb==="read"&&!t[x])[0]===k?`<button class="btn sm ghost" type="button" data-onbgo="read">去阅读</button>`:""}</li>`).join("")}</ol></div>`;
+}
+document.addEventListener("click",e=>{ const b=e.target.closest("#onb-hide,[data-onbgo]"); if(!b) return;
+  if(b.id==="onb-hide"){ const o=onb(); if(o){ o.hide=true; save(); } onbDay(); return; }
+  showTab(b.dataset.onbgo); });
+const ONB={step:0,who:"",goal:10,tone:0,gl:""};
+function onbStart(){
+  ONB.step=0; ONB.who=""; ONB.goal=10; ONB.tone=0; ONB.gl=(navigator.language||"").toLowerCase().startsWith("de")?"de":"en";
+  detailOpen="__onb"; document.body.classList.add("modal-open"); onbRender();
+}
+function onbRender(){
+  const st=ONB.step, dots=`<div class="onb-steps">${[0,1,2].map(i=>`<i class="${i<=st?"on":""}"></i>`).join("")}</div>`;
+  let body="";
+  if(st===0) body=`<p class="onb-q">欢迎来到字里</p><p class="onb-sub">先回答三个小问题，我们帮你调好难度。</p>
+    <p class="onb-q" style="font-size:18px">你的中文是……</p>
+    <div class="onb-opts">${[["zero","从零开始","还不认识汉字，先从拼音和最常用的词学起"],["some","学过一点","认识一些常用字，能读简单的句子"],["kid","华裔孩子（家长帮忙设置）","会说一些中文，想学认字和写字"]].map(([k,b,d])=>`<button type="button" data-who="${k}" aria-pressed="${ONB.who===k}"><b>${b}</b><span>${d}</span></button>`).join("")}</div>
+    <div class="onb-gl"><span class="small muted">释义用</span>${[["en","English"],["de","Deutsch"]].map(([k,t])=>`<button type="button" data-gl="${k}" aria-pressed="${ONB.gl===k}" data-noi18n>${t}</button>`).join("")}</div>`;
+  if(st===1) body=`<p class="onb-q">每天学几个新词？</p><p class="onb-sub">以后随时可以在「学习设定」里改。</p>
+    <div class="onb-opts">${[[5,"轻松","每天 5 个，大约 5 分钟"],[10,"稳步","每天 10 个，大约 10 分钟"],[20,"加速","每天 20 个，大约 20 分钟"]].map(([n,b,d])=>`<button type="button" data-goal="${n}" aria-pressed="${ONB.goal===n}"><b>${b}</b><span>${d}</span></button>`).join("")}</div>`;
+  if(st===2) body=`<p class="onb-q">哪个声调对你最难？</p><p class="onb-sub">我们会在课文里把它轻轻标出来。不确定的话可以跳过。</p>
+    <div class="onb-opts row4">${[[1,"妈","mā","一声"],[2,"麻","má","二声"],[3,"马","mǎ","三声"],[4,"骂","mà","四声"]].map(([k,c,py,lab])=>`<button type="button" data-tone="${k}" aria-pressed="${ONB.tone===k}"><span class="s" data-noi18n>${c} ${py}</span><span>${lab}</span></button>`).join("")}</div>`;
+  const next=st===0?!!ONB.who:true;
+  $("#detail-root").innerHTML=`<div class="scrim" id="d-scrim"><div class="modal onb-modal" role="dialog" aria-modal="true" aria-label="欢迎">${dots}${body}
+    <div class="onb-foot"><button class="btn ghost sm" type="button" id="onb-skip">${st===2?"跳过":"以后再说"}</button><button class="btn primary" type="button" id="onb-next" ${next?"":"disabled"}>${st===2?"开始第一天":"下一步"}</button></div></div></div>`;
+  const root=$("#d-scrim");
+  root.addEventListener("click",e=>{ const b=e.target.closest("button"); if(!b) return;
+    if(b.dataset.who){ ONB.who=b.dataset.who; if(b.dataset.who==="kid") ONB.goal=5; onbRender(); return; }
+    if(b.dataset.gl){ ONB.gl=b.dataset.gl; onbRender(); return; }
+    if(b.dataset.goal){ ONB.goal=+b.dataset.goal; onbRender(); return; }
+    if(b.dataset.tone){ ONB.tone=ONB.tone===+b.dataset.tone?0:+b.dataset.tone; onbRender(); return; }
+    if(b.id==="onb-next"){ if(ONB.step<2){ ONB.step++; onbRender(); } else onbFinish(); return; }
+    if(b.id==="onb-skip"){ if(ONB.step===2) onbFinish(); else if(ONB.step===0){ S.settings.onb={v:1,start:today(),t:{},hide:true,skipped:true}; save(); closeDetail(); } else { ONB.step++; onbRender(); } return; }
+  });
+}
+function onbFinish(){
+  const lv=ONB.who==="some"?["HSK2","HSK3"]:["HSK1"];
+  S.settings.levels.zh=lv; S.settings.goal.zh=ONB.goal; S.settings.gloss.zh=[ONB.gl]; S.settings.py=true;
+  S.settings.rdLv=Object.assign({},S.settings.rdLv,{zh:ONB.who==="some"?"HSK2":"HSK1"});
+  if(ONB.tone){ S.settings.tones=true; S.settings.toneSel=[ONB.tone]; }
+  S.settings.onb={v:1,start:today(),who:ONB.who,t:{},hide:false};
+  save(); applyPy(); applyTones(); renderSettings(); closeDetail(); rebuildCards(); buildDaily(); renderStrip(); onbDay();
+}
+function onbMaybeStart(){
+  if(S.settings.onb) { onbDay(); return; }
+  const LL=L(); const used=Object.keys(LL.srs||{}).length||(LL.custom||[]).length;
+  if(used){ S.settings.onb={v:1,start:today(),t:{},hide:true,existing:true}; save(); return; }
+  onbStart();
+}
 /* word sheet */
 function mgSentenceOf(node){ const s=node&&(node.closest?node.closest(".s"):node.parentElement&&node.parentElement.closest(".s")); return s?zPlain(s):""; }
 function mgOpen(word,sentence){
   const it=MG.cur&&MG.cur.it, l=lang(); if(!it) return;
-  if(l==="zh"){ word=String(word).replace(/[^\u3400-\u9fff\uf900-\ufaffA-Za-z0-9]/g,""); if(!word) return;
+  if(l==="zh"){ word=String(word).replace(/[^\u3400-\u9fff\uf900-\ufaffA-Za-z0-9]/g,""); if(!word) return; onbTick("read");
     const g=(it.glossary||[]).find(x=>String(x.w).trim()===word), have=syFind(l,word);
     const ctxPy=PYFIX.get(word)||zCtxPy(word,sentence);
     const s=MG.sheet={zh:true,word,sentence,lemma:word,py:PYFIX.get(word)||(g&&g.p)||(have&&(have.py||have.extra))||ctxPy||zPy(word),en:(g&&g.en)||(have&&have.en)||"",de:(g&&g.de)||(have&&have.de)||"",pos:have?(POSN[have.pos]||""):"",note:"",state:"",have:!!have,mine:"",dict:null,dstate:"load"};
@@ -4437,6 +4537,41 @@ const UI_DICT=[
 ["笔顺", "Stroke order", "Strichfolge", "Ordem dos traços", "筆順"],
 ["画", "strokes", "Striche", "traços", "畫"],
 ["描", "Trace", "Nachfahren", "Traçar", "描"],
+["欢迎来到字里", "Welcome to Zili", "Willkommen bei Zili", "Bem-vindo ao Zili", "歡迎來到字里"],
+["先回答三个小问题，我们帮你调好难度。", "Three quick questions, so we can set the right level for you.", "Drei kurze Fragen, damit wir das passende Niveau einstellen.", "Três perguntas rápidas para ajustar o nível.", "先回答三個小問題，我們幫你調好難度。"],
+["你的中文是……", "Your Chinese is…", "Dein Chinesisch ist …", "Seu chinês é…", "你的中文是……"],
+["从零开始", "Starting from zero", "Ganz am Anfang", "Começando do zero", "從零開始"],
+["还不认识汉字，先从拼音和最常用的词学起", "No characters yet — start with pinyin and the most common words", "Noch keine Zeichen – mit Pinyin und den häufigsten Wörtern beginnen", "Ainda não sei caracteres — começar com pinyin e as palavras mais comuns", "還不認識漢字，先從拼音和最常用的詞學起"],
+["学过一点", "I know a little", "Ich kann schon etwas", "Sei um pouco", "學過一點"],
+["认识一些常用字，能读简单的句子", "I know some common characters and can read simple sentences", "Ich kenne einige häufige Zeichen und lese einfache Sätze", "Conheço alguns caracteres e leio frases simples", "認識一些常用字，能讀簡單的句子"],
+["华裔孩子（家长帮忙设置）", "Heritage child (a parent sets it up)", "Herkunftssprachliches Kind (Eltern richten ein)", "Criança de herança (os pais configuram)", "華裔孩子（家長幫忙設置）"],
+["会说一些中文，想学认字和写字", "Speaks some Chinese, wants to learn to read and write", "Spricht etwas Chinesisch, möchte lesen und schreiben lernen", "Fala um pouco de chinês, quer aprender a ler e escrever", "會說一些中文，想學認字和寫字"],
+["释义用", "Meanings in", "Bedeutungen auf", "Significados em", "釋義用"],
+["每天学几个新词？", "How many new words a day?", "Wie viele neue Wörter pro Tag?", "Quantas palavras novas por dia?", "每天學幾個新詞？"],
+["以后随时可以在「学习设定」里改。", "You can change this any time in Study settings.", "Jederzeit in den Lerneinstellungen änderbar.", "Pode mudar quando quiser nos ajustes.", "以後隨時可以在「學習設定」裡改。"],
+["轻松", "Easy", "Locker", "Leve", "輕鬆"],
+["每天 5 个，大约 5 分钟", "5 a day, about 5 minutes", "5 pro Tag, etwa 5 Minuten", "5 por dia, cerca de 5 minutos", "每天 5 個，大約 5 分鐘"],
+["稳步", "Steady", "Stetig", "Constante", "穩步"],
+["每天 10 个，大约 10 分钟", "10 a day, about 10 minutes", "10 pro Tag, etwa 10 Minuten", "10 por dia, cerca de 10 minutos", "每天 10 個，大約 10 分鐘"],
+["加速", "Fast", "Zügig", "Rápido", "加速"],
+["每天 20 个，大约 20 分钟", "20 a day, about 20 minutes", "20 pro Tag, etwa 20 Minuten", "20 por dia, cerca de 20 minutos", "每天 20 個，大約 20 分鐘"],
+["哪个声调对你最难？", "Which tone is hardest for you?", "Welcher Ton fällt dir am schwersten?", "Qual tom é mais difícil para você?", "哪個聲調對你最難？"],
+["我们会在课文里把它轻轻标出来。不确定的话可以跳过。", "We’ll gently mark it in the texts. Not sure? Skip it.", "Wir markieren ihn dezent in den Texten. Unsicher? Einfach überspringen.", "Vamos marcá-lo de leve nos textos. Não sabe? Pule.", "我們會在課文裡把它輕輕標出來。不確定的話可以跳過。"],
+["以后再说", "Later", "Später", "Depois", "以後再說"],
+["跳过", "Skip", "Überspringen", "Pular", "跳過"],
+["下一步", "Next", "Weiter", "Próximo", "下一步"],
+["开始第一天", "Start day one", "Tag 1 starten", "Começar o 1º dia", "開始第一天"],
+["你的第一天", "Your first day", "Dein erster Tag", "Seu primeiro dia", "你的第一天"],
+["第一天完成了 🎉", "Day one done 🎉", "Tag 1 geschafft 🎉", "Primeiro dia concluído 🎉", "第一天完成了 🎉"],
+["明天打开字里，会先复习今天学过的词。", "Open Zili tomorrow — it will start by reviewing today’s words.", "Öffne Zili morgen – es beginnt mit der Wiederholung der heutigen Wörter.", "Abra o Zili amanhã — ele começa revisando as palavras de hoje.", "明天打開字里，會先複習今天學過的詞。"],
+["读一篇短文，点一个不认识的词", "Read a short text and tap a word you don’t know", "Lies einen kurzen Text und tippe auf ein unbekanntes Wort", "Leia um texto curto e toque numa palavra desconhecida", "讀一篇短文，點一個不認識的詞"],
+["把一个词收进生词", "Save a word to your list", "Speichere ein Wort", "Salve uma palavra", "把一個詞收進生詞"],
+["学完今天的新词卡", "Finish today’s new cards", "Schließe die heutigen neuen Karten ab", "Termine os cartões de hoje", "學完今天的新詞卡"],
+["在米字格里跟着写一个字", "Write one character in the grid", "Schreib ein Zeichen im Raster nach", "Escreva um caractere na grade", "在米字格裡跟著寫一個字"],
+["去阅读", "Go to Read", "Zum Lesen", "Ir para leitura", "去閱讀"],
+["第一天完成了！明天回来复习今天的词。", "Day one done! Come back tomorrow to review.", "Tag 1 geschafft! Morgen wird wiederholt.", "Primeiro dia concluído! Volte amanhã para revisar.", "第一天完成了！明天回來複習今天的詞。"],
+["点任何一个词，看读音、意思和笔顺，还可以收进生词。", "Tap any word to see its pinyin, meaning and stroke order — and save it.", "Tippe auf ein Wort: Aussprache, Bedeutung und Strichfolge – und speichere es.", "Toque numa palavra para ver pinyin, significado e traços — e salvá-la.", "點任何一個詞，看讀音、意思和筆順，還可以收進生詞。"],
+["先看一遍笔顺，再点「跟着写」，用手指在格子里写。", "Watch the strokes once, then tap “Write along” and write in the grid with your finger.", "Sieh dir die Strichfolge an, tippe dann auf „Mitschreiben“ und schreib mit dem Finger ins Raster.", "Veja os traços, toque em “Escrever junto” e escreva na grade com o dedo.", "先看一遍筆順，再點「跟著寫」，用手指在格子裡寫。"],
 ["输入汉字，例如：雨伞", "Type the Chinese word, e.g. 雨伞", "Chinesisches Wort eingeben, z. B. 雨伞", "Digite a palavra em chinês, ex.: 雨伞", "輸入漢字，例如：雨傘"],
 ["用你习惯的语言写", "In whatever language you like", "In der Sprache, die dir liegt", "Na língua que preferir", "用你習慣的語言寫"],
 ["例句（可选）", "Example (optional)", "Beispielsatz (optional)", "Exemplo (opcional)", "例句（可選）"],
@@ -4656,6 +4791,7 @@ async function applyLang(){
   if(lang()!==l) return;
   rebuildCards(); buildDaily(); renderStrip();
   if(cur!=="today") showTab(cur);
+  onbMaybeStart();
 }
 
 /* ---------- lean interface & study-settings drawer ---------- */
