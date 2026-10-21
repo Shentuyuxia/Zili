@@ -48,6 +48,7 @@ body[data-lang="de"]{--acc:var(--de);--acc-soft:var(--de-soft)}
 body[data-lang="en"]{--acc:var(--en);--acc-soft:var(--en-soft)}
 body[data-lang="fr"]{--acc:var(--fr);--acc-soft:var(--fr-soft)}
 body.modal-open{overflow:hidden}
+body.trad{--f-cn:"LXGW WenKai TC","Kaiti TC","Noto Serif SC","EL Hei",serif;--f-word:"Source Serif 4",Georgia,"LXGW WenKai TC","Kaiti TC",serif}
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 img{max-width:100%}
@@ -639,8 +640,8 @@ body.lean .hint, body.lean .help{display:none!important}
   .sesshead{margin-bottom:8px}
   .sesshead h2,#pile-title{font-size:18px}
   .bar{margin-bottom:10px}
-  /* bottom bar: 5 tabs, always labelled */
-  nav.tabs{grid-template-columns:repeat(5,minmax(0,1fr))}
+  /* bottom bar: 5 tabs + dictionary, always labelled */
+  nav.tabs{grid-template-columns:repeat(6,minmax(0,1fr))}
   nav.tabs button[data-tab="pile"],nav.tabs button[data-tab="settings"]{display:none}
   nav.tabs button .tl{display:block;font-size:10.5px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:0 2px;color:var(--muted)}
   nav.tabs button[data-tab="stats"] .tl{display:none}
@@ -968,9 +969,6 @@ body:not(.tones) .tone-opts{opacity:.55}
 .mz-acts .meta{font-size:12.5px;color:var(--muted)}
 .mz-acts .btn[aria-pressed="true"]{border-color:var(--acc);color:var(--acc)}
 /* dictionary */
-.dictbtn{display:inline-flex;align-items:center;gap:5px;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:6px 11px;background:var(--surface);font-size:12.5px;cursor:pointer;margin-left:auto}
-.dictbtn svg{width:16px;height:16px}
-@media (max-width:640px){ .dictbtn{position:absolute;top:4px;right:92px;padding:5px 9px;margin:0} .brand{padding-right:190px} }
 .dict-modal{max-width:600px;min-height:min(640px,86vh)}
 .dic-in{display:flex;gap:6px;align-items:center}
 .dic-in input{flex:1;min-width:0;font-size:18px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:inherit;font-family:var(--f-word)}
@@ -1015,7 +1013,6 @@ body:not(.tones) .tone-opts{opacity:.55}
       <div><h1><span data-noi18n class="brand-zh">字里</span><span class="alt" data-noi18n>Zili</span></h1></div>
     </div>
     <div class="langsw" role="group" aria-label="学习语言" id="langsw" hidden><button data-l="zh" aria-pressed="true"><b>中文</b><small>HSK 1–6</small></button></div>
-    <button class="dictbtn" id="dict-open" type="button" aria-label="字典" title="字典"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg><span>字典</span></button>
     <label class="uilang" title="界面语言"><span class="sr">界面语言</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>
       <b id="ui-code">中文</b><select id="ui-lang" aria-label="界面语言"><option value="de" data-raw>Deutsch</option><option value="en" data-raw>English</option><option value="zh" data-raw>简体中文</option><option value="zht" data-raw>繁體中文</option></select></label>
   </header>
@@ -1040,6 +1037,7 @@ body:not(.tones) .tone-opts{opacity:.55}
     <button role="tab" data-tab="new" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 8v8M8 12h8"/></svg><span class="tl">录入新词</span></button>
     <button role="tab" data-tab="pile" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><span class="tl">生词堆</span><span id="t-pile">0</span></button>
     <button role="tab" data-tab="browse" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h12M8 12h12M8 18h12"/><circle cx="4" cy="6" r=".6" fill="currentColor"/><circle cx="4" cy="12" r=".6" fill="currentColor"/><circle cx="4" cy="18" r=".6" fill="currentColor"/></svg><span class="tl">词库</span></button>
+    <button type="button" data-dict="1" id="dict-open" aria-label="字典"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg><span class="tl">字典</span></button>
     <button role="tab" data-tab="stats" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M21 20H3"/></svg><span class="tl">进度</span><span class="tl-m">我的</span></button>
     <button role="tab" data-tab="settings" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg><span class="tl">设置与备份</span></button>
   </nav>
@@ -1496,6 +1494,7 @@ const newKey=p=>p+"-"+Date.now().toString(36)+Math.random().toString(36).slice(2
 /* ---------- Chinese: script, pinyin, segmentation ---------- */
 const HAN=/[㐀-鿿豈-﫿]/;
 const scr=()=>S.settings.script==="t"?"t":"s";
+function applyScr(){ document.body.classList.toggle("trad",scr()==="t"); }
 const zs=t=>scr()==="t"?s2t(String(t==null?"":t)):String(t==null?"":t);
 const pyOn=()=>S.settings.py!==false;
 const ER_X=/(女儿|儿子|儿童|婴儿|幼儿|孤儿|儿女|健儿|儿科|胎儿|少儿|托儿|新生儿)$/;
@@ -3318,7 +3317,7 @@ $("#tab-read").addEventListener("click",e=>{
   else if(id==="mg-deb"){ MG.tr=MG.tr==="de"?null:"de"; mgRender(); }
   else if(id==="mg-py"){ S.settings.py=!pyOn(); save(); applyPy(); b.setAttribute("aria-pressed",pyOn()); renderSettings(); }
   else if(id==="mg-tone"){ S.settings.tones=!tonesOn(); save(); applyTones(); b.setAttribute("aria-pressed",tonesOn()); renderSettings(); }
-  else if(id==="mg-scr"){ S.settings.script=scr()==="t"?"s":"t"; save(); renderSettings(); mgRender(); }
+  else if(id==="mg-scr"){ S.settings.script=scr()==="t"?"s":"t"; save(); applyScr(); renderSettings(); mgRender(); }
   else if(id==="mg-enb"){ MG.tr=MG.tr==="en"?null:"en"; mgRender(); }
   else if(id==="mg-say"){ if(RD.src==="art"&&RD.on) rdToggle(); else rdStart("art",0); }
   else if(id==="mg-done"){ MGS.read[MG.cur.date+"|"+MG.cur.i]=1; mgSave(); mgRender(); }
@@ -3872,7 +3871,7 @@ $("#lv-checks").addEventListener("change",()=>{ const v=$$("#lv-checks input:che
 $("#gl-checks").addEventListener("change",()=>{ const v=$$("#gl-checks input:checked").map(i=>i.value); if(!v.length){ toast("至少保留一种释义语言"); renderSettings(); return; } S.settings.gloss[lang()]=v; save(); renderCard(); });
 $$('input[name="dir"]').forEach(r=>r.addEventListener("change",e=>{ S.settings.dir=e.target.value; save(); if(sess) sess.flipped=false; renderCard(); }));
 $("#opt-autopile").addEventListener("change",e=>{ S.settings.autoPile=e.target.checked; save(); });
-$$('input[name="zscr"]').forEach(r=>r.addEventListener("change",e=>{ S.settings.script=e.target.value; save(); renderCard(); if(cur==="read") mgRender(); if(cur==="browse") renderBrowse(); if(cur==="pile") renderPile(); }));
+$$('input[name="zscr"]').forEach(r=>r.addEventListener("change",e=>{ S.settings.script=e.target.value; save(); applyScr(); renderCard(); if(cur==="read") mgRender(); if(cur==="browse") renderBrowse(); if(cur==="pile") renderPile(); }));
 $("#opt-py").addEventListener("change",e=>{ S.settings.py=e.target.checked; save(); applyPy(); renderCard(); });
 $$("[data-tc]").forEach(x=>x.addEventListener("change",()=>{ $$("[data-tc]").forEach(y=>y.checked=y===x); S.settings.toneSel=[+x.dataset.tc]; if(!tonesOn()&&S.settings.toneSel.length){ S.settings.tones=true; const o=$("#opt-tone"); if(o) o.checked=true; const b=$("#mg-tone"); if(b) b.setAttribute("aria-pressed","true"); } save(); applyTones(); }));
 $("#opt-cardstk").addEventListener("change",e=>{ S.settings.cardStk=e.target.checked; save(); renderCard(); });
@@ -4669,7 +4668,7 @@ let lastDay=today();
 setInterval(()=>{ if(today()!==lastDay){ lastDay=today(); if(DATA[lang()]){ buildDaily(); renderStrip(); } } },60000);
 document.addEventListener("visibilitychange",()=>{ if(document.visibilityState==="visible"&&today()!==lastDay){ lastDay=today(); if(DATA[lang()]){ buildDaily(); renderStrip(); } } });
 if("serviceWorker" in navigator&&location.protocol==="https:") navigator.serviceWorker.register("sw.js").catch(()=>{});
-applyPy(); applyTones();
+applyPy(); applyTones(); applyScr();
 // the dictionary loads in the background; once it is there, the open text is split again with it
 zdLoad().then(m=>{ if(m&&MG.cur&&document.querySelector("#mg-body")) mgRender(); });
 })();
