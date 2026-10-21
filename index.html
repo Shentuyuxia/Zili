@@ -220,6 +220,8 @@ input[type=range]{accent-color:var(--acc);width:100%}
 @media (max-width:640px){.newgrid{grid-template-columns:minmax(0,1fr)}}
 .newhead{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:6px}
 .newhead input{flex:1;min-width:180px;font-family:var(--f-word);font-size:20px;padding:10px 12px}
+.newsimple{display:grid;gap:4px;max-width:560px;margin-top:6px}
+#n-w{font-family:var(--f-cn)}
 .newhead select{width:auto}
 .status{min-height:22px;font-size:13px;color:var(--muted);margin:4px 0 14px;display:flex;align-items:center;gap:8px}
 .status.err{color:var(--bad)}
@@ -1145,37 +1147,16 @@ body:not(.tones) .tone-opts{opacity:.55}
       <div class="sesshead"><h2 id="new-title">录入新词</h2><button class="btn ghost sm" id="n-clear" type="button">清空</button></div>
       <form id="n-form" autocomplete="off">
         <div class="newhead">
-          <input type="text" id="n-w" aria-label="单词" required autocapitalize="off" spellcheck="false">
-          <select id="n-lv" aria-label="级别"></select>
+          <input type="text" id="n-w" aria-label="汉字" required autocapitalize="off" spellcheck="false">
           <button class="btn primary" type="button" id="n-ai"></button>
         </div>
         <div class="status" id="n-status"></div>
-        <div class="newgrid">
-          <div>
-            <div class="two">
-              <div class="field"><label for="n-pos">词性</label><select id="n-pos"></select></div>
-              <div class="field"><label for="n-x" id="n-x-lab">变形</label><input type="text" id="n-x"></div>
-            </div>
-            <div id="n-gl"></div>
-            <div class="field"><label for="n-ex">例句</label><input type="text" id="n-ex"></div>
-            <div class="two">
-              <div class="field"><label for="n-exzh">例句中文</label><input type="text" id="n-exzh"></div>
-              <div class="field" id="n-exen-f"><label for="n-exen">例句英文</label><input type="text" id="n-exen"></div>
-            </div>
-            <div class="field"><label for="n-memo">记忆提示</label><input type="text" id="n-memo" placeholder="谐音、画面、词根……"></div>
-            <div class="field"><label for="n-mine">我的例句（每行一句）</label><textarea id="n-mine" rows="3"></textarea></div>
-          </div>
-          <div>
-            <div class="field" hidden><span class="lab2">记忆图片</span></div>
-            <div class="imgbox" id="n-img" hidden><span class="ph">AI 会根据词义画一张插图。也可以上传自己的照片。</span></div>
-            <div class="imgacts" hidden>
-              <button class="btn sm" type="button" id="n-draw"></button>
-              <label class="btn sm filebtn">上传图片<input type="file" id="n-file" accept="image/*"></label>
-              <button class="btn ghost sm" type="button" id="n-noimg" hidden>去掉图片</button>
-            </div>
-            <div class="field"><span class="lab2">我的发音</span></div>
-            <div class="recs" id="n-recs"></div>
-          </div>
+        <div class="newsimple">
+          <div class="field"><label for="n-x">拼音</label><input type="text" id="n-x" autocapitalize="off" spellcheck="false"></div>
+          <div class="field"><label for="n-mean">释义</label><input type="text" id="n-mean" placeholder="用你习惯的语言写"></div>
+          <div class="field"><label for="n-ex">例句（可选）</label><input type="text" id="n-ex"></div>
+          <div class="field"><label for="n-memo">记忆提示（可选）</label><input type="text" id="n-memo" placeholder="谐音、画面、部首……"></div>
+          <p class="small muted" id="n-lvinfo" style="margin:2px 0 0"></p>
         </div>
         <div class="row" style="margin-top:8px"><button class="btn primary" type="submit" id="n-save">保存到词库</button><span class="small muted" id="n-msg"></span></div>
       </form>
@@ -1201,7 +1182,7 @@ body:not(.tones) .tone-opts{opacity:.55}
         <p class="note" id="bulk-hint" style="margin-bottom:8px"></p>
         <textarea id="bulk" class="mono" aria-label="批量导入内容"></textarea>
         <div class="row" style="margin-top:8px">
-          <select id="bulk-lv" aria-label="导入到哪个级别" style="width:auto"></select>
+          <select id="bulk-lv" aria-label="导入到哪个级别" style="width:auto" hidden></select>
           <button class="btn" id="bulk-btn" type="button">导入</button>
         </div>
         <p class="small muted" id="bulk-msg" style="margin:8px 0 0"></p>
@@ -2130,12 +2111,13 @@ function posChip(c){
 }
 const glRow=(c,k)=>`<div class="gl"><span class="gl-k">${GLS[k]}</span><span class="gl-v ${k}">${esc(c[k])}</span></div>`;
 function glossHTML(c,big,all){
+  if(c.mean) return `<div class="gls${big?" big":""}"><div class="gl"><span class="gl-v">${esc(c.mean)}</span></div></div>`;
   const keys=all?LANG[c.lang].gl:glSel();
   const rows=keys.filter(k=>c[k]).map(k=>glRow(c,k));
   if(!rows.length){ const k=LANG[c.lang].gl.find(k=>c[k]); if(k) rows.push(glRow(c,k)); }
   return `<div class="gls${big?" big":""}">${rows.join("")}</div>`;
 }
-function firstGloss(c){ for(const k of glSel()) if(c[k]) return c[k]; return c.zh||c.en||c.def||""; }
+function firstGloss(c){ if(c.mean) return c.mean; for(const k of glSel()) if(c[k]) return c[k]; return c.zh||c.en||c.def||""; }
 function highlight(ex,w){
   if(HAN.test(w||"")){ const e=esc(zs(ex)), x=esc(zs(w)); return x&&e.includes(x)?e.split(x).join("<b>"+x+"</b>"):e; }
   const e=esc(ex); let core=w.replace(/^(der|die|das|o|a|os|as)\s+/i,"").split(/\s*[\/…]\s*/)[0].trim();
@@ -2413,112 +2395,94 @@ async function checkSent(c,i){
 }
 
 /* ---------- new word tab ---------- */
-let draft={img:null,auds:{}}, busy=false;
+let draft={img:null,auds:{}}, busy=false, NLV={w:"",lv:"",auto:true};
+/* level: HSK level from the dictionary; otherwise estimated from how common the word is */
+async function autoLevel(w){
+  const rows=await zdGet(w); const h=rows&&rows.find(r=>r[3]); if(h) return {lv:"HSK"+h[3],how:"hsk"};
+  await zdLoad(); const c=ZD&&ZD.get(w);
+  const lv=c==null?"HSK6":c<=10?"HSK3":c<=12?"HSK4":c<=14?"HSK5":"HSK6"; return {lv,how:"est"}; }
 function renderNewForm(){
-  const l=lang();
-  $("#new-title").textContent="录入新词 · "+LANG[l].name;
-  $("#n-w").placeholder="例如：雨伞";
-  $("#n-lv").innerHTML=LV().map(v=>`<option>${v}</option>`).join("");
-  $("#n-pos").innerHTML=`<option value="">（选择）</option>`+POSOPT[l].map(([v,t])=>`<option value="${v}">${t}</option>`).join("");
-  $("#n-x-lab").textContent=XLAB[l][0]; $("#n-x").placeholder=XLAB[l][1];
-  $("#n-gl").innerHTML=`<div class="two">${LANG[l].gl.map(k=>`<div class="field"><label for="n-g-${k}">${GLN[k]}</label><input type="text" id="n-g-${k}"></div>`).join("")}</div>`;
-  $("#n-exen-f").hidden=false; $("#n-exzh").closest(".field").querySelector("label").textContent="例句德文";
-  $("#bulk-hint").innerHTML=`每行一个词：<span class="mono">单词 | ${LANG[l].gl.map(k=>GLN[k]).join(" | ")} | 例句</span>，后面几项可以省略。`;
-  $("#bulk").placeholder= l==="zh"? "雨伞 | umbrella | Regenschirm | 下雨了，带上雨伞吧。\n插座 | socket | Steckdose" : l==="fr"? "le parapluie | umbrella | 雨伞 | der Regenschirm\nla prise | socket | 插座" : l==="pt"? "o guarda-chuva | 雨伞 | umbrella | le parapluie\na geladeira | 冰箱 | fridge" : l==="de"? "der Regenschirm | 雨伞 | umbrella | Nimm einen Regenschirm mit!\ndie Steckdose | 插座 | socket" : "umbrella | 雨伞 | a thing you hold over your head in the rain | der Regenschirm";
+  $("#new-title").textContent="录入新词";
+  $("#n-w").placeholder="输入汉字，例如：雨伞";
+  $("#bulk-hint").innerHTML=`每行一个词：<span class="mono">汉字 | 释义 | 例句</span>，后两项可以省略。拼音和级别会自动补上。`;
+  $("#bulk").placeholder="雨伞 | umbrella | 下雨了，带上雨伞吧。\n插座 | Steckdose";
   $("#bulk-lv").innerHTML=LV().map(v=>`<option>${v}</option>`).join("");
-  clearDraft(true);
-  renderNewButtons();
+  clearDraft(true); renderNewButtons();
 }
 function renderNewButtons(){
-  const ai=aiState==="ready";
-  const a=$("#n-ai"); a.innerHTML=busy?`<span class="spin"></span> 生成中…`:(ai?`${I.spark} AI 补全`:"AI 未设置"); a.disabled=!ai||busy;
-  const d=$("#n-draw"); d.innerHTML=`${I.spark} ${draft.img?"AI 重画":"AI 画图"}`; d.disabled=!ai||busy; d.hidden=!ai;
-  $("#n-noimg").hidden=!draft.img;
+  const ai=aiState==="ready", a=$("#n-ai");
+  a.innerHTML=busy?`<span class="spin"></span> 生成中…`:`${I.spark} AI 补全`; a.disabled=!ai||busy; a.hidden=!ai;
 }
-function renderNewRecs(){
-  const box=$("#n-recs"); const has={}; SLOTS.forEach(([s])=>{ if(draft.auds[s]) has[s]=true; });
-  box.innerHTML=recRowsHTML("n",has);
-  bindRecs(box,"n",{
-    has:()=>has,
-    save:async(slot,blob)=>{ draft.auds[slot]=blob; renderNewRecs(); },
-    play:slot=>{ const b=draft.auds[slot]; if(!b) return; if(player) player.pause(); player=new Audio(URL.createObjectURL(b)); player.play().catch(()=>{}); },
-    remove:slot=>{ delete draft.auds[slot]; renderNewRecs(); },
-    rerender:renderNewRecs
-  });
-}
+function renderNewRecs(){}
 function setStatus(t,err,spin){ const s=$("#n-status"); s.className="status"+(err?" err":""); s.innerHTML=(spin?'<span class="spin"></span>':"")+esc(t||""); }
-function draftImg(src){ const b=$("#n-img"); if(src){ b.classList.add("has"); b.innerHTML=""; const im=new Image(); im.alt=""; im.src=src; b.appendChild(im); } else { b.classList.remove("has"); b.innerHTML=`<span class="ph">AI 会根据词义画一张插图。也可以上传自己的照片。</span>`; } renderNewButtons(); }
 function clearDraft(keepWord){
-  if(REC.target&&REC.target.startsWith("n:")) cancelRec();
-  ["n-x","n-ex","n-exzh","n-exen","n-memo","n-mine"].forEach(id=>$("#"+id).value="");
-  LANG[lang()].gl.forEach(k=>{ const el=$("#n-g-"+k); if(el) el.value=""; });
-  $("#n-pos").value=""; if(!keepWord) $("#n-w").value="";
-  draft={img:null,auds:{}}; draftImg(null); renderNewRecs(); setStatus(""); $("#n-msg").textContent="";
+  ["n-x","n-mean","n-ex","n-memo"].forEach(id=>$("#"+id).value="");
+  if(!keepWord) $("#n-w").value="";
+  draft={img:null,auds:{}}; NLV={w:"",lv:"",auto:true}; $("#n-lvinfo").textContent=""; setStatus(""); $("#n-msg").textContent="";
+}
+async function nPrefill(){ // pinyin, a meaning in the learner's gloss language, and the level, from the dictionary
+  const w=$("#n-w").value.trim().replace(/\s+/g,""); if(!w||!HAN.test(w)) return;
+  if(!$("#n-x").value.trim()) $("#n-x").value=PYFIX.get(w)||zPy(w);
+  const rows=await zdGet(w); if($("#n-w").value.trim().replace(/\s+/g,"")!==w) return;
+  if(rows&&rows[0]){ const r=rows[0];
+    if(!$("#n-x").value.trim()||$("#n-x").value.trim()===zPy(w)) $("#n-x").value=PYFIX.get(w)||r[0];
+    if(!$("#n-mean").value.trim()){ const k=glSel()[0]; $("#n-mean").value=zdShort(k==="de"?(r[2]||r[1]):(r[1]||r[2])); } }
+  const L2=await autoLevel(w); if($("#n-w").value.trim().replace(/\s+/g,"")!==w) return;
+  NLV={w,lv:L2.lv,auto:true}; $("#n-lvinfo").textContent=trOne(L2.how==="hsk"?"级别：":"级别（按常用程度估计）：")+L2.lv;
 }
 function formCard(){
-  const l=lang(), w=$("#n-w").value.trim(), o={lang:l,w,lvl:$("#n-lv").value,pos:$("#n-pos").value,extra:$("#n-x").value.trim()||zPy(w),ex:$("#n-ex").value.trim(),exzh:"",exde:$("#n-exzh").value.trim(),exen:$("#n-exen").value.trim()}; o.py=o.extra;
-  LANG[l].gl.forEach(k=>o[k]=$("#n-g-"+k).value.trim()); return o;
+  const w=$("#n-w").value.trim().replace(/\s+/g,""), py=$("#n-x").value.trim()||PYFIX.get(w)||zPy(w), mean=$("#n-mean").value.trim();
+  return {lang:"zh",w,py,extra:py,mean,ex:$("#n-ex").value.trim()};
 }
 function fillForm(r){
-  const l=lang(), set=(id,v)=>{ if(v!=null&&String(v).trim()) $("#"+id).value=String(v).trim(); };
-  set("n-w",r.w); set("n-x",r.extra); set("n-ex",r.ex); set("n-exzh",r.exde); set("n-exen",r.exen); set("n-memo",r.memo);
-  LANG[l].gl.forEach(k=>set("n-g-"+k,r[k]));
-  if(r.pos&&POSOPT[l].some(([v])=>v===r.pos)) $("#n-pos").value=r.pos;
-  if(r.level&&LV().includes(r.level)) $("#n-lv").value=r.level;
-}
-async function drawDraft(){
-  const c=formCard(); if(!c.w){ setStatus("先输入单词。",true); return false; }
-  setStatus("正在画插图…（通常 10–60 秒）",false,true); busy=true; renderNewButtons();
-  try{ const svg=await aiImage(lang(),c,$("#n-memo").value.trim()); draft.img={kind:"svg",data:svg}; draftImg(toSrc("svg",svg)); setStatus("插图画好了。不满意可以重画或上传自己的图片。"); return true; }
-  catch(e){ setStatus(aiErr(e),true); return false; }
-  finally{ busy=false; renderNewButtons(); }
+  const set=(id,v)=>{ if(v!=null&&String(v).trim()) $("#"+id).value=String(v).trim(); };
+  set("n-x",r.extra); set("n-ex",r.ex); set("n-memo",r.memo);
+  if(!$("#n-mean").value.trim()){ const k=glSel()[0]; set("n-mean",r[k]||r.en||r.de); }
+  if(r.level&&LV().includes(r.level)&&NLV.how!=="hsk"){ NLV.lv=r.level; $("#n-lvinfo").textContent=trOne("级别：")+r.level; }
 }
 $("#n-ai").addEventListener("click",async()=>{
-  const w=$("#n-w").value.trim(); if(!w){ setStatus("先输入单词。",true); $("#n-w").focus(); return; }
+  const w=$("#n-w").value.trim(); if(!w){ setStatus("先输入汉字。",true); $("#n-w").focus(); return; }
   if(aiState!=="ready") return;
-  if(ALL.some(c=>c.w.toLowerCase()===w.toLowerCase())){ setStatus("这个词已经在词库里了，可以在「词库」里点它，写例句、录音。",true); return; }
+  if(ALL.some(c=>c.w===w)){ setStatus("这个词已经在词库里了。",true); return; }
   busy=true; renderNewButtons(); setStatus("AI 正在补全释义和例句…",false,true);
-  try{ const r=await aiEntry(lang(),w); if(!r||typeof r!=="object") throw {code:"invalid_json"}; fillForm(r); }
-  catch(e){ busy=false; renderNewButtons(); setStatus(aiErr(e),true); return; }
+  try{ const r=await aiEntry(lang(),w); if(!r||typeof r!=="object") throw {code:"invalid_json"}; fillForm(r); setStatus(""); }
+  catch(e){ setStatus(aiErr(e),true); }
   busy=false; renderNewButtons();
 });
-$("#n-draw").addEventListener("click",()=>drawDraft());
-$("#n-file").addEventListener("change",async e=>{ const f=e.target.files&&e.target.files[0]; if(!f) return;
-  try{ const data=await fileToJpeg(f); draft.img={kind:"jpg",data}; draftImg(data); setStatus("已使用你上传的图片。"); }catch(err){ setStatus("这张图片读不出来，换一张试试。",true); } e.target.value=""; });
-$("#n-noimg").addEventListener("click",()=>{ draft.img=null; draftImg(null); });
 $("#n-clear").addEventListener("click",()=>clearDraft(false));
-$("#n-w").addEventListener("change",()=>{ const w=$("#n-w").value.trim(); if(w&&!$("#n-x").value.trim()) $("#n-x").value=zPy(w); });
+{ let tm=null; $("#n-w").addEventListener("input",()=>{ clearTimeout(tm); $("#n-x").value=""; $("#n-mean").value=""; $("#n-lvinfo").textContent=""; tm=setTimeout(nPrefill,350); }); }
+$("#n-w").addEventListener("change",nPrefill);
 $("#n-form").addEventListener("submit",async e=>{
   e.preventDefault(); const o=formCard();
-  if(!o.w){ setStatus("先输入单词。",true); return; }
-  if(!LANG[lang()].gl.some(k=>o[k])){ setStatus("至少填一种释义。",true); return; }
-  if(ALL.some(c=>c.w.toLowerCase()===o.w.toLowerCase())){ setStatus("这个词已经在词库里了。",true); return; }
-  if(REC.target&&REC.target.startsWith("n:")){ setStatus("正在录音，先点「停止」。",true); return; }
+  if(!o.w){ setStatus("先输入汉字。",true); return; }
+  if(!HAN.test(o.w)){ setStatus("请输入汉字。",true); return; }
+  if(!o.mean){ setStatus("写一个释义。",true); $("#n-mean").focus(); return; }
+  if(ALL.some(c=>c.w===o.w)){ setStatus("这个词已经在词库里了。",true); return; }
+  const lv=NLV.w===o.w&&NLV.lv?NLV.lv:(await autoLevel(o.w)).lv;
   const id="u:"+Date.now().toString(36)+Math.random().toString(36).slice(2,6);
-  if(!o.pos) o.pos=guessPos(o.w);
-  const LL=L(); const rec={id,lvl:o.lvl,w:o.w,pos:o.pos,extra:o.extra,py:o.py,ex:o.ex,exzh:"",exen:o.exen,exde:o.exde}; LANG[lang()].gl.forEach(k=>rec[k]=o[k]);
-  LL.custom.push(rec);
+  // the one meaning is kept as the card's gloss (shown without a language label) — en is used so word list, search and sync keep working
+  const LL=L(); LL.custom.push({id,lvl:lv,w:o.w,pos:"",extra:o.py,py:o.py,en:o.mean,de:"",mean:o.mean,ex:o.ex,exzh:"",exen:"",exde:""});
   const memo=$("#n-memo").value.trim(); if(memo) LL.memo[id]=memo;
-  const sents=$("#n-mine").value.split("\n").map(s=>s.trim()).filter(Boolean); if(sents.length) LL.mine[id]=sents.map(t=>({t,ts:Date.now()}));
-  rebuildCards();
-  if(draft.img) await storeImg(id,draft.img.kind,draft.img.data);
-  for(const [slot] of SLOTS) if(draft.auds[slot]) await storeAud(id,slot,draft.auds[slot]);
-  save(); if(sess&&sess.mode==="daily"&&!sess.flipped) buildDaily(); renderStrip();
-  const w=o.w; clearDraft(false); $("#n-msg").textContent="「"+w+"」已保存，会作为新词优先出现。"; $("#n-w").focus();
+  rebuildCards(); save(); if(sess&&sess.mode==="daily"&&!sess.flipped) buildDaily(); renderStrip();
+  const w=o.w; clearDraft(false); $("#n-msg").textContent="「"+zs(w)+"」已保存（"+lv+"），会作为新词优先出现。"; $("#n-w").focus();
 });
 function guessPos(w){ const l=lang(); if(l==="fr"){ if(/^le\s/i.test(w)) return "m"; if(/^la\s/i.test(w)) return "f"; } if(l==="pt"){ if(/^o\s/i.test(w)) return "m"; if(/^a\s/i.test(w)) return "f"; } else if(l==="de"){ const m=w.match(/^(der|die|das)\s/); if(m) return {der:"m",die:"f",das:"n"}[m[1]]; } return ""; }
-$("#bulk-btn").addEventListener("click",()=>{
-  const l=lang(), keys=LANG[l].gl, lv=$("#bulk-lv").value; let ok=0,dup=0,bad=0;
-  $("#bulk").value.split("\n").map(s=>s.trim()).filter(Boolean).forEach(line=>{
-    const p=line.split("|").map(s=>s.trim()); const w=p[0];
-    const rec={id:"u:"+Date.now().toString(36)+Math.random().toString(36).slice(2,6),lvl:lv,w,pos:guessPos(w||""),extra:zPy(w||""),py:zPy(w||""),exzh:"",exen:"",exde:""};
-    keys.forEach((k,i)=>rec[k]=p[1+i]||""); rec.ex=p[1+keys.length]||"";
-    if(!w||!keys.some(k=>rec[k])){ bad++; return; }
-    if(ALL.some(c=>c.w.toLowerCase()===w.toLowerCase())){ dup++; return; }
-    L().custom.push(rec); rebuildCards(); ok++;
-  });
-  if(ok){ save(); $("#bulk").value=""; renderStrip(); }
-  $("#bulk-msg").textContent=`导入 ${ok} 个`+(dup?`，${dup} 个已存在`:"")+(bad?`，${bad} 行缺少单词或释义`:"");
+$("#bulk-btn").addEventListener("click",async()=>{ // 汉字 | 释义 | 例句 — pinyin and level are filled in
+  const lines=$("#bulk").value.split("\n").map(s=>s.trim()).filter(Boolean); let ok=0,dup=0,bad=0;
+  $("#bulk-msg").textContent=trOne("正在导入…")||"";
+  await zdLoad();
+  for(const line of lines){
+    const p=line.split("|").map(s=>s.trim()), w=(p[0]||"").replace(/\s+/g,"");
+    if(!w||!HAN.test(w)){ bad++; continue; }
+    if(ALL.some(c=>c.w===w)||L().custom.some(c=>c.w===w)){ dup++; continue; }
+    let mean=p[1]||""; const rows=await zdGet(w);
+    if(!mean&&rows&&rows[0]){ const k=glSel()[0]; mean=zdShort(k==="de"?(rows[0][2]||rows[0][1]):(rows[0][1]||rows[0][2])); }
+    if(!mean){ bad++; continue; }
+    const py=PYFIX.get(w)||(rows&&rows[0]&&rows[0][0])||zPy(w), lv=(await autoLevel(w)).lv;
+    L().custom.push({id:"u:"+Date.now().toString(36)+Math.random().toString(36).slice(2,6),lvl:lv,w,pos:"",extra:py,py,en:mean,de:"",mean,ex:p[2]||"",exzh:"",exen:"",exde:""}); ok++;
+  }
+  if(ok){ rebuildCards(); save(); $("#bulk").value=""; renderStrip(); }
+  $("#bulk-msg").textContent=`导入 ${ok} 个`+(dup?`，${dup} 个已存在`:"")+(bad?`，${bad} 行缺少汉字或释义`:"");
 });
 
 /* ---------- add a word coming from the reading tab ---------- */
@@ -3199,8 +3163,11 @@ function mgOpen(word,sentence){
 function zCtxPy(word,sentence){ // the reading pinyin-pro gives this word in its sentence (helps 行 háng/xíng, 长 cháng/zhǎng …)
   const sen=String(sentence||""), i=sen.indexOf(word); if(i<0) return "";
   const a=zPyArr(sen).slice(i,i+word.length); return a.every(Boolean)?a.join(" "):""; }
-function zdShort(t){ // first two senses, for the saved card
-  return String(t||"").split(/;\s*/).filter(x=>!/^(\(bound form\)|classifier|see |used in |variant of)/i.test(x.trim())||false).slice(0,2).join("; ")||String(t||"").split(/;\s*/)[0]||""; }
+function zdShort(t){ // first two senses, for the saved card; drops dictionary labels like (slang), (neologism), (Tw)
+  const tidy=x=>x.replace(/^(\s*\((?:bound form|slang|neologism|coll\.|colloquial|literary|dialect|Tw|old|archaic|loanword|abbr\.|onom\.|Internet slang|fig\.|lit\.)\)\s*)+/i,"").replace(/\s*\((?:loanword|Tw|coll\.)\)\s*$/i,"").trim();
+  const parts=String(t||"").split(/;\s*/).map(x=>x.trim()).filter(Boolean);
+  const good=parts.filter(x=>!/^(\(bound form\)|classifier|see |used in |variant of)/i.test(x)).map(tidy).filter(Boolean);
+  return (good.length?good:parts.map(tidy)).slice(0,2).join("; "); }
 /* free dictionary: English Wiktionary (no key, no cost) */
 const WK_POS={Noun:"名词","Proper noun":"专有名词",Verb:"动词",Adjective:"形容词",Adverb:"副词",Preposition:"介词",Conjunction:"连词",Pronoun:"代词",Article:"冠词",Determiner:"限定词",Interjection:"感叹词",Numeral:"数词",Phrase:"短语",Contraction:"缩合形式",Participle:"分词",Prefix:"前缀",Suffix:"后缀",Particle:"小品词","Prepositional phrase":"介词短语",Idiom:"习语",Proverb:"谚语"};
 const WK=new Map();
@@ -4470,6 +4437,16 @@ const UI_DICT=[
 ["笔顺", "Stroke order", "Strichfolge", "Ordem dos traços", "筆順"],
 ["画", "strokes", "Striche", "traços", "畫"],
 ["描", "Trace", "Nachfahren", "Traçar", "描"],
+["输入汉字，例如：雨伞", "Type the Chinese word, e.g. 雨伞", "Chinesisches Wort eingeben, z. B. 雨伞", "Digite a palavra em chinês, ex.: 雨伞", "輸入漢字，例如：雨傘"],
+["用你习惯的语言写", "In whatever language you like", "In der Sprache, die dir liegt", "Na língua que preferir", "用你習慣的語言寫"],
+["例句（可选）", "Example (optional)", "Beispielsatz (optional)", "Exemplo (opcional)", "例句（可選）"],
+["记忆提示（可选）", "Memory hint (optional)", "Merkhilfe (optional)", "Dica de memória (opcional)", "記憶提示（可選）"],
+["谐音、画面、部首……", "sound-alike, picture, radical…", "Klangbild, Bild, Radikal…", "som parecido, imagem, radical…", "諧音、畫面、部首……"],
+["级别：", "Level: ", "Niveau: ", "Nível: ", "級別："],
+["级别（按常用程度估计）：", "Level (estimated from frequency): ", "Niveau (nach Häufigkeit geschätzt): ", "Nível (estimado pela frequência): ", "級別（按常用程度估計）："],
+["写一个释义。", "Add a meaning.", "Gib eine Bedeutung an.", "Escreva um significado.", "寫一個釋義。"],
+["先输入汉字。", "Type the Chinese word first.", "Erst das chinesische Wort eingeben.", "Digite a palavra primeiro.", "先輸入漢字。"],
+["请输入汉字。", "Please type Chinese characters.", "Bitte chinesische Zeichen eingeben.", "Digite caracteres chineses.", "請輸入漢字。"],
 ["字典", "Dictionary", "Wörterbuch", "Dicionário", "字典"],
 ["手写", "Handwriting", "Handschrift", "Escrita à mão", "手寫"],
 ["说", "Speak", "Sprechen", "Falar", "說"],
