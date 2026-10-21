@@ -952,6 +952,21 @@ body:not(.tones) .tone-opts{opacity:.55}
 .zstk .acts button{border:1px solid var(--line);background:var(--bg);color:inherit;border-radius:999px;font-size:12px;padding:1px 9px;cursor:pointer}
 .zstk .acts button[aria-pressed="true"]{border-color:var(--acc);color:var(--acc)}
 .mg-sheet .sec{font-size:12.5px;color:var(--muted);margin:2px 0 -2px}
+/* 米字格 */
+.mz-grid{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.mz-grid rect{fill:none;stroke:var(--line);stroke-width:1.2}
+.mz-grid path{fill:none;stroke:var(--line);stroke-width:.7;stroke-dasharray:2.2 2}
+.zstk .box{background-image:none!important}
+.zstk .box > svg:not(.mz-grid),.mz-box > svg:not(.mz-grid){position:relative;display:block}
+.mz{display:grid;justify-items:center;gap:10px;margin-top:6px;width:100%}
+.mz-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
+.mz-chips button{font-family:var(--f-cn);font-size:19px;min-width:40px;height:40px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:inherit;cursor:pointer}
+.mz-chips button[aria-pressed="true"]{border-color:var(--acc);color:var(--acc);background:var(--acc-soft)}
+.mz-box{position:relative;width:min(240px,64vw);aspect-ratio:1;border-radius:6px;background:var(--surface);touch-action:none;-webkit-user-select:none;user-select:none}
+.mz-box.none{display:grid;place-items:center;font-family:var(--f-cn);font-size:120px;color:var(--muted)}
+.mz-acts{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px}
+.mz-acts .meta{font-size:12.5px;color:var(--muted)}
+.mz-acts .btn[aria-pressed="true"]{border-color:var(--acc);color:var(--acc)}
 .mg-sheet .zgl-l .k{display:inline-block;min-width:2.2em;font-size:11px;font-weight:600;color:var(--muted);letter-spacing:.06em}
 .ex .t.zc{font-family:var(--f-cn);font-size:18px}
 .ex .py{font-size:12.5px;color:var(--muted);margin-top:1px}
@@ -1056,6 +1071,7 @@ body:not(.tones) .tone-opts{opacity:.55}
           <div class="checks tone-where"><label><input type="radio" name="tonewhere" value="all" id="tw-all"> 汉字和拼音</label><label><input type="radio" name="tonewhere" value="py" id="tw-py"> 只给拼音上色</label></div>
           <p class="note hint" style="margin-top:6px">一次标一个声调，其他字保持黑色。可以每周换一个练。</p>
         </div>
+        <label class="tog" style="margin-top:12px"><input type="checkbox" id="opt-cardstk"> 生词卡翻面后显示笔顺米字格</label>
       </div>
       <div class="panel tset">
         <h3>释义语言</h3>
@@ -2174,10 +2190,10 @@ function renderCard(){
   let body;
   if(dir==="t2g"){
     body=`${imgFront?imgEl:""}<div class="word">${wordHTML(c)}</div><div class="row" style="justify-content:center">${posChip(c)}</div>`;
-    if(sess.flipped) body+=`${extra}<div class="divider"></div>${!imgFront?imgEl:""}${glossHTML(c)}${backBits()}`;
+    if(sess.flipped) body+=`${extra}<div class="divider"></div>${!imgFront?imgEl:""}${glossHTML(c)}${mzHtml(c)}${backBits()}`;
   } else {
     body=`${imgFront?imgEl:""}${glossHTML(c,true)}<div class="row" style="justify-content:center">${posChip(c)}</div>`;
-    if(sess.flipped) body+=`<div class="divider"></div>${!imgFront?imgEl:""}<div class="word sm">${wordHTML(c)}</div>${extra}${backBits()}`;
+    if(sess.flipped) body+=`<div class="divider"></div>${!imgFront?imgEl:""}<div class="word sm">${wordHTML(c)}</div>${extra}${mzHtml(c)}${backBits()}`;
   }
   const actions= sess.flipped
     ? `<div class="rate">
@@ -2196,6 +2212,7 @@ function renderCard(){
   const ad=$("#c-add"); if(ad) ad.onclick=()=>openDetail(c.id);
   const f=$("#c-flip"); if(f) f.onclick=flip;
   area.querySelectorAll(".rate button").forEach(b=>b.onclick=()=>grade(+b.dataset.g));
+  if(sess.flipped) mzMount(c);
 }
 function renderDone(area){
   const log=lg(), d=LANG[lang()], fp=freshPool().length, due=dueList().length;
@@ -2875,7 +2892,7 @@ function zStkData(c){ const k=(c.codePointAt(0)%256).toString(16).padStart(2,"0"
   return STK.sh.get(k).then(sh=>(sh&&sh[c])||null); }
 function zStkChars(w){ return [...new Set([...zs(w)].filter(c=>HAN.test(c)))].slice(0,6); }
 function zStkHtml(w){ const cs=zStkChars(w); if(!cs.length) return "";
-  return `<p class="sec">笔顺</p><div class="zstk">${cs.map((c,i)=>`<div class="cell"><div class="box" id="stk-${i}" data-stk="play" data-i="${i}" role="button" aria-label="${esc(c)}" data-noi18n></div><span class="meta" id="stk-m-${i}" data-noi18n></span><div class="acts"><button type="button" data-stk="play" data-i="${i}">▶</button><button type="button" data-stk="quiz" data-i="${i}" aria-pressed="false">描</button></div></div>`).join("")}</div>`; }
+  return `<p class="sec">笔顺</p><div class="zstk">${cs.map((c,i)=>`<div class="cell"><div class="box" id="stk-${i}" data-stk="play" data-i="${i}" role="button" aria-label="${esc(c)}" data-noi18n><svg class="mz-grid" viewBox="0 0 100 100" aria-hidden="true"><rect x="1" y="1" width="98" height="98" rx="4"/><path d="M50 1V99M1 50H99M1 1L99 99M99 1L1 99"/></svg></div><span class="meta" id="stk-m-${i}" data-noi18n></span><div class="acts"><button type="button" data-stk="play" data-i="${i}">▶</button><button type="button" data-stk="quiz" data-i="${i}" aria-pressed="false">描</button></div></div>`).join("")}</div>`; }
 async function zStkMount(w){
   const key=w+"|"+scr(); STK.key=key; STK.w=[];
   const cs=zStkChars(w); if(!cs.length) return;
@@ -2884,7 +2901,7 @@ async function zStkMount(w){
   cs.forEach(async(c,i)=>{
     const box=$("#stk-"+i), meta=$("#stk-m-"+i); if(!box) return;
     const data=ok?await zStkData(c):null; if(STK.key!==key) return;
-    if(!data){ box.classList.add("none"); box.removeAttribute("data-stk"); box.textContent=c; if(meta) meta.textContent="—"; const a=box.parentElement.querySelector(".acts"); if(a) a.hidden=true; return; }
+    if(!data){ box.classList.add("none"); box.removeAttribute("data-stk"); box.innerHTML=esc(c); if(meta) meta.textContent="—"; const a=box.parentElement.querySelector(".acts"); if(a) a.hidden=true; return; }
     if(meta) meta.textContent=data.strokes.length+" "+(trOne("画")||"画");
     const hw=HanziWriter.create(box,c,{width:96,height:96,padding:6,charDataLoader:(ch,done)=>done(data),strokeColor:ink,radicalColor:acc,outlineColor:line,drawingColor:acc,highlightColor:acc,showOutline:true,strokeAnimationSpeed:1.1,delayBetweenStrokes:180});
     STK.w[i]={hw,c,quiz:false};
@@ -2896,6 +2913,42 @@ function zStkAct(act,i){ const o=STK.w[i]; if(!o) return;
   if(act==="quiz"){ if(o.quiz){ o.hw.cancelQuiz(); o.quiz=false; o.hw.showCharacter(); if(btn) btn.setAttribute("aria-pressed","false"); return; }
     o.quiz=true; if(btn) btn.setAttribute("aria-pressed","true");
     o.hw.quiz({showHintAfterMisses:2,onComplete:()=>{ o.quiz=false; if(btn) btn.setAttribute("aria-pressed","false"); toast((trOne("写对了！")||"写对了！")+" "+o.c); }}); }
+}
+/* ---------- 米字格 on the flashcard: watch the strokes, then write along ---------- */
+const MZ={key:"",cs:[],i:0,hw:null,quiz:false};
+const cardStkOn=()=>S.settings.cardStk!==false;
+function mzHtml(c){
+  if(c.lang!=="zh"||!cardStkOn()) return ""; const cs=zStkChars(c.w); if(!cs.length) return "";
+  return `<div class="mz" id="mz">${cs.length>1?`<div class="mz-chips" data-noi18n>${cs.map((ch,i)=>`<button type="button" data-mzi="${i}" aria-pressed="${i===0}">${esc(ch)}</button>`).join("")}</div>`:""}
+    <div class="mz-box" id="mz-box" data-noi18n><svg class="mz-grid" viewBox="0 0 100 100" aria-hidden="true"><rect x="1" y="1" width="98" height="98" rx="4"/><path d="M50 1V99M1 50H99M1 1L99 99M99 1L1 99"/></svg></div>
+    <div class="mz-acts"><span class="meta" id="mz-meta" data-noi18n></span><button class="btn sm" type="button" id="mz-play">${I.play}<span>看笔顺</span></button><button class="btn sm" type="button" id="mz-write" aria-pressed="false">${I.pen}<span>跟着写</span></button></div></div>`; }
+async function mzShow(i,then){
+  const key=MZ.key, c=MZ.cs[i], box=$("#mz-box"); if(!box||c==null) return; MZ.i=i; MZ.quiz=false; MZ.hw=null;
+  $$("#mz [data-mzi]").forEach(b=>b.setAttribute("aria-pressed",+b.dataset.mzi===i)); { const w=$("#mz-write"); if(w) w.setAttribute("aria-pressed","false"); }
+  box.classList.remove("none"); box.querySelectorAll("svg:not(.mz-grid)").forEach(x=>x.remove()); [...box.childNodes].forEach(n=>{ if(n.nodeType===3) n.remove(); });
+  const ok=await zStkLib(); const data=ok?await zStkData(c):null; if(MZ.key!==key) return;
+  const meta=$("#mz-meta"), acts=$("#mz .mz-acts");
+  if(!data){ box.classList.add("none"); box.appendChild(document.createTextNode(c)); if(meta) meta.textContent=""; if(acts) acts.querySelectorAll("button").forEach(b=>b.hidden=true); return; }
+  if(acts) acts.querySelectorAll("button").forEach(b=>b.hidden=false);
+  if(meta) meta.textContent=data.strokes.length+" "+(trOne("画")||"画");
+  const css=getComputedStyle(document.body), size=Math.round(box.clientWidth)||240;
+  MZ.hw=HanziWriter.create(box,c,{width:size,height:size,padding:Math.round(size*.06),charDataLoader:(ch,done)=>done(data),
+    strokeColor:css.getPropertyValue("--ink").trim()||"#1c2930",radicalColor:css.getPropertyValue("--acc").trim()||"#2c6b64",
+    outlineColor:css.getPropertyValue("--line").trim()||"#d5dbda",drawingColor:css.getPropertyValue("--acc").trim()||"#2c6b64",
+    highlightColor:css.getPropertyValue("--acc").trim()||"#2c6b64",drawingWidth:Math.max(14,Math.round(size/14)),showOutline:true,strokeAnimationSpeed:1,delayBetweenStrokes:250});
+  if(then==="play") MZ.hw.animateCharacter(); else if(then==="write") mzWrite();
+}
+function mzWrite(){ const hw=MZ.hw; if(!hw) return; MZ.quiz=true; const w=$("#mz-write"); if(w) w.setAttribute("aria-pressed","true");
+  hw.quiz({showHintAfterMisses:2,highlightOnComplete:true,onComplete:()=>{ MZ.quiz=false; const b=$("#mz-write"); if(b) b.setAttribute("aria-pressed","false");
+    const nx=MZ.i+1; toast((trOne("写对了！")||"写对了！")+" "+MZ.cs[MZ.i]); if(nx<MZ.cs.length){ const key=MZ.key; setTimeout(()=>{ if(MZ.key===key) mzShow(nx,"play"); },900); } }}); }
+function mzMount(c){
+  const el=$("#mz"); if(!el) return; MZ.key=c.id+"|"+scr()+"|"+Date.now(); MZ.cs=zStkChars(c.w);
+  ["pointerdown","pointerup","click","touchstart","touchend","mousedown"].forEach(ev=>el.addEventListener(ev,e=>e.stopPropagation()));
+  el.addEventListener("click",e=>{ const b=e.target.closest("button"); if(!b) return;
+    if(b.dataset.mzi!=null){ mzShow(+b.dataset.mzi,"play"); return; }
+    if(b.id==="mz-play"){ if(MZ.quiz&&MZ.hw){ MZ.hw.cancelQuiz(); MZ.quiz=false; MZ.hw.showCharacter(); } b.blur(); MZ.hw&&MZ.hw.animateCharacter(); const w=$("#mz-write"); if(w) w.setAttribute("aria-pressed","false"); return; }
+    if(b.id==="mz-write"){ b.blur(); if(MZ.quiz&&MZ.hw){ MZ.hw.cancelQuiz(); MZ.quiz=false; MZ.hw.showCharacter(); b.setAttribute("aria-pressed","false"); } else mzWrite(); } });
+  mzShow(0,"play");
 }
 /* word sheet */
 function mgSentenceOf(node){ const s=node&&(node.closest?node.closest(".s"):node.parentElement&&node.parentElement.closest(".s")); return s?zPlain(s):""; }
@@ -3612,7 +3665,7 @@ function renderSettings(){
   $("#lv-checks").innerHTML=LV().map(v=>`<label><input type="checkbox" value="${v}" ${lvSel().includes(v)?"checked":""}> ${v}</label>`).join("");
   $("#gl-checks").innerHTML=LANG[l].gl.map(k=>`<label><input type="checkbox" value="${k}" ${S.settings.gloss[l].includes(k)?"checked":""}> ${GLN[k]}</label>`).join("");
   $("#dir-t2g").checked=S.settings.dir==="t2g"; $("#dir-g2t").checked=S.settings.dir==="g2t";
-  $("#scr-s").checked=scr()==="s"; $("#scr-t").checked=scr()==="t"; $("#opt-py").checked=pyOn(); { const o=$("#opt-tone"); if(o) o.checked=tonesOn(); $$("[data-tc]").forEach(x=>x.checked=toneSel().includes(+x.dataset.tc)); const tw=$(S.settings.toneWhere==="py"?"#tw-py":"#tw-all"); if(tw) tw.checked=true; }
+  $("#scr-s").checked=scr()==="s"; $("#scr-t").checked=scr()==="t"; $("#opt-py").checked=pyOn(); { const cs=$("#opt-cardstk"); if(cs) cs.checked=cardStkOn(); }{ const o=$("#opt-tone"); if(o) o.checked=tonesOn(); $$("[data-tc]").forEach(x=>x.checked=toneSel().includes(+x.dataset.tc)); const tw=$(S.settings.toneWhere==="py"?"#tw-py":"#tw-all"); if(tw) tw.checked=true; }
   $("#opt-autopile").checked=!!S.settings.autoPile; $("#opt-autospeak").checked=!!S.settings.autoSpeak; $("#opt-imgfront").checked=!!S.settings.imgFront; $("#opt-automine").checked=!!S.settings.autoMine;
   $("#opt-rate").value=S.settings.rate; $("#rate-v").textContent="×"+(+S.settings.rate).toFixed(2);
   $("#pile-lv").innerHTML=`<option value="">全部级别</option>`+LV().map(v=>`<option>${v}</option>`).join("");
@@ -3628,6 +3681,7 @@ $("#opt-autopile").addEventListener("change",e=>{ S.settings.autoPile=e.target.c
 $$('input[name="zscr"]').forEach(r=>r.addEventListener("change",e=>{ S.settings.script=e.target.value; save(); renderCard(); if(cur==="read") mgRender(); if(cur==="browse") renderBrowse(); if(cur==="pile") renderPile(); }));
 $("#opt-py").addEventListener("change",e=>{ S.settings.py=e.target.checked; save(); applyPy(); renderCard(); });
 $$("[data-tc]").forEach(x=>x.addEventListener("change",()=>{ $$("[data-tc]").forEach(y=>y.checked=y===x); S.settings.toneSel=[+x.dataset.tc]; if(!tonesOn()&&S.settings.toneSel.length){ S.settings.tones=true; const o=$("#opt-tone"); if(o) o.checked=true; const b=$("#mg-tone"); if(b) b.setAttribute("aria-pressed","true"); } save(); applyTones(); }));
+$("#opt-cardstk").addEventListener("change",e=>{ S.settings.cardStk=e.target.checked; save(); renderCard(); });
 $$('[name="tonewhere"]').forEach(x=>x.addEventListener("change",()=>{ S.settings.toneWhere=x.value; save(); applyTones(); }));
 $("#opt-tone").addEventListener("change",e=>{ S.settings.tones=e.target.checked; save(); applyTones(); const b=$("#mg-tone"); if(b) b.setAttribute("aria-pressed",tonesOn()); });
 $("#opt-autospeak").addEventListener("change",e=>{ S.settings.autoSpeak=e.target.checked; save(); });
@@ -4192,6 +4246,9 @@ const UI_DICT=[
 ["笔顺", "Stroke order", "Strichfolge", "Ordem dos traços", "筆順"],
 ["画", "strokes", "Striche", "traços", "畫"],
 ["描", "Trace", "Nachfahren", "Traçar", "描"],
+["看笔顺", "Watch strokes", "Strichfolge ansehen", "Ver traços", "看筆順"],
+["跟着写", "Write along", "Mitschreiben", "Escrever junto", "跟著寫"],
+["生词卡翻面后显示笔顺米字格", "Show the stroke-order grid on the back of flashcards", "Strichfolge-Raster auf der Kartenrückseite zeigen", "Mostrar a grade de traços no verso dos cartões", "生詞卡翻面後顯示筆順米字格"],
 ["写对了！", "Well written!", "Richtig geschrieben!", "Muito bem!", "寫對了！"],
 ["正在查词典…", "Looking it up…", "Schlage nach…", "Procurando…", "正在查詞典…"],
 ["Wiktionary 没有收这个词", "Not found in Wiktionary", "Nicht in Wiktionary gefunden", "Não encontrado no Wiktionary", "Wiktionary 沒有收這個詞"],
