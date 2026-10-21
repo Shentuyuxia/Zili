@@ -26,9 +26,10 @@
   --a1:#4f7d3a; --a2:#2f7c76; --b1:#3b5b86; --b2:#6a5598; --c1:#9a4a6e; --c2:#8a4a2e;
   --ok:#2f7a55; --ok-soft:#dcebe2; --warn:#9a6f17; --warn-soft:#f3e9d3; --bad:#a8473a; --bad-soft:#f3e0dc;
   --scrim:rgba(20,30,34,.32); --pt-mark:#7ebdb2;
-  --f-word:"Source Serif 4", Georgia, "EL Hei", "PingFang SC", sans-serif;
+  --f-word:"Source Serif 4", Georgia, "Noto Serif SC", "Songti SC", "EL Hei", serif;
   --f-ui:"Source Sans 3", "EL Hei", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
-  --f-cn:"EL Hei", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --f-cn:"Noto Serif SC", "Songti SC", "STSong", "EL Hei", serif; /* Chinese content: Source Han Serif */
+  --f-cnui:"EL Hei", "PingFang SC", "Microsoft YaHei", sans-serif; /* logo and interface */
   --f-mono:"Source Sans 3", "EL Hei", sans-serif;
   --tone:#0f8a80; --t1:var(--tone); --t2:var(--tone); --t3:var(--tone); --t4:var(--tone);
   --r:12px; color-scheme:light;
@@ -71,7 +72,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .brand .mark{width:36px;height:36px;flex:none;border-radius:9px}
 .brand h1{font-family:var(--f-word);font-weight:600;font-size:21px;letter-spacing:-.005em;line-height:1.1;margin:0}
 .brand h1 .amp{color:var(--acc);font-weight:400;font-style:italic}
-.brand h1 > span:first-child{font-family:var(--f-cn);font-weight:600;letter-spacing:.02em}
+.brand h1 > span:first-child{font-family:var(--f-cnui);font-weight:600;letter-spacing:.02em}
 .brand h1 .alt{font-family:var(--f-word);font-weight:500;font-style:italic;color:var(--muted);font-size:.78em;margin-left:.5em}
 html:not([lang^="zh"]) .brand h1 .alt{display:none}
 html[lang="zh-TW"]{--f-cn:"EL Hei","PingFang TC",sans-serif;--f-ui:"Source Sans 3","EL Hei","PingFang TC",sans-serif;--f-word:"Source Serif 4",Georgia,"EL Hei","PingFang TC",sans-serif}
@@ -904,6 +905,10 @@ body.nopy .mg-body.zhb{line-height:1.85}
 .mg-gl.zgl dd span+span{opacity:.85}
 .mg-q.zc li{font-size:17px}
 .mg-sheet .w.zc{font-family:var(--f-cn);font-size:30px;font-weight:500;letter-spacing:.04em}
+.mg-sheet .in > .row:first-child{flex-wrap:nowrap;align-items:center}
+.mg-sheet .in > .row:first-child .py{min-width:0;overflow-wrap:anywhere;line-height:1.3}
+.mg-sheet .in > .row:first-child .w.zc{flex:none}
+.mg-sheet .w.zc.long{font-size:25px;letter-spacing:.02em}
 .mg-sheet .py{font-size:16px;color:var(--acc);font-weight:500}
 .mg-sheet .zgl-l{display:grid;gap:2px;font-size:15px}
 .mg-sheet .zd{border-left:2px solid var(--acc-soft);padding:2px 0 2px 12px;max-height:34vh;overflow-y:auto;font-size:14.5px;line-height:1.5}
@@ -923,7 +928,7 @@ body.tones.tonepy .mg-body .tn4:not(rt),body.tones.tonepy .zw .tn4:not(rt),body.
 .tone-pick{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
 .tone-pick label{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:4px 12px 4px 8px;cursor:pointer;background:var(--surface)}
 .tone-pick input{accent-color:var(--acc);margin:0}
-.tone-pick .s{font-family:var(--f-cn);font-size:16px}
+.tone-pick .s{font-family:var(--f-cnui);font-size:16px}
 .tone-pick .tk1{color:var(--t1)} .tone-pick .tk2{color:var(--t2)} .tone-pick .tk3{color:var(--t3)} .tone-pick .tk4{color:var(--t4)}
 .tone-pick label:has(input:not(:checked)) .s{color:var(--muted)}
 .tone-where{margin-top:8px}
@@ -2970,7 +2975,7 @@ function mgPaint(){
   const s=MG.sheet, el=$("#mg-sheet"); if(!s){ el.hidden=true; return; }
   el.hidden=false;
   if(s.zh){ const gl=glSel().concat(["en","de"].filter(k=>!glSel().includes(k)));
-    $("#mg-sheet-in").innerHTML=`<div class="row"><span class="w zc" lang="zh-CN" data-noi18n>${zToneText(s.lemma,s.py)}</span><span class="py" data-noi18n>${zTonePy(s.py||"")}</span><span class="small muted">${esc(s.pos||"")}</span><span class="spacer"></span><button class="ib" id="mg-ssay" aria-label="朗读">${I.spk}</button>${hasTTS&&MG.sIdx>=0?`<button class="ib" id="mg-sfrom" aria-label="从这句读">${I.play}</button>`:""}<button class="ib" id="mg-sx" aria-label="关闭">${I.x}</button></div>
+    $("#mg-sheet-in").innerHTML=`<div class="row"><span class="w zc${[...s.lemma].length>3?" long":""}" lang="zh-CN" data-noi18n>${zToneText(s.lemma,s.py)}</span><span class="py" data-noi18n>${zTonePy(s.py||"")}</span><span class="small muted">${esc(s.pos||"")}</span><span class="spacer"></span><button class="ib" id="mg-ssay" aria-label="朗读">${I.spk}</button>${hasTTS&&MG.sIdx>=0?`<button class="ib" id="mg-sfrom" aria-label="从这句读">${I.play}</button>`:""}<button class="ib" id="mg-sx" aria-label="关闭">${I.x}</button></div>
     ${s.have?'<p class="small muted" style="margin:0">这个词已经在词库里了，点保存会放进生词堆。</p>':""}
     ${s.en||s.de?`<div class="zgl-l" data-noi18n>${gl.filter(k=>s[k]).map(k=>`<div lang="${k}"><span class="k">${GLS[k]}</span>${esc(s[k])}</div>`).join("")}</div>`:""}
     ${s.dict&&s.dict.length?`<details class="zd"${!(s.en||s.de)||s.dict.length>1?" open":""}><summary>词典${s.hsk?` <span class="zd-h" data-noi18n>HSK ${s.hsk}</span>`:""}${s.dict.length>1?` <span class="zd-n" data-noi18n>${s.dict.length} × pinyin</span>`:""}</summary>${s.dict.map(r=>`<div class="zd-r" data-noi18n><span class="zd-p">${esc(r[0])}</span>${gl.filter(k=>k==="en"?r[1]:r[2]).map(k=>`<div lang="${k}"><span class="k">${GLS[k]}</span>${esc(k==="en"?r[1]:r[2])}</div>`).join("")}</div>`).join("")}<p class="zd-src" data-noi18n>CC-CEDICT · HanDeDict</p></details>`:s.dstate==="load"&&!s.en&&!s.de?`<p class="small muted wk-msg">正在查词典…</p>`:""}
