@@ -30,6 +30,7 @@
   --f-ui:"Source Sans 3", "EL Hei", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
   --f-cn:"EL Hei", "PingFang SC", "Microsoft YaHei", sans-serif;
   --f-mono:"Source Sans 3", "EL Hei", sans-serif;
+  --t1:#c8372d; --t2:#2b8a3e; --t3:#2663c2; --t4:#8a3db5;
   --r:12px; color-scheme:light;
 }
 @media (prefers-color-scheme: dark){ :root{
@@ -38,7 +39,7 @@
   --der:#9fb6dd; --die:#e08a7c; --das:#86c9a4;
   --a1:#9cc77f; --a2:#7cc4bd; --b1:#9fb6dd; --b2:#b7a3e0; --c1:#e09bbb; --c2:#e0a184;
   --ok:#86c9a4; --ok-soft:#1b3328; --warn:#d6ad5c; --warn-soft:#352a14; --bad:#e08a7c; --bad-soft:#3a201c;
-  --scrim:rgba(0,0,0,.55); --pt-mark:#2c6b64; --rule:#c9d2d4; color-scheme:dark }}
+  --scrim:rgba(0,0,0,.55); --pt-mark:#2c6b64; --rule:#c9d2d4; --t1:#f08a7e; --t2:#7fcf8e; --t3:#8db3f3; --t4:#cf9df0; color-scheme:dark }}
 
 html{-webkit-text-size-adjust:100%;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 body{margin:0;--acc:var(--pt);--acc-soft:var(--pt-soft);background:var(--bg);color:var(--ink);font-family:var(--f-ui);font-size:15px;line-height:1.55}
@@ -806,6 +807,8 @@ body{font-variant-numeric:tabular-nums}
 /* reading tools: flat bar between rules */
 .mg-tools{gap:20px!important;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:8px 0;margin:14px 0 16px!important}
 .mg-tools .tb{border:0!important;background:none!important;padding:2px 0!important;color:var(--ink)}
+.mg-tools{flex-wrap:wrap;row-gap:6px!important;column-gap:18px!important} .mg-tools .tb{white-space:nowrap}
+@media (max-width:420px){ .mg-tools{column-gap:14px!important} .mg-tools .tb{font-size:13.5px} .mg-tools .spacer{flex:1 0 0} }
 .mg-tools .tb[aria-pressed="true"]{color:var(--acc)!important;font-weight:600;background:none!important}
 /* grammar: margin note; vocabulary: quiet box */
 .mg-blk:has(.mg-gram){border-left:3px solid var(--acc)!important;border-radius:0 4px 4px 0!important;background:color-mix(in srgb,var(--acc) 12%,var(--surface))!important}
@@ -911,6 +914,31 @@ body.nopy .mg-body.zhb{line-height:1.85}
 .mg-sheet .zd-p{font-weight:600;color:var(--acc)}
 .mg-sheet .zd-r .k{display:inline-block;min-width:2.2em;font-size:11px;font-weight:600;color:var(--muted);letter-spacing:.06em}
 .mg-sheet .zd-src{margin:8px 0 0;font-size:12px;color:var(--muted)}
+/* tone colours (optional) */
+body.tones .tn1{color:var(--t1)} body.tones .tn2{color:var(--t2)} body.tones .tn3{color:var(--t3)} body.tones .tn4{color:var(--t4)}
+body.tones rt.tn5,body.tones .py .tn5{color:var(--muted)}
+.tone-key{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:8px;font-size:13.5px}
+.tone-key span{font-family:var(--f-cn);font-size:16px}
+.tone-key .tn1{color:var(--t1)} .tone-key .tn2{color:var(--t2)} .tone-key .tn3{color:var(--t3)} .tone-key .tn4{color:var(--t4)} .tone-key .tn5{color:var(--muted)}
+/* shadowing */
+.shd{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.shd .btn{display:inline-flex;align-items:center;gap:6px}
+.shd .btn svg{width:16px;height:16px}
+.shd .rec-on{border-color:var(--bad);color:var(--bad)}
+.shd .rec-dot{width:9px;height:9px;border-radius:50%;background:var(--bad);display:inline-block}
+.shd .rec-on .rec-dot{animation:recblink 1s infinite}
+@keyframes recblink{50%{opacity:.25}}
+/* stroke order */
+.zstk{display:flex;flex-wrap:wrap;gap:10px}
+.zstk .cell{display:grid;justify-items:center;gap:3px}
+.zstk .box{width:96px;height:96px;border:1px solid var(--line);border-radius:10px;background:var(--surface);position:relative;cursor:pointer;
+  background-image:linear-gradient(var(--line),var(--line)),linear-gradient(var(--line),var(--line));background-size:100% 1px,1px 100%;background-position:center;background-repeat:no-repeat}
+.zstk .box.none{display:grid;place-items:center;font-family:var(--f-cn);font-size:44px;color:var(--muted);cursor:default}
+.zstk .meta{font-size:12px;color:var(--muted)}
+.zstk .acts{display:flex;gap:4px}
+.zstk .acts button{border:1px solid var(--line);background:var(--bg);color:inherit;border-radius:999px;font-size:12px;padding:1px 9px;cursor:pointer}
+.zstk .acts button[aria-pressed="true"]{border-color:var(--acc);color:var(--acc)}
+.mg-sheet .sec{font-size:12.5px;color:var(--muted);margin:2px 0 -2px}
 .mg-sheet .zgl-l .k{display:inline-block;min-width:2.2em;font-size:11px;font-weight:600;color:var(--muted);letter-spacing:.06em}
 .ex .t.zc{font-family:var(--f-cn);font-size:18px}
 .ex .py{font-size:12.5px;color:var(--muted);margin-top:1px}
@@ -1009,6 +1037,8 @@ body.nopy .mg-body.zhb{line-height:1.85}
         <div class="checks"><label><input type="radio" name="zscr" value="s" id="scr-s"> <span data-noi18n>简体</span></label><label><input type="radio" name="zscr" value="t" id="scr-t"> <span data-noi18n>繁體</span></label></div>
         <label class="tog" style="margin-top:10px"><input type="checkbox" id="opt-py"> 显示拼音</label>
         <p class="note hint" style="margin-top:6px">拼音关掉时，卡片翻面后才显示拼音。阅读里也可以随时切换。</p>
+        <label class="tog" style="margin-top:10px"><input type="checkbox" id="opt-tone"> 声调颜色</label>
+        <div class="tone-key" data-noi18n><span class="tn1">妈 mā</span><span class="tn2">麻 má</span><span class="tn3">马 mǎ</span><span class="tn4">骂 mà</span><span class="tn5">吗 ma</span></div>
       </div>
       <div class="panel tset">
         <h3>释义语言</h3>
@@ -1408,10 +1438,19 @@ function zPyArr(s){ // one entry per character ("" for non-Han); sentence contex
   try{ return P.pinyin(s,{type:"all"}).map(x=>x.isZh?x.pinyin:""); }catch(e){ return [...s].map(()=>""); }
 }
 function zPy(w){ const a=zPyArr(w); if(w.length>1&&w.endsWith("儿")&&!ER_X.test(w)) a[a.length-1]="r"; return a.filter(Boolean).join(" ").replace(/ r$/,"r"); }
+function zTone(syl){ // 1–4 from the tone mark, 5 = neutral
+  const m=String(syl||"").normalize("NFD").match(/[\u0304\u0301\u030c\u0300]/); return m?{"\u0304":1,"\u0301":2,"\u030c":3,"\u0300":4}[m[0]]:5; }
+const tonesOn=()=>S.settings.tones===true;
+function applyTones(){ document.body.classList.toggle("tones",tonesOn()); }
+function zToneText(w,py){ // characters coloured by tone, no ruby (sheet headings)
+  const ch=[...zs(w)], syl=String(py||"").trim().split(/\s+/).filter(Boolean), han=ch.filter(c=>HAN.test(c)).length;
+  if(!syl.length||syl.length!==han) return esc(zs(w)); let k=0;
+  return ch.map(c=>HAN.test(c)?`<span class="tn${zTone(syl[k++])}">${esc(c)}</span>`:esc(c)).join(""); }
+function zTonePy(py){ return String(py||"").trim().split(/\s+/).map(x=>`<span class="tn${zTone(x)}">${esc(x)}</span>`).join(" "); }
 function zRuby(w,py){ // characters with pinyin over each one
   const d=zs(w), ch=[...d], syl=String(py||"").trim().split(/\s+/).filter(Boolean);
   if(syl.length===1&&ch.length===2&&/r$/.test(syl[0])&&w.endsWith("儿")){ syl[0]=syl[0].replace(/r$/,""); syl.push("r"); }
-  if(syl.length&&syl.length===ch.filter(c=>HAN.test(c)).length){ let k=0; return "<ruby>"+ch.map(c=>HAN.test(c)?esc(c)+"<rt>"+esc(syl[k++])+"</rt>":esc(c)+"<rt></rt>").join("")+"</ruby>"; }
+  if(syl.length&&syl.length===ch.filter(c=>HAN.test(c)).length){ let k=0; return "<ruby>"+ch.map(c=>{ if(!HAN.test(c)) return esc(c)+"<rt></rt>"; const y=syl[k++], t=y==="r"?5:zTone(y); return `<span class="tn${t}">${esc(c)}</span><rt class="tn${t}">${esc(y)}</rt>`; }).join("")+"</ruby>"; }
   return esc(d)+(py?`<span class="pyl">${esc(py)}</span>`:"");
 }
 let ZLEX=null, ZLEXN=-1, ZMAX=1;
@@ -2455,7 +2494,7 @@ function mgLoad(){
   if(MG.idx) return Promise.resolve();
   if(MG.loading) return MG.loading;
   MG.loading=(async()=>{
-    try{ MG.idx=await mgGet("reading/index.json"); MG.err=""; }catch(e){ MG.err="文章目录没有载入（"+e.message+"）。检查网络后再试。"; }
+    try{ MG.idx=await mgGet("reading/index.json"); if(MG.idx&&Array.isArray(MG.idx.days)) MG.idx.days=MG.idx.days.filter(d=>!/^\d{4}-\d\d-\d\d$/.test(d.date)||d.date<=today()); MG.err=""; }catch(e){ MG.err="文章目录没有载入（"+e.message+"）。检查网络后再试。"; }
     try{ MG.week=await mgGet("reading/weekly.json"); }catch(e){ MG.week=null; }
     try{ MG.lib=await mgGet("reading/lib.json"); MG.days.lib=MG.lib; }catch(e){ MG.lib=null; }
     MG.loading=false;
@@ -2522,7 +2561,7 @@ async function mgRender(){
     <div class="mg-kick">${it.series&&it.series.episode&&it.series.name===it.section?"":`<span>${esc(it.section||MG_KIND[it.kind]||"")}</span>`}${it.series&&it.series.episode?`<span>${esc(it.series.name||"")} · ${esc(it.series.episode)}</span>`:""}${mgOutlet(it)?`<span>${esc(mgOutlet(it))}</span>`:""}${it.level?`<span class="lv lv-${esc(it.level)}">${esc(it.level)}</span>`:""}${it.kind!=="picks"&&(it.paragraphs||[]).length?`<span>${mgMinutes(it)} 分钟</span>`:""}${pick.older?`<span class="g">${mgFmt(pick.date)} · 今天的 ${MG_ETA[l]} 送到</span>`:""}${pick.date==="lib"?`<span>课文库</span>`:""}</div>
     <h2 data-noi18n lang="zh-CN" class="zh2 zc">${zWrap(it.title,own,gx)}</h2>${(()=>{ const t=glSel().map(k=>it["title_"+k]).filter(Boolean); return t.length?`<p class="mg-tt" data-noi18n>${t.map(esc).join(" · ")}</p>`:""; })()}
     ${it.dek?`<p class="mg-dek zc" data-noi18n lang="zh-CN">${esc(zs(it.dek))}</p>`:""}
-    <div class="mg-tools"><button class="tb" id="mg-say" aria-label="朗读全文">${I.spk}<span>朗读</span></button>${it.paragraphs_en&&it.paragraphs_en.length?`<button class="tb" id="mg-enb" aria-pressed="${MG.tr==="en"}" aria-label="English translation">English</button>`:""}${it.paragraphs_de&&it.paragraphs_de.length?`<button class="tb" id="mg-deb" aria-pressed="${MG.tr==="de"}" aria-label="Deutsche Übersetzung">Deutsch</button>`:""}<span class="spacer"></span><button class="tb" id="mg-py" aria-pressed="${pyOn()}">拼音</button><button class="tb" id="mg-scr" aria-pressed="${scr()==="t"}" data-noi18n>${scr()==="t"?"繁體":"简体"}</button></div>
+    <div class="mg-tools"><button class="tb" id="mg-say" aria-label="朗读全文">${I.spk}<span>朗读</span></button>${it.paragraphs_en&&it.paragraphs_en.length?`<button class="tb" id="mg-enb" aria-pressed="${MG.tr==="en"}" aria-label="English translation">English</button>`:""}${it.paragraphs_de&&it.paragraphs_de.length?`<button class="tb" id="mg-deb" aria-pressed="${MG.tr==="de"}" aria-label="Deutsche Übersetzung">Deutsch</button>`:""}<span class="spacer"></span><button class="tb" id="mg-py" aria-pressed="${pyOn()}">拼音</button><button class="tb" id="mg-tone" aria-pressed="${tonesOn()}">声调</button><button class="tb" id="mg-scr" aria-pressed="${scr()==="t"}" data-noi18n>${scr()==="t"?"繁體":"简体"}</button></div>
     <div class="mg-body zhb zc${easy?" easy":""}${it.kind==="dialogue"?" dlg":""}" id="mg-body" data-noi18n lang="zh-CN">${(it.paragraphs||[]).map((p,k)=>`<p>${zWrap(p,own,gx)}</p>${MG.tr&&it["paragraphs_"+MG.tr]&&it["paragraphs_"+MG.tr][k]?`<span class="mg-zh mg-tr-${MG.tr}" lang="${MG.tr}">${esc(it["paragraphs_"+MG.tr][k])}</span>`:""}`).join("")}</div>
     ${it.kind==="picks"?mgPicks(it):""}
     ${it.grammar||it.grammar_de?`<div class="mg-blk"><h3>语法</h3><div class="mg-gram" data-noi18n>${esc((UIL==="de"&&it.grammar_de)||it.grammar||it.grammar_de)}</div></div>`:""}
@@ -2775,6 +2814,71 @@ function mineList(){
 function mgPicks(it){
   return `<ol class="mg-picks">${(it.picks||[]).map(p=>`<li><a class="pk" href="${esc(p.url)}" target="_blank" rel="noopener"><span class="pk-o">${esc(p.outlet||"")}${p.genre?` · ${esc(p.genre)}`:""}${p.minutes?` · ${esc(p.minutes)} min`:""}</span><span class="pk-t" lang="${esc(p.lang||it.lang)}" data-noi18n>${esc(p.title)}</span>${p.author?`<span class="pk-a" data-noi18n>${esc(p.author)}</span>`:""}${p.en?`<span class="pk-z" lang="en" data-noi18n>${esc(p.en)}</span>`:""}${p.zh?`<span class="pk-z${p.en?" gl-zh":""}" lang="zh" data-noi18n>${esc(p.zh)}</span>`:""}</a></li>`).join("")}</ol>${it.note?`<p class="note" style="margin-top:12px">${esc(it.note)}</p>`:""}`;
 }
+/* ---------- shadowing (跟读): hear the sentence, record yourself, compare. The recording stays in memory only. ---------- */
+const SHD={sent:"",url:null,rec:false,busy:""};
+function shReset(){ if(SHD.rec) cancelRec(); SHD.rec=false; SHD.busy=""; if(SHD.url) URL.revokeObjectURL(SHD.url); SHD.url=null; SHD.sent=""; try{ if(player) player.pause(); if(hasTTS) speechSynthesis.cancel(); }catch(e){} }
+function shSay(t,done){ // system voice, with a callback when it has finished
+  if(!hasTTS){ done&&done(); return; }
+  try{ ntStop(); if(player) player.pause(); if(typeof RD!=="undefined"&&RD.on) rdPause(); speechSynthesis.cancel();
+    const u=new SpeechSynthesisUtterance(t), v=pickVoice(); u.lang=v?v.lang:"zh-CN"; if(v) u.voice=v; u.rate=Math.min(1,S.settings.rate||1)*0.92;
+    let fired=false; const fin=()=>{ if(fired) return; fired=true; done&&done(); };
+    u.onend=fin; u.onerror=fin; setTimeout(()=>{ if(!speechSynthesis.speaking) fin(); },Math.max(4000,t.length*450)); speechSynthesis.speak(u); }catch(e){ done&&done(); }
+}
+function shPlayMine(done){ if(!SHD.url){ done&&done(); return; } try{ if(hasTTS) speechSynthesis.cancel(); if(player) player.pause(); player=new Audio(SHD.url); player.onended=()=>done&&done(); player.play().catch(()=>done&&done()); }catch(e){ done&&done(); } }
+function shPaint(){
+  const s=MG.sheet; if(SHD.sent!==s.sentence){ if(SHD.url) URL.revokeObjectURL(SHD.url); SHD.url=null; SHD.sent=s.sentence; }
+  const has=!!SHD.url;
+  return `<p class="sec">跟读这句</p><div class="shd" id="shd">
+    ${hasTTS?`<button class="btn sm" id="sh-play" type="button">${I.spk}<span>听原句</span></button>`:""}
+    ${canRecord?`<button class="btn sm${SHD.rec?" rec-on":""}" id="sh-rec" type="button"><i class="rec-dot"></i><span>${SHD.rec?"停止":"录我的"}</span>${SHD.rec?' <span data-rectime data-noi18n>0 秒</span>':""}</button>`:""}
+    ${has?`<button class="btn sm" id="sh-mine" type="button">${I.play}<span>听我的</span></button>`:""}
+    ${has&&hasTTS?`<button class="btn sm" id="sh-ab" type="button">${I.play}<span>原句 → 我的</span></button>`:""}
+  </div>`;
+}
+function shRepaint(){ const el=$("#shd"); if(!el||!MG.sheet) return; const d=document.createElement("div"); d.innerHTML=shPaint(); el.replaceWith(d.querySelector("#shd")); try{ translateTree&&translateTree($("#shd")); }catch(e){} }
+async function shClick(id){
+  const s=MG.sheet; if(!s) return; const t=s.sentence;
+  if(id==="sh-play") shSay(t);
+  else if(id==="sh-mine") shPlayMine();
+  else if(id==="sh-ab") shSay(t,()=>setTimeout(()=>shPlayMine(),350));
+  else if(id==="sh-rec"){
+    if(SHD.rec){ stopRec(); return; }
+    try{ if(hasTTS) speechSynthesis.cancel(); if(player) player.pause(); }catch(e){}
+    const ok=await startRec("sh",blob=>{ SHD.rec=false; if(SHD.url) URL.revokeObjectURL(SHD.url); SHD.url=URL.createObjectURL(blob); shRepaint(); });
+    if(ok){ SHD.rec=true; shRepaint(); }
+  }
+}
+
+/* ---------- stroke order (Hanzi Writer; data in strokes/NN.json, Make Me a Hanzi, Arphic Public License) ---------- */
+const STK={sh:new Map(),lib:null,w:[],key:""};
+function zStkLib(){ if(window.HanziWriter) return Promise.resolve(true); if(!STK.lib) STK.lib=loadScript("vendor/hanzi-writer.min.js").then(()=>true).catch(()=>{ STK.lib=null; return false; }); return STK.lib; }
+function zStkData(c){ const k=(c.codePointAt(0)%256).toString(16).padStart(2,"0");
+  if(!STK.sh.has(k)) STK.sh.set(k,fetch("strokes/"+k+".json").then(r=>r.ok?r.json():null).catch(()=>{ STK.sh.delete(k); return null; }));
+  return STK.sh.get(k).then(sh=>(sh&&sh[c])||null); }
+function zStkChars(w){ return [...new Set([...zs(w)].filter(c=>HAN.test(c)))].slice(0,6); }
+function zStkHtml(w){ const cs=zStkChars(w); if(!cs.length) return "";
+  return `<p class="sec">笔顺</p><div class="zstk" data-noi18n>${cs.map((c,i)=>`<div class="cell"><div class="box" id="stk-${i}" data-stk="play" data-i="${i}" role="button" aria-label="${esc(c)}"></div><span class="meta" id="stk-m-${i}"></span><div class="acts"><button type="button" data-stk="play" data-i="${i}">▶</button><button type="button" data-stk="quiz" data-i="${i}" aria-pressed="false">描</button></div></div>`).join("")}</div>`; }
+async function zStkMount(w){
+  const key=w+"|"+scr(); STK.key=key; STK.w=[];
+  const cs=zStkChars(w); if(!cs.length) return;
+  const ok=await zStkLib(); if(STK.key!==key) return;
+  const css=getComputedStyle(document.body), ink=css.getPropertyValue("--ink").trim()||"#1c2930", acc=css.getPropertyValue("--acc").trim()||"#2c6b64", line=css.getPropertyValue("--line").trim()||"#d5dbda";
+  cs.forEach(async(c,i)=>{
+    const box=$("#stk-"+i), meta=$("#stk-m-"+i); if(!box) return;
+    const data=ok?await zStkData(c):null; if(STK.key!==key) return;
+    if(!data){ box.classList.add("none"); box.removeAttribute("data-stk"); box.textContent=c; if(meta) meta.textContent="—"; const a=box.parentElement.querySelector(".acts"); if(a) a.hidden=true; return; }
+    if(meta) meta.textContent=data.strokes.length+" "+(trOne("画")||"画");
+    const hw=HanziWriter.create(box,c,{width:96,height:96,padding:6,charDataLoader:(ch,done)=>done(data),strokeColor:ink,radicalColor:acc,outlineColor:line,drawingColor:acc,highlightColor:acc,showOutline:true,strokeAnimationSpeed:1.1,delayBetweenStrokes:180});
+    STK.w[i]={hw,c,quiz:false};
+  });
+}
+function zStkAct(act,i){ const o=STK.w[i]; if(!o) return;
+  const btn=$(`.zstk button[data-stk="quiz"][data-i="${i}"]`);
+  if(act==="play"){ if(o.quiz){ o.hw.cancelQuiz(); o.quiz=false; if(btn) btn.setAttribute("aria-pressed","false"); o.hw.showCharacter(); } o.hw.animateCharacter(); return; }
+  if(act==="quiz"){ if(o.quiz){ o.hw.cancelQuiz(); o.quiz=false; o.hw.showCharacter(); if(btn) btn.setAttribute("aria-pressed","false"); return; }
+    o.quiz=true; if(btn) btn.setAttribute("aria-pressed","true");
+    o.hw.quiz({showHintAfterMisses:2,onComplete:()=>{ o.quiz=false; if(btn) btn.setAttribute("aria-pressed","false"); toast((trOne("写对了！")||"写对了！")+" "+o.c); }}); }
+}
 /* word sheet */
 function mgSentenceOf(node){ const s=node&&(node.closest?node.closest(".s"):node.parentElement&&node.parentElement.closest(".s")); return s?zPlain(s):""; }
 function mgOpen(word,sentence){
@@ -2853,7 +2957,7 @@ function mgPaint(){
   const s=MG.sheet, el=$("#mg-sheet"); if(!s){ el.hidden=true; return; }
   el.hidden=false;
   if(s.zh){ const gl=glSel().concat(["en","de"].filter(k=>!glSel().includes(k)));
-    $("#mg-sheet-in").innerHTML=`<div class="row"><span class="w zc" lang="zh-CN" data-noi18n>${esc(zs(s.lemma))}</span><span class="py" data-noi18n>${esc(s.py||"")}</span><span class="small muted">${esc(s.pos||"")}</span><span class="spacer"></span><button class="ib" id="mg-ssay" aria-label="朗读">${I.spk}</button>${hasTTS&&MG.sIdx>=0?`<button class="ib" id="mg-sfrom" aria-label="从这句读">${I.play}</button>`:""}<button class="ib" id="mg-sx" aria-label="关闭">${I.x}</button></div>
+    $("#mg-sheet-in").innerHTML=`<div class="row"><span class="w zc" lang="zh-CN" data-noi18n>${zToneText(s.lemma,s.py)}</span><span class="py" data-noi18n>${zTonePy(s.py||"")}</span><span class="small muted">${esc(s.pos||"")}</span><span class="spacer"></span><button class="ib" id="mg-ssay" aria-label="朗读">${I.spk}</button>${hasTTS&&MG.sIdx>=0?`<button class="ib" id="mg-sfrom" aria-label="从这句读">${I.play}</button>`:""}<button class="ib" id="mg-sx" aria-label="关闭">${I.x}</button></div>
     ${s.have?'<p class="small muted" style="margin:0">这个词已经在词库里了，点保存会放进生词堆。</p>':""}
     ${s.en||s.de?`<div class="zgl-l" data-noi18n>${gl.filter(k=>s[k]).map(k=>`<div lang="${k}"><span class="k">${GLS[k]}</span>${esc(s[k])}</div>`).join("")}</div>`:""}
     ${s.dict&&s.dict.length?`<details class="zd"${!(s.en||s.de)||s.dict.length>1?" open":""}><summary>词典${s.hsk?` <span class="zd-h" data-noi18n>HSK ${s.hsk}</span>`:""}${s.dict.length>1?` <span class="zd-n" data-noi18n>${s.dict.length} × pinyin</span>`:""}</summary>${s.dict.map(r=>`<div class="zd-r" data-noi18n><span class="zd-p">${esc(r[0])}</span>${gl.filter(k=>k==="en"?r[1]:r[2]).map(k=>`<div lang="${k}"><span class="k">${GLS[k]}</span>${esc(k==="en"?r[1]:r[2])}</div>`).join("")}</div>`).join("")}<p class="zd-src" data-noi18n>CC-CEDICT · HanDeDict</p></details>`:s.dstate==="load"&&!s.en&&!s.de?`<p class="small muted wk-msg">正在查词典…</p>`:""}
@@ -2863,8 +2967,10 @@ function mgPaint(){
     <input type="text" id="mg-zh-in" value="${esc(s.mine||"")}" autocomplete="off">
     ${s.note?`<p class="small muted" style="margin:0" data-noi18n>${esc(s.note)}</p>`:""}
     ${s.sentence?`<p class="ex small zc" style="margin:0;font-style:normal" lang="zh-CN" data-noi18n>${esc(zs(s.sentence))}</p>`:""}
+    ${s.sentence&&(hasTTS||canRecord)?shPaint():""}
+    ${zStkHtml(s.lemma)}
     <div class="row"><button class="btn primary" id="mg-ssave" type="button">${s.have?"放进生词堆":"收进生词"}</button>${aiState==="ready"?`<button class="btn sm" id="mg-sai" type="button" ${s.state==="ai"?"disabled":""}>${s.state==="ai"?"查询中…":"用 Claude 查"}</button>`:""}<span class="small muted" id="mg-smsg"></span></div>`;
-    return; }
+    zStkMount(s.lemma); return; }
   $("#mg-sheet-in").innerHTML=`<div class="row"><span class="w" lang="${lang()}">${esc(s.lemma)}</span><span class="small muted">${esc([s.gender,s.pos].filter(Boolean).join(" · "))}</span><span class="spacer"></span><button class="ib" id="mg-ssay" aria-label="朗读">${I.spk}</button>${hasTTS&&MG.sIdx>=0?`<button class="ib" id="mg-sfrom" aria-label="从这句读">${I.play}</button>`:""}<button class="ib" id="mg-sx" aria-label="关闭">${I.x}</button></div>
     ${s.have?'<p class="small muted" style="margin:0">这个词已经在词库里了，点保存会放进生词堆。</p>':""}
     ${s.wk&&s.wk.state==="ok"?`<div class="wk" lang="en" data-noi18n>${s.wk.form?`<p class="wk-form">${esc(s.wk.form)}</p>`:""}${s.wk.senses.map(x=>`<div class="wk-s"><span class="wk-p">${esc(x.pos)}</span><ol>${x.defs.map(d=>`<li>${esc(d.t)}</li>`).join("")}</ol></div>`).join("")}<a class="wk-src" href="${esc(s.wk.url)}" target="_blank" rel="noopener">Wiktionary ↗</a></div>`
@@ -2925,7 +3031,7 @@ function mgSaveWord(){
   MG.sheet=null; mgPaint(); $$(".mg-w.on").forEach(x=>x.classList.remove("on"));
   if(r==="ok") mgRender();
 }
-function mgClose(){ MG.ctl&&MG.ctl.abort(); MG.sheet=null; mgPaint(); $$(".mg-w.on").forEach(x=>x.classList.remove("on")); }
+function mgClose(){ shReset(); MG.ctl&&MG.ctl.abort(); MG.sheet=null; mgPaint(); $$(".mg-w.on").forEach(x=>x.classList.remove("on")); }
 $("#tab-read").addEventListener("click",e=>{
   const t=e.target, b=t.closest("button");
   const w=t.closest(".mg-w");
@@ -2946,6 +3052,7 @@ $("#tab-read").addEventListener("click",e=>{
   else if(id==="mg-zhb"){ MG.tr=MG.tr==="zh"?null:"zh"; mgRender(); }
   else if(id==="mg-deb"){ MG.tr=MG.tr==="de"?null:"de"; mgRender(); }
   else if(id==="mg-py"){ S.settings.py=!pyOn(); save(); applyPy(); b.setAttribute("aria-pressed",pyOn()); renderSettings(); }
+  else if(id==="mg-tone"){ S.settings.tones=!tonesOn(); save(); applyTones(); b.setAttribute("aria-pressed",tonesOn()); renderSettings(); }
   else if(id==="mg-scr"){ S.settings.script=scr()==="t"?"s":"t"; save(); renderSettings(); mgRender(); }
   else if(id==="mg-enb"){ MG.tr=MG.tr==="en"?null:"en"; mgRender(); }
   else if(id==="mg-say"){ if(RD.src==="art"&&RD.on) rdToggle(); else rdStart("art",0); }
@@ -2956,6 +3063,8 @@ $("#tab-read").addEventListener("click",e=>{
   else if(id==="mg-archall"){ MG.archAll=true; mgArch(MG.cur); }
 });
 $("#mg-sheet").addEventListener("click",e=>{ const b=e.target.closest("button"); if(!b) return;
+  if(b.id&&b.id.startsWith("sh-")){ shClick(b.id); return; }
+  if(b.dataset.stk){ zStkAct(b.dataset.stk,+b.dataset.i); return; }
   if(b.id==="mg-sx") mgClose(); else if(b.id==="mg-ssave") mgSaveWord(); else if(b.id==="mg-sai") mgAI(); else if(b.id==="mg-ssay"&&MG.sheet) speak(MG.sheet.lemma); else if(b.id==="mg-sfrom"){ const k=MG.sIdx; mgClose(); rdStart("art",k); } });
 $("#mg-sheet").addEventListener("keydown",e=>{ if(e.key==="Enter"&&e.target.id==="mg-zh-in"){ e.preventDefault(); mgSaveWord(); } });
 document.addEventListener("selectionchange",()=>{
@@ -3485,7 +3594,7 @@ function renderSettings(){
   $("#lv-checks").innerHTML=LV().map(v=>`<label><input type="checkbox" value="${v}" ${lvSel().includes(v)?"checked":""}> ${v}</label>`).join("");
   $("#gl-checks").innerHTML=LANG[l].gl.map(k=>`<label><input type="checkbox" value="${k}" ${S.settings.gloss[l].includes(k)?"checked":""}> ${GLN[k]}</label>`).join("");
   $("#dir-t2g").checked=S.settings.dir==="t2g"; $("#dir-g2t").checked=S.settings.dir==="g2t";
-  $("#scr-s").checked=scr()==="s"; $("#scr-t").checked=scr()==="t"; $("#opt-py").checked=pyOn();
+  $("#scr-s").checked=scr()==="s"; $("#scr-t").checked=scr()==="t"; $("#opt-py").checked=pyOn(); { const o=$("#opt-tone"); if(o) o.checked=tonesOn(); }
   $("#opt-autopile").checked=!!S.settings.autoPile; $("#opt-autospeak").checked=!!S.settings.autoSpeak; $("#opt-imgfront").checked=!!S.settings.imgFront; $("#opt-automine").checked=!!S.settings.autoMine;
   $("#opt-rate").value=S.settings.rate; $("#rate-v").textContent="×"+(+S.settings.rate).toFixed(2);
   $("#pile-lv").innerHTML=`<option value="">全部级别</option>`+LV().map(v=>`<option>${v}</option>`).join("");
@@ -3500,6 +3609,7 @@ $$('input[name="dir"]').forEach(r=>r.addEventListener("change",e=>{ S.settings.d
 $("#opt-autopile").addEventListener("change",e=>{ S.settings.autoPile=e.target.checked; save(); });
 $$('input[name="zscr"]').forEach(r=>r.addEventListener("change",e=>{ S.settings.script=e.target.value; save(); renderCard(); if(cur==="read") mgRender(); if(cur==="browse") renderBrowse(); if(cur==="pile") renderPile(); }));
 $("#opt-py").addEventListener("change",e=>{ S.settings.py=e.target.checked; save(); applyPy(); renderCard(); });
+$("#opt-tone").addEventListener("change",e=>{ S.settings.tones=e.target.checked; save(); applyTones(); const b=$("#mg-tone"); if(b) b.setAttribute("aria-pressed",tonesOn()); });
 $("#opt-autospeak").addEventListener("change",e=>{ S.settings.autoSpeak=e.target.checked; save(); });
 $("#opt-automine").addEventListener("change",e=>{ S.settings.autoMine=e.target.checked; save(); });
 $("#opt-imgfront").addEventListener("change",e=>{ S.settings.imgFront=e.target.checked; save(); renderCard(); });
@@ -4044,6 +4154,17 @@ const UI_DICT=[
 ["存储空间满了，删掉几篇旧文章再试。", "Storage is full. Delete a few old articles and try again.", "Speicher voll. Lösche ein paar alte Artikel und versuche es erneut.", "Armazenamento cheio. Exclua alguns artigos antigos e tente de novo.", "儲存空間滿了，刪掉幾篇舊文章再試。"],
 ["正在查 Wiktionary…", "Looking it up in Wiktionary…", "Suche in Wiktionary…", "Procurando no Wiktionary…", "正在查 Wiktionary…"],
 ["词典", "Dictionary", "Wörterbuch", "Dicionário", "詞典"],
+["声调", "Tones", "Töne", "Tons", "聲調"],
+["声调颜色", "Tone colours", "Tonfarben", "Cores dos tons", "聲調顏色"],
+["跟读这句", "Shadow this sentence", "Diesen Satz nachsprechen", "Repita esta frase", "跟讀這句"],
+["听原句", "Listen", "Anhören", "Ouvir", "聽原句"],
+["录我的", "Record me", "Mich aufnehmen", "Gravar", "錄我的"],
+["停止", "Stop", "Stopp", "Parar", "停止"],
+["听我的", "My recording", "Meine Aufnahme", "Minha gravação", "聽我的"],
+["原句 → 我的", "Original → mine", "Original → meins", "Original → minha", "原句 → 我的"],
+["笔顺", "Stroke order", "Strichfolge", "Ordem dos traços", "筆順"],
+["画", "strokes", "Striche", "traços", "畫"],
+["写对了！", "Well written!", "Richtig geschrieben!", "Muito bem!", "寫對了！"],
 ["正在查词典…", "Looking it up…", "Schlage nach…", "Procurando…", "正在查詞典…"],
 ["Wiktionary 没有收这个词", "Not found in Wiktionary", "Nicht in Wiktionary gefunden", "Não encontrado no Wiktionary", "Wiktionary 沒有收這個詞"],
 ["中文释义（可选）", "Chinese meaning (optional)", "Chinesische Bedeutung (optional)", "Significado em chinês (opcional)", "中文釋義（可選）"],
@@ -4254,6 +4375,7 @@ let lastDay=today();
 setInterval(()=>{ if(today()!==lastDay){ lastDay=today(); if(DATA[lang()]){ buildDaily(); renderStrip(); } } },60000);
 document.addEventListener("visibilitychange",()=>{ if(document.visibilityState==="visible"&&today()!==lastDay){ lastDay=today(); if(DATA[lang()]){ buildDaily(); renderStrip(); } } });
 if("serviceWorker" in navigator&&location.protocol==="https:") navigator.serviceWorker.register("sw.js").catch(()=>{});
+applyPy(); applyTones();
 // the dictionary loads in the background; once it is there, the open text is split again with it
 zdLoad().then(m=>{ if(m&&MG.cur&&document.querySelector("#mg-body")) mgRender(); });
 })();
