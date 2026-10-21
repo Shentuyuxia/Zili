@@ -649,6 +649,8 @@ body.lean .hint, body.lean .help{display:none!important}
   nav.tabs button svg{width:22px;height:22px;color:var(--muted)}
   nav.tabs button.grp-on svg,nav.tabs button.grp-on .tl,nav.tabs button.grp-on .tl-m{color:var(--acc)}
   nav.tabs button.grp-on .tl,nav.tabs button.grp-on .tl-m{font-weight:600}
+  nav.tabs button.dict-tab svg{width:38px;height:38px;padding:9px;margin-top:-10px;border-radius:50%;background:var(--acc);color:var(--on-acc,#fff)!important;box-shadow:0 4px 14px color-mix(in srgb,var(--acc) 35%,transparent)}
+  nav.tabs button.dict-tab .tl{color:var(--acc)!important;font-weight:600}
   nav.tabs button{padding:7px 0 4px}
   #t-pile{display:none!important}
   /* sub-switch inside 词库 / 更多 */
@@ -1043,10 +1045,10 @@ body:not(.tones) .tone-opts{opacity:.55}
   <nav class="tabs" role="tablist" id="tabs">
     <button role="tab" data-tab="today" aria-selected="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/><path d="m9 14.5 2 2 4-4"/></svg><span class="tl">今日学习</span></button>
     <button role="tab" data-tab="read" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5c3-1.2 6-1.2 9 .8 3-2 6-2 9-.8v13c-3-1.2-6-1.2-9 .8-3-2-6-2-9-.8z"/><path d="M12 6.3v13"/></svg><span class="tl">阅读</span></button>
+    <button type="button" data-dict="1" id="dict-open" class="dict-tab" aria-label="字典"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg><span class="tl">字典</span></button>
     <button role="tab" data-tab="new" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 8v8M8 12h8"/></svg><span class="tl">录入新词</span></button>
     <button role="tab" data-tab="pile" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><span class="tl">生词堆</span><span id="t-pile">0</span></button>
     <button role="tab" data-tab="browse" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h12M8 12h12M8 18h12"/><circle cx="4" cy="6" r=".6" fill="currentColor"/><circle cx="4" cy="12" r=".6" fill="currentColor"/><circle cx="4" cy="18" r=".6" fill="currentColor"/></svg><span class="tl">词库</span></button>
-    <button type="button" data-dict="1" id="dict-open" aria-label="字典"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg><span class="tl">字典</span></button>
     <button role="tab" data-tab="stats" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M21 20H3"/></svg><span class="tl">进度</span><span class="tl-m">我的</span></button>
     <button role="tab" data-tab="settings" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg><span class="tl">设置与备份</span></button>
   </nav>
@@ -3131,6 +3133,8 @@ function dicListen(){
   r.onend=()=>{ DIC.sr=null; const b=$("#dic-mic"); if(b) b.classList.remove("live"); };
   try{ r.start(); }catch(e){ dicStop(); }
 }
+function dicPad(on){ const b=$("#dic-hwb"); if(b) b.setAttribute("aria-pressed",on); const w=$("#dic-padwrap"); if(!w) return; w.innerHTML=on?dicPadHtml():""; if(on){ DIC.strokes=[]; dicPadMount(); } }
+function dicPreload(){ dicLoadPy(); dicLoadTpl(); zStkLib(); zdLoad(); }
 function dicOpen(){
   { const m=$("#card-area #mz"); if(m) m.remove(); }
   detailOpen="__dict"; document.body.classList.add("modal-open"); DIC.strokes=[];
@@ -3150,7 +3154,7 @@ function dicOpen(){
   root.addEventListener("click",e=>{ const b=e.target.closest("button"); if(!b) return;
     if(b.dataset.dw){ dicShow(b.dataset.dw); return; }
     if(b.dataset.cand!=null){ q.value=(q.value||"")+b.dataset.cand; dicClearPad(); dicSearch(q.value); return; }
-    if(b.id==="dic-hwb"){ const on=b.getAttribute("aria-pressed")!=="true"; b.setAttribute("aria-pressed",on); $("#dic-padwrap").innerHTML=on?dicPadHtml():""; if(on){ DIC.strokes=[]; dicPadMount(); } return; }
+    if(b.id==="dic-hwb"){ const on=b.getAttribute("aria-pressed")!=="true"; dicPad(on); S.settings.dicHw=on; save(); return; }
     if(b.id==="dic-undo"){ DIC.strokes.pop(); DIC.redraw&&DIC.redraw(); dicCands(); return; }
     if(b.id==="dic-clear"){ dicClearPad(); return; }
     if(b.id==="dic-mic"){ dicListen(); return; }
@@ -3158,10 +3162,11 @@ function dicOpen(){
     if(b.id==="dic-say"&&DIC.cur){ speak(DIC.cur); return; }
     if(b.id==="dic-save"){ dicSave(); return; }
   });
-  dicSearch(""); zdLoad(); dicLoadPy();
-  setTimeout(()=>{ try{ q.focus({preventScroll:true}); }catch(e){} },60);
+  dicSearch(""); dicPreload();
+  if(S.settings.dicHw) dicPad(true); else setTimeout(()=>{ try{ q.focus({preventScroll:true}); }catch(e){} },60);
 }
 $("#dict-open").addEventListener("click",dicOpen);
+setTimeout(()=>{ const go=()=>{ try{ dicPreload(); }catch(e){} }; if("requestIdleCallback" in window) requestIdleCallback(go,{timeout:6000}); else go(); },3500);
 /* word sheet */
 function mgSentenceOf(node){ const s=node&&(node.closest?node.closest(".s"):node.parentElement&&node.parentElement.closest(".s")); return s?zPlain(s):""; }
 function mgOpen(word,sentence){
