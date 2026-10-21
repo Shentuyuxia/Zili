@@ -30,7 +30,7 @@
   --f-ui:"Source Sans 3", "EL Hei", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
   --f-cn:"EL Hei", "PingFang SC", "Microsoft YaHei", sans-serif;
   --f-mono:"Source Sans 3", "EL Hei", sans-serif;
-  --t1:#a8473a; --t2:#2f7a55; --t3:#3b5b86; --t4:#8a4a72;
+  --tone:#0f8a80; --t1:var(--tone); --t2:var(--tone); --t3:var(--tone); --t4:var(--tone);
   --r:12px; color-scheme:light;
 }
 @media (prefers-color-scheme: dark){ :root{
@@ -39,7 +39,7 @@
   --der:#9fb6dd; --die:#e08a7c; --das:#86c9a4;
   --a1:#9cc77f; --a2:#7cc4bd; --b1:#9fb6dd; --b2:#b7a3e0; --c1:#e09bbb; --c2:#e0a184;
   --ok:#86c9a4; --ok-soft:#1b3328; --warn:#d6ad5c; --warn-soft:#352a14; --bad:#e08a7c; --bad-soft:#3a201c;
-  --scrim:rgba(0,0,0,.55); --pt-mark:#2c6b64; --rule:#c9d2d4; --t1:#e0927f; --t2:#86c9a4; --t3:#9fb6dd; --t4:#d6a3c4; color-scheme:dark }}
+  --scrim:rgba(0,0,0,.55); --pt-mark:#2c6b64; --rule:#c9d2d4; --tone:#4fd1c5; color-scheme:dark }}
 
 html{-webkit-text-size-adjust:100%;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 body{margin:0;--acc:var(--pt);--acc-soft:var(--pt-soft);background:var(--bg);color:var(--ink);font-family:var(--f-ui);font-size:15px;line-height:1.55}
@@ -1047,9 +1047,9 @@ body:not(.tones) .tone-opts{opacity:.55}
         <p class="note hint" style="margin-top:6px">拼音关掉时，卡片翻面后才显示拼音。阅读里也可以随时切换。</p>
         <label class="tog" style="margin-top:10px"><input type="checkbox" id="opt-tone"> 声调颜色</label>
         <div class="tone-opts">
-          <div class="tone-pick"><label><input type="checkbox" data-tc="1"><span class="s tk1" data-noi18n>妈 mā</span><span class="small">一声</span></label><label><input type="checkbox" data-tc="2"><span class="s tk2" data-noi18n>麻 má</span><span class="small">二声</span></label><label><input type="checkbox" data-tc="3"><span class="s tk3" data-noi18n>马 mǎ</span><span class="small">三声</span></label><label><input type="checkbox" data-tc="4"><span class="s tk4" data-noi18n>骂 mà</span><span class="small">四声</span></label></div>
+          <div class="tone-pick"><label><input type="radio" name="tonesel" data-tc="1"><span class="s tk1" data-noi18n>妈 mā</span><span class="small">一声</span></label><label><input type="radio" name="tonesel" data-tc="2"><span class="s tk2" data-noi18n>麻 má</span><span class="small">二声</span></label><label><input type="radio" name="tonesel" data-tc="3"><span class="s tk3" data-noi18n>马 mǎ</span><span class="small">三声</span></label><label><input type="radio" name="tonesel" data-tc="4"><span class="s tk4" data-noi18n>骂 mà</span><span class="small">四声</span></label></div>
           <div class="checks tone-where"><label><input type="radio" name="tonewhere" value="all" id="tw-all"> 汉字和拼音</label><label><input type="radio" name="tonewhere" value="py" id="tw-py"> 只给拼音上色</label></div>
-          <p class="note hint" style="margin-top:6px">只勾你想练的声调，比如容易混的二声和三声；没勾的声调保持黑色。</p>
+          <p class="note hint" style="margin-top:6px">一次标一个声调，其他字保持黑色。可以每周换一个练。</p>
         </div>
       </div>
       <div class="panel tset">
@@ -1453,7 +1453,7 @@ function zPy(w){ const a=zPyArr(w); if(w.length>1&&w.endsWith("儿")&&!ER_X.test
 function zTone(syl){ // 1–4 from the tone mark, 5 = neutral
   const m=String(syl||"").normalize("NFD").match(/[\u0304\u0301\u030c\u0300]/); return m?{"\u0304":1,"\u0301":2,"\u030c":3,"\u0300":4}[m[0]]:5; }
 const tonesOn=()=>S.settings.tones===true;
-const toneSel=()=>{ const t=S.settings.toneSel; return Array.isArray(t)?t:[1,2,3,4]; };
+const toneSel=()=>{ const t=S.settings.toneSel; return Array.isArray(t)&&t.length===1?t:[3]; }; // one tone at a time, one colour
 function applyTones(){ const b=document.body; b.classList.toggle("tones",tonesOn()); for(const k of [1,2,3,4]) b.classList.toggle("tc"+k,toneSel().includes(k)); b.classList.toggle("tonepy",S.settings.toneWhere==="py"); }
 function zToneText(w,py){ // characters coloured by tone, no ruby (sheet headings)
   const ch=[...zs(w)], syl=String(py||"").trim().split(/\s+/).filter(Boolean), han=ch.filter(c=>HAN.test(c)).length;
@@ -3622,7 +3622,7 @@ $$('input[name="dir"]').forEach(r=>r.addEventListener("change",e=>{ S.settings.d
 $("#opt-autopile").addEventListener("change",e=>{ S.settings.autoPile=e.target.checked; save(); });
 $$('input[name="zscr"]').forEach(r=>r.addEventListener("change",e=>{ S.settings.script=e.target.value; save(); renderCard(); if(cur==="read") mgRender(); if(cur==="browse") renderBrowse(); if(cur==="pile") renderPile(); }));
 $("#opt-py").addEventListener("change",e=>{ S.settings.py=e.target.checked; save(); applyPy(); renderCard(); });
-$$("[data-tc]").forEach(x=>x.addEventListener("change",()=>{ S.settings.toneSel=$$("[data-tc]").filter(y=>y.checked).map(y=>+y.dataset.tc); if(!tonesOn()&&S.settings.toneSel.length){ S.settings.tones=true; const o=$("#opt-tone"); if(o) o.checked=true; const b=$("#mg-tone"); if(b) b.setAttribute("aria-pressed","true"); } save(); applyTones(); }));
+$$("[data-tc]").forEach(x=>x.addEventListener("change",()=>{ $$("[data-tc]").forEach(y=>y.checked=y===x); S.settings.toneSel=[+x.dataset.tc]; if(!tonesOn()&&S.settings.toneSel.length){ S.settings.tones=true; const o=$("#opt-tone"); if(o) o.checked=true; const b=$("#mg-tone"); if(b) b.setAttribute("aria-pressed","true"); } save(); applyTones(); }));
 $$('[name="tonewhere"]').forEach(x=>x.addEventListener("change",()=>{ S.settings.toneWhere=x.value; save(); applyTones(); }));
 $("#opt-tone").addEventListener("change",e=>{ S.settings.tones=e.target.checked; save(); applyTones(); const b=$("#mg-tone"); if(b) b.setAttribute("aria-pressed",tonesOn()); });
 $("#opt-autospeak").addEventListener("change",e=>{ S.settings.autoSpeak=e.target.checked; save(); });
@@ -4177,7 +4177,7 @@ const UI_DICT=[
 ["四声", "4th tone", "4. Ton", "4º tom", "四聲"],
 ["汉字和拼音", "Characters and pinyin", "Zeichen und Pinyin", "Caracteres e pinyin", "漢字和拼音"],
 ["只给拼音上色", "Pinyin only", "Nur Pinyin", "Só o pinyin", "只給拼音上色"],
-["只勾你想练的声调，比如容易混的二声和三声；没勾的声调保持黑色。", "Tick only the tones you want to practise — for example the easily confused 2nd and 3rd; the others stay black.", "Nur die Töne ankreuzen, die du üben willst – etwa den oft verwechselten 2. und 3. Ton; die anderen bleiben schwarz.", "Marque só os tons que quer praticar — por exemplo o 2º e o 3º, que se confundem; os outros ficam pretos.", "只勾你想練的聲調，比如容易混的二聲和三聲；沒勾的聲調保持黑色。"],
+["一次标一个声调，其他字保持黑色。可以每周换一个练。", "One tone at a time is highlighted; everything else stays black. Switch to another tone each week.", "Es wird jeweils ein Ton hervorgehoben, der Rest bleibt schwarz. Wechsle zum Beispiel jede Woche den Ton.", "Um tom de cada vez é destacado; o resto fica preto. Troque de tom a cada semana.", "一次標一個聲調，其他字保持黑色。可以每週換一個練。"],
 ["跟读这句", "Shadow this sentence", "Diesen Satz nachsprechen", "Repita esta frase", "跟讀這句"],
 ["听原句", "Listen", "Anhören", "Ouvir", "聽原句"],
 ["录我的", "Record me", "Mich aufnehmen", "Gravar", "錄我的"],
