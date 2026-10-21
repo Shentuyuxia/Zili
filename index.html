@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="de" data-mode="kids">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>字里 Zili</title>
+<meta name="apple-mobile-web-app-title" content="字里 Zili">
+<meta name="theme-color" content="#f7f1e8">
+<meta name="description" content="字里 — Chinesisch lesen und lernen, Schritt für Schritt.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=1">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&display=swap">
+<style>
+:root{
+  --paper:#f7f1e8; --surface:#ffffff; --ink:#2b2420; --muted:#7a6e64; --line:#e7dccd;
+  --accent:#e0772a; --accent-soft:#fbe5d1; --shade:rgba(43,36,32,.18);
+  --t1:#d1342f; --t2:#2e8b57; --t3:#2c6fd1; --t4:#8e44ad; --t5:#7a6e64;
+  --f-cn:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  --f-cnt:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  --f-ui:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --zh-size:24px;
+}
+html[data-mode="adult"]{ --accent:#2f6f66; --accent-soft:#dcece9; --paper:#f5f6f5; --zh-size:20px; }
+html[lang="zh-Hans"] .hz, html .hz{font-family:var(--f-cn)}
+html[data-trad="1"] .hz{font-family:var(--f-cnt)}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --paper:#1c1a18; --surface:#27231f; --ink:#f3ebe0; --muted:#a79b8e; --line:#3b342e; --accent-soft:#3d2a1b; --shade:rgba(0,0,0,.5); }
+}
+:root[data-theme="dark"]{ --paper:#1c1a18; --surface:#27231f; --ink:#f3ebe0; --muted:#a79b8e; --line:#3b342e; --accent-soft:#3d2a1b; --shade:rgba(0,0,0,.5); }
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-ui);font-size:16px;line-height:1.6;-webkit-text-size-adjust:100%}
+button{font:inherit;color:inherit;cursor:pointer}
+.wrap{max-width:720px;margin:0 auto;padding:0 16px}
+header.top{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.brand{display:flex;align-items:center;gap:10px;padding:12px 0 6px}
+.brand h1{margin:0;font-size:20px;font-weight:700}
+.brand .sub{font-size:12px;color:var(--muted)}
+.tabs{display:flex;gap:4px;overflow-x:auto}
+.tabs button{background:none;border:0;padding:10px 12px;color:var(--muted);font-weight:500;border-bottom:2px solid transparent;white-space:nowrap}
+.tabs button[aria-current="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+main{padding:20px 0 90px}
+h2{font-size:22px;margin:4px 0 6px}
+.eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0}
+.lede{color:var(--muted);margin:6px 0 16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;margin:12px 0}
+.btn{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:9px 16px;font-weight:500}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.sm{padding:6px 12px;font-size:14px}
+.btn.danger{color:#b3261e}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--surface)}
+.seg button{border:0;background:none;padding:8px 14px;color:var(--muted)}
+.seg button[aria-pressed="true"]{background:var(--accent-soft);color:var(--ink);font-weight:600}
+.row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.item{padding:14px 0;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:0}
+.item .lab{font-weight:600;display:block;margin-bottom:4px}
+.item p{margin:0 0 10px;color:var(--muted);font-size:14px}
+.hero{display:flex;gap:14px;align-items:center}
+.mascot{width:84px;height:84px;flex:none}
+.bar{height:10px;background:var(--line);border-radius:999px;overflow:hidden;margin-top:8px}
+.bar>i{display:block;height:100%;background:var(--accent)}
+.artitem{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:14px;margin:10px 0;width:100%;text-align:left}
+.artitem .t{font-size:var(--zh-size);font-weight:500}
+.artitem .d{font-size:13px;color:var(--muted)}
+.badge{font-size:12px;padding:2px 8px;border-radius:999px;background:var(--accent-soft);white-space:nowrap}
+.reader{font-size:var(--zh-size);line-height:2.1}
+.sent{margin:0 0 14px;padding-bottom:12px;border-bottom:1px dashed var(--line)}
+.sent .tr{font-size:14px;color:var(--muted);line-height:1.5;margin-top:4px;font-family:var(--f-ui)}
+ruby.tk{cursor:pointer;border-radius:6px;padding:0 1px}
+ruby.tk:active,ruby.tk:focus{background:var(--accent-soft);outline:none}
+ruby rt{font-size:.5em;color:var(--muted);font-family:var(--f-ui)}
+html[data-mode="kids"] ruby rt.t1{color:var(--t1)} html[data-mode="kids"] ruby rt.t2{color:var(--t2)} html[data-mode="kids"] ruby rt.t3{color:var(--t3)} html[data-mode="kids"] ruby rt.t4{color:var(--t4)}
+html[data-pinyin="off"] ruby rt{display:none}
+.tip{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(16px + env(safe-area-inset-bottom,0px));width:min(92vw,420px);background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:0 10px 30px var(--shade);padding:16px;z-index:20}
+.tip .w{font-size:32px;font-family:var(--f-cn)}
+html[data-trad="1"] .tip .w{font-family:var(--f-cnt)}
+.tip .p{color:var(--muted);font-size:15px}
+.tip .g{font-size:16px;margin:6px 0 12px}
+.vitem{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.vitem .w{font-size:22px}
+.flash{text-align:center;padding:30px 16px;min-height:260px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px}
+.flash .big{font-size:72px;line-height:1.2}
+.flash .p{font-size:20px;color:var(--muted)}
+.flash .g{font-size:18px}
+.toast{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);background:var(--ink);color:var(--paper);padding:8px 16px;border-radius:999px;font-size:14px;z-index:30}
+.empty{color:var(--muted);padding:24px 0;text-align:center}
+.iorow{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+input[type=number]{width:84px;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);font:inherit}
+.back{background:none;border:0;color:var(--accent);padding:0;margin-bottom:8px}
+@media (max-width:420px){.tabs{justify-content:space-between}.tabs button{padding:10px 6px;font-size:14px}}
+.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent);margin-left:4px;vertical-align:middle}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div class="brand">
+    <svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true"><rect x="2" y="2" width="60" height="60" rx="16" fill="#e0772a"/><text x="32" y="45" font-size="34" text-anchor="middle" fill="#fff" font-family="serif">字</text></svg>
+    <div><h1 id="appName">字里 Zili</h1><div class="sub" id="appSub"></div></div>
+  </div>
+  <nav class="tabs" id="tabs"></nav>
+</div></header>
+<main><div class="wrap" id="app"></div></main>
+<div id="layer"></div>
+<script src="data/articles.js"></script>
+<script>
+/* ---------- state ---------- */
+const KEY="zili-v1";
+const TODAY=()=>{const d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")};
+const ADD=(s,n)=>{const d=new Date(s+"T12:00:00");d.setDate(d.getDate()+n);return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")};
+const IV=[0,1,2,4,8,16,30];
+const fresh=()=>({v:1,mode:"kids",trad:false,pinyin:"on",ui:"de",gloss:"de",trans:true,goal:5,rate:0.8,read:{},vocab:{},log:{},updated:0});
+function load(){try{const s=JSON.parse(localStorage.getItem(KEY));if(s&&s.v===1)return Object.assign(fresh(),s)}catch(e){}return fresh()}
+let S=load();
+function persist(){S.updated=Date.now();try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+const V={view:"home",art:null,tip:null,pq:null,flip:false,msg:""};
+const ARTS=window.ZILI_ARTICLES||[];
+
+/* ---------- i18n (German / English) ---------- */
+const I={
+de:{home:"Start",read:"Lesen",vocab:"Wortliste",prac:"Üben",set:"Einstellungen",
+ hi:"Hallo! Ich bin 小橘子.",hiA:"Heute lernen wir zusammen Chinesisch.",
+ todayArt:"Heute",goalH:"Ziel für heute",goalDone:(n,g)=>`${n} von ${g} Karten geübt`,
+ startRead:"Lesen",startPrac:"Üben",allArts:"Alle Texte",
+ read:"Lesen",badgeRead:"gelesen",badgeNew:"neu",backArts:"← Alle Texte",
+ listen:"Anhören",add:"Zur Wortliste",added:"Schon in der Wortliste",
+ showTr:"Übersetzung",hideTr:"Übersetzung ausblenden",
+ emptyVocab:"Noch keine Wörter. Tippe im Text auf ein Wort und wähle „Zur Wortliste“.",
+ emptyPrac:"Heute gibt es keine Karten mehr. Gut gemacht!",
+ flip:"Umdrehen",again:"Noch üben",good:"Gewusst",remove:"Entfernen",
+ setMode:"Modus",modeKids:"Kinder",modeAdult:"Erwachsene",modeP:"Kinder: kurze Texte, immer mit Pinyin und Orangi. Erwachsene: längere Texte, Pinyin ein- und ausschaltbar.",
+ script:"Schrift",simp:"简体",trad:"繁體",scriptP:"Die Texte und Wörter werden in dieser Schrift angezeigt.",
+ pinyin:"Pinyin",pinyinP:"Pinyin über den Zeichen anzeigen.",on:"An",off:"Aus",
+ gloss:"Erklärungen in",glossP:"Übersetzungen und Wortbedeutungen.",
+ uiLang:"Sprache der Oberfläche",uiP:"Knöpfe und Hinweise.",
+ goalL:"Tägliches Ziel",goalP:"Wie viele Karten pro Tag geübt werden.",cards:"Karten",
+ rate:"Sprechtempo",rateP:"Wie schnell chinesisch vorgelesen wird.",
+ data:"Daten",dataP:"Die Daten bleiben auf diesem Gerät. Sichere sie regelmäßig.",
+ exp:"Sicherung speichern",imp:"Sicherung laden",reset:"Alles löschen",resetAsk:"Wirklich alles auf diesem Gerät löschen?",
+ noTTS:"Auf diesem Gerät ist keine chinesische Stimme verfügbar.",
+ saved:"Gespeichert",imported:"Geladen",badImport:"Die Datei passt nicht."},
+en:{home:"Start",read:"Read",vocab:"Word list",prac:"Practice",set:"Settings",
+ hi:"Hi! I'm 小橘子.",hiA:"Let's learn Chinese together today.",
+ todayArt:"Today",goalH:"Goal for today",goalDone:(n,g)=>`${n} of ${g} cards practised`,
+ startRead:"Read",startPrac:"Practise",allArts:"All texts",
+ read:"Read",badgeRead:"read",badgeNew:"new",backArts:"← All texts",
+ listen:"Listen",add:"Add to word list",added:"Already in word list",
+ showTr:"Translation",hideTr:"Hide translation",
+ emptyVocab:"No words yet. Tap a word in a text and choose “Add to word list”.",
+ emptyPrac:"No cards left for today. Well done!",
+ flip:"Flip",again:"Practise again",good:"Got it",remove:"Remove",
+ setMode:"Mode",modeKids:"Kids",modeAdult:"Adults",modeP:"Kids: short texts, always with pinyin and Orangi. Adults: longer texts, pinyin can be switched on and off.",
+ script:"Script",simp:"简体",trad:"繁體",scriptP:"Texts and words are shown in this script.",
+ pinyin:"Pinyin",pinyinP:"Show pinyin above the characters.",on:"On",off:"Off",
+ gloss:"Explanations in",glossP:"Translations and word meanings.",
+ uiLang:"Interface language",uiP:"Buttons and hints.",
+ goalL:"Daily goal",goalP:"How many cards to practise per day.",cards:"cards",
+ rate:"Speaking speed",rateP:"How fast the Chinese is read aloud.",
+ data:"Data",dataP:"Your data stays on this device. Back it up from time to time.",
+ exp:"Save backup",imp:"Load backup",reset:"Delete everything",resetAsk:"Really delete everything on this device?",
+ noTTS:"No Chinese voice is available on this device.",
+ saved:"Saved",imported:"Loaded",badImport:"That file does not fit."}
+};
+const T=k=>(I[S.ui]||I.de)[k]||I.de[k];
+const Tf=(k,...a)=>{const v=T(k);return typeof v==="function"?v(...a):v};
+const GL=()=>S.gloss==="en"?"en":"de";
+const tr=o=>o[GL()];
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const hz=tok=>S.trad?tok.t:tok.s;
+const title=a=>S.trad?a.title.zht:a.title.zh;
+const TONE={"ā":1,"á":2,"ǎ":3,"à":4,"ē":1,"é":2,"ě":3,"è":4,"ī":1,"í":2,"ǐ":3,"ì":4,"ō":1,"ó":2,"ǒ":3,"ò":4,"ū":1,"ú":2,"ǔ":3,"ù":4,"ǖ":1,"ǘ":2,"ǚ":3,"ǜ":4};
+const toneOf=p=>{for(const c of String(p)){if(TONE[c])return TONE[c]}return 5};
+const isHanTok=t=>!t.punct;
+function applyRootAttrs(){
+  const h=document.documentElement;
+  h.dataset.mode=S.mode; h.dataset.trad=S.trad?"1":"0"; h.dataset.pinyin=(S.mode==="kids"||S.pinyin==="on")?"on":"off";
+  h.lang=S.ui==="en"?"en":"de";
+}
+
+/* ---------- speech ---------- */
+let zhVoice=null;
+function pickVoice(){const vs=speechSynthesis.getVoices()||[];zhVoice=vs.find(v=>/^zh[-_]CN/i.test(v.lang))||vs.find(v=>/^zh/i.test(v.lang))||null;return zhVoice}
+function speak(text,rate){
+  if(!("speechSynthesis" in window)){toast(T("noTTS"));return}
+  try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang="zh-CN";if(!zhVoice)pickVoice();if(zhVoice)u.voice=zhVoice;u.rate=rate||S.rate;speechSynthesis.speak(u)}catch(e){toast(T("noTTS"))}
+}
+if("speechSynthesis" in window){speechSynthesis.onvoiceschanged=pickVoice;pickVoice()}
+
+/* ---------- vocab helpers ---------- */
+const inVocab=w=>!!S.vocab[w.s];
+function addWord(tok){
+  if(inVocab(tok))return toast(T("added"));
+  S.vocab[tok.s]={w:tok.s,t:tok.t,p:tok.p,de:tok.de,en:tok.en,box:0,due:TODAY(),added:TODAY()};
+  persist();toast(T("saved"));render();
+}
+function removeWord(w){delete S.vocab[w];persist();render()}
+function dueList(){const t=TODAY();return Object.values(S.vocab).filter(x=>x.due<=t)}
+function doneToday(){return S.log[TODAY()]||0}
+
+/* ---------- views ---------- */
+function tabs(){
+  const items=[["home",T("home")],["read",T("read")],["vocab",T("vocab")],["prac",T("prac")],["set",T("set")]];
+  document.getElementById("tabs").innerHTML=items.map(([k,l])=>`<button data-tab="${k}" aria-current="${V.view===k||(k==="read"&&V.view==="reader")}">${esc(l)}</button>`).join("");
+}
+function mascot(){
+  return `<svg class="mascot" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="66" r="42" fill="#f5963a"/><path d="M60 24 q-4 -14 -20 -14 q6 12 20 14z" fill="#4caf50"/><path d="M62 66 L96 42 A42 42 0 0 1 102 66 Z" fill="#ffe0a3"/><path d="M62 66 L96 42" stroke="#f5963a" stroke-width="2"/><circle cx="46" cy="64" r="4" fill="#2b2420"/><circle cx="66" cy="64" r="4" fill="#2b2420"/><path d="M48 78 q8 7 16 0" stroke="#2b2420" stroke-width="3" fill="none" stroke-linecap="round"/></svg>`;
+}
+function viewHome(){
+  const arts=ARTS.filter(a=>a.audience===S.mode);
+  const next=arts.find(a=>!S.read[a.id])||arts[0];
+  const g=S.goal,d=doneToday(),pct=Math.min(100,Math.round(d/g*100));
+  const hero=S.mode==="kids"?`<div class="hero">${mascot()}<div><h2>${esc(T("hi"))}</h2><p class="lede" style="margin:0">${esc(T("hiA"))}</p></div></div>`:`<h2>${esc(Tf("startRead"))}</h2>`;
+  return `${hero}
+  ${next?`<div class="card"><p class="eyebrow">${esc(T("todayArt"))}</p><h2 class="hz" style="font-size:26px">${esc(title(next))}</h2><p class="lede">${esc(tr(next.title))}</p><button class="btn primary" data-open="${next.id}">${esc(T("startRead"))}</button></div>`:""}
+  <div class="card"><p class="eyebrow">${esc(T("goalH"))}</p><p style="margin:6px 0 0">${esc(Tf("goalDone",d,g))}</p><div class="bar"><i style="width:${pct}%"></i></div>
+  <div class="iorow" style="margin-top:12px"><button class="btn" data-tab="prac">${esc(T("startPrac"))}</button><button class="btn" data-tab="read">${esc(T("allArts"))}</button></div></div>`;
+}
+function viewList(){
+  const arts=ARTS.filter(a=>a.audience===S.mode);
+  return `<h2>${esc(T("read"))}</h2>${arts.map(a=>`<button class="artitem" data-open="${a.id}"><div><div class="t hz">${esc(title(a))}</div><div class="d">${esc(tr(a.title))}</div></div><div style="text-align:right"><span class="badge">${S.read[a.id]?esc(T("badgeRead")):esc(T("badgeNew"))}</span></div></button>`).join("")||`<p class="empty">—</p>`}`;
+}
+function viewReader(){
+  const a=ARTS.find(x=>x.id===V.art); if(!a){V.view="read";return viewList()}
+  const sents=a.sents.map(s=>`<div class="sent"><div class="reader hz">${s.tokens.map(tok=>tok.punct?esc(tok.s):`<ruby class="tk" data-w="${esc(tok.s)}"><span class="hz">${esc(hz(tok))}</span><rt class="t${toneOf(tok.p)}">${esc(tok.p)}</rt></ruby>`).join("")}</div>${S.trans?`<div class="tr">${esc(tr({de:s.de,en:s.en}))}</div>`:""}</div>`).join("");
+  return `<button class="back" data-back="1">${esc(T("backArts"))}</button>
+  <p class="eyebrow">${esc(a.level?"HSK "+a.level:"")}</p>
+  <h2 class="hz">${esc(title(a))}</h2><p class="lede">${esc(tr(a.title))}</p>
+  <div class="iorow" style="margin-bottom:10px"><button class="btn sm" data-trans="1">${esc(S.trans?T("hideTr"):T("showTr"))}</button><button class="btn sm" data-listenall="1">${esc(T("listen"))}</button></div>
+  <div class="card">${sents}</div>`;
+}
+function viewVocab(){
+  const list=Object.values(S.vocab).sort((x,y)=>x.added<y.added?1:-1);
+  if(!list.length)return `<h2>${esc(T("vocab"))}</h2><p class="empty">${esc(T("emptyVocab"))}</p>`;
+  return `<h2>${esc(T("vocab"))}</h2><p class="lede">${list.length}</p>${list.map(w=>`<div class="vitem"><div><div class="w hz">${esc(S.trad?w.t:w.w)}</div><div class="p">${esc(w.p)} · ${esc(tr({de:w.de,en:w.en}))}</div></div><div class="iorow"><button class="btn sm" data-say="${esc(w.w)}">${esc(T("listen"))}</button><button class="btn sm danger" data-rm="${esc(w.w)}">${esc(T("remove"))}</button></div></div>`).join("")}`;
+}
+function viewPrac(){
+  if(!V.pq){V.pq=dueList().slice(0,S.goal).map(x=>x.w);V.idx=0;V.flip=false}
+  if(V.idx>=V.pq.length)return `<h2>${esc(T("prac"))}</h2><p class="empty">${esc(T("emptyPrac"))}</p><button class="btn" data-restart="1">${esc(T("startPrac"))}</button>`;
+  const w=S.vocab[V.pq[V.idx]]; if(!w){V.idx++;return viewPrac()}
+  const shown=S.trad?w.t:w.w;
+  return `<div class="card flash"><div class="big hz">${esc(shown)}</div>
+   ${V.flip?`<div class="p">${esc(w.p)}</div><div class="g">${esc(tr({de:w.de,en:w.en}))}</div>
+     <div class="iorow" style="justify-content:center;margin-top:14px"><button class="btn" data-grade="0">${esc(T("again"))}</button><button class="btn primary" data-grade="1">${esc(T("good"))}</button></div>`
+     :`<button class="btn" data-flip="1" style="margin-top:12px">${esc(T("flip"))}</button>`}
+   <div class="iorow" style="justify-content:center"><button class="btn sm" data-say="${esc(w.w)}">${esc(T("listen"))}</button></div></div>
+   <p class="empty" style="padding:0">${V.idx+1} / ${V.pq.length}</p>`;
+}
+function viewSet(){
+  const seg=(attr,opts,cur)=>`<span class="seg">${opts.map(([v,l])=>`<button data-${attr}="${v}" aria-pressed="${String(cur)===String(v)}">${esc(l)}</button>`).join("")}</span>`;
+  return `<h2>${esc(T("set"))}</h2>
+  <div class="item"><span class="lab">${esc(T("setMode"))}</span><p>${esc(T("modeP"))}</p>${seg("mode",[["kids",T("modeKids")],["adult",T("modeAdult")]],S.mode)}</div>
+  <div class="item"><span class="lab">${esc(T("script"))}</span><p>${esc(T("scriptP"))}</p>${seg("trad",[["0",T("simp")],["1",T("trad")]],S.trad?"1":"0")}</div>
+  ${S.mode==="adult"?`<div class="item"><span class="lab">${esc(T("pinyin"))}</span><p>${esc(T("pinyinP"))}</p>${seg("pinyin",[["on",T("on")],["off",T("off")]],S.pinyin)}</div>`:""}
+  <div class="item"><span class="lab">${esc(T("gloss"))}</span><p>${esc(T("glossP"))}</p>${seg("gloss",[["de","Deutsch"],["en","English"]],S.gloss)}</div>
+  <div class="item"><span class="lab">${esc(T("uiLang"))}</span><p>${esc(T("uiP"))}</p>${seg("ui",[["de","Deutsch"],["en","English"]],S.ui)}</div>
+  <div class="item"><span class="lab">${esc(T("goalL"))}</span><p>${esc(T("goalP"))}</p><div class="iorow">${seg("goal",[["5","5"],["10","10"],["15","15"]],S.goal)}<input id="goalNum" type="number" min="1" max="200" value="${S.goal}" aria-label="${esc(T("goalL"))}"> <span>${esc(T("cards"))}</span></div></div>
+  <div class="item"><span class="lab">${esc(T("rate"))}</span><p>${esc(T("rateP"))}</p>${seg("rate",[["0.6","0.6×"],["0.8","0.8×"],["1","1×"]],String(S.rate))}</div>
+  <div class="item"><span class="lab">${esc(T("data"))}</span><p>${esc(T("dataP"))}</p><div class="iorow"><button class="btn" data-act="exp">${esc(T("exp"))}</button><button class="btn" data-act="imp">${esc(T("imp"))}</button><button class="btn danger" data-act="reset">${esc(T("reset"))}</button></div><textarea id="io" style="display:none"></textarea></div>`;
+}
+function render(){
+  applyRootAttrs();
+  document.getElementById("appSub").textContent=S.mode==="kids"?"Chinesisch für Kinder":"Chinesisch lesen und lernen";
+  tabs();
+  const v=V.view;
+  document.getElementById("app").innerHTML=v==="home"?viewHome():v==="read"?viewList():v==="reader"?viewReader():v==="vocab"?viewVocab():v==="prac"?viewPrac():viewSet();
+  const lay=document.getElementById("layer");
+  lay.innerHTML=V.tip?tipHTML():"";
+}
+function tipHTML(){
+  const w=V.tip; const tok=w.tok;
+  return `<div class="tip" role="dialog" aria-label="${esc(tok.s)}"><div class="w hz">${esc(hz(tok))}</div><div class="p">${esc(tok.p)}</div><div class="g">${tok.de?esc(tr({de:tok.de,en:tok.en})):"—"}</div>
+  <div class="iorow"><button class="btn sm" data-say="${esc(tok.s)}">${esc(T("listen"))}</button><button class="btn sm primary" data-addtip="1" ${inVocab(tok)?"disabled":""}>${esc(inVocab(tok)?T("added"):T("add"))}</button><button class="btn sm" data-closetip="1">✕</button></div></div>`;
+}
+function toast(msg){const d=document.createElement("div");d.className="toast";d.textContent=msg;document.body.appendChild(d);setTimeout(()=>d.remove(),1600)}
+
+/* ---------- events ---------- */
+document.addEventListener("click",e=>{
+  const t=e.target;
+  const rt=t.closest("ruby.tk");
+  if(rt&&V.view==="reader"){
+    const a=ARTS.find(x=>x.id===V.art); let tok=null;
+    for(const s of a.sents){ tok=s.tokens.find(k=>!k.punct&&k.s===rt.dataset.w); if(tok)break }
+    if(tok){V.tip={tok};render();return}
+  }
+  const b=t.closest("[data-tab],[data-open],[data-back],[data-trans],[data-listenall],[data-say],[data-rm],[data-flip],[data-grade],[data-restart],[data-mode],[data-trad],[data-pinyin],[data-gloss],[data-ui],[data-goal],[data-rate],[data-act],[data-addtip],[data-closetip]");
+  if(!b){ if(V.tip&&!t.closest(".tip")){V.tip=null;render()} return }
+  const d=b.dataset;
+  if(d.tab){V.view=d.tab;V.tip=null;if(d.tab==="prac"){V.pq=null}window.scrollTo(0,0);render();return}
+  if(d.open){V.view="reader";V.art=d.open;V.tip=null;S.read[d.open]=true;persist();window.scrollTo(0,0);render();return}
+  if(d.back){V.view="read";V.art=null;V.tip=null;window.scrollTo(0,0);render();return}
+  if(d.trans){S.trans=!S.trans;persist();render();return}
+  if(d.listenall){const a=ARTS.find(x=>x.id===V.art);if(a)speak(a.sents.map(s=>s.tokens.map(k=>k.s).join("")).join("，"));return}
+  if(d.say!==undefined){speak(d.say);return}
+  if(d.rm!==undefined){removeWord(d.rm);return}
+  if(d.flip){V.flip=true;render();return}
+  if(d.grade!==undefined){
+    const w=S.vocab[V.pq[V.idx]];
+    if(w){ if(d.grade==="0"){w.box=0;w.due=TODAY()} else {w.box=Math.min(w.box+1,IV.length-1);w.due=ADD(TODAY(),IV[w.box])} }
+    S.log[TODAY()]=(S.log[TODAY()]||0)+1; persist(); V.idx++; V.flip=false; render(); return
+  }
+  if(d.restart){V.pq=null;render();return}
+  if(d.mode){S.mode=d.mode;V.view="home";V.art=null;V.pq=null;persist();render();return}
+  if(d.trad!==undefined){S.trad=d.trad==="1";persist();render();return}
+  if(d.pinyin){S.pinyin=d.pinyin;persist();render();return}
+  if(d.gloss){S.gloss=d.gloss;persist();render();return}
+  if(d.ui){S.ui=d.ui;persist();render();return}
+  if(d.goal!==undefined){S.goal=+d.goal;V.pq=null;document.getElementById("goalNum")&&(document.getElementById("goalNum").value=S.goal);persist();render();return}
+  if(d.rate!==undefined){S.rate=+d.rate;persist();render();return}
+  if(d.addtip!==undefined){if(V.tip){addWord(V.tip.tok);V.tip=null;render()}return}
+  if(d.closetip!==undefined){V.tip=null;render();return}
+  if(d.act==="exp"){const txt=JSON.stringify(Object.assign({app:"zili"},S),null,0);const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([txt],{type:"application/json"}));a.download="zili-backup.json";a.click();return}
+  if(d.act==="imp"){const inp=document.createElement("input");inp.type="file";inp.accept="application/json";inp.onchange=async()=>{try{const o=JSON.parse(await inp.files[0].text());if(o.app!=="zili")throw 0;S=Object.assign(fresh(),o);persist();toast(T("imported"));render()}catch(err){toast(T("badImport"))}};inp.click();return}
+  if(d.act==="reset"){if(confirm(T("resetAsk"))){localStorage.removeItem(KEY);S=fresh();persist();V.view="home";render()}return}
+});
+document.addEventListener("input",e=>{
+  if(e.target.id==="goalNum"){const v=Math.round(+e.target.value);if(v>=1&&v<=200){S.goal=v;V.pq=null;persist()}}
+});
+render();
+</script>
+</body>
+</html>
