@@ -1,0 +1,7 @@
+{
+  "name": "zili-content",
+  "private": true,
+  "description": "Builds data/articles.js for 字里 Zili from the content sources",
+  "scripts": { "build": "node tools/build.js" },
+  "dependencies": { "opencc-js": "^1.4.2", "pinyin-pro": "^3.29.5" }
+}
