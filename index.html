@@ -2857,7 +2857,7 @@ function zStkData(c){ const k=(c.codePointAt(0)%256).toString(16).padStart(2,"0"
   return STK.sh.get(k).then(sh=>(sh&&sh[c])||null); }
 function zStkChars(w){ return [...new Set([...zs(w)].filter(c=>HAN.test(c)))].slice(0,6); }
 function zStkHtml(w){ const cs=zStkChars(w); if(!cs.length) return "";
-  return `<p class="sec">笔顺</p><div class="zstk" data-noi18n>${cs.map((c,i)=>`<div class="cell"><div class="box" id="stk-${i}" data-stk="play" data-i="${i}" role="button" aria-label="${esc(c)}"></div><span class="meta" id="stk-m-${i}"></span><div class="acts"><button type="button" data-stk="play" data-i="${i}">▶</button><button type="button" data-stk="quiz" data-i="${i}" aria-pressed="false">描</button></div></div>`).join("")}</div>`; }
+  return `<p class="sec">笔顺</p><div class="zstk">${cs.map((c,i)=>`<div class="cell"><div class="box" id="stk-${i}" data-stk="play" data-i="${i}" role="button" aria-label="${esc(c)}" data-noi18n></div><span class="meta" id="stk-m-${i}" data-noi18n></span><div class="acts"><button type="button" data-stk="play" data-i="${i}">▶</button><button type="button" data-stk="quiz" data-i="${i}" aria-pressed="false">描</button></div></div>`).join("")}</div>`; }
 async function zStkMount(w){
   const key=w+"|"+scr(); STK.key=key; STK.w=[];
   const cs=zStkChars(w); if(!cs.length) return;
@@ -4164,6 +4164,7 @@ const UI_DICT=[
 ["原句 → 我的", "Original → mine", "Original → meins", "Original → minha", "原句 → 我的"],
 ["笔顺", "Stroke order", "Strichfolge", "Ordem dos traços", "筆順"],
 ["画", "strokes", "Striche", "traços", "畫"],
+["描", "Trace", "Nachfahren", "Traçar", "描"],
 ["写对了！", "Well written!", "Richtig geschrieben!", "Muito bem!", "寫對了！"],
 ["正在查词典…", "Looking it up…", "Schlage nach…", "Procurando…", "正在查詞典…"],
 ["Wiktionary 没有收这个词", "Not found in Wiktionary", "Nicht in Wiktionary gefunden", "Não encontrado no Wiktionary", "Wiktionary 沒有收這個詞"],
