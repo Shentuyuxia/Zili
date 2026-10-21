@@ -121,7 +121,7 @@ const KEY="zili-v1";
 const TODAY=()=>{const d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")};
 const ADD=(s,n)=>{const d=new Date(s+"T12:00:00");d.setDate(d.getDate()+n);return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")};
 const IV=[0,1,2,4,8,16,30];
-const fresh=()=>({v:1,mode:"kids",trad:false,pinyin:"on",ui:"de",gloss:"de",trans:true,goal:5,rate:0.8,read:{},vocab:{},log:{},checks:{},updated:0});
+const fresh=()=>({v:1,mode:"kids",trad:false,pinyin:"on",ui:"de",gloss:"de",trans:true,goal:5,rate:0.8,read:{},vocab:{},log:{},checks:{},fav:{},updated:0});
 function load(){try{const s=JSON.parse(localStorage.getItem(KEY));if(s&&s.v===1)return Object.assign(fresh(),s)}catch(e){}return fresh()}
 let S=load();
 function persist(){S.updated=Date.now();try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
@@ -150,7 +150,7 @@ de:{home:"Start",read:"Lesen",vocab:"Wortliste",prac:"Karten",set:"Einstellungen
  data:"Daten",dataP:"Die Daten bleiben auf diesem Gerät. Sichere sie regelmäßig.",
  exp:"Sicherung speichern",imp:"Sicherung laden",reset:"Alles löschen",resetAsk:"Wirklich alles auf diesem Gerät löschen?",
  noTTS:"Auf diesem Gerät ist keine chinesische Stimme verfügbar.",
- saved:"Gespeichert",imported:"Geladen",badImport:"Die Datei passt nicht.",lvl1:"Einstieg",lvl2:"Grundstufe",lvl3:"Mittelstufe",lvlAll:"Alle",topicAll:"Alle",tp_classic:"Alltag",tp_young:"Junge Leute",tp_net:"Internet-Slang",fcStudy:"Lernen",fcLib:"Kartenbibliothek",libHint:"Wörter aus den Texten. Tippe auf +, um sie zu deiner Liste hinzuzufügen.",chkH:"Tagesabschluss",chkBtn:"Heute abhaken",chkDone:"Heute abgehakt",chkUndo:"Abhaken rückgängig",chkHint:"Ein Tag zählt, wenn du dein Tagesziel erreichst oder heute abhakst.",streak:n=>`${n} Tage in Folge`,total:n=>`${n} Tage insgesamt`,streakNone:"Noch keine Serie"},
+ saved:"Gespeichert",imported:"Geladen",badImport:"Die Datei passt nicht.",lvl1:"Einstieg",lvl2:"Grundstufe",lvl3:"Mittelstufe",lvlAll:"Alle",topicAll:"Alle",tp_classic:"Alltag",tp_young:"Junge Leute",tp_net:"Internet-Slang",fcStudy:"Lernen",fcLib:"Kartenbibliothek",libHint:"Wörter aus den Texten. Tippe auf +, um sie zu deiner Liste hinzuzufügen.",chkH:"Tagesabschluss",chkBtn:"Heute abhaken",chkDone:"Heute abgehakt",chkUndo:"Abhaken rückgängig",chkHint:"Ein Tag zählt, wenn du dein Tagesziel erreichst oder heute abhakst.",streak:n=>`${n} Tage in Folge`,total:n=>`${n} Tage insgesamt`,streakNone:"Noch keine Serie",favBtn:"Merken",favOff:"Gemerkt",favAll:"Alle",favOnly:"Gemerkt"},
 en:{home:"Start",read:"Read",vocab:"Word list",prac:"Cards",set:"Settings",
  hi:"Hi! I'm 小橘子.",hiA:"Let's learn Chinese together today.",
  todayArt:"Today",goalH:"Goal for today",goalDone:(n,g)=>`${n} of ${g} cards practised`,
@@ -171,7 +171,7 @@ en:{home:"Start",read:"Read",vocab:"Word list",prac:"Cards",set:"Settings",
  data:"Data",dataP:"Your data stays on this device. Back it up from time to time.",
  exp:"Save backup",imp:"Load backup",reset:"Delete everything",resetAsk:"Really delete everything on this device?",
  noTTS:"No Chinese voice is available on this device.",
- saved:"Saved",imported:"Loaded",badImport:"That file does not fit.",lvl1:"Beginner",lvl2:"Elementary",lvl3:"Intermediate",lvlAll:"All",topicAll:"All",tp_classic:"Everyday",tp_young:"Young people",tp_net:"Internet slang",fcStudy:"Study",fcLib:"Card library",libHint:"Words from the texts. Tap + to add them to your list.",chkH:"Daily check-in",chkBtn:"Check in today",chkDone:"Checked in today",chkUndo:"Undo check-in",chkHint:"A day counts when you reach your goal or check in today.",streak:n=>`${n} days in a row`,total:n=>`${n} days in total`,streakNone:"No streak yet"}
+ saved:"Saved",imported:"Loaded",badImport:"That file does not fit.",lvl1:"Beginner",lvl2:"Elementary",lvl3:"Intermediate",lvlAll:"All",topicAll:"All",tp_classic:"Everyday",tp_young:"Young people",tp_net:"Internet slang",fcStudy:"Study",fcLib:"Card library",libHint:"Words from the texts. Tap + to add them to your list.",chkH:"Daily check-in",chkBtn:"Check in today",chkDone:"Checked in today",chkUndo:"Undo check-in",chkHint:"A day counts when you reach your goal or check in today.",streak:n=>`${n} days in a row`,total:n=>`${n} days in total`,streakNone:"No streak yet",favBtn:"Save",favOff:"Saved",favAll:"All",favOnly:"Saved"}
 };
 const T=k=>(I[S.ui]||I.de)[k]||I.de[k];
 const Tf=(k,...a)=>{const v=T(k);return typeof v==="function"?v(...a):v};
@@ -226,7 +226,7 @@ const topicName=t=>T("tp_"+t);
 const segOf=(attr,opts,cur)=>`<span class="seg">${opts.map(([v,l])=>`<button data-${attr}="${esc(v)}" aria-pressed="${String(cur)===String(v)}">${esc(l)}</button>`).join("")}</span>`;
 function viewHome(){
   const arts=ARTS.filter(a=>a.audience===S.mode);
-  const next=arts.find(a=>!S.read[a.id])||arts[0];
+  const dn=Math.floor(new Date(TODAY()+"T12:00:00").getTime()/864e5);const next=arts.length?arts[dn%arts.length]:null;
   const g=S.goal,d=doneToday(),pct=Math.min(100,Math.round(d/g*100));
   const hero=S.mode==="kids"?`<div class="hero">${mascot()}<div><h2>${esc(T("hi"))}</h2><p class="lede" style="margin:0">${esc(T("hiA"))}</p></div></div>`:`<h2>${esc(Tf("startRead"))}</h2>`;
   const t=TODAY(),on=isChecked(t),manual=!!S.checks[t],sN=streakN();
@@ -243,12 +243,12 @@ function viewHome(){
 }
 function viewList(){
   const kids=S.mode==="kids";
-  const arts=ARTS.filter(a=>a.audience===S.mode&&(V.lvl==="all"||a.level===+V.lvl)&&(kids||V.topic==="all"||a.topic===V.topic));
+  const arts=ARTS.filter(a=>a.audience===S.mode&&(V.lvl==="all"||a.level===+V.lvl)&&(kids||V.topic==="all"||a.topic===V.topic)&&(!V.favf||S.fav[a.id]));
   const lv=[["all",T("lvlAll")],["1",lvlName(1)],["2",lvlName(2)],["3",lvlName(3)]];
   const tp=[["all",T("topicAll")],["classic",topicName("classic")],["young",topicName("young")],["net",topicName("net")]];
   return `<h2>${esc(T("read"))}</h2>
-  <div class="filters">${segOf("lvl",lv,V.lvl)}${kids?"":segOf("topic",tp,V.topic)}</div>
-  ${arts.map(a=>`<button class="artitem" data-open="${a.id}"><div><div class="t hz">${esc(title(a))}</div><div class="d">${esc(lvlName(a.level))} · ${esc(topicName(a.topic||"classic"))}</div></div><div style="text-align:right"><span class="badge">${S.read[a.id]?esc(T("badgeRead")):esc(T("badgeNew"))}</span></div></button>`).join("")||`<p class="empty">—</p>`}`;
+  <div class="filters">${segOf("favf",[["0",T("favAll")],["1",T("favOnly")]],V.favf?"1":"0")}${segOf("lvl",lv,V.lvl)}${kids?"":segOf("topic",tp,V.topic)}</div>
+  ${arts.map(a=>`<button class="artitem" data-open="${a.id}"><div><div class="t hz">${esc(title(a))}</div><div class="d">${esc(lvlName(a.level))} · ${esc(topicName(a.topic||"classic"))}</div></div><div style="text-align:right"><span class="badge">${S.fav[a.id]?"★ ":""}${S.read[a.id]?esc(T("badgeRead")):esc(T("badgeNew"))}</span></div></button>`).join("")||`<p class="empty">—</p>`}`;
 }
 
 function viewReader(){
@@ -257,7 +257,7 @@ function viewReader(){
   return `<button class="back" data-back="1">${esc(T("backArts"))}</button>
   <p class="eyebrow">${esc(lvlName(a.level))}</p>
   <h2 class="hz">${esc(title(a))}</h2><p class="lede">${esc(tr(a.title))}</p>
-  <div class="iorow" style="margin-bottom:10px"><button class="btn sm" data-trans="1">${esc(S.trans?T("hideTr"):T("showTr"))}</button><button class="btn sm" data-listenall="1">${esc(T("listen"))}</button></div>
+  <div class="iorow" style="margin-bottom:10px"><button class="btn sm" data-trans="1">${esc(S.trans?T("hideTr"):T("showTr"))}</button><button class="btn sm" data-listenall="1">${esc(T("listen"))}</button><button class="btn sm" data-fav="${a.id}">${S.fav[a.id]?"★ ":""}${esc(S.fav[a.id]?T("favOff"):T("favBtn"))}</button></div>
   <div class="card">${sents}</div>`;
 }
 function viewVocab(){
@@ -327,7 +327,7 @@ document.addEventListener("click",e=>{
     for(const s of a.sents){ tok=s.tokens.find(k=>!k.punct&&k.s===rt.dataset.w); if(tok)break }
     if(tok){V.tip={tok};render();return}
   }
-  const b=t.closest("[data-tab],[data-open],[data-back],[data-trans],[data-listenall],[data-say],[data-rm],[data-flip],[data-grade],[data-restart],[data-mode],[data-trad],[data-pinyin],[data-gloss],[data-ui],[data-goal],[data-rate],[data-act],[data-addtip],[data-closetip],[data-lvl],[data-topic],[data-fc],[data-deck],[data-libadd],[data-check]");
+  const b=t.closest("[data-tab],[data-open],[data-back],[data-trans],[data-listenall],[data-say],[data-rm],[data-flip],[data-grade],[data-restart],[data-mode],[data-trad],[data-pinyin],[data-gloss],[data-ui],[data-goal],[data-rate],[data-act],[data-addtip],[data-closetip],[data-lvl],[data-topic],[data-fc],[data-deck],[data-libadd],[data-check],[data-fav],[data-favf]");
   if(!b){ if(V.tip&&!t.closest(".tip")){V.tip=null;render()} return }
   const d=b.dataset;
   if(d.tab){V.view=d.tab;V.tip=null;if(d.tab==="prac"){V.pq=null}window.scrollTo(0,0);render();return}
@@ -349,6 +349,8 @@ document.addEventListener("click",e=>{
   if(d.deck!==undefined){V.lib=d.deck;render();return}
   if(d.libadd!==undefined){const w=LIB().get(d.libadd);if(w)addWord({s:w.w,t:w.t,p:w.p,de:w.de,en:w.en});render();return}
   if(d.check!==undefined){const t=TODAY();if(S.checks[t]){delete S.checks[t]}else{S.checks[t]=true}persist();render();return}
+  if(d.fav!==undefined){if(S.fav[d.fav])delete S.fav[d.fav];else S.fav[d.fav]=true;persist();render();return}
+  if(d.favf!==undefined){V.favf=d.favf==="1";render();return}
   if(d.restart){V.pq=null;render();return}
   if(d.mode){S.mode=d.mode;V.view="home";V.art=null;V.pq=null;persist();render();return}
   if(d.trad!==undefined){S.trad=d.trad==="1";persist();render();return}
@@ -366,6 +368,7 @@ document.addEventListener("click",e=>{
 document.addEventListener("input",e=>{
   if(e.target.id==="goalNum"){const v=Math.round(+e.target.value);if(v>=1&&v<=200){S.goal=v;V.pq=null;persist()}}
 });
+try{navigator.storage&&navigator.storage.persist&&navigator.storage.persist()}catch(e){}
 render();
 </script>
 </body>
