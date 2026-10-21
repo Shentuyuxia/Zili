@@ -11,7 +11,7 @@ const fs = require("fs"), path = require("path");
 const { pinyin } = require("pinyin-pro");
 const D = path.join(__dirname, "..", "data");
 const LV = ["HSK1", "HSK2", "HSK3", "HSK4", "HSK5", "HSK6"];
-const TARGET = { HSK1: 300, HSK2: 500, HSK3: 600, HSK4: 1000, HSK5: 1300, HSK6: 1500 };
+const TARGET = { HSK1: 150, HSK2: 150, HSK3: 300, HSK4: 600, HSK5: 1300, HSK6: 2500 }; // official HSK 2.0 list sizes (the bank also has extra words)
 const POS = new Set(["", "n", "v", "adj", "adv", "mw", "pron", "num", "prep", "conj", "part", "interj", "idiom", "expr"]);
 const HAN = /[㐀-鿿]/;
 const file = lv => path.join(D, `zh-${lv}.json`);

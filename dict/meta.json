@@ -1,0 +1,30 @@
+{
+ "version": 1,
+ "shards": 128,
+ "words": 217225,
+ "seg": 239003,
+ "en": 120802,
+ "de": 159044,
+ "sources": [
+  {
+   "name": "CC-CEDICT",
+   "url": "https://cc-cedict.org/wiki/",
+   "license": "CC BY-SA 4.0"
+  },
+  {
+   "name": "HanDeDict",
+   "url": "https://handedict.zydeo.net/",
+   "license": "CC BY-SA 3.0"
+  },
+  {
+   "name": "jieba dict.txt (word frequencies)",
+   "url": "https://github.com/fxsjy/jieba",
+   "license": "MIT"
+  },
+  {
+   "name": "complete-hsk-vocabulary (HSK levels)",
+   "url": "https://github.com/drkameleon/complete-hsk-vocabulary",
+   "license": "MIT"
+  }
+ ]
+}

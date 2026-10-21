@@ -1,2 +1,4 @@
 node_modules/
 package-lock.json
+tools/src/*
+!tools/src/README.md
