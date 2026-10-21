@@ -97,6 +97,11 @@ input[type=number]{width:84px;padding:8px 10px;border:1px solid var(--line);bord
 .back{background:none;border:0;color:var(--accent);padding:0;margin-bottom:8px}
 @media (max-width:420px){.tabs{justify-content:space-between}.tabs button{padding:10px 6px;font-size:14px}}
 .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent);margin-left:4px;vertical-align:middle}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px}
+.filters .seg{flex-wrap:wrap}
+.dots{display:flex;gap:5px;margin-top:12px}
+.dots i{flex:1;height:14px;border-radius:4px;background:var(--line)}
+.dots i.on{background:var(--accent)}
 </style>
 </head>
 <body>
@@ -116,16 +121,16 @@ const KEY="zili-v1";
 const TODAY=()=>{const d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")};
 const ADD=(s,n)=>{const d=new Date(s+"T12:00:00");d.setDate(d.getDate()+n);return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")};
 const IV=[0,1,2,4,8,16,30];
-const fresh=()=>({v:1,mode:"kids",trad:false,pinyin:"on",ui:"de",gloss:"de",trans:true,goal:5,rate:0.8,read:{},vocab:{},log:{},updated:0});
+const fresh=()=>({v:1,mode:"kids",trad:false,pinyin:"on",ui:"de",gloss:"de",trans:true,goal:5,rate:0.8,read:{},vocab:{},log:{},checks:{},updated:0});
 function load(){try{const s=JSON.parse(localStorage.getItem(KEY));if(s&&s.v===1)return Object.assign(fresh(),s)}catch(e){}return fresh()}
 let S=load();
 function persist(){S.updated=Date.now();try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
-const V={view:"home",art:null,tip:null,pq:null,flip:false,msg:""};
+const V={view:"home",art:null,tip:null,pq:null,flip:false,msg:"",lvl:"all",topic:"all",fc:"study",lib:"net"};
 const ARTS=window.ZILI_ARTICLES||[];
 
 /* ---------- i18n (German / English) ---------- */
 const I={
-de:{home:"Start",read:"Lesen",vocab:"Wortliste",prac:"Üben",set:"Einstellungen",
+de:{home:"Start",read:"Lesen",vocab:"Wortliste",prac:"Karten",set:"Einstellungen",
  hi:"Hallo! Ich bin 小橘子.",hiA:"Heute lernen wir zusammen Chinesisch.",
  todayArt:"Heute",goalH:"Ziel für heute",goalDone:(n,g)=>`${n} von ${g} Karten geübt`,
  startRead:"Lesen",startPrac:"Üben",allArts:"Alle Texte",
@@ -145,8 +150,8 @@ de:{home:"Start",read:"Lesen",vocab:"Wortliste",prac:"Üben",set:"Einstellungen"
  data:"Daten",dataP:"Die Daten bleiben auf diesem Gerät. Sichere sie regelmäßig.",
  exp:"Sicherung speichern",imp:"Sicherung laden",reset:"Alles löschen",resetAsk:"Wirklich alles auf diesem Gerät löschen?",
  noTTS:"Auf diesem Gerät ist keine chinesische Stimme verfügbar.",
- saved:"Gespeichert",imported:"Geladen",badImport:"Die Datei passt nicht."},
-en:{home:"Start",read:"Read",vocab:"Word list",prac:"Practice",set:"Settings",
+ saved:"Gespeichert",imported:"Geladen",badImport:"Die Datei passt nicht.",lvl1:"Einstieg",lvl2:"Grundstufe",lvl3:"Mittelstufe",lvlAll:"Alle",topicAll:"Alle",tp_classic:"Alltag",tp_young:"Junge Leute",tp_net:"Internet-Slang",fcStudy:"Lernen",fcLib:"Kartenbibliothek",libHint:"Wörter aus den Texten. Tippe auf +, um sie zu deiner Liste hinzuzufügen.",chkH:"Tagesabschluss",chkBtn:"Heute abhaken",chkDone:"Heute abgehakt",chkUndo:"Abhaken rückgängig",chkHint:"Ein Tag zählt, wenn du dein Tagesziel erreichst oder heute abhakst.",streak:n=>`${n} Tage in Folge`,total:n=>`${n} Tage insgesamt`,streakNone:"Noch keine Serie"},
+en:{home:"Start",read:"Read",vocab:"Word list",prac:"Cards",set:"Settings",
  hi:"Hi! I'm 小橘子.",hiA:"Let's learn Chinese together today.",
  todayArt:"Today",goalH:"Goal for today",goalDone:(n,g)=>`${n} of ${g} cards practised`,
  startRead:"Read",startPrac:"Practise",allArts:"All texts",
@@ -166,7 +171,7 @@ en:{home:"Start",read:"Read",vocab:"Word list",prac:"Practice",set:"Settings",
  data:"Data",dataP:"Your data stays on this device. Back it up from time to time.",
  exp:"Save backup",imp:"Load backup",reset:"Delete everything",resetAsk:"Really delete everything on this device?",
  noTTS:"No Chinese voice is available on this device.",
- saved:"Saved",imported:"Loaded",badImport:"That file does not fit."}
+ saved:"Saved",imported:"Loaded",badImport:"That file does not fit.",lvl1:"Beginner",lvl2:"Elementary",lvl3:"Intermediate",lvlAll:"All",topicAll:"All",tp_classic:"Everyday",tp_young:"Young people",tp_net:"Internet slang",fcStudy:"Study",fcLib:"Card library",libHint:"Words from the texts. Tap + to add them to your list.",chkH:"Daily check-in",chkBtn:"Check in today",chkDone:"Checked in today",chkUndo:"Undo check-in",chkHint:"A day counts when you reach your goal or check in today.",streak:n=>`${n} days in a row`,total:n=>`${n} days in total`,streakNone:"No streak yet"}
 };
 const T=k=>(I[S.ui]||I.de)[k]||I.de[k];
 const Tf=(k,...a)=>{const v=T(k);return typeof v==="function"?v(...a):v};
@@ -212,25 +217,45 @@ function tabs(){
 function mascot(){
   return `<svg class="mascot" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="66" r="42" fill="#f5963a"/><path d="M60 24 q-4 -14 -20 -14 q6 12 20 14z" fill="#4caf50"/><path d="M62 66 L96 42 A42 42 0 0 1 102 66 Z" fill="#ffe0a3"/><path d="M62 66 L96 42" stroke="#f5963a" stroke-width="2"/><circle cx="46" cy="64" r="4" fill="#2b2420"/><circle cx="66" cy="64" r="4" fill="#2b2420"/><path d="M48 78 q8 7 16 0" stroke="#2b2420" stroke-width="3" fill="none" stroke-linecap="round"/></svg>`;
 }
+/* ---------- check-in (打卡) ---------- */
+const isChecked=day=>!!S.checks[day]||(S.log[day]||0)>=S.goal;
+function streakN(){let n=0,d=TODAY();if(!isChecked(d))d=ADD(d,-1);while(isChecked(d)){n++;d=ADD(d,-1)}return n}
+function totalDays(){const days=new Set([...Object.keys(S.checks),...Object.keys(S.log)]);let n=0;for(const d of days)if(isChecked(d))n++;return n}
+const lvlName=l=>T("lvl"+l);
+const topicName=t=>T("tp_"+t);
+const segOf=(attr,opts,cur)=>`<span class="seg">${opts.map(([v,l])=>`<button data-${attr}="${esc(v)}" aria-pressed="${String(cur)===String(v)}">${esc(l)}</button>`).join("")}</span>`;
 function viewHome(){
   const arts=ARTS.filter(a=>a.audience===S.mode);
   const next=arts.find(a=>!S.read[a.id])||arts[0];
   const g=S.goal,d=doneToday(),pct=Math.min(100,Math.round(d/g*100));
   const hero=S.mode==="kids"?`<div class="hero">${mascot()}<div><h2>${esc(T("hi"))}</h2><p class="lede" style="margin:0">${esc(T("hiA"))}</p></div></div>`:`<h2>${esc(Tf("startRead"))}</h2>`;
+  const t=TODAY(),on=isChecked(t),manual=!!S.checks[t],sN=streakN();
+  const strip=[];for(let i=13;i>=0;i--){const x=ADD(t,-i);strip.push(`<i class="${isChecked(x)?"on":""}" title="${x}"></i>`)}
   return `${hero}
   ${next?`<div class="card"><p class="eyebrow">${esc(T("todayArt"))}</p><h2 class="hz" style="font-size:26px">${esc(title(next))}</h2><p class="lede">${esc(tr(next.title))}</p><button class="btn primary" data-open="${next.id}">${esc(T("startRead"))}</button></div>`:""}
+  <div class="card"><p class="eyebrow">${esc(T("chkH"))}</p>
+    <p style="margin:6px 0 0"><b>${esc(sN?Tf("streak",sN):T("streakNone"))}</b> <span class="muted">· ${esc(Tf("total",totalDays()))}</span></p>
+    <div class="dots" aria-hidden="true">${strip.join("")}</div>
+    <div class="iorow" style="margin-top:12px"><button class="btn ${on&&!manual?"":"primary"}" data-check="1" ${on&&!manual?"disabled":""}>${esc(on?(manual?T("chkUndo"):T("chkDone")):T("chkBtn"))}</button></div>
+    <p class="small muted" style="margin:10px 0 0">${esc(T("chkHint"))}</p></div>
   <div class="card"><p class="eyebrow">${esc(T("goalH"))}</p><p style="margin:6px 0 0">${esc(Tf("goalDone",d,g))}</p><div class="bar"><i style="width:${pct}%"></i></div>
   <div class="iorow" style="margin-top:12px"><button class="btn" data-tab="prac">${esc(T("startPrac"))}</button><button class="btn" data-tab="read">${esc(T("allArts"))}</button></div></div>`;
 }
 function viewList(){
-  const arts=ARTS.filter(a=>a.audience===S.mode);
-  return `<h2>${esc(T("read"))}</h2>${arts.map(a=>`<button class="artitem" data-open="${a.id}"><div><div class="t hz">${esc(title(a))}</div><div class="d">${esc(tr(a.title))}</div></div><div style="text-align:right"><span class="badge">${S.read[a.id]?esc(T("badgeRead")):esc(T("badgeNew"))}</span></div></button>`).join("")||`<p class="empty">—</p>`}`;
+  const kids=S.mode==="kids";
+  const arts=ARTS.filter(a=>a.audience===S.mode&&(V.lvl==="all"||a.level===+V.lvl)&&(kids||V.topic==="all"||a.topic===V.topic));
+  const lv=[["all",T("lvlAll")],["1",lvlName(1)],["2",lvlName(2)],["3",lvlName(3)]];
+  const tp=[["all",T("topicAll")],["classic",topicName("classic")],["young",topicName("young")],["net",topicName("net")]];
+  return `<h2>${esc(T("read"))}</h2>
+  <div class="filters">${segOf("lvl",lv,V.lvl)}${kids?"":segOf("topic",tp,V.topic)}</div>
+  ${arts.map(a=>`<button class="artitem" data-open="${a.id}"><div><div class="t hz">${esc(title(a))}</div><div class="d">${esc(lvlName(a.level))} · ${esc(topicName(a.topic||"classic"))}</div></div><div style="text-align:right"><span class="badge">${S.read[a.id]?esc(T("badgeRead")):esc(T("badgeNew"))}</span></div></button>`).join("")||`<p class="empty">—</p>`}`;
 }
+
 function viewReader(){
   const a=ARTS.find(x=>x.id===V.art); if(!a){V.view="read";return viewList()}
   const sents=a.sents.map(s=>`<div class="sent"><div class="reader hz">${s.tokens.map(tok=>tok.punct?esc(tok.s):`<ruby class="tk" data-w="${esc(tok.s)}"><span class="hz">${esc(hz(tok))}</span><rt class="t${toneOf(tok.p)}">${esc(tok.p)}</rt></ruby>`).join("")}</div>${S.trans?`<div class="tr">${esc(tr({de:s.de,en:s.en}))}</div>`:""}</div>`).join("");
   return `<button class="back" data-back="1">${esc(T("backArts"))}</button>
-  <p class="eyebrow">${esc(a.level?"HSK "+a.level:"")}</p>
+  <p class="eyebrow">${esc(lvlName(a.level))}</p>
   <h2 class="hz">${esc(title(a))}</h2><p class="lede">${esc(tr(a.title))}</p>
   <div class="iorow" style="margin-bottom:10px"><button class="btn sm" data-trans="1">${esc(S.trans?T("hideTr"):T("showTr"))}</button><button class="btn sm" data-listenall="1">${esc(T("listen"))}</button></div>
   <div class="card">${sents}</div>`;
@@ -240,18 +265,31 @@ function viewVocab(){
   if(!list.length)return `<h2>${esc(T("vocab"))}</h2><p class="empty">${esc(T("emptyVocab"))}</p>`;
   return `<h2>${esc(T("vocab"))}</h2><p class="lede">${list.length}</p>${list.map(w=>`<div class="vitem"><div><div class="w hz">${esc(S.trad?w.t:w.w)}</div><div class="p">${esc(w.p)} · ${esc(tr({de:w.de,en:w.en}))}</div></div><div class="iorow"><button class="btn sm" data-say="${esc(w.w)}">${esc(T("listen"))}</button><button class="btn sm danger" data-rm="${esc(w.w)}">${esc(T("remove"))}</button></div></div>`).join("")}`;
 }
+const LIB=()=>{const m=new Map();for(const k in (window.ZILI_DECKS||{}))for(const w of ZILI_DECKS[k])if(!m.has(w.w))m.set(w.w,w);return m};
 function viewPrac(){
+  const tabs=`<div class="filters">${segOf("fc",[["study",T("fcStudy")],["lib",T("fcLib")]],V.fc)}</div>`;
+  if(V.fc==="lib")return `<h2>${esc(T("prac"))}</h2>${tabs}${viewLib()}`;
   if(!V.pq){V.pq=dueList().slice(0,S.goal).map(x=>x.w);V.idx=0;V.flip=false}
-  if(V.idx>=V.pq.length)return `<h2>${esc(T("prac"))}</h2><p class="empty">${esc(T("emptyPrac"))}</p><button class="btn" data-restart="1">${esc(T("startPrac"))}</button>`;
+  if(V.idx>=V.pq.length)return `<h2>${esc(T("prac"))}</h2>${tabs}<p class="empty">${esc(T("emptyPrac"))}</p><button class="btn" data-restart="1">${esc(T("startPrac"))}</button>`;
   const w=S.vocab[V.pq[V.idx]]; if(!w){V.idx++;return viewPrac()}
   const shown=S.trad?w.t:w.w;
-  return `<div class="card flash"><div class="big hz">${esc(shown)}</div>
+  return `<h2>${esc(T("prac"))}</h2>${tabs}<div class="card flash"><div class="big hz">${esc(shown)}</div>
    ${V.flip?`<div class="p">${esc(w.p)}</div><div class="g">${esc(tr({de:w.de,en:w.en}))}</div>
      <div class="iorow" style="justify-content:center;margin-top:14px"><button class="btn" data-grade="0">${esc(T("again"))}</button><button class="btn primary" data-grade="1">${esc(T("good"))}</button></div>`
      :`<button class="btn" data-flip="1" style="margin-top:12px">${esc(T("flip"))}</button>`}
    <div class="iorow" style="justify-content:center"><button class="btn sm" data-say="${esc(w.w)}">${esc(T("listen"))}</button></div></div>
    <p class="empty" style="padding:0">${V.idx+1} / ${V.pq.length}</p>`;
 }
+function viewLib(){
+  const kids=S.mode==="kids";
+  const decks=[["net",topicName("net")],["young",topicName("young")],["classic",topicName("classic")],["l1",lvlName(1)],["l2",lvlName(2)],["l3",lvlName(3)]].filter(([k])=>!kids||(k!=="net"&&k!=="young"));
+  const cur=decks.some(([k])=>k===V.lib)?V.lib:decks[0][0];
+  const words=(window.ZILI_DECKS&&ZILI_DECKS[cur])||[];
+  return `<p class="lede">${esc(T("libHint"))}</p>
+  <div class="filters">${segOf("deck",decks,cur)}</div>
+  ${words.map(w=>{const has=!!S.vocab[w.w];return `<div class="vitem"><div><div class="w hz">${esc(S.trad?w.t:w.w)}</div><div class="p">${esc(w.p)} · ${esc(tr({de:w.de,en:w.en}))}</div></div><div class="iorow"><button class="btn sm" data-say="${esc(w.w)}">${esc(T("listen"))}</button><button class="btn sm ${has?"":"primary"}" data-libadd="${esc(w.w)}" ${has?"disabled":""} aria-label="${esc(has?T("added"):T("add"))}">${has?"✓":"+"}</button></div></div>`}).join("")}`;
+}
+
 function viewSet(){
   const seg=(attr,opts,cur)=>`<span class="seg">${opts.map(([v,l])=>`<button data-${attr}="${v}" aria-pressed="${String(cur)===String(v)}">${esc(l)}</button>`).join("")}</span>`;
   return `<h2>${esc(T("set"))}</h2>
@@ -289,7 +327,7 @@ document.addEventListener("click",e=>{
     for(const s of a.sents){ tok=s.tokens.find(k=>!k.punct&&k.s===rt.dataset.w); if(tok)break }
     if(tok){V.tip={tok};render();return}
   }
-  const b=t.closest("[data-tab],[data-open],[data-back],[data-trans],[data-listenall],[data-say],[data-rm],[data-flip],[data-grade],[data-restart],[data-mode],[data-trad],[data-pinyin],[data-gloss],[data-ui],[data-goal],[data-rate],[data-act],[data-addtip],[data-closetip]");
+  const b=t.closest("[data-tab],[data-open],[data-back],[data-trans],[data-listenall],[data-say],[data-rm],[data-flip],[data-grade],[data-restart],[data-mode],[data-trad],[data-pinyin],[data-gloss],[data-ui],[data-goal],[data-rate],[data-act],[data-addtip],[data-closetip],[data-lvl],[data-topic],[data-fc],[data-deck],[data-libadd],[data-check]");
   if(!b){ if(V.tip&&!t.closest(".tip")){V.tip=null;render()} return }
   const d=b.dataset;
   if(d.tab){V.view=d.tab;V.tip=null;if(d.tab==="prac"){V.pq=null}window.scrollTo(0,0);render();return}
@@ -305,6 +343,12 @@ document.addEventListener("click",e=>{
     if(w){ if(d.grade==="0"){w.box=0;w.due=TODAY()} else {w.box=Math.min(w.box+1,IV.length-1);w.due=ADD(TODAY(),IV[w.box])} }
     S.log[TODAY()]=(S.log[TODAY()]||0)+1; persist(); V.idx++; V.flip=false; render(); return
   }
+  if(d.lvl!==undefined){V.lvl=d.lvl;render();return}
+  if(d.topic!==undefined){V.topic=d.topic;render();return}
+  if(d.fc!==undefined){V.fc=d.fc;V.pq=null;render();return}
+  if(d.deck!==undefined){V.lib=d.deck;render();return}
+  if(d.libadd!==undefined){const w=LIB().get(d.libadd);if(w)addWord({s:w.w,t:w.t,p:w.p,de:w.de,en:w.en});render();return}
+  if(d.check!==undefined){const t=TODAY();if(S.checks[t]){delete S.checks[t]}else{S.checks[t]=true}persist();render();return}
   if(d.restart){V.pq=null;render();return}
   if(d.mode){S.mode=d.mode;V.view="home";V.art=null;V.pq=null;persist();render();return}
   if(d.trad!==undefined){S.trad=d.trad==="1";persist();render();return}
