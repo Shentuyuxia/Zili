@@ -30,7 +30,7 @@
   --f-ui:"Source Sans 3", "EL Hei", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
   --f-cn:"EL Hei", "PingFang SC", "Microsoft YaHei", sans-serif;
   --f-mono:"Source Sans 3", "EL Hei", sans-serif;
-  --t1:#c8372d; --t2:#2b8a3e; --t3:#2663c2; --t4:#8a3db5;
+  --t1:#a8473a; --t2:#2f7a55; --t3:#3b5b86; --t4:#8a4a72;
   --r:12px; color-scheme:light;
 }
 @media (prefers-color-scheme: dark){ :root{
@@ -39,7 +39,7 @@
   --der:#9fb6dd; --die:#e08a7c; --das:#86c9a4;
   --a1:#9cc77f; --a2:#7cc4bd; --b1:#9fb6dd; --b2:#b7a3e0; --c1:#e09bbb; --c2:#e0a184;
   --ok:#86c9a4; --ok-soft:#1b3328; --warn:#d6ad5c; --warn-soft:#352a14; --bad:#e08a7c; --bad-soft:#3a201c;
-  --scrim:rgba(0,0,0,.55); --pt-mark:#2c6b64; --rule:#c9d2d4; --t1:#f08a7e; --t2:#7fcf8e; --t3:#8db3f3; --t4:#cf9df0; color-scheme:dark }}
+  --scrim:rgba(0,0,0,.55); --pt-mark:#2c6b64; --rule:#c9d2d4; --t1:#e0927f; --t2:#86c9a4; --t3:#9fb6dd; --t4:#d6a3c4; color-scheme:dark }}
 
 html{-webkit-text-size-adjust:100%;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 body{margin:0;--acc:var(--pt);--acc-soft:var(--pt-soft);background:var(--bg);color:var(--ink);font-family:var(--f-ui);font-size:15px;line-height:1.55}
@@ -915,11 +915,19 @@ body.nopy .mg-body.zhb{line-height:1.85}
 .mg-sheet .zd-r .k{display:inline-block;min-width:2.2em;font-size:11px;font-weight:600;color:var(--muted);letter-spacing:.06em}
 .mg-sheet .zd-src{margin:8px 0 0;font-size:12px;color:var(--muted)}
 /* tone colours (optional) */
-body.tones .tn1{color:var(--t1)} body.tones .tn2{color:var(--t2)} body.tones .tn3{color:var(--t3)} body.tones .tn4{color:var(--t4)}
-body.tones rt.tn5,body.tones .py .tn5{color:var(--muted)}
-.tone-key{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:8px;font-size:13.5px}
-.tone-key span{font-family:var(--f-cn);font-size:16px}
-.tone-key .tn1{color:var(--t1)} .tone-key .tn2{color:var(--t2)} .tone-key .tn3{color:var(--t3)} .tone-key .tn4{color:var(--t4)} .tone-key .tn5{color:var(--muted)}
+body.tones.tc1 .tn1{color:var(--t1)} body.tones.tc2 .tn2{color:var(--t2)} body.tones.tc3 .tn3{color:var(--t3)} body.tones.tc4 .tn4{color:var(--t4)}
+body.tones.tonepy .mg-body .tn1:not(rt),body.tones.tonepy .zw .tn1:not(rt),body.tones.tonepy .w .tn1,body.tones.tonepy h2 .tn1:not(rt),
+body.tones.tonepy .mg-body .tn2:not(rt),body.tones.tonepy .zw .tn2:not(rt),body.tones.tonepy .w .tn2,body.tones.tonepy h2 .tn2:not(rt),
+body.tones.tonepy .mg-body .tn3:not(rt),body.tones.tonepy .zw .tn3:not(rt),body.tones.tonepy .w .tn3,body.tones.tonepy h2 .tn3:not(rt),
+body.tones.tonepy .mg-body .tn4:not(rt),body.tones.tonepy .zw .tn4:not(rt),body.tones.tonepy .w .tn4,body.tones.tonepy h2 .tn4:not(rt){color:inherit}
+.tone-pick{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.tone-pick label{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:4px 12px 4px 8px;cursor:pointer;background:var(--surface)}
+.tone-pick input{accent-color:var(--acc);margin:0}
+.tone-pick .s{font-family:var(--f-cn);font-size:16px}
+.tone-pick .tk1{color:var(--t1)} .tone-pick .tk2{color:var(--t2)} .tone-pick .tk3{color:var(--t3)} .tone-pick .tk4{color:var(--t4)}
+.tone-pick label:has(input:not(:checked)) .s{color:var(--muted)}
+.tone-where{margin-top:8px}
+body:not(.tones) .tone-opts{opacity:.55}
 /* shadowing */
 .shd{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
 .shd .btn{display:inline-flex;align-items:center;gap:6px}
@@ -1038,7 +1046,11 @@ body.tones rt.tn5,body.tones .py .tn5{color:var(--muted)}
         <label class="tog" style="margin-top:10px"><input type="checkbox" id="opt-py"> 显示拼音</label>
         <p class="note hint" style="margin-top:6px">拼音关掉时，卡片翻面后才显示拼音。阅读里也可以随时切换。</p>
         <label class="tog" style="margin-top:10px"><input type="checkbox" id="opt-tone"> 声调颜色</label>
-        <div class="tone-key" data-noi18n><span class="tn1">妈 mā</span><span class="tn2">麻 má</span><span class="tn3">马 mǎ</span><span class="tn4">骂 mà</span><span class="tn5">吗 ma</span></div>
+        <div class="tone-opts">
+          <div class="tone-pick"><label><input type="checkbox" data-tc="1"><span class="s tk1" data-noi18n>妈 mā</span><span class="small">一声</span></label><label><input type="checkbox" data-tc="2"><span class="s tk2" data-noi18n>麻 má</span><span class="small">二声</span></label><label><input type="checkbox" data-tc="3"><span class="s tk3" data-noi18n>马 mǎ</span><span class="small">三声</span></label><label><input type="checkbox" data-tc="4"><span class="s tk4" data-noi18n>骂 mà</span><span class="small">四声</span></label></div>
+          <div class="checks tone-where"><label><input type="radio" name="tonewhere" value="all" id="tw-all"> 汉字和拼音</label><label><input type="radio" name="tonewhere" value="py" id="tw-py"> 只给拼音上色</label></div>
+          <p class="note hint" style="margin-top:6px">只勾你想练的声调，比如容易混的二声和三声；没勾的声调保持黑色。</p>
+        </div>
       </div>
       <div class="panel tset">
         <h3>释义语言</h3>
@@ -1441,7 +1453,8 @@ function zPy(w){ const a=zPyArr(w); if(w.length>1&&w.endsWith("儿")&&!ER_X.test
 function zTone(syl){ // 1–4 from the tone mark, 5 = neutral
   const m=String(syl||"").normalize("NFD").match(/[\u0304\u0301\u030c\u0300]/); return m?{"\u0304":1,"\u0301":2,"\u030c":3,"\u0300":4}[m[0]]:5; }
 const tonesOn=()=>S.settings.tones===true;
-function applyTones(){ document.body.classList.toggle("tones",tonesOn()); }
+const toneSel=()=>{ const t=S.settings.toneSel; return Array.isArray(t)?t:[1,2,3,4]; };
+function applyTones(){ const b=document.body; b.classList.toggle("tones",tonesOn()); for(const k of [1,2,3,4]) b.classList.toggle("tc"+k,toneSel().includes(k)); b.classList.toggle("tonepy",S.settings.toneWhere==="py"); }
 function zToneText(w,py){ // characters coloured by tone, no ruby (sheet headings)
   const ch=[...zs(w)], syl=String(py||"").trim().split(/\s+/).filter(Boolean), han=ch.filter(c=>HAN.test(c)).length;
   if(!syl.length||syl.length!==han) return esc(zs(w)); let k=0;
@@ -3594,7 +3607,7 @@ function renderSettings(){
   $("#lv-checks").innerHTML=LV().map(v=>`<label><input type="checkbox" value="${v}" ${lvSel().includes(v)?"checked":""}> ${v}</label>`).join("");
   $("#gl-checks").innerHTML=LANG[l].gl.map(k=>`<label><input type="checkbox" value="${k}" ${S.settings.gloss[l].includes(k)?"checked":""}> ${GLN[k]}</label>`).join("");
   $("#dir-t2g").checked=S.settings.dir==="t2g"; $("#dir-g2t").checked=S.settings.dir==="g2t";
-  $("#scr-s").checked=scr()==="s"; $("#scr-t").checked=scr()==="t"; $("#opt-py").checked=pyOn(); { const o=$("#opt-tone"); if(o) o.checked=tonesOn(); }
+  $("#scr-s").checked=scr()==="s"; $("#scr-t").checked=scr()==="t"; $("#opt-py").checked=pyOn(); { const o=$("#opt-tone"); if(o) o.checked=tonesOn(); $$("[data-tc]").forEach(x=>x.checked=toneSel().includes(+x.dataset.tc)); const tw=$(S.settings.toneWhere==="py"?"#tw-py":"#tw-all"); if(tw) tw.checked=true; }
   $("#opt-autopile").checked=!!S.settings.autoPile; $("#opt-autospeak").checked=!!S.settings.autoSpeak; $("#opt-imgfront").checked=!!S.settings.imgFront; $("#opt-automine").checked=!!S.settings.autoMine;
   $("#opt-rate").value=S.settings.rate; $("#rate-v").textContent="×"+(+S.settings.rate).toFixed(2);
   $("#pile-lv").innerHTML=`<option value="">全部级别</option>`+LV().map(v=>`<option>${v}</option>`).join("");
@@ -3609,6 +3622,8 @@ $$('input[name="dir"]').forEach(r=>r.addEventListener("change",e=>{ S.settings.d
 $("#opt-autopile").addEventListener("change",e=>{ S.settings.autoPile=e.target.checked; save(); });
 $$('input[name="zscr"]').forEach(r=>r.addEventListener("change",e=>{ S.settings.script=e.target.value; save(); renderCard(); if(cur==="read") mgRender(); if(cur==="browse") renderBrowse(); if(cur==="pile") renderPile(); }));
 $("#opt-py").addEventListener("change",e=>{ S.settings.py=e.target.checked; save(); applyPy(); renderCard(); });
+$$("[data-tc]").forEach(x=>x.addEventListener("change",()=>{ S.settings.toneSel=$$("[data-tc]").filter(y=>y.checked).map(y=>+y.dataset.tc); if(!tonesOn()&&S.settings.toneSel.length){ S.settings.tones=true; const o=$("#opt-tone"); if(o) o.checked=true; const b=$("#mg-tone"); if(b) b.setAttribute("aria-pressed","true"); } save(); applyTones(); }));
+$$('[name="tonewhere"]').forEach(x=>x.addEventListener("change",()=>{ S.settings.toneWhere=x.value; save(); applyTones(); }));
 $("#opt-tone").addEventListener("change",e=>{ S.settings.tones=e.target.checked; save(); applyTones(); const b=$("#mg-tone"); if(b) b.setAttribute("aria-pressed",tonesOn()); });
 $("#opt-autospeak").addEventListener("change",e=>{ S.settings.autoSpeak=e.target.checked; save(); });
 $("#opt-automine").addEventListener("change",e=>{ S.settings.autoMine=e.target.checked; save(); });
@@ -4156,6 +4171,13 @@ const UI_DICT=[
 ["词典", "Dictionary", "Wörterbuch", "Dicionário", "詞典"],
 ["声调", "Tones", "Töne", "Tons", "聲調"],
 ["声调颜色", "Tone colours", "Tonfarben", "Cores dos tons", "聲調顏色"],
+["一声", "1st tone", "1. Ton", "1º tom", "一聲"],
+["二声", "2nd tone", "2. Ton", "2º tom", "二聲"],
+["三声", "3rd tone", "3. Ton", "3º tom", "三聲"],
+["四声", "4th tone", "4. Ton", "4º tom", "四聲"],
+["汉字和拼音", "Characters and pinyin", "Zeichen und Pinyin", "Caracteres e pinyin", "漢字和拼音"],
+["只给拼音上色", "Pinyin only", "Nur Pinyin", "Só o pinyin", "只給拼音上色"],
+["只勾你想练的声调，比如容易混的二声和三声；没勾的声调保持黑色。", "Tick only the tones you want to practise — for example the easily confused 2nd and 3rd; the others stay black.", "Nur die Töne ankreuzen, die du üben willst – etwa den oft verwechselten 2. und 3. Ton; die anderen bleiben schwarz.", "Marque só os tons que quer praticar — por exemplo o 2º e o 3º, que se confundem; os outros ficam pretos.", "只勾你想練的聲調，比如容易混的二聲和三聲；沒勾的聲調保持黑色。"],
 ["跟读这句", "Shadow this sentence", "Diesen Satz nachsprechen", "Repita esta frase", "跟讀這句"],
 ["听原句", "Listen", "Anhören", "Ouvir", "聽原句"],
 ["录我的", "Record me", "Mich aufnehmen", "Gravar", "錄我的"],
