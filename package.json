@@ -1,7 +1,10 @@
 {
-  "name": "zili-content",
+  "name": "zili-tools",
   "private": true,
-  "description": "Builds data/articles.js for 字里 Zili from the content sources",
-  "scripts": { "build": "node tools/build.js" },
-  "dependencies": { "opencc-js": "^1.4.2", "pinyin-pro": "^3.29.5" }
+  "description": "Helper scripts for 字里 Zili (reading texts and word bank)",
+  "scripts": {
+    "reading": "node tools/reading.js",
+    "check": "node tools/reading.js --check && node tools/wb_add.js --check"
+  },
+  "dependencies": { "pinyin-pro": "^3.29.5" }
 }

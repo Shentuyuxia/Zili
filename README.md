@@ -1,13 +1,23 @@
 # 字里 Zili
 
-Chinesisch lesen und lernen — für Kinder (mit Orangi / 小橘子) und Erwachsene.
+Chinesisch lesen und Vokabeln lernen · Read Chinese and learn words · 中文阅读与词汇闪卡
 
-- Lesen: kurze Texte, Wörter antippen für Pinyin und Bedeutung, Wörter in die Wortliste übernehmen.
-- Wortliste und Üben: Karteikarten mit wiederholtem Üben (Abstände wachsen mit jedem richtigen Mal).
-- Einstellungen: Kinder-/Erwachsenenmodus, Kurzzeichen/Langzeichen (默认 简体), Pinyin an/aus (Erwachsene), Erklärungen auf Deutsch oder Englisch, tägliches Ziel, Sprechtempo.
+Built on the same structure as 字里行间 · Entrelinhas, with Chinese as the language you learn:
 
-Alle Daten bleiben im Browser auf diesem Gerät.
+- **Today**: spaced-repetition flashcards from the HSK 1–6 word bank (`data/zh-HSK*.json`) and your own words; daily goal and streak.
+- **Read**: a new graded text every morning per HSK level (`reading/`), plus the library. Tap any word for pinyin and meaning, save it to your words. Pinyin on/off, Simplified/Traditional, English and German translations, read-aloud, weekly review. "My articles": paste or import your own Chinese texts.
+- **Add words**, **Practice pile**, **Word list**, **Progress**, **Settings & backup**, sync across devices (email login or your own GitHub repo).
+- Interface in Deutsch, English, 简体中文 or 繁體中文.
 
-## Inhalte neu erzeugen
+Everything stays in the browser unless you sign in to sync. See `privacy.html`.
 
-Die Texte stehen in `content.src.js` (Quelle, nicht im Repo) und werden mit `build.js` nach `data/articles.js` übersetzt, mit Pinyin und Langzeichen (OpenCC) versehen.
+## Tools
+
+```sh
+npm install
+node tools/reading.js          # fill glossary pinyin, check the texts, rebuild reading/index.json
+node tools/wb_add.js --check   # check the word bank
+node tools/wb_add.js HSK3 rows.json   # add word-bank rows
+```
+
+Pinyin in the app comes from [pinyin-pro](https://github.com/zh-lx/pinyin-pro) (MIT); Traditional characters from OpenCC tables (Apache-2.0); font LXGW Neo XiHei (IPA font licence, see `fonts/`).

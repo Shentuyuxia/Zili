@@ -1,0 +1,15 @@
+{
+ "levels": ["HSK1", "HSK2", "HSK3", "HSK4", "HSK5"],
+ "note": "One text per level in this list every morning; readers pick their level in the app. Add or remove levels here (HSK1–HSK6); the daily task reads it before writing.",
+ "length": {"HSK1": "60–120 characters", "HSK2": "120–220", "HSK3": "220–380", "HSK4": "380–550", "HSK5": "550–750", "HSK6": "750–1000"},
+ "themes": {
+  "Mon": "城市生活 City life (transport, neighbourhoods, cafés, markets, housing, life in Germany and in Chinese cities)",
+  "Tue": "饮食 Food and drink (dishes, trends, tea, cooking, eating out, regional food)",
+  "Wed": "网络与流行语 Internet trends and slang (new words, memes, online habits; explain what they mean and how they are used)",
+  "Thu": "学习与工作 Study and work (school, university, office life, languages, side jobs)",
+  "Fri": "休闲与爱好 Free time (sport, music, film and series, games, travel, weekends)",
+  "Sat": "文化与节日 Culture and customs (festivals, traditions, idioms and their stories, everyday etiquette)",
+  "Sun": "自然与生活方式 Nature and lifestyle (seasons, pets, health habits without medical claims, slow living)"
+ },
+ "avoid": "politics, governments, elections, war, crime, religion, medical claims, money advice, real named private people, brand controversies, anything sensitive about any country"
+}

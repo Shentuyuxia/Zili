@@ -1,0 +1,3069 @@
+{
+ "date": "lib",
+ "title": "课文库",
+ "items": [
+  {
+   "lang": "zh",
+   "level": "HSK1",
+   "kind": "story",
+   "section": "入门短文",
+   "topic": "kids",
+   "title": "我的家",
+   "title_en": "My family",
+   "title_de": "Meine Familie",
+   "paragraphs": [
+    "我家有四口人。爸爸是老师。妈妈会做饭，很好吃。",
+    "我有一个弟弟。我们很爱我们的家。"
+   ],
+   "paragraphs_en": [
+    "Our family has four people. Dad is a teacher. Mom can cook, and the food is delicious.",
+    "I have a younger brother. We love our family very much."
+   ],
+   "paragraphs_de": [
+    "Bei uns zu Hause sind wir vier Personen. Papa ist Lehrer. Mama kann kochen, und es schmeckt sehr lecker.",
+    "Ich habe einen jüngeren Bruder. Wir lieben unsere Familie sehr."
+   ],
+   "glossary": [
+    {
+     "w": "爸爸",
+     "p": "bà ba",
+     "en": "dad",
+     "de": "Papa"
+    },
+    {
+     "w": "老师",
+     "p": "lǎo shī",
+     "en": "teacher",
+     "de": "Lehrer/in"
+    },
+    {
+     "w": "妈妈",
+     "p": "mā ma",
+     "en": "mom",
+     "de": "Mama"
+    },
+    {
+     "w": "做饭",
+     "p": "zuò fàn",
+     "en": "cook",
+     "de": "kochen"
+    },
+    {
+     "w": "好吃",
+     "p": "hǎo chī",
+     "en": "delicious",
+     "de": "lecker"
+    },
+    {
+     "w": "一个",
+     "p": "yí gè",
+     "en": "a; one",
+     "de": "ein"
+    },
+    {
+     "w": "弟弟",
+     "p": "dì di",
+     "en": "younger brother",
+     "de": "jüngerer Bruder"
+    },
+    {
+     "w": "我们",
+     "p": "wǒ men",
+     "en": "we",
+     "de": "wir"
+    }
+   ],
+   "questions": [],
+   "sources": [],
+   "legacy": "k1"
+  },
+  {
+   "lang": "zh",
+   "level": "HSK1",
+   "kind": "story",
+   "section": "入门短文",
+   "topic": "kids",
+   "title": "我的一天",
+   "title_en": "My day",
+   "title_de": "Mein Tag",
+   "paragraphs": [
+    "早上七点，我起床。我刷牙、洗脸。我去学校上课。",
+    "中午，我和朋友一起吃饭。晚上，我写作业，然后睡觉。"
+   ],
+   "paragraphs_en": [
+    "At seven in the morning, I get up. I brush my teeth and wash my face. I go to school for class.",
+    "At noon I eat lunch with my friends. In the evening I do my homework and then go to sleep."
+   ],
+   "paragraphs_de": [
+    "Um sieben Uhr morgens stehe ich auf. Ich putze mir die Zähne und wasche mein Gesicht. Ich gehe in die Schule und habe Unterricht.",
+    "Mittags esse ich zusammen mit meinen Freunden. Abends mache ich Hausaufgaben und gehe dann schlafen."
+   ],
+   "glossary": [
+    {
+     "w": "早上",
+     "p": "zǎo shàng",
+     "en": "in the morning",
+     "de": "am Morgen"
+    },
+    {
+     "w": "七点",
+     "p": "qī diǎn",
+     "en": "seven o'clock",
+     "de": "sieben Uhr"
+    },
+    {
+     "w": "起床",
+     "p": "qǐ chuáng",
+     "en": "get up",
+     "de": "aufstehen"
+    },
+    {
+     "w": "刷牙",
+     "p": "shuā yá",
+     "en": "brush teeth",
+     "de": "Zähne putzen"
+    },
+    {
+     "w": "洗脸",
+     "p": "xǐ liǎn",
+     "en": "wash one's face",
+     "de": "Gesicht waschen"
+    },
+    {
+     "w": "学校",
+     "p": "xué xiào",
+     "en": "school",
+     "de": "Schule"
+    },
+    {
+     "w": "上课",
+     "p": "shàng kè",
+     "en": "have class",
+     "de": "Unterricht haben"
+    },
+    {
+     "w": "中午",
+     "p": "zhōng wǔ",
+     "en": "noon",
+     "de": "Mittag"
+    },
+    {
+     "w": "朋友",
+     "p": "péng yǒu",
+     "en": "friend",
+     "de": "Freund/in"
+    },
+    {
+     "w": "一起",
+     "p": "yì qǐ",
+     "en": "together",
+     "de": "zusammen"
+    },
+    {
+     "w": "吃饭",
+     "p": "chī fàn",
+     "en": "eat a meal",
+     "de": "essen"
+    },
+    {
+     "w": "晚上",
+     "p": "wǎn shàng",
+     "en": "evening",
+     "de": "Abend"
+    }
+   ],
+   "questions": [],
+   "sources": [],
+   "legacy": "k2"
+  },
+  {
+   "lang": "zh",
+   "level": "HSK1",
+   "kind": "story",
+   "section": "入门短文",
+   "topic": "kids",
+   "title": "小猫和动物",
+   "title_en": "The kitten and animals",
+   "title_de": "Die Katze und die Tiere",
+   "paragraphs": [
+    "我有一只小猫。小猫很可爱。它喜欢吃鱼。",
+    "狗跑得很快。我喜欢动物。"
+   ],
+   "paragraphs_en": [
+    "I have a kitten. The kitten is very cute. It likes to eat fish.",
+    "Dogs run very fast. I like animals."
+   ],
+   "paragraphs_de": [
+    "Ich habe eine kleine Katze. Die kleine Katze ist sehr süß. Sie frisst sehr gern Fisch.",
+    "Hunde rennen sehr schnell. Ich mag Tiere."
+   ],
+   "glossary": [
+    {
+     "w": "一只",
+     "p": "yì zhī",
+     "en": "one (animal)",
+     "de": "ein (Tier)"
+    },
+    {
+     "w": "小猫",
+     "p": "xiǎo māo",
+     "en": "kitten",
+     "de": "Kätzchen"
+    },
+    {
+     "w": "可爱",
+     "p": "kě ài",
+     "en": "cute",
+     "de": "süß"
+    },
+    {
+     "w": "喜欢",
+     "p": "xǐ huan",
+     "en": "like",
+     "de": "mögen"
+    },
+    {
+     "w": "动物",
+     "p": "dòng wù",
+     "en": "animal",
+     "de": "Tier"
+    }
+   ],
+   "questions": [],
+   "sources": [],
+   "legacy": "k3"
+  },
+  {
+   "lang": "zh",
+   "level": "HSK1",
+   "kind": "story",
+   "section": "入门短文",
+   "topic": "kids",
+   "title": "今天的天气",
+   "title_en": "Today's weather",
+   "title_de": "Das Wetter heute",
+   "paragraphs": [
+    "今天天气很好。太阳很大，我们去公园。公园里有很多花。",
+    "下雨的时候，我们在家看书。我最喜欢春天。"
+   ],
+   "paragraphs_en": [
+    "The weather is very nice today. The sun is strong, so we go to the park. There are many flowers in the park.",
+    "When it rains, we read books at home. I like spring the most."
+   ],
+   "paragraphs_de": [
+    "Das Wetter ist heute sehr schön. Die Sonne scheint stark, wir gehen in den Park. Im Park gibt es viele Blumen.",
+    "Wenn es regnet, lesen wir zu Hause Bücher. Am liebsten mag ich den Frühling."
+   ],
+   "glossary": [
+    {
+     "w": "今天",
+     "p": "jīn tiān",
+     "en": "today",
+     "de": "heute"
+    },
+    {
+     "w": "天气",
+     "p": "tiān qì",
+     "en": "weather",
+     "de": "Wetter"
+    },
+    {
+     "w": "太阳",
+     "p": "tài yáng",
+     "en": "sun",
+     "de": "Sonne"
+    },
+    {
+     "w": "我们",
+     "p": "wǒ men",
+     "en": "we",
+     "de": "wir"
+    },
+    {
+     "w": "公园",
+     "p": "gōng yuán",
+     "en": "park",
+     "de": "Park"
+    },
+    {
+     "w": "很多",
+     "p": "hěn duō",
+     "en": "many",
+     "de": "viele"
+    },
+    {
+     "w": "下雨",
+     "p": "xià yǔ",
+     "en": "rain",
+     "de": "regnen"
+    },
+    {
+     "w": "的时候",
+     "p": "de shí hòu",
+     "en": "when",
+     "de": "wenn; als"
+    },
+    {
+     "w": "在家",
+     "p": "zài jiā",
+     "en": "at home",
+     "de": "zu Hause"
+    },
+    {
+     "w": "看书",
+     "p": "kàn shū",
+     "en": "read books",
+     "de": "lesen"
+    },
+    {
+     "w": "喜欢",
+     "p": "xǐ huan",
+     "en": "like",
+     "de": "mögen"
+    },
+    {
+     "w": "春天",
+     "p": "chūn tiān",
+     "en": "spring",
+     "de": "Frühling"
+    }
+   ],
+   "questions": [],
+   "sources": [],
+   "legacy": "k4"
+  },
+  {
+   "lang": "zh",
+   "level": "HSK1",
+   "kind": "story",
+   "section": "入门短文",
+   "topic": "kids",
+   "title": "周末去公园",
+   "title_en": "A trip to the park",
+   "title_de": "Ein Ausflug in den Park",
+   "paragraphs": [
+    "周末，爸爸带我去公园。公园里有很多人在跑步。我和弟弟一起骑自行车。",
+    "玩累了，我们就吃冰淇淋。我觉得周末真快乐！"
+   ],
+   "paragraphs_en": [
+    "On the weekend, Dad takes me to the park. Many people are jogging in the park. My younger brother and I ride bicycles together.",
+    "When we are tired from playing, we eat ice cream. I think the weekend is really happy!"
+   ],
+   "paragraphs_de": [
+    "Am Wochenende nimmt Papa mich in den Park mit. Im Park joggen viele Leute. Mein jüngerer Bruder und ich fahren zusammen Fahrrad.",
+    "Wenn wir vom Spielen müde sind, essen wir Eis. Ich finde, das Wochenende ist wirklich schön!"
+   ],
+   "glossary": [
+    {
+     "w": "周末",
+     "p": "zhōu mò",
+     "en": "weekend",
+     "de": "Wochenende"
+    },
+    {
+     "w": "爸爸",
+     "p": "bà ba",
+     "en": "dad",
+     "de": "Papa"
+    },
+    {
+     "w": "公园",
+     "p": "gōng yuán",
+     "en": "park",
+     "de": "Park"
+    },
+    {
+     "w": "很多",
+     "p": "hěn duō",
+     "en": "many",
+     "de": "viele"
+    },
+    {
+     "w": "跑步",
+     "p": "pǎo bù",
+     "en": "run",
+     "de": "joggen"
+    },
+    {
+     "w": "弟弟",
+     "p": "dì di",
+     "en": "younger brother",
+     "de": "jüngerer Bruder"
+    },
+    {
+     "w": "一起",
+     "p": "yì qǐ",
+     "en": "together",
+     "de": "zusammen"
+    },
+    {
+     "w": "自行车",
+     "p": "zì xíng chē",
+     "en": "bicycle",
+     "de": "Fahrrad"
+    },
+    {
+     "w": "我们",
+     "p": "wǒ men",
+     "en": "we",
+     "de": "wir"
+    },
+    {
+     "w": "冰淇淋",
+     "p": "bīng qí lín",
+     "en": "ice cream",
+     "de": "Eis"
+    },
+    {
+     "w": "觉得",
+     "p": "jué de",
+     "en": "feel",
+     "de": "finden"
+    },
+    {
+     "w": "快乐",
+     "p": "kuài lè",
+     "en": "happy",
+     "de": "fröhlich"
+    }
+   ],
+   "questions": [],
+   "sources": [],
+   "legacy": "k5"
+  },
+  {
+   "lang": "zh",
+   "level": "HSK1",
+   "kind": "story",
+   "section": "入门短文",
+   "topic": "kids",
+   "title": "我的书包",
+   "title_en": "My schoolbag",
+   "title_de": "Mein Schulranzen",
+   "paragraphs": [
+    "我有一个红色的书包。书包里有书、本子和铅笔。每天上学前，我都要检查一下。我的书包很重，但是我很喜欢它。"
+   ],
+   "paragraphs_en": [
+    "I have a red schoolbag. There are books, notebooks and pencils in my bag. Every day before school, I check it. My bag is heavy, but I love it."
+   ],
+   "paragraphs_de": [
+    "Ich habe einen roten Schulranzen. Im Ranzen sind Bücher, Hefte und Bleistifte. Vor jeder Schule prüfe ich ihn jeden Tag. Mein Ranzen ist schwer, aber ich mag ihn sehr."
+   ],
+   "glossary": [
+    {
+     "w": "一个",
+     "p": "yí gè",
+     "en": "a; one",
+     "de": "ein"
+    },
+    {
+     "w": "红色",
+     "p": "hóng sè",
+     "en": "red",
+     "de": "rot"
+    },
+    {
+     "w": "书包",
+     "p": "shū bāo",
+     "en": "schoolbag",
+     "de": "Schulranzen"
+    },
+    {
+     "w": "本子",
+     "p": "běn zi",
+     "en": "notebook",
+     "de": "Heft"
+    },
+    {
+     "w": "铅笔",
+     "p": "qiān bǐ",
+     "en": "pencil",
+     "de": "Bleistift"
+    },
+    {
+     "w": "每天",
+     "p": "měi tiān",
+     "en": "every day",
+     "de": "jeden Tag"
+    },
+    {
+     "w": "上学",
+     "p": "shàng xué",
+     "en": "go to school",
+     "de": "zur Schule gehen"
+    },
+    {
+     "w": "检查",
+     "p": "jiǎn chá",
+     "en": "check",
+     "de": "prüfen"
+    },
+    {
+     "w": "喜欢",
+     "p": "xǐ huan",
+     "en": "like",
+     "de": "mögen"
+    }
+   ],
+   "questions": [],
+   "sources": [],
+   "legacy": "k6"
+  },
+  {
+   "lang": "zh",
+   "level": "HSK1",
+   "kind": "story",
+   "section": "入门短文",
+   "topic": "kids",
+   "title": "吃水果",
+   "title_en": "Eating fruit",
+   "title_de": "Obst essen",
+   "paragraphs": [
+    "早上，我吃一个苹果。中午，妈妈给我切了一个西瓜。西瓜又甜又红。水果对身体很好。"
+   ],
+   "paragraphs_en": [
+    "In the morning I eat an apple. At noon, Mum cut a watermelon for me. The watermelon is sweet and red. Fruit is very good for the body."
+   ],
+   "paragraphs_de": [
+    "Morgens esse ich einen Apfel. Mittags hat Mama mir eine Wassermelone geschnitten. Die Wassermelone ist süß und rot. Obst ist sehr gut für den Körper."
+   ],
+   "glossary": [
+    {
+     "w": "早上",
+     "p": "zǎo shàng",
+     "en": "in the morning",
+     "de": "am Morgen"
+    },
+    {
+     "w": "一个",
+     "p": "yí gè",
+     "en": "a; one",
+     "de": "ein"
+    },
+    {
+     "w": "苹果",
+     "p": "píng guǒ",
+     "en": "apple",
+     "de": "Apfel"
+    },
+    {
+     "w": "中午",
+     "p": "zhōng wǔ",
+     "en": "noon",
+     "de": "Mittag"
+    },
+    {
+     "w": "妈妈",
+     "p": "mā ma",
+     "en": "mom",
+     "de": "Mama"
+    },
+    {
+     "w": "西瓜",
+     "p": "xī guā",
+     "en": "watermelon",
+     "de": "Wassermelone"
+    },
+    {
+     "w": "水果",
+     "p": "shuǐ guǒ",
+     "en": "fruit",
+     "de": "Obst"
+    },
+    {
+     "w": "身体",
+     "p": "shēn tǐ",
+     "en": "body",
+     "de": "Körper"
+    }
+   ],
+   "questions": [],
+   "sources": [],
+   "legacy": "k7"
+  },
+  {
+   "lang": "zh",
+   "level": "HSK1",
+   "kind": "story",
+   "section": "入门短文",
+   "topic": "kids",
+   "title": "我会画画",
+   "title_en": "I can draw",
+   "title_de": "Ich kann malen",
+   "paragraphs": [
+    "我喜欢画画，每个周末都画很多图。我最喜欢画小动物和大树。有一次，我画了一只会飞的猫。",
+    "老师说我的画很有想象力。以后我想当画家。"
+   ],
+   "paragraphs_en": [
+    "I like drawing and make lots of pictures every weekend. My favourite things to draw are small animals and big trees. Once I drew a cat that can fly.",
+    "My teacher says my drawings are very imaginative. Later I want to become a painter."
+   ],
+   "paragraphs_de": [
+    "Ich male gern und zeichne jedes Wochenende viele Bilder. Am liebsten male ich kleine Tiere und große Bäume. Einmal habe ich eine Katze gemalt, die fliegen kann.",
+    "Mein Lehrer sagt, meine Bilder sind sehr fantasievoll. Später möchte ich Malerin werden."
+   ],
+   "glossary": [
+    {
+     "w": "喜欢",
+     "p": "xǐ huan",
+     "en": "like",
+     "de": "mögen"
+    },
+    {
+     "w": "画画",
+     "p": "huà huà",
+     "en": "draw",
+     "de": "malen"
+    },
+    {
+     "w": "每个",
+     "p": "měi gè",
+     "en": "each",
+     "de": "jede"
+    },
+    {
+     "w": "周末",
+     "p": "zhōu mò",
+     "en": "weekend",
+     "de": "Wochenende"
+    },
+    {
+     "w": "很多",
+     "p": "hěn duō",
+     "en": "many",
+     "de": "viele"
+    },
+    {
+     "w": "小动物",
+     "p": "xiǎo dòng wù",
+     "en": "small animals",
+     "de": "kleine Tiere"
+    },
+    {
+     "w": "大树",
+     "p": "dà shù",
+     "en": "big tree",
+     "de": "großer Baum"
+    },
+    {
+     "w": "一只",
+     "p": "yì zhī",
+     "en": "one (animal)",
+     "de": "ein (Tier)"
+    },
+    {
+     "w": "老师",
+     "p": "lǎo shī",
+     "en": "teacher",
+     "de": "Lehrer/in"
+    },
+    {
+     "w": "想象力",
+     "p": "xiǎng xiàng lì",
+     "en": "imagination",
+     "de": "Fantasie"
+    },
+    {
+     "w": "以后",
+     "p": "yǐ hòu",
+     "en": "afterwards",
+     "de": "danach"
+    },
+    {
+     "w": "画家",
+     "p": "huà jiā",
+     "en": "painter",
+     "de": "Maler/in"
+    }
+   ],
+   "questions": [],
+   "sources": [],
+   "legacy": "k8"
+  },
+  {
+   "lang": "zh",
+   "level": "HSK1",
+   "kind": "story",
+   "section": "入门短文",
+   "topic": "kids",
+   "title": "生日快乐",
+   "title_en": "Happy birthday",
+   "title_de": "Alles Gute zum Geburtstag",
+   "paragraphs": [
+    "今天是我的生日，我七岁了。爸爸妈妈做了一个大蛋糕。朋友们唱生日歌，我很开心。我许了一个愿望，然后吹灭了蜡烛。"
+   ],
+   "paragraphs_en": [
+    "Today is my birthday, I am seven years old. Mum and Dad made a big cake. My friends sang happy birthday, and I was very happy. I made a wish and then blew out the candles."
+   ],
+   "paragraphs_de": [
+    "Heute ist mein Geburtstag, ich bin sieben Jahre alt. Papa und Mama haben einen großen Kuchen gemacht. Die Freunde singen das Geburtstagslied, und ich freue mich sehr. Ich habe mir etwas gewünscht und dann die Kerzen ausgepustet."
+   ],
+   "glossary": [
+    {
+     "w": "今天",
+     "p": "jīn tiān",
+     "en": "today",
+     "de": "heute"
+    },
+    {
+     "w": "生日",
+     "p": "shēng rì",
+     "en": "birthday",
+     "de": "Geburtstag"
+    },
+    {
+     "w": "七岁",
+     "p": "qī suì",
+     "en": "seven years old",
+     "de": "sieben Jahre alt"
+    },
+    {
+     "w": "爸爸",
+     "p": "bà ba",
+     "en": "dad",
+     "de": "Papa"
+    },
+    {
+     "w": "妈妈",
+     "p": "mā ma",
+     "en": "mom",
+     "de": "Mama"
+    },
+    {
+     "w": "一个",
+     "p": "yí gè",
+     "en": "a; one",
+     "de": "ein"
+    },
+    {
+     "w": "蛋糕",
+     "p": "dàn gāo",
+     "en": "cake",
+     "de": "Kuchen"
+    },
+    {
+     "w": "朋友",
+     "p": "péng yǒu",
+     "en": "friend",
+     "de": "Freund/in"
+    },
+    {
+     "w": "生日歌",
+     "p": "shēng rì gē",
+     "en": "birthday song",
+     "de": "Geburtstagslied"
+    },
+    {
+     "w": "开心",
+     "p": "kāi xīn",
+     "en": "happy",
+     "de": "fröhlich"
+    },
+    {
+     "w": "愿望",
+     "p": "yuàn wàng",
+     "en": "wish",
+     "de": "Wunsch"
+    },
+    {
+     "w": "然后",
+     "p": "rán hòu",
+     "en": "then",
+     "de": "dann"
+    }
+   ],
+   "questions": [],
+   "sources": [],
+   "legacy": "k9"
+  },
+  {
+   "lang": "zh",
+   "level": "HSK1",
+   "kind": "story",
+   "section": "入门短文",
+   "topic": "kids",
+   "title": "我喜欢的颜色",
+   "title_en": "My favourite colour",
+   "title_de": "Meine Lieblingsfarbe",
+   "paragraphs": [
+    "我最喜欢的颜色是蓝色。蓝色的天空很漂亮。红色很热闹，黄色很温暖。你喜欢什么颜色？"
+   ],
+   "paragraphs_en": [
+    "My favourite colour is blue. The blue sky is very pretty. Red is lively, yellow is warm. What colour do you like?"
+   ],
+   "paragraphs_de": [
+    "Meine Lieblingsfarbe ist Blau. Der blaue Himmel ist sehr schön. Rot wirkt lebhaft, Gelb warm. Welche Farbe magst du?"
+   ],
+   "glossary": [
+    {
+     "w": "喜欢",
+     "p": "xǐ huan",
+     "en": "like",
+     "de": "mögen"
+    },
+    {
+     "w": "颜色",
+     "p": "yán sè",
+     "en": "color",
+     "de": "Farbe"
+    },
+    {
+     "w": "蓝色",
+     "p": "lán sè",
+     "en": "blue",
+     "de": "blau"
+    },
+    {
+     "w": "天空",
+     "p": "tiān kōng",
+     "en": "sky",
+     "de": "Himmel"
+    },
+    {
+     "w": "漂亮",
+     "p": "piào liang",
+     "en": "pretty",
+     "de": "schön"
+    },
+    {
+     "w": "红色",
+     "p": "hóng sè",
+     "en": "red",
+     "de": "rot"
+    },
+    {
+     "w": "热闹",
+     "p": "rè nào",
+     "en": "lively",
+     "de": "lebhaft"
+    },
+    {
+     "w": "黄色",
+     "p": "huáng sè",
+     "en": "yellow",
+     "de": "gelb"
+    },
+    {
+     "w": "温暖",
+     "p": "wēn nuǎn",
+     "en": "warm",
+     "de": "warm"
+    },
+    {
+     "w": "什么",
+     "p": "shén me",
+     "en": "what",
+     "de": "was"
+    }
+   ],
+   "questions": [],
+   "sources": [],
+   "legacy": "k10"
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "feature",
+   "section": "年轻人",
+   "topic": "young",
+   "title": "周末的计划",
+   "title_en": "Weekend plans",
+   "title_de": "Pläne fürs Wochenende",
+   "paragraphs": [
+    "周五晚上，我和朋友们一起商量周末的计划。有人想去爬山，有人想在家睡懒觉。最后我们决定周六去逛市场，周日再去看电影。大家都说，这样的周末才不会白过。"
+   ],
+   "paragraphs_en": [
+    "On Friday evening, my friends and I discuss our plans for the weekend. Some want to go hiking, others want to sleep in at home. In the end we decide to stroll through the market on Saturday and watch a movie on Sunday. Everyone says that this way the weekend won't be wasted."
+   ],
+   "paragraphs_de": [
+    "Am Freitagabend besprechen meine Freunde und ich die Pläne fürs Wochenende. Manche wollen wandern gehen, andere lieber zu Hause lange schlafen. Am Ende beschließen wir, am Samstag über den Markt zu bummeln und am Sonntag ins Kino zu gehen. Alle sagen, so ein Wochenende ist nicht vergeudet."
+   ],
+   "glossary": [
+    {
+     "w": "晚上",
+     "p": "wǎn shàng",
+     "en": "evening",
+     "de": "Abend"
+    },
+    {
+     "w": "朋友",
+     "p": "péng yǒu",
+     "en": "friend",
+     "de": "Freund/in"
+    },
+    {
+     "w": "一起",
+     "p": "yì qǐ",
+     "en": "together",
+     "de": "zusammen"
+    },
+    {
+     "w": "商量",
+     "p": "shāng liáng",
+     "en": "discuss",
+     "de": "besprechen"
+    },
+    {
+     "w": "周末",
+     "p": "zhōu mò",
+     "en": "weekend",
+     "de": "Wochenende"
+    },
+    {
+     "w": "计划",
+     "p": "jì huà",
+     "en": "plan",
+     "de": "Plan"
+    },
+    {
+     "w": "爬山",
+     "p": "pá shān",
+     "en": "hike",
+     "de": "wandern"
+    },
+    {
+     "w": "在家",
+     "p": "zài jiā",
+     "en": "at home",
+     "de": "zu Hause"
+    },
+    {
+     "w": "睡懒觉",
+     "p": "shuì lǎn jué",
+     "en": "sleep in",
+     "de": "lange schlafen"
+    },
+    {
+     "w": "我们",
+     "p": "wǒ men",
+     "en": "we",
+     "de": "wir"
+    },
+    {
+     "w": "决定",
+     "p": "jué dìng",
+     "en": "decide",
+     "de": "entscheiden"
+    },
+    {
+     "w": "周六",
+     "p": "zhōu liù",
+     "en": "Saturday",
+     "de": "Samstag"
+    }
+   ],
+   "questions": [],
+   "sources": [],
+   "legacy": "y1"
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "feature",
+   "section": "年轻人",
+   "topic": "young",
+   "title": "打工人的一天",
+   "title_en": "A day in the life of an office worker",
+   "title_de": "Ein Tag als Angestellte",
+   "paragraphs": [
+    "早上八点，我坐地铁去公司，人非常多。上午开了两个会，还要回复很多邮件。中午我和同事一起吃午饭，聊聊最近的工作。",
+    "下午有点累，我偶尔也会悄悄摸鱼看看手机。下班以后，我只想躺在沙发上休息。"
+   ],
+   "paragraphs_en": [
+    "At eight in the morning I take the subway to the office, and it is very crowded. In the morning I have two meetings and still have many emails to answer. At noon I have lunch with a colleague and we chat about recent work.",
+    "In the afternoon I'm a bit tired, so I sometimes secretly slack off and look at my phone. After work, all I want is to lie on the sofa and rest."
+   ],
+   "paragraphs_de": [
+    "Um acht Uhr morgens fahre ich mit der U-Bahn ins Büro, und es ist sehr voll. Am Vormittag habe ich zwei Besprechungen und muss viele E-Mails beantworten. Mittags esse ich mit einer Kollegin zu Mittag und wir reden über die Arbeit.",
+    "Nachmittags bin ich etwas müde, da schaue ich manchmal heimlich auf mein Handy statt zu arbeiten. Nach Feierabend möchte ich nur noch auf dem Sofa liegen und mich ausruhen."
+   ],
+   "glossary": [
+    {
+     "w": "早上",
+     "p": "zǎo shàng",
+     "en": "in the morning",
+     "de": "am Morgen"
+    },
+    {
+     "w": "地铁",
+     "p": "dì tiě",
+     "en": "subway",
+     "de": "U-Bahn"
+    },
+    {
+     "w": "公司",
+     "p": "gōng sī",
+     "en": "company",
+     "de": "Firma"
+    },
+    {
+     "w": "非常",
+     "p": "fēi cháng",
+     "en": "very",
+     "de": "sehr"
+    },
+    {
+     "w": "上午",
+     "p": "shàng wǔ",
+     "en": "morning",
+     "de": "Vormittag"
+    },
+    {
+     "w": "两个",
+     "p": "liǎng gè",
+     "en": "two",
+     "de": "zwei"
+    },
+    {
+     "w": "回复",
+     "p": "huí fù",
+     "en": "reply",
+     "de": "antworten"
+    },
+    {
+     "w": "很多",
+     "p": "hěn duō",
+     "en": "many",
+     "de": "viele"
+    },
+    {
+     "w": "邮件",
+     "p": "yóu jiàn",
+     "en": "email",
+     "de": "E-Mail"
+    },
+    {
+     "w": "中午",
+     "p": "zhōng wǔ",
+     "en": "noon",
+     "de": "Mittag"
+    },
+    {
+     "w": "同事",
+     "p": "tóng shì",
+     "en": "colleague",
+     "de": "Kollege/Kollegin"
+    },
+    {
+     "w": "一起",
+     "p": "yì qǐ",
+     "en": "together",
+     "de": "zusammen"
+    }
+   ],
+   "questions": [],
+   "sources": [],
+   "legacy": "y2"
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "feature",
+   "section": "网络用语",
+   "topic": "net",
+   "title": "网络用语",
+   "title_en": "Internet slang",
+   "title_de": "Internet-Slang",
+   "paragraphs": [
+    "今天的考试太难了，我真的破防了。这家奶茶店太好喝了，绝绝子！大家都很努力，竞争太激烈，真是内卷。",
+    "周末我不想出门，就在家躺平。看到这款咖啡，我马上就想去种草。周一又要上班，我们都是打工人。"
+   ],
+   "paragraphs_en": [
+    "Today's exam was so hard, I'm really shaken. This bubble tea shop is so tasty, absolutely amazing! Everyone works hard and the competition is so fierce, it's really involution.",
+    "On the weekend I don't want to go out, I just stay home and opt out. When I saw this coffee, I immediately wanted to hype it up. Monday means work again, we are all wage slaves."
+   ],
+   "paragraphs_de": [
+    "Die Prüfung war heute so schwer, ich bin echt fertig mit den Nerven. Dieser Bubble-Tea-Laden ist so lecker, einfach der Hammer! Alle strengen sich an und der Wettbewerb ist so hart, das ist echt Hyperkonkurrenz.",
+    "Am Wochenende habe ich keine Lust rauszugehen, ich bleibe einfach zu Hause und lasse es ruhen. Als ich diesen Kaffee sah, wollte ich ihn sofort auch unbedingt probieren. Montag geht die Arbeit wieder los, wir sind alle Lohnarbeiter."
+   ],
+   "glossary": [
+    {
+     "w": "今天",
+     "p": "jīn tiān",
+     "en": "today",
+     "de": "heute"
+    },
+    {
+     "w": "考试",
+     "p": "kǎo shì",
+     "en": "exam",
+     "de": "Prüfung"
+    },
+    {
+     "w": "真的",
+     "p": "zhēn de",
+     "en": "really",
+     "de": "wirklich"
+    },
+    {
+     "w": "破防",
+     "p": "pò fáng",
+     "en": "to be emotionally shaken",
+     "de": "emotional erschüttert sein"
+    },
+    {
+     "w": "这家",
+     "p": "zhè jiā",
+     "en": "this",
+     "de": "dieses"
+    },
+    {
+     "w": "奶茶",
+     "p": "nǎi chá",
+     "en": "bubble tea",
+     "de": "Bubble Tea"
+    },
+    {
+     "w": "好喝",
+     "p": "hǎo hē",
+     "en": "tasty (drink)",
+     "de": "lecker (Getränk)"
+    },
+    {
+     "w": "绝绝子",
+     "p": "jué jué zǐ",
+     "en": "absolutely amazing (slang)",
+     "de": "super genial (Slang)"
+    },
+    {
+     "w": "大家",
+     "p": "dà jiā",
+     "en": "everyone",
+     "de": "alle"
+    },
+    {
+     "w": "努力",
+     "p": "nǔ lì",
+     "en": "hard-working",
+     "de": "sich anstrengen"
+    },
+    {
+     "w": "竞争",
+     "p": "jìng zhēng",
+     "en": "competition",
+     "de": "Konkurrenz"
+    },
+    {
+     "w": "激烈",
+     "p": "jī liè",
+     "en": "fierce",
+     "de": "heftig"
+    }
+   ],
+   "questions": [],
+   "sources": [],
+   "legacy": "n1"
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "feature",
+   "section": "生活",
+   "topic": "classic",
+   "title": "一杯茶的时间",
+   "title_en": "The time of a cup of tea",
+   "title_de": "Die Zeit einer Tasse Tee",
+   "paragraphs": [
+    "下午三点，我常常泡一杯绿茶。茶水慢慢变绿，香味也慢慢出来了。我坐在窗边，什么也不想，只是喝茶。这一杯茶的时间，是我一天里最安静的时候。"
+   ],
+   "paragraphs_en": [
+    "At three in the afternoon I often brew a cup of green tea. The tea slowly turns green, and its aroma slowly rises. I sit by the window, think of nothing, and just drink tea. This cup of tea is the quietest moment of my day."
+   ],
+   "paragraphs_de": [
+    "Um drei Uhr nachmittags koche ich oft einen grünen Tee. Der Tee wird langsam grün, und sein Duft steigt allmählich auf. Ich sitze am Fenster, denke an nichts und trinke einfach Tee. Diese Zeit mit dem Tee ist der ruhigste Moment meines Tages."
+   ],
+   "glossary": [
+    {
+     "w": "常常",
+     "p": "cháng cháng",
+     "en": "often",
+     "de": "oft"
+    },
+    {
+     "w": "一杯",
+     "p": "yì bēi",
+     "en": "a cup",
+     "de": "eine Tasse"
+    },
+    {
+     "w": "绿茶",
+     "p": "lǜ chá",
+     "en": "green tea",
+     "de": "grüner Tee"
+    },
+    {
+     "w": "香味",
+     "p": "xiāng wèi",
+     "en": "aroma",
+     "de": "Duft"
+    },
+    {
+     "w": "出来",
+     "p": "chū lái",
+     "en": "come out",
+     "de": "herauskommen"
+    },
+    {
+     "w": "窗边",
+     "p": "chuāng biān",
+     "en": "by the window",
+     "de": "am Fenster"
+    },
+    {
+     "w": "什么",
+     "p": "shén me",
+     "en": "what",
+     "de": "was"
+    },
+    {
+     "w": "时间",
+     "p": "shí jiān",
+     "en": "time",
+     "de": "Zeit"
+    },
+    {
+     "w": "一天",
+     "p": "yì tiān",
+     "en": "a day",
+     "de": "ein Tag"
+    },
+    {
+     "w": "安静",
+     "p": "ān jìng",
+     "en": "quiet",
+     "de": "ruhig"
+    },
+    {
+     "w": "的时候",
+     "p": "de shí hòu",
+     "en": "when",
+     "de": "wenn; als"
+    }
+   ],
+   "questions": [],
+   "sources": [],
+   "legacy": "a4"
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "feature",
+   "section": "生活",
+   "topic": "classic",
+   "title": "在书店里",
+   "title_en": "In a bookshop",
+   "title_de": "In der Buchhandlung",
+   "paragraphs": [
+    "周六下午，我喜欢一个人去书店。书架一排排的，让人不知道先看哪一本。我翻了一会儿，买了一本旧的诗集。回家的路上，我一直在读其中的一首。"
+   ],
+   "paragraphs_en": [
+    "On Saturday afternoons I like to go to a bookshop alone. The shelves stand in rows, and you don't know which book to look at first. I browsed for a while and bought an old poetry collection. On the way home I kept reading one of the poems."
+   ],
+   "paragraphs_de": [
+    "Am Samstagnachmittag gehe ich gern allein in eine Buchhandlung. Die Regale reihen sich aneinander, man weiß gar nicht, welches Buch man zuerst nehmen soll. Ich blätterte eine Weile und kaufte einen alten Gedichtband. Auf dem Heimweg habe ich immer wieder eines der Gedichte gelesen."
+   ],
+   "glossary": [
+    {
+     "w": "周六",
+     "p": "zhōu liù",
+     "en": "Saturday",
+     "de": "Samstag"
+    },
+    {
+     "w": "喜欢",
+     "p": "xǐ huan",
+     "en": "like",
+     "de": "mögen"
+    },
+    {
+     "w": "一个人",
+     "p": "yí gè rén",
+     "en": "alone",
+     "de": "allein"
+    },
+    {
+     "w": "书店",
+     "p": "shū diàn",
+     "en": "bookshop",
+     "de": "Buchhandlung"
+    },
+    {
+     "w": "书架",
+     "p": "shū jià",
+     "en": "bookshelf",
+     "de": "Regal"
+    },
+    {
+     "w": "一排排",
+     "p": "yì pái pái",
+     "en": "in rows",
+     "de": "reihenweise"
+    },
+    {
+     "w": "知道",
+     "p": "zhī dào",
+     "en": "know",
+     "de": "wissen"
+    },
+    {
+     "w": "一会儿",
+     "p": "yí huìr",
+     "en": "a while",
+     "de": "eine Weile"
+    },
+    {
+     "w": "诗集",
+     "p": "shī jí",
+     "en": "poetry collection",
+     "de": "Gedichtband"
+    },
+    {
+     "w": "回家",
+     "p": "huí jiā",
+     "en": "go home",
+     "de": "nach Hause gehen"
+    },
+    {
+     "w": "路上",
+     "p": "lù shang",
+     "en": "on the way",
+     "de": "unterwegs"
+    },
+    {
+     "w": "一直",
+     "p": "yì zhí",
+     "en": "continuously",
+     "de": "immer weiter"
+    }
+   ],
+   "questions": [],
+   "sources": [],
+   "legacy": "a5"
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "feature",
+   "section": "生活",
+   "topic": "classic",
+   "title": "雨天的咖啡馆",
+   "title_en": "A café on a rainy day",
+   "title_de": "Ein Café an einem Regentag",
+   "paragraphs": [
+    "下雨的午后，咖啡馆里很安静。窗外的雨滴落在玻璃上，发出轻轻的声音。我点了一杯拿铁，慢慢地看一本书。雨停的时候，我才发现已经坐了两个小时。"
+   ],
+   "paragraphs_en": [
+    "On a rainy afternoon the café is very quiet. Outside, raindrops fall on the glass with a soft sound. I order a latte and slowly read a book. When the rain stops, I realise I've been sitting here for two hours."
+   ],
+   "paragraphs_de": [
+    "An einem regnerischen Nachmittag ist es im Café ganz still. Draußen fallen die Regentropfen auf die Scheibe und machen ein leises Geräusch. Ich bestelle einen Latte und lese langsam in einem Buch. Als der Regen aufhört, merke ich, dass ich schon zwei Stunden hier sitze."
+   ],
+   "glossary": [
+    {
+     "w": "下雨",
+     "p": "xià yǔ",
+     "en": "rain",
+     "de": "regnen"
+    },
+    {
+     "w": "午后",
+     "p": "wǔ hòu",
+     "en": "afternoon",
+     "de": "Nachmittag"
+    },
+    {
+     "w": "咖啡馆",
+     "p": "kā fēi guǎn",
+     "en": "café",
+     "de": "Café"
+    },
+    {
+     "w": "安静",
+     "p": "ān jìng",
+     "en": "quiet",
+     "de": "ruhig"
+    },
+    {
+     "w": "雨滴",
+     "p": "yǔ dī",
+     "en": "raindrop",
+     "de": "Regentropfen"
+    },
+    {
+     "w": "玻璃",
+     "p": "bō lí",
+     "en": "glass",
+     "de": "Glas"
+    },
+    {
+     "w": "发出",
+     "p": "fā chū",
+     "en": "make (a sound)",
+     "de": "erzeugen"
+    },
+    {
+     "w": "声音",
+     "p": "shēng yīn",
+     "en": "sound",
+     "de": "Geräusch"
+    },
+    {
+     "w": "一杯",
+     "p": "yì bēi",
+     "en": "a cup",
+     "de": "eine Tasse"
+    },
+    {
+     "w": "拿铁",
+     "p": "ná tiě",
+     "en": "latte",
+     "de": "Latte"
+    },
+    {
+     "w": "的时候",
+     "p": "de shí hòu",
+     "en": "when",
+     "de": "wenn; als"
+    },
+    {
+     "w": "发现",
+     "p": "fā xiàn",
+     "en": "realise",
+     "de": "bemerken"
+    }
+   ],
+   "questions": [],
+   "sources": [],
+   "legacy": "a7"
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "feature",
+   "section": "年轻人",
+   "topic": "young",
+   "title": "周末去健身房",
+   "title_en": "Going to the gym at weekends",
+   "title_de": "Am Wochenende ins Fitnessstudio",
+   "paragraphs": [
+    "很多年轻人周末去健身房，不只是为了身材。他们说，运动能让人更有精神。我每周去三次，每次只练半个小时。重要的是坚持，而不是一下子练得太累。"
+   ],
+   "paragraphs_en": [
+    "Many young people go to the gym at weekends, not just for their figure. They say exercise makes you feel more energetic. I go three times a week and train only half an hour each time. What matters is consistency, not exhausting yourself all at once."
+   ],
+   "paragraphs_de": [
+    "Viele junge Leute gehen am Wochenende ins Fitnessstudio, nicht nur für die Figur. Sie sagen, Sport macht munterer. Ich gehe dreimal pro Woche hin und trainiere jedes Mal nur eine halbe Stunde. Wichtig ist Beständigkeit, nicht, sich gleich total zu verausgaben."
+   ],
+   "glossary": [
+    {
+     "w": "很多",
+     "p": "hěn duō",
+     "en": "many",
+     "de": "viele"
+    },
+    {
+     "w": "年轻人",
+     "p": "nián qīng rén",
+     "en": "young people",
+     "de": "junge Leute"
+    },
+    {
+     "w": "周末",
+     "p": "zhōu mò",
+     "en": "weekend",
+     "de": "Wochenende"
+    },
+    {
+     "w": "健身房",
+     "p": "jiàn shēn fáng",
+     "en": "gym",
+     "de": "Fitnessstudio"
+    },
+    {
+     "w": "身材",
+     "p": "shēn cái",
+     "en": "figure",
+     "de": "Figur"
+    },
+    {
+     "w": "运动",
+     "p": "yùn dòng",
+     "en": "sport",
+     "de": "Sport"
+    },
+    {
+     "w": "精神",
+     "p": "jīng shén",
+     "en": "energetic",
+     "de": "munter"
+    },
+    {
+     "w": "半个",
+     "p": "bàn gè",
+     "en": "half",
+     "de": "eine halbe"
+    },
+    {
+     "w": "重要",
+     "p": "zhòng yào",
+     "en": "important",
+     "de": "wichtig"
+    },
+    {
+     "w": "坚持",
+     "p": "jiān chí",
+     "en": "persist",
+     "de": "durchhalten"
+    },
+    {
+     "w": "一下子",
+     "p": "yí xià zǐ",
+     "en": "suddenly",
+     "de": "plötzlich"
+    }
+   ],
+   "questions": [],
+   "sources": [],
+   "legacy": "y5"
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "feature",
+   "section": "年轻人",
+   "topic": "young",
+   "title": "一个人吃饭",
+   "title_en": "Eating alone",
+   "title_de": "Allein essen",
+   "paragraphs": [
+    "一个人吃饭，很多人以前觉得有点尴尬。现在越来越多的年轻人喜欢一个人去餐厅。他们可以慢慢吃，也可以随时看手机。有时候，安静的一顿饭就是最好的放松。"
+   ],
+   "paragraphs_en": [
+    "Many people used to find eating alone a bit awkward. More and more young people like to go to restaurants on their own. They can eat slowly and look at their phones whenever they like. Sometimes a quiet meal is the best way to relax."
+   ],
+   "paragraphs_de": [
+    "Früher fanden es viele etwas peinlich, allein essen zu gehen. Immer mehr junge Leute gehen gern allein ins Restaurant. Sie können in Ruhe essen und jederzeit aufs Handy schauen. Manchmal ist ein ruhiges Essen die beste Entspannung."
+   ],
+   "glossary": [
+    {
+     "w": "一个人",
+     "p": "yí gè rén",
+     "en": "alone",
+     "de": "allein"
+    },
+    {
+     "w": "吃饭",
+     "p": "chī fàn",
+     "en": "eat a meal",
+     "de": "essen"
+    },
+    {
+     "w": "很多",
+     "p": "hěn duō",
+     "en": "many",
+     "de": "viele"
+    },
+    {
+     "w": "觉得",
+     "p": "jué de",
+     "en": "feel",
+     "de": "finden"
+    },
+    {
+     "w": "尴尬",
+     "p": "gān gà",
+     "en": "awkward",
+     "de": "peinlich"
+    },
+    {
+     "w": "现在",
+     "p": "xiàn zài",
+     "en": "now",
+     "de": "jetzt"
+    },
+    {
+     "w": "越来越",
+     "p": "yuè lái yuè",
+     "en": "more and more",
+     "de": "immer mehr"
+    },
+    {
+     "w": "年轻人",
+     "p": "nián qīng rén",
+     "en": "young people",
+     "de": "junge Leute"
+    },
+    {
+     "w": "喜欢",
+     "p": "xǐ huan",
+     "en": "like",
+     "de": "mögen"
+    },
+    {
+     "w": "餐厅",
+     "p": "cān tīng",
+     "en": "restaurant",
+     "de": "Restaurant"
+    },
+    {
+     "w": "可以",
+     "p": "kě yǐ",
+     "en": "may",
+     "de": "können"
+    },
+    {
+     "w": "随时",
+     "p": "suí shí",
+     "en": "at any time",
+     "de": "jederzeit"
+    }
+   ],
+   "questions": [],
+   "sources": [],
+   "legacy": "y7"
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "feature",
+   "section": "年轻人",
+   "topic": "young",
+   "title": "宠物陪伴",
+   "title_en": "Pets as companions",
+   "title_de": "Ein Haustier als Gefährte",
+   "paragraphs": [
+    "在城市里生活，很多人养了一只小狗或小猫。下班回家，看到它们在门口等我，心情就好了。养宠物需要花时间，也需要花钱。但对很多人来说，这种陪伴很珍贵。"
+   ],
+   "paragraphs_en": [
+    "Living in the city, many people keep a little dog or cat. When I come home from work and see them waiting at the door, my mood lifts. Pets need time and money. But for many people, this companionship is precious."
+   ],
+   "paragraphs_de": [
+    "In der Stadt halten sich viele einen kleinen Hund oder eine Katze. Wenn ich nach Hause komme und sie an der Tür warten sehe, geht es mir gleich besser. Ein Haustier kostet Zeit und Geld. Doch für viele Menschen ist diese Gesellschaft sehr wertvoll."
+   ],
+   "glossary": [
+    {
+     "w": "城市里",
+     "p": "chéng shì lǐ",
+     "en": "in the city",
+     "de": "in der Stadt"
+    },
+    {
+     "w": "生活",
+     "p": "shēng huó",
+     "en": "life",
+     "de": "Leben"
+    },
+    {
+     "w": "很多",
+     "p": "hěn duō",
+     "en": "many",
+     "de": "viele"
+    },
+    {
+     "w": "一只",
+     "p": "yì zhī",
+     "en": "one (animal)",
+     "de": "ein (Tier)"
+    },
+    {
+     "w": "小狗",
+     "p": "xiǎo gǒu",
+     "en": "little dog",
+     "de": "kleiner Hund"
+    },
+    {
+     "w": "小猫",
+     "p": "xiǎo māo",
+     "en": "kitten",
+     "de": "Kätzchen"
+    },
+    {
+     "w": "下班",
+     "p": "xià bān",
+     "en": "finish work",
+     "de": "Feierabend machen"
+    },
+    {
+     "w": "回家",
+     "p": "huí jiā",
+     "en": "go home",
+     "de": "nach Hause gehen"
+    },
+    {
+     "w": "门口",
+     "p": "mén kǒu",
+     "en": "door",
+     "de": "Tür"
+    },
+    {
+     "w": "心情",
+     "p": "xīn qíng",
+     "en": "mood",
+     "de": "Stimmung"
+    },
+    {
+     "w": "养宠物",
+     "p": "yǎng chǒng wù",
+     "en": "keep a pet",
+     "de": "Haustier halten"
+    },
+    {
+     "w": "需要",
+     "p": "xū yào",
+     "en": "need",
+     "de": "brauchen"
+    }
+   ],
+   "questions": [],
+   "sources": [],
+   "legacy": "y8"
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "feature",
+   "section": "网络用语",
+   "topic": "net",
+   "title": "搭子文化",
+   "title_en": "The \"buddy\" culture",
+   "title_de": "Die Dazi-Kultur",
+   "paragraphs": [
+    "现在流行“搭子”，就是一起做某件事的伙伴。有人是饭搭子，一起吃饭不用聊天。有人是健身搭子，每周一起去运动。不用太亲密，却能互相陪伴，很多人都喜欢这种关系。"
+   ],
+   "paragraphs_en": [
+    "Now \"dazi\" is trendy, meaning a partner for doing something together. Some are meal buddies: you eat together without needing to chat. Others are workout buddies and exercise together every week. You don't need to be close, yet you keep each other company, and many people like this kind of relationship."
+   ],
+   "paragraphs_de": [
+    "Heute ist das „Dazi“ beliebt, also ein Partner für eine gemeinsame Sache. Manche sind Essens-Dazi: man isst zusammen, ohne viel zu reden. Andere sind Fitness-Dazi und trainieren jede Woche zusammen. Man muss nicht eng befreundet sein und begleitet sich trotzdem. Viele mögen diese Art von Beziehung."
+   ],
+   "glossary": [
+    {
+     "w": "现在",
+     "p": "xiàn zài",
+     "en": "now",
+     "de": "jetzt"
+    },
+    {
+     "w": "流行",
+     "p": "liú xíng",
+     "en": "be trendy",
+     "de": "angesagt sein"
+    },
+    {
+     "w": "搭子",
+     "p": "dā zǐ",
+     "en": "buddy",
+     "de": "Buddy"
+    },
+    {
+     "w": "一起",
+     "p": "yì qǐ",
+     "en": "together",
+     "de": "zusammen"
+    },
+    {
+     "w": "伙伴",
+     "p": "huǒ bàn",
+     "en": "partner",
+     "de": "Partner"
+    },
+    {
+     "w": "吃饭",
+     "p": "chī fàn",
+     "en": "eat a meal",
+     "de": "essen"
+    },
+    {
+     "w": "健身",
+     "p": "jiàn shēn",
+     "en": "fitness",
+     "de": "Fitness"
+    },
+    {
+     "w": "周一",
+     "p": "zhōu yī",
+     "en": "Monday",
+     "de": "Montag"
+    },
+    {
+     "w": "运动",
+     "p": "yùn dòng",
+     "en": "sport",
+     "de": "Sport"
+    },
+    {
+     "w": "亲密",
+     "p": "qīn mì",
+     "en": "close",
+     "de": "eng"
+    },
+    {
+     "w": "互相",
+     "p": "hù xiāng",
+     "en": "mutually",
+     "de": "gegenseitig"
+    },
+    {
+     "w": "陪伴",
+     "p": "péi bàn",
+     "en": "company",
+     "de": "Gesellschaft"
+    }
+   ],
+   "questions": [],
+   "sources": [],
+   "legacy": "n2"
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "feature",
+   "section": "网络用语",
+   "topic": "net",
+   "title": "City Walk",
+   "title_en": "City Walk",
+   "title_de": "City Walk",
+   "paragraphs": [
+    "最近，很多人喜欢“City Walk”，就是在城市里慢慢走。他们不赶时间，看看街道，吃吃小吃。很多人会在朋友圈里分享路线。这种慢节奏的旅行，让人觉得特别放松。"
+   ],
+   "paragraphs_en": [
+    "Lately many people enjoy \"City Walk\", which means slowly walking around a city. They take their time, look at the streets and try local snacks. Many share their routes on WeChat Moments. This slow way of travelling feels especially relaxing."
+   ],
+   "paragraphs_de": [
+    "In letzter Zeit mögen viele „City Walk“, also in der Stadt langsam herumzulaufen. Sie haben keine Eile, schauen sich Straßen an und probieren Snacks. Viele teilen ihre Routen im WeChat-Freundeskreis. Dieses langsame Reisen fühlt sich richtig entspannend an."
+   ],
+   "glossary": [
+    {
+     "w": "最近",
+     "p": "zuì jìn",
+     "en": "recently",
+     "de": "in letzter Zeit"
+    },
+    {
+     "w": "很多",
+     "p": "hěn duō",
+     "en": "many",
+     "de": "viele"
+    },
+    {
+     "w": "喜欢",
+     "p": "xǐ huan",
+     "en": "like",
+     "de": "mögen"
+    },
+    {
+     "w": "城市里",
+     "p": "chéng shì lǐ",
+     "en": "in the city",
+     "de": "in der Stadt"
+    },
+    {
+     "w": "赶时间",
+     "p": "gǎn shí jiān",
+     "en": "in a hurry",
+     "de": "eilig"
+    },
+    {
+     "w": "看看",
+     "p": "kàn kàn",
+     "en": "have a look",
+     "de": "mal schauen"
+    },
+    {
+     "w": "街道",
+     "p": "jiē dào",
+     "en": "street",
+     "de": "Straße"
+    },
+    {
+     "w": "小吃",
+     "p": "xiǎo chī",
+     "en": "snack",
+     "de": "Snack"
+    },
+    {
+     "w": "朋友圈",
+     "p": "péng yǒu quān",
+     "en": "WeChat Moments",
+     "de": "WeChat-Freundeskreis"
+    },
+    {
+     "w": "分享",
+     "p": "fēn xiǎng",
+     "en": "share",
+     "de": "teilen"
+    },
+    {
+     "w": "路线",
+     "p": "lù xiàn",
+     "en": "route",
+     "de": "Route"
+    },
+    {
+     "w": "这种",
+     "p": "zhè zhǒng",
+     "en": "this kind",
+     "de": "diese Art"
+    }
+   ],
+   "questions": [],
+   "sources": [],
+   "legacy": "n3"
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "feature",
+   "section": "网络用语",
+   "topic": "net",
+   "title": "多巴胺穿搭",
+   "title_en": "Dopamine dressing",
+   "title_de": "Dopamin-Outfits",
+   "paragraphs": [
+    "最近流行“多巴胺穿搭”，颜色越鲜艳越好。黄色的外套，粉色的裙子，看起来很有活力。我不常穿鲜艳的颜色，但是今天试了一下。出门的时候，朋友说我看起来很开心。"
+   ],
+   "paragraphs_en": [
+    "Dopamine dressing is trending: the brighter the colours, the better. A yellow jacket and a pink skirt look full of energy. I don't often wear bright colours, but today I tried it. When I went out, a friend said I looked very happy."
+   ],
+   "paragraphs_de": [
+    "Derzeit ist „Dopamin-Outfit“ angesagt: je knalliger die Farben, desto besser. Eine gelbe Jacke, ein rosa Rock, das wirkt richtig lebendig. Ich trage selten knallige Farben, aber heute habe ich es ausprobiert. Beim Rausgehen sagte meine Freundin, ich sähe so fröhlich aus."
+   ],
+   "glossary": [
+    {
+     "w": "最近",
+     "p": "zuì jìn",
+     "en": "recently",
+     "de": "in letzter Zeit"
+    },
+    {
+     "w": "流行",
+     "p": "liú xíng",
+     "en": "be trendy",
+     "de": "angesagt sein"
+    },
+    {
+     "w": "多巴胺",
+     "p": "duō bā àn",
+     "en": "dopamine",
+     "de": "Dopamin"
+    },
+    {
+     "w": "穿搭",
+     "p": "chuān dā",
+     "en": "outfit",
+     "de": "Outfit"
+    },
+    {
+     "w": "颜色",
+     "p": "yán sè",
+     "en": "color",
+     "de": "Farbe"
+    },
+    {
+     "w": "鲜艳",
+     "p": "xiān yàn",
+     "en": "bright",
+     "de": "leuchtend"
+    },
+    {
+     "w": "黄色",
+     "p": "huáng sè",
+     "en": "yellow",
+     "de": "gelb"
+    },
+    {
+     "w": "外套",
+     "p": "wài tào",
+     "en": "jacket",
+     "de": "Jacke"
+    },
+    {
+     "w": "粉色",
+     "p": "fěn sè",
+     "en": "pink",
+     "de": "rosa"
+    },
+    {
+     "w": "裙子",
+     "p": "qún zǐ",
+     "en": "skirt",
+     "de": "Rock"
+    },
+    {
+     "w": "活力",
+     "p": "huó lì",
+     "en": "energy",
+     "de": "Energie"
+    },
+    {
+     "w": "今天",
+     "p": "jīn tiān",
+     "en": "today",
+     "de": "heute"
+    }
+   ],
+   "questions": [],
+   "sources": [],
+   "legacy": "n5"
+  },
+  {
+   "lang": "zh",
+   "level": "HSK3",
+   "kind": "feature",
+   "section": "生活",
+   "topic": "classic",
+   "title": "城市的早晨",
+   "title_en": "A morning in the city",
+   "title_de": "Ein Morgen in der Stadt",
+   "paragraphs": [
+    "每天早上，我都会在地铁站附近的咖啡店买一杯热咖啡。店员总是笑着跟我打招呼，虽然我们并不太熟。这种小小的习惯，让我一天的开始变得轻松了许多。有时候我会在窗边看人来人往，觉得城市也很温柔。"
+   ],
+   "paragraphs_en": [
+    "Every morning I buy a cup of hot coffee at a café near the subway station. The shop assistant always greets me with a smile, although we don't know each other well. This small habit has made the start of my day much more relaxed. Sometimes I watch the people coming and going by the window and feel the city is gentle too."
+   ],
+   "paragraphs_de": [
+    "Jeden Morgen kaufe ich in einem Café nahe der U-Bahn-Station einen heißen Kaffee. Die Verkäuferin begrüßt mich immer lächelnd, obwohl wir uns kaum kennen. Diese kleine Gewohnheit macht den Start in meinen Tag deutlich entspannter. Manchmal sehe ich am Fenster den Menschen zu und finde die Stadt richtig sanft."
+   ],
+   "glossary": [
+    {
+     "w": "每天",
+     "p": "měi tiān",
+     "en": "every day",
+     "de": "jeden Tag"
+    },
+    {
+     "w": "早上",
+     "p": "zǎo shàng",
+     "en": "in the morning",
+     "de": "am Morgen"
+    },
+    {
+     "w": "地铁站",
+     "p": "dì tiě zhàn",
+     "en": "subway station",
+     "de": "U-Bahn-Station"
+    },
+    {
+     "w": "附近",
+     "p": "fù jìn",
+     "en": "nearby",
+     "de": "in der Nähe"
+    },
+    {
+     "w": "咖啡店",
+     "p": "kā fēi diàn",
+     "en": "café",
+     "de": "Café"
+    },
+    {
+     "w": "一杯",
+     "p": "yì bēi",
+     "en": "a cup",
+     "de": "eine Tasse"
+    },
+    {
+     "w": "咖啡",
+     "p": "kā fēi",
+     "en": "coffee",
+     "de": "Kaffee"
+    },
+    {
+     "w": "店员",
+     "p": "diàn yuán",
+     "en": "shop assistant",
+     "de": "Verkäufer/in"
+    },
+    {
+     "w": "总是",
+     "p": "zǒng shì",
+     "en": "always",
+     "de": "immer"
+    },
+    {
+     "w": "打招呼",
+     "p": "dǎ zhāo hū",
+     "en": "say hello",
+     "de": "grüßen"
+    },
+    {
+     "w": "虽然",
+     "p": "suī rán",
+     "en": "although",
+     "de": "obwohl"
+    },
+    {
+     "w": "我们",
+     "p": "wǒ men",
+     "en": "we",
+     "de": "wir"
+    }
+   ],
+   "questions": [],
+   "sources": [],
+   "legacy": "a1"
+  },
+  {
+   "lang": "zh",
+   "level": "HSK3",
+   "kind": "feature",
+   "section": "生活",
+   "topic": "classic",
+   "title": "学习的方法",
+   "title_en": "How to learn",
+   "title_de": "Wie man lernt",
+   "paragraphs": [
+    "学习一门外语，最重要的是坚持。每天只需要花二十分钟，但要保持下去。不必一开始就背下很多生词，可以先从常用的词开始。多听、多说，比死记硬背更有效。"
+   ],
+   "paragraphs_en": [
+    "When learning a foreign language, the most important thing is persistence. You only need twenty minutes a day, but you have to keep it up. You don't need to memorize many new words right away; you can start with common words. Listening and speaking a lot is more effective than rote memorization."
+   ],
+   "paragraphs_de": [
+    "Beim Lernen einer Fremdsprache kommt es vor allem aufs Durchhalten an. Man braucht nur zwanzig Minuten am Tag, aber man muss dranbleiben. Am Anfang muss man nicht gleich viele neue Wörter auswendig lernen; man kann mit den häufigen Wörtern beginnen. Viel hören und viel sprechen ist wirksamer als stures Auswendiglernen."
+   ],
+   "glossary": [
+    {
+     "w": "学习",
+     "p": "xué xí",
+     "en": "study",
+     "de": "lernen"
+    },
+    {
+     "w": "外语",
+     "p": "wài yǔ",
+     "en": "foreign language",
+     "de": "Fremdsprache"
+    },
+    {
+     "w": "重要",
+     "p": "zhòng yào",
+     "en": "important",
+     "de": "wichtig"
+    },
+    {
+     "w": "坚持",
+     "p": "jiān chí",
+     "en": "persist",
+     "de": "durchhalten"
+    },
+    {
+     "w": "每天",
+     "p": "měi tiān",
+     "en": "every day",
+     "de": "jeden Tag"
+    },
+    {
+     "w": "需要",
+     "p": "xū yào",
+     "en": "need",
+     "de": "brauchen"
+    },
+    {
+     "w": "二十",
+     "p": "èr shí",
+     "en": "twenty",
+     "de": "zwanzig"
+    },
+    {
+     "w": "分钟",
+     "p": "fēn zhōng",
+     "en": "minute",
+     "de": "Minute"
+    },
+    {
+     "w": "保持",
+     "p": "bǎo chí",
+     "en": "keep up",
+     "de": "beibehalten"
+    },
+    {
+     "w": "下去",
+     "p": "xià qù",
+     "en": "continue",
+     "de": "weitermachen"
+    },
+    {
+     "w": "不必",
+     "p": "bú bì",
+     "en": "need not",
+     "de": "nicht nötig"
+    },
+    {
+     "w": "一开始",
+     "p": "yì kāi shǐ",
+     "en": "at first",
+     "de": "am Anfang"
+    }
+   ],
+   "questions": [],
+   "sources": [],
+   "legacy": "a2"
+  },
+  {
+   "lang": "zh",
+   "level": "HSK3",
+   "kind": "feature",
+   "section": "生活",
+   "topic": "classic",
+   "title": "中秋节",
+   "title_en": "The Mid-Autumn Festival",
+   "title_de": "Das Mondfest",
+   "paragraphs": [
+    "中秋节是中国的传统节日，每年农历八月十五。这一天，家人会聚在一起，吃月饼、赏月亮。人们相信，圆圆的月亮象征着团圆。",
+    "大家一边吃月饼，一边讲关于月亮的故事。月饼又甜又香，是节日里不可缺少的美食。"
+   ],
+   "paragraphs_en": [
+    "The Mid-Autumn Festival is a traditional Chinese festival, held on the fifteenth day of the eighth lunar month. On this day, families gather, eat mooncakes and admire the moon. People believe that the round moon symbolizes reunion.",
+    "While eating mooncakes, everyone tells stories about the moon. Mooncakes are both sweet and fragrant, an essential treat of the festival."
+   ],
+   "paragraphs_de": [
+    "Das Mondfest ist ein traditionelles chinesisches Fest und fällt auf den 15. Tag des achten Mondmonats. An diesem Tag kommt die Familie zusammen, isst Mondkuchen und betrachtet den Mond. Man glaubt, dass der runde Mond für Zusammenhalt steht.",
+    "Während alle Mondkuchen essen, erzählen sie sich Geschichten über den Mond. Mondkuchen ist süß und duftet herrlich; er gehört unbedingt zum Fest."
+   ],
+   "glossary": [
+    {
+     "w": "中秋节",
+     "p": "zhōng qiū jié",
+     "en": "Mid-Autumn Festival",
+     "de": "Mondfest"
+    },
+    {
+     "w": "中国",
+     "p": "zhōng guó",
+     "en": "China",
+     "de": "China"
+    },
+    {
+     "w": "传统",
+     "p": "chuán tǒng",
+     "en": "tradition",
+     "de": "Tradition"
+    },
+    {
+     "w": "节日",
+     "p": "jié rì",
+     "en": "festival",
+     "de": "Feiertag"
+    },
+    {
+     "w": "每年",
+     "p": "měi nián",
+     "en": "every year",
+     "de": "jedes Jahr"
+    },
+    {
+     "w": "农历",
+     "p": "nóng lì",
+     "en": "lunar calendar",
+     "de": "Mondkalender"
+    },
+    {
+     "w": "八月",
+     "p": "bā yuè",
+     "en": "eighth month",
+     "de": "August"
+    },
+    {
+     "w": "十五",
+     "p": "shí wǔ",
+     "en": "fifteen",
+     "de": "fünfzehn"
+    },
+    {
+     "w": "这一天",
+     "p": "zhè yì tiān",
+     "en": "this day",
+     "de": "dieser Tag"
+    },
+    {
+     "w": "家人",
+     "p": "jiā rén",
+     "en": "family members",
+     "de": "Familienmitglieder"
+    },
+    {
+     "w": "一起",
+     "p": "yì qǐ",
+     "en": "together",
+     "de": "zusammen"
+    },
+    {
+     "w": "月饼",
+     "p": "yuè bǐng",
+     "en": "mooncake",
+     "de": "Mondkuchen"
+    }
+   ],
+   "questions": [],
+   "sources": [],
+   "legacy": "a3"
+  },
+  {
+   "lang": "zh",
+   "level": "HSK3",
+   "kind": "feature",
+   "section": "年轻人",
+   "topic": "young",
+   "title": "社交媒体上的生活",
+   "title_en": "Life on social media",
+   "title_de": "Leben in den sozialen Medien",
+   "paragraphs": [
+    "现在很多年轻人喜欢在社交媒体上分享自己的生活。一张好看的照片，常常能让人停下来看很久。不过，有时候大家只能看到别人最好的一面。所以，我们更应该关心真实的生活，而不是只追求点赞。"
+   ],
+   "paragraphs_en": [
+    "Nowadays many young people like to share their lives on social media. A beautiful photo often makes people stop and look at it for a long time. However, sometimes we can only see the best side of other people. Therefore we should care more about real life instead of only chasing likes."
+   ],
+   "paragraphs_de": [
+    "Heute teilen viele junge Leute gern ihr Leben in den sozialen Medien. Ein schönes Foto bringt die Leute oft dazu, lange hinzuschauen. Allerdings sieht man oft nur die beste Seite der anderen. Deshalb sollten wir uns mehr um das echte Leben kümmern, statt nur nach Likes zu streben."
+   ],
+   "glossary": [
+    {
+     "w": "现在",
+     "p": "xiàn zài",
+     "en": "now",
+     "de": "jetzt"
+    },
+    {
+     "w": "很多",
+     "p": "hěn duō",
+     "en": "many",
+     "de": "viele"
+    },
+    {
+     "w": "年轻人",
+     "p": "nián qīng rén",
+     "en": "young people",
+     "de": "junge Leute"
+    },
+    {
+     "w": "喜欢",
+     "p": "xǐ huan",
+     "en": "like",
+     "de": "mögen"
+    },
+    {
+     "w": "社交媒体",
+     "p": "shè jiāo méi tǐ",
+     "en": "social media",
+     "de": "soziale Medien"
+    },
+    {
+     "w": "分享",
+     "p": "fēn xiǎng",
+     "en": "share",
+     "de": "teilen"
+    },
+    {
+     "w": "自己",
+     "p": "zì jǐ",
+     "en": "oneself",
+     "de": "selbst"
+    },
+    {
+     "w": "生活",
+     "p": "shēng huó",
+     "en": "life",
+     "de": "Leben"
+    },
+    {
+     "w": "好看",
+     "p": "hǎo kàn",
+     "en": "nice to look at",
+     "de": "schön"
+    },
+    {
+     "w": "照片",
+     "p": "zhào piàn",
+     "en": "photo",
+     "de": "Foto"
+    },
+    {
+     "w": "常常",
+     "p": "cháng cháng",
+     "en": "often",
+     "de": "oft"
+    },
+    {
+     "w": "看很久",
+     "p": "kàn hěn jiǔ",
+     "en": "look at for a long time",
+     "de": "lange anschauen"
+    }
+   ],
+   "questions": [],
+   "sources": [],
+   "legacy": "y3"
+  },
+  {
+   "lang": "zh",
+   "level": "HSK3",
+   "kind": "feature",
+   "section": "年轻人",
+   "topic": "young",
+   "title": "在欧洲找房子",
+   "title_en": "Finding an apartment in Europe",
+   "title_de": "Eine Wohnung in Europa finden",
+   "paragraphs": [
+    "在大城市找房子并不容易，房租通常很贵。很多人会在网上搜索合适的房源，然后去看房。签合同之前，一定要仔细看清楚条款。如果有问题，最好先问房东，不要等到搬进去以后再后悔。"
+   ],
+   "paragraphs_en": [
+    "Finding an apartment in a big city is not easy at all, and the rent is usually expensive. Many people search online for suitable listings and then go and view them. Before signing a contract, you must read the clauses carefully. If there are any problems, it is best to ask the landlord first, rather than regret it after moving in."
+   ],
+   "paragraphs_de": [
+    "In Großstädten eine Wohnung zu finden ist gar nicht einfach, und die Miete ist meist teuer. Viele suchen online nach passenden Wohnungsangeboten und besichtigen sie dann. Bevor man den Vertrag unterschreibt, sollte man die Klauseln genau durchlesen. Wenn etwas unklar ist, fragt man am besten vorher den Vermieter, statt es nach dem Einzug zu bereuen."
+   ],
+   "glossary": [
+    {
+     "w": "城市",
+     "p": "chéng shì",
+     "en": "city",
+     "de": "Stadt"
+    },
+    {
+     "w": "房子",
+     "p": "fáng zi",
+     "en": "apartment",
+     "de": "Wohnung"
+    },
+    {
+     "w": "容易",
+     "p": "róng yì",
+     "en": "easy",
+     "de": "einfach"
+    },
+    {
+     "w": "房租",
+     "p": "fáng zū",
+     "en": "rent",
+     "de": "Miete"
+    },
+    {
+     "w": "通常",
+     "p": "tōng cháng",
+     "en": "usually",
+     "de": "normalerweise"
+    },
+    {
+     "w": "很多",
+     "p": "hěn duō",
+     "en": "many",
+     "de": "viele"
+    },
+    {
+     "w": "网上",
+     "p": "wǎng shàng",
+     "en": "online",
+     "de": "online"
+    },
+    {
+     "w": "搜索",
+     "p": "sōu suǒ",
+     "en": "search",
+     "de": "suchen"
+    },
+    {
+     "w": "合适",
+     "p": "hé shì",
+     "en": "suitable",
+     "de": "passend"
+    },
+    {
+     "w": "房源",
+     "p": "fáng yuán",
+     "en": "listing",
+     "de": "Wohnungsangebot"
+    },
+    {
+     "w": "然后",
+     "p": "rán hòu",
+     "en": "then",
+     "de": "dann"
+    },
+    {
+     "w": "看房",
+     "p": "kàn fáng",
+     "en": "view an apartment",
+     "de": "Wohnung besichtigen"
+    }
+   ],
+   "questions": [],
+   "sources": [],
+   "legacy": "y4"
+  },
+  {
+   "lang": "zh",
+   "level": "HSK3",
+   "kind": "feature",
+   "section": "生活",
+   "topic": "classic",
+   "title": "城市散步",
+   "title_en": "A walk through the city",
+   "title_de": "Spaziergang durch die Stadt",
+   "paragraphs": [
+    "没有目的地的散步，可以让人重新认识一座城市。我沿着河边走，经过一家家小店和老房子。偶尔停下来，拍一张照片，或者吃一个热腾腾的包子。这样的散步，比任何导航都更让人快乐。"
+   ],
+   "paragraphs_en": [
+    "A walk without a destination can help you get to know a city again. I walked along the river, past small shops and old houses. Now and then I stop to take a photo or eat a steaming bun. Such a walk brings more joy than any navigation app."
+   ],
+   "paragraphs_de": [
+    "Ein Spaziergang ohne Ziel kann helfen, eine Stadt neu kennenzulernen. Ich ging am Flussufer entlang, vorbei an kleinen Läden und alten Häusern. Ab und zu bleibe ich stehen, mache ein Foto oder esse eine dampfende Teigtasche. So ein Spaziergang macht mehr Freude als jede Navigation."
+   ],
+   "glossary": [
+    {
+     "w": "目的地",
+     "p": "mù dì dì",
+     "en": "destination",
+     "de": "Ziel"
+    },
+    {
+     "w": "散步",
+     "p": "sàn bù",
+     "en": "walk",
+     "de": "spazieren gehen"
+    },
+    {
+     "w": "可以",
+     "p": "kě yǐ",
+     "en": "may",
+     "de": "können"
+    },
+    {
+     "w": "重新",
+     "p": "chóng xīn",
+     "en": "again",
+     "de": "neu"
+    },
+    {
+     "w": "认识",
+     "p": "rèn shi",
+     "en": "get to know",
+     "de": "kennenlernen"
+    },
+    {
+     "w": "城市",
+     "p": "chéng shì",
+     "en": "city",
+     "de": "Stadt"
+    },
+    {
+     "w": "沿着",
+     "p": "yán zhe",
+     "en": "along",
+     "de": "entlang"
+    },
+    {
+     "w": "经过",
+     "p": "jīng guò",
+     "en": "pass",
+     "de": "vorbei an"
+    },
+    {
+     "w": "小店",
+     "p": "xiǎo diàn",
+     "en": "small shop",
+     "de": "kleiner Laden"
+    },
+    {
+     "w": "老房子",
+     "p": "lǎo fáng zi",
+     "en": "old house",
+     "de": "altes Haus"
+    },
+    {
+     "w": "偶尔",
+     "p": "ǒu ěr",
+     "en": "occasionally",
+     "de": "gelegentlich"
+    },
+    {
+     "w": "照片",
+     "p": "zhào piàn",
+     "en": "photo",
+     "de": "Foto"
+    }
+   ],
+   "questions": [],
+   "sources": [],
+   "legacy": "a6"
+  },
+  {
+   "lang": "zh",
+   "level": "HSK3",
+   "kind": "feature",
+   "section": "生活",
+   "topic": "classic",
+   "title": "学做一道菜",
+   "title_en": "Learning to cook a dish",
+   "title_de": "Ein Gericht lernen",
+   "paragraphs": [
+    "我第一次学做番茄炒蛋，结果太咸了。后来我看了一个教学视频，才明白火候的重要。做饭其实不难，关键是耐心。现在我每个周末都会做一道新菜。"
+   ],
+   "paragraphs_en": [
+    "The first time I made tomato and egg stir-fry, it was far too salty. Later I watched a tutorial and understood how important the heat is. Cooking isn't really difficult, the key is patience. Now I cook a new dish every weekend."
+   ],
+   "paragraphs_de": [
+    "Zum ersten Mal habe ich Tomaten-Rührei gekocht, und es war viel zu salzig. Später habe ich ein Lehrvideo gesehen und verstanden, wie wichtig die richtige Hitze ist. Kochen ist eigentlich nicht schwer, entscheidend ist die Geduld. Jetzt koche ich jedes Wochenende ein neues Gericht."
+   ],
+   "glossary": [
+    {
+     "w": "第一次",
+     "p": "dì yī cì",
+     "en": "first time",
+     "de": "das erste Mal"
+    },
+    {
+     "w": "番茄",
+     "p": "fān qié",
+     "en": "tomato",
+     "de": "Tomate"
+    },
+    {
+     "w": "结果",
+     "p": "jié guǒ",
+     "en": "result",
+     "de": "Ergebnis"
+    },
+    {
+     "w": "一个",
+     "p": "yí gè",
+     "en": "a; one",
+     "de": "ein"
+    },
+    {
+     "w": "教学",
+     "p": "jiào xué",
+     "en": "teaching",
+     "de": "Lehr-"
+    },
+    {
+     "w": "视频",
+     "p": "shì pín",
+     "en": "video",
+     "de": "Video"
+    },
+    {
+     "w": "明白",
+     "p": "míng bái",
+     "en": "understand",
+     "de": "verstehen"
+    },
+    {
+     "w": "火候",
+     "p": "huǒ hòu",
+     "en": "heat (cooking)",
+     "de": "Hitze"
+    },
+    {
+     "w": "重要",
+     "p": "zhòng yào",
+     "en": "important",
+     "de": "wichtig"
+    },
+    {
+     "w": "做饭",
+     "p": "zuò fàn",
+     "en": "cook",
+     "de": "kochen"
+    },
+    {
+     "w": "其实",
+     "p": "qí shí",
+     "en": "actually",
+     "de": "eigentlich"
+    },
+    {
+     "w": "关键",
+     "p": "guān jiàn",
+     "en": "key",
+     "de": "entscheidend"
+    }
+   ],
+   "questions": [],
+   "sources": [],
+   "legacy": "a8"
+  },
+  {
+   "lang": "zh",
+   "level": "HSK3",
+   "kind": "feature",
+   "section": "年轻人",
+   "topic": "young",
+   "title": "学会说不",
+   "title_en": "Learning to say no",
+   "title_de": "Nein sagen lernen",
+   "paragraphs": [
+    "同事临时让我周末加班，我有点为难。以前我总是答应，然后很累。现在我学会了礼貌地拒绝。我说：“这周我有安排，下次一定帮忙。”"
+   ],
+   "paragraphs_en": [
+    "A colleague asks me at short notice to work at the weekend, and I feel torn. I used to always say yes and then felt exhausted. Now I've learned to decline politely. I said: \"I have plans this week, but I'll gladly help next time.\""
+   ],
+   "paragraphs_de": [
+    "Eine Kollegin bittet mich kurzfristig, am Wochenende zu arbeiten, und ich bin hin- und hergerissen. Früher habe ich immer zugesagt und war dann total erschöpft. Jetzt habe ich gelernt, höflich abzulehnen. Ich sagte: „Diese Woche habe ich schon etwas vor, nächstes Mal helfe ich gern.“"
+   ],
+   "glossary": [
+    {
+     "w": "同事",
+     "p": "tóng shì",
+     "en": "colleague",
+     "de": "Kollege/Kollegin"
+    },
+    {
+     "w": "临时",
+     "p": "lín shí",
+     "en": "at short notice",
+     "de": "kurzfristig"
+    },
+    {
+     "w": "周末",
+     "p": "zhōu mò",
+     "en": "weekend",
+     "de": "Wochenende"
+    },
+    {
+     "w": "加班",
+     "p": "jiā bān",
+     "en": "work overtime",
+     "de": "Überstunden machen"
+    },
+    {
+     "w": "为难",
+     "p": "wéi nán",
+     "en": "feel torn",
+     "de": "in der Klemme sein"
+    },
+    {
+     "w": "总是",
+     "p": "zǒng shì",
+     "en": "always",
+     "de": "immer"
+    },
+    {
+     "w": "答应",
+     "p": "dā ying",
+     "en": "agree",
+     "de": "zusagen"
+    },
+    {
+     "w": "然后",
+     "p": "rán hòu",
+     "en": "then",
+     "de": "dann"
+    },
+    {
+     "w": "现在",
+     "p": "xiàn zài",
+     "en": "now",
+     "de": "jetzt"
+    },
+    {
+     "w": "礼貌",
+     "p": "lǐ mào",
+     "en": "polite",
+     "de": "höflich"
+    },
+    {
+     "w": "拒绝",
+     "p": "jù jué",
+     "en": "refuse",
+     "de": "ablehnen"
+    },
+    {
+     "w": "安排",
+     "p": "ān pái",
+     "en": "plans",
+     "de": "Pläne"
+    }
+   ],
+   "questions": [],
+   "sources": [],
+   "legacy": "y6"
+  },
+  {
+   "lang": "zh",
+   "level": "HSK3",
+   "kind": "feature",
+   "section": "年轻人",
+   "topic": "young",
+   "title": "租一辆单车",
+   "title_en": "Renting a bike",
+   "title_de": "Ein Leihrad mieten",
+   "paragraphs": [
+    "在大城市里，骑单车是一种很方便的出行方式。很多人选择租一辆共享单车，用手机就能解锁。不过，停车的地方要注意，不要挡住人行道。骑车穿过城市，风吹在脸上，感觉非常自由。"
+   ],
+   "paragraphs_en": [
+    "In big cities, cycling is a very convenient way to get around. Many people rent a shared bike and unlock it with their phone. However, pay attention to where you park and don't block the pavement. Cycling through the city with the wind on your face feels wonderfully free."
+   ],
+   "paragraphs_de": [
+    "In Großstädten ist das Fahrrad ein sehr praktisches Verkehrsmittel. Viele mieten sich ein Sharing-Rad und entsperren es einfach mit dem Handy. Man sollte aber auf den Abstellplatz achten und den Gehweg nicht blockieren. Beim Radeln durch die Stadt weht der Wind ins Gesicht, und man fühlt sich richtig frei."
+   ],
+   "glossary": [
+    {
+     "w": "城市里",
+     "p": "chéng shì lǐ",
+     "en": "in the city",
+     "de": "in der Stadt"
+    },
+    {
+     "w": "单车",
+     "p": "dān chē",
+     "en": "bicycle",
+     "de": "Fahrrad"
+    },
+    {
+     "w": "方便",
+     "p": "fāng biàn",
+     "en": "convenient",
+     "de": "praktisch"
+    },
+    {
+     "w": "出行",
+     "p": "chū xíng",
+     "en": "travel",
+     "de": "reisen"
+    },
+    {
+     "w": "方式",
+     "p": "fāng shì",
+     "en": "way",
+     "de": "Weise"
+    },
+    {
+     "w": "很多",
+     "p": "hěn duō",
+     "en": "many",
+     "de": "viele"
+    },
+    {
+     "w": "选择",
+     "p": "xuǎn zé",
+     "en": "choose",
+     "de": "wählen"
+    },
+    {
+     "w": "一辆",
+     "p": "yí liàng",
+     "en": "a (vehicle)",
+     "de": "ein (Fahrzeug)"
+    },
+    {
+     "w": "共享",
+     "p": "gòng xiǎng",
+     "en": "shared",
+     "de": "geteilt"
+    },
+    {
+     "w": "手机",
+     "p": "shǒu jī",
+     "en": "phone",
+     "de": "Handy"
+    },
+    {
+     "w": "解锁",
+     "p": "jiě suǒ",
+     "en": "unlock",
+     "de": "entsperren"
+    },
+    {
+     "w": "不过",
+     "p": "bú guò",
+     "en": "however",
+     "de": "aber; allerdings"
+    }
+   ],
+   "questions": [],
+   "sources": [],
+   "legacy": "y9"
+  },
+  {
+   "lang": "zh",
+   "level": "HSK3",
+   "kind": "feature",
+   "section": "网络用语",
+   "topic": "net",
+   "title": "松弛感",
+   "title_en": "Relaxed ease",
+   "title_de": "Gelassenheit",
+   "paragraphs": [
+    "年轻人常说，做人要有“松弛感”。松弛感不是什么都不做，而是不被焦虑控制。比如，工作完成以后，就放下手机好好休息。生活有节奏，心情自然会好一些。"
+   ],
+   "paragraphs_en": [
+    "Young people often say you should have a sense of \"relaxed ease\". Relaxed ease doesn't mean doing nothing, but not being controlled by anxiety. For example, once work is done, you put down your phone and really rest. With a steady rhythm in life, your mood naturally improves."
+   ],
+   "paragraphs_de": [
+    "Junge Leute sagen oft, man solle eine „lockere Gelassenheit“ haben. Lässigkeit heißt nicht, nichts zu tun, sondern sich von Sorgen nicht bestimmen zu lassen. Zum Beispiel: Wenn die Arbeit erledigt ist, legt man das Handy weg und ruht sich richtig aus. Wenn das Leben einen Rhythmus hat, wird die Stimmung ganz von selbst besser."
+   ],
+   "glossary": [
+    {
+     "w": "年轻人",
+     "p": "nián qīng rén",
+     "en": "young people",
+     "de": "junge Leute"
+    },
+    {
+     "w": "松弛感",
+     "p": "sōng chí gǎn",
+     "en": "relaxed ease",
+     "de": "entspannte Gelassenheit"
+    },
+    {
+     "w": "什么",
+     "p": "shén me",
+     "en": "what",
+     "de": "was"
+    },
+    {
+     "w": "焦虑",
+     "p": "jiāo lǜ",
+     "en": "anxiety",
+     "de": "Angst"
+    },
+    {
+     "w": "控制",
+     "p": "kòng zhì",
+     "en": "control",
+     "de": "kontrollieren"
+    },
+    {
+     "w": "工作",
+     "p": "gōng zuò",
+     "en": "work; job",
+     "de": "Arbeit"
+    },
+    {
+     "w": "完成",
+     "p": "wán chéng",
+     "en": "complete",
+     "de": "erledigen"
+    },
+    {
+     "w": "以后",
+     "p": "yǐ hòu",
+     "en": "afterwards",
+     "de": "danach"
+    },
+    {
+     "w": "放下",
+     "p": "fàng xià",
+     "en": "put down",
+     "de": "weglegen"
+    },
+    {
+     "w": "手机",
+     "p": "shǒu jī",
+     "en": "phone",
+     "de": "Handy"
+    },
+    {
+     "w": "休息",
+     "p": "xiū xi",
+     "en": "rest",
+     "de": "sich ausruhen"
+    },
+    {
+     "w": "生活",
+     "p": "shēng huó",
+     "en": "life",
+     "de": "Leben"
+    }
+   ],
+   "questions": [],
+   "sources": [],
+   "legacy": "n4"
+  },
+  {
+   "lang": "zh",
+   "level": "HSK3",
+   "kind": "feature",
+   "section": "网络用语",
+   "topic": "net",
+   "title": "情绪价值",
+   "title_en": "Emotional value",
+   "title_de": "Emotionaler Wert",
+   "paragraphs": [
+    "很多人说，身边要有能提供“情绪价值”的朋友。也就是说，对方听你讲话，理解你，让你觉得被照顾。一句“辛苦了”，有时候比很多道理更有用。我们也可以试着，多给身边的人一点温暖。"
+   ],
+   "paragraphs_en": [
+    "Many people say you should have friends who provide \"emotional value\". That means the other person listens, understands you, and makes you feel cared for. A simple \"you worked hard\" can sometimes help more than many wise words. We can also try to give the people around us a little more warmth."
+   ],
+   "paragraphs_de": [
+    "Viele sagen, man sollte Freunde haben, die „emotionalen Wert“ geben. Das heißt, der andere hört zu, versteht dich und lässt dich spüren, dass man für dich sorgt. Ein „Du hast dich angestrengt“ hilft manchmal mehr als viele kluge Worte. Wir können auch versuchen, den Menschen um uns herum etwas mehr Wärme zu schenken."
+   ],
+   "glossary": [
+    {
+     "w": "很多",
+     "p": "hěn duō",
+     "en": "many",
+     "de": "viele"
+    },
+    {
+     "w": "提供",
+     "p": "tí gōng",
+     "en": "provide",
+     "de": "bieten"
+    },
+    {
+     "w": "情绪价值",
+     "p": "qíng xù jià zhí",
+     "en": "emotional value",
+     "de": "emotionaler Wert"
+    },
+    {
+     "w": "朋友",
+     "p": "péng yǒu",
+     "en": "friend",
+     "de": "Freund/in"
+    },
+    {
+     "w": "理解",
+     "p": "lǐ jiě",
+     "en": "understand",
+     "de": "verstehen"
+    },
+    {
+     "w": "觉得",
+     "p": "jué de",
+     "en": "feel",
+     "de": "finden"
+    },
+    {
+     "w": "照顾",
+     "p": "zhào gù",
+     "en": "look after",
+     "de": "sich kümmern"
+    },
+    {
+     "w": "辛苦",
+     "p": "xīn kǔ",
+     "en": "hard",
+     "de": "anstrengend"
+    },
+    {
+     "w": "有时候",
+     "p": "yǒu shí hòu",
+     "en": "sometimes",
+     "de": "manchmal"
+    },
+    {
+     "w": "道理",
+     "p": "dào lǐ",
+     "en": "reason",
+     "de": "Einsicht"
+    },
+    {
+     "w": "我们",
+     "p": "wǒ men",
+     "en": "we",
+     "de": "wir"
+    },
+    {
+     "w": "可以",
+     "p": "kě yǐ",
+     "en": "may",
+     "de": "können"
+    }
+   ],
+   "questions": [],
+   "sources": [],
+   "legacy": "n6"
+  }
+ ]
+}

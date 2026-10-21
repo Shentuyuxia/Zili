@@ -1,0 +1,91 @@
+{
+ "date": "2026-10-21",
+ "createdBy": "claude",
+ "items": [
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "feature",
+   "section": "年轻人",
+   "title": "胶片相机",
+   "title_en": "Film cameras",
+   "title_de": "Filmkameras",
+   "paragraphs": [
+    "最近，很多年轻人开始用胶片相机拍照。胶卷的张数有限，所以每一张都要想好。",
+    "拍完以后，朋友会一起去冲洗照片。等待的过程很慢，却让人觉得很开心。"
+   ],
+   "paragraphs_en": [
+    "Lately, many young people have started taking photos with film cameras. A roll of film only has so many frames, so you have to think about every shot.",
+    "Once the shooting is done, friends go together to get the photos developed. The waiting takes its time, yet it makes people feel really happy."
+   ],
+   "paragraphs_de": [
+    "Seit Kurzem fangen viele junge Leute an, mit Filmkameras zu fotografieren. Eine Filmrolle hat nur begrenzt viele Bilder, deshalb überlegt man sich jedes gut.",
+    "Anschließend gehen die Freunde gemeinsam, um die Fotos entwickeln zu lassen. Das Warten dauert, doch genau das macht richtig Freude."
+   ],
+   "glossary": [
+    {
+     "w": "胶片相机",
+     "p": "jiāo piàn xiàng jī",
+     "en": "film camera",
+     "de": "Filmkamera"
+    },
+    {
+     "w": "拍照",
+     "p": "pāi zhào",
+     "en": "take photos",
+     "de": "fotografieren"
+    },
+    {
+     "w": "胶卷",
+     "p": "jiāo juǎn",
+     "en": "roll of film",
+     "de": "Filmrolle"
+    },
+    {
+     "w": "张数",
+     "p": "zhāng shù",
+     "en": "number of frames",
+     "de": "Anzahl der Bilder"
+    },
+    {
+     "w": "有限",
+     "p": "yǒu xiàn",
+     "en": "limited",
+     "de": "begrenzt"
+    },
+    {
+     "w": "想好",
+     "p": "xiǎng hǎo",
+     "en": "think through",
+     "de": "sich überlegen"
+    },
+    {
+     "w": "拍完",
+     "p": "pāi wán",
+     "en": "finish shooting",
+     "de": "fertig fotografieren"
+    },
+    {
+     "w": "冲洗",
+     "p": "chōng xǐ",
+     "en": "develop (photos)",
+     "de": "entwickeln (Fotos)"
+    },
+    {
+     "w": "等待",
+     "p": "děng dài",
+     "en": "wait",
+     "de": "warten"
+    },
+    {
+     "w": "过程",
+     "p": "guò chéng",
+     "en": "process",
+     "de": "Verlauf; Prozess"
+    }
+   ],
+   "questions": [],
+   "sources": []
+  }
+ ]
+}

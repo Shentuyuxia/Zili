@@ -1,0 +1,7 @@
+LXGW Neo XiHei (霞鹜新晰黑), version 1.223
+Copyright (c) 2021-2025 LXGW; Information-technology Promotion Agency, Japan (IPA), 2003-2019.
+Source: https://github.com/lxgw/LxgwNeoXiHei
+
+The files in this folder are unmodified glyph subsets of the font above, converted to WOFF2
+and split by Unicode range for web delivery. Use is governed by the IPA Font License
+Agreement v1.0: https://opensource.org/licenses/IPA
