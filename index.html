@@ -1524,12 +1524,14 @@ function zLex(){ if(ZLEX&&ZLEXN===ALL.length) return ZLEX; ZLEX=new Set(); ZMAX=
 const ZSEG=(()=>{ try{ return new Intl.Segmenter("zh",{granularity:"word"}); }catch(e){ return null; } })();
 /* offline dictionary (dict/): seg.txt = words with a frequency cost for the segmenter; d/NN.json = definitions (CC-CEDICT EN, HanDeDict DE) */
 let ZD=null, ZDMAX=1, ZDP=null; const ZDS=new Map();
+let PYFIX=new Map(); // word → dictionary reading where pinyin-pro guesses wrong (种草 zhòng cǎo, 时候 shí hou)
 function zdLoad(){
   if(ZDP) return ZDP;
+  const fix=fetch("dict/pyfix.txt").then(r=>r.ok?r.text():"").then(t=>{ const m=new Map(); for(const l of t.split("\n")){ const i=l.indexOf("\t"); if(i>0) m.set(l.slice(0,i),l.slice(i+1)); } PYFIX=m; }).catch(()=>{});
   ZDP=fetch("dict/seg.txt").then(r=>r.ok?r.text():Promise.reject(r.status)).then(t=>{
     const m=new Map(); let c=20;
     for(const line of t.split("\n")){ if(!line) continue; if(line[0]==="#"){ c=+line.slice(1); continue; } for(const w of line.split(" ")){ if(w){ m.set(w,c); if(w.length>ZDMAX) ZDMAX=w.length; } } }
-    ZD=m; return m;
+    ZD=m; return fix.then(()=>m);
   }).catch(()=>{ ZDP=null; return null; });
   return ZDP;
 }
@@ -1574,7 +1576,7 @@ function zSents(p){ return String(p).split(/(?<=[。！？!?…；]+[”」』�
 function zWrap(text,own,extra){ // a paragraph → sentences → tappable words with pinyin
   return zSents(text).map(sen=>{
     const py=zPyArr(sen); let k=0;
-    const toks=zSeg(sen,extra).map(t=>{ const a=py.slice(k,k+t.w.length); k+=t.w.length; return {...t,py:a}; });
+    const toks=zSeg(sen,extra).map(t=>{ let a=py.slice(k,k+t.w.length); k+=t.w.length; const f=!t.punct&&t.w.length>1&&PYFIX.get(t.w); if(f){ const y=f.split(" "); if(y.length===t.w.length) a=y; } return {...t,py:a}; });
     // words are nowrap (a word never splits over two lines), so the line-break chance between two words is given explicitly with <wbr>; none before punctuation, so ，。 never start a line
     return `<span class="s" data-t="${esc(sen)}">`+toks.map((t,i)=>{
       if(t.punct) return esc(zs(t.w));
@@ -3149,8 +3151,8 @@ function mgOpen(word,sentence){
   const it=MG.cur&&MG.cur.it, l=lang(); if(!it) return;
   if(l==="zh"){ word=String(word).replace(/[^\u3400-\u9fff\uf900-\ufaffA-Za-z0-9]/g,""); if(!word) return;
     const g=(it.glossary||[]).find(x=>String(x.w).trim()===word), have=syFind(l,word);
-    const ctxPy=zCtxPy(word,sentence);
-    const s=MG.sheet={zh:true,word,sentence,lemma:word,py:(g&&g.p)||(have&&(have.py||have.extra))||ctxPy||zPy(word),en:(g&&g.en)||(have&&have.en)||"",de:(g&&g.de)||(have&&have.de)||"",pos:have?(POSN[have.pos]||""):"",note:"",state:"",have:!!have,mine:"",dict:null,dstate:"load"};
+    const ctxPy=PYFIX.get(word)||zCtxPy(word,sentence);
+    const s=MG.sheet={zh:true,word,sentence,lemma:word,py:PYFIX.get(word)||(g&&g.p)||(have&&(have.py||have.extra))||ctxPy||zPy(word),en:(g&&g.en)||(have&&have.en)||"",de:(g&&g.de)||(have&&have.de)||"",pos:have?(POSN[have.pos]||""):"",note:"",state:"",have:!!have,mine:"",dict:null,dstate:"load"};
     mgPaint();
     zdGet(word).then(rows=>{ if(MG.sheet!==s) return;
       if(rows&&rows.length){

@@ -1,0 +1,30 @@
+# Hand corrections for pinyin above the text (word<TAB>syllables). Overrides dict/pyfix.txt; standard: 现代汉语词典.
+# Add a line whenever a reading in the app is wrong, then run: node tools/build_pyfix.js
+东西	dōng xi
+多少	duō shao
+打算	dǎ suan
+告诉	gào su
+知道	zhī dao
+媳妇	xí fu
+本事	běn shi
+买卖	mǎi mai
+西边	xī bian
+干净	gān jing
+学问	xué wen
+正经	zhèng jing
+琢磨	zuó mo
+想想	xiǎng xiang
+走走	zǒu zou
+等等	děng deng
+听听	tīng ting
+问问	wèn wen
+对不起	duì bu qǐ
+差不多	chà bu duō
+了不起	liǎo bu qǐ
+看不起	kàn bu qǐ
+来不及	lái bu jí
+说不定	shuō bu dìng
+舍不得	shě bu de
+怪不得	guài bu de
+用不着	yòng bu zháo
+受不了	shòu bu liǎo

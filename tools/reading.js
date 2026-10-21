@@ -36,9 +36,18 @@ function checkItem(f, it, i) {
   }
 }
 
+// dictionary readings where pinyin-pro guesses wrong (dict/pyfix.txt, built by tools/build_pyfix.js)
+const PYFIX = new Map();
+try { for (const l of fs.readFileSync(path.join(__dirname, "..", "dict", "pyfix.txt"), "utf8").split("\n")) { const i = l.indexOf("\t"); if (i > 0) PYFIX.set(l.slice(0, i), l.slice(i + 1)); } } catch (e) {}
 function fill(it) {
   let n = 0;
-  for (const g of it.glossary || []) if (g.w && !g.p) { g.p = py(g.w); n++; }
+  for (const g of it.glossary || []) {
+    if (!g.w) continue;
+    const fix = PYFIX.get(g.w);
+    // fill empty pinyin; also replace pinyin that was filled automatically (equals pinyin-pro's guess) when the dictionary knows better
+    if (!g.p) { g.p = fix || py(g.w); n++; }
+    else if (fix && g.p !== fix && g.p.replace(/\s+/g, " ") === py(g.w)) { g.p = fix; n++; }
+  }
   return n;
 }
 

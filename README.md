@@ -24,6 +24,7 @@ node tools/wb_add.js --check   # check the word bank
 node tools/wb_add.js HSK3 rows.json   # add word-bank rows
 python3 tools/build_dict.py      # rebuild dict/ (sources: tools/src/README.md)
 python3 tools/build_hw.py         # dict/hw.txt handwriting templates (after build_strokes)
+node tools/build_pyfix.js         # dict/pyfix.txt: dictionary readings where pinyin-pro guesses wrong (+ tools/pyfix_extra.txt hand fixes)
 python3 tools/build_pyindex.py    # dict/py.txt pinyin search index (after build_dict)
 python3 tools/build_strokes.py    # rebuild strokes/ (needs tools/src/hwd = npm hanzi-writer-data)
 python3 tools/build_wordbank.py  # add missing official HSK words; tools/zh_fix.json holds hand corrections
