@@ -86,6 +86,407 @@
    ],
    "questions": [],
    "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK1",
+   "kind": "story",
+   "section": "网络",
+   "title": "奶奶的大拇指",
+   "title_en": "Grandma's thumbs-up",
+   "title_de": "Omas Daumen hoch",
+   "dek": "妈妈给奶奶发了一张照片。",
+   "paragraphs": [
+    "今天是星期三。小月在家画了一只小猫。妈妈用手机拍了照片，发给了奶奶。",
+    "奶奶住得很远。几分钟以后，奶奶回了一个大拇指。小月问：“妈妈，这是什么？”",
+    "妈妈说：“这叫点赞。奶奶说你画得很好！”小月很高兴：“明天我再画一只小狗！”"
+   ],
+   "paragraphs_en": [
+    "Today is Wednesday. At home, Xiaoyue drew a little cat. Mum took a photo of it with her phone and sent it to Grandma.",
+    "Grandma lives far away. A few minutes later, Grandma replied with a thumbs-up. Xiaoyue asked: \"Mum, what is this?\"",
+    "Mum said: \"That's called a 'like'. Grandma is saying you drew it really well!\" Xiaoyue was very happy: \"Tomorrow I'll draw a little dog too!\""
+   ],
+   "paragraphs_de": [
+    "Heute ist Mittwoch. Xiaoyue hat zu Hause eine kleine Katze gemalt. Mama hat mit dem Handy ein Foto davon gemacht und es an Oma geschickt.",
+    "Oma wohnt weit weg. Ein paar Minuten später hat Oma mit einem Daumen hoch geantwortet. Xiaoyue fragt: „Mama, was ist das?“",
+    "Mama sagt: „Das nennt man ein Like. Oma sagt, du hast sehr schön gemalt!“ Xiaoyue freut sich sehr: „Morgen male ich noch einen kleinen Hund!“"
+   ],
+   "glossary": [
+    {
+     "w": "画",
+     "p": "huà",
+     "en": "to draw; to paint",
+     "de": "malen; zeichnen"
+    },
+    {
+     "w": "手机",
+     "p": "shǒu jī",
+     "en": "mobile phone",
+     "de": "das Handy"
+    },
+    {
+     "w": "拍",
+     "p": "pāi",
+     "en": "to take (a photo)",
+     "de": "(ein Foto) machen"
+    },
+    {
+     "w": "照片",
+     "p": "zhào piàn",
+     "en": "photo",
+     "de": "das Foto"
+    },
+    {
+     "w": "发",
+     "p": "fā",
+     "en": "to send",
+     "de": "schicken; senden"
+    },
+    {
+     "w": "远",
+     "p": "yuǎn",
+     "en": "far",
+     "de": "weit"
+    },
+    {
+     "w": "大拇指",
+     "p": "dà mǔ zhǐ",
+     "en": "thumb; thumbs-up",
+     "de": "der Daumen; Daumen hoch"
+    },
+    {
+     "w": "点赞",
+     "p": "diǎn zàn",
+     "en": "to give a like",
+     "de": "liken; ein Like geben"
+    }
+   ],
+   "grammar": "画得很好 'drew very well': verb + 得 + adjective describes how well an action is done.",
+   "grammar_de": "画得很好 „hat sehr schön gemalt“: Verb + 得 + Adjektiv beschreibt, wie gut eine Handlung gemacht wird.",
+   "questions": [
+    "小月画了什么？",
+    "奶奶回了什么？",
+    "明天小月想画什么？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK3",
+   "kind": "dialogue",
+   "section": "网络",
+   "title": "你今天打卡了吗？",
+   "title_en": "Have you checked in today?",
+   "title_de": "Hast du heute schon eingecheckt?",
+   "dek": "“打卡”不只是上班时才用的词。",
+   "paragraphs": [
+    "林林：你在拍什么呢？已经拍了这么多张了。",
+    "小王：我在打卡呀。这家咖啡馆最近很火，网上好多人都来过。",
+    "林林：打卡？不是上班的时候才打卡吗？",
+    "小王：以前是这样。现在“打卡”的意思多了：去一个有名的地方，拍张照片发到网上，也叫打卡。",
+    "林林：原来是这样。那你每天跑完步发的照片呢？",
+    "小王：那也是打卡！把每天做的事记下来，坚持一个月，就容易养成好习惯。我已经连着跑了二十天了。",
+    "林林：你比我认真多了。我上个月买了一本英语书，到现在才看了三页。",
+    "小王：那你也试试吧。每天读十分钟，读完就打卡，我给你点赞。",
+    "林林：好，就从今天开始！对了，下次你来这家咖啡馆打卡的时候，也叫上我吧。"
+   ],
+   "paragraphs_en": [
+    "Linlin: What are you photographing? You've already taken so many.",
+    "Xiao Wang: I'm 'checking in'. This café has been really popular lately; lots of people online have been here.",
+    "Linlin: Checking in? Isn't that only something you do when you start work?",
+    "Xiao Wang: It used to be. Now 打卡 has more meanings: going to a famous place, taking a photo and posting it online is also called 打卡.",
+    "Linlin: I see. And the photos you post every day after your run?",
+    "Xiao Wang: That's 打卡 too! If you note down what you do every day and keep it up for a month, it's easy to build a good habit. I've already run twenty days in a row.",
+    "Linlin: You're much more disciplined than me. I bought an English book last month and so far I've only read three pages.",
+    "Xiao Wang: Then give it a try too. Read ten minutes a day, check in when you're done, and I'll give you a like.",
+    "Linlin: OK, I'll start today! Oh, and next time you come to check in at this café, take me with you."
+   ],
+   "paragraphs_de": [
+    "Linlin: Was fotografierst du denn? Du hast schon so viele Bilder gemacht.",
+    "Xiao Wang: Ich mache einen „Check-in“. Dieses Café ist gerade total angesagt, viele Leute aus dem Netz waren schon hier.",
+    "Linlin: Einstempeln? Macht man das nicht nur, wenn man zur Arbeit kommt?",
+    "Xiao Wang: Früher schon. Heute hat 打卡 mehr Bedeutungen: an einen bekannten Ort gehen, ein Foto machen und es online posten – das heißt auch 打卡.",
+    "Linlin: Ach so. Und die Fotos, die du jeden Tag nach dem Laufen postest?",
+    "Xiao Wang: Das ist auch 打卡! Wenn man jeden Tag aufschreibt, was man gemacht hat, und einen Monat durchhält, gewöhnt man sich leicht etwas Gutes an. Ich bin schon zwanzig Tage hintereinander gelaufen.",
+    "Linlin: Du bist viel disziplinierter als ich. Ich habe letzten Monat ein Englischbuch gekauft und bis jetzt erst drei Seiten gelesen.",
+    "Xiao Wang: Dann probier es doch auch. Lies jeden Tag zehn Minuten, mach danach deinen Check-in, und ich gebe dir ein Like.",
+    "Linlin: Gut, ich fange gleich heute an! Ach ja, wenn du das nächste Mal zum Einchecken in dieses Café kommst, nimm mich mit."
+   ],
+   "glossary": [
+    {
+     "w": "打卡",
+     "p": "dǎ kǎ",
+     "en": "to clock in; to 'check in' at a place or log a daily habit online",
+     "de": "einstempeln; „einchecken“ (Ort besuchen oder Gewohnheit online festhalten)"
+    },
+    {
+     "w": "火",
+     "p": "huǒ",
+     "en": "popular, trending (colloquial)",
+     "de": "angesagt; beliebt (umgangssprachlich)"
+    },
+    {
+     "w": "有名",
+     "p": "yǒu míng",
+     "en": "famous",
+     "de": "bekannt; berühmt"
+    },
+    {
+     "w": "原来",
+     "p": "yuán lái",
+     "en": "so that's how it is",
+     "de": "ach so; also doch"
+    },
+    {
+     "w": "记",
+     "p": "jì",
+     "en": "to note down",
+     "de": "aufschreiben; notieren"
+    },
+    {
+     "w": "坚持",
+     "p": "jiān chí",
+     "en": "to keep at it; persevere",
+     "de": "durchhalten; dranbleiben"
+    },
+    {
+     "w": "养成",
+     "p": "yǎng chéng",
+     "en": "to form (a habit)",
+     "de": "(eine Gewohnheit) entwickeln"
+    },
+    {
+     "w": "习惯",
+     "p": "xí guàn",
+     "en": "habit",
+     "de": "die Gewohnheit"
+    },
+    {
+     "w": "连着",
+     "p": "lián zhe",
+     "en": "in a row",
+     "de": "hintereinander"
+    },
+    {
+     "w": "认真",
+     "p": "rèn zhēn",
+     "en": "conscientious; serious",
+     "de": "gewissenhaft; ernsthaft"
+    }
+   ],
+   "grammar": "A 比 B + adjective + 多了 means 'A is much more … than B': 你比我认真多了 'You are much more disciplined than me.'",
+   "grammar_de": "A 比 B + Adjektiv + 多了 bedeutet „A ist viel … als B“: 你比我认真多了 „Du bist viel disziplinierter als ich.“",
+   "questions": [
+    "现在“打卡”有哪些意思？",
+    "小王已经连着跑了多少天？",
+    "林林打算每天做什么？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK4",
+   "kind": "feature",
+   "section": "网络",
+   "title": "种草和拔草",
+   "title_en": "Planting and pulling 'grass'",
+   "title_de": "Gras pflanzen und Gras ausreißen",
+   "dek": "一颗看不见的“草”，为什么会长在心里？",
+   "paragraphs": [
+    "如果你经常用社交软件，一定见过“种草”这个词。朋友发了一张新耳机的照片，说声音特别好，你看完以后也想买一副，这就叫“被种草”了。意思是：别人的推荐就像一颗种子，种在了你的心里。",
+    "和“种草”相对的是“拔草”。拔草有两种用法。一种是你终于买到了想要的东西，或者去了一直想去的餐厅，心里的“草”就被拔掉了；另一种是你发现那个东西其实没有大家说的那么好，于是不想要了，这也可以叫拔草。",
+    "现在网上有很多“种草”内容：有人分享好用的文具，有人介绍值得一去的小店，还有人推荐适合周末读的书。这些内容不但方便，而且很有意思，所以很多人一有空就刷一刷。看的人多了，有的小店一下子就成了大家排队也要去的地方。",
+    "不过，也有人提醒大家：看到推荐的时候，最好先想一想自己是不是真的需要。有的东西看起来很好，买回家却很少用。一个简单的办法是先把它放进“愿望清单”，过几天再决定。",
+    "在德国学中文的同学也可以试着用用这些词。比如跟中国朋友聊天时说：“你上次说的那家面馆，我已经拔草了，真好吃！”对方听了一定会觉得你的中文很地道。"
+   ],
+   "paragraphs_en": [
+    "If you use social media apps a lot, you've surely seen the word 种草, 'planting grass'. A friend posts a photo of new headphones and says the sound is amazing; after seeing it you want a pair too – that's called 'having grass planted' on you. It means someone else's recommendation is like a seed planted in your heart.",
+    "The opposite of 'planting grass' is 拔草, 'pulling grass'. It has two uses. One is when you finally get the thing you wanted, or go to the restaurant you've long wanted to try, and the 'grass' in your heart is pulled out. The other is when you discover the thing isn't as good as everyone said, so you no longer want it – that can also be called 'pulling grass'.",
+    "Today there is a lot of 'grass-planting' content online: some people share handy stationery, some introduce little shops worth a visit, others recommend books that are good for a weekend read. This content is not only convenient but also fun, so many people scroll through it whenever they have a free moment. When enough people see it, some small shops suddenly become places everyone will queue up for.",
+    "Still, some people remind us: when you see a recommendation, it's best to first think about whether you really need it. Some things look great, but once you bring them home you rarely use them. A simple trick is to put the item on a 'wish list' first and decide a few days later.",
+    "Learners of Chinese in Germany can try using these words too. For example, when chatting with a Chinese friend you could say: 'That noodle place you mentioned last time – I've already pulled the grass, it was delicious!' Your friend will surely think your Chinese sounds very natural."
+   ],
+   "paragraphs_de": [
+    "Wer oft soziale Apps nutzt, hat bestimmt schon das Wort 种草 gesehen – „Gras pflanzen“. Eine Freundin postet ein Foto ihrer neuen Kopfhörer und schreibt, der Klang sei großartig; danach willst du auch welche – dann wurde dir „Gras gepflanzt“. Gemeint ist: Die Empfehlung anderer ist wie ein Samen, der in dein Herz gesät wird.",
+    "Das Gegenteil von „Gras pflanzen“ ist 拔草, „Gras ausreißen“. Es wird auf zwei Arten benutzt. Entweder hast du dir endlich gekauft, was du wolltest, oder warst in dem Restaurant, in das du schon lange wolltest – dann ist das „Gras“ in deinem Herzen ausgerissen. Oder du merkst, dass die Sache gar nicht so gut ist, wie alle sagen, und willst sie nicht mehr – auch das nennt man „Gras ausreißen“.",
+    "Heute gibt es im Netz viele „Gras-pflanz“-Inhalte: Manche zeigen praktisches Schreibzeug, manche stellen kleine Läden vor, die einen Besuch wert sind, andere empfehlen Bücher fürs Wochenende. Diese Inhalte sind nicht nur praktisch, sondern auch unterhaltsam, deshalb scrollen viele darin, sobald sie Zeit haben. Wenn genug Leute es sehen, werden manche kleine Läden plötzlich zu Orten, für die alle Schlange stehen.",
+    "Allerdings erinnern manche daran: Wenn man eine Empfehlung sieht, sollte man sich zuerst fragen, ob man die Sache wirklich braucht. Manches sieht toll aus, wird zu Hause aber kaum benutzt. Ein einfacher Trick: Setz es zuerst auf eine „Wunschliste“ und entscheide ein paar Tage später.",
+    "Wer in Deutschland Chinesisch lernt, kann diese Wörter ruhig ausprobieren. Zum Beispiel im Chat mit einer chinesischen Freundin: „Die Nudelküche, von der du letztes Mal erzählt hast – da habe ich schon Gras ausgerissen, superlecker!“ Sie wird bestimmt finden, dass dein Chinesisch sehr authentisch klingt."
+   ],
+   "glossary": [
+    {
+     "w": "社交软件",
+     "p": "shè jiāo ruǎn jiàn",
+     "en": "social media app",
+     "de": "die Social-Media-App"
+    },
+    {
+     "w": "种草",
+     "p": "zhòng cǎo",
+     "en": "to make sb want sth by recommending it (lit. plant grass)",
+     "de": "jdm. Lust auf etwas machen (wörtl. Gras pflanzen)"
+    },
+    {
+     "w": "拔草",
+     "p": "bá cǎo",
+     "en": "to finally try/buy sth, or lose interest in it (lit. pull grass)",
+     "de": "etwas endlich ausprobieren oder die Lust daran verlieren (wörtl. Gras ausreißen)"
+    },
+    {
+     "w": "推荐",
+     "p": "tuī jiàn",
+     "en": "to recommend; recommendation",
+     "de": "empfehlen; die Empfehlung"
+    },
+    {
+     "w": "种子",
+     "p": "zhǒng zi",
+     "en": "seed",
+     "de": "der Samen"
+    },
+    {
+     "w": "相对",
+     "p": "xiāng duì",
+     "en": "opposite; corresponding",
+     "de": "entgegengesetzt; gegenüberstehend"
+    },
+    {
+     "w": "值得",
+     "p": "zhí de",
+     "en": "to be worth",
+     "de": "sich lohnen; wert sein"
+    },
+    {
+     "w": "刷",
+     "p": "shuā",
+     "en": "to scroll (through feeds)",
+     "de": "(durch Feeds) scrollen"
+    },
+    {
+     "w": "愿望清单",
+     "p": "yuàn wàng qīng dān",
+     "en": "wish list",
+     "de": "die Wunschliste"
+    },
+    {
+     "w": "地道",
+     "p": "dì dao",
+     "en": "authentic; idiomatic",
+     "de": "authentisch; idiomatisch"
+    }
+   ],
+   "grammar": "不但……而且…… 'not only … but also …' links two positive points: 这些内容不但方便，而且很有意思.",
+   "grammar_de": "不但……而且…… „nicht nur …, sondern auch …“ verbindet zwei positive Punkte: 这些内容不但方便，而且很有意思.",
+   "questions": [
+    "什么叫“被种草”？",
+    "“拔草”有哪两种用法？",
+    "看到推荐的时候，文章建议先做什么？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK5",
+   "kind": "feature",
+   "section": "网络",
+   "title": "找个“搭子”",
+   "title_en": "Find yourself a 'dazi'",
+   "title_de": "Such dir einen „Dazi“",
+   "dek": "不是朋友，却比陌生人近一点——网络热词“搭子”说的是什么关系？",
+   "paragraphs": [
+    "这两年，“搭子”成了网上特别流行的一个词。所谓搭子，指的是一起做某件事的伙伴：一起吃饭的叫“饭搭子”，一起去健身房的叫“健身搭子”，一起上自习的叫“学习搭子”，甚至还有专门一起遛狗的“遛狗搭子”。",
+    "搭子和朋友有什么不一样呢？很多人觉得，朋友之间什么都可以聊，关系比较深；而搭子往往只在某一件事上合作。比方说，你和同事每天中午一起去食堂，聊聊今天的菜好不好吃，下班以后却各回各家，互不打扰。这种关系轻松、简单，不需要投入太多精力。",
+    "为什么这个词会这么火？一个原因是现代人生活节奏快，工作和学习都很忙，即使想交朋友，也不一定有时间慢慢培养感情。可是一个人吃火锅、一个人看展览，又难免觉得有点儿冷清。有了搭子，既有人陪伴，又不会有太大的压力。",
+    "在德国生活的人对此可能也不陌生。很多城市都有语言交换活动：你教对方中文，对方教你德语，每周在咖啡馆见一次面。这样的“语伴”，其实就是一种学习搭子。有些人一开始只是练习口语，后来连周末爬山都约在一起，搭子慢慢变成了真正的朋友。",
+    "当然，找搭子也要注意方式。在网上认识的人，第一次见面最好选在人多的公共场所，并且提前跟家人或朋友说一声。只要彼此尊重、保持合适的距离，搭子关系就能给日常生活增添不少乐趣。",
+    "你想找一个什么样的搭子呢？是每天一起早起背单词的“打卡搭子”，还是周末一起逛菜市场的“买菜搭子”？说不定，你的下一个搭子就在身边。"
+   ],
+   "paragraphs_en": [
+    "In the last couple of years, 搭子 (dazi) has become an especially popular word online. A dazi is a partner you do one particular thing with: someone you eat with is a 'meal dazi', someone you go to the gym with is a 'gym dazi', someone you study with is a 'study dazi' – there are even 'dog-walking dazi' who meet just to walk their dogs together.",
+    "How is a dazi different from a friend? Many people feel that friends can talk about anything and their bond runs deeper, whereas a dazi usually teams up with you for one thing only. Say you and a colleague go to the canteen together every lunchtime and chat about whether today's food is any good, but after work you each go home and leave each other in peace. This kind of relationship is relaxed and simple and doesn't take much energy.",
+    "Why has the word caught on so much? One reason is that modern life moves fast and people are busy with work and study; even if they want to make friends, they don't necessarily have time to let a friendship grow slowly. Yet eating hotpot alone or visiting an exhibition alone can feel a bit lonely. With a dazi you have company without much pressure.",
+    "People living in Germany may know this too. Many cities have language-exchange meet-ups: you teach the other person Chinese, they teach you German, and you meet once a week in a café. Such a 'language partner' is really a kind of study dazi. Some people start out just practising speaking, and later even plan their weekend hikes together – the dazi slowly turns into a real friend.",
+    "Of course, it's worth being sensible about finding a dazi. If you met someone online, it's best to choose a busy public place for the first meeting and let family or friends know beforehand. As long as both sides respect each other and keep a suitable distance, a dazi relationship can add a lot of fun to everyday life.",
+    "What kind of dazi would you like to find? A 'check-in dazi' who gets up early with you every day to memorise vocabulary, or a 'grocery dazi' to stroll around the market with at the weekend? Who knows – your next dazi might be right next to you."
+   ],
+   "paragraphs_de": [
+    "In den letzten zwei Jahren ist 搭子 (Dazi) im Netz zu einem besonders beliebten Wort geworden. Ein Dazi ist ein Partner für eine bestimmte Sache: Mit wem man isst, das ist der „Essens-Dazi“, mit wem man ins Fitnessstudio geht, der „Fitness-Dazi“, mit wem man lernt, der „Lern-Dazi“ – es gibt sogar „Gassi-Dazis“, die sich nur zum gemeinsamen Hundeausführen treffen.",
+    "Was unterscheidet einen Dazi von einem Freund? Viele finden, unter Freunden kann man über alles reden, die Beziehung ist tiefer; ein Dazi dagegen tut sich meist nur für eine Sache mit dir zusammen. Zum Beispiel gehst du mit einer Kollegin jeden Mittag in die Kantine, ihr plaudert darüber, ob das Essen heute schmeckt, aber nach Feierabend geht jede nach Hause und man lässt sich in Ruhe. So eine Beziehung ist locker und einfach und kostet nicht viel Energie.",
+    "Warum ist das Wort so angesagt? Ein Grund ist, dass das moderne Leben schnell ist und Arbeit und Studium viel Zeit fressen; selbst wenn man Freunde finden möchte, hat man nicht unbedingt Zeit, eine Freundschaft langsam wachsen zu lassen. Allein Feuertopf essen oder allein in eine Ausstellung gehen fühlt sich aber doch etwas einsam an. Mit einem Dazi hat man Gesellschaft, ohne großen Druck.",
+    "Wer in Deutschland lebt, kennt das vielleicht auch. In vielen Städten gibt es Sprachtandems: Du bringst deinem Gegenüber Chinesisch bei, es bringt dir Deutsch bei, und ihr trefft euch einmal pro Woche im Café. So ein Tandempartner ist eigentlich eine Art Lern-Dazi. Manche wollen anfangs nur das Sprechen üben und verabreden sich später sogar zum Wandern am Wochenende – aus dem Dazi wird nach und nach ein echter Freund.",
+    "Natürlich sollte man bei der Dazi-Suche umsichtig sein. Wen man online kennengelernt hat, trifft man beim ersten Mal am besten an einem belebten öffentlichen Ort und sagt vorher Familie oder Freunden Bescheid. Solange beide einander respektieren und einen passenden Abstand wahren, kann eine Dazi-Beziehung dem Alltag viel Freude hinzufügen.",
+    "Was für einen Dazi möchtest du finden? Einen „Check-in-Dazi“, mit dem du jeden Tag früh aufstehst und Vokabeln lernst, oder einen „Einkaufs-Dazi“, mit dem du am Wochenende über den Markt bummelst? Wer weiß – vielleicht ist dein nächster Dazi ganz in deiner Nähe."
+   ],
+   "glossary": [
+    {
+     "w": "搭子",
+     "p": "dā zi",
+     "en": "partner for one particular activity (internet slang)",
+     "de": "der Partner für eine bestimmte Aktivität (Netzjargon)"
+    },
+    {
+     "w": "所谓",
+     "p": "suǒ wèi",
+     "en": "so-called; what is meant by",
+     "de": "sogenannt; was man unter … versteht"
+    },
+    {
+     "w": "伙伴",
+     "p": "huǒ bàn",
+     "en": "partner; companion",
+     "de": "der Partner; der Gefährte"
+    },
+    {
+     "w": "遛狗",
+     "p": "liù gǒu",
+     "en": "to walk a dog",
+     "de": "Gassi gehen; den Hund ausführen"
+    },
+    {
+     "w": "互不打扰",
+     "p": "hù bù dǎ rǎo",
+     "en": "not to bother each other",
+     "de": "sich gegenseitig in Ruhe lassen"
+    },
+    {
+     "w": "精力",
+     "p": "jīng lì",
+     "en": "energy",
+     "de": "die Energie; die Kraft"
+    },
+    {
+     "w": "节奏",
+     "p": "jié zòu",
+     "en": "pace; rhythm",
+     "de": "das Tempo; der Rhythmus"
+    },
+    {
+     "w": "培养",
+     "p": "péi yǎng",
+     "en": "to cultivate; develop",
+     "de": "pflegen; entwickeln"
+    },
+    {
+     "w": "冷清",
+     "p": "lěng qing",
+     "en": "lonely; deserted",
+     "de": "einsam; verlassen"
+    },
+    {
+     "w": "陪伴",
+     "p": "péi bàn",
+     "en": "to keep sb company",
+     "de": "Gesellschaft leisten; begleiten"
+    }
+   ],
+   "grammar": "即使……也…… 'even if … still …' states a condition that doesn't change the result: 即使想交朋友，也不一定有时间.",
+   "grammar_de": "即使……也…… „selbst wenn …, (dann) trotzdem …“ nennt eine Bedingung, die am Ergebnis nichts ändert: 即使想交朋友，也不一定有时间.",
+   "questions": [
+    "“搭子”和朋友有什么不同？",
+    "为什么“搭子”这个词这么流行？",
+    "第一次跟网上认识的搭子见面，要注意什么？"
+   ],
+   "sources": []
   }
  ]
 }

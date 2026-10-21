@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21T09:57:50Z",
+ "updated": "2026-10-21T15:50:41Z",
  "days": [
   {
    "date": "2026-10-21",
@@ -10,6 +10,34 @@
      "title": "胶片相机",
      "kind": "feature",
      "level": "HSK2"
+    },
+    {
+     "i": 1,
+     "lang": "zh",
+     "title": "奶奶的大拇指",
+     "kind": "story",
+     "level": "HSK1"
+    },
+    {
+     "i": 2,
+     "lang": "zh",
+     "title": "你今天打卡了吗？",
+     "kind": "dialogue",
+     "level": "HSK3"
+    },
+    {
+     "i": 3,
+     "lang": "zh",
+     "title": "种草和拔草",
+     "kind": "feature",
+     "level": "HSK4"
+    },
+    {
+     "i": 4,
+     "lang": "zh",
+     "title": "找个“搭子”",
+     "kind": "feature",
+     "level": "HSK5"
     }
    ]
   }
