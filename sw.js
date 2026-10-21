@@ -2,7 +2,7 @@
 // App files: served from cache, refreshed in the background.
 // Reading texts (reading/*) and word lists (data/*): network first, so new texts show up right away; cache is the offline fallback.
 // Only caches named "zili-…" are touched: other apps on the same site keep theirs.
-const CACHE = "zili-v8";
+const CACHE = "zili-v9";
 const DICT = "zili-dict-v3"; // dictionary and stroke files: cache first (they only change when DICT is bumped)
 const SHELL = ["./", "./index.html", "./manifest.webmanifest", "./fonts/fonts.css", "./vendor/pinyin-pro.js"];
 self.addEventListener("install", e => {

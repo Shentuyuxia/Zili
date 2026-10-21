@@ -31,7 +31,7 @@
   --f-cn:"LXGW WenKai", "Kaiti SC", "STKaiti", "EL Hei", serif; /* Chinese content: LXGW WenKai (Traditional: LXGW WenKai TC) */
   --f-cnui:"EL Hei", "PingFang SC", "Microsoft YaHei", sans-serif; /* logo and interface */
   --f-mono:"Source Sans 3", "EL Hei", sans-serif;
-  --tone:#0f8a80; --t1:var(--tone); --t2:var(--tone); --t3:var(--tone); --t4:var(--tone);
+  --tone:#0f8a80; --t1:var(--t1l,var(--tone)); --t2:var(--t2l,var(--tone)); --t3:var(--t3l,var(--tone)); --t4:var(--t4l,var(--tone));
   --r:12px; color-scheme:light;
 }
 @media (prefers-color-scheme: dark){ :root{
@@ -40,7 +40,7 @@
   --der:#9fb6dd; --die:#e08a7c; --das:#86c9a4;
   --a1:#9cc77f; --a2:#7cc4bd; --b1:#9fb6dd; --b2:#b7a3e0; --c1:#e09bbb; --c2:#e0a184;
   --ok:#86c9a4; --ok-soft:#1b3328; --warn:#d6ad5c; --warn-soft:#352a14; --bad:#e08a7c; --bad-soft:#3a201c;
-  --scrim:rgba(0,0,0,.55); --pt-mark:#2c6b64; --rule:#c9d2d4; --tone:#4fd1c5; color-scheme:dark }}
+  --scrim:rgba(0,0,0,.55); --pt-mark:#2c6b64; --rule:#c9d2d4; --tone:#4fd1c5; --t1:var(--t1d,var(--tone)); --t2:var(--t2d,var(--tone)); --t3:var(--t3d,var(--tone)); --t4:var(--t4d,var(--tone)); color-scheme:dark }}
 
 html{-webkit-text-size-adjust:100%;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 body{margin:0;--acc:var(--pt);--acc-soft:var(--pt-soft);background:var(--bg);color:var(--ink);font-family:var(--f-ui);font-size:15px;line-height:1.55}
@@ -926,12 +926,20 @@ body.tones.tonepy .mg-body .tn1:not(rt),body.tones.tonepy .zw .tn1:not(rt),body.
 body.tones.tonepy .mg-body .tn2:not(rt),body.tones.tonepy .zw .tn2:not(rt),body.tones.tonepy .w .tn2,body.tones.tonepy h2 .tn2:not(rt),
 body.tones.tonepy .mg-body .tn3:not(rt),body.tones.tonepy .zw .tn3:not(rt),body.tones.tonepy .w .tn3,body.tones.tonepy h2 .tn3:not(rt),
 body.tones.tonepy .mg-body .tn4:not(rt),body.tones.tonepy .zw .tn4:not(rt),body.tones.tonepy .w .tn4,body.tones.tonepy h2 .tn4:not(rt){color:inherit}
-.tone-pick{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
-.tone-pick label{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:4px 12px 4px 8px;cursor:pointer;background:var(--surface)}
-.tone-pick input{accent-color:var(--acc);margin:0}
-.tone-pick .s{font-family:var(--f-cnui);font-size:16px}
-.tone-pick .tk1{color:var(--t1)} .tone-pick .tk2{color:var(--t2)} .tone-pick .tk3{color:var(--t3)} .tone-pick .tk4{color:var(--t4)}
-.tone-pick label:has(input:not(:checked)) .s{color:var(--muted)}
+.tone-pick{display:grid;gap:8px;margin-top:10px}
+.tone-row{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;padding:6px 10px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.tone-row > label{display:inline-flex;align-items:center;gap:7px;cursor:pointer;min-width:118px}
+.tone-row input[type=checkbox]{accent-color:var(--acc);margin:0;width:17px;height:17px}
+.tone-row .s{font-family:var(--f-cnui);font-size:17px}
+.tone-row .tk1{color:var(--t1)} .tone-row .tk2{color:var(--t2)} .tone-row .tk3{color:var(--t3)} .tone-row .tk4{color:var(--t4)}
+.tone-row:has(input[type=checkbox]:not(:checked)) .s{color:var(--muted)}
+.tone-row:has(input[type=checkbox]:not(:checked)) .sw{opacity:.4}
+.sw{display:flex;flex-wrap:wrap;gap:5px;align-items:center}
+.sw button{width:22px;height:22px;border-radius:50%;border:2px solid var(--surface);box-shadow:0 0 0 1px var(--line);cursor:pointer;padding:0}
+.sw button[aria-pressed="true"]{box-shadow:0 0 0 2px var(--ink)}
+.sw label.cust{position:relative;width:22px;height:22px;border-radius:50%;cursor:pointer;background:conic-gradient(#e5484d,#f5a524,#30a46c,#3e63dd,#8e4ec6,#e5484d);box-shadow:0 0 0 1px var(--line)}
+.sw label.cust.on{box-shadow:0 0 0 2px var(--ink)}
+.sw label.cust input{position:absolute;inset:0;opacity:0;width:100%;height:100%;cursor:pointer;border:0;padding:0}
 .tone-where{margin-top:8px}
 body:not(.tones) .tone-opts{opacity:.55}
 /* shadowing */
@@ -1098,9 +1106,9 @@ body:not(.tones) .tone-opts{opacity:.55}
         <p class="note hint" style="margin-top:6px">拼音关掉时，卡片翻面后才显示拼音。阅读里也可以随时切换。</p>
         <label class="tog" style="margin-top:10px"><input type="checkbox" id="opt-tone"> 声调颜色</label>
         <div class="tone-opts">
-          <div class="tone-pick"><label><input type="radio" name="tonesel" data-tc="1"><span class="s tk1" data-noi18n>妈 mā</span><span class="small">一声</span></label><label><input type="radio" name="tonesel" data-tc="2"><span class="s tk2" data-noi18n>麻 má</span><span class="small">二声</span></label><label><input type="radio" name="tonesel" data-tc="3"><span class="s tk3" data-noi18n>马 mǎ</span><span class="small">三声</span></label><label><input type="radio" name="tonesel" data-tc="4"><span class="s tk4" data-noi18n>骂 mà</span><span class="small">四声</span></label></div>
+          <div class="tone-pick"><div class="tone-row" data-tr="1"><label><input type="checkbox" data-tc="1"><span class="s tk1" data-noi18n>妈 mā</span><span class="small">一声</span></label><div class="sw" data-sw="1"></div></div><div class="tone-row" data-tr="2"><label><input type="checkbox" data-tc="2"><span class="s tk2" data-noi18n>麻 má</span><span class="small">二声</span></label><div class="sw" data-sw="2"></div></div><div class="tone-row" data-tr="3"><label><input type="checkbox" data-tc="3"><span class="s tk3" data-noi18n>马 mǎ</span><span class="small">三声</span></label><div class="sw" data-sw="3"></div></div><div class="tone-row" data-tr="4"><label><input type="checkbox" data-tc="4"><span class="s tk4" data-noi18n>骂 mà</span><span class="small">四声</span></label><div class="sw" data-sw="4"></div></div></div>
           <div class="checks tone-where"><label><input type="radio" name="tonewhere" value="all" id="tw-all"> 汉字和拼音</label><label><input type="radio" name="tonewhere" value="py" id="tw-py"> 只给拼音上色</label></div>
-          <p class="note hint" style="margin-top:6px">一次标一个声调，其他字保持黑色。可以每周换一个练。</p>
+          <p class="note hint" style="margin-top:6px">勾上你觉得难的声调，再给每个声调挑一个颜色；没勾的声调保持黑色。</p>
         </div>
         <label class="tog" style="margin-top:12px"><input type="checkbox" id="opt-cardstk"> 生词卡翻面后显示笔顺米字格</label>
       </div>
@@ -1506,8 +1514,16 @@ function zPy(w){ const a=zPyArr(w); if(w.length>1&&w.endsWith("儿")&&!ER_X.test
 function zTone(syl){ // 1–4 from the tone mark, 5 = neutral
   const m=String(syl||"").normalize("NFD").match(/[\u0304\u0301\u030c\u0300]/); return m?{"\u0304":1,"\u0301":2,"\u030c":3,"\u0300":4}[m[0]]:5; }
 const tonesOn=()=>S.settings.tones===true;
-const toneSel=()=>{ const t=S.settings.toneSel; return Array.isArray(t)&&t.length===1?t:[3]; }; // one tone at a time, one colour
-function applyTones(){ const b=document.body; b.classList.toggle("tones",tonesOn()); for(const k of [1,2,3,4]) b.classList.toggle("tc"+k,toneSel().includes(k)); b.classList.toggle("tonepy",S.settings.toneWhere==="py"); }
+const TPAL=[["teal","#0f8a80","#4fd1c5"],["coral","#d0483f","#f08a7e"],["amber","#b7740c","#f2b84b"],["green","#2e8540","#7fd08f"],["blue","#2f63c4","#8db3f3"],["violet","#7448c9","#b9a2f5"],["rose","#c03f78","#f09bbd"]]; // name, light, dark
+const toneSel=()=>{ const t=S.settings.toneSel; return Array.isArray(t)?t.filter(k=>k>=1&&k<=4):[3]; };
+const toneCol=k=>(S.settings.toneCol||{})[k]||"teal"; // a palette name or "#rrggbb"
+function toneVars(){ const st=document.documentElement.style;
+  for(const k of [1,2,3,4]){ const c=toneCol(k), p=TPAL.find(x=>x[0]===c);
+    const l=p?p[1]:/^#[0-9a-f]{6}$/i.test(c)?c:TPAL[0][1], d=p?p[2]:/^#[0-9a-f]{6}$/i.test(c)?`color-mix(in srgb, ${c} 62%, white)`:TPAL[0][2];
+    st.setProperty("--t"+k+"l",l); st.setProperty("--t"+k+"d",d); } }
+function renderToneSw(){ $$("[data-sw]").forEach(el=>{ const k=+el.dataset.sw, cur=toneCol(k), custom=/^#/.test(cur);
+  el.innerHTML=TPAL.map(([n,l])=>`<button type="button" data-swk="${k}" data-swc="${n}" style="background:${l}" aria-label="${n}" aria-pressed="${cur===n}"></button>`).join("")+`<label class="cust${custom?" on":""}" title="自定义颜色"><input type="color" data-swk="${k}" value="${custom?cur:"#0f8a80"}" aria-label="自定义颜色"></label>`; }); }
+function applyTones(){ toneVars(); const b=document.body; b.classList.toggle("tones",tonesOn()); for(const k of [1,2,3,4]) b.classList.toggle("tc"+k,toneSel().includes(k)); b.classList.toggle("tonepy",S.settings.toneWhere==="py"); }
 function zToneText(w,py){ // characters coloured by tone, no ruby (sheet headings)
   const ch=[...zs(w)], syl=String(py||"").trim().split(/\s+/).filter(Boolean), han=ch.filter(c=>HAN.test(c)).length;
   if(!syl.length||syl.length!==han) return esc(zs(w)); let k=0;
@@ -3860,7 +3876,7 @@ function renderSettings(){
   $("#lv-checks").innerHTML=LV().map(v=>`<label><input type="checkbox" value="${v}" ${lvSel().includes(v)?"checked":""}> ${v}</label>`).join("");
   $("#gl-checks").innerHTML=LANG[l].gl.map(k=>`<label><input type="checkbox" value="${k}" ${S.settings.gloss[l].includes(k)?"checked":""}> ${GLN[k]}</label>`).join("");
   $("#dir-t2g").checked=S.settings.dir==="t2g"; $("#dir-g2t").checked=S.settings.dir==="g2t";
-  $("#scr-s").checked=scr()==="s"; $("#scr-t").checked=scr()==="t"; $("#opt-py").checked=pyOn(); { const cs=$("#opt-cardstk"); if(cs) cs.checked=cardStkOn(); }{ const o=$("#opt-tone"); if(o) o.checked=tonesOn(); $$("[data-tc]").forEach(x=>x.checked=toneSel().includes(+x.dataset.tc)); const tw=$(S.settings.toneWhere==="py"?"#tw-py":"#tw-all"); if(tw) tw.checked=true; }
+  $("#scr-s").checked=scr()==="s"; $("#scr-t").checked=scr()==="t"; $("#opt-py").checked=pyOn(); { const cs=$("#opt-cardstk"); if(cs) cs.checked=cardStkOn(); }renderToneSw(); { const o=$("#opt-tone"); if(o) o.checked=tonesOn(); $$("[data-tc]").forEach(x=>x.checked=toneSel().includes(+x.dataset.tc)); const tw=$(S.settings.toneWhere==="py"?"#tw-py":"#tw-all"); if(tw) tw.checked=true; }
   $("#opt-autopile").checked=!!S.settings.autoPile; $("#opt-autospeak").checked=!!S.settings.autoSpeak; $("#opt-imgfront").checked=!!S.settings.imgFront; $("#opt-automine").checked=!!S.settings.autoMine;
   $("#opt-rate").value=S.settings.rate; $("#rate-v").textContent="×"+(+S.settings.rate).toFixed(2);
   $("#pile-lv").innerHTML=`<option value="">全部级别</option>`+LV().map(v=>`<option>${v}</option>`).join("");
@@ -3875,8 +3891,14 @@ $$('input[name="dir"]').forEach(r=>r.addEventListener("change",e=>{ S.settings.d
 $("#opt-autopile").addEventListener("change",e=>{ S.settings.autoPile=e.target.checked; save(); });
 $$('input[name="zscr"]').forEach(r=>r.addEventListener("change",e=>{ S.settings.script=e.target.value; save(); applyScr(); renderCard(); if(cur==="read") mgRender(); if(cur==="browse") renderBrowse(); if(cur==="pile") renderPile(); }));
 $("#opt-py").addEventListener("change",e=>{ S.settings.py=e.target.checked; save(); applyPy(); renderCard(); });
-$$("[data-tc]").forEach(x=>x.addEventListener("change",()=>{ $$("[data-tc]").forEach(y=>y.checked=y===x); S.settings.toneSel=[+x.dataset.tc]; if(!tonesOn()&&S.settings.toneSel.length){ S.settings.tones=true; const o=$("#opt-tone"); if(o) o.checked=true; const b=$("#mg-tone"); if(b) b.setAttribute("aria-pressed","true"); } save(); applyTones(); }));
+$$("[data-tc]").forEach(x=>x.addEventListener("change",()=>{ S.settings.toneSel=$$("[data-tc]").filter(y=>y.checked).map(y=>+y.dataset.tc); if(!tonesOn()&&S.settings.toneSel.length){ S.settings.tones=true; const o=$("#opt-tone"); if(o) o.checked=true; const b=$("#mg-tone"); if(b) b.setAttribute("aria-pressed","true"); } save(); applyTones(); }));
 $("#opt-cardstk").addEventListener("change",e=>{ S.settings.cardStk=e.target.checked; save(); renderCard(); });
+document.addEventListener("click",e=>{ const b=e.target.closest("button[data-swc]"); if(!b) return; const k=+b.dataset.swk;
+  S.settings.toneCol=Object.assign({},S.settings.toneCol,{[k]:b.dataset.swc}); if(!toneSel().includes(k)){ S.settings.toneSel=toneSel().concat(k).sort(); const c=$(`[data-tc="${k}"]`); if(c) c.checked=true; }
+  if(!tonesOn()){ S.settings.tones=true; const o=$("#opt-tone"); if(o) o.checked=true; const t=$("#mg-tone"); if(t) t.setAttribute("aria-pressed","true"); } save(); applyTones(); renderToneSw(); });
+document.addEventListener("input",e=>{ const i=e.target.closest('input[type=color][data-swk]'); if(!i) return; const k=+i.dataset.swk;
+  S.settings.toneCol=Object.assign({},S.settings.toneCol,{[k]:i.value}); if(!toneSel().includes(k)){ S.settings.toneSel=toneSel().concat(k).sort(); const c=$(`[data-tc="${k}"]`); if(c) c.checked=true; }
+  if(!tonesOn()){ S.settings.tones=true; const o=$("#opt-tone"); if(o) o.checked=true; } save(); applyTones(); i.closest("label").classList.add("on"); $$(`button[data-swk="${k}"]`).forEach(x=>x.setAttribute("aria-pressed","false")); });
 $$('[name="tonewhere"]').forEach(x=>x.addEventListener("change",()=>{ S.settings.toneWhere=x.value; save(); applyTones(); }));
 $("#opt-tone").addEventListener("change",e=>{ S.settings.tones=e.target.checked; save(); applyTones(); const b=$("#mg-tone"); if(b) b.setAttribute("aria-pressed",tonesOn()); });
 $("#opt-autospeak").addEventListener("change",e=>{ S.settings.autoSpeak=e.target.checked; save(); });
@@ -4431,7 +4453,8 @@ const UI_DICT=[
 ["四声", "4th tone", "4. Ton", "4º tom", "四聲"],
 ["汉字和拼音", "Characters and pinyin", "Zeichen und Pinyin", "Caracteres e pinyin", "漢字和拼音"],
 ["只给拼音上色", "Pinyin only", "Nur Pinyin", "Só o pinyin", "只給拼音上色"],
-["一次标一个声调，其他字保持黑色。可以每周换一个练。", "One tone at a time is highlighted; everything else stays black. Switch to another tone each week.", "Es wird jeweils ein Ton hervorgehoben, der Rest bleibt schwarz. Wechsle zum Beispiel jede Woche den Ton.", "Um tom de cada vez é destacado; o resto fica preto. Troque de tom a cada semana.", "一次標一個聲調，其他字保持黑色。可以每週換一個練。"],
+["勾上你觉得难的声调，再给每个声调挑一个颜色；没勾的声调保持黑色。", "Tick the tones you find hard and pick a colour for each; unticked tones stay black.", "Kreuze die Töne an, die dir schwerfallen, und wähle für jeden eine Farbe; die anderen bleiben schwarz.", "Marque os tons difíceis para você e escolha uma cor para cada; os outros ficam pretos.", "勾上你覺得難的聲調，再給每個聲調挑一個顏色；沒勾的聲調保持黑色。"],
+["自定义颜色", "Custom colour", "Eigene Farbe", "Cor personalizada", "自訂顏色"],
 ["跟读这句", "Shadow this sentence", "Diesen Satz nachsprechen", "Repita esta frase", "跟讀這句"],
 ["听原句", "Listen", "Anhören", "Ouvir", "聽原句"],
 ["录我的", "Record me", "Mich aufnehmen", "Gravar", "錄我的"],
