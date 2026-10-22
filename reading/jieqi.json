@@ -667,6 +667,1247 @@
      "license": "link only"
     }
    ]
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "小雪",
+   "date": "2026-11-22",
+   "title": "小雪：一边下，一边化",
+   "title_en": "Minor Snow: falling and melting",
+   "title_de": "Leichter Schnee: fällt und schmilzt",
+   "dek": "冬天的第二个节气。",
+   "paragraphs": [
+    "十一月二十二日前后是小雪。小雪的意思是：天冷了，开始下雪了，可是雪还不大。",
+    "小雪的时候，雪花常常一边下，一边化。早上地上白白的，到了中午，雪就没有了。",
+    "这个时候，很多人家开始做咸菜。有一句老话说：“小雪腌菜，大雪腌肉。”冬天的新鲜菜少，做好的咸菜可以吃很久。",
+    "在德国，十一月底很多城市开始有圣诞市场。下午天很早就黑了，可是街上有很多灯，非常漂亮。"
+   ],
+   "paragraphs_en": [
+    "Minor Snow falls around 22 November. It means: it has turned cold and the first snow comes, but there isn't much of it yet.",
+    "Around Minor Snow, the snowflakes often melt while they are still falling. In the morning the ground is white, and by noon the snow is gone.",
+    "At this time many families start making pickled vegetables. An old saying goes: \"At Minor Snow pickle the vegetables, at Major Snow cure the meat.\" There are few fresh vegetables in winter, and pickles keep for a long time.",
+    "In Germany, many towns open their Christmas markets at the end of November. It gets dark very early in the afternoon, but the streets are full of lights and look beautiful."
+   ],
+   "paragraphs_de": [
+    "Um den 22. November beginnt „Leichter Schnee“. Das heißt: Es ist kalt geworden, der erste Schnee fällt, aber es ist noch nicht viel.",
+    "In dieser Zeit schmelzen die Schneeflocken oft schon, während sie fallen. Morgens ist der Boden weiß, mittags ist der Schnee wieder weg.",
+    "Jetzt fangen viele Familien an, Gemüse einzulegen. Ein alter Spruch sagt: „Bei Leichtem Schnee legt man Gemüse ein, bei Großem Schnee pökelt man Fleisch.“ Im Winter gibt es wenig frisches Gemüse, und Eingelegtes hält lange.",
+    "In Deutschland öffnen Ende November in vielen Städten die Weihnachtsmärkte. Nachmittags wird es sehr früh dunkel, aber auf den Straßen hängen viele Lichter, und alles sieht wunderschön aus."
+   ],
+   "glossary": [
+    {
+     "w": "小雪",
+     "p": "xiǎo xuě",
+     "en": "Minor Snow (solar term, around 22 November)",
+     "de": "Leichter Schnee (Sonnenperiode, um den 22. November)"
+    },
+    {
+     "w": "雪花",
+     "p": "xuě huā",
+     "en": "snowflake",
+     "de": "die Schneeflocke"
+    },
+    {
+     "w": "化",
+     "p": "huà",
+     "en": "to melt",
+     "de": "schmelzen"
+    },
+    {
+     "w": "咸菜",
+     "p": "xián cài",
+     "en": "pickled vegetables",
+     "de": "eingelegtes Gemüse"
+    },
+    {
+     "w": "腌",
+     "p": "yān",
+     "en": "to pickle, salt",
+     "de": "einlegen, pökeln"
+    },
+    {
+     "w": "老话",
+     "p": "lǎo huà",
+     "en": "old saying",
+     "de": "alter Spruch"
+    },
+    {
+     "w": "新鲜",
+     "p": "xīn xiān",
+     "en": "fresh",
+     "de": "frisch"
+    },
+    {
+     "w": "圣诞市场",
+     "p": "shèng dàn shì chǎng",
+     "en": "Christmas market",
+     "de": "der Weihnachtsmarkt"
+    }
+   ],
+   "grammar": "一边……一边…… means two things happen at the same time: 雪花一边下，一边化 = the snowflakes melt while they fall. Usually a person does both: 我一边吃饭，一边看书.",
+   "grammar_de": "一边……一边…… heißt: zwei Dinge geschehen gleichzeitig: 雪花一边下，一边化 = Die Flocken schmelzen, während sie fallen. Meist macht eine Person beides: 我一边吃饭，一边看书.",
+   "questions": [
+    "小雪的时候，雪大不大？",
+    "为什么冬天以前要做咸菜？",
+    "你喜欢下雪吗？"
+   ],
+   "poem": {
+    "title": "夜雪",
+    "author": "白居易",
+    "dynasty": "唐",
+    "lines": [
+     "已讶衾枕冷，",
+     "复见窗户明。",
+     "夜深知雪重，",
+     "时闻折竹声。"
+    ],
+    "explain_zh": "夜里，诗人觉得被子和枕头很冷，又看见窗户亮亮的。原来外面下雪了！雪下得很大，他还听见竹子被雪压断的声音。",
+    "explain_en": "At night the poet is surprised how cold his quilt and pillow are, then notices the window is bright: it has snowed. The snow must be heavy, because now and then he hears bamboo snapping under its weight.",
+    "explain_de": "Nachts wundert sich der Dichter, wie kalt Decke und Kissen sind, und sieht dann, dass das Fenster hell ist: Es hat geschneit. Der Schnee muss schwer sein, denn ab und zu hört er Bambus unter seiner Last brechen."
+   },
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK4",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "小雪",
+   "date": "2026-11-22",
+   "title": "小雪：彩虹藏起来了",
+   "title_en": "Minor Snow: the rainbows hide",
+   "title_de": "Leichter Schnee: Die Regenbögen verstecken sich",
+   "dek": "雪落下来，还留不住；天和地，各走各的路。",
+   "paragraphs": [
+    "小雪一般在每年十一月二十一日到二十三日之间，是冬季的第二个节气。名字里的“小”，说的不是雪花小，而是雪还少：这时北方开始下雪，可是地面还不够冷，雪常常一落地就化了。",
+    "古人给小雪定的三候很有意思。第一候是“虹藏不见”：雨少了，天上也就看不到彩虹了。第二候是“天气上腾，地气下降”：古人觉得，天的气往上走，地的气往下沉，两者不再相通。第三候是“闭塞而成冬”：天地像关上了门，真正的冬天开始了。",
+    "在没有冰箱的年代，人们要趁天冷把食物保存起来。民间有“小雪腌菜，大雪腌肉”的说法：先把白菜、萝卜腌成咸菜，到了大雪再腌鱼和肉，一直吃到过年。",
+    "德国这时候也在为冬天做准备。十一月底，各个城市的圣诞市场陆续开张，空气里飘着烤杏仁和热红酒的味道。灯光、人群和热闹，让最冷最暗的季节有了一点“年味”。"
+   ],
+   "paragraphs_en": [
+    "Minor Snow usually falls between 21 and 23 November and is the second solar term of winter. The \"minor\" in its name doesn't mean small snowflakes, but little snow: snow begins to fall in the north, but the ground isn't cold enough yet, so it often melts as soon as it lands.",
+    "The ancients gave Minor Snow three charming pentads. The first is \"rainbows hide and are not seen\": with less rain, there are no more rainbows. The second is \"the energy of heaven rises, the energy of earth sinks\": people believed the air of heaven moved upward and that of the earth downward, so the two no longer met. The third is \"everything closes and becomes winter\": as if heaven and earth had shut their doors, real winter begins.",
+    "In the days before fridges, people had to use the cold to preserve food. A popular saying goes: \"At Minor Snow pickle the vegetables, at Major Snow cure the meat\": first Chinese cabbage and radishes are pickled, then at Major Snow fish and meat are cured, and it all lasts until the New Year.",
+    "Germany is getting ready for winter too. At the end of November, the Christmas markets open one after another, and the air smells of roasted almonds and mulled wine. Lights, crowds and bustle give the coldest, darkest season a little festive feeling."
+   ],
+   "paragraphs_de": [
+    "„Leichter Schnee“ fällt meist zwischen dem 21. und 23. November und ist die zweite Sonnenperiode des Winters. Das „leicht“ im Namen meint nicht kleine Flocken, sondern wenig Schnee: Im Norden beginnt es zu schneien, aber der Boden ist noch nicht kalt genug, und der Schnee schmilzt oft, sobald er liegt.",
+    "Die drei „Hou“ dieser Zeit sind reizvoll. Das erste heißt „die Regenbögen verstecken sich“: Es regnet weniger, also sieht man keine Regenbögen mehr. Das zweite heißt „die Kraft des Himmels steigt, die der Erde sinkt“: Man glaubte, die Luft des Himmels gehe nach oben und die der Erde nach unten, sodass beide nicht mehr zusammenkommen. Das dritte heißt „alles schließt sich, und es wird Winter“: Als hätten Himmel und Erde ihre Türen geschlossen, beginnt der richtige Winter.",
+    "Bevor es Kühlschränke gab, musste man die Kälte nutzen, um Essen haltbar zu machen. Ein Volksspruch lautet: „Bei Leichtem Schnee legt man Gemüse ein, bei Großem Schnee pökelt man Fleisch“: Zuerst werden Chinakohl und Rettich eingelegt, beim Großen Schnee dann Fisch und Fleisch gepökelt – das reicht bis zum Neujahrsfest.",
+    "Auch Deutschland bereitet sich jetzt auf den Winter vor. Ende November öffnen nach und nach die Weihnachtsmärkte, und es duftet nach gebrannten Mandeln und Glühwein. Lichter, Menschen und Trubel geben der kältesten, dunkelsten Jahreszeit ein wenig Festtagsstimmung."
+   ],
+   "glossary": [
+    {
+     "w": "地面",
+     "p": "dì miàn",
+     "en": "ground",
+     "de": "der Boden"
+    },
+    {
+     "w": "彩虹",
+     "p": "cǎi hóng",
+     "en": "rainbow",
+     "de": "der Regenbogen"
+    },
+    {
+     "w": "相通",
+     "p": "xiāng tōng",
+     "en": "to be connected, communicate",
+     "de": "miteinander verbunden sein"
+    },
+    {
+     "w": "闭塞",
+     "p": "bì sè",
+     "en": "closed off, blocked",
+     "de": "verschlossen"
+    },
+    {
+     "w": "冰箱",
+     "p": "bīng xiāng",
+     "en": "fridge",
+     "de": "der Kühlschrank"
+    },
+    {
+     "w": "趁",
+     "p": "chèn",
+     "en": "to take advantage of (a time)",
+     "de": "(eine Zeit) nutzen"
+    },
+    {
+     "w": "保存",
+     "p": "bǎo cún",
+     "en": "to preserve, keep",
+     "de": "aufbewahren, haltbar machen"
+    },
+    {
+     "w": "萝卜",
+     "p": "luó bo",
+     "en": "radish",
+     "de": "der Rettich"
+    },
+    {
+     "w": "陆续",
+     "p": "lù xù",
+     "en": "one after another",
+     "de": "nach und nach"
+    },
+    {
+     "w": "开张",
+     "p": "kāi zhāng",
+     "en": "to open (for business)",
+     "de": "eröffnen"
+    },
+    {
+     "w": "杏仁",
+     "p": "xìng rén",
+     "en": "almond",
+     "de": "die Mandel"
+    },
+    {
+     "w": "年味",
+     "p": "nián wèi",
+     "en": "festive New Year atmosphere",
+     "de": "Festtagsstimmung (zum Neujahr)"
+    }
+   ],
+   "grammar": "趁 + time/situation means \"while (the chance is there)\": 趁天冷把食物保存起来 = use the cold weather to preserve food. Also: 趁热吃 = eat it while it's hot.",
+   "grammar_de": "趁 + Zeit/Lage heißt „solange (die Gelegenheit da ist)“: 趁天冷把食物保存起来 = die Kälte nutzen, um Essen haltbar zu machen. Auch: 趁热吃 = iss, solange es warm ist.",
+   "questions": [
+    "小雪的“小”是什么意思？",
+    "“小雪腌菜，大雪腌肉”说的是什么？",
+    "在你住的地方，冬天以前人们会做什么准备？"
+   ],
+   "poem": {
+    "title": "逢雪宿芙蓉山主人",
+    "author": "刘长卿",
+    "dynasty": "唐",
+    "lines": [
+     "日暮苍山远，",
+     "天寒白屋贫。",
+     "柴门闻犬吠，",
+     "风雪夜归人。"
+    ],
+    "explain_zh": "天快黑了，青色的山显得更远；天气很冷，山里的小屋又白又简陋。诗人在这户人家借住。夜里，他听见柴门外的狗在叫，原来是主人冒着风雪回家了。",
+    "explain_en": "Dusk falls and the grey-green mountains seem farther away; it is cold, and the little white house is poor. The poet is staying the night. Then he hears a dog bark at the brushwood gate: the host is coming home through wind and snow.",
+    "explain_de": "Es dämmert, die graugrünen Berge rücken in die Ferne; es ist kalt, und die kleine weiße Hütte ist ärmlich. Der Dichter übernachtet dort. Da hört er am Reisigtor einen Hund bellen: Der Hausherr kommt durch Wind und Schnee nach Hause."
+   },
+   "sources": [
+    {
+     "title": "農業部：二十四節氣（引用臺北市立天文科學教育館資料）",
+     "url": "https://www.moa.gov.tw/ws.php?id=2507770",
+     "license": "link only"
+    },
+    {
+     "title": "国立天文台 暦Wiki：七十二候",
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/wiki/B5A8C0E12FBCB7BDBDC6F3B8F5.html",
+     "license": "link only"
+    },
+    {
+     "title": "星島教室：二十四節氣「大雪」由來",
+     "url": "https://www.stheadline.com/knowledge/3525094/",
+     "license": "link only"
+    }
+   ]
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "大雪",
+   "date": "2026-12-07",
+   "title": "大雪：寒号鸟的故事",
+   "title_en": "Major Snow: the story of the cold-crying bird",
+   "title_de": "Großer Schnee: Die Geschichte vom Kälteschrei-Vogel",
+   "dek": "一个关于准备的老故事。",
+   "paragraphs": [
+    "十二月七日前后是大雪。大雪的时候，不一定下很大的雪。可是天越来越冷，雪落在地上，就不容易化了。",
+    "有一个老故事。山上有一只小鸟，叫寒号鸟。秋天的时候，别的鸟都在做窝。寒号鸟说：“天气这么好，明天再做吧！”",
+    "大雪来了，别的鸟在窝里很暖和。寒号鸟没有窝，冷得一直叫。可是已经太晚了。",
+    "这个故事告诉我们：要早一点准备，别等到冷了才着急。",
+    "在德国，十二月六日是圣尼古拉节。前一天晚上，孩子们把鞋子放在门口。第二天早上，鞋子里有糖和小礼物。"
+   ],
+   "paragraphs_en": [
+    "Major Snow falls around 7 December. It doesn't always snow heavily then. But it gets colder and colder, and snow that falls on the ground doesn't melt so easily any more.",
+    "There is an old story. On a mountain lived a little bird called the cold-crying bird. In autumn all the other birds were building nests. The cold-crying bird said: \"The weather is so nice – I'll do it tomorrow!\"",
+    "Then Major Snow came. The other birds were warm in their nests. The cold-crying bird had no nest and cried and cried with cold. But it was already too late.",
+    "This story teaches us: get ready a little earlier, and don't wait until it's cold to start worrying.",
+    "In Germany, 6 December is St Nicholas' Day. The evening before, children put their shoes by the door. The next morning there are sweets and little presents in them."
+   ],
+   "paragraphs_de": [
+    "Um den 7. Dezember beginnt „Großer Schnee“. Dann schneit es nicht unbedingt stark. Aber es wird immer kälter, und der Schnee, der auf den Boden fällt, schmilzt nicht mehr so leicht.",
+    "Es gibt eine alte Geschichte. Auf einem Berg lebte ein kleiner Vogel, der Kälteschrei-Vogel. Im Herbst bauten alle anderen Vögel Nester. Der Kälteschrei-Vogel sagte: „Das Wetter ist so schön – das mache ich morgen!“",
+    "Dann kam der Große Schnee. Die anderen Vögel saßen warm in ihren Nestern. Der Kälteschrei-Vogel hatte kein Nest und schrie und schrie vor Kälte. Aber es war schon zu spät.",
+    "Die Geschichte sagt uns: Bereite dich etwas früher vor und warte nicht, bis es kalt ist und du in Eile gerätst.",
+    "In Deutschland ist am 6. Dezember Nikolaustag. Am Abend vorher stellen die Kinder ihre Schuhe vor die Tür. Am nächsten Morgen sind Süßigkeiten und kleine Geschenke darin."
+   ],
+   "glossary": [
+    {
+     "w": "大雪",
+     "p": "dà xuě",
+     "en": "Major Snow (solar term, around 7 December)",
+     "de": "Großer Schnee (Sonnenperiode, um den 7. Dezember)"
+    },
+    {
+     "w": "越来越",
+     "p": "yuè lái yuè",
+     "en": "more and more",
+     "de": "immer mehr"
+    },
+    {
+     "w": "窝",
+     "p": "wō",
+     "en": "nest",
+     "de": "das Nest"
+    },
+    {
+     "w": "暖和",
+     "p": "nuǎn huo",
+     "en": "warm",
+     "de": "warm"
+    },
+    {
+     "w": "准备",
+     "p": "zhǔn bèi",
+     "en": "to prepare",
+     "de": "vorbereiten"
+    },
+    {
+     "w": "着急",
+     "p": "zháo jí",
+     "en": "worried, in a hurry",
+     "de": "beunruhigt, in Eile"
+    },
+    {
+     "w": "鞋子",
+     "p": "xié zi",
+     "en": "shoe",
+     "de": "der Schuh"
+    },
+    {
+     "w": "礼物",
+     "p": "lǐ wù",
+     "en": "present",
+     "de": "das Geschenk"
+    }
+   ],
+   "grammar": "越来越 + adjective = more and more …: 天越来越冷 = it's getting colder and colder.",
+   "grammar_de": "越来越 + Adjektiv = immer …er: 天越来越冷 = Es wird immer kälter.",
+   "questions": [
+    "寒号鸟为什么没有窝？",
+    "这个故事告诉我们什么？",
+    "冬天来以前，你会准备什么？"
+   ],
+   "poem": {
+    "title": "雪梅",
+    "author": "卢梅坡",
+    "dynasty": "宋",
+    "lines": [
+     "梅雪争春未肯降，",
+     "骚人阁笔费评章。",
+     "梅须逊雪三分白，",
+     "雪却输梅一段香。"
+    ],
+    "explain_zh": "梅花和雪都说自己是春天最美的，谁也不服谁。诗人拿着笔，想了很久也说不清谁更好。梅花没有雪那么白，可是雪也没有梅花那么香。",
+    "explain_en": "Plum blossom and snow both claim to be the loveliest sign of spring, and neither gives in. The poet puts down his brush, unable to judge. In the end: the plum is a little less white than the snow, but the snow lacks the plum's fragrance.",
+    "explain_de": "Pflaumenblüte und Schnee behaupten beide, das schönste Zeichen des Frühlings zu sein, und keiner gibt nach. Der Dichter legt den Pinsel weg und kann nicht entscheiden. Am Ende: Die Blüte ist etwas weniger weiß als der Schnee, aber dem Schnee fehlt ihr Duft."
+   },
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK4",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "大雪",
+   "date": "2026-12-07",
+   "title": "大雪：雪开始积起来",
+   "title_en": "Major Snow: when the snow begins to stay",
+   "title_de": "Großer Schnee: Wenn der Schnee liegen bleibt",
+   "dek": "大雪并不是一定下大雪，而是冬天真正站稳了。",
+   "paragraphs": [
+    "大雪一般在每年十二月六日到八日之间。和小雪一样，它的名字也容易让人误会：大雪并不是说这时候一定会下很大的雪，而是天气更冷了，雪落下来以后开始积在地上，不再很快化掉。",
+    "大雪的三候，第一候是“鹖鸟不鸣”，一种在冬夜鸣叫的鸟，到了最冷的时候也安静下来；第二候是“虎始交”，老虎开始寻找伴侣；第三候是“荔挺出”，一种叫“荔挺”的兰草，在寒冷中冒出了新芽。",
+    "民间说“小雪腌菜，大雪腌肉”。到了大雪，很多人家开始腌鱼腌肉：把粗盐和八角、桂皮、花椒等香料抹在肉上，放进缸里腌上半个月左右，再挂到屋檐下晒干。做好的腊肉，正好赶上过年。",
+    "古代文人喜欢赏雪写诗，不过也有人从雪里看到了别的东西。唐代诗人罗隐在《雪》里写道：“尽道丰年瑞，丰年事若何。长安有贫者，为瑞不宜多。”大家都说雪是丰年的好兆头，可是对城里的穷人来说，这样的“好兆头”还是少一点好。",
+    "在德国，十二月下午四点多天就黑了。不过家家窗户上挂着灯，很多孩子每天打开一格降临节日历，数着日子等圣诞节。"
+   ],
+   "paragraphs_en": [
+    "Major Snow usually falls between 6 and 8 December. Like Minor Snow, its name is easy to misunderstand: it doesn't mean there will always be heavy snow, but that it is colder now and snow that falls begins to stay on the ground instead of melting quickly.",
+    "The first pentad of Major Snow is \"the hedan bird no longer calls\": a bird that cries on winter nights falls silent in the deepest cold. The second is \"tigers begin to mate\". The third is \"the liting grass sprouts\": a kind of orchid-like grass puts out new shoots in the cold.",
+    "People say: \"At Minor Snow pickle the vegetables, at Major Snow cure the meat.\" At Major Snow many families begin to cure fish and meat: they rub coarse salt with spices such as star anise, cinnamon and Sichuan pepper into the meat, leave it in a vat for about half a month, then hang it under the eaves to dry. The cured meat is ready just in time for the New Year.",
+    "Scholars of old loved to admire the snow and write poems, but some saw something else in it. In his poem \"Snow\", the Tang poet Luo Yin wrote: \"Everyone says it's a sign of a good harvest – but what does a good harvest mean? In Chang'an there are poor people; for them such good signs had better be few.\" Snow may promise a rich year, but for the city's poor, less of this \"good omen\" would be better.",
+    "In Germany it gets dark shortly after four o'clock in December. Yet lights hang in every window, and many children open one door of their Advent calendar each day, counting down to Christmas."
+   ],
+   "paragraphs_de": [
+    "„Großer Schnee“ fällt meist zwischen dem 6. und 8. Dezember. Wie beim Leichten Schnee führt der Name leicht in die Irre: Es heißt nicht, dass es dann immer stark schneit, sondern dass es kälter ist und der Schnee liegen bleibt, statt schnell zu schmelzen.",
+    "Das erste „Hou“ heißt „der Hedan-Vogel ruft nicht mehr“: Ein Vogel, der in Winternächten ruft, verstummt in der größten Kälte. Das zweite heißt „die Tiger beginnen sich zu paaren“. Das dritte heißt „das Liting-Gras treibt aus“: Eine orchideenartige Grasart bekommt in der Kälte neue Triebe.",
+    "Man sagt: „Bei Leichtem Schnee legt man Gemüse ein, bei Großem Schnee pökelt man Fleisch.“ Jetzt beginnen viele Familien, Fisch und Fleisch zu pökeln: Grobes Salz mit Gewürzen wie Sternanis, Zimt und Szechuanpfeffer wird ins Fleisch gerieben, das etwa einen halben Monat in einem Bottich liegt und dann unter dem Dachvorsprung trocknet. Pünktlich zum Neujahrsfest ist es fertig.",
+    "Früher bewunderten Gelehrte gern den Schnee und schrieben Gedichte, doch manche sahen darin auch anderes. Der Tang-Dichter Luo Yin schrieb in „Schnee“: „Alle nennen ihn ein Zeichen für ein gutes Jahr – doch was heißt schon ein gutes Jahr? In Chang’an gibt es Arme; für sie sollte es von solchen Zeichen besser wenige geben.“",
+    "In Deutschland wird es im Dezember kurz nach vier dunkel. Doch in jedem Fenster hängen Lichter, und viele Kinder öffnen jeden Tag ein Türchen ihres Adventskalenders und zählen die Tage bis Weihnachten."
+   ],
+   "glossary": [
+    {
+     "w": "误会",
+     "p": "wù huì",
+     "en": "to misunderstand",
+     "de": "missverstehen"
+    },
+    {
+     "w": "积",
+     "p": "jī",
+     "en": "to pile up, accumulate",
+     "de": "sich ansammeln, liegen bleiben"
+    },
+    {
+     "w": "伴侣",
+     "p": "bàn lǚ",
+     "en": "partner, mate",
+     "de": "der Partner"
+    },
+    {
+     "w": "冒",
+     "p": "mào",
+     "en": "to emerge, sprout",
+     "de": "hervorkommen, sprießen"
+    },
+    {
+     "w": "粗盐",
+     "p": "cū yán",
+     "en": "coarse salt",
+     "de": "grobes Salz"
+    },
+    {
+     "w": "抹",
+     "p": "mǒ",
+     "en": "to rub, spread",
+     "de": "einreiben, bestreichen"
+    },
+    {
+     "w": "缸",
+     "p": "gāng",
+     "en": "vat, crock",
+     "de": "der Bottich, der Steintopf"
+    },
+    {
+     "w": "屋檐",
+     "p": "wū yán",
+     "en": "eaves",
+     "de": "der Dachvorsprung"
+    },
+    {
+     "w": "赶上",
+     "p": "gǎn shàng",
+     "en": "to be in time for",
+     "de": "rechtzeitig fertig sein für"
+    },
+    {
+     "w": "丰年",
+     "p": "fēng nián",
+     "en": "year of good harvest",
+     "de": "das gute Erntejahr"
+    },
+    {
+     "w": "兆头",
+     "p": "zhào tou",
+     "en": "omen, sign",
+     "de": "das Vorzeichen"
+    },
+    {
+     "w": "降临节日历",
+     "p": "jiàng lín jié rì lì",
+     "en": "Advent calendar",
+     "de": "der Adventskalender"
+    }
+   ],
+   "grammar": "并不是……而是…… corrects an idea: 并不是说一定会下很大的雪，而是…… = it doesn't mean …, but rather …. 并 adds emphasis to the negation.",
+   "grammar_de": "并不是……而是…… korrigiert eine Annahme: 并不是说一定会下很大的雪，而是…… = Es heißt nicht …, sondern …. 并 verstärkt die Verneinung.",
+   "questions": [
+    "大雪的名字为什么容易让人误会？",
+    "罗隐为什么说“为瑞不宜多”？",
+    "你会怎么准备过冬？"
+   ],
+   "poem": {
+    "title": "白雪歌送武判官归京（节选）",
+    "author": "岑参",
+    "dynasty": "唐",
+    "lines": [
+     "北风卷地白草折，",
+     "胡天八月即飞雪。",
+     "忽如一夜春风来，",
+     "千树万树梨花开。"
+    ],
+    "explain_zh": "北风卷过大地，白草都被吹断了；在西北的边塞，八月就开始下雪。一夜之间，雪落满了树枝，好像春风忽然吹来，千万棵梨树一下子都开了花。（这是长诗的开头四句。）",
+    "explain_en": "The north wind sweeps the land and snaps the white grass; on the north-western frontier snow flies already in the eighth month. Overnight the branches are covered, as if a spring wind had suddenly come and thousands of pear trees burst into blossom. (The opening lines of a longer poem.)",
+    "explain_de": "Der Nordwind fegt übers Land und knickt das weiße Gras; an der Nordwestgrenze fliegt schon im achten Monat Schnee. Über Nacht sind die Zweige bedeckt, als wäre plötzlich ein Frühlingswind gekommen und tausende Birnbäume hätten zu blühen begonnen. (Die ersten Zeilen eines längeren Gedichts.)"
+   },
+   "sources": [
+    {
+     "title": "農業部：二十四節氣（引用臺北市立天文科學教育館資料）",
+     "url": "https://www.moa.gov.tw/ws.php?id=2507770",
+     "license": "link only"
+    },
+    {
+     "title": "国立天文台 暦Wiki：七十二候",
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/wiki/B5A8C0E12FBCB7BDBDC6F3B8F5.html",
+     "license": "link only"
+    },
+    {
+     "title": "星島教室：二十四節氣「大雪」由來",
+     "url": "https://www.stheadline.com/knowledge/3525094/",
+     "license": "link only"
+    }
+   ]
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "冬至",
+   "date": "2026-12-22",
+   "title": "冬至：最长的晚上",
+   "title_en": "Winter Solstice: the longest night",
+   "title_de": "Wintersonnenwende: die längste Nacht",
+   "dek": "冬至大过年。",
+   "paragraphs": [
+    "十二月二十二日前后是冬至。冬至这一天，白天最短，晚上最长。从这一天开始，白天会慢慢变长。",
+    "中国人很重视冬至，有一句话叫“冬至大过年”。这一天，一家人要在一起吃饭。",
+    "南方很多人家吃汤圆。汤圆是圆圆的，意思是一家人团团圆圆。北方很多人家吃饺子。",
+    "在德国，冬至以后没几天就是圣诞节。外面最冷、最黑的时候，家里有灯，有蜡烛，也有家人。"
+   ],
+   "paragraphs_en": [
+    "The Winter Solstice falls around 22 December. On this day the daytime is shortest and the night longest. From this day on, the days slowly get longer.",
+    "The Chinese take the Winter Solstice very seriously; there is a saying: \"The Winter Solstice is bigger than the New Year.\" On this day the family eats together.",
+    "In the south, many families eat tangyuan. Tangyuan are round, which stands for the whole family being together. In the north many families eat dumplings.",
+    "In Germany, Christmas comes just a few days after the solstice. When it is coldest and darkest outside, at home there are lights, candles – and family."
+   ],
+   "paragraphs_de": [
+    "Um den 22. Dezember ist Wintersonnenwende. An diesem Tag ist der Tag am kürzesten und die Nacht am längsten. Danach werden die Tage langsam wieder länger.",
+    "In China ist die Wintersonnenwende sehr wichtig; ein Spruch sagt: „Die Wintersonnenwende ist größer als das Neujahrsfest.“ An diesem Tag isst die Familie zusammen.",
+    "Im Süden essen viele Familien Tangyuan, runde Klößchen. Rund bedeutet: Die ganze Familie ist beisammen. Im Norden essen viele Familien Jiaozi.",
+    "In Deutschland ist ein paar Tage nach der Sonnenwende Weihnachten. Wenn es draußen am kältesten und dunkelsten ist, gibt es zu Hause Lichter, Kerzen – und die Familie."
+   ],
+   "glossary": [
+    {
+     "w": "冬至",
+     "p": "dōng zhì",
+     "en": "Winter Solstice (around 22 December)",
+     "de": "Wintersonnenwende (um den 22. Dezember)"
+    },
+    {
+     "w": "白天",
+     "p": "bái tiān",
+     "en": "daytime",
+     "de": "der Tag (Tageslicht)"
+    },
+    {
+     "w": "重视",
+     "p": "zhòng shì",
+     "en": "to take seriously, value",
+     "de": "wichtig nehmen"
+    },
+    {
+     "w": "过年",
+     "p": "guò nián",
+     "en": "(Chinese) New Year",
+     "de": "Neujahrsfest feiern"
+    },
+    {
+     "w": "汤圆",
+     "p": "tāng yuán",
+     "en": "tangyuan (sweet rice balls)",
+     "de": "Tangyuan (süße Reisklößchen)"
+    },
+    {
+     "w": "团圆",
+     "p": "tuán yuán",
+     "en": "(family) reunion",
+     "de": "Wiedersehen der Familie"
+    },
+    {
+     "w": "圣诞节",
+     "p": "shèng dàn jié",
+     "en": "Christmas",
+     "de": "Weihnachten"
+    },
+    {
+     "w": "蜡烛",
+     "p": "là zhú",
+     "en": "candle",
+     "de": "die Kerze"
+    }
+   ],
+   "grammar": "最 + adjective = the most …: 白天最短，晚上最长 = the day is shortest, the night longest. 最 always comes right before the adjective.",
+   "grammar_de": "最 + Adjektiv = am …sten: 白天最短，晚上最长 = Der Tag ist am kürzesten, die Nacht am längsten. 最 steht direkt vor dem Adjektiv.",
+   "questions": [
+    "冬至这一天，白天长还是晚上长？",
+    "汤圆为什么是圆的？",
+    "冬至的时候，你想和谁一起吃饭？"
+   ],
+   "poem": {
+    "title": "邯郸冬至夜思家",
+    "author": "白居易",
+    "dynasty": "唐",
+    "lines": [
+     "邯郸驿里逢冬至，",
+     "抱膝灯前影伴身。",
+     "想得家中夜深坐，",
+     "还应说着远行人。"
+    ],
+    "explain_zh": "冬至这天，诗人一个人住在外地的小旅馆里。他抱着腿坐在灯前，只有自己的影子陪着他。他想：家里的人今天晚上一定也坐到很晚，还在说着我这个出远门的人吧。",
+    "explain_en": "On the Winter Solstice the poet is alone at an inn far from home, hugging his knees by the lamp with only his shadow for company. He imagines his family sitting up late tonight – surely still talking about him, the one who is far away.",
+    "explain_de": "Zur Wintersonnenwende ist der Dichter allein in einer Herberge fern der Heimat; er sitzt mit angezogenen Knien vor der Lampe, nur sein Schatten leistet ihm Gesellschaft. Er stellt sich vor, wie seine Familie heute lange aufbleibt – und sicher noch von ihm spricht, der so weit fort ist."
+   },
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK4",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "冬至",
+   "date": "2026-12-22",
+   "title": "冬至：最黑的一天，光开始回来",
+   "title_en": "Winter Solstice: the darkest day, when light returns",
+   "title_de": "Wintersonnenwende: der dunkelste Tag, an dem das Licht zurückkehrt",
+   "dek": "过了冬至，白天一天比一天长。",
+   "paragraphs": [
+    "冬至一般在每年十二月二十一日到二十三日之间。这一天，太阳直射南回归线，北半球白天最短、黑夜最长。从这天起，白天就一点点变长了。",
+    "冬至是最早被古人测定的节气之一。人们在地上立一根竿子，观察中午影子的长短，影子最长的那一天就是冬至。正因为它代表着光明开始回来，古人把冬至看得非常重要，至今还有“冬至大过年”的说法，一家人要团聚吃饭。",
+    "冬至的三候是“蚯蚓结、麋角解、水泉动”：土里的蚯蚓还蜷成一团，麋鹿开始脱角，地下的泉水却已经悄悄流动起来。最冷的季节里，变化已经开始了。",
+    "从冬至起，人们还开始“数九”：每九天算一“九”，一共九个“九”，八十一天，数完了天气也就暖和了。有人会画一张“九九消寒图”，图上有八十一片梅花瓣，每天给一片涂上颜色，全部涂完，春天就到了。",
+    "在德国，冬至前后正是圣诞节。圣诞节前的四个星期叫“降临期”，很多家庭每个星期日在花环上多点一支蜡烛。不同的文化，都在一年最黑的时候点起了光。"
+   ],
+   "paragraphs_en": [
+    "The Winter Solstice usually falls between 21 and 23 December. On this day the sun stands directly over the Tropic of Capricorn; in the northern hemisphere the day is shortest and the night longest. From now on, the days grow longer bit by bit.",
+    "The Winter Solstice is one of the earliest solar terms the ancients determined. They set up a pole in the ground and watched the length of its shadow at noon: the day of the longest shadow was the solstice. Precisely because it stands for the return of light, it was considered very important, and people still say \"the Winter Solstice is bigger than the New Year\" – the family gathers for a meal.",
+    "The three pentads of the solstice are \"earthworms curl up, elk shed their antlers, springs begin to flow\": earthworms are still curled up in the soil, deer begin to lose their antlers, yet underground water is already quietly moving. In the coldest season, change has already begun.",
+    "From the solstice on, people also start \"counting the nines\": every nine days make one \"nine\", nine nines make eighty-one days, and when the counting is done it is warm again. Some draw a \"chart for dispelling the cold\" with eighty-one plum petals and colour in one each day; when all are coloured, spring has arrived.",
+    "In Germany, Christmas comes right around the solstice. The four weeks before it are Advent, and many families light one more candle on their wreath every Sunday. Different cultures all light lights in the darkest time of the year."
+   ],
+   "paragraphs_de": [
+    "Die Wintersonnenwende fällt meist zwischen den 21. und 23. Dezember. An diesem Tag steht die Sonne senkrecht über dem südlichen Wendekreis; auf der Nordhalbkugel ist der Tag am kürzesten und die Nacht am längsten. Danach werden die Tage Stück für Stück länger.",
+    "Die Wintersonnenwende gehört zu den ersten Sonnenperioden, die man im alten China bestimmte. Man stellte einen Stab auf und beobachtete mittags die Länge seines Schattens: Der Tag mit dem längsten Schatten war die Sonnenwende. Gerade weil sie für die Rückkehr des Lichts steht, galt sie als sehr wichtig, und bis heute sagt man „die Wintersonnenwende ist größer als das Neujahrsfest“ – die Familie kommt zum Essen zusammen.",
+    "Die drei „Hou“ der Sonnenwende lauten „die Regenwürmer rollen sich zusammen, die Hirsche werfen ihr Geweih ab, die Quellen beginnen zu fließen“: Die Würmer liegen noch eingerollt in der Erde, Hirsche verlieren ihr Geweih, doch unter der Erde bewegt sich das Wasser schon leise. In der kältesten Zeit hat die Veränderung bereits begonnen.",
+    "Ab der Sonnenwende „zählt man die Neunen“: Je neun Tage sind ein „Neun“, neun Neunen sind einundachtzig Tage, und danach ist es wieder warm. Manche malen ein „Bild zum Vertreiben der Kälte“ mit einundachtzig Pflaumenblütenblättern und malen jeden Tag eines aus; sind alle ausgemalt, ist der Frühling da.",
+    "In Deutschland liegt Weihnachten genau um die Sonnenwende. Die vier Wochen davor sind Advent, und viele Familien zünden jeden Sonntag eine Kerze mehr am Kranz an. Verschiedene Kulturen machen in der dunkelsten Zeit des Jahres alle Licht."
+   ],
+   "glossary": [
+    {
+     "w": "直射",
+     "p": "zhí shè",
+     "en": "to shine directly (overhead)",
+     "de": "senkrecht scheinen"
+    },
+    {
+     "w": "南回归线",
+     "p": "nán huí guī xiàn",
+     "en": "Tropic of Capricorn",
+     "de": "der südliche Wendekreis"
+    },
+    {
+     "w": "北半球",
+     "p": "běi bàn qiú",
+     "en": "northern hemisphere",
+     "de": "die Nordhalbkugel"
+    },
+    {
+     "w": "测定",
+     "p": "cè dìng",
+     "en": "to determine, measure",
+     "de": "bestimmen, messen"
+    },
+    {
+     "w": "竿子",
+     "p": "gān zi",
+     "en": "pole",
+     "de": "der Stab"
+    },
+    {
+     "w": "影子",
+     "p": "yǐng zi",
+     "en": "shadow",
+     "de": "der Schatten"
+    },
+    {
+     "w": "团聚",
+     "p": "tuán jù",
+     "en": "to get together (family)",
+     "de": "zusammenkommen"
+    },
+    {
+     "w": "蚯蚓",
+     "p": "qiū yǐn",
+     "en": "earthworm",
+     "de": "der Regenwurm"
+    },
+    {
+     "w": "悄悄",
+     "p": "qiāo qiāo",
+     "en": "quietly",
+     "de": "leise, unbemerkt"
+    },
+    {
+     "w": "数九",
+     "p": "shǔ jiǔ",
+     "en": "\"counting the nines\" (81 days after the solstice)",
+     "de": "„die Neunen zählen“ (81 Tage nach der Sonnenwende)"
+    },
+    {
+     "w": "涂",
+     "p": "tú",
+     "en": "to colour in, paint",
+     "de": "ausmalen"
+    },
+    {
+     "w": "降临期",
+     "p": "jiàng lín qī",
+     "en": "Advent",
+     "de": "der Advent"
+    }
+   ],
+   "grammar": "正因为……(所以)…… stresses the reason: 正因为它代表着光明开始回来，古人把冬至看得非常重要 = precisely because it stands for the return of light, it was considered very important.",
+   "grammar_de": "正因为……(所以)…… betont den Grund: 正因为它代表着光明开始回来，古人把冬至看得非常重要 = gerade weil sie für die Rückkehr des Lichts steht, galt sie als sehr wichtig.",
+   "questions": [
+    "古人是怎么找到冬至这一天的？",
+    "什么是“数九”？",
+    "一年最黑的时候，你喜欢做什么？"
+   ],
+   "poem": {
+    "title": "小至",
+    "author": "杜甫",
+    "dynasty": "唐",
+    "lines": [
+     "天时人事日相催，",
+     "冬至阳生春又来。",
+     "刺绣五纹添弱线，",
+     "吹葭六琯动浮灰。",
+     "岸容待腊将舒柳，",
+     "山意冲寒欲放梅。",
+     "云物不殊乡国异，",
+     "教儿且覆掌中杯。"
+    ],
+    "explain_zh": "季节和人事一天天催着人往前走，冬至一到，阳气开始回升，春天又要来了。白天变长，绣花的人每天能多绣几根线；律管里的灰飞了起来，说明节气到了。河岸的柳树等着发芽，山上的梅花也想冒着寒冷开放。这里的景色和家乡没有什么不同，可这里毕竟不是家乡。诗人对儿子说：先把杯里的酒喝了吧。",
+    "explain_en": "Seasons and human affairs press on day after day; with the solstice the light returns and spring will come again. The days lengthen, so embroiderers can add a few more threads; the ash in the pitch-pipes stirs, showing the term has arrived. Willows on the bank wait to unfurl, plum blossoms on the hill want to open despite the cold. The scenery is no different from home – but this is not home. So the poet tells his son: let's empty our cups.",
+    "explain_de": "Jahreszeiten und Menschenwerk drängen Tag für Tag voran; mit der Sonnenwende kehrt das Licht zurück, und der Frühling kommt wieder. Die Tage werden länger, die Stickerinnen schaffen ein paar Fäden mehr; die Asche in den Stimmpfeifen bewegt sich und zeigt den neuen Abschnitt an. Die Weiden am Ufer warten aufs Austreiben, die Pflaumenblüten am Berg wollen trotz Kälte aufgehen. Die Landschaft ist nicht anders als daheim – und doch ist es nicht die Heimat. Also sagt der Dichter zu seinem Sohn: Trinken wir unsere Becher aus."
+   },
+   "sources": [
+    {
+     "title": "農業部：二十四節氣（引用臺北市立天文科學教育館資料）",
+     "url": "https://www.moa.gov.tw/ws.php?id=2507770",
+     "license": "link only"
+    },
+    {
+     "title": "Hong Kong Observatory: 2026 major solar terms",
+     "url": "https://my.weather.gov.hk/en/gts/astron2026/files/2026SolarTerms24.pdf",
+     "license": "official"
+    },
+    {
+     "title": "国立天文台 暦Wiki：七十二候",
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/wiki/B5A8C0E12FBCB7BDBDC6F3B8F5.html",
+     "license": "link only"
+    },
+    {
+     "title": "香港教育局：二十四節氣（小學教學資源）",
+     "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/cross-kla-studies/ph-primary/references-resources/MET_series/24_Solar_Terms.pdf",
+     "license": "official"
+    }
+   ]
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "小寒",
+   "date": "2026-01-05",
+   "title": "小寒：梅花开了",
+   "title_en": "Minor Cold: the plum blossoms open",
+   "title_de": "Kleine Kälte: Die Pflaumen blühen",
+   "dek": "最冷的时候，花开始开了。",
+   "paragraphs": [
+    "一月五日前后是小寒。小寒的意思是：天已经很冷了，最冷的时候快到了。",
+    "这么冷的时候，有一种花开了，就是梅花。古人说，从小寒开始，一共有二十四种花，一种接一种地开，第一种就是梅花。",
+    "梅花有红的，也有白的，很香。下雪的时候，白白的雪里有红红的梅花，非常好看。",
+    "在德国，一月六日是三王节。有的孩子穿上漂亮的衣服，唱着歌，一家一家地走，在门上写下新年的祝福。"
+   ],
+   "paragraphs_en": [
+    "Minor Cold falls around 5 January. It means: it is already very cold, and the coldest time is near.",
+    "In this cold, one flower opens: the plum blossom. The ancients said that from Minor Cold on, twenty-four kinds of flowers open one after another – and the first is the plum blossom.",
+    "Plum blossoms can be red or white, and they smell sweet. When it snows, red plum blossoms in the white snow are very beautiful.",
+    "In Germany, 6 January is Epiphany, the Day of the Three Kings. Some children dress up in fine clothes, go from house to house singing, and write New Year blessings on the doors."
+   ],
+   "paragraphs_de": [
+    "Um den 5. Januar beginnt „Kleine Kälte“. Das heißt: Es ist schon sehr kalt, und die kälteste Zeit ist nah.",
+    "In dieser Kälte blüht eine Blume: die Pflaumenblüte. Früher sagte man, ab der Kleinen Kälte blühen nacheinander vierundzwanzig Blumen – und die erste ist die Pflaumenblüte.",
+    "Pflaumenblüten sind rot oder weiß und duften. Wenn es schneit, sehen rote Blüten im weißen Schnee wunderschön aus.",
+    "In Deutschland ist am 6. Januar Dreikönigstag. Manche Kinder ziehen schöne Gewänder an, gehen singend von Haus zu Haus und schreiben Segenswünsche fürs neue Jahr an die Türen."
+   ],
+   "glossary": [
+    {
+     "w": "小寒",
+     "p": "xiǎo hán",
+     "en": "Minor Cold (solar term, around 5 January)",
+     "de": "Kleine Kälte (Sonnenperiode, um den 5. Januar)"
+    },
+    {
+     "w": "梅花",
+     "p": "méi huā",
+     "en": "plum blossom",
+     "de": "die Pflaumenblüte"
+    },
+    {
+     "w": "一种接一种",
+     "p": "yì zhǒng jiē yì zhǒng",
+     "en": "one kind after another",
+     "de": "eine nach der anderen"
+    },
+    {
+     "w": "香",
+     "p": "xiāng",
+     "en": "fragrant",
+     "de": "duftend"
+    },
+    {
+     "w": "三王节",
+     "p": "sān wáng jié",
+     "en": "Epiphany (Three Kings' Day)",
+     "de": "der Dreikönigstag"
+    },
+    {
+     "w": "祝福",
+     "p": "zhù fú",
+     "en": "blessing, good wishes",
+     "de": "der Segenswunsch"
+    }
+   ],
+   "grammar": "Adjective + 的 can stand for a noun: 梅花有红的，也有白的 = there are red ones and white ones. The noun (梅花) is understood.",
+   "grammar_de": "Adjektiv + 的 kann ein Nomen ersetzen: 梅花有红的，也有白的 = Es gibt rote und weiße. Das Nomen (梅花) versteht man mit.",
+   "questions": [
+    "小寒的时候，什么花开了？",
+    "梅花是什么颜色的？",
+    "你喜欢什么花？"
+   ],
+   "poem": {
+    "title": "梅花",
+    "author": "王安石",
+    "dynasty": "宋",
+    "lines": [
+     "墙角数枝梅，",
+     "凌寒独自开。",
+     "遥知不是雪，",
+     "为有暗香来。"
+    ],
+    "explain_zh": "墙角有几枝梅花，在寒冷里自己开了。远远看过去白白的，可是诗人知道那不是雪，因为有淡淡的香味飘过来。",
+    "explain_en": "In the corner of the wall a few plum branches open on their own in the cold. From afar they look white – but the poet knows it isn't snow, because a faint fragrance drifts over.",
+    "explain_de": "In der Mauerecke blühen ein paar Pflaumenzweige ganz allein in der Kälte. Von fern sehen sie weiß aus – doch der Dichter weiß, dass es kein Schnee ist, denn ein zarter Duft weht herüber."
+   },
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK4",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "小寒",
+   "date": "2026-01-05",
+   "title": "小寒：花信风从这里开始",
+   "title_en": "Minor Cold: where the flower winds begin",
+   "title_de": "Kleine Kälte: Hier beginnen die Blumenwinde",
+   "dek": "从小寒到谷雨，二十四种花，一候一种。",
+   "paragraphs": [
+    "小寒一般在每年一月五日到七日之间。“寒”就是冷，小寒标志着一年中最冷的一段时间开始了。",
+    "小寒的三候是“雁北乡、鹊始巢、雉始雊”：大雁感觉到阳气，开始准备往北飞回故乡；喜鹊开始筑巢；野鸡也开始鸣叫。在最冷的日子里，鸟儿已经在为春天做准备。",
+    "古人还从小寒开始数“花信风”：从小寒到谷雨，一共八个节气、二十四候，每一候都有一种花应时开放，叫作“二十四番花信风”。小寒的三种花是梅花、山茶和水仙；一直数到谷雨的楝花，花信风才算结束。",
+    "小寒前后常常是腊八节，也就是农历十二月初八。很多人家熬腊八粥，把米、豆、红枣、坚果等许多材料放在一起慢慢煮，喝一碗，身上就暖和了。",
+    "在德国，一月六日是“三王节”。在很多天主教地区，孩子们扮成东方三王，挨家挨户唱歌，为需要帮助的孩子募捐，还用粉笔在门框上写下年份和“C+M+B”，祝福这一家平安。"
+   ],
+   "paragraphs_en": [
+    "Minor Cold usually falls between 5 and 7 January. 寒 means cold; Minor Cold marks the beginning of the coldest stretch of the year.",
+    "Its three pentads are \"wild geese turn north, magpies begin to nest, pheasants begin to call\": the geese sense the returning warmth and prepare to fly back north; magpies start building nests; pheasants begin to call. In the coldest days, the birds are already getting ready for spring.",
+    "From Minor Cold the ancients also counted the \"flower winds\": from Minor Cold to Grain Rain there are eight solar terms and twenty-four pentads, and in each pentad one flower opens – the \"twenty-four flower winds\". The three flowers of Minor Cold are plum blossom, camellia and narcissus; the count ends only with the chinaberry blossom at Grain Rain.",
+    "The Laba festival, the eighth day of the twelfth lunar month, often falls around Minor Cold. Many families cook Laba porridge, simmering rice, beans, red dates, nuts and many other ingredients together; one bowl warms you right through.",
+    "In Germany, 6 January is Epiphany. In many Catholic regions children dress up as the Three Kings, go from door to door singing and collecting money for children in need, and write the year and \"C+M+B\" on the door frame in chalk to bless the household."
+   ],
+   "paragraphs_de": [
+    "Die „Kleine Kälte“ fällt meist zwischen den 5. und 7. Januar. 寒 heißt kalt; die Kleine Kälte markiert den Beginn der kältesten Zeit des Jahres.",
+    "Ihre drei „Hou“ lauten „die Wildgänse wenden sich nach Norden, die Elstern beginnen zu nisten, die Fasane beginnen zu rufen“: Die Gänse spüren die zurückkehrende Wärme und bereiten den Rückflug vor; Elstern bauen Nester; Fasane rufen. In den kältesten Tagen bereiten sich die Vögel schon auf den Frühling vor.",
+    "Ab der Kleinen Kälte zählte man auch die „Blumenwinde“: Von der Kleinen Kälte bis zum Kornregen sind es acht Sonnenperioden und vierundzwanzig „Hou“, und in jedem blüht eine Blume – die „vierundzwanzig Blumenwinde“. Die drei Blumen der Kleinen Kälte sind Pflaumenblüte, Kamelie und Narzisse; erst mit der Blüte des Paternosterbaums beim Kornregen endet die Reihe.",
+    "Um die Kleine Kälte liegt oft das Laba-Fest, der achte Tag des zwölften Mondmonats. Viele Familien kochen Laba-Brei: Reis, Bohnen, rote Datteln, Nüsse und viele andere Zutaten köcheln lange zusammen, und eine Schale wärmt durch und durch.",
+    "In Deutschland ist am 6. Januar Dreikönigstag. In vielen katholischen Gegenden ziehen Kinder als Sternsinger verkleidet von Tür zu Tür, singen, sammeln Spenden für Kinder in Not und schreiben mit Kreide die Jahreszahl und „C+M+B“ an den Türrahmen, um das Haus zu segnen."
+   ],
+   "glossary": [
+    {
+     "w": "标志",
+     "p": "biāo zhì",
+     "en": "to mark, signal",
+     "de": "markieren, kennzeichnen"
+    },
+    {
+     "w": "大雁",
+     "p": "dà yàn",
+     "en": "wild goose",
+     "de": "die Wildgans"
+    },
+    {
+     "w": "喜鹊",
+     "p": "xǐ què",
+     "en": "magpie",
+     "de": "die Elster"
+    },
+    {
+     "w": "筑巢",
+     "p": "zhù cháo",
+     "en": "to build a nest",
+     "de": "ein Nest bauen"
+    },
+    {
+     "w": "应时",
+     "p": "yìng shí",
+     "en": "in season, at the right time",
+     "de": "zur rechten Zeit"
+    },
+    {
+     "w": "山茶",
+     "p": "shān chá",
+     "en": "camellia",
+     "de": "die Kamelie"
+    },
+    {
+     "w": "水仙",
+     "p": "shuǐ xiān",
+     "en": "narcissus",
+     "de": "die Narzisse"
+    },
+    {
+     "w": "熬",
+     "p": "áo",
+     "en": "to simmer, boil for a long time",
+     "de": "lange köcheln"
+    },
+    {
+     "w": "坚果",
+     "p": "jiān guǒ",
+     "en": "nut",
+     "de": "die Nuss"
+    },
+    {
+     "w": "扮成",
+     "p": "bàn chéng",
+     "en": "to dress up as",
+     "de": "sich verkleiden als"
+    },
+    {
+     "w": "挨家挨户",
+     "p": "āi jiā āi hù",
+     "en": "from door to door",
+     "de": "von Haus zu Haus"
+    },
+    {
+     "w": "募捐",
+     "p": "mù juān",
+     "en": "to collect donations",
+     "de": "Spenden sammeln"
+    }
+   ],
+   "grammar": "一直……才…… shows that something happens only at the end of a long stretch: 一直数到谷雨的楝花，花信风才算结束 = only when you have counted all the way to the chinaberry blossom do the flower winds end.",
+   "grammar_de": "一直……才…… zeigt, dass etwas erst am Ende einer langen Strecke geschieht: 一直数到谷雨的楝花，花信风才算结束 = Erst wenn man bis zur Paternosterblüte gezählt hat, enden die Blumenwinde.",
+   "questions": [
+    "什么是“二十四番花信风”？",
+    "小寒的三候说明了什么？",
+    "在你住的地方，最冷的时候人们会吃什么？"
+   ],
+   "poem": {
+    "title": "山园小梅（节选）",
+    "author": "林逋",
+    "dynasty": "宋",
+    "lines": [
+     "众芳摇落独暄妍，",
+     "占尽风情向小园。",
+     "疏影横斜水清浅，",
+     "暗香浮动月黄昏。"
+    ],
+    "explain_zh": "别的花都凋谢了，只有梅花开得明亮美丽，小园里的风光都被它占尽了。稀疏的枝影斜斜地映在清浅的水面上，淡淡的香气在黄昏的月光下浮动。（这是一首长诗的前四句。）",
+    "explain_en": "All other flowers have faded; only the plum blossom shines, and it claims all the charm of the little garden. Its sparse shadows slant across the clear, shallow water; its faint fragrance drifts in the moonlit dusk. (The first four lines of the poem.)",
+    "explain_de": "Alle anderen Blumen sind verwelkt; nur die Pflaumenblüte leuchtet und vereint allen Reiz des kleinen Gartens auf sich. Ihre lichten Schatten liegen schräg auf dem klaren, flachen Wasser; ihr zarter Duft schwebt in der mondhellen Dämmerung. (Die ersten vier Zeilen des Gedichts.)"
+   },
+   "sources": [
+    {
+     "title": "農業部：二十四節氣（引用臺北市立天文科學教育館資料）",
+     "url": "https://www.moa.gov.tw/ws.php?id=2507770",
+     "license": "link only"
+    },
+    {
+     "title": "国立天文台 暦Wiki：七十二候",
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/wiki/B5A8C0E12FBCB7BDBDC6F3B8F5.html",
+     "license": "link only"
+    },
+    {
+     "title": "淡江時報：二十四番花信風",
+     "url": "https://tkutimes.tku.edu.tw/fpdf/58700.pdf",
+     "license": "link only"
+    }
+   ]
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "大寒",
+   "date": "2026-01-20",
+   "title": "大寒：快过年了",
+   "title_en": "Major Cold: New Year is coming",
+   "title_de": "Große Kälte: Bald ist Neujahr",
+   "dek": "二十四节气的最后一个。",
+   "paragraphs": [
+    "一月二十日前后是大寒。大寒是二十四节气里的最后一个。过了大寒，又是立春，新的一年又开始了。",
+    "大寒的时候，天很冷，河上的冰又厚又硬。",
+    "大寒以后，春节就快到了。大家打扫房子，买新衣服，准备年货。",
+    "在台湾，这个时候很多公司有“尾牙”：老板请大家吃饭，谢谢大家一年的工作。",
+    "在德国，一月是很安静的月份。节日过去了，大家开始新的一年。"
+   ],
+   "paragraphs_en": [
+    "Major Cold falls around 20 January. It is the last of the twenty-four solar terms. After it comes the Start of Spring, and a new year begins again.",
+    "Around Major Cold it is very cold, and the ice on the rivers is thick and hard.",
+    "After Major Cold, the Spring Festival is coming soon. Everyone cleans the house, buys new clothes and gets the New Year food and gifts ready.",
+    "In Taiwan, many companies hold a \"weiya\" dinner at this time: the boss invites everyone to a meal to thank them for the year's work.",
+    "In Germany, January is a quiet month. The holidays are over, and everyone starts the new year."
+   ],
+   "paragraphs_de": [
+    "Um den 20. Januar beginnt „Große Kälte“. Sie ist die letzte der vierundzwanzig Sonnenperioden. Danach kommt der Frühlingsanfang, und ein neues Jahr beginnt.",
+    "In dieser Zeit ist es sehr kalt, und das Eis auf den Flüssen ist dick und hart.",
+    "Nach der Großen Kälte ist bald Frühlingsfest. Alle putzen das Haus, kaufen neue Kleider und besorgen alles fürs Neujahr.",
+    "In Taiwan feiern viele Firmen jetzt ein „Weiya“-Essen: Der Chef lädt alle zum Essen ein und bedankt sich für die Arbeit des Jahres.",
+    "In Deutschland ist der Januar ein ruhiger Monat. Die Feiertage sind vorbei, und alle starten ins neue Jahr."
+   ],
+   "glossary": [
+    {
+     "w": "大寒",
+     "p": "dà hán",
+     "en": "Major Cold (solar term, around 20 January)",
+     "de": "Große Kälte (Sonnenperiode, um den 20. Januar)"
+    },
+    {
+     "w": "最后",
+     "p": "zuì hòu",
+     "en": "last",
+     "de": "letzte"
+    },
+    {
+     "w": "冰",
+     "p": "bīng",
+     "en": "ice",
+     "de": "das Eis"
+    },
+    {
+     "w": "又厚又硬",
+     "p": "yòu hòu yòu yìng",
+     "en": "both thick and hard",
+     "de": "dick und hart"
+    },
+    {
+     "w": "春节",
+     "p": "chūn jié",
+     "en": "Spring Festival (Chinese New Year)",
+     "de": "das Frühlingsfest (chinesisches Neujahr)"
+    },
+    {
+     "w": "打扫",
+     "p": "dǎ sǎo",
+     "en": "to clean",
+     "de": "putzen"
+    },
+    {
+     "w": "年货",
+     "p": "nián huò",
+     "en": "New Year shopping (food, gifts)",
+     "de": "Einkäufe fürs Neujahr"
+    },
+    {
+     "w": "尾牙",
+     "p": "wěi yá",
+     "en": "weiya (year-end company dinner)",
+     "de": "Weiya (Jahresabschlussessen der Firma)"
+    }
+   ],
+   "grammar": "快……了 means something will happen soon: 春节就快到了 = the Spring Festival is coming soon. 就 makes it sound even closer.",
+   "grammar_de": "快……了 heißt: Etwas passiert bald: 春节就快到了 = Bald ist Frühlingsfest. 就 macht es noch näher.",
+   "questions": [
+    "大寒是第几个节气？",
+    "春节以前，大家做什么？",
+    "过年的时候，你最喜欢做什么？"
+   ],
+   "poem": {
+    "title": "元日",
+    "author": "王安石",
+    "dynasty": "宋",
+    "lines": [
+     "爆竹声中一岁除，",
+     "春风送暖入屠苏。",
+     "千门万户曈曈日，",
+     "总把新桃换旧符。"
+    ],
+    "explain_zh": "在鞭炮声里，旧的一年过去了。春风带来温暖，大家喝着屠苏酒。新年的太阳照着千家万户，每家都把旧的桃符换成新的。（桃符就是今天春联的前身。）",
+    "explain_en": "Amid the firecrackers the old year departs; the spring wind brings warmth into the tusu wine. The New Year's sun shines on thousands of homes, and every family replaces its old peach-wood charms with new ones. (These charms are the forerunners of today's spring couplets.)",
+    "explain_de": "Unter Knallkörpern geht das alte Jahr; der Frühlingswind trägt Wärme in den Tusu-Wein. Die Neujahrssonne scheint auf tausende Häuser, und jede Familie tauscht ihre alten Pfirsichholz-Amulette gegen neue. (Sie sind die Vorläufer der heutigen Neujahrs-Spruchbänder.)"
+   },
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK4",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "大寒",
+   "date": "2026-01-20",
+   "title": "大寒：一年的最后一页",
+   "title_en": "Major Cold: the last page of the year",
+   "title_de": "Große Kälte: die letzte Seite des Jahres",
+   "dek": "冬天最冷的时候，离春天也最近。",
+   "paragraphs": [
+    "大寒一般在每年一月十九日到二十一日之间，是二十四节气中的最后一个。名字说的是“很冷”，不过就像小雪、大雪一样，这只是一个大致的说法，并不保证哪一天一定最冷。",
+    "大寒的三候是“鸡始乳、鸷鸟厉疾、水泽腹坚”：母鸡开始孵小鸡；鹰一类的猛禽在天上飞得又高又快，四处寻找食物；河湖里的冰一直冻到中间，又厚又硬。",
+    "大寒前后，年味越来越浓。人们大扫除、办年货、写春联。在台湾，农历十二月十六日的“尾牙”常常就在这段时间：公司请员工吃饭，感谢一年的辛苦，有时还会抽奖。",
+    "二十四节气就这样走完了一圈。从立春的“东风解冻”，到大寒的“水泽腹坚”，古人用一年的时间观察风、雨、冰、雪、草木和鸟兽，把自然的变化写成了一本日历。读到这里，你会发现：冬天最冷的时候，离春天也最近。"
+   ],
+   "paragraphs_en": [
+    "Major Cold usually falls between 19 and 21 January and is the last of the twenty-four solar terms. Its name says \"very cold\", but like Minor and Major Snow it is only a rough description and doesn't promise that any particular day will be the coldest.",
+    "Its three pentads are \"hens begin to hatch, birds of prey fly fierce and fast, the ice reaches the middle of rivers and lakes\": hens start to brood their chicks; hawks and other birds of prey fly high and fast in search of food; and the ice on rivers and lakes freezes right through, thick and hard.",
+    "Around Major Cold the New Year feeling grows stronger and stronger. People clean the house from top to bottom, buy what they need for the festival and write spring couplets. In Taiwan, the \"weiya\" dinner on the sixteenth day of the twelfth lunar month often falls in this period: companies invite their staff to a meal to thank them for the year's hard work, sometimes with a prize draw.",
+    "And so the twenty-four solar terms have come full circle. From \"the east wind thaws the ice\" at the Start of Spring to \"the ice reaches the middle of the lakes\" at Major Cold, the ancients watched wind, rain, ice, snow, plants, birds and beasts for a whole year and turned nature's changes into a calendar. Reading this far, you notice: when winter is coldest, spring is also nearest."
+   ],
+   "paragraphs_de": [
+    "Die „Große Kälte“ fällt meist zwischen den 19. und 21. Januar und ist die letzte der vierundzwanzig Sonnenperioden. Der Name sagt „sehr kalt“, doch wie beim Leichten und Großen Schnee ist das nur eine grobe Beschreibung und kein Versprechen, dass ein bestimmter Tag der kälteste ist.",
+    "Ihre drei „Hou“ lauten „die Hennen beginnen zu brüten, die Raubvögel fliegen wild und schnell, das Eis reicht bis in die Mitte der Gewässer“: Hennen brüten ihre Küken aus; Habichte und andere Greifvögel jagen hoch und schnell nach Futter; das Eis auf Flüssen und Seen friert bis in die Mitte durch, dick und hart.",
+    "Um die Große Kälte wird die Neujahrsstimmung immer stärker. Man macht Großputz, kauft fürs Fest ein und schreibt Neujahrs-Spruchbänder. In Taiwan fällt das „Weiya“-Essen am sechzehnten Tag des zwölften Mondmonats oft in diese Zeit: Firmen laden ihre Angestellten ein, danken für die Mühe des Jahres und veranstalten manchmal eine Verlosung.",
+    "So haben die vierundzwanzig Sonnenperioden ihren Kreis vollendet. Vom „Ostwind taut das Eis“ des Frühlingsanfangs bis zum „Eis bis in die Mitte der Seen“ der Großen Kälte beobachtete man ein ganzes Jahr lang Wind, Regen, Eis, Schnee, Pflanzen, Vögel und Tiere und machte aus den Veränderungen der Natur einen Kalender. Wer bis hierher gelesen hat, merkt: Wenn der Winter am kältesten ist, ist der Frühling auch am nächsten."
+   ],
+   "glossary": [
+    {
+     "w": "大致",
+     "p": "dà zhì",
+     "en": "rough, approximate",
+     "de": "ungefähr, grob"
+    },
+    {
+     "w": "保证",
+     "p": "bǎo zhèng",
+     "en": "to guarantee",
+     "de": "garantieren"
+    },
+    {
+     "w": "孵",
+     "p": "fū",
+     "en": "to hatch, brood",
+     "de": "ausbrüten"
+    },
+    {
+     "w": "猛禽",
+     "p": "měng qín",
+     "en": "bird of prey",
+     "de": "der Greifvogel"
+    },
+    {
+     "w": "冻",
+     "p": "dòng",
+     "en": "to freeze",
+     "de": "frieren"
+    },
+    {
+     "w": "年味",
+     "p": "nián wèi",
+     "en": "festive New Year atmosphere",
+     "de": "Neujahrsstimmung"
+    },
+    {
+     "w": "大扫除",
+     "p": "dà sǎo chú",
+     "en": "big spring-clean",
+     "de": "der Großputz"
+    },
+    {
+     "w": "春联",
+     "p": "chūn lián",
+     "en": "spring couplets",
+     "de": "Neujahrs-Spruchbänder"
+    },
+    {
+     "w": "员工",
+     "p": "yuán gōng",
+     "en": "employee",
+     "de": "der/die Angestellte"
+    },
+    {
+     "w": "抽奖",
+     "p": "chōu jiǎng",
+     "en": "prize draw",
+     "de": "die Verlosung"
+    },
+    {
+     "w": "观察",
+     "p": "guān chá",
+     "en": "to observe",
+     "de": "beobachten"
+    },
+    {
+     "w": "日历",
+     "p": "rì lì",
+     "en": "calendar",
+     "de": "der Kalender"
+    }
+   ],
+   "grammar": "就像……一样 compares two things: 就像小雪、大雪一样 = just like Minor and Major Snow. 就 adds emphasis (\"just like\").",
+   "grammar_de": "就像……一样 vergleicht zwei Dinge: 就像小雪、大雪一样 = genau wie beim Leichten und Großen Schnee. 就 verstärkt („genau wie“).",
+   "questions": [
+    "大寒是不是一定最冷的一天？为什么？",
+    "什么是“尾牙”？",
+    "读完二十四节气，你最喜欢哪一个？为什么？"
+   ],
+   "poem": {
+    "title": "卜算子·咏梅",
+    "author": "陆游",
+    "dynasty": "宋",
+    "lines": [
+     "驿外断桥边，",
+     "寂寞开无主。",
+     "已是黄昏独自愁，",
+     "更著风和雨。",
+     "无意苦争春，",
+     "一任群芳妒。",
+     "零落成泥碾作尘，",
+     "只有香如故。"
+    ],
+    "explain_zh": "驿站外的断桥边，一株梅花寂寞地开着，没有人照看。黄昏时它已经很孤单，又遇上了风和雨。它不想和别的花争春天，别的花要嫉妒，就随它们去吧。就算花瓣落下变成泥土，又被碾成尘土，它的香气还是和从前一样。",
+    "explain_en": "By a broken bridge outside the post station, a plum tree blooms alone, with no one to tend it. At dusk it is already lonely, and then wind and rain come too. It has no wish to compete for spring; let the other flowers envy it if they will. Even when its petals fall, turn to mud and are ground into dust, its fragrance stays as it was.",
+    "explain_de": "An einer zerbrochenen Brücke vor der Poststation blüht ein Pflaumenbaum einsam, um den sich niemand kümmert. In der Dämmerung ist er schon allein, und dann kommen noch Wind und Regen. Er will nicht um den Frühling wetteifern; sollen die anderen Blumen ihn doch beneiden. Selbst wenn die Blüten fallen, zu Erde werden und zu Staub zermahlen sind – sein Duft bleibt, wie er war."
+   },
+   "sources": [
+    {
+     "title": "農業部：二十四節氣（引用臺北市立天文科學教育館資料）",
+     "url": "https://www.moa.gov.tw/ws.php?id=2507770",
+     "license": "link only"
+    },
+    {
+     "title": "国立天文台 暦Wiki：七十二候",
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/wiki/B5A8C0E12FBCB7BDBDC6F3B8F5.html",
+     "license": "link only"
+    },
+    {
+     "title": "星島教室：二十四節氣「大雪」由來",
+     "url": "https://www.stheadline.com/knowledge/3525094/",
+     "license": "link only"
+    },
+    {
+     "title": "康健雜誌：24節氣（2023-05-03）",
+     "url": "https://www.commonhealth.com.tw/article/88011",
+     "license": "link only"
+    }
+   ]
   }
  ]
 }
