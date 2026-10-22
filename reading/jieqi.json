@@ -177,6 +177,1461 @@
    "level": "HSK2",
    "kind": "jieqi",
    "section": "节气",
+   "term": "立春",
+   "date": "2026-02-04",
+   "title": "立春：春天开始了",
+   "title_en": "Start of Spring: spring begins",
+   "title_de": "Frühlingsanfang: Der Frühling beginnt",
+   "dek": "二十四节气的第一个。",
+   "paragraphs": [
+    "二月四日前后是立春。“立”是开始的意思，立春就是春天开始了。立春是二十四节气里的第一个。",
+    "立春的时候，天还很冷，可是风慢慢变暖了。古人说“东风解冻”：从东边来的风，让河上的冰开始化了。",
+    "春节常常在立春前后。大家说“新春快乐”，春天和新年一起来了。",
+    "在德国，二月还很冷。可是有的地方开始过狂欢节，大家穿上好玩的衣服，在街上唱歌、跳舞。"
+   ],
+   "paragraphs_en": [
+    "The Start of Spring falls around 4 February. 立 means \"to begin\", so 立春 means spring is beginning. It is the first of the twenty-four solar terms.",
+    "At the Start of Spring it is still cold, but the wind slowly gets warmer. The ancients said \"the east wind thaws the ice\": the wind from the east makes the ice on the rivers begin to melt.",
+    "The Spring Festival often falls around the Start of Spring. People say \"Happy New Spring\" – spring and the New Year arrive together.",
+    "In Germany it is still cold in February. But in some places carnival begins: people put on funny costumes and sing and dance in the streets."
+   ],
+   "paragraphs_de": [
+    "Um den 4. Februar ist Frühlingsanfang. 立 heißt „beginnen“, also bedeutet 立春: Der Frühling fängt an. Es ist die erste der vierundzwanzig Sonnenperioden.",
+    "Zum Frühlingsanfang ist es noch kalt, aber der Wind wird langsam wärmer. Früher sagte man „der Ostwind taut das Eis“: Der Wind aus dem Osten lässt das Eis auf den Flüssen schmelzen.",
+    "Das Frühlingsfest liegt oft um den Frühlingsanfang. Man wünscht sich „ein frohes neues Frühjahr“ – Frühling und Neujahr kommen zusammen.",
+    "In Deutschland ist es im Februar noch kalt. Aber an manchen Orten beginnt der Karneval: Man zieht lustige Kostüme an und singt und tanzt auf den Straßen."
+   ],
+   "glossary": [
+    {
+     "w": "立春",
+     "p": "lì chūn",
+     "en": "Start of Spring (solar term, around 4 February)",
+     "de": "Frühlingsanfang (Sonnenperiode, um den 4. Februar)"
+    },
+    {
+     "w": "开始",
+     "p": "kāi shǐ",
+     "en": "to begin",
+     "de": "beginnen"
+    },
+    {
+     "w": "暖",
+     "p": "nuǎn",
+     "en": "warm",
+     "de": "warm"
+    },
+    {
+     "w": "冰",
+     "p": "bīng",
+     "en": "ice",
+     "de": "das Eis"
+    },
+    {
+     "w": "化",
+     "p": "huà",
+     "en": "to melt",
+     "de": "schmelzen"
+    },
+    {
+     "w": "春节",
+     "p": "chūn jié",
+     "en": "Spring Festival",
+     "de": "das Frühlingsfest"
+    },
+    {
+     "w": "狂欢节",
+     "p": "kuáng huān jié",
+     "en": "carnival",
+     "de": "der Karneval"
+    },
+    {
+     "w": "跳舞",
+     "p": "tiào wǔ",
+     "en": "to dance",
+     "de": "tanzen"
+    }
+   ],
+   "grammar": "A 就是 B explains what A means: 立春就是春天开始了 = the Start of Spring simply means spring is beginning.",
+   "grammar_de": "A 就是 B erklärt, was A bedeutet: 立春就是春天开始了 = Frühlingsanfang heißt einfach: Der Frühling beginnt.",
+   "questions": [
+    "“立春”的“立”是什么意思？",
+    "立春的时候，天气怎么样？",
+    "你最喜欢春天的什么？"
+   ],
+   "poem": {
+    "title": "咏柳",
+    "author": "贺知章",
+    "dynasty": "唐",
+    "lines": [
+     "碧玉妆成一树高，",
+     "万条垂下绿丝绦。",
+     "不知细叶谁裁出，",
+     "二月春风似剪刀。"
+    ],
+    "explain_zh": "高高的柳树，像用碧玉打扮出来的。千万条柳枝垂下来，像绿色的丝带。细细的柳叶是谁剪出来的呢？原来二月的春风就像一把剪刀。",
+    "explain_en": "The tall willow looks as if dressed in green jade, its thousands of branches hanging down like green silk ribbons. Who cut out its fine little leaves? The spring wind of the second month – it is like a pair of scissors.",
+    "explain_de": "Die hohe Weide sieht aus wie in grüne Jade gekleidet, ihre tausend Zweige hängen herab wie grüne Seidenbänder. Wer hat die feinen Blättchen ausgeschnitten? Der Frühlingswind des zweiten Monats – er ist wie eine Schere."
+   },
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK4",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "立春",
+   "date": "2026-02-04",
+   "title": "立春：一年从这里开始",
+   "title_en": "Start of Spring: where the year begins",
+   "title_de": "Frühlingsanfang: Hier beginnt das Jahr",
+   "dek": "春节跟着月亮走，节气跟着太阳走。",
+   "paragraphs": [
+    "立春一般在每年二月三日到五日之间，是二十四节气中的第一个。古人把立春看作一年的开始：节气从这里起算，经过夏、秋、冬，到大寒结束，正好走完一圈。",
+    "立春的三候是“东风解冻、蛰虫始振、鱼上冰”：东风吹来，冰雪开始融化；在土里冬眠的虫子开始动了；河面的冰变薄，鱼游到冰下靠近水面的地方，远远看去，好像背着冰在游。",
+    "立春离春节很近，有时在春节前，有时在春节后。这是因为农历和节气是两套不同的系统：春节跟着月亮走，而节气跟着太阳走。所以，有的农历年里会有两个立春，有的一个也没有。",
+    "在德国，立春往往还是一年中很冷的时候，地上可能还有雪。可是早上的鸟叫声多了，下午五点多天还亮着。春天总是先在细节里出现。"
+   ],
+   "paragraphs_en": [
+    "The Start of Spring usually falls between 3 and 5 February and is the first of the twenty-four solar terms. The ancients saw it as the beginning of the year: the terms are counted from here, through summer, autumn and winter, to Major Cold – one full circle.",
+    "Its three pentads are \"the east wind thaws the ice, hibernating insects begin to stir, fish rise up to the ice\": the east wind melts ice and snow; insects that slept through winter in the soil start to move; the river ice grows thin and fish swim just beneath it, so from afar they seem to carry the ice on their backs.",
+    "The Start of Spring is close to the Spring Festival – sometimes before it, sometimes after. That is because the lunar calendar and the solar terms are two different systems: the Spring Festival follows the moon, whereas the solar terms follow the sun. So some lunar years have two Starts of Spring, and some have none.",
+    "In Germany the Start of Spring is often still a very cold time, and there may be snow on the ground. But there is more birdsong in the mornings, and at five in the afternoon it is still light. Spring always shows itself first in the details."
+   ],
+   "paragraphs_de": [
+    "Der Frühlingsanfang fällt meist zwischen den 3. und 5. Februar und ist die erste der vierundzwanzig Sonnenperioden. Im alten China galt er als Beginn des Jahres: Von hier aus zählt man die Perioden durch Sommer, Herbst und Winter bis zur Großen Kälte – ein ganzer Kreis.",
+    "Seine drei „Hou“ lauten „der Ostwind taut das Eis, die Winterschläfer regen sich, die Fische steigen ans Eis“: Der Ostwind lässt Eis und Schnee schmelzen; Insekten, die im Boden überwintert haben, bewegen sich; das Flusseis wird dünn, die Fische schwimmen direkt darunter und scheinen von Weitem das Eis auf dem Rücken zu tragen.",
+    "Der Frühlingsanfang liegt nah am Frühlingsfest – mal davor, mal danach. Denn Mondkalender und Sonnenperioden sind zwei verschiedene Systeme: Das Frühlingsfest folgt dem Mond, die Sonnenperioden dagegen der Sonne. Deshalb haben manche Mondjahre zwei Frühlingsanfänge und manche keinen.",
+    "In Deutschland ist es zum Frühlingsanfang oft noch sehr kalt, vielleicht liegt sogar Schnee. Aber morgens singen mehr Vögel, und um fünf Uhr nachmittags ist es noch hell. Der Frühling zeigt sich immer zuerst in den Details."
+   ],
+   "glossary": [
+    {
+     "w": "看作",
+     "p": "kàn zuò",
+     "en": "to regard as",
+     "de": "betrachten als"
+    },
+    {
+     "w": "起算",
+     "p": "qǐ suàn",
+     "en": "to start counting from",
+     "de": "von … an zählen"
+    },
+    {
+     "w": "融化",
+     "p": "róng huà",
+     "en": "to melt",
+     "de": "schmelzen"
+    },
+    {
+     "w": "冬眠",
+     "p": "dōng mián",
+     "en": "to hibernate",
+     "de": "Winterschlaf halten"
+    },
+    {
+     "w": "薄",
+     "p": "báo",
+     "en": "thin",
+     "de": "dünn"
+    },
+    {
+     "w": "靠近",
+     "p": "kào jìn",
+     "en": "close to",
+     "de": "nahe an"
+    },
+    {
+     "w": "背",
+     "p": "bèi",
+     "en": "to carry on the back",
+     "de": "auf dem Rücken tragen"
+    },
+    {
+     "w": "农历",
+     "p": "nóng lì",
+     "en": "lunar calendar",
+     "de": "der Mondkalender"
+    },
+    {
+     "w": "系统",
+     "p": "xì tǒng",
+     "en": "system",
+     "de": "das System"
+    },
+    {
+     "w": "细节",
+     "p": "xì jié",
+     "en": "detail",
+     "de": "das Detail"
+    }
+   ],
+   "grammar": "而 (written style) links two contrasting facts, like \"whereas\": 春节跟着月亮走，而节气跟着太阳走 = the Spring Festival follows the moon, whereas the solar terms follow the sun.",
+   "grammar_de": "而 (Schriftsprache) verbindet zwei gegensätzliche Tatsachen, etwa „während, dagegen“: 春节跟着月亮走，而节气跟着太阳走 = Das Frühlingsfest folgt dem Mond, die Sonnenperioden dagegen der Sonne.",
+   "questions": [
+    "为什么立春有时在春节前，有时在春节后？",
+    "“鱼上冰”描写的是什么样的情景？",
+    "你在哪些小事里感觉到春天来了？"
+   ],
+   "poem": {
+    "title": "早春呈水部张十八员外",
+    "author": "韩愈",
+    "dynasty": "唐",
+    "lines": [
+     "天街小雨润如酥，",
+     "草色遥看近却无。",
+     "最是一年春好处，",
+     "绝胜烟柳满皇都。"
+    ],
+    "explain_zh": "京城的街上下着小雨，像酥油一样细软滋润。远远看去，地上有一片淡淡的绿色，走近了却几乎看不见草。诗人说，这正是一年里春天最好的时候，比后来满城都是柳树的时候还要好。",
+    "explain_en": "A light rain falls on the streets of the capital, soft and moist like butter. From afar the ground shows a faint green; up close you can hardly see the grass. This, says the poet, is the best moment of spring – better even than later, when misty willows fill the whole city.",
+    "explain_de": "Feiner Regen fällt auf die Straßen der Hauptstadt, weich wie Butter. Von Weitem schimmert der Boden zartgrün, aus der Nähe sieht man kaum Gras. Das, sagt der Dichter, ist der schönste Moment des Frühlings – schöner noch als später, wenn dunstige Weiden die ganze Stadt füllen."
+   },
+   "sources": [
+    {
+     "title": "農業部：二十四節氣（引用臺北市立天文科學教育館資料）",
+     "url": "https://www.moa.gov.tw/ws.php?id=2507770",
+     "license": "link only"
+    },
+    {
+     "title": "国立天文台 暦Wiki：七十二候",
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/wiki/B5A8C0E12FBCB7BDBDC6F3B8F5.html",
+     "license": "link only"
+    }
+   ]
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "雨水",
+   "date": "2026-02-18",
+   "title": "雨水：春天的小雨",
+   "title_en": "Rain Water: spring drizzle",
+   "title_de": "Regenwasser: Frühlingsregen",
+   "dek": "雪少了，雨来了。",
+   "paragraphs": [
+    "二月十八日前后是雨水。雨水的意思是：天暖了一点，雪少了，开始下雨了。",
+    "春天的雨很小，也很安静。小草喝了雨水，慢慢长出来了。",
+    "古人说，这个时候，大雁从南方飞回北方了。",
+    "在德国，二月常常下雨，有时候也下雪。出门的时候，别忘了带雨伞。"
+   ],
+   "paragraphs_en": [
+    "Rain Water falls around 18 February. It means: it has got a little warmer, there is less snow, and it starts to rain.",
+    "The spring rain is light and quiet. The little grasses drink the rain and slowly come up.",
+    "The ancients said that at this time the wild geese fly back from the south to the north.",
+    "In Germany it often rains in February, and sometimes it snows. Don't forget your umbrella when you go out."
+   ],
+   "paragraphs_de": [
+    "Um den 18. Februar beginnt „Regenwasser“. Das heißt: Es ist etwas wärmer geworden, es gibt weniger Schnee, und es fängt an zu regnen.",
+    "Der Frühlingsregen ist fein und leise. Das kleine Gras trinkt das Regenwasser und wächst langsam heraus.",
+    "Früher sagte man, dass die Wildgänse jetzt aus dem Süden zurück in den Norden fliegen.",
+    "In Deutschland regnet es im Februar oft, manchmal schneit es auch. Vergiss deinen Regenschirm nicht, wenn du rausgehst."
+   ],
+   "glossary": [
+    {
+     "w": "雨水",
+     "p": "yǔ shuǐ",
+     "en": "Rain Water (solar term, around 18 February)",
+     "de": "Regenwasser (Sonnenperiode, um den 18. Februar)"
+    },
+    {
+     "w": "安静",
+     "p": "ān jìng",
+     "en": "quiet",
+     "de": "still, leise"
+    },
+    {
+     "w": "小草",
+     "p": "xiǎo cǎo",
+     "en": "little grass",
+     "de": "das Gräschen"
+    },
+    {
+     "w": "长",
+     "p": "cháng",
+     "en": "to grow",
+     "de": "wachsen"
+    },
+    {
+     "w": "大雁",
+     "p": "dà yàn",
+     "en": "wild goose",
+     "de": "die Wildgans"
+    },
+    {
+     "w": "南方",
+     "p": "nán fāng",
+     "en": "the south",
+     "de": "der Süden"
+    },
+    {
+     "w": "雨伞",
+     "p": "yǔ sǎn",
+     "en": "umbrella",
+     "de": "der Regenschirm"
+    }
+   ],
+   "grammar": "了 at the end of a sentence shows a change: 天暖了 = it has got warmer; 开始下雨了 = it has started to rain.",
+   "grammar_de": "了 am Satzende zeigt eine Veränderung: 天暖了 = Es ist wärmer geworden; 开始下雨了 = Es hat angefangen zu regnen.",
+   "questions": [
+    "雨水的时候，天气有什么变化？",
+    "大雁往哪儿飞？",
+    "下雨的时候，你喜欢做什么？"
+   ],
+   "poem": {
+    "title": "春晓",
+    "author": "孟浩然",
+    "dynasty": "唐",
+    "lines": [
+     "春眠不觉晓，",
+     "处处闻啼鸟。",
+     "夜来风雨声，",
+     "花落知多少。"
+    ],
+    "explain_zh": "春天睡得很香，天亮了也不知道。醒来的时候，到处都听见小鸟在叫。想起昨天晚上又刮风又下雨，不知道有多少花被打落了。",
+    "explain_en": "Sleeping soundly in spring, I don't notice the dawn; everywhere I hear birds singing. Last night there was wind and rain – I wonder how many flowers have fallen.",
+    "explain_de": "Im Frühling schlafe ich so tief, dass ich den Morgen nicht bemerke; überall höre ich Vögel singen. Heute Nacht gab es Wind und Regen – wie viele Blüten wohl gefallen sind?"
+   },
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK4",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "雨水",
+   "date": "2026-02-18",
+   "title": "雨水：好雨知时节",
+   "title_en": "Rain Water: good rain knows its season",
+   "title_de": "Regenwasser: Guter Regen kennt seine Zeit",
+   "dek": "润物细无声。",
+   "paragraphs": [
+    "雨水一般在每年二月十八日到二十日之间。到了这时，气温回升，北方的雪渐渐少了，降水开始以雨为主，所以叫“雨水”。",
+    "雨水的三候是“獭祭鱼、鸿雁来、草木萌动”：水獭开始捕鱼，常把鱼一条条摆在岸边，古人觉得像在祭祀；大雁从南方飞回北方；草木开始冒出新芽。",
+    "春天的雨对农民特别重要。早春的雨不大，却能慢慢渗进土里，让刚刚解冻的田地变得湿润，为春耕做好准备。",
+    "杜甫的《春夜喜雨》写的正是这样的雨：它好像懂得时节，春天一到就悄悄来了，在夜里随风落下，滋润万物却没有一点声音。一千多年以后，“润物细无声”成了中文里的常用说法，用来形容默默付出、却不张扬的人，比如一位好老师。"
+   ],
+   "paragraphs_en": [
+    "Rain Water usually falls between 18 and 20 February. By now temperatures are rising, there is less and less snow in the north, and precipitation falls mainly as rain – hence the name.",
+    "Its three pentads are \"the otter offers fish, the wild geese come, plants begin to sprout\": otters start fishing and often lay their catch out on the bank one by one, which looked to the ancients like an offering; wild geese fly back north; plants put out new shoots.",
+    "Spring rain matters especially to farmers. Early-spring rain is light, but it seeps slowly into the soil, moistening the freshly thawed fields and preparing them for spring ploughing.",
+    "Du Fu's \"Happy Rain on a Spring Night\" describes just this rain: it seems to know its season, arriving quietly as soon as spring comes, falling at night with the wind and nourishing everything without a sound. More than a thousand years later, \"nourishing things in silence\" is a common Chinese expression for people who give a great deal without making a fuss – a good teacher, for example."
+   ],
+   "paragraphs_de": [
+    "„Regenwasser“ fällt meist zwischen den 18. und 20. Februar. Jetzt steigen die Temperaturen, im Norden gibt es immer weniger Schnee, und der Niederschlag fällt vor allem als Regen – daher der Name.",
+    "Die drei „Hou“ lauten „der Otter opfert Fische, die Wildgänse kommen, die Pflanzen treiben aus“: Otter fangen Fische und legen sie oft einzeln ans Ufer, was früher wie eine Opfergabe aussah; die Wildgänse kehren nach Norden zurück; die Pflanzen bekommen neue Triebe.",
+    "Frühlingsregen ist für Bauern besonders wichtig. Der Regen im Vorfrühling ist leicht, sickert aber langsam in den Boden, macht die gerade aufgetauten Felder feucht und bereitet sie aufs Pflügen vor.",
+    "Du Fus Gedicht „Freude über Regen in einer Frühlingsnacht“ beschreibt genau diesen Regen: Er scheint seine Zeit zu kennen, kommt leise, sobald der Frühling da ist, fällt nachts mit dem Wind und nährt alles, ohne einen Laut. Über tausend Jahre später ist „nährt alles in Stille“ eine gängige chinesische Wendung für Menschen, die viel geben, ohne Aufhebens zu machen – etwa eine gute Lehrerin."
+   ],
+   "glossary": [
+    {
+     "w": "回升",
+     "p": "huí shēng",
+     "en": "to rise again",
+     "de": "wieder steigen"
+    },
+    {
+     "w": "降水",
+     "p": "jiàng shuǐ",
+     "en": "precipitation",
+     "de": "der Niederschlag"
+    },
+    {
+     "w": "以……为主",
+     "p": "yǐ … … wéi zhǔ",
+     "en": "mainly …",
+     "de": "hauptsächlich …"
+    },
+    {
+     "w": "水獭",
+     "p": "shuǐ tǎ",
+     "en": "otter",
+     "de": "der Otter"
+    },
+    {
+     "w": "祭祀",
+     "p": "jì sì",
+     "en": "to make offerings",
+     "de": "opfern"
+    },
+    {
+     "w": "萌动",
+     "p": "méng dòng",
+     "en": "to sprout",
+     "de": "austreiben"
+    },
+    {
+     "w": "渗",
+     "p": "shèn",
+     "en": "to seep",
+     "de": "sickern"
+    },
+    {
+     "w": "湿润",
+     "p": "shī rùn",
+     "en": "moist",
+     "de": "feucht"
+    },
+    {
+     "w": "春耕",
+     "p": "chūn gēng",
+     "en": "spring ploughing",
+     "de": "das Frühjahrspflügen"
+    },
+    {
+     "w": "滋润",
+     "p": "zī rùn",
+     "en": "to moisten, nourish",
+     "de": "befeuchten, nähren"
+    },
+    {
+     "w": "默默",
+     "p": "mò mò",
+     "en": "silently, quietly",
+     "de": "still, im Stillen"
+    },
+    {
+     "w": "张扬",
+     "p": "zhāng yáng",
+     "en": "to make a fuss, show off",
+     "de": "Aufhebens machen"
+    }
+   ],
+   "grammar": "以 A 为主 means \"mainly A\": 降水开始以雨为主 = precipitation now falls mainly as rain. Also: 早饭以面包为主.",
+   "grammar_de": "以 A 为主 heißt „hauptsächlich A“: 降水开始以雨为主 = Der Niederschlag fällt jetzt hauptsächlich als Regen. Auch: 早饭以面包为主.",
+   "questions": [
+    "为什么这个节气叫“雨水”？",
+    "“润物细无声”现在常用来形容什么样的人？",
+    "你身边有没有“润物细无声”的人？"
+   ],
+   "poem": {
+    "title": "春夜喜雨",
+    "author": "杜甫",
+    "dynasty": "唐",
+    "lines": [
+     "好雨知时节，",
+     "当春乃发生。",
+     "随风潜入夜，",
+     "润物细无声。",
+     "野径云俱黑，",
+     "江船火独明。",
+     "晓看红湿处，",
+     "花重锦官城。"
+    ],
+    "explain_zh": "好雨好像知道什么时候该来，春天一到，它就下起来了。它跟着风，在夜里悄悄落下，滋润万物，没有一点声音。田野的小路和天上的云都是黑的，只有江上船里的灯火亮着。第二天早上，看那些湿湿的红色地方，成都城里的花都沉甸甸地开满了。",
+    "explain_en": "Good rain knows its season: when spring comes, it begins. It slips into the night with the wind and nourishes everything without a sound. Field paths and clouds are all dark; only a boat's lamp shines on the river. At dawn, look at the wet red patches: the flowers of Chengdu hang heavy with rain.",
+    "explain_de": "Guter Regen kennt seine Zeit: Kommt der Frühling, beginnt er. Mit dem Wind schleicht er in die Nacht und nährt alles ohne einen Laut. Feldwege und Wolken sind ganz dunkel; nur das Licht eines Bootes leuchtet auf dem Fluss. Morgens sieht man die nassen roten Flecken: Die Blüten von Chengdu hängen schwer vom Regen."
+   },
+   "sources": [
+    {
+     "title": "農業部：二十四節氣（引用臺北市立天文科學教育館資料）",
+     "url": "https://www.moa.gov.tw/ws.php?id=2507770",
+     "license": "link only"
+    },
+    {
+     "title": "国立天文台 暦Wiki：七十二候",
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/wiki/B5A8C0E12FBCB7BDBDC6F3B8F5.html",
+     "license": "link only"
+    }
+   ]
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "惊蛰",
+   "date": "2026-03-05",
+   "title": "惊蛰：小虫子醒了",
+   "title_en": "Awakening of Insects: the little bugs wake up",
+   "title_de": "Erwachen der Insekten: Die kleinen Tiere wachen auf",
+   "dek": "轰隆隆，春雷来了。",
+   "paragraphs": [
+    "三月五日前后是惊蛰。“惊”是吓一跳，“蛰”是在土里睡觉的小虫子。",
+    "冬天的时候，很多小虫子在土里睡觉。到了惊蛰，天气暖了，有时候天上还会打雷，“轰隆隆！”小虫子都醒了，从土里爬出来。",
+    "这个时候，桃花也开了，小鸟在树上唱歌。",
+    "在香港，惊蛰这天有一个特别的习俗，叫“打小人”。人们用鞋子打纸做的小人，希望坏运气走开。",
+    "在德国，三月初的花园里，也开始开出小小的白花和紫花了。"
+   ],
+   "paragraphs_en": [
+    "The Awakening of Insects falls around 5 March. 惊 means \"to startle\", and 蛰 are the little creatures sleeping in the soil.",
+    "In winter many little bugs sleep in the soil. At the Awakening of Insects it gets warmer, and sometimes there is thunder in the sky: \"Boom!\" The little bugs all wake up and crawl out of the ground.",
+    "At this time the peach trees blossom and little birds sing in the trees.",
+    "In Hong Kong there is a special custom on this day called \"beating the petty people\": people hit little paper figures with a shoe, hoping to drive bad luck away.",
+    "In Germany, too, little white and purple flowers start to bloom in the gardens in early March."
+   ],
+   "paragraphs_de": [
+    "Um den 5. März beginnt das „Erwachen der Insekten“. 惊 heißt „erschrecken“, und 蛰 sind die kleinen Tiere, die in der Erde schlafen.",
+    "Im Winter schlafen viele kleine Tiere in der Erde. Beim Erwachen der Insekten wird es wärmer, und manchmal donnert es: „Rumms!“ Alle kleinen Tiere wachen auf und krabbeln aus der Erde.",
+    "Jetzt blühen auch die Pfirsichbäume, und kleine Vögel singen in den Bäumen.",
+    "In Hongkong gibt es an diesem Tag einen besonderen Brauch: „die kleinen Leute schlagen“. Man schlägt mit einem Schuh auf Papierfiguren und hofft, dass das Pech verschwindet.",
+    "Auch in Deutschland blühen Anfang März in den Gärten die ersten kleinen weißen und lila Blumen."
+   ],
+   "glossary": [
+    {
+     "w": "惊蛰",
+     "p": "jīng zhé",
+     "en": "Awakening of Insects (solar term, around 5 March)",
+     "de": "Erwachen der Insekten (Sonnenperiode, um den 5. März)"
+    },
+    {
+     "w": "吓一跳",
+     "p": "xià yí tiào",
+     "en": "to be startled",
+     "de": "sich erschrecken"
+    },
+    {
+     "w": "虫子",
+     "p": "chóng zi",
+     "en": "bug, insect",
+     "de": "das Insekt, das Krabbeltier"
+    },
+    {
+     "w": "打雷",
+     "p": "dǎ léi",
+     "en": "to thunder",
+     "de": "donnern"
+    },
+    {
+     "w": "醒",
+     "p": "xǐng",
+     "en": "to wake up",
+     "de": "aufwachen"
+    },
+    {
+     "w": "爬",
+     "p": "pá",
+     "en": "to crawl",
+     "de": "krabbeln"
+    },
+    {
+     "w": "桃花",
+     "p": "táo huā",
+     "en": "peach blossom",
+     "de": "die Pfirsichblüte"
+    },
+    {
+     "w": "运气",
+     "p": "yùn qi",
+     "en": "luck",
+     "de": "das Glück"
+    }
+   ],
+   "grammar": "到了 + time means \"when … comes\": 到了惊蛰，天气暖了 = when the Awakening of Insects comes, it gets warmer.",
+   "grammar_de": "到了 + Zeit heißt „wenn … kommt“: 到了惊蛰，天气暖了 = Wenn das Erwachen der Insekten kommt, wird es wärmer.",
+   "questions": [
+    "“惊蛰”的“蛰”是什么？",
+    "小虫子为什么从土里爬出来？",
+    "春天的时候，你在外面看到过什么小动物？"
+   ],
+   "poem": {
+    "title": "绝句",
+    "author": "杜甫",
+    "dynasty": "唐",
+    "lines": [
+     "两个黄鹂鸣翠柳，",
+     "一行白鹭上青天。",
+     "窗含西岭千秋雪，",
+     "门泊东吴万里船。"
+    ],
+    "explain_zh": "两只黄鹂在绿色的柳树上唱歌，一行白鹭飞上蓝蓝的天空。从窗户里能看到西边山上终年不化的雪，门外停着从很远很远的东吴来的船。",
+    "explain_en": "Two orioles sing in the green willow; a line of white egrets flies up into the blue sky. The window frames the eternal snow on the western mountains; at the door lie boats that have come thousands of miles from the east.",
+    "explain_de": "Zwei Pirole singen in der grünen Weide; eine Reihe weißer Reiher fliegt in den blauen Himmel. Das Fenster rahmt den ewigen Schnee der Westberge; vor der Tür liegen Boote, die tausende Meilen aus dem Osten gekommen sind."
+   },
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK4",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "惊蛰",
+   "date": "2026-03-05",
+   "title": "惊蛰：一声雷，万物醒",
+   "title_en": "Awakening of Insects: one clap of thunder, and everything wakes",
+   "title_de": "Erwachen der Insekten: Ein Donnerschlag, und alles erwacht",
+   "dek": "古人以为是雷声叫醒了虫子。",
+   "paragraphs": [
+    "惊蛰一般在每年三月五日到七日之间。“蛰”指的是藏在土里过冬的小动物。古人认为，到了这时，春雷开始响起，把冬眠的虫子惊醒了，所以叫“惊蛰”。其实，虫子醒来主要是因为天气变暖、土地温度升高，并不是被雷声吵醒的。",
+    "惊蛰的三候是“桃始华、仓庚鸣、鹰化为鸠”：桃花开始开放；黄鹂（古时叫仓庚）开始鸣叫；第三候最奇特：古人看到天上的鹰少了，斑鸠多了，就以为是鹰变成了斑鸠。",
+    "在香港和澳门，惊蛰有一个热闹的民间习俗——“打小人”。每到惊蛰，香港铜锣湾的鹅颈桥下就挤满了人，请人用鞋子拍打纸做的“小人”，传说这样可以赶走身边说坏话、害人的“小人”和坏运气。有人说，这其实是一种发泄情绪的方式。",
+    "在德国，三月初的草地上，雪花莲和番红花已经开了，鸟儿的叫声一天比一天热闹。虽然还会有几场倒春寒，但谁都能感觉到：冬天快过去了。"
+   ],
+   "paragraphs_en": [
+    "The Awakening of Insects usually falls between 5 and 7 March. 蛰 refers to small animals hiding in the ground for the winter. The ancients believed that now the spring thunder began to roll and startled the hibernating insects awake – hence the name. In fact, insects wake up mainly because the weather warms and the soil heats up, not because thunder disturbs them.",
+    "Its three pentads are \"peach trees begin to blossom, orioles begin to sing, hawks turn into doves\": peach blossoms open; the oriole (once called cangeng) starts to sing; and the third is the strangest: seeing fewer hawks and more turtle doves in the sky, the ancients thought the hawks had turned into doves.",
+    "In Hong Kong and Macau, there is a lively folk custom on this day: \"beating the petty people\". Every year on the Awakening of Insects, crowds gather under Goose Neck Bridge in Causeway Bay, Hong Kong, and pay someone to beat paper figures with a shoe – said to drive away bad luck and the \"petty people\" who gossip and do harm. Some say it is really a way to let off steam.",
+    "In Germany, snowdrops and crocuses are already out in the meadows in early March, and birdsong grows livelier day by day. There may still be a few late cold snaps, but everyone can feel it: winter is nearly over."
+   ],
+   "paragraphs_de": [
+    "Das „Erwachen der Insekten“ fällt meist zwischen den 5. und 7. März. 蛰 meint kleine Tiere, die sich zum Überwintern im Boden verstecken. Man glaubte früher, dass jetzt der Frühlingsdonner einsetzt und die Winterschläfer aufschreckt – daher der Name. Tatsächlich wachen die Insekten vor allem auf, weil es wärmer wird und der Boden sich erwärmt, nicht wegen des Donners.",
+    "Die drei „Hou“ lauten „die Pfirsiche beginnen zu blühen, der Pirol beginnt zu singen, die Habichte werden zu Tauben“: Die Pfirsichblüten gehen auf; der Pirol (früher Canggeng genannt) singt; und das dritte ist das seltsamste: Weil man weniger Habichte und mehr Turteltauben sah, glaubte man, die Habichte hätten sich in Tauben verwandelt.",
+    "In Hongkong und Macau gibt es an diesem Tag einen lebhaften Volksbrauch: „die kleinen Leute schlagen“. Jedes Jahr drängen sich die Menschen unter der Goose-Neck-Brücke in Causeway Bay, Hongkong, und lassen Papierfiguren mit einem Schuh schlagen – das soll Pech und die „kleinen Leute“ vertreiben, die lästern und schaden. Manche sagen, es sei eigentlich eine Art, Dampf abzulassen.",
+    "In Deutschland blühen Anfang März auf den Wiesen schon Schneeglöckchen und Krokusse, und der Vogelgesang wird von Tag zu Tag lebhafter. Ein paar Kälterückfälle kommen vielleicht noch, aber jeder spürt: Der Winter ist fast vorbei."
+   ],
+   "glossary": [
+    {
+     "w": "藏",
+     "p": "cáng",
+     "en": "to hide",
+     "de": "sich verstecken"
+    },
+    {
+     "w": "惊醒",
+     "p": "jīng xǐng",
+     "en": "to startle awake",
+     "de": "aufschrecken"
+    },
+    {
+     "w": "温度",
+     "p": "wēn dù",
+     "en": "temperature",
+     "de": "die Temperatur"
+    },
+    {
+     "w": "奇特",
+     "p": "qí tè",
+     "en": "strange, peculiar",
+     "de": "seltsam"
+    },
+    {
+     "w": "黄鹂",
+     "p": "huáng lí",
+     "en": "oriole",
+     "de": "der Pirol"
+    },
+    {
+     "w": "斑鸠",
+     "p": "bān jiū",
+     "en": "turtle dove",
+     "de": "die Turteltaube"
+    },
+    {
+     "w": "民间",
+     "p": "mín jiān",
+     "en": "folk, popular",
+     "de": "volkstümlich, Volks-"
+    },
+    {
+     "w": "挤满",
+     "p": "jǐ mǎn",
+     "en": "to be packed with",
+     "de": "voll sein mit"
+    },
+    {
+     "w": "小人",
+     "p": "xiǎo rén",
+     "en": "petty, mean person",
+     "de": "gemeiner Mensch"
+    },
+    {
+     "w": "发泄",
+     "p": "fā xiè",
+     "en": "to vent",
+     "de": "abreagieren"
+    },
+    {
+     "w": "情绪",
+     "p": "qíng xù",
+     "en": "mood, feelings",
+     "de": "die Stimmung, die Gefühle"
+    },
+    {
+     "w": "倒春寒",
+     "p": "dào chūn hán",
+     "en": "late cold snap in spring",
+     "de": "der Kälterückfall im Frühling"
+    }
+   ],
+   "grammar": "主要是因为…… gives the main reason: 虫子醒来主要是因为天气变暖 = the insects wake up mainly because it gets warmer.",
+   "grammar_de": "主要是因为…… nennt den Hauptgrund: 虫子醒来主要是因为天气变暖 = Die Insekten wachen vor allem auf, weil es wärmer wird.",
+   "questions": [
+    "虫子醒来真的是因为打雷吗？",
+    "古人为什么说“鹰化为鸠”？",
+    "你觉得“打小人”有用吗？为什么？"
+   ],
+   "poem": {
+    "title": "惠崇春江晚景",
+    "author": "苏轼",
+    "dynasty": "宋",
+    "lines": [
+     "竹外桃花三两枝，",
+     "春江水暖鸭先知。",
+     "蒌蒿满地芦芽短，",
+     "正是河豚欲上时。"
+    ],
+    "explain_zh": "竹林外，两三枝桃花开了；春天的江水变暖了，鸭子最先知道。地上长满了蒌蒿，芦苇刚冒出短短的芽，这正是河豚要从海里游上来的时候。",
+    "explain_en": "Beyond the bamboo, two or three sprays of peach blossom; the spring river is warming, and the ducks are the first to know. Wormwood covers the ground, the reed shoots are still short – just the time when the pufferfish swim upriver.",
+    "explain_de": "Jenseits des Bambus zwei, drei Pfirsichzweige in Blüte; der Frühlingsfluss wird warm, und die Enten merken es zuerst. Beifuß bedeckt den Boden, die Schilftriebe sind noch kurz – genau die Zeit, in der die Kugelfische flussaufwärts ziehen."
+   },
+   "sources": [
+    {
+     "title": "農業部：二十四節氣（引用臺北市立天文科學教育館資料）",
+     "url": "https://www.moa.gov.tw/ws.php?id=2507770",
+     "license": "link only"
+    },
+    {
+     "title": "国立天文台 暦Wiki：七十二候",
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/wiki/B5A8C0E12FBCB7BDBDC6F3B8F5.html",
+     "license": "link only"
+    },
+    {
+     "title": "Our China Story：驚蟄打小人",
+     "url": "https://www.ourchinastory.com/zh/amp/1132",
+     "license": "link only"
+    }
+   ]
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "春分",
+   "date": "2026-03-20",
+   "title": "春分：白天和晚上一样长",
+   "title_en": "Spring Equinox: day and night are equal",
+   "title_de": "Frühlings-Tagundnachtgleiche: Tag und Nacht sind gleich lang",
+   "dek": "春天过了一半。",
+   "paragraphs": [
+    "三月二十日前后是春分。这一天，白天和晚上差不多一样长。",
+    "春分以后，白天比晚上长。天气暖和了，很多花都开了。",
+    "春分有一个好玩的游戏：把鸡蛋立在桌子上。很多孩子都想试一试。",
+    "春天风大，孩子们很喜欢放风筝。",
+    "在德国，春分以后不久就是复活节。孩子们在花园里找彩色的鸡蛋。"
+   ],
+   "paragraphs_en": [
+    "The Spring Equinox falls around 20 March. On this day, day and night are almost the same length.",
+    "After the equinox, the days are longer than the nights. It gets warm and many flowers bloom.",
+    "There is a fun game at the Spring Equinox: standing an egg upright on the table. Lots of children want to try it.",
+    "In spring it is windy, and children love flying kites.",
+    "In Germany, Easter comes soon after the Spring Equinox. Children look for coloured eggs in the garden."
+   ],
+   "paragraphs_de": [
+    "Um den 20. März ist die Frühlings-Tagundnachtgleiche. An diesem Tag sind Tag und Nacht fast gleich lang.",
+    "Danach sind die Tage länger als die Nächte. Es wird warm, und viele Blumen blühen.",
+    "Zur Tagundnachtgleiche gibt es ein lustiges Spiel: ein Ei aufrecht auf den Tisch stellen. Viele Kinder wollen es ausprobieren.",
+    "Im Frühling ist es windig, und Kinder lassen gern Drachen steigen.",
+    "In Deutschland ist bald nach der Tagundnachtgleiche Ostern. Die Kinder suchen im Garten bunte Eier."
+   ],
+   "glossary": [
+    {
+     "w": "春分",
+     "p": "chūn fēn",
+     "en": "Spring Equinox (around 20 March)",
+     "de": "Frühlings-Tagundnachtgleiche (um den 20. März)"
+    },
+    {
+     "w": "差不多",
+     "p": "chà bu duō",
+     "en": "almost, about",
+     "de": "fast, ungefähr"
+    },
+    {
+     "w": "一样",
+     "p": "yí yàng",
+     "en": "the same",
+     "de": "gleich"
+    },
+    {
+     "w": "鸡蛋",
+     "p": "jī dàn",
+     "en": "egg",
+     "de": "das Ei"
+    },
+    {
+     "w": "立",
+     "p": "lì",
+     "en": "to stand (something) up",
+     "de": "aufstellen"
+    },
+    {
+     "w": "试一试",
+     "p": "shì yi shì",
+     "en": "to give it a try",
+     "de": "ausprobieren"
+    },
+    {
+     "w": "风筝",
+     "p": "fēng zheng",
+     "en": "kite",
+     "de": "der Drachen"
+    },
+    {
+     "w": "复活节",
+     "p": "fù huó jié",
+     "en": "Easter",
+     "de": "Ostern"
+    }
+   ],
+   "grammar": "A 比 B + adjective compares: 白天比晚上长 = the day is longer than the night. The adjective stays in its basic form (长, not 更长).",
+   "grammar_de": "A 比 B + Adjektiv vergleicht: 白天比晚上长 = Der Tag ist länger als die Nacht. Das Adjektiv bleibt in der Grundform (长).",
+   "questions": [
+    "春分这一天，白天和晚上怎么样？",
+    "你能把鸡蛋立起来吗？",
+    "你放过风筝吗？"
+   ],
+   "poem": {
+    "title": "村居",
+    "author": "高鼎",
+    "dynasty": "清",
+    "lines": [
+     "草长莺飞二月天，",
+     "拂堤杨柳醉春烟。",
+     "儿童散学归来早，",
+     "忙趁东风放纸鸢。"
+    ],
+    "explain_zh": "二月里，草长高了，黄莺飞来飞去。河边的杨柳轻轻摸着河堤，在春天的雾气里好像喝醉了。孩子们放学回来得早，赶快趁着东风去放风筝。",
+    "explain_en": "In the second month the grass grows tall and orioles flit about; willows brush the riverbank, as if drunk in the spring haze. The children come home early from school and hurry to fly their kites in the east wind.",
+    "explain_de": "Im zweiten Monat wächst das Gras, und Pirole fliegen umher; Weiden streifen den Uferdamm, wie berauscht im Frühlingsdunst. Die Kinder kommen früh aus der Schule und lassen schnell im Ostwind ihre Drachen steigen."
+   },
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK4",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "春分",
+   "date": "2026-03-20",
+   "title": "春分：春天的一半",
+   "title_en": "Spring Equinox: half of spring",
+   "title_de": "Frühlings-Tagundnachtgleiche: die Hälfte des Frühlings",
+   "dek": "昼夜平分，春天也过了一半。",
+   "paragraphs": [
+    "春分一般在每年三月二十日到二十二日之间。这一天，太阳直射赤道，世界上大部分地方昼夜几乎一样长。“分”有两层意思：一是白天和黑夜平分，二是春天已经过了一半。",
+    "春分的三候是“玄鸟至、雷乃发声、始电”：燕子从南方飞回来了；春雷开始响起；天上开始出现闪电。",
+    "春分有一个流传很广的游戏——“立蛋”，传说这天特别容易把鸡蛋竖起来。其实只要有耐心，一年里哪一天都能把鸡蛋立住。不过这个游戏还是年年有人玩，因为好玩本身就是理由。",
+    "德国的复活节也和春分有关：按照传统，复活节定在春分以后第一次月圆之后的那个星期日，所以每年的日子都不一样。春分以后不久，夏令时也开始了，大家要把钟往前拨一个小时。"
+   ],
+   "paragraphs_en": [
+    "The Spring Equinox usually falls between 20 and 22 March. On this day the sun stands directly over the equator, and in most places day and night are almost equal. 分 has two meanings here: day and night are divided equally, and spring is already half over.",
+    "Its three pentads are \"the swallows arrive, thunder begins to sound, lightning first appears\": swallows return from the south; spring thunder starts to roll; lightning flashes across the sky.",
+    "A widespread game belongs to the Spring Equinox – \"standing an egg\": it is said that eggs stand upright especially easily on this day. In fact, with patience you can stand an egg on any day of the year. But people still play it every year, because fun is reason enough.",
+    "German Easter is linked to the equinox too: traditionally, Easter is the first Sunday after the first full moon following the spring equinox, so its date changes every year. Soon after the equinox, summer time starts as well, and the clocks go forward an hour."
+   ],
+   "paragraphs_de": [
+    "Die Frühlings-Tagundnachtgleiche fällt meist zwischen den 20. und 22. März. An diesem Tag steht die Sonne senkrecht über dem Äquator, und an den meisten Orten sind Tag und Nacht fast gleich lang. 分 hat zwei Bedeutungen: Tag und Nacht teilen sich gleich auf, und der Frühling ist schon zur Hälfte vorbei.",
+    "Die drei „Hou“ lauten „die Schwalben kommen, der Donner beginnt zu grollen, die ersten Blitze“: Die Schwalben kehren aus dem Süden zurück; der Frühlingsdonner setzt ein; Blitze zucken über den Himmel.",
+    "Zur Tagundnachtgleiche gehört ein weit verbreitetes Spiel – „das Ei aufstellen“: Angeblich bleibt ein Ei an diesem Tag besonders leicht stehen. In Wahrheit gelingt es mit Geduld an jedem Tag des Jahres. Trotzdem spielt man es jedes Jahr, denn Spaß ist Grund genug.",
+    "Auch das deutsche Osterfest hängt mit der Tagundnachtgleiche zusammen: Traditionell ist Ostern der erste Sonntag nach dem ersten Vollmond nach Frühlingsbeginn, deshalb ändert sich das Datum jedes Jahr. Kurz nach der Tagundnachtgleiche beginnt auch die Sommerzeit, und die Uhren werden eine Stunde vorgestellt."
+   ],
+   "glossary": [
+    {
+     "w": "赤道",
+     "p": "chì dào",
+     "en": "equator",
+     "de": "der Äquator"
+    },
+    {
+     "w": "昼夜",
+     "p": "zhòu yè",
+     "en": "day and night",
+     "de": "Tag und Nacht"
+    },
+    {
+     "w": "平分",
+     "p": "píng fēn",
+     "en": "to divide equally",
+     "de": "gleichmäßig teilen"
+    },
+    {
+     "w": "燕子",
+     "p": "yàn zi",
+     "en": "swallow",
+     "de": "die Schwalbe"
+    },
+    {
+     "w": "闪电",
+     "p": "shǎn diàn",
+     "en": "lightning",
+     "de": "der Blitz"
+    },
+    {
+     "w": "流传",
+     "p": "liú chuán",
+     "en": "to spread, be handed down",
+     "de": "verbreitet sein, überliefert werden"
+    },
+    {
+     "w": "竖",
+     "p": "shù",
+     "en": "to stand upright",
+     "de": "aufrecht stellen"
+    },
+    {
+     "w": "耐心",
+     "p": "nài xīn",
+     "en": "patience",
+     "de": "die Geduld"
+    },
+    {
+     "w": "月圆",
+     "p": "yuè yuán",
+     "en": "full moon",
+     "de": "der Vollmond"
+    },
+    {
+     "w": "夏令时",
+     "p": "xià lìng shí",
+     "en": "summer time",
+     "de": "die Sommerzeit"
+    },
+    {
+     "w": "拨",
+     "p": "bō",
+     "en": "to turn (a clock)",
+     "de": "(die Uhr) stellen"
+    }
+   ],
+   "grammar": "只要……就/都…… means \"as long as …\": 只要有耐心，一年里哪一天都能把鸡蛋立住 = as long as you are patient, you can stand an egg on any day.",
+   "grammar_de": "只要……就/都…… heißt „solange …, (dann) …“: 只要有耐心，一年里哪一天都能把鸡蛋立住 = Mit Geduld kann man an jedem Tag ein Ei aufstellen.",
+   "questions": [
+    "春分的“分”有哪两层意思？",
+    "为什么复活节每年的日子都不一样？",
+    "你相信春分特别容易立蛋吗？试一试吧！"
+   ],
+   "poem": {
+    "title": "绝句二首·其一",
+    "author": "杜甫",
+    "dynasty": "唐",
+    "lines": [
+     "迟日江山丽，",
+     "春风花草香。",
+     "泥融飞燕子，",
+     "沙暖睡鸳鸯。"
+    ],
+    "explain_zh": "春天的白天变长了，江山在阳光下格外美丽；春风吹来，带着花草的香味。泥土解冻变软了，燕子飞来飞去衔泥做窝；沙滩晒暖了，鸳鸯在上面睡着了。",
+    "explain_en": "The longer days of spring make river and mountain beautiful; the spring wind carries the scent of flowers and grass. The thawed mud is soft, and swallows fly to and fro to build nests; the sand is warm, and mandarin ducks sleep on it.",
+    "explain_de": "Die längeren Frühlingstage machen Fluss und Berge schön; der Frühlingswind trägt den Duft von Blumen und Gras. Der aufgetaute Schlamm ist weich, Schwalben fliegen hin und her und bauen Nester; der Sand ist warm, und Mandarinenten schlafen darauf."
+   },
+   "sources": [
+    {
+     "title": "農業部：二十四節氣（引用臺北市立天文科學教育館資料）",
+     "url": "https://www.moa.gov.tw/ws.php?id=2507770",
+     "license": "link only"
+    },
+    {
+     "title": "Hong Kong Observatory: 2026 major solar terms",
+     "url": "https://my.weather.gov.hk/en/gts/astron2026/files/2026SolarTerms24.pdf",
+     "license": "official"
+    },
+    {
+     "title": "国立天文台 暦Wiki：七十二候",
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/wiki/B5A8C0E12FBCB7BDBDC6F3B8F5.html",
+     "license": "link only"
+    },
+    {
+     "title": "香港教育局：二十四節氣（小學教學資源）",
+     "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/cross-kla-studies/ph-primary/references-resources/MET_series/24_Solar_Terms.pdf",
+     "license": "official"
+    }
+   ]
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "清明",
+   "date": "2026-04-05",
+   "title": "清明：出去走走",
+   "title_en": "Clear and Bright: going out",
+   "title_de": "Klares Licht: Hinaus ins Freie",
+   "dek": "天清清的，地明明的。",
+   "paragraphs": [
+    "四月五日前后是清明。“清明”的意思是：天气很清爽，到处都很明亮。",
+    "清明也是一个节日。很多人家去看已经去世的家人，给他们送花，打扫墓地。",
+    "清明的时候天气好，大家也喜欢去外面走走，看看花和草，这叫“踏青”。",
+    "江南人这个时候吃青团。青团是绿色的，里面有甜甜的豆沙。",
+    "在德国，四月的天气变得很快，一会儿下雨，一会儿出太阳。德国人说：“四月啊四月，想怎么样就怎么样。”"
+   ],
+   "paragraphs_en": [
+    "Clear and Bright falls around 5 April. The name means: the air is fresh and everything is bright.",
+    "Qingming is also a festival. Many families visit relatives who have passed away, bring them flowers and tidy their graves.",
+    "The weather is good at Qingming, so people also like to go out and look at the flowers and grass. This is called \"treading the green\".",
+    "In the Jiangnan region people eat qingtuan at this time. Qingtuan are green and filled with sweet bean paste.",
+    "In Germany the weather changes quickly in April: one moment it rains, the next the sun comes out. Germans say: \"April, April, does what it will.\""
+   ],
+   "paragraphs_de": [
+    "Um den 5. April beginnt „Klares Licht“. Der Name bedeutet: Die Luft ist frisch, und alles ist hell.",
+    "Qingming ist auch ein Fest. Viele Familien besuchen verstorbene Angehörige, bringen ihnen Blumen und pflegen ihre Gräber.",
+    "Zu Qingming ist das Wetter schön, deshalb geht man auch gern hinaus und schaut sich Blumen und Gras an. Das heißt „ins Grüne treten“.",
+    "In der Jiangnan-Gegend isst man jetzt Qingtuan. Das sind grüne Klößchen mit süßer Bohnenpaste.",
+    "In Deutschland ändert sich das Wetter im April schnell: Mal regnet es, mal scheint die Sonne. Man sagt: „April, April, der macht, was er will.“"
+   ],
+   "glossary": [
+    {
+     "w": "清明",
+     "p": "qīng míng",
+     "en": "Clear and Bright (solar term and festival, around 5 April)",
+     "de": "Klares Licht (Sonnenperiode und Fest, um den 5. April)"
+    },
+    {
+     "w": "明亮",
+     "p": "míng liàng",
+     "en": "bright",
+     "de": "hell"
+    },
+    {
+     "w": "去世",
+     "p": "qù shì",
+     "en": "to pass away",
+     "de": "sterben, verstorben sein"
+    },
+    {
+     "w": "墓地",
+     "p": "mù dì",
+     "en": "grave, cemetery",
+     "de": "das Grab, der Friedhof"
+    },
+    {
+     "w": "踏青",
+     "p": "tà qīng",
+     "en": "to go for a spring outing",
+     "de": "einen Frühlingsausflug machen"
+    },
+    {
+     "w": "青团",
+     "p": "qīng tuán",
+     "en": "qingtuan (green rice dumpling)",
+     "de": "Qingtuan (grünes Reisklößchen)"
+    },
+    {
+     "w": "豆沙",
+     "p": "dòu shā",
+     "en": "sweet bean paste",
+     "de": "süße Bohnenpaste"
+    },
+    {
+     "w": "一会儿",
+     "p": "yí huì r",
+     "en": "a moment",
+     "de": "ein Moment"
+    }
+   ],
+   "grammar": "一会儿……一会儿…… = \"one moment …, the next …\": 一会儿下雨，一会儿出太阳 = one moment it rains, the next the sun comes out.",
+   "grammar_de": "一会儿……一会儿…… = „mal …, mal …“: 一会儿下雨，一会儿出太阳 = Mal regnet es, mal scheint die Sonne.",
+   "questions": [
+    "清明的时候，很多人家做什么？",
+    "什么是“踏青”？",
+    "春天的时候，你喜欢去哪儿走走？"
+   ],
+   "poem": {
+    "title": "清明",
+    "author": "杜牧",
+    "dynasty": "唐",
+    "lines": [
+     "清明时节雨纷纷，",
+     "路上行人欲断魂。",
+     "借问酒家何处有，",
+     "牧童遥指杏花村。"
+    ],
+    "explain_zh": "清明的时候，细细的雨下个不停，路上的行人心里很难过。诗人问：哪里有小酒店呢？放牛的孩子指了指远处开满杏花的村子。",
+    "explain_en": "At Qingming a fine rain keeps falling, and the travellers on the road are heavy-hearted. \"Where can I find an inn?\" the poet asks. The cowherd boy points to a village far off, white with apricot blossom.",
+    "explain_de": "Zu Qingming fällt unaufhörlich feiner Regen, und den Reisenden auf der Straße ist schwer ums Herz. „Wo gibt es hier ein Gasthaus?“, fragt der Dichter. Der Hirtenjunge zeigt auf ein fernes Dorf voller Aprikosenblüten."
+   },
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK4",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "清明",
+   "date": "2026-04-05",
+   "title": "清明：节气，也是节日",
+   "title_en": "Clear and Bright: a solar term and a festival",
+   "title_de": "Klares Licht: Sonnenperiode und Fest",
+   "dek": "怀念和生活，在同一个日子里。",
+   "paragraphs": [
+    "清明一般在每年四月四日到六日之间。它既是节气，也是传统节日。“清明”二字，形容这时天气清爽、景物明净。",
+    "清明的三候是“桐始华、田鼠化为鴽、虹始见”：泡桐开花了；田鼠躲回洞里，鴽鸟（一种鹌鹑类的小鸟）多了起来，古人便以为田鼠变成了鸟；雨后的天空开始出现彩虹——正好和小雪的“虹藏不见”前后呼应。",
+    "清明前一两天原本是寒食节，古时候这几天不生火，只吃冷食。后来寒食和清明渐渐合在了一起。今天，人们在清明扫墓祭祖，也趁着春光去郊外踏青：怀念逝去的人，也好好过眼前的生活。",
+    "对爱茶的人来说，清明还有一个特别的意义。杭州的龙井茶分“明前”和“雨前”：清明以前采的叫“明前茶”，只用最嫩的芽，产量少，价格高；清明以后、谷雨以前采的，叫“雨前茶”。"
+   ],
+   "paragraphs_en": [
+    "Clear and Bright usually falls between 4 and 6 April. It is both a solar term and a traditional festival. The two characters describe the season: the air is fresh, and the landscape is bright and clean.",
+    "Its three pentads are \"the paulownia begins to blossom, field mice turn into quails, rainbows first appear\": paulownia trees flower; field mice retreat into their holes while quail-like birds become common, so the ancients thought the mice had turned into birds; and after rain, rainbows appear in the sky – a neat echo of \"rainbows hide\" at Minor Snow.",
+    "The day or two before Qingming used to be the Cold Food Festival, when people lit no fires and ate only cold food. Over time the two festivals merged. Today people sweep their ancestors' graves at Qingming and also use the spring weather for an outing in the countryside: remembering those who are gone, and living fully in the present.",
+    "For tea lovers, Qingming has a special meaning. Hangzhou's Longjing tea is graded \"before Qingming\" and \"before the rains\": tea picked before Qingming uses only the tenderest buds, is scarce and expensive; tea picked after Qingming but before Grain Rain is called \"before-the-rains tea\"."
+   ],
+   "paragraphs_de": [
+    "„Klares Licht“ fällt meist zwischen den 4. und 6. April. Es ist zugleich Sonnenperiode und traditionelles Fest. Die beiden Zeichen beschreiben die Jahreszeit: Die Luft ist frisch, die Landschaft hell und klar.",
+    "Die drei „Hou“ lauten „der Paulownienbaum beginnt zu blühen, die Feldmäuse werden zu Wachteln, die ersten Regenbögen“: Die Paulownien blühen; die Feldmäuse ziehen sich in ihre Löcher zurück, während wachtelartige Vögel häufiger werden, also glaubte man, die Mäuse seien zu Vögeln geworden; und nach dem Regen erscheinen Regenbögen – ein hübsches Echo auf „die Regenbögen verstecken sich“ beim Leichten Schnee.",
+    "Ein, zwei Tage vor Qingming lag früher das Fest der kalten Speisen, an dem man kein Feuer machte und nur Kaltes aß. Mit der Zeit verschmolzen beide Feste. Heute pflegt man zu Qingming die Gräber der Vorfahren und nutzt zugleich das Frühlingswetter für einen Ausflug ins Grüne: der Verstorbenen gedenken und das eigene Leben im Jetzt leben.",
+    "Für Teeliebhaber hat Qingming eine besondere Bedeutung. Der Longjing-Tee aus Hangzhou wird in „vor Qingming“ und „vor dem Regen“ eingeteilt: Tee, der vor Qingming gepflückt wird, besteht nur aus den zartesten Knospen, ist selten und teuer; Tee, der nach Qingming, aber vor dem Kornregen gepflückt wird, heißt „Vor-dem-Regen-Tee“."
+   ],
+   "glossary": [
+    {
+     "w": "既……也……",
+     "p": "jì … … yě … …",
+     "en": "both … and …",
+     "de": "sowohl … als auch …"
+    },
+    {
+     "w": "清爽",
+     "p": "qīng shuǎng",
+     "en": "fresh, clear",
+     "de": "frisch, klar"
+    },
+    {
+     "w": "景物",
+     "p": "jǐng wù",
+     "en": "scenery",
+     "de": "die Landschaft"
+    },
+    {
+     "w": "泡桐",
+     "p": "pāo tóng",
+     "en": "paulownia (tree)",
+     "de": "die Paulownie"
+    },
+    {
+     "w": "躲",
+     "p": "duǒ",
+     "en": "to hide",
+     "de": "sich verstecken"
+    },
+    {
+     "w": "呼应",
+     "p": "hū yìng",
+     "en": "to echo, correspond",
+     "de": "aufeinander Bezug nehmen"
+    },
+    {
+     "w": "生火",
+     "p": "shēng huǒ",
+     "en": "to light a fire",
+     "de": "Feuer machen"
+    },
+    {
+     "w": "扫墓",
+     "p": "sǎo mù",
+     "en": "to sweep graves",
+     "de": "Gräber pflegen"
+    },
+    {
+     "w": "怀念",
+     "p": "huái niàn",
+     "en": "to remember fondly",
+     "de": "gedenken"
+    },
+    {
+     "w": "逝去",
+     "p": "shì qù",
+     "en": "to pass away",
+     "de": "dahingehen"
+    },
+    {
+     "w": "采",
+     "p": "cǎi",
+     "en": "to pick",
+     "de": "pflücken"
+    },
+    {
+     "w": "嫩",
+     "p": "nèn",
+     "en": "tender, young",
+     "de": "zart, jung"
+    }
+   ],
+   "grammar": "既……也…… joins two qualities of the same thing: 它既是节气，也是传统节日 = it is both a solar term and a traditional festival.",
+   "grammar_de": "既……也…… verbindet zwei Eigenschaften derselben Sache: 它既是节气，也是传统节日 = Es ist sowohl Sonnenperiode als auch traditionelles Fest.",
+   "questions": [
+    "清明和寒食节有什么关系？",
+    "“明前茶”和“雨前茶”有什么不同？",
+    "你会用什么方式怀念重要的人？"
+   ],
+   "poem": {
+    "title": "寒食",
+    "author": "韩翃",
+    "dynasty": "唐",
+    "lines": [
+     "春城无处不飞花，",
+     "寒食东风御柳斜。",
+     "日暮汉宫传蜡烛，",
+     "轻烟散入五侯家。"
+    ],
+    "explain_zh": "春天的京城里，到处都飘着落花；寒食节的东风吹斜了皇宫里的柳枝。傍晚，宫里把点着的蜡烛传给皇帝最宠信的几户人家，轻轻的烟就飘进了这些权贵的家里。（寒食节不能生火，只有得到皇帝恩准的人家才能先点火。）",
+    "explain_en": "In the spring capital, petals drift everywhere; at Cold Food the east wind bends the willows of the palace. At dusk the palace hands out lit candles, and thin smoke drifts into the homes of the five favoured lords. (No fires were allowed at Cold Food – only those the emperor favoured could light one first.)",
+    "explain_de": "In der Frühlingshauptstadt wirbeln überall Blüten; am Fest der kalten Speisen biegt der Ostwind die Palastweiden. In der Dämmerung reicht der Palast brennende Kerzen weiter, und feiner Rauch zieht in die Häuser der fünf bevorzugten Fürsten. (An diesem Fest war Feuer verboten – nur wer beim Kaiser in Gunst stand, durfte zuerst eines anzünden.)"
+   },
+   "sources": [
+    {
+     "title": "農業部：二十四節氣（引用臺北市立天文科學教育館資料）",
+     "url": "https://www.moa.gov.tw/ws.php?id=2507770",
+     "license": "link only"
+    },
+    {
+     "title": "国立天文台 暦Wiki：七十二候",
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/wiki/B5A8C0E12FBCB7BDBDC6F3B8F5.html",
+     "license": "link only"
+    },
+    {
+     "title": "康健雜誌：24節氣（2023-05-03）",
+     "url": "https://www.commonhealth.com.tw/article/88011",
+     "license": "link only"
+    },
+    {
+     "title": "米芝蓮指南：龍井茶（明前與雨前）",
+     "url": "https://guide.michelin.com/mo/zh_HK/article/dining-in/ask-the-expert-Long-Jing-tea",
+     "license": "link only"
+    }
+   ]
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "谷雨",
+   "date": "2026-04-20",
+   "title": "谷雨：雨帮小苗长大",
+   "title_en": "Grain Rain: rain helps the seedlings grow",
+   "title_de": "Kornregen: Regen lässt die Pflänzchen wachsen",
+   "dek": "春天的最后一个节气。",
+   "paragraphs": [
+    "四月二十日前后是谷雨。谷雨是春天的最后一个节气。",
+    "“谷”是粮食。谷雨的时候，雨多了，田里的小苗喝了雨水，长得很快。",
+    "这个时候，牡丹花开了。牡丹花很大，很漂亮，有红的，有粉的，也有白的。",
+    "在德国，四月底开始可以吃白芦笋了。德国人很喜欢它，一直可以吃到六月。"
+   ],
+   "paragraphs_en": [
+    "Grain Rain falls around 20 April. It is the last solar term of spring.",
+    "谷 means grain. At Grain Rain there is more rain, and the seedlings in the fields drink it and grow quickly.",
+    "At this time the peonies bloom. Peonies are big and beautiful – red, pink and white.",
+    "In Germany, white asparagus season starts at the end of April. Germans love it, and you can eat it until June."
+   ],
+   "paragraphs_de": [
+    "Um den 20. April beginnt „Kornregen“. Es ist die letzte Sonnenperiode des Frühlings.",
+    "谷 heißt Getreide. Beim Kornregen regnet es mehr, und die Pflänzchen auf den Feldern trinken das Wasser und wachsen schnell.",
+    "Jetzt blühen die Pfingstrosen. Sie sind groß und wunderschön – rot, rosa und weiß.",
+    "In Deutschland beginnt Ende April die Spargelzeit. Die Deutschen lieben weißen Spargel, und man kann ihn bis Juni essen."
+   ],
+   "glossary": [
+    {
+     "w": "谷雨",
+     "p": "gǔ yǔ",
+     "en": "Grain Rain (solar term, around 20 April)",
+     "de": "Kornregen (Sonnenperiode, um den 20. April)"
+    },
+    {
+     "w": "粮食",
+     "p": "liáng shi",
+     "en": "grain, food crops",
+     "de": "das Getreide"
+    },
+    {
+     "w": "田",
+     "p": "tián",
+     "en": "field",
+     "de": "das Feld"
+    },
+    {
+     "w": "小苗",
+     "p": "xiǎo miáo",
+     "en": "seedling",
+     "de": "das Pflänzchen"
+    },
+    {
+     "w": "牡丹",
+     "p": "mǔ dan",
+     "en": "peony",
+     "de": "die Pfingstrose"
+    },
+    {
+     "w": "粉",
+     "p": "fěn",
+     "en": "pink",
+     "de": "rosa"
+    },
+    {
+     "w": "芦笋",
+     "p": "lú sǔn",
+     "en": "asparagus",
+     "de": "der Spargel"
+    }
+   ],
+   "grammar": "Verb + 得 + description says how something is done: 长得很快 = grows quickly; 说得很好 = speaks well.",
+   "grammar_de": "Verb + 得 + Beschreibung sagt, wie etwas geschieht: 长得很快 = wächst schnell; 说得很好 = spricht gut.",
+   "questions": [
+    "谷雨是哪个季节的最后一个节气？",
+    "谷雨的时候，什么花开了？",
+    "你吃过芦笋吗？"
+   ],
+   "poem": {
+    "title": "游园不值",
+    "author": "叶绍翁",
+    "dynasty": "宋",
+    "lines": [
+     "应怜屐齿印苍苔，",
+     "小扣柴扉久不开。",
+     "春色满园关不住，",
+     "一枝红杏出墙来。"
+    ],
+    "explain_zh": "诗人去朋友的园子，轻轻敲了很久的门，也没有人开。也许主人怕木鞋踩坏了地上的青苔吧。可是满园的春色是关不住的：一枝红杏花从墙头伸了出来。",
+    "explain_en": "The poet knocks softly at a friend's garden gate for a long time, but no one opens – perhaps the owner fears clogs would mark the green moss. Yet a garden full of spring cannot be shut in: a branch of red apricot blossom reaches out over the wall.",
+    "explain_de": "Der Dichter klopft lange leise am Gartentor eines Freundes, doch niemand öffnet – vielleicht fürchtet der Besitzer, Holzschuhe könnten das Moos zertreten. Aber einen Garten voller Frühling kann man nicht einsperren: Ein Zweig roter Aprikosenblüten ragt über die Mauer."
+   },
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK4",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "谷雨",
+   "date": "2026-04-20",
+   "title": "谷雨：春天最后的花",
+   "title_en": "Grain Rain: the last flowers of spring",
+   "title_de": "Kornregen: die letzten Blumen des Frühlings",
+   "dek": "二十四番花信风，在这里数完。",
+   "paragraphs": [
+    "谷雨一般在每年四月十九日到二十一日之间，是春季的最后一个节气。古人说“雨生百谷”：这时雨水增多，正适合谷类作物生长。",
+    "谷雨的三候是“萍始生、鸣鸠拂其羽、戴胜降于桑”：池塘里开始长出浮萍；斑鸠一边叫，一边拍打着羽毛；戴胜鸟落到桑树上——这正是养蚕的季节。",
+    "从小寒的梅花开始，“二十四番花信风”到谷雨正好数完，最后一种花是楝花。楝花开过，春天的花事就结束了，夏天也要来了。",
+    "谷雨前后也是采茶的季节。清明以前采的“明前茶”最嫩、最贵；清明以后、谷雨以前采的叫“雨前茶”。天气一下子暖起来，茶芽长得太快，所以雨前茶整体的品质稍差一点，价格也更实惠。",
+    "在德国，四月底到六月是吃芦笋的季节。白芦笋配荷兰酱和土豆，是很多德国人心中春天的味道。按照传统，芦笋季到六月二十四日结束。"
+   ],
+   "paragraphs_en": [
+    "Grain Rain usually falls between 19 and 21 April and is the last solar term of spring. The ancients said \"rain gives birth to the hundred grains\": now there is more rain, just right for cereal crops.",
+    "Its three pentads are \"duckweed begins to grow, the turtle dove shakes its wings, the hoopoe alights on the mulberry\": duckweed appears on the ponds; turtle doves flap their wings as they call; hoopoes land in mulberry trees – just the season for raising silkworms.",
+    "Counting from the plum blossom at Minor Cold, the \"twenty-four flower winds\" end exactly at Grain Rain, with the chinaberry blossom as the last flower. When it has bloomed, spring's flowers are over and summer is on its way.",
+    "Grain Rain is also tea-picking season. \"Before-Qingming\" tea, picked before Clear and Bright, is the tenderest and most expensive; tea picked after Qingming but before Grain Rain is called \"before-the-rains\" tea. The weather warms up suddenly and the buds grow too fast, so this tea is overall slightly lower in quality – and more affordable.",
+    "In Germany, late April to June is asparagus season. White asparagus with hollandaise sauce and potatoes is, for many Germans, the taste of spring. By tradition, the season ends on 24 June."
+   ],
+   "paragraphs_de": [
+    "Der Kornregen fällt meist zwischen den 19. und 21. April und ist die letzte Sonnenperiode des Frühlings. Früher sagte man „Regen bringt die hundert Körner hervor“: Jetzt regnet es mehr, genau richtig für das Getreide.",
+    "Die drei „Hou“ lauten „die Wasserlinsen beginnen zu wachsen, die Turteltaube schüttelt ihre Flügel, der Wiedehopf lässt sich auf dem Maulbeerbaum nieder“: Auf den Teichen wachsen Wasserlinsen; Turteltauben schlagen beim Rufen mit den Flügeln; Wiedehopfe landen in Maulbeerbäumen – genau die Zeit für die Seidenraupenzucht.",
+    "Von der Pflaumenblüte bei der Kleinen Kälte an gezählt, enden die „vierundzwanzig Blumenwinde“ genau beim Kornregen, mit der Blüte des Paternosterbaums als letzter. Ist sie verblüht, ist die Blütezeit des Frühlings vorbei, und der Sommer kommt.",
+    "Um den Kornregen wird auch Tee gepflückt. Der „Vor-Qingming“-Tee ist der zarteste und teuerste; Tee, der nach Qingming, aber vor dem Kornregen gepflückt wird, heißt „Vor-dem-Regen-Tee“. Weil es plötzlich warm wird und die Knospen zu schnell wachsen, ist er insgesamt etwas weniger fein – und günstiger.",
+    "In Deutschland ist von Ende April bis Juni Spargelzeit. Weißer Spargel mit Sauce hollandaise und Kartoffeln ist für viele der Geschmack des Frühlings. Traditionell endet die Saison am 24. Juni, dem Johannistag."
+   ],
+   "glossary": [
+    {
+     "w": "作物",
+     "p": "zuò wù",
+     "en": "crop",
+     "de": "die Feldfrucht"
+    },
+    {
+     "w": "浮萍",
+     "p": "fú píng",
+     "en": "duckweed",
+     "de": "die Wasserlinse"
+    },
+    {
+     "w": "羽毛",
+     "p": "yǔ máo",
+     "en": "feather",
+     "de": "die Feder"
+    },
+    {
+     "w": "戴胜",
+     "p": "dài shèng",
+     "en": "hoopoe",
+     "de": "der Wiedehopf"
+    },
+    {
+     "w": "桑树",
+     "p": "sāng shù",
+     "en": "mulberry tree",
+     "de": "der Maulbeerbaum"
+    },
+    {
+     "w": "养蚕",
+     "p": "yǎng cán",
+     "en": "to raise silkworms",
+     "de": "Seidenraupen züchten"
+    },
+    {
+     "w": "花事",
+     "p": "huā shì",
+     "en": "the flowering season",
+     "de": "die Blütezeit"
+    },
+    {
+     "w": "品质",
+     "p": "pǐn zhì",
+     "en": "quality",
+     "de": "die Qualität"
+    },
+    {
+     "w": "稍",
+     "p": "shāo",
+     "en": "slightly",
+     "de": "etwas, ein wenig"
+    },
+    {
+     "w": "实惠",
+     "p": "shí huì",
+     "en": "good value, affordable",
+     "de": "preiswert"
+    },
+    {
+     "w": "荷兰酱",
+     "p": "hé lán jiàng",
+     "en": "hollandaise sauce",
+     "de": "die Sauce hollandaise"
+    },
+    {
+     "w": "季",
+     "p": "jì",
+     "en": "season",
+     "de": "die Saison"
+    }
+   ],
+   "grammar": "正 + verb/adjective means \"just, exactly\": 正适合谷类作物生长 = just right for cereal crops; 这正是养蚕的季节 = this is exactly the season for silkworms.",
+   "grammar_de": "正 + Verb/Adjektiv heißt „genau, gerade“: 正适合谷类作物生长 = genau richtig für Getreide; 这正是养蚕的季节 = Das ist genau die Zeit für Seidenraupen.",
+   "questions": [
+    "“谷雨”这个名字是什么意思？",
+    "二十四番花信风从哪里开始，到哪里结束？",
+    "在你心里，春天是什么味道？"
+   ],
+   "poem": {
+    "title": "大林寺桃花",
+    "author": "白居易",
+    "dynasty": "唐",
+    "lines": [
+     "人间四月芳菲尽，",
+     "山寺桃花始盛开。",
+     "长恨春归无觅处，",
+     "不知转入此中来。"
+    ],
+    "explain_zh": "四月里，山下的花都已经开完了，山上寺庙里的桃花才刚刚盛开。诗人常常遗憾春天走了，找也找不到；没想到，春天是悄悄转到这座山里来了。",
+    "explain_en": "In the fourth month the flowers in the world below have all faded, yet at the mountain temple the peach blossoms are only now in full bloom. The poet always regretted that spring left without a trace – he never knew it had simply moved up here.",
+    "explain_de": "Im vierten Monat sind unten im Tal alle Blumen verblüht, doch am Bergtempel stehen die Pfirsichblüten gerade in voller Pracht. Der Dichter hatte immer bedauert, dass der Frühling spurlos verschwindet – er wusste nicht, dass er nur hier heraufgezogen war."
+   },
+   "sources": [
+    {
+     "title": "農業部：二十四節氣（引用臺北市立天文科學教育館資料）",
+     "url": "https://www.moa.gov.tw/ws.php?id=2507770",
+     "license": "link only"
+    },
+    {
+     "title": "国立天文台 暦Wiki：七十二候",
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/wiki/B5A8C0E12FBCB7BDBDC6F3B8F5.html",
+     "license": "link only"
+    },
+    {
+     "title": "淡江時報：二十四番花信風",
+     "url": "https://tkutimes.tku.edu.tw/fpdf/58700.pdf",
+     "license": "link only"
+    },
+    {
+     "title": "米芝蓮指南：龍井茶（明前與雨前）",
+     "url": "https://guide.michelin.com/mo/zh_HK/article/dining-in/ask-the-expert-Long-Jing-tea",
+     "license": "link only"
+    }
+   ]
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "jieqi",
+   "section": "节气",
    "term": "霜降",
    "date": "2026-10-23",
    "title": "霜降：红红的叶子",
