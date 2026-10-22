@@ -1,0 +1,60 @@
+字里 Zili
+Copyright © 2026 申屠余夏 (Shentu Yuxia). All rights reserved. Alle Rechte vorbehalten. 保留所有权利。
+Contact / Kontakt / 联系: https://shentuyuxia.com
+
+================================================================
+中文
+================================================================
+本软件的程序代码、界面设计、原创文章、例句与词库整理，以及「字里」的名称和标志，均为作者的作品，受著作权法保护。
+
+允许：
+- 个人通过 https://shentuyuxia.github.io/Zili/ 免费使用本应用学习，非商业用途。
+
+未经作者事先书面许可，不得：
+- 复制、修改、翻译、再发布本软件或其任何部分（代码、设计、内容）；
+- 将本软件或其内容用于任何商业用途，或用于学校、语言培训机构、公司、补习班等机构的教学或服务（包括内部使用）；
+- 以本软件为基础制作衍生产品，或使用相同或相似的名称和标志。
+
+如需机构或商业使用授权，请通过 https://shentuyuxia.com 联系作者。
+下方列出的第三方组件不受本条款约束，按各自的许可证使用。
+
+================================================================
+English
+================================================================
+The program code, interface design, original texts, example sentences and word-list curation of this software, and the name and logo "字里 Zili", are the author's work and protected by copyright.
+
+Permitted:
+- Free personal, non-commercial use of the app at https://shentuyuxia.github.io/Zili/ for your own learning.
+
+Not permitted without the author's prior written permission:
+- copying, modifying, translating or redistributing the software or any part of it (code, design, content);
+- any commercial use, and any use by or for institutions such as schools, language schools, tutoring services or companies (including internal use);
+- creating derivative products, or using the same or a confusingly similar name or logo.
+
+For licences for institutional or commercial use, contact the author via https://shentuyuxia.com.
+The third-party components listed below are not covered by these terms; they remain under their own licences.
+
+================================================================
+Deutsch
+================================================================
+Der Programmcode, die Gestaltung der Oberfläche, die eigenen Texte, Beispielsätze und die Aufbereitung der Wortlisten dieser Software sowie der Name und das Logo „字里 Zili" sind Werke der Autorin und urheberrechtlich geschützt.
+
+Erlaubt:
+- die kostenlose private, nicht kommerzielle Nutzung der App unter https://shentuyuxia.github.io/Zili/ zum eigenen Lernen.
+
+Ohne vorherige schriftliche Erlaubnis der Autorin nicht erlaubt:
+- Vervielfältigung, Bearbeitung, Übersetzung oder Weitergabe der Software oder einzelner Teile (Code, Gestaltung, Inhalte);
+- jede kommerzielle Nutzung sowie jede Nutzung durch oder für Einrichtungen wie Schulen, Sprachschulen, Nachhilfeanbieter oder Unternehmen (auch intern);
+- die Erstellung abgeleiteter Produkte oder die Verwendung eines gleichen oder verwechselbar ähnlichen Namens oder Logos.
+
+Lizenzen für institutionelle oder kommerzielle Nutzung: Kontakt über https://shentuyuxia.com.
+Die unten aufgeführten Komponenten Dritter sind von diesen Bedingungen ausgenommen und stehen unter ihren eigenen Lizenzen.
+
+================================================================
+Third-party components / Komponenten Dritter / 第三方组件
+================================================================
+- dict/ — adapted from CC-CEDICT and HanDeDict: CC BY-SA 4.0 (dict/LICENSE.md)
+- strokes/, dict/hw.txt — from Make Me a Hanzi / hanzi-writer-data: Arphic Public License (strokes/ARPHICPL.TXT)
+- vendor/hanzi-writer.min.js (MIT), vendor/pinyin-pro.js (MIT), pdf.js (Apache-2.0), mammoth.js (BSD-2-Clause)
+- fonts/ — LXGW WenKai, LXGW WenKai TC, Source Sans 3, Source Serif 4 (SIL OFL 1.1); LXGW Neo XiHei (IPA Font License)
+- word frequencies from jieba (MIT); HSK levels from complete-hsk-vocabulary (MIT); Traditional characters from OpenCC (Apache-2.0)

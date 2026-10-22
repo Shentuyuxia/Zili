@@ -1,5 +1,8 @@
 # 字里 Zili
 
+> © 2026 申屠余夏 (Shentu Yuxia). **All rights reserved / Alle Rechte vorbehalten / 保留所有权利。** Free for personal, non-commercial learning in the app. Copying, redistribution, and any commercial or institutional use require prior written permission — see [LICENSE](LICENSE). Third-party components keep their own licences.
+
+
 Chinesisch lesen und Vokabeln lernen · Read Chinese and learn words · 中文阅读与词汇闪卡
 
 Built on the same structure as 字里行间 · Entrelinhas, with Chinese as the language you learn:
