@@ -1287,6 +1287,7 @@ body:not(.tones) .tone-opts{opacity:.55}
       <div class="panel">
         <h3 class="ph3">界面</h3>
         <label class="tog"><input type="checkbox" id="opt-hints"> 显示说明文字</label>
+        <button class="btn ghost sm" type="button" id="onb-again" style="margin-top:10px">重新看新手引导</button>
         <div class="field" id="voice-row" style="margin-top:14px" hidden><label for="opt-voice">朗读语音</label>
           <div class="row" style="flex-wrap:nowrap"><select id="opt-voice"></select><button class="btn sm" id="voice-test" type="button">试听</button></div>
           <p class="note hint">★ 是增强/高级语音，听起来更自然。iPhone 可在「设置 → 辅助功能 → 朗读内容 → 声音 → 中文」里下载，比如 Tingting 或 Lilian（增强版）。</p></div>
@@ -3170,6 +3171,7 @@ function dicOpen(){
   if(S.settings.dicHw) dicPad(true); else setTimeout(()=>{ try{ q.focus({preventScroll:true}); }catch(e){} },60);
 }
 $("#dict-open").addEventListener("click",dicOpen);
+$("#onb-again").addEventListener("click",()=>{ showTab("today"); onbStart(); });
 setTimeout(()=>{ const go=()=>{ try{ dicPreload(); }catch(e){} }; if("requestIdleCallback" in window) requestIdleCallback(go,{timeout:6000}); else go(); },3500);
 
 /* ---------- first day: three quick questions, then a checklist on Today ---------- */
@@ -3226,6 +3228,7 @@ function onbFinish(){
   save(); applyPy(); applyTones(); renderSettings(); closeDetail(); rebuildCards(); buildDaily(); renderStrip(); onbDay();
 }
 function onbMaybeStart(){
+  if(/[?&]welcome\b/.test(location.search)){ try{ history.replaceState(null,"",location.pathname+location.hash); }catch(e){} onbStart(); return; }
   if(S.settings.onb) { onbDay(); return; }
   const LL=L(); const used=Object.keys(LL.srs||{}).length||(LL.custom||[]).length;
   if(used){ S.settings.onb={v:1,start:today(),t:{},hide:true,existing:true}; save(); return; }
@@ -4537,6 +4540,7 @@ const UI_DICT=[
 ["笔顺", "Stroke order", "Strichfolge", "Ordem dos traços", "筆順"],
 ["画", "strokes", "Striche", "traços", "畫"],
 ["描", "Trace", "Nachfahren", "Traçar", "描"],
+["重新看新手引导", "Show the welcome guide again", "Einführung erneut zeigen", "Ver o guia inicial de novo", "重新看新手引導"],
 ["欢迎来到字里", "Welcome to Zili", "Willkommen bei Zili", "Bem-vindo ao Zili", "歡迎來到字里"],
 ["先回答三个小问题，我们帮你调好难度。", "Three quick questions, so we can set the right level for you.", "Drei kurze Fragen, damit wir das passende Niveau einstellen.", "Três perguntas rápidas para ajustar o nível.", "先回答三個小問題，我們幫你調好難度。"],
 ["你的中文是……", "Your Chinese is…", "Dein Chinesisch ist …", "Seu chinês é…", "你的中文是……"],
