@@ -13,7 +13,7 @@ Built on the same structure as 字里行间 · Entrelinhas, with Chinese as the 
 - **Tones, shadowing, strokes**: optional tone colours (1 red · 2 green · 3 blue · 4 purple · neutral grey); in the word sheet you can hear the sentence, record yourself and play original → yours (the recording stays in memory, nothing is uploaded); stroke-order animation and tracing for 5,091 common characters (Simplified and Traditional), radical highlighted.
 - **Dictionary** (🔍 in the bottom bar / tab row): search by characters, pinyin (with or without tones, e.g. `lv`, `zhong1guo2`, `zhōngguó`), English or German (word bank); offline handwriting recognition on a 米字格 pad (own matcher on Make Me a Hanzi stroke medians, `dict/hw.txt`); speech input via the browser's speech recognition. Word view: readings, EN/DE, HSK, read aloud, stroke order, add to words.
 - **Word bank**: all 5,000 words of the HSK 2.0 lists (HSK 1–6) with pinyin, English and German; example sentences are added a few hundred at a time.
-- **字匣 (Word box)**: the HSK word bank and your own words, with the practice pile; **自己录入** (add your own word, from a photo, or as a list) is folded in at the top. The **dictionary** stays in the middle of the bottom bar; if a word isn't in it, one tap opens 自己录入 with the word filled in.
+- **字匣 (Word box)**: the HSK word bank and your own words, with the practice pile; **自己录入** (add your own word, from a photo, or as a list) is folded in at the top. The **dictionary** is its own page in the middle of the bottom bar (今日学习 · 阅读 · 字典 · 字匣 · 我的); if a word isn't in it, one tap opens 自己录入 with the word filled in.
 - **Practice pile**, **Progress**, **Settings & backup**, sync across devices (email login or your own GitHub repo).
 - Interface in Deutsch, English, 简体中文 or 繁體中文.
 

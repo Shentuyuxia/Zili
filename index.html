@@ -684,8 +684,8 @@ body.lean .hint, body.lean .help{display:none!important}
   .sesshead{margin-bottom:8px}
   .sesshead h2,#pile-title{font-size:18px}
   .bar{margin-bottom:10px}
-  /* bottom bar: 5 tabs + dictionary, always labelled */
-  nav.tabs{grid-template-columns:repeat(6,minmax(0,1fr))}
+  /* bottom bar: every visible tab gets an equal share, always labelled */
+  nav.tabs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr)}
   nav.tabs button[data-tab="pile"],nav.tabs button[data-tab="settings"]{display:none}
   nav.tabs button .tl{display:block;font-size:10.5px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:0 2px;color:var(--muted)}
   nav.tabs button[data-tab="stats"] .tl{display:none}
@@ -1025,6 +1025,7 @@ body:not(.tones) .tone-opts{opacity:.55}
 .mz-acts .btn[aria-pressed="true"]{border-color:var(--acc);color:var(--acc)}
 /* dictionary */
 .dict-modal{max-width:600px;min-height:min(640px,86vh)}
+.dict-page{max-width:680px;margin:0 auto;width:100%}.dict-h{font-size:20px;margin:0 0 12px}
 .dic-in{display:flex;gap:6px;align-items:center}
 .dic-in input{flex:1;min-width:0;font-size:18px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:inherit;font-family:var(--f-word)}
 .dic-in .ib{border-color:var(--line);width:42px;height:42px}
@@ -1120,12 +1121,17 @@ body:not(.tones) .tone-opts{opacity:.55}
   <nav class="tabs" role="tablist" id="tabs">
     <button role="tab" data-tab="today" aria-selected="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/><path d="m9 14.5 2 2 4-4"/></svg><span class="tl">今日学习</span></button>
     <button role="tab" data-tab="read" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5c3-1.2 6-1.2 9 .8 3-2 6-2 9-.8v13c-3-1.2-6-1.2-9 .8-3-2-6-2-9-.8z"/><path d="M12 6.3v13"/></svg><span class="tl">阅读</span></button>
-    <button type="button" data-dict="1" id="dict-open" class="dict-tab" aria-label="字典"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg><span class="tl">字典</span></button>
+    <button role="tab" data-tab="dict" id="dict-open" class="dict-tab" aria-selected="false" aria-label="字典"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg><span class="tl">字典</span></button>
     <button role="tab" data-tab="pile" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><span class="tl">生词堆</span><span id="t-pile">0</span></button>
     <button role="tab" data-tab="browse" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h12M8 12h12M8 18h12"/><circle cx="4" cy="6" r=".6" fill="currentColor"/><circle cx="4" cy="12" r=".6" fill="currentColor"/><circle cx="4" cy="18" r=".6" fill="currentColor"/></svg><span class="tl">字匣</span></button>
     <button role="tab" data-tab="stats" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M21 20H3"/></svg><span class="tl">进度</span><span class="tl-m">我的</span></button>
     <button role="tab" data-tab="settings" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg><span class="tl">设置与备份</span></button>
   </nav>
+
+  <!-- DICTIONARY -->
+  <section id="tab-dict" class="grid one" hidden>
+    <div class="panel dict-page"><h2 class="dict-h">字典</h2><div id="dict-host"></div></div>
+  </section>
 
   <!-- READ (Marginalia) -->
   <section id="tab-read" class="grid" hidden>
@@ -3244,25 +3250,24 @@ function dicListen(){
 }
 function dicPad(on){ const b=$("#dic-hwb"); if(b) b.setAttribute("aria-pressed",on); const w=$("#dic-padwrap"); if(!w) return; w.innerHTML=on?dicPadHtml():""; if(on){ DIC.strokes=[]; dicPadMount(); } }
 function dicPreload(){ dicLoadPy(); dicLoadTpl(); zStkLib(); zdLoad(); }
-function dicOpen(){
+function dicOpen(){ showTab("dict"); }
+function dicMount(){ // the dictionary page (bottom bar, middle)
+  const host=$("#dict-host"); if(!host) return; if(host.dataset.on){ const q=$("#dic-q"); if(q&&!S.settings.dicHw) setTimeout(()=>{ try{ q.focus({preventScroll:true}); }catch(e){} },60); return; } host.dataset.on="1";
   { const m=$("#card-area #mz"); if(m) m.remove(); }
-  detailOpen="__dict"; document.body.classList.add("modal-open"); DIC.strokes=[];
-  $("#detail-root").innerHTML=`<div class="scrim" id="d-scrim"><div class="modal dict-modal" role="dialog" aria-modal="true" aria-label="字典">
-    <div class="mhead"><h2 style="flex:1;font-size:20px">字典</h2><button class="ib" id="d-close" aria-label="关闭">${I.x}</button></div>
+  DIC.strokes=[];
+  host.innerHTML=`
     <div class="dic-in"><input type="search" id="dic-q" placeholder="汉字 · pinyin · English · Deutsch" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search">
       <button class="ib" type="button" id="dic-hwb" aria-pressed="false" aria-label="手写" title="手写">${I.pen}</button>
       <button class="ib" type="button" id="dic-mic" aria-label="说" title="说">${I.mic}</button></div>
     <div id="dic-padwrap"></div>
-    <p class="small muted dic-msg" id="dic-msg"></p><div id="dic-res"></div></div></div>`;
-  const root=$("#d-scrim");
-  root.addEventListener("mousedown",e=>{ if(e.target.id==="d-scrim") closeDetail(); });
-  $("#d-close").onclick=closeDetail;
+    <p class="small muted dic-msg" id="dic-msg"></p><div id="dic-res"></div>`;
+  const root=host;
   const q=$("#dic-q"); let tm=null;
   q.addEventListener("input",()=>{ clearTimeout(tm); tm=setTimeout(()=>dicSearch(q.value),220); });
   q.addEventListener("keydown",e=>{ if(e.key==="Enter"){ e.preventDefault(); clearTimeout(tm); dicSearch(q.value); q.blur(); } });
   root.addEventListener("click",e=>{ const b=e.target.closest("button"); if(!b) return;
     if(b.dataset.dw){ dicShow(b.dataset.dw); return; }
-    if(b.dataset.dadd!=null){ const w=b.dataset.dadd; closeDetail(); addOpen(w); return; }
+    if(b.dataset.dadd!=null){ addOpen(b.dataset.dadd); return; }
     if(b.dataset.cand!=null){ q.value=(q.value||"")+b.dataset.cand; dicClearPad(); dicSearch(q.value); return; }
     if(b.id==="dic-hwb"){ const on=b.getAttribute("aria-pressed")!=="true"; dicPad(on); S.settings.dicHw=on; save(); return; }
     if(b.id==="dic-undo"){ DIC.strokes.pop(); DIC.redraw&&DIC.redraw(); dicCands(); return; }
@@ -3275,7 +3280,6 @@ function dicOpen(){
   dicSearch(""); dicPreload();
   if(S.settings.dicHw) dicPad(true); else setTimeout(()=>{ try{ q.focus({preventScroll:true}); }catch(e){} },60);
 }
-$("#dict-open").addEventListener("click",dicOpen);
 $("#onb-again").addEventListener("click",()=>{ showTab("today"); onbStart(); });
 setTimeout(()=>{ const go=()=>{ try{ dicPreload(); }catch(e){} }; if("requestIdleCallback" in window) requestIdleCallback(go,{timeout:6000}); else go(); },3500);
 
@@ -4889,7 +4893,7 @@ $("#ui-lang").addEventListener("change",e=>{ UIL=e.target.value; try{ localStora
 
 /* ---------- tabs & language ---------- */
 let cur="today";
-const TABS=["today","read","pile","browse","stats","settings"];
+const TABS=["today","read","dict","pile","browse","stats","settings"];
 function addOpen(w){ // the old 录入新词 tab now lives in 字匣 → 自己录入
   showTab("browse"); const d=$("#add-box"); if(!d) return; d.open=true;
   if(w){ const i=$("#n-w"); i.value=w; i.dispatchEvent(new Event("input")); }
@@ -4902,7 +4906,7 @@ function showTab(t){
   $$("#tabs button").forEach(b=>{ b.setAttribute("aria-selected",b.dataset.tab===t); b.classList.toggle("grp-on",b.dataset.tab===grp); });
   $$(".subsw button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.sub===t));
   TABS.forEach(k=>document.getElementById("tab-"+k).hidden=k!==t);
-  if(t==="pile") renderPile(); if(t==="browse") renderBrowse(); if(t==="stats") renderStats();
+  if(t==="pile") renderPile(); if(t==="browse") renderBrowse(); if(t==="stats") renderStats(); if(t==="dict") dicMount(); else if(typeof dicStop==="function") dicStop();
   if(t==="settings"){ renderAISettings(); renderStorage(); renderBackupHint(); }
   if(t==="today"&&sess) renderCard();
   if(t==="read") mgRender(); else { if(typeof mgClose==="function"&&MG.sheet) mgClose(); if(typeof rdStop==="function") rdStop(); }
