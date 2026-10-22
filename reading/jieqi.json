@@ -1632,6 +1632,1445 @@
    "level": "HSK2",
    "kind": "jieqi",
    "section": "节气",
+   "term": "立夏",
+   "date": "2026-05-05",
+   "title": "立夏：斗蛋",
+   "title_en": "Start of Summer: egg fights",
+   "title_de": "Sommeranfang: Eierkampf",
+   "dek": "夏天开始了。",
+   "paragraphs": [
+    "五月五日前后是立夏。立夏就是夏天开始了。",
+    "立夏的时候，天气热起来了。晚上，田里的小虫子开始叫；下雨以后，蚯蚓也从土里出来了。",
+    "在江南，立夏这天，孩子们要吃立夏蛋。大人把煮好的鸡蛋放在小网袋里，挂在孩子的胸前。",
+    "还有一个好玩的游戏，叫“斗蛋”：两个人拿鸡蛋碰一碰，谁的蛋没有破，谁就是“蛋王”。",
+    "在德国，五月是很美的月份，到处都开着花。五月一日前后，很多村子会立起高高的“五月树”。"
+   ],
+   "paragraphs_en": [
+    "The Start of Summer falls around 5 May. 立夏 simply means summer is beginning.",
+    "At the Start of Summer it gets hot. At night little insects start to chirp in the fields; after the rain, earthworms come out of the soil.",
+    "In the Jiangnan region, children eat \"Start of Summer eggs\" on this day. Adults put boiled eggs in little net bags and hang them on the children's chests.",
+    "There's also a fun game called \"egg fighting\": two people knock their eggs together, and whoever's egg doesn't crack is the \"egg king\".",
+    "In Germany, May is a beautiful month, with flowers everywhere. Around 1 May, many villages put up a tall maypole."
+   ],
+   "paragraphs_de": [
+    "Um den 5. Mai ist Sommeranfang. 立夏 heißt einfach: Der Sommer beginnt.",
+    "Zum Sommeranfang wird es heiß. Nachts zirpen auf den Feldern kleine Insekten; nach dem Regen kommen die Regenwürmer aus der Erde.",
+    "In der Jiangnan-Gegend essen Kinder an diesem Tag „Sommeranfangs-Eier“. Die Erwachsenen stecken gekochte Eier in kleine Netze und hängen sie den Kindern um den Hals.",
+    "Es gibt auch ein lustiges Spiel, den „Eierkampf“: Zwei stoßen ihre Eier aneinander, und wessen Ei nicht kaputtgeht, ist der „Eierkönig“.",
+    "In Deutschland ist der Mai ein wunderschöner Monat, überall blüht es. Um den 1. Mai stellen viele Dörfer einen hohen Maibaum auf."
+   ],
+   "glossary": [
+    {
+     "w": "立夏",
+     "p": "lì xià",
+     "en": "Start of Summer (solar term, around 5 May)",
+     "de": "Sommeranfang (Sonnenperiode, um den 5. Mai)"
+    },
+    {
+     "w": "蚯蚓",
+     "p": "qiū yǐn",
+     "en": "earthworm",
+     "de": "der Regenwurm"
+    },
+    {
+     "w": "煮",
+     "p": "zhǔ",
+     "en": "to boil",
+     "de": "kochen"
+    },
+    {
+     "w": "网袋",
+     "p": "wǎng dài",
+     "en": "net bag",
+     "de": "das Netz (Beutel)"
+    },
+    {
+     "w": "胸前",
+     "p": "xiōng qián",
+     "en": "on the chest",
+     "de": "vor der Brust"
+    },
+    {
+     "w": "碰",
+     "p": "pèng",
+     "en": "to knock, bump",
+     "de": "anstoßen"
+    },
+    {
+     "w": "破",
+     "p": "pò",
+     "en": "broken, cracked",
+     "de": "kaputt"
+    },
+    {
+     "w": "五月树",
+     "p": "wǔ yuè shù",
+     "en": "maypole",
+     "de": "der Maibaum"
+    }
+   ],
+   "grammar": "谁……谁…… links \"whoever\" and \"that person\": 谁的蛋没有破，谁就是蛋王 = whoever's egg doesn't crack is the egg king.",
+   "grammar_de": "谁……谁…… heißt „wer …, der …“: 谁的蛋没有破，谁就是蛋王 = Wessen Ei nicht kaputtgeht, der ist Eierkönig.",
+   "questions": [
+    "立夏的时候，天气怎么样？",
+    "“斗蛋”怎么玩？",
+    "你喜欢夏天吗？为什么？"
+   ],
+   "poem": {
+    "title": "小池",
+    "author": "杨万里",
+    "dynasty": "宋",
+    "lines": [
+     "泉眼无声惜细流，",
+     "树阴照水爱晴柔。",
+     "小荷才露尖尖角，",
+     "早有蜻蜓立上头。"
+    ],
+    "explain_zh": "泉水静静地流出来，好像舍不得流走似的；树的影子照在水里，好像喜欢这柔和的晴天。小小的荷叶刚刚露出尖尖的角，就已经有一只蜻蜓站在上面了。",
+    "explain_en": "The spring trickles out without a sound, as if reluctant to let its thin stream go; the shade of the trees lies on the water, loving the soft sunshine. A little lotus leaf has only just shown its pointed tip – and already a dragonfly is standing on it.",
+    "explain_de": "Die Quelle rinnt lautlos, als wolle sie ihr dünnes Rinnsal nicht hergeben; der Baumschatten liegt auf dem Wasser und liebt das sanfte Licht. Ein kleines Lotusblatt zeigt gerade erst seine spitze Ecke – und schon sitzt eine Libelle darauf."
+   },
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK4",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "立夏",
+   "date": "2026-05-05",
+   "title": "立夏：把圆满吃进肚子里",
+   "title_en": "Start of Summer: eating good fortune",
+   "title_de": "Sommeranfang: das Glück aufessen",
+   "dek": "一个鸡蛋，几个传说。",
+   "paragraphs": [
+    "立夏一般在每年五月五日到七日之间，是夏季的第一个节气。气温明显升高，雷雨增多，农作物进入生长的旺季。",
+    "立夏的三候是“蝼蝈鸣、蚯蚓出、王瓜生”：小虫子在田里鸣叫；蚯蚓从土里钻出来；一种叫王瓜的野瓜，藤蔓开始快速生长。",
+    "古代，立夏这天皇帝要带着官员到城外“迎夏”，提醒大家不误农时。民间的习俗则更有生活气息：在江南，立夏要吃“立夏蛋”。传说女娲教人们在这天把煮熟的鸡蛋挂在孩子胸前，以防“疰夏”——夏天里没精神、吃不下饭。圆圆的鸡蛋也象征圆满，所以有人说，吃立夏蛋就是“把圆满吃进肚子里”。",
+    "孩子们最喜欢的是“斗蛋”：把鸡蛋装进小网袋，两两相碰，蛋壳不破的就是“蛋王”。",
+    "在德国，五月一日前后，很多村子会立起高高的“五月树”，上面挂着彩带，有的还挂着各行各业的标志。人们在树下跳舞、喝啤酒，庆祝温暖的季节到来。"
+   ],
+   "paragraphs_en": [
+    "The Start of Summer usually falls between 5 and 7 May and is the first solar term of summer. Temperatures rise noticeably, thunderstorms become more frequent, and crops enter their peak growing season.",
+    "Its three pentads are \"crickets chirp, earthworms come out, wild melons grow\": little insects call in the fields; earthworms wriggle out of the soil; the vines of a wild melon begin to grow fast.",
+    "In ancient times, on this day the emperor led his officials outside the city to \"welcome summer\", reminding everyone not to miss the farming season. Folk customs are more down to earth: in Jiangnan, people eat \"Start of Summer eggs\". Legend says the goddess Nüwa taught people to hang boiled eggs on children's chests on this day to ward off \"summer sickness\" – listlessness and loss of appetite in the heat. Round eggs also stand for wholeness, so some say eating them means \"eating good fortune\".",
+    "Children love the \"egg fight\" best: eggs go into little net bags, are knocked together in pairs, and the one whose shell stays whole is the \"egg king\".",
+    "In Germany, around 1 May many villages put up a tall maypole hung with ribbons, some also with the emblems of local trades. People dance beneath it, drink beer and celebrate the warm season."
+   ],
+   "paragraphs_de": [
+    "Der Sommeranfang fällt meist zwischen den 5. und 7. Mai und ist die erste Sonnenperiode des Sommers. Die Temperaturen steigen spürbar, Gewitter werden häufiger, und die Feldfrüchte kommen in ihre Hauptwachstumszeit.",
+    "Die drei „Hou“ lauten „die Grillen zirpen, die Regenwürmer kommen heraus, die wilden Melonen wachsen“: Kleine Insekten rufen auf den Feldern; Regenwürmer kriechen aus der Erde; die Ranken einer wilden Melone wachsen schnell.",
+    "Früher zog der Kaiser an diesem Tag mit seinen Beamten vor die Stadt, um „den Sommer zu empfangen“ und alle daran zu erinnern, die Zeit für die Feldarbeit nicht zu verpassen. Die Volksbräuche sind bodenständiger: In Jiangnan isst man „Sommeranfangs-Eier“. Der Legende nach lehrte die Göttin Nüwa, den Kindern an diesem Tag gekochte Eier um den Hals zu hängen, gegen „Sommermüdigkeit“ – Schlappheit und Appetitlosigkeit in der Hitze. Runde Eier stehen zudem für Vollkommenheit; manche sagen deshalb, man „isst das Glück“.",
+    "Am liebsten mögen Kinder den „Eierkampf“: Die Eier kommen in kleine Netze, werden paarweise aneinandergestoßen, und wessen Schale ganz bleibt, ist „Eierkönig“.",
+    "In Deutschland stellen um den 1. Mai viele Dörfer einen hohen Maibaum mit bunten Bändern auf, manche auch mit Zunftzeichen. Man tanzt darunter, trinkt Bier und feiert die warme Jahreszeit."
+   ],
+   "glossary": [
+    {
+     "w": "明显",
+     "p": "míng xiǎn",
+     "en": "noticeable",
+     "de": "deutlich"
+    },
+    {
+     "w": "旺季",
+     "p": "wàng jì",
+     "en": "peak season",
+     "de": "die Hochsaison"
+    },
+    {
+     "w": "钻",
+     "p": "zuàn",
+     "en": "to wriggle, bore through",
+     "de": "sich hindurchwinden"
+    },
+    {
+     "w": "藤蔓",
+     "p": "téng màn",
+     "en": "vine",
+     "de": "die Ranke"
+    },
+    {
+     "w": "官员",
+     "p": "guān yuán",
+     "en": "official",
+     "de": "der Beamte"
+    },
+    {
+     "w": "农时",
+     "p": "nóng shí",
+     "en": "farming season",
+     "de": "die Zeit für die Feldarbeit"
+    },
+    {
+     "w": "气息",
+     "p": "qì xī",
+     "en": "flavour, feel",
+     "de": "das Flair, der Hauch"
+    },
+    {
+     "w": "以防",
+     "p": "yǐ fáng",
+     "en": "so as to prevent",
+     "de": "um … vorzubeugen"
+    },
+    {
+     "w": "精神",
+     "p": "jīng shen",
+     "en": "energy, vigour",
+     "de": "die Energie"
+    },
+    {
+     "w": "象征",
+     "p": "xiàng zhēng",
+     "en": "to symbolize",
+     "de": "symbolisieren"
+    },
+    {
+     "w": "圆满",
+     "p": "yuán mǎn",
+     "en": "complete, perfect",
+     "de": "vollkommen"
+    },
+    {
+     "w": "蛋壳",
+     "p": "dàn ké",
+     "en": "eggshell",
+     "de": "die Eierschale"
+    }
+   ],
+   "grammar": "以防 + situation means \"so as to prevent …\": 把鸡蛋挂在孩子胸前，以防疰夏 = hang eggs on the children to prevent summer sickness. Also: 带上雨伞，以防下雨.",
+   "grammar_de": "以防 + Situation heißt „um … vorzubeugen“: 把鸡蛋挂在孩子胸前，以防疰夏 = den Kindern Eier umhängen, um der Sommermüdigkeit vorzubeugen. Auch: 带上雨伞，以防下雨.",
+   "questions": [
+    "古代皇帝立夏这天要做什么？",
+    "为什么说吃立夏蛋是“把圆满吃进肚子里”？",
+    "你住的地方，夏天开始的时候有什么习俗？"
+   ],
+   "poem": {
+    "title": "山亭夏日",
+    "author": "高骈",
+    "dynasty": "唐",
+    "lines": [
+     "绿树阴浓夏日长，",
+     "楼台倒影入池塘。",
+     "水晶帘动微风起，",
+     "满架蔷薇一院香。"
+    ],
+    "explain_zh": "绿树的影子很浓，夏天的白天很长；楼台的倒影映在池塘里。微风吹来，水晶帘子轻轻晃动，满架的蔷薇花开了，整个院子都是香的。",
+    "explain_en": "The green trees cast deep shade, and the summer days are long; pavilions and terraces are mirrored in the pond. A breeze rises and the crystal curtain stirs; the trellis is full of roses, and the whole courtyard is fragrant.",
+    "explain_de": "Die grünen Bäume werfen dichten Schatten, die Sommertage sind lang; Pavillons und Terrassen spiegeln sich im Teich. Eine Brise kommt auf, der Kristallvorhang bewegt sich; das Spalier ist voller Rosen, und der ganze Hof duftet."
+   },
+   "sources": [
+    {
+     "title": "農業部：二十四節氣（引用臺北市立天文科學教育館資料）",
+     "url": "https://www.moa.gov.tw/ws.php?id=2507770",
+     "license": "link only"
+    },
+    {
+     "title": "国立天文台 暦Wiki：七十二候",
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/wiki/B5A8C0E12FBCB7BDBDC6F3B8F5.html",
+     "license": "link only"
+    },
+    {
+     "title": "星島教室：立夏習俗介紹",
+     "url": "https://www.stheadline.com/knowledge/3569136/",
+     "license": "link only"
+    }
+   ]
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "小满",
+   "date": "2026-05-21",
+   "title": "小满：麦子快熟了",
+   "title_en": "Grain Buds: the wheat is nearly ripe",
+   "title_de": "Kornfülle: Der Weizen ist fast reif",
+   "dek": "有小满，没有大满。",
+   "paragraphs": [
+    "五月二十一日前后是小满。“满”就是满满的意思。",
+    "小满的时候，麦子里的麦粒慢慢变得饱满了，可是还没有完全熟。所以叫“小满”。",
+    "二十四节气里有小满，可是没有大满。有人说，这是告诉我们：满一点点就很好，不要太满。",
+    "在德国，五月底，草莓开始红了。"
+   ],
+   "paragraphs_en": [
+    "Grain Buds falls around 21 May. 满 means \"full\".",
+    "Around this time, the grains in the wheat slowly become plump, but they aren't fully ripe yet. That's why it is called \"small fullness\".",
+    "Among the twenty-four solar terms there is a \"small fullness\" but no \"great fullness\". Some say this teaches us: a little full is good – don't be too full.",
+    "In Germany, the strawberries start to turn red at the end of May."
+   ],
+   "paragraphs_de": [
+    "Um den 21. Mai beginnt „Kornfülle“. 满 heißt „voll“.",
+    "Jetzt werden die Körner im Weizen langsam prall, aber sie sind noch nicht ganz reif. Darum heißt es „kleine Fülle“.",
+    "Unter den vierundzwanzig Sonnenperioden gibt es eine „kleine Fülle“, aber keine „große Fülle“. Manche sagen, das lehrt uns: Ein bisschen voll ist gut – nicht zu voll.",
+    "In Deutschland werden Ende Mai die Erdbeeren rot."
+   ],
+   "glossary": [
+    {
+     "w": "小满",
+     "p": "xiǎo mǎn",
+     "en": "Grain Buds (solar term, around 21 May)",
+     "de": "Kornfülle (Sonnenperiode, um den 21. Mai)"
+    },
+    {
+     "w": "满",
+     "p": "mǎn",
+     "en": "full",
+     "de": "voll"
+    },
+    {
+     "w": "麦子",
+     "p": "mài zi",
+     "en": "wheat",
+     "de": "der Weizen"
+    },
+    {
+     "w": "麦粒",
+     "p": "mài lì",
+     "en": "grain of wheat",
+     "de": "das Weizenkorn"
+    },
+    {
+     "w": "饱满",
+     "p": "bǎo mǎn",
+     "en": "plump, full",
+     "de": "prall"
+    },
+    {
+     "w": "熟",
+     "p": "shú",
+     "en": "ripe",
+     "de": "reif"
+    },
+    {
+     "w": "完全",
+     "p": "wán quán",
+     "en": "completely",
+     "de": "ganz, völlig"
+    },
+    {
+     "w": "草莓",
+     "p": "cǎo méi",
+     "en": "strawberry",
+     "de": "die Erdbeere"
+    }
+   ],
+   "grammar": "还没(有) + verb/adjective = not yet: 还没有完全熟 = not fully ripe yet. Often ending: 我还没吃饭呢.",
+   "grammar_de": "还没(有) + Verb/Adjektiv = noch nicht: 还没有完全熟 = noch nicht ganz reif. Oft mit 呢: 我还没吃饭呢.",
+   "questions": [
+    "“小满”是什么意思？",
+    "为什么没有“大满”？",
+    "你喜欢吃草莓吗？"
+   ],
+   "poem": {
+    "title": "四时田园杂兴（其一）",
+    "author": "范成大",
+    "dynasty": "宋",
+    "lines": [
+     "昼出耘田夜绩麻，",
+     "村庄儿女各当家。",
+     "童孙未解供耕织，",
+     "也傍桑阴学种瓜。"
+    ],
+    "explain_zh": "白天去田里除草，晚上在家搓麻线，村子里的男男女女各有各的活儿。小孩子还不会种田、织布，也在桑树的树荫下学着种瓜。",
+    "explain_en": "By day they weed the fields, by night they twist hemp thread; in the village every man and woman has their work. The little grandchildren can't yet plough or weave, but in the shade of the mulberry they too are learning to plant melons.",
+    "explain_de": "Tagsüber jäten sie die Felder, nachts drehen sie Hanffäden; im Dorf hat jeder Mann und jede Frau seine Arbeit. Die kleinen Enkel können noch nicht pflügen oder weben, doch im Schatten des Maulbeerbaums lernen auch sie, Melonen zu pflanzen."
+   },
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK4",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "小满",
+   "date": "2026-05-21",
+   "title": "小满：满而不溢",
+   "title_en": "Grain Buds: full, but not overflowing",
+   "title_de": "Kornfülle: voll, aber nicht übervoll",
+   "dek": "为什么二十四节气里没有“大满”？",
+   "paragraphs": [
+    "小满一般在每年五月二十日到二十二日之间。这时北方小麦等夏季成熟的作物，籽粒开始饱满，但还没有完全成熟，所以叫“小满”。",
+    "小满的三候是“苦菜秀、靡草死、小暑至”：苦菜长得正茂盛；一些喜欢阴凉的细草，在越来越强的阳光下枯死了；小小的暑热也渐渐来了。",
+    "有意思的是，二十四节气里有小暑、大暑，有小雪、大雪，有小寒、大寒，偏偏只有小满，没有大满。很多人觉得，这背后有一种中国式的智慧：水满了会溢出来，月亮圆了就会缺。“小满”，也许正是最好的状态——已经有了收获的希望，又给未来留了余地。",
+    "在德国，五月底、六月初的白天越来越长，晚上九点多天还亮着。很多人下班以后去湖边、公园，享受一年里最舒服的日子。"
+   ],
+   "paragraphs_en": [
+    "Grain Buds usually falls between 20 and 22 May. At this time the grains of wheat and other early-summer crops in the north begin to fill out, but aren't fully ripe yet – hence \"small fullness\".",
+    "Its three pentads are \"sow thistle flourishes, fine grasses die, the lesser heat arrives\": sow thistle grows at its lushest; some fine, shade-loving grasses wither in the ever stronger sun; and a little summer heat gradually sets in.",
+    "Interestingly, the solar terms have Minor and Major Heat, Minor and Major Snow, Minor and Major Cold – yet only \"small fullness\", and no \"great fullness\". Many see a piece of Chinese wisdom in this: a full vessel overflows, a full moon begins to wane. \"Small fullness\" may be the best state of all – the hope of a harvest is already there, and room is left for the future.",
+    "In Germany, at the end of May and in early June the days keep getting longer, and it is still light after nine in the evening. Many people go to the lake or the park after work to enjoy the loveliest days of the year."
+   ],
+   "paragraphs_de": [
+    "Die Kornfülle fällt meist zwischen den 20. und 22. Mai. Jetzt werden im Norden die Körner von Weizen und anderen frühsommerlichen Feldfrüchten prall, sind aber noch nicht ganz reif – daher „kleine Fülle“.",
+    "Die drei „Hou“ lauten „die Gänsedistel gedeiht, die feinen Gräser sterben, die kleine Hitze kommt“: Die Gänsedistel wächst üppig; manche feinen, schattenliebenden Gräser verdorren in der immer stärkeren Sonne; und allmählich setzt etwas Sommerhitze ein.",
+    "Interessanterweise gibt es Kleine und Große Hitze, Leichten und Großen Schnee, Kleine und Große Kälte – aber nur eine „kleine Fülle“ und keine „große“. Viele sehen darin eine chinesische Weisheit: Ein volles Gefäß läuft über, ein voller Mond nimmt ab. Die „kleine Fülle“ ist vielleicht der beste Zustand – die Hoffnung auf Ernte ist da, und für die Zukunft bleibt noch Raum.",
+    "In Deutschland werden Ende Mai, Anfang Juni die Tage immer länger, und nach neun Uhr abends ist es noch hell. Viele gehen nach der Arbeit an den See oder in den Park und genießen die schönsten Tage des Jahres."
+   ],
+   "glossary": [
+    {
+     "w": "籽粒",
+     "p": "zǐ lì",
+     "en": "grain, kernel",
+     "de": "das Korn"
+    },
+    {
+     "w": "成熟",
+     "p": "chéng shú",
+     "en": "ripe",
+     "de": "reif"
+    },
+    {
+     "w": "茂盛",
+     "p": "mào shèng",
+     "en": "lush, flourishing",
+     "de": "üppig"
+    },
+    {
+     "w": "阴凉",
+     "p": "yīn liáng",
+     "en": "shady and cool",
+     "de": "schattig, kühl"
+    },
+    {
+     "w": "枯死",
+     "p": "kū sǐ",
+     "en": "to wither and die",
+     "de": "verdorren"
+    },
+    {
+     "w": "偏偏",
+     "p": "piān piān",
+     "en": "of all things, just",
+     "de": "ausgerechnet"
+    },
+    {
+     "w": "智慧",
+     "p": "zhì huì",
+     "en": "wisdom",
+     "de": "die Weisheit"
+    },
+    {
+     "w": "溢",
+     "p": "yì",
+     "en": "to overflow",
+     "de": "überlaufen"
+    },
+    {
+     "w": "缺",
+     "p": "quē",
+     "en": "to wane, be incomplete",
+     "de": "abnehmen, unvollständig sein"
+    },
+    {
+     "w": "状态",
+     "p": "zhuàng tài",
+     "en": "state",
+     "de": "der Zustand"
+    },
+    {
+     "w": "余地",
+     "p": "yú dì",
+     "en": "leeway, room",
+     "de": "der Spielraum"
+    },
+    {
+     "w": "享受",
+     "p": "xiǎng shòu",
+     "en": "to enjoy",
+     "de": "genießen"
+    }
+   ],
+   "grammar": "偏偏 stresses that something is different from what you'd expect: 偏偏只有小满，没有大满 = there is, of all things, only a small fullness and no great one.",
+   "grammar_de": "偏偏 betont, dass etwas anders ist als erwartet: 偏偏只有小满，没有大满 = Ausgerechnet gibt es nur eine kleine Fülle und keine große.",
+   "questions": [
+    "小满的“满”说的是什么满了？",
+    "你怎么理解“满而不溢”？",
+    "你觉得“刚刚好”的状态是什么样的？"
+   ],
+   "poem": {
+    "title": "乡村四月",
+    "author": "翁卷",
+    "dynasty": "宋",
+    "lines": [
+     "绿遍山原白满川，",
+     "子规声里雨如烟。",
+     "乡村四月闲人少，",
+     "才了蚕桑又插田。"
+    ],
+    "explain_zh": "山坡和原野一片绿，河里的水白茫茫的。杜鹃鸟在叫，细雨像烟一样。农历四月的乡村，几乎没有闲着的人：刚刚忙完养蚕采桑，又要去田里插秧了。",
+    "explain_en": "Hills and plains are green all over, the rivers shine white; cuckoos call, and the drizzle is like smoke. In the village in the fourth month hardly anyone is idle: no sooner is the silkworm and mulberry work done than it's time to plant the rice.",
+    "explain_de": "Hügel und Ebenen sind ganz grün, die Flüsse glänzen weiß; der Kuckuck ruft, und der Nieselregen ist wie Rauch. Im Dorf ist im vierten Monat kaum jemand müßig: Kaum ist die Arbeit mit Seidenraupen und Maulbeeren getan, wird schon der Reis gepflanzt."
+   },
+   "sources": [
+    {
+     "title": "農業部：二十四節氣（引用臺北市立天文科學教育館資料）",
+     "url": "https://www.moa.gov.tw/ws.php?id=2507770",
+     "license": "link only"
+    },
+    {
+     "title": "国立天文台 暦Wiki：七十二候",
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/wiki/B5A8C0E12FBCB7BDBDC6F3B8F5.html",
+     "license": "link only"
+    },
+    {
+     "title": "香港教育局：二十四節氣（小學教學資源）",
+     "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/cross-kla-studies/ph-primary/references-resources/MET_series/24_Solar_Terms.pdf",
+     "license": "official"
+    }
+   ]
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "芒种",
+   "date": "2026-06-05",
+   "title": "芒种：粒粒皆辛苦",
+   "title_en": "Grain in Ear: every grain is hard work",
+   "title_de": "Grannenähren: Jedes Korn ist harte Arbeit",
+   "dek": "农民最忙的时候。",
+   "paragraphs": [
+    "六月五日前后是芒种。“芒”是麦子上细细的刺，“种”是种田。",
+    "芒种的时候，农民非常忙：要把熟了的麦子收回家，又要在水田里种水稻。",
+    "农民在太阳下面工作，很辛苦。我们吃的每一粒米、每一个馒头，都来得不容易。",
+    "在德国，六月是草莓最多的时候，很多人去田里自己摘草莓。"
+   ],
+   "paragraphs_en": [
+    "Grain in Ear falls around 5 June. 芒 are the fine bristles on wheat, and 种 means planting.",
+    "At this time farmers are extremely busy: they must bring the ripe wheat home and also plant rice in the paddy fields.",
+    "Farmers work under the hot sun, and it is hard. Every grain of rice and every steamed bun we eat doesn't come easily.",
+    "In Germany, June is peak strawberry time, and many people go to the fields to pick their own."
+   ],
+   "paragraphs_de": [
+    "Um den 5. Juni beginnt „Grannenähren“. 芒 sind die feinen Grannen am Weizen, und 种 heißt pflanzen.",
+    "Jetzt haben die Bauern sehr viel zu tun: Sie müssen den reifen Weizen einbringen und gleichzeitig Reis in den Wasserfeldern pflanzen.",
+    "Die Bauern arbeiten in der heißen Sonne, und das ist anstrengend. Jedes Reiskorn und jedes Dampfbrötchen, das wir essen, ist nicht einfach zu uns gekommen.",
+    "In Deutschland gibt es im Juni die meisten Erdbeeren, und viele gehen aufs Feld und pflücken selbst."
+   ],
+   "glossary": [
+    {
+     "w": "芒种",
+     "p": "máng zhòng",
+     "en": "Grain in Ear (solar term, around 5 June)",
+     "de": "Grannenähren (Sonnenperiode, um den 5. Juni)"
+    },
+    {
+     "w": "刺",
+     "p": "cì",
+     "en": "bristle, thorn",
+     "de": "die Granne, der Dorn"
+    },
+    {
+     "w": "种田",
+     "p": "zhòng tián",
+     "en": "to farm",
+     "de": "Landwirtschaft betreiben"
+    },
+    {
+     "w": "农民",
+     "p": "nóng mín",
+     "en": "farmer",
+     "de": "der Bauer"
+    },
+    {
+     "w": "水稻",
+     "p": "shuǐ dào",
+     "en": "rice (plant)",
+     "de": "der Reis (Pflanze)"
+    },
+    {
+     "w": "辛苦",
+     "p": "xīn kǔ",
+     "en": "hard, toilsome",
+     "de": "anstrengend, mühsam"
+    },
+    {
+     "w": "馒头",
+     "p": "mán tou",
+     "en": "steamed bun",
+     "de": "das Dampfbrötchen"
+    },
+    {
+     "w": "摘",
+     "p": "zhāi",
+     "en": "to pick",
+     "de": "pflücken"
+    }
+   ],
+   "grammar": "每 + measure word + noun + 都…… = every single …: 每一粒米都来得不容易 = every grain of rice doesn't come easily. 都 is needed after 每.",
+   "grammar_de": "每 + Zählwort + Nomen + 都…… = jedes einzelne …: 每一粒米都来得不容易 = Jedes Reiskorn ist mühsam erarbeitet. Nach 每 braucht man 都.",
+   "questions": [
+    "芒种的时候，农民要做什么？",
+    "为什么说每一粒米都来得不容易？",
+    "你自己种过东西吗？"
+   ],
+   "poem": {
+    "title": "悯农（其二）",
+    "author": "李绅",
+    "dynasty": "唐",
+    "lines": [
+     "锄禾日当午，",
+     "汗滴禾下土。",
+     "谁知盘中餐，",
+     "粒粒皆辛苦。"
+    ],
+    "explain_zh": "中午太阳最毒的时候，农民还在田里锄草，汗水一滴一滴落在禾苗下的泥土里。有谁知道，盘子里的饭，每一粒都是农民辛辛苦苦种出来的呢？",
+    "explain_en": "At noon, under the fiercest sun, the farmer is still hoeing; his sweat drips into the soil beneath the seedlings. Who knows that every single grain in the bowl on our table comes from such hard work?",
+    "explain_de": "Mittags, in der heißesten Sonne, hackt der Bauer noch das Feld; sein Schweiß tropft in die Erde unter den Halmen. Wer weiß schon, dass jedes einzelne Korn auf unserem Teller aus solcher Mühe kommt?"
+   },
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK4",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "芒种",
+   "date": "2026-06-05",
+   "title": "芒种：送别花神",
+   "title_en": "Grain in Ear: farewell to the flower goddess",
+   "title_de": "Grannenähren: Abschied von der Blumengöttin",
+   "dek": "忙着收，忙着种，也忙着告别春天。",
+   "paragraphs": [
+    "芒种一般在每年六月五日到七日之间。“芒”指麦子等作物籽粒外面细长的刺，“种”在这里读zhòng，是播种。芒种前后，北方忙着收割有芒的小麦，南方忙着插秧，所以民间也说，“芒种”就是“忙种”。",
+    "芒种的三候是“螳螂生、䴗始鸣、反舌无声”：螳螂的卵孵化出了小螳螂；伯劳鸟开始鸣叫；而擅长模仿各种鸟叫的百舌鸟，却安静了下来。",
+    "芒种过后，江南进入梅雨季节，常常一连好几天下雨，空气又湿又闷。宋代诗人赵师秀笔下的“黄梅时节家家雨”，写的就是这样的日子。",
+    "《红楼梦》里记着一个美丽的习俗：芒种这天要“饯花神”。书中说，芒种一过便是夏日，众花都谢了，花神要退位，所以要为她送行。大观园里的姑娘们用花瓣和柳枝编成小轿、小马，用彩线系在每一棵树、每一枝花上。林黛玉的《葬花吟》，也是在这一天唱出来的。"
+   ],
+   "paragraphs_en": [
+    "Grain in Ear usually falls between 5 and 7 June. 芒 are the long, fine bristles on the grains of wheat and similar crops; 种, read zhòng here, means sowing. Around this time the north is busy harvesting bearded wheat and the south is busy planting rice – so people also say 芒种 is really 忙种, \"busy planting\".",
+    "Its three pentads are \"mantises are born, the shrike begins to call, the mockingbird falls silent\": young mantises hatch from their eggs; shrikes start calling; and the blackbird-like bird that can imitate every other bird goes quiet.",
+    "After Grain in Ear, the Jiangnan region enters the plum-rain season: it often rains for days on end, and the air is damp and sticky. The Song poet Zhao Shixiu's line \"in the yellow-plum season, rain on every house\" describes exactly such days.",
+    "\"Dream of the Red Chamber\" records a lovely custom: on this day people \"bid farewell to the flower goddess\". The novel says that once Grain in Ear has passed it is summer, the flowers have all faded and the flower goddess steps down – so she must be given a send-off. The girls of the Grand View Garden weave little sedan chairs and horses from petals and willow twigs and tie them with coloured threads to every tree and every flower. Lin Daiyu's \"Song of Burying Flowers\" is sung on this very day."
+   ],
+   "paragraphs_de": [
+    "Grannenähren fällt meist zwischen den 5. und 7. Juni. 芒 sind die langen, feinen Grannen an den Körnern von Weizen und ähnlichem Getreide; 种, hier zhòng gelesen, heißt säen. Jetzt wird im Norden der Grannenweizen geerntet und im Süden Reis gepflanzt – darum sagt man auch, 芒种 sei eigentlich 忙种, „eiliges Pflanzen“.",
+    "Die drei „Hou“ lauten „die Gottesanbeterinnen schlüpfen, der Würger beginnt zu rufen, der Spottvogel verstummt“: Junge Gottesanbeterinnen schlüpfen aus den Eiern; Würger rufen; und der amselartige Vogel, der alle anderen Vögel nachahmen kann, wird still.",
+    "Nach Grannenähren beginnt in Jiangnan die Pflaumenregenzeit: Oft regnet es tagelang, und die Luft ist feucht und schwül. Die Zeile des Song-Dichters Zhao Shixiu „Zur Zeit der gelben Pflaumen regnet es auf jedes Haus“ beschreibt genau solche Tage.",
+    "Der „Traum der Roten Kammer“ hält einen schönen Brauch fest: An diesem Tag „verabschiedet man die Blumengöttin“. Im Roman heißt es, nach Grannenähren sei Sommer, die Blumen seien verblüht und die Blumengöttin trete ab – also müsse man ihr ein Abschiedsfest geben. Die Mädchen im Garten der Großen Aussicht flechten aus Blütenblättern und Weidenzweigen kleine Sänften und Pferde und binden sie mit bunten Fäden an jeden Baum und jede Blume. Auch Lin Daiyus „Lied vom Begraben der Blüten“ entsteht an diesem Tag."
+   ],
+   "glossary": [
+    {
+     "w": "播种",
+     "p": "bō zhǒng",
+     "en": "to sow",
+     "de": "säen"
+    },
+    {
+     "w": "收割",
+     "p": "shōu gē",
+     "en": "to harvest",
+     "de": "ernten"
+    },
+    {
+     "w": "插秧",
+     "p": "chā yāng",
+     "en": "to plant rice seedlings",
+     "de": "Reis setzen"
+    },
+    {
+     "w": "孵化",
+     "p": "fū huà",
+     "en": "to hatch",
+     "de": "schlüpfen"
+    },
+    {
+     "w": "擅长",
+     "p": "shàn cháng",
+     "en": "to be good at",
+     "de": "gut können"
+    },
+    {
+     "w": "模仿",
+     "p": "mó fǎng",
+     "en": "to imitate",
+     "de": "nachahmen"
+    },
+    {
+     "w": "梅雨",
+     "p": "méi yǔ",
+     "en": "plum rain (early-summer rainy season)",
+     "de": "der Pflaumenregen (Regenzeit im Frühsommer)"
+    },
+    {
+     "w": "一连",
+     "p": "yì lián",
+     "en": "in a row",
+     "de": "hintereinander"
+    },
+    {
+     "w": "闷",
+     "p": "mēn",
+     "en": "stuffy, muggy",
+     "de": "schwül, stickig"
+    },
+    {
+     "w": "饯",
+     "p": "jiàn",
+     "en": "to give a farewell dinner",
+     "de": "verabschieden (mit einem Fest)"
+    },
+    {
+     "w": "退位",
+     "p": "tuì wèi",
+     "en": "to step down",
+     "de": "abtreten"
+    },
+    {
+     "w": "编",
+     "p": "biān",
+     "en": "to weave",
+     "de": "flechten"
+    }
+   ],
+   "grammar": "一连 + number + time means \"… in a row\": 一连好几天下雨 = it rains for several days in a row. Also: 他一连工作了十个小时.",
+   "grammar_de": "一连 + Zahl + Zeit heißt „… hintereinander“: 一连好几天下雨 = Es regnet mehrere Tage hintereinander. Auch: 他一连工作了十个小时.",
+   "questions": [
+    "为什么民间说“芒种”就是“忙种”？",
+    "《红楼梦》里，芒种这天姑娘们做什么？",
+    "你会怎么跟一个季节告别？"
+   ],
+   "poem": {
+    "title": "约客",
+    "author": "赵师秀",
+    "dynasty": "宋",
+    "lines": [
+     "黄梅时节家家雨，",
+     "青草池塘处处蛙。",
+     "有约不来过夜半，",
+     "闲敲棋子落灯花。"
+    ],
+    "explain_zh": "梅子黄了的季节，家家户户都在下雨；长满青草的池塘边，到处都是青蛙的叫声。约好的朋友过了半夜还没来，诗人一个人无聊地敲着棋子，把灯芯上结的灯花都震落了。",
+    "explain_en": "In the yellow-plum season it rains on every house; by the grassy ponds frogs croak everywhere. The friend he invited still hasn't come past midnight; idly the poet taps the chess pieces, knocking the snuff from the lamp wick.",
+    "explain_de": "Zur Zeit der gelben Pflaumen regnet es auf jedes Haus; an den grasigen Teichen quaken überall Frösche. Der verabredete Freund ist nach Mitternacht noch nicht da; müßig klopft der Dichter mit den Spielsteinen, bis die Schnuppe vom Lampendocht fällt."
+   },
+   "sources": [
+    {
+     "title": "農業部：二十四節氣（引用臺北市立天文科學教育館資料）",
+     "url": "https://www.moa.gov.tw/ws.php?id=2507770",
+     "license": "link only"
+    },
+    {
+     "title": "国立天文台 暦Wiki：七十二候",
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/wiki/B5A8C0E12FBCB7BDBDC6F3B8F5.html",
+     "license": "link only"
+    },
+    {
+     "title": "康健雜誌：24節氣（2023-05-03）",
+     "url": "https://www.commonhealth.com.tw/article/88011",
+     "license": "link only"
+    }
+   ]
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "夏至",
+   "date": "2026-06-21",
+   "title": "夏至：白天最长",
+   "title_en": "Summer Solstice: the longest day",
+   "title_de": "Sommersonnenwende: der längste Tag",
+   "dek": "冬至饺子夏至面。",
+   "paragraphs": [
+    "六月二十一日前后是夏至。这一天，白天最长，晚上最短，和冬至正好相反。",
+    "北方有一句话：“冬至饺子夏至面。”夏至这天，很多人吃面条。",
+    "天热了，知了在树上开始叫：“知了，知了！”",
+    "在德国，夏至前后，晚上十点左右天才黑。很多城市有音乐节，大家在外面听音乐，一直到很晚。"
+   ],
+   "paragraphs_en": [
+    "The Summer Solstice falls around 21 June. On this day the day is longest and the night shortest – exactly the opposite of the Winter Solstice.",
+    "In the north there is a saying: \"Dumplings at the Winter Solstice, noodles at the Summer Solstice.\" On this day many people eat noodles.",
+    "It's getting hot, and the cicadas start to sing in the trees: \"Zhi-liao, zhi-liao!\"",
+    "In Germany, around the solstice it doesn't get dark until about ten at night. Many cities hold a music festival, and people listen to music outside until late."
+   ],
+   "paragraphs_de": [
+    "Um den 21. Juni ist Sommersonnenwende. An diesem Tag ist der Tag am längsten und die Nacht am kürzesten – genau umgekehrt wie bei der Wintersonnenwende.",
+    "Im Norden sagt man: „Zur Wintersonnenwende Jiaozi, zur Sommersonnenwende Nudeln.“ An diesem Tag essen viele Nudeln.",
+    "Es wird heiß, und in den Bäumen beginnen die Zikaden zu singen: „Zhi-liao, zhi-liao!“",
+    "In Deutschland wird es um die Sonnenwende erst gegen zehn Uhr abends dunkel. Viele Städte feiern ein Musikfest, und man hört bis spät draußen Musik."
+   ],
+   "glossary": [
+    {
+     "w": "夏至",
+     "p": "xià zhì",
+     "en": "Summer Solstice (around 21 June)",
+     "de": "Sommersonnenwende (um den 21. Juni)"
+    },
+    {
+     "w": "相反",
+     "p": "xiāng fǎn",
+     "en": "opposite",
+     "de": "umgekehrt"
+    },
+    {
+     "w": "面条",
+     "p": "miàn tiáo",
+     "en": "noodles",
+     "de": "die Nudeln"
+    },
+    {
+     "w": "知了",
+     "p": "zhī liǎo",
+     "en": "cicada",
+     "de": "die Zikade"
+    },
+    {
+     "w": "音乐节",
+     "p": "yīn yuè jié",
+     "en": "music festival",
+     "de": "das Musikfest"
+    }
+   ],
+   "grammar": "才 after a time means \"not until\": 晚上十点天才黑 = it doesn't get dark until ten at night (later than you'd think).",
+   "grammar_de": "才 nach einer Zeitangabe heißt „erst“: 晚上十点天才黑 = Es wird erst um zehn Uhr abends dunkel (später als gedacht).",
+   "questions": [
+    "夏至和冬至有什么不同？",
+    "夏至这天，北方人吃什么？",
+    "夏天的晚上，你喜欢做什么？"
+   ],
+   "poem": {
+    "title": "晓出净慈寺送林子方",
+    "author": "杨万里",
+    "dynasty": "宋",
+    "lines": [
+     "毕竟西湖六月中，",
+     "风光不与四时同。",
+     "接天莲叶无穷碧，",
+     "映日荷花别样红。"
+    ],
+    "explain_zh": "到底是六月的西湖，风景和别的季节都不一样。一片一片的莲叶，好像一直连到天边，绿得没有尽头；荷花在太阳下面，红得特别好看。",
+    "explain_en": "West Lake in the sixth month is, after all, unlike any other season. The lotus leaves stretch to the sky, an endless green; in the sunlight the lotus flowers glow a red like no other.",
+    "explain_de": "Der Westsee im sechsten Monat ist eben anders als zu jeder anderen Jahreszeit. Die Lotusblätter reichen bis zum Himmel, ein endloses Grün; im Sonnenlicht leuchten die Lotusblüten in einem ganz eigenen Rot."
+   },
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK4",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "夏至",
+   "date": "2026-06-21",
+   "title": "夏至：最长的一天，也是转折",
+   "title_en": "Summer Solstice: the longest day, and a turning point",
+   "title_de": "Sommersonnenwende: der längste Tag und eine Wende",
+   "dek": "白天开始变短了，天气却越来越热。",
+   "paragraphs": [
+    "夏至一般在每年六月二十一日或二十二日。这一天，太阳直射北回归线，北半球白天最长。从这天起，白天开始一点点变短，可是天气却越来越热，因为地面积累的热量还在增加，最热的日子还在后面。",
+    "夏至的三候是“鹿角解、蜩始鸣、半夏生”：鹿开始脱角；知了开始鸣叫；一种叫“半夏”的草药，在夏天过了一半的时候长了出来。有意思的是，冬至的三候里也有“麋角解”：古人认为，鹿和麋一个在夏至脱角，一个在冬至脱角。",
+    "北方有“冬至饺子夏至面”的说法。夏至前后，新麦刚刚收割，磨成面粉，做一碗凉面，正好消暑。",
+    "在欧洲，夏至也是重要的日子。在德国，六月二十四日前后的“圣约翰节”，有些地方会点起篝火；在北欧，仲夏节是一年中最重要的节日之一。很多德国城市在六月二十一日举办“音乐节”，街头巷尾都是免费的音乐会。"
+   ],
+   "paragraphs_en": [
+    "The Summer Solstice usually falls on 21 or 22 June. On this day the sun stands directly over the Tropic of Cancer, and the northern hemisphere has its longest day. From now on the days slowly get shorter – yet it keeps getting hotter, because the heat stored in the ground is still increasing, and the hottest days are yet to come.",
+    "Its three pentads are \"deer shed their antlers, cicadas begin to sing, banxia grows\": deer lose their antlers; cicadas start singing; and a medicinal herb called banxia, \"half-summer\", appears when summer is half over. Interestingly, the Winter Solstice also has \"elk shed their antlers\": the ancients believed one kind of deer sheds at the summer solstice and the other at the winter solstice.",
+    "In the north people say \"dumplings at the Winter Solstice, noodles at the Summer Solstice\". Around the solstice the new wheat has just been harvested and milled into flour; a bowl of cold noodles is just right to beat the heat.",
+    "In Europe, too, the solstice is an important day. In Germany, around St John's Day on 24 June, some places light bonfires; in the Nordic countries, Midsummer is one of the most important festivals of the year. Many German cities hold a music festival on 21 June, with free concerts on every street corner."
+   ],
+   "paragraphs_de": [
+    "Die Sommersonnenwende fällt meist auf den 21. oder 22. Juni. An diesem Tag steht die Sonne senkrecht über dem nördlichen Wendekreis, und die Nordhalbkugel hat ihren längsten Tag. Von nun an werden die Tage langsam kürzer – doch es wird immer heißer, weil der Boden noch Wärme speichert; die heißesten Tage kommen erst noch.",
+    "Die drei „Hou“ lauten „die Hirsche werfen ihr Geweih ab, die Zikaden beginnen zu singen, das Banxia wächst“: Hirsche verlieren ihr Geweih; Zikaden singen; und ein Heilkraut namens Banxia, „halber Sommer“, wächst, wenn der Sommer zur Hälfte vorbei ist. Interessant: Auch bei der Wintersonnenwende heißt es „die Elche werfen ihr Geweih ab“ – man glaubte, die eine Hirschart werfe zur Sommer-, die andere zur Wintersonnenwende ab.",
+    "Im Norden sagt man „zur Wintersonnenwende Jiaozi, zur Sommersonnenwende Nudeln“. Um die Sonnenwende ist der neue Weizen gerade geerntet und zu Mehl gemahlen; eine Schale kalter Nudeln ist genau das Richtige gegen die Hitze.",
+    "Auch in Europa ist die Sonnenwende ein wichtiger Tag. In Deutschland werden um den Johannistag am 24. Juni mancherorts Johannisfeuer entzündet; in Skandinavien ist Mittsommer eines der wichtigsten Feste des Jahres. Viele deutsche Städte feiern am 21. Juni die „Fête de la Musique“ mit kostenlosen Konzerten an jeder Ecke."
+   ],
+   "glossary": [
+    {
+     "w": "北回归线",
+     "p": "běi huí guī xiàn",
+     "en": "Tropic of Cancer",
+     "de": "der nördliche Wendekreis"
+    },
+    {
+     "w": "积累",
+     "p": "jī lěi",
+     "en": "to accumulate",
+     "de": "ansammeln, speichern"
+    },
+    {
+     "w": "热量",
+     "p": "rè liàng",
+     "en": "heat",
+     "de": "die Wärme"
+    },
+    {
+     "w": "脱",
+     "p": "tuō",
+     "en": "to shed",
+     "de": "abwerfen"
+    },
+    {
+     "w": "草药",
+     "p": "cǎo yào",
+     "en": "medicinal herb",
+     "de": "das Heilkraut"
+    },
+    {
+     "w": "收割",
+     "p": "shōu gē",
+     "en": "to harvest",
+     "de": "ernten"
+    },
+    {
+     "w": "磨",
+     "p": "mó",
+     "en": "to grind, mill",
+     "de": "mahlen"
+    },
+    {
+     "w": "面粉",
+     "p": "miàn fěn",
+     "en": "flour",
+     "de": "das Mehl"
+    },
+    {
+     "w": "消暑",
+     "p": "xiāo shǔ",
+     "en": "to beat the heat",
+     "de": "die Hitze vertreiben"
+    },
+    {
+     "w": "篝火",
+     "p": "gōu huǒ",
+     "en": "bonfire",
+     "de": "das Lagerfeuer"
+    },
+    {
+     "w": "仲夏节",
+     "p": "zhòng xià jié",
+     "en": "Midsummer (festival)",
+     "de": "das Mittsommerfest"
+    },
+    {
+     "w": "街头巷尾",
+     "p": "jiē tóu xiàng wěi",
+     "en": "every street and alley",
+     "de": "an jeder Straßenecke"
+    }
+   ],
+   "grammar": "却 marks something unexpected: 白天开始变短，可是天气却越来越热 = the days start getting shorter, yet it gets hotter and hotter. 却 goes after the subject, before the verb.",
+   "grammar_de": "却 markiert etwas Unerwartetes: 白天开始变短，可是天气却越来越热 = Die Tage werden kürzer, und doch wird es immer heißer. 却 steht nach dem Subjekt, vor dem Verb.",
+   "questions": [
+    "为什么夏至以后天气反而越来越热？",
+    "冬至和夏至的三候有什么相同的地方？",
+    "你会怎么过一年中最长的一天？"
+   ],
+   "poem": {
+    "title": "竹枝词",
+    "author": "刘禹锡",
+    "dynasty": "唐",
+    "lines": [
+     "杨柳青青江水平，",
+     "闻郎江上唱歌声。",
+     "东边日出西边雨，",
+     "道是无晴却有晴。"
+    ],
+    "explain_zh": "杨柳青青，江水平静，姑娘忽然听见心上人在江上唱歌。东边出着太阳，西边却在下雨——说是没有“晴”，却又有“晴”。“晴”和“情”同音：她不知道他对自己有没有情意。夏天的雷阵雨常常就是这样，一边晴，一边雨。",
+    "explain_en": "Willows are green, the river is calm; a girl hears her sweetheart singing on the water. The sun is out in the east, yet rain falls in the west – you'd say there is no 晴 (fair weather), and yet there is. 晴 sounds like 情, \"love\": she doesn't know whether he loves her. Summer showers are often just like this: sun on one side, rain on the other.",
+    "explain_de": "Die Weiden sind grün, der Fluss ist ruhig; ein Mädchen hört ihren Liebsten auf dem Wasser singen. Im Osten scheint die Sonne, im Westen regnet es – man möchte sagen, kein 晴 (schönes Wetter), und doch gibt es welches. 晴 klingt wie 情, „Liebe“: Sie weiß nicht, ob er sie liebt. Sommerschauer sind oft genau so: auf der einen Seite Sonne, auf der anderen Regen."
+   },
+   "sources": [
+    {
+     "title": "農業部：二十四節氣（引用臺北市立天文科學教育館資料）",
+     "url": "https://www.moa.gov.tw/ws.php?id=2507770",
+     "license": "link only"
+    },
+    {
+     "title": "Hong Kong Observatory: 2026 major solar terms",
+     "url": "https://my.weather.gov.hk/en/gts/astron2026/files/2026SolarTerms24.pdf",
+     "license": "official"
+    },
+    {
+     "title": "国立天文台 暦Wiki：七十二候",
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/wiki/B5A8C0E12FBCB7BDBDC6F3B8F5.html",
+     "license": "link only"
+    },
+    {
+     "title": "香港教育局：二十四節氣（小學教學資源）",
+     "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/cross-kla-studies/ph-primary/references-resources/MET_series/24_Solar_Terms.pdf",
+     "license": "official"
+    }
+   ]
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "小暑",
+   "date": "2026-07-07",
+   "title": "小暑：鹅在水里游",
+   "title_en": "Minor Heat: the goose on the water",
+   "title_de": "Kleine Hitze: die Gans auf dem Wasser",
+   "dek": "开始热了，可是还不是最热。",
+   "paragraphs": [
+    "七月七日前后是小暑。“暑”是热，小暑就是开始热了，可是还不是最热的时候。",
+    "古人说，这时候连风都是热的。小小的蟋蟀从田里搬到墙边住，因为那儿凉快。",
+    "夏天，池塘里的荷花开了，大白鹅在水里游来游去。",
+    "在德国，七月很多学校放暑假了。大家去海边，去山里，也有人去游泳池游泳。"
+   ],
+   "paragraphs_en": [
+    "Minor Heat falls around 7 July. 暑 means heat; Minor Heat means it's starting to get hot, but it isn't the hottest time yet.",
+    "The ancients said that now even the wind is hot. Little crickets move from the fields to the walls, because it's cooler there.",
+    "In summer, lotus flowers bloom on the pond, and big white geese swim back and forth on the water.",
+    "In Germany, many schools break up for the summer holidays in July. People go to the seaside or the mountains, and some go swimming at the pool."
+   ],
+   "paragraphs_de": [
+    "Um den 7. Juli beginnt „Kleine Hitze“. 暑 heißt Hitze; Kleine Hitze bedeutet, es wird heiß, aber es ist noch nicht die heißeste Zeit.",
+    "Früher sagte man, dass jetzt sogar der Wind heiß ist. Die kleinen Grillen ziehen von den Feldern an die Mauern, weil es dort kühler ist.",
+    "Im Sommer blüht auf dem Teich der Lotus, und große weiße Gänse schwimmen hin und her.",
+    "In Deutschland beginnen im Juli an vielen Schulen die Sommerferien. Man fährt ans Meer oder in die Berge, und manche gehen ins Schwimmbad."
+   ],
+   "glossary": [
+    {
+     "w": "小暑",
+     "p": "xiǎo shǔ",
+     "en": "Minor Heat (solar term, around 7 July)",
+     "de": "Kleine Hitze (Sonnenperiode, um den 7. Juli)"
+    },
+    {
+     "w": "暑",
+     "p": "shǔ",
+     "en": "heat",
+     "de": "die Hitze"
+    },
+    {
+     "w": "蟋蟀",
+     "p": "xī shuài",
+     "en": "cricket",
+     "de": "die Grille"
+    },
+    {
+     "w": "凉快",
+     "p": "liáng kuai",
+     "en": "pleasantly cool",
+     "de": "angenehm kühl"
+    },
+    {
+     "w": "荷花",
+     "p": "hé huā",
+     "en": "lotus flower",
+     "de": "die Lotusblume"
+    },
+    {
+     "w": "鹅",
+     "p": "é",
+     "en": "goose",
+     "de": "die Gans"
+    },
+    {
+     "w": "暑假",
+     "p": "shǔ jià",
+     "en": "summer holidays",
+     "de": "die Sommerferien"
+    },
+    {
+     "w": "游泳池",
+     "p": "yóu yǒng chí",
+     "en": "swimming pool",
+     "de": "das Schwimmbad"
+    }
+   ],
+   "grammar": "Verb + 来 + verb + 去 = back and forth: 游来游去 = swim back and forth; 飞来飞去 = fly about.",
+   "grammar_de": "Verb + 来 + Verb + 去 = hin und her: 游来游去 = hin und her schwimmen; 飞来飞去 = umherfliegen.",
+   "questions": [
+    "“暑”是什么意思？",
+    "蟋蟀为什么搬到墙边住？",
+    "暑假的时候，你想去哪儿？"
+   ],
+   "poem": {
+    "title": "咏鹅",
+    "author": "骆宾王",
+    "dynasty": "唐",
+    "lines": [
+     "鹅，鹅，鹅，",
+     "曲项向天歌。",
+     "白毛浮绿水，",
+     "红掌拨清波。"
+    ],
+    "explain_zh": "鹅，鹅，鹅！它弯着长长的脖子，向着天空唱歌。白色的羽毛浮在绿色的水面上，红色的脚掌划着清清的水波。（传说骆宾王写这首诗的时候只有七岁。）",
+    "explain_en": "Goose, goose, goose! It bends its long neck and sings to the sky. White feathers float on green water; red feet paddle the clear ripples. (Legend says Luo Binwang wrote this when he was seven.)",
+    "explain_de": "Gans, Gans, Gans! Sie biegt den langen Hals und singt zum Himmel. Weiße Federn treiben auf grünem Wasser, rote Füße paddeln durch klare Wellen. (Der Legende nach schrieb Luo Binwang dieses Gedicht mit sieben Jahren.)"
+   },
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK4",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "小暑",
+   "date": "2026-07-07",
+   "title": "小暑：连风都是热的",
+   "title_en": "Minor Heat: even the wind is hot",
+   "title_de": "Kleine Hitze: Sogar der Wind ist heiß",
+   "dek": "三伏天就要来了。",
+   "paragraphs": [
+    "小暑一般在每年七月六日到八日之间。“暑”就是炎热，“小暑”表示天气开始炎热，但还没有到最热的时候。小暑过后不久，就进入了一年中最热的“三伏天”。",
+    "小暑的三候是“温风至、蟋蟀居壁、鹰乃学习”：连吹来的风都是热的；蟋蟀离开炎热的田野，躲到墙角阴凉的地方；小鹰开始跟着大鹰学习飞翔和捕猎。",
+    "“三伏天”是怎么算的？从夏至开始数，第三个“庚日”是初伏的第一天，所以每年入伏的日子都不太一样，一般在七月中旬。三伏分初伏、中伏、末伏，加起来有三十天或四十天。",
+    "在德国，七月是暑假和旅行的季节。近年来，夏天的热浪越来越多，有时气温超过三十五度。很多德国人家里没有空调，只好白天关窗、拉上窗帘，等到晚上凉快了再开窗通风。"
+   ],
+   "paragraphs_en": [
+    "Minor Heat usually falls between 6 and 8 July. 暑 means scorching heat; Minor Heat means it is getting hot, but the hottest time hasn't come yet. Soon after Minor Heat, the hottest stretch of the year – the \"three fu\" – begins.",
+    "Its three pentads are \"warm winds arrive, crickets live by the walls, young hawks learn\": even the wind that blows is hot; crickets leave the hot fields and hide in shady corners by the walls; young hawks start learning to fly and hunt from the adults.",
+    "How are the \"three fu\" counted? Starting from the Summer Solstice, the third geng day (one of the ten days of an old Chinese day cycle) is the first day of the first fu, so the date changes every year – usually in mid-July. The three fu – early, middle and late – add up to thirty or forty days.",
+    "In Germany, July is the season of summer holidays and travel. In recent years heatwaves have become more frequent, sometimes above thirty-five degrees. Many German homes have no air conditioning, so people keep the windows shut and the curtains drawn during the day and air the rooms in the evening when it cools down."
+   ],
+   "paragraphs_de": [
+    "Die Kleine Hitze fällt meist zwischen den 6. und 8. Juli. 暑 heißt große Hitze; Kleine Hitze bedeutet, es wird heiß, aber die heißeste Zeit ist noch nicht da. Kurz danach beginnen die „drei Fu“, die heißeste Phase des Jahres.",
+    "Die drei „Hou“ lauten „warme Winde kommen, die Grillen wohnen an den Mauern, die jungen Habichte lernen“: Sogar der Wind ist heiß; Grillen verlassen die heißen Felder und verstecken sich in schattigen Mauerecken; junge Habichte lernen von den Alten fliegen und jagen.",
+    "Wie zählt man die „drei Fu“? Ab der Sommersonnenwende ist der dritte Geng-Tag (einer der zehn Tage eines alten chinesischen Tageszyklus) der erste Tag des ersten Fu; deshalb ändert sich das Datum jedes Jahr – meist Mitte Juli. Die drei Fu – früh, mittel, spät – dauern zusammen dreißig oder vierzig Tage.",
+    "In Deutschland ist der Juli die Zeit der Sommerferien und Reisen. In den letzten Jahren gibt es immer mehr Hitzewellen, manchmal über fünfunddreißig Grad. Viele deutsche Wohnungen haben keine Klimaanlage; tagsüber bleiben Fenster zu und Vorhänge geschlossen, abends, wenn es kühler ist, wird gelüftet."
+   ],
+   "glossary": [
+    {
+     "w": "炎热",
+     "p": "yán rè",
+     "en": "scorching hot",
+     "de": "glühend heiß"
+    },
+    {
+     "w": "三伏天",
+     "p": "sān fú tiān",
+     "en": "the \"three fu\", hottest days of summer",
+     "de": "die „drei Fu“, die heißesten Sommertage"
+    },
+    {
+     "w": "田野",
+     "p": "tián yě",
+     "en": "fields",
+     "de": "die Felder"
+    },
+    {
+     "w": "阴凉",
+     "p": "yīn liáng",
+     "en": "shady and cool",
+     "de": "schattig, kühl"
+    },
+    {
+     "w": "飞翔",
+     "p": "fēi xiáng",
+     "en": "to fly",
+     "de": "fliegen"
+    },
+    {
+     "w": "捕猎",
+     "p": "bǔ liè",
+     "en": "to hunt",
+     "de": "jagen"
+    },
+    {
+     "w": "中旬",
+     "p": "zhōng xún",
+     "en": "middle ten days of a month",
+     "de": "Monatsmitte"
+    },
+    {
+     "w": "热浪",
+     "p": "rè làng",
+     "en": "heatwave",
+     "de": "die Hitzewelle"
+    },
+    {
+     "w": "空调",
+     "p": "kōng tiáo",
+     "en": "air conditioning",
+     "de": "die Klimaanlage"
+    },
+    {
+     "w": "窗帘",
+     "p": "chuāng lián",
+     "en": "curtain",
+     "de": "der Vorhang"
+    },
+    {
+     "w": "通风",
+     "p": "tōng fēng",
+     "en": "to air, ventilate",
+     "de": "lüften"
+    }
+   ],
+   "grammar": "连……都…… = even …: 连吹来的风都是热的 = even the wind that blows is hot. Also: 他连饭都没吃.",
+   "grammar_de": "连……都…… = sogar …: 连吹来的风都是热的 = Sogar der Wind ist heiß. Auch: 他连饭都没吃 = Er hat nicht einmal gegessen.",
+   "questions": [
+    "“三伏天”是怎么算的？",
+    "小暑的三候里，小鹰在做什么？",
+    "天气很热的时候，你怎么让自己凉快一点？"
+   ],
+   "poem": {
+    "title": "西江月·夜行黄沙道中",
+    "author": "辛弃疾",
+    "dynasty": "宋",
+    "lines": [
+     "明月别枝惊鹊，",
+     "清风半夜鸣蝉。",
+     "稻花香里说丰年，",
+     "听取蛙声一片。",
+     "七八个星天外，",
+     "两三点雨山前。",
+     "旧时茅店社林边，",
+     "路转溪桥忽见。"
+    ],
+    "explain_zh": "明亮的月光惊动了树枝上的喜鹊，半夜的清风里，知了还在叫。走在稻花的香气里，好像听见一片蛙声在说：今年是个丰收年。天边只有七八颗星星，山前落下两三点雨。从前那家熟悉的茅草小店，就在土地庙旁的树林边——路一转，过了小溪上的桥，它忽然就出现在眼前。",
+    "explain_en": "Bright moonlight startles the magpie from its branch; in the cool midnight breeze the cicadas still sing. In the fragrance of rice blossom, a chorus of frogs seems to announce a good harvest. Seven or eight stars beyond the sky, two or three drops of rain before the hills. The old thatched inn by the village shrine's grove – as the road turns over the brook bridge, there it suddenly is.",
+    "explain_de": "Helles Mondlicht scheucht die Elster vom Zweig; in der kühlen Mitternachtsbrise singen noch die Zikaden. Im Duft der Reisblüte scheint ein Froschchor ein gutes Erntejahr zu verkünden. Sieben, acht Sterne am fernen Himmel, zwei, drei Regentropfen vor den Bergen. Das alte strohgedeckte Gasthaus am Hain des Dorfschreins – wo der Weg sich über die Bachbrücke wendet, steht es plötzlich da."
+   },
+   "sources": [
+    {
+     "title": "農業部：二十四節氣（引用臺北市立天文科學教育館資料）",
+     "url": "https://www.moa.gov.tw/ws.php?id=2507770",
+     "license": "link only"
+    },
+    {
+     "title": "国立天文台 暦Wiki：七十二候",
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/wiki/B5A8C0E12FBCB7BDBDC6F3B8F5.html",
+     "license": "link only"
+    }
+   ]
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "大暑",
+   "date": "2026-07-23",
+   "title": "大暑：萤火虫来了",
+   "title_en": "Major Heat: the fireflies come",
+   "title_de": "Große Hitze: Die Glühwürmchen kommen",
+   "dek": "一年里最热的时候。",
+   "paragraphs": [
+    "七月二十三日前后是大暑。大暑是一年里最热的时候。",
+    "古人说“腐草为萤”：他们以为，萤火虫是从烂草里飞出来的。夏天的晚上，草地上有很多小小的光，一闪一闪的，那就是萤火虫。",
+    "天太热了，大家喜欢吃西瓜，喝凉凉的绿豆汤。",
+    "在德国，七月底天气也很热。很多人去湖里游泳，或者坐在树下吃冰激凌。"
+   ],
+   "paragraphs_en": [
+    "Major Heat falls around 23 July. It is the hottest time of the year.",
+    "The ancients said \"rotting grass turns into fireflies\": they thought fireflies flew out of rotten grass. On summer nights there are many tiny lights twinkling in the meadows – those are fireflies.",
+    "It's so hot that people love eating watermelon and drinking cold mung bean soup.",
+    "In Germany it is hot at the end of July too. Many people swim in the lakes or sit under the trees eating ice cream."
+   ],
+   "paragraphs_de": [
+    "Um den 23. Juli beginnt „Große Hitze“. Es ist die heißeste Zeit des Jahres.",
+    "Früher sagte man „aus faulem Gras werden Glühwürmchen“: Man glaubte, Glühwürmchen kämen aus verrottetem Gras. In Sommernächten blinken auf den Wiesen viele kleine Lichter – das sind Glühwürmchen.",
+    "Es ist so heiß, dass alle gern Wassermelone essen und kalte Mungbohnensuppe trinken.",
+    "Auch in Deutschland ist es Ende Juli heiß. Viele schwimmen im See oder sitzen unter Bäumen und essen Eis."
+   ],
+   "glossary": [
+    {
+     "w": "大暑",
+     "p": "dà shǔ",
+     "en": "Major Heat (solar term, around 23 July)",
+     "de": "Große Hitze (Sonnenperiode, um den 23. Juli)"
+    },
+    {
+     "w": "萤火虫",
+     "p": "yíng huǒ chóng",
+     "en": "firefly",
+     "de": "das Glühwürmchen"
+    },
+    {
+     "w": "烂",
+     "p": "làn",
+     "en": "rotten",
+     "de": "verrottet"
+    },
+    {
+     "w": "闪",
+     "p": "shǎn",
+     "en": "to flash, twinkle",
+     "de": "blinken"
+    },
+    {
+     "w": "西瓜",
+     "p": "xī guā",
+     "en": "watermelon",
+     "de": "die Wassermelone"
+    },
+    {
+     "w": "绿豆汤",
+     "p": "lǜ dòu tāng",
+     "en": "mung bean soup",
+     "de": "die Mungbohnensuppe"
+    },
+    {
+     "w": "冰激凌",
+     "p": "bīng jī líng",
+     "en": "ice cream",
+     "de": "das Eis"
+    }
+   ],
+   "grammar": "A repeated verb with 一 describes a repeated action: 一闪一闪 = twinkling (flash after flash); 一跳一跳 = hopping.",
+   "grammar_de": "Ein mit 一 wiederholtes Verb beschreibt eine wiederholte Handlung: 一闪一闪 = blinkend (immer wieder); 一跳一跳 = hüpfend.",
+   "questions": [
+    "古人以为萤火虫是从哪里来的？",
+    "天热的时候，大家喜欢吃什么？",
+    "你见过萤火虫吗？"
+   ],
+   "poem": {
+    "title": "所见",
+    "author": "袁枚",
+    "dynasty": "清",
+    "lines": [
+     "牧童骑黄牛，",
+     "歌声振林樾。",
+     "意欲捕鸣蝉，",
+     "忽然闭口立。"
+    ],
+    "explain_zh": "放牛的孩子骑在黄牛背上，大声唱歌，歌声在树林里回响。忽然，他想捉树上正在叫的知了，就马上闭上嘴，一动不动地站住了。",
+    "explain_en": "A cowherd boy rides his yellow ox, singing so loud the woods ring. Suddenly he wants to catch a cicada singing in a tree – he shuts his mouth at once and stands stock-still.",
+    "explain_de": "Ein Hirtenjunge reitet auf seinem gelben Ochsen und singt, dass der Wald widerhallt. Plötzlich will er eine singende Zikade im Baum fangen – sofort macht er den Mund zu und steht mucksmäuschenstill."
+   },
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK4",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "大暑",
+   "date": "2026-07-23",
+   "title": "大暑：萤火虫从哪里来",
+   "title_en": "Major Heat: where fireflies come from",
+   "title_de": "Große Hitze: Woher die Glühwürmchen kommen",
+   "dek": "又湿又热的日子里，草丛中亮起了小灯。",
+   "paragraphs": [
+    "大暑一般在每年七月二十二日到二十四日之间，是一年中最炎热的节气，往往正好在“三伏天”的中间。",
+    "大暑的三候是“腐草为萤、土润溽暑、大雨时行”。古人看到萤火虫常常在潮湿腐烂的草堆里出现，就以为萤火虫是腐草变成的。其实，萤火虫把卵产在潮湿的地方，幼虫在那里长大，所以看起来像是从草里“变”出来的。这个时候土地又湿又热，空气闷得让人透不过气，还常常突然下起大雷雨。",
+    "今天，城市里的灯光越来越多，萤火虫却越来越少了。只有在没有污染、晚上又足够黑的地方，才能看到一片闪闪的小光点。",
+    "德国也有萤火虫。德语里有一个可爱的名字叫“约翰虫”，因为它们常常在六月下旬圣约翰节前后出现。在乡下的夏夜里，有时还能看到它们在灌木丛边飞舞。"
+   ],
+   "paragraphs_en": [
+    "Major Heat usually falls between 22 and 24 July. It is the hottest solar term of the year and often lies right in the middle of the \"three fu\".",
+    "Its three pentads are \"rotting grass turns into fireflies, the soil is damp and the heat sultry, heavy rains come at times\". The ancients often saw fireflies appear in heaps of damp, rotting grass and thought the grass had turned into fireflies. In fact, fireflies lay their eggs in damp places and the larvae grow up there, so they seem to \"turn up\" out of the grass. At this time the ground is hot and wet, the air is so stifling you can hardly breathe, and sudden thunderstorms are common.",
+    "Today, with more and more light in our cities, there are fewer and fewer fireflies. Only where there is no pollution and the night is dark enough can you still see a field of twinkling lights.",
+    "Germany has fireflies too. One sweet German name for them is \"St John's beetle\", because they often appear in late June, around St John's Day. On summer nights in the countryside you can sometimes still see them dancing along the hedges."
+   ],
+   "paragraphs_de": [
+    "Die Große Hitze fällt meist zwischen den 22. und 24. Juli. Sie ist die heißeste Sonnenperiode des Jahres und liegt oft genau in der Mitte der „drei Fu“.",
+    "Die drei „Hou“ lauten „faules Gras wird zu Glühwürmchen, die Erde ist feucht und die Hitze schwül, heftige Regen kommen zuweilen“. Weil man Glühwürmchen oft in feuchten, faulenden Grashaufen sah, glaubte man, das Gras verwandle sich in sie. Tatsächlich legen Glühwürmchen ihre Eier an feuchten Stellen ab, und die Larven wachsen dort heran – darum scheinen sie aus dem Gras „hervorzukommen“. Jetzt ist der Boden heiß und nass, die Luft so drückend, dass man kaum atmen kann, und oft gibt es plötzlich heftige Gewitter.",
+    "Heute gibt es in den Städten immer mehr Licht und immer weniger Glühwürmchen. Nur wo es keine Verschmutzung gibt und die Nacht dunkel genug ist, sieht man noch ein Feld blinkender Lichtpunkte.",
+    "Auch Deutschland hat Glühwürmchen. Ein hübscher Name dafür ist „Johanniskäfer“, weil sie oft Ende Juni um den Johannistag auftauchen. In Sommernächten auf dem Land sieht man sie manchmal noch an Hecken entlangtanzen."
+   ],
+   "glossary": [
+    {
+     "w": "往往",
+     "p": "wǎng wǎng",
+     "en": "often, usually",
+     "de": "oft, meistens"
+    },
+    {
+     "w": "潮湿",
+     "p": "cháo shī",
+     "en": "damp",
+     "de": "feucht"
+    },
+    {
+     "w": "腐烂",
+     "p": "fǔ làn",
+     "en": "to rot",
+     "de": "verfaulen"
+    },
+    {
+     "w": "产卵",
+     "p": "chǎn luǎn",
+     "en": "to lay eggs",
+     "de": "Eier legen"
+    },
+    {
+     "w": "幼虫",
+     "p": "yòu chóng",
+     "en": "larva",
+     "de": "die Larve"
+    },
+    {
+     "w": "闷",
+     "p": "mēn",
+     "en": "stuffy, muggy",
+     "de": "schwül, stickig"
+    },
+    {
+     "w": "透不过气",
+     "p": "tòu bú guò qì",
+     "en": "can't breathe (stifling)",
+     "de": "kaum Luft bekommen"
+    },
+    {
+     "w": "雷雨",
+     "p": "léi yǔ",
+     "en": "thunderstorm",
+     "de": "das Gewitter"
+    },
+    {
+     "w": "污染",
+     "p": "wū rǎn",
+     "en": "pollution",
+     "de": "die Verschmutzung"
+    },
+    {
+     "w": "足够",
+     "p": "zú gòu",
+     "en": "enough",
+     "de": "genug"
+    },
+    {
+     "w": "下旬",
+     "p": "xià xún",
+     "en": "last ten days of a month",
+     "de": "Monatsende"
+    },
+    {
+     "w": "灌木丛",
+     "p": "guàn mù cóng",
+     "en": "bushes, hedge",
+     "de": "das Gebüsch, die Hecke"
+    }
+   ],
+   "grammar": "只有……才…… = only if … then …: 只有在晚上足够黑的地方，才能看到萤火虫 = you can see fireflies only where the night is dark enough.",
+   "grammar_de": "只有……才…… = nur wenn … dann …: 只有在晚上足够黑的地方，才能看到萤火虫 = Nur wo die Nacht dunkel genug ist, sieht man Glühwürmchen.",
+   "questions": [
+    "古人为什么以为萤火虫是腐草变的？",
+    "为什么城市里的萤火虫越来越少？",
+    "夏天最热的时候，你最想去哪里？"
+   ],
+   "poem": {
+    "title": "夏夜追凉",
+    "author": "杨万里",
+    "dynasty": "宋",
+    "lines": [
+     "夜热依然午热同，",
+     "开门小立月明中。",
+     "竹深树密虫鸣处，",
+     "时有微凉不是风。"
+    ],
+    "explain_zh": "夜里还是和中午一样热，诗人打开门，在月光下站了一会儿。在竹子深深、树木密密、虫子鸣叫的地方，常常有一丝淡淡的凉意——可那并不是风带来的。",
+    "explain_en": "The night is as hot as noon; the poet opens the door and stands a while in the moonlight. Where the bamboo is deep, the trees dense and the insects sing, now and then there is a faint coolness – yet it isn't the wind.",
+    "explain_de": "Die Nacht ist so heiß wie der Mittag; der Dichter öffnet die Tür und steht eine Weile im Mondlicht. Wo der Bambus tief, die Bäume dicht sind und die Insekten zirpen, ist manchmal eine leise Kühle – und doch ist es nicht der Wind."
+   },
+   "sources": [
+    {
+     "title": "農業部：二十四節氣（引用臺北市立天文科學教育館資料）",
+     "url": "https://www.moa.gov.tw/ws.php?id=2507770",
+     "license": "link only"
+    },
+    {
+     "title": "国立天文台 暦Wiki：七十二候",
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/wiki/B5A8C0E12FBCB7BDBDC6F3B8F5.html",
+     "license": "link only"
+    }
+   ]
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "jieqi",
+   "section": "节气",
    "term": "霜降",
    "date": "2026-10-23",
    "title": "霜降：红红的叶子",
