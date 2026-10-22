@@ -2633,17 +2633,19 @@ function mgLevels(dayIdx,l){ const day=MG.idx&&MG.idx.days[dayIdx]; if(!day) ret
 function mgLvSel(dayIdx,l){ const lv=mgLevels(dayIdx,l), want=(S.settings.rdLv||{})[l]; return lv.length>1&&lv.includes(want)?want:null; }
 /* 二十四节气 (reading/jieqi.json): fixed texts. An item opens on its date and stays in the day's list until the next term;
    from the second year on only month-day counts. On the term's own day it comes first in the list. */
-function jqAll(l){ const t=today(); return MG.jq?(MG.jq.items||[]).map((x,i)=>({...x,i})).filter(x=>x.lang===l&&x.date&&x.date<=t):[]; }
-function jqCur(l){ // items of the solar term we are in now
-  const xs=jqAll(l); if(!xs.length) return [];
-  const md=today().slice(5), terms=[...new Set(xs.map(x=>x.date.slice(5)))].sort();
-  const cur=terms.filter(m=>m<=md).pop()||terms[terms.length-1];
-  return xs.filter(x=>x.date.slice(5)===cur);
+function jqAll(l){ return MG.jq?(MG.jq.items||[]).map((x,i)=>({...x,i})).filter(x=>x.lang===l):[]; } // the whole shelf is open
+function jqTermNow(){ // the solar term we are in now, by month-day (before 小寒 on 1/5 it is still 冬至)
+  const ts=((MG.jq&&MG.jq.terms)||[]).slice().sort((a,b)=>a.md.localeCompare(b.md)); if(!ts.length) return null;
+  const md=today().slice(5); return ts.filter(t=>t.md<=md).pop()||ts[ts.length-1];
+}
+function jqCur(l){ // items of the current term (shown in 今日 and on top of the 书架)
+  const t=jqTermNow(); if(!t) return [];
+  return jqAll(l).filter(x=>x.term===t.term).sort((a,b)=>LV_ORDER.indexOf(a.level)-LV_ORDER.indexOf(b.level)).map(x=>({...x,date:x.date||("2026-"+t.md)}));
 }
 function jqEntries(l,sel){
   let xs=jqCur(l); if(!xs.length) return [];
   if(sel){ const want=["HSK1","HSK2","HSK3"].includes(sel)?"HSK2":"HSK4"; const m=xs.filter(x=>x.level===sel||x.level===want); xs=m.length?m:xs; }
-  return xs.map((x,n)=>({...x,n:100+n,date:"jq",jqDay:x.date.slice(5)===today().slice(5)}));
+  const t=jqTermNow(); return xs.map((x,n)=>({...x,n:100+n,date:"jq",jqDay:!!t&&t.md===today().slice(5)}));
 }
 function mgEntries(dayIdx,l){
   const day=MG.idx&&MG.idx.days[dayIdx]; if(!day) return [];
@@ -2744,8 +2746,8 @@ function mgColumn(){
       :`<span class="when">${esc(mdFmt(xs.length?xs[0].date.slice(5):t.md))}${xs.length?' · <span>开放</span>':""}</span>`;
     return `<div class="col-t${op.length?"":" off"}${t.term===curT?" cur":""}"><span class="nm zc" lang="zh-CN">${esc(zs(t.term))}<small data-noi18n>${esc(nm(t))}</small></span>${body}</div>`; };
   let h=`<div class="col-h"><h2 class="zc" lang="zh-CN"><span>二十四节气</span></h2><span class="n">${open.length?new Set(open.map(x=>x.term)).size:0} / 24</span></div>
-    <p class="col-lead"><span>每个节气两篇：HSK2 和 HSK4，各配一首古诗。节气那天开放。</span></p>`;
-  if(curT){ const t=terms.find(x=>x.term===curT)||{term:curT,md:cur[0].date.slice(5)};
+    <p class="col-lead"><span>每个节气两篇：HSK2 和 HSK4，各配一首古诗。节气那天，也会出现在「今日」里。</span></p>`;
+  if(curT){ const t=jqTermNow()||{term:curT,md:cur[0].date.slice(5)};
     h+=`<div class="col-now"><p class="k"><span>现在的节气</span></p><p class="tn zc" lang="zh-CN">${esc(zs(curT))}<small data-noi18n>${esc(nm(t))} · ${esc(mdFmt(t.md))}</small></p><div class="col-t" style="border:0;padding:6px 0 0;grid-template-columns:minmax(0,1fr)"><div class="rs">${cur.map(x=>`<button data-mg="jq|${x.i}"><span class="lv">${esc(x.level)}</span><span class="t zc" lang="zh-CN">${esc(zs(x.title.replace(/^[^：]*：/,"")))}</span>${mgRead("jq",x.i)?'<span class="ok">✓</span>':""}</button>`).join("")}</div></div></div>`; }
   for(const se of SEASONS){ const ts=terms.filter(t=>t.season===se); if(ts.length) h+=`<div class="col-sea zc" lang="zh-CN">${esc(zs(se))}</div>`+ts.map(row).join(""); }
   return h+mgLibList(null);
@@ -4764,7 +4766,7 @@ UI_DICT.push(
 ["书架", "Bookshelf", "Bücherregal", "Estante", "書架"],
 ["现在的节气", "Current solar term", "Aktuelle Sonnenperiode", "Termo solar atual", "現在的節氣"],
 ["开放", "opens", "öffnet", "abre", "開放"],
-["每个节气两篇：HSK2 和 HSK4，各配一首古诗。节气那天开放。", "Two texts per term, HSK2 and HSK4, each with a classical poem. Each opens on its term's day.", "Zwei Texte pro Sonnenperiode, HSK2 und HSK4, jeweils mit einem klassischen Gedicht. Sie öffnen am Tag der Sonnenperiode.", "Dois textos por termo, HSK2 e HSK4, cada um com um poema clássico. Abrem no dia do termo.", "每個節氣兩篇：HSK2 和 HSK4，各配一首古詩。節氣那天開放。"],
+["每个节气两篇：HSK2 和 HSK4，各配一首古诗。节气那天，也会出现在「今日」里。", "Two texts per term, HSK2 and HSK4, each with a classical poem. On the term's day they also appear under Today.", "Zwei Texte pro Sonnenperiode, HSK2 und HSK4, jeweils mit einem klassischen Gedicht. Am Tag der Sonnenperiode erscheinen sie auch unter „Heute“.", "Dois textos por termo, HSK2 e HSK4, cada um com um poema clássico. No dia do termo aparecem também em Hoje.", "每個節氣兩篇：HSK2 和 HSK4，各配一首古詩。節氣那天，也會出現在「今日」裡。"],
 ["春", "Spring", "Frühling", "Primavera", "春"],
 ["夏", "Summer", "Sommer", "Verão", "夏"],
 ["秋", "Autumn", "Herbst", "Outono", "秋"],
