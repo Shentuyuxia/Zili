@@ -1,0 +1,491 @@
+{
+ "title": "二十四节气",
+ "note": "Fixed texts for the 24 solar terms. Each item opens on its date (YYYY-MM-DD, first year) and stays in the day's reading list until the next term; afterwards it is in the 二十四节气 shelf. From the second year on, the month and day are used. Two levels per term: HSK2 (children and beginners) and HSK4 (adults). Written by hand, never by the daily tasks.",
+ "items": [
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "霜降",
+   "date": "2026-10-23",
+   "title": "霜降：红红的叶子",
+   "title_en": "Frost's Descent: red leaves",
+   "title_de": "Reifbeginn: rote Blätter",
+   "dek": "秋天的最后一个节气。",
+   "paragraphs": [
+    "十月二十三日前后是霜降。一年有二十四个节气，霜降是秋天的最后一个。过了霜降，冬天就快来了。",
+    "霜降的时候，早上很冷。草上、车上有一层白白的东西，像小小的雪。这就是霜。太阳出来以后，霜就没有了。",
+    "树上的叶子也变了颜色，有的黄，有的红。红红的叶子在太阳下面，比花还好看。",
+    "很多中国人家里这个时候吃柿子。柿子是橙色的，又软又甜。",
+    "在德国，十月底也很冷了。早上出门的时候，看看草上有没有霜。别忘了多穿一件衣服！"
+   ],
+   "paragraphs_en": [
+    "Frost's Descent falls around 23 October. A year has twenty-four solar terms, and Frost's Descent is the last one of autumn. Once it has passed, winter is not far away.",
+    "Around Frost's Descent the mornings are cold. On the grass and on the cars there is a thin white layer that looks like tiny snow. That is frost. When the sun comes out, the frost is gone.",
+    "The leaves on the trees change colour too: some turn yellow, some turn red. In the sunshine, the red leaves are even prettier than flowers.",
+    "At this time of year, many Chinese families eat persimmons. A persimmon is orange, soft and sweet.",
+    "In Germany it is already cold at the end of October as well. When you go out in the morning, look whether there is frost on the grass. And don't forget to put on an extra layer!"
+   ],
+   "paragraphs_de": [
+    "Um den 23. Oktober beginnt die Zeit „Reifbeginn“. Ein Jahr hat vierundzwanzig Sonnenperioden, und diese ist die letzte des Herbstes. Danach ist der Winter nicht mehr weit.",
+    "Um diese Zeit sind die Morgen kalt. Auf dem Gras und auf den Autos liegt eine dünne weiße Schicht, wie ganz feiner Schnee. Das ist Reif. Wenn die Sonne herauskommt, ist der Reif weg.",
+    "Auch die Blätter an den Bäumen bekommen eine andere Farbe: Manche werden gelb, manche rot. In der Sonne sind die roten Blätter sogar schöner als Blumen.",
+    "Viele chinesische Familien essen um diese Zeit Kakis. Eine Kaki ist orange, weich und süß.",
+    "Auch in Deutschland ist es Ende Oktober schon kalt. Schau morgens, wenn du rausgehst, ob Reif auf dem Gras liegt. Und vergiss nicht, dich wärmer anzuziehen!"
+   ],
+   "glossary": [
+    {
+     "w": "霜降",
+     "p": "shuāng jiàng",
+     "en": "Frost's Descent (solar term, around 23 October)",
+     "de": "Reifbeginn (Sonnenperiode, um den 23. Oktober)"
+    },
+    {
+     "w": "节气",
+     "p": "jié qi",
+     "en": "solar term (one of 24 periods of the year)",
+     "de": "Sonnenperiode (eine von 24 im Jahr)"
+    },
+    {
+     "w": "霜",
+     "p": "shuāng",
+     "en": "frost",
+     "de": "der Reif"
+    },
+    {
+     "w": "一层",
+     "p": "yì céng",
+     "en": "a layer (of)",
+     "de": "eine Schicht"
+    },
+    {
+     "w": "叶子",
+     "p": "yè zi",
+     "en": "leaf",
+     "de": "das Blatt"
+    },
+    {
+     "w": "颜色",
+     "p": "yán sè",
+     "en": "colour",
+     "de": "die Farbe"
+    },
+    {
+     "w": "柿子",
+     "p": "shì zi",
+     "en": "persimmon",
+     "de": "die Kaki"
+    },
+    {
+     "w": "橙色",
+     "p": "chéng sè",
+     "en": "orange (colour)",
+     "de": "orange"
+    }
+   ],
+   "grammar": "有的……有的…… means \"some … others …\": 叶子有的黄，有的红 = some leaves are yellow, others are red. Put 有的 in front of each part.",
+   "grammar_de": "有的……有的…… bedeutet „manche … andere …“: 叶子有的黄，有的红 = Manche Blätter sind gelb, andere rot. 有的 steht vor jedem Teil.",
+   "questions": [
+    "霜降是哪个季节的节气？",
+    "霜是什么颜色的？",
+    "秋天的时候，你喜欢做什么？"
+   ],
+   "poem": {
+    "title": "山行",
+    "author": "杜牧",
+    "dynasty": "唐",
+    "lines": [
+     "远上寒山石径斜，",
+     "白云生处有人家。",
+     "停车坐爱枫林晚，",
+     "霜叶红于二月花。"
+    ],
+    "explain_zh": "诗人坐车上山，看见山上有人家。他停下车，因为太喜欢傍晚的枫树林了。经过霜的枫叶，比春天二月的花还要红。",
+    "explain_en": "A traveller rides up a cold mountain on a winding stone path; where the white clouds rise, there are houses. He stops his carriage because he loves the maple woods in the evening light: leaves touched by frost are redder than the flowers of spring.",
+    "explain_de": "Ein Reisender fährt auf einem gewundenen Steinweg einen kalten Berg hinauf; dort, wo weiße Wolken aufsteigen, wohnen Menschen. Er hält an, weil er den Ahornwald im Abendlicht so liebt: Vom Reif berührte Blätter sind röter als die Blumen im Frühling."
+   },
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK4",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "霜降",
+   "date": "2026-10-23",
+   "title": "霜降：霜是从哪里来的？",
+   "title_en": "Frost's Descent: where does frost come from?",
+   "title_de": "Reifbeginn: Woher kommt der Reif?",
+   "dek": "古人以为霜从天上落下，其实它就在我们身边形成。",
+   "paragraphs": [
+    "霜降一般在每年的十月二十三日或二十四日，是秋季的最后一个节气。过了霜降，再过半个月就是立冬，冬天正式开始了。",
+    "“霜降”这个名字很美，但是并不准确。古人早上起来，看到地上、屋顶上一片白，以为霜是夜里从天上降下来的。其实，霜是在地面上形成的：当夜里的气温降到零度以下，空气中的水汽碰到冰冷的草叶、石头或者汽车玻璃，就直接变成了白色的小冰晶。",
+    "古人把每个节气分成三个“候”，每候五天。霜降的三候里，有一句叫“草木黄落”，意思是草和树的叶子变黄，慢慢落下来。不过，也有一些树在这个时候反而最好看，比如枫树和银杏，一个红，一个黄，整座山像一幅画。",
+    "在中国很多地方，霜降前后正是柿子成熟的时候。挂在树上的柿子像一个个小灯笼，又甜又软。一家人坐在一起吃柿子、看红叶，就是秋天最后的享受。",
+    "德国的十月底，也常常在早上看到第一层霜。十月的最后一个星期天，德国还要把时钟调回一个小时，换成冬令时。从那以后，天黑得越来越早。落叶、冷空气和早早到来的夜晚，都在提醒我们：秋天快要结束了。"
+   ],
+   "paragraphs_en": [
+    "Frost's Descent usually falls on 23 or 24 October each year and is the last solar term of autumn. Half a month later comes the Start of Winter, and winter officially begins.",
+    "The name \"Frost's Descent\" is beautiful, but not quite accurate. When people in ancient times got up in the morning and saw the ground and roofs covered in white, they thought the frost had come down from the sky during the night. In fact, frost forms on the ground: when the temperature at night drops below zero, the water vapour in the air touches ice-cold blades of grass, stones or car windows and turns directly into small white ice crystals.",
+    "The ancients divided each solar term into three \"pentads\" of five days. One of the three pentads of Frost's Descent is called \"grass and trees turn yellow and fall\": the leaves of grasses and trees turn yellow and slowly drop. Yet some trees look their best precisely at this time, such as maples and ginkgos — one red, one yellow — and a whole mountain looks like a painting.",
+    "In many parts of China, the days around Frost's Descent are exactly when persimmons ripen. Hanging on the trees like little lanterns, they are sweet and soft. Sitting together as a family, eating persimmons and looking at the red leaves is the last pleasure of autumn.",
+    "In Germany, too, the first frost often appears on late-October mornings. On the last Sunday of October, Germany also turns the clocks back one hour to winter time. From then on it gets dark earlier and earlier. Falling leaves, cold air and evenings that arrive early all remind us that autumn is coming to an end."
+   ],
+   "paragraphs_de": [
+    "Der Reifbeginn fällt meist auf den 23. oder 24. Oktober und ist die letzte Sonnenperiode des Herbstes. Einen halben Monat später kommt der Winteranfang, und der Winter beginnt offiziell.",
+    "Der Name „Reifbeginn“ (wörtlich: „der Reif fällt herab“) ist schön, aber nicht ganz genau. Wenn die Menschen früher morgens aufstanden und Boden und Dächer weiß sahen, glaubten sie, der Reif sei in der Nacht vom Himmel gefallen. Tatsächlich entsteht Reif am Boden: Sinkt die Temperatur nachts unter null, trifft der Wasserdampf in der Luft auf eiskalte Grashalme, Steine oder Autoscheiben und wird direkt zu kleinen weißen Eiskristallen.",
+    "Früher teilte man jede Sonnenperiode in drei „Hou“ von je fünf Tagen. Eines davon heißt beim Reifbeginn „Gras und Bäume werden gelb und fallen“: Die Blätter von Gräsern und Bäumen werden gelb und fallen langsam ab. Manche Bäume sind aber gerade jetzt am schönsten, etwa Ahorn und Ginkgo – der eine rot, der andere gelb –, und ein ganzer Berg sieht aus wie ein Gemälde.",
+    "In vielen Gegenden Chinas werden um den Reifbeginn die Kakis reif. Sie hängen wie kleine Laternen an den Bäumen, süß und weich. Als Familie zusammenzusitzen, Kakis zu essen und die roten Blätter anzuschauen – das ist das letzte Vergnügen des Herbstes.",
+    "Auch in Deutschland sieht man Ende Oktober morgens oft den ersten Reif. Am letzten Sonntag im Oktober werden in Deutschland außerdem die Uhren eine Stunde zurückgestellt, auf Winterzeit. Danach wird es immer früher dunkel. Fallendes Laub, kalte Luft und früh hereinbrechende Abende – alles erinnert uns daran, dass der Herbst zu Ende geht."
+   ],
+   "glossary": [
+    {
+     "w": "准确",
+     "p": "zhǔn què",
+     "en": "accurate, exact",
+     "de": "genau, zutreffend"
+    },
+    {
+     "w": "古人",
+     "p": "gǔ rén",
+     "en": "people in ancient times",
+     "de": "die Menschen im Altertum"
+    },
+    {
+     "w": "以为",
+     "p": "yǐ wéi",
+     "en": "to (wrongly) think",
+     "de": "(fälschlich) glauben"
+    },
+    {
+     "w": "形成",
+     "p": "xíng chéng",
+     "en": "to form, take shape",
+     "de": "sich bilden, entstehen"
+    },
+    {
+     "w": "水汽",
+     "p": "shuǐ qì",
+     "en": "water vapour",
+     "de": "der Wasserdampf"
+    },
+    {
+     "w": "冰晶",
+     "p": "bīng jīng",
+     "en": "ice crystal",
+     "de": "der Eiskristall"
+    },
+    {
+     "w": "枫树",
+     "p": "fēng shù",
+     "en": "maple tree",
+     "de": "der Ahorn"
+    },
+    {
+     "w": "银杏",
+     "p": "yín xìng",
+     "en": "ginkgo",
+     "de": "der Ginkgo"
+    },
+    {
+     "w": "成熟",
+     "p": "chéng shú",
+     "en": "ripe; to ripen",
+     "de": "reif; reifen"
+    },
+    {
+     "w": "灯笼",
+     "p": "dēng long",
+     "en": "lantern",
+     "de": "die Laterne"
+    },
+    {
+     "w": "冬令时",
+     "p": "dōng lìng shí",
+     "en": "winter time (clocks)",
+     "de": "die Winterzeit"
+    },
+    {
+     "w": "提醒",
+     "p": "tí xǐng",
+     "en": "to remind",
+     "de": "erinnern (an)"
+    }
+   ],
+   "grammar": "以为 means to think something that turns out to be wrong: 古人以为霜是从天上降下来的 = people thought frost fell from the sky (but it doesn't). For a neutral opinion use 认为: 我认为秋天最美.",
+   "grammar_de": "以为 heißt: etwas glauben, das sich als falsch herausstellt: 古人以为霜是从天上降下来的 = Man glaubte, der Reif falle vom Himmel (stimmt aber nicht). Für eine neutrale Meinung nimmt man 认为: 我认为秋天最美.",
+   "questions": [
+    "霜是怎么形成的？",
+    "为什么说“霜降”这个名字并不准确？",
+    "在你住的地方，秋天最后的样子是什么？"
+   ],
+   "poem": {
+    "title": "枫桥夜泊",
+    "author": "张继",
+    "dynasty": "唐",
+    "lines": [
+     "月落乌啼霜满天，",
+     "江枫渔火对愁眠。",
+     "姑苏城外寒山寺，",
+     "夜半钟声到客船。"
+    ],
+    "explain_zh": "一个秋天的夜里，诗人坐船停在苏州城外的枫桥边。月亮落下，乌鸦在叫，他觉得满天都是霜。江边的枫树和渔船上的灯火，陪着一夜没有睡觉的他。半夜，寒山寺的钟声传到了船上。诗人说“霜满天”，和古人一样，以为霜是从天上来的。",
+    "explain_en": "On an autumn night the poet's boat is moored by the Maple Bridge outside Suzhou. The moon sets, crows cry, and frost seems to fill the sky; maples on the bank and the lights of fishing boats keep him company as he lies awake. At midnight the bell of Hanshan Temple reaches his boat. \"Frost filling the sky\" shows the same old belief that frost comes from above.",
+    "explain_de": "In einer Herbstnacht liegt das Boot des Dichters an der Ahornbrücke vor Suzhou. Der Mond geht unter, Krähen rufen, der ganze Himmel scheint voller Reif; Ahornbäume am Ufer und die Lichter der Fischerboote leisten ihm Gesellschaft, während er wach liegt. Um Mitternacht dringt die Glocke des Hanshan-Tempels bis zu seinem Boot. „Der Himmel voller Reif“ zeigt den alten Glauben, dass Reif von oben kommt."
+   },
+   "sources": [
+    {
+     "title": "Hong Kong Observatory: 2026 calendar with the 24 solar terms",
+     "url": "https://www.hko.gov.hk/en/gts/time/calendar/pdf/files/2026e.pdf",
+     "license": "official"
+    }
+   ]
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "立冬",
+   "date": "2026-11-07",
+   "title": "立冬：一起包饺子",
+   "title_en": "Start of Winter: making dumplings together",
+   "title_de": "Winteranfang: Zusammen Jiaozi machen",
+   "dek": "冬天的第一个节气。",
+   "paragraphs": [
+    "十一月七日前后是立冬。“立”是开始的意思。立冬，就是冬天开始了。",
+    "立冬以后，天气一天比一天冷。晚上，小河里的水可能会结冰。小鸟也不常唱歌了。",
+    "在中国北方，立冬这天，很多人家吃饺子。妈妈和孩子一起包饺子，有的饺子里放肉，有的放菜。",
+    "北方有一句好玩的话：“立冬不端饺子碗，冻掉耳朵没人管。”大家听了都笑了，然后高高兴兴地吃饺子。",
+    "在德国，十一月的白天很短，下午五点左右天就黑了。外面很冷，家里很暖和。今天，你也可以和家人一起包饺子！"
+   ],
+   "paragraphs_en": [
+    "The Start of Winter falls around 7 November. 立 means \"to begin\". 立冬 means winter is beginning.",
+    "After the Start of Winter it gets colder day by day. At night, the water in little rivers may freeze. The birds don't sing as often any more.",
+    "In northern China, many families eat dumplings on this day. Mums and children make dumplings together; some get meat inside, some get vegetables.",
+    "In the north there is a funny saying: \"If you don't hold a bowl of dumplings at the Start of Winter, your ears will freeze off and no one will care.\" Everyone laughs when they hear it, and then they happily eat their dumplings.",
+    "In Germany the days in November are short; it gets dark around five in the afternoon. It is cold outside and warm at home. Today you could make dumplings with your family too!"
+   ],
+   "paragraphs_de": [
+    "Um den 7. November beginnt der Winteranfang. 立 heißt „beginnen“. 立冬 bedeutet: Der Winter fängt an.",
+    "Nach dem Winteranfang wird es von Tag zu Tag kälter. Nachts kann das Wasser in kleinen Flüssen gefrieren. Die Vögel singen nicht mehr so oft.",
+    "In Nordchina essen viele Familien an diesem Tag Jiaozi (Teigtaschen). Mama und die Kinder machen sie zusammen; in manche kommt Fleisch, in andere Gemüse.",
+    "Im Norden gibt es einen lustigen Spruch: „Wer zum Winteranfang keine Schale Jiaozi in der Hand hält, dem frieren die Ohren ab, und keiner kümmert sich darum.“ Alle lachen, wenn sie das hören, und dann essen sie fröhlich ihre Jiaozi.",
+    "In Deutschland sind die Tage im November kurz; gegen fünf Uhr nachmittags wird es schon dunkel. Draußen ist es kalt, zu Hause ist es warm. Heute könntest du auch mit deiner Familie Jiaozi machen!"
+   ],
+   "glossary": [
+    {
+     "w": "立冬",
+     "p": "lì dōng",
+     "en": "Start of Winter (solar term, around 7 November)",
+     "de": "Winteranfang (Sonnenperiode, um den 7. November)"
+    },
+    {
+     "w": "开始",
+     "p": "kāi shǐ",
+     "en": "to begin",
+     "de": "beginnen, anfangen"
+    },
+    {
+     "w": "结冰",
+     "p": "jié bīng",
+     "en": "to freeze (into ice)",
+     "de": "gefrieren, zufrieren"
+    },
+    {
+     "w": "北方",
+     "p": "běi fāng",
+     "en": "the north",
+     "de": "der Norden"
+    },
+    {
+     "w": "包饺子",
+     "p": "bāo jiǎo zi",
+     "en": "to make (wrap) dumplings",
+     "de": "Jiaozi machen (füllen und falten)"
+    },
+    {
+     "w": "端",
+     "p": "duān",
+     "en": "to hold (a bowl) level in both hands",
+     "de": "(eine Schale) mit beiden Händen tragen"
+    },
+    {
+     "w": "耳朵",
+     "p": "ěr duo",
+     "en": "ear",
+     "de": "das Ohr"
+    },
+    {
+     "w": "暖和",
+     "p": "nuǎn huo",
+     "en": "warm, cosy",
+     "de": "warm, gemütlich warm"
+    }
+   ],
+   "grammar": "一天比一天 + adjective means \"more … day by day\": 天气一天比一天冷 = the weather gets colder day by day. You can also say 一年比一年 (year by year).",
+   "grammar_de": "一天比一天 + Adjektiv bedeutet „von Tag zu Tag …er“: 天气一天比一天冷 = Das Wetter wird von Tag zu Tag kälter. Ebenso: 一年比一年 (von Jahr zu Jahr).",
+   "questions": [
+    "“立冬”的“立”是什么意思？",
+    "北方人立冬这天吃什么？",
+    "你会包饺子吗？你喜欢吃什么饺子？"
+   ],
+   "poem": {
+    "title": "江雪",
+    "author": "柳宗元",
+    "dynasty": "唐",
+    "lines": [
+     "千山鸟飞绝，",
+     "万径人踪灭。",
+     "孤舟蓑笠翁，",
+     "独钓寒江雪。"
+    ],
+    "explain_zh": "下大雪了。山上没有一只鸟，路上没有一个人。江上只有一条小船，船上坐着一个穿蓑衣、戴斗笠的老人，一个人在冷冷的江上钓鱼。",
+    "explain_en": "Heavy snow has fallen. Over a thousand mountains not a single bird flies; on ten thousand paths there is no trace of anyone. Only one small boat is on the river, where an old man in a straw rain cape and bamboo hat fishes alone in the cold, snowy river.",
+    "explain_de": "Es hat viel geschneit. Über tausend Bergen fliegt kein Vogel mehr, auf zehntausend Wegen ist keine Spur von Menschen. Nur ein kleines Boot liegt auf dem Fluss: Ein alter Mann mit Strohumhang und Bambushut angelt ganz allein im kalten, verschneiten Fluss."
+   },
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK4",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "立冬",
+   "date": "2026-11-07",
+   "title": "立冬：为冬天准备的温暖",
+   "title_en": "Start of Winter: getting warmth ready",
+   "title_de": "Winteranfang: Wärme für den Winter",
+   "dek": "收好粮食，包好饺子，开始酿酒——冬天来了。",
+   "paragraphs": [
+    "立冬一般在每年的十一月七日或八日，是冬季的第一个节气。“立”是“开始”的意思，所以立冬就是冬天开始的日子。",
+    "古人观察到，立冬以后“水始冰，地始冻”：水面开始结冰，土地也开始冻硬了。这时候，农民已经把一年的粮食收进了仓库，忙碌的农活告一段落，人们开始为过冬做准备。",
+    "北方人立冬喜欢吃饺子。有一种说法是，“饺子”和“交子”读音相近，意思是秋天和冬天在这一天交替。还有一句有名的俗话：“立冬不端饺子碗，冻掉耳朵没人管。”",
+    "南方的一些地方则有别的习惯。比如在浙江绍兴，酿黄酒的人从立冬开始“冬酿”。立冬以后，用来酿酒的鉴湖水更清、更稳定。从立冬到立春这九十天，是一年里酿酒最关键的时候。",
+    "在德国，十一月常常是灰色的：天黑得早，雨也多。不过，很多人喜欢在这样的晚上点一支蜡烛，泡一杯热茶，和朋友慢慢聊天。德语里有一个专门的词来形容这种温暖、舒服的感觉。也许这正是冬天的意义：外面越冷，人和人之间就越温暖。"
+   ],
+   "paragraphs_en": [
+    "The Start of Winter usually falls on 7 or 8 November each year and is the first solar term of winter. 立 means \"to begin\", so 立冬 is the day winter begins.",
+    "The ancients observed that after the Start of Winter \"water begins to ice over, the earth begins to freeze\": the surface of the water starts to freeze, and the ground grows hard. By now farmers have brought the year's grain into storage, the busy farm work comes to a pause, and people begin to prepare for the winter.",
+    "In the north, people like to eat dumplings at the Start of Winter. One explanation is that 饺子 (dumplings) sounds like 交子, \"the moment of handing over\": on this day autumn hands over to winter. There is also a famous saying: \"If you don't hold a bowl of dumplings at the Start of Winter, your ears will freeze off and no one will care.\"",
+    "Some places in the south have other customs. In Shaoxing in Zhejiang, for example, the makers of yellow rice wine begin their \"winter brewing\" at the Start of Winter. After the Start of Winter, the water of Jianhu Lake that they brew with is clearer and more stable. The ninety days from the Start of Winter to the Start of Spring are the most important brewing time of the year.",
+    "In Germany, November is often grey: it gets dark early and it rains a lot. Yet many people like to light a candle on evenings like these, make a cup of hot tea and talk with friends at leisure. German has a special word for this warm, cosy feeling: Gemütlichkeit. Perhaps this is what winter is about: the colder it is outside, the warmer people are to each other."
+   ],
+   "paragraphs_de": [
+    "Der Winteranfang fällt meist auf den 7. oder 8. November und ist die erste Sonnenperiode des Winters. 立 heißt „beginnen“, also ist 立冬 der Tag, an dem der Winter beginnt.",
+    "Schon in alter Zeit beobachtete man, dass nach dem Winteranfang „das Wasser zu gefrieren und die Erde hart zu werden beginnt“. Jetzt haben die Bauern das Getreide des Jahres in die Speicher gebracht, die viele Feldarbeit ruht, und man bereitet sich auf den Winter vor.",
+    "Im Norden isst man zum Winteranfang gern Jiaozi. Einer Erklärung nach klingt 饺子 (Jiaozi) ähnlich wie 交子, „der Moment der Übergabe“: An diesem Tag übergibt der Herbst an den Winter. Bekannt ist auch der Spruch: „Wer zum Winteranfang keine Schale Jiaozi in der Hand hält, dem frieren die Ohren ab, und keiner kümmert sich darum.“",
+    "Manche Orte im Süden haben andere Bräuche. In Shaoxing in der Provinz Zhejiang zum Beispiel beginnen die Hersteller von Gelbwein zum Winteranfang mit dem „Winterbrauen“. Nach dem Winteranfang ist das Wasser des Jianhu-Sees, mit dem sie brauen, klarer und gleichmäßiger. Die neunzig Tage vom Winteranfang bis zum Frühlingsanfang sind die wichtigste Brauzeit des Jahres.",
+    "In Deutschland ist der November oft grau: Es wird früh dunkel und regnet viel. Trotzdem zünden viele an solchen Abenden gern eine Kerze an, kochen sich einen heißen Tee und unterhalten sich in Ruhe mit Freunden. Für dieses warme, behagliche Gefühl hat das Deutsche ein eigenes Wort: Gemütlichkeit. Vielleicht ist genau das der Sinn des Winters: Je kälter es draußen ist, desto wärmer gehen die Menschen miteinander um."
+   ],
+   "glossary": [
+    {
+     "w": "观察",
+     "p": "guān chá",
+     "en": "to observe",
+     "de": "beobachten"
+    },
+    {
+     "w": "粮食",
+     "p": "liáng shi",
+     "en": "grain, food crops",
+     "de": "das Getreide"
+    },
+    {
+     "w": "仓库",
+     "p": "cāng kù",
+     "en": "storehouse, granary",
+     "de": "der Speicher, das Lager"
+    },
+    {
+     "w": "告一段落",
+     "p": "gào yí duàn luò",
+     "en": "to come to a pause, reach the end of a stage",
+     "de": "einen Abschnitt beenden, (vorerst) ruhen"
+    },
+    {
+     "w": "读音",
+     "p": "dú yīn",
+     "en": "pronunciation",
+     "de": "die Aussprache"
+    },
+    {
+     "w": "交替",
+     "p": "jiāo tì",
+     "en": "to take turns; transition",
+     "de": "sich abwechseln; der Übergang"
+    },
+    {
+     "w": "俗话",
+     "p": "sú huà",
+     "en": "common saying",
+     "de": "die Redensart, das Sprichwort"
+    },
+    {
+     "w": "酿",
+     "p": "niàng",
+     "en": "to brew",
+     "de": "brauen, keltern"
+    },
+    {
+     "w": "黄酒",
+     "p": "huáng jiǔ",
+     "en": "yellow rice wine",
+     "de": "der Gelbwein (Reiswein)"
+    },
+    {
+     "w": "蜡烛",
+     "p": "là zhú",
+     "en": "candle",
+     "de": "die Kerze"
+    },
+    {
+     "w": "形容",
+     "p": "xíng róng",
+     "en": "to describe",
+     "de": "beschreiben"
+    },
+    {
+     "w": "关键",
+     "p": "guān jiàn",
+     "en": "key, crucial",
+     "de": "entscheidend"
+    }
+   ],
+   "grammar": "则 (written style) marks a contrast with what came before, like \"while; on the other hand\": 北方人吃饺子，南方的一些地方则有别的习惯. It comes after the subject, before the verb.",
+   "grammar_de": "则 (Schriftsprache) markiert einen Gegensatz zum Vorherigen, etwa „dagegen, hingegen“: 北方人吃饺子，南方的一些地方则有别的习惯. Es steht nach dem Subjekt, vor dem Verb.",
+   "questions": [
+    "“水始冰，地始冻”是什么意思？",
+    "关于立冬吃饺子，文章里说了哪两种说法？",
+    "冬天的晚上，你喜欢怎么过？"
+   ],
+   "poem": {
+    "title": "问刘十九",
+    "author": "白居易",
+    "dynasty": "唐",
+    "lines": [
+     "绿蚁新醅酒，",
+     "红泥小火炉。",
+     "晚来天欲雪，",
+     "能饮一杯无？"
+    ],
+    "explain_zh": "新酿的酒上浮着绿色的小泡沫，红泥做的小火炉烧得正旺。天晚了，看样子快要下雪了。诗人问朋友刘十九：你能来和我喝一杯吗？二十个字，就是一个冬天晚上最温暖的邀请。",
+    "explain_en": "Freshly brewed wine with tiny green bubbles on top, a small red-clay stove burning bright. Evening falls and it looks like snow. The poet asks his friend Liu Shijiu: can you come over for a cup? Twenty characters — the warmest invitation of a winter evening.",
+    "explain_de": "Frisch gebrauter Wein mit kleinen grünen Bläschen, ein kleiner Ofen aus rotem Ton, der hell brennt. Es wird Abend, und es sieht nach Schnee aus. Der Dichter fragt seinen Freund Liu Shijiu: Kommst du auf ein Glas vorbei? Zwanzig Schriftzeichen – die wärmste Einladung eines Winterabends."
+   },
+   "sources": [
+    {
+     "title": "Hong Kong Observatory: 2026 calendar with the 24 solar terms",
+     "url": "https://www.hko.gov.hk/en/gts/time/calendar/pdf/files/2026e.pdf",
+     "license": "official"
+    },
+    {
+     "title": "新华网：立冬开酿，绍兴黄酒冬酿（2025-11-07）",
+     "url": "https://www.news.cn/culture/20251107/0deb7f5c8ba54f28a16bda14bb1c1d33/c.html",
+     "license": "link only"
+    }
+   ]
+  }
+ ]
+}

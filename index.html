@@ -364,6 +364,14 @@ ol.steps li{margin:3px 0}
 .mg-gl dt{font-family:var(--f-word);font-weight:600}
 .mg-gl dd{margin:0;color:var(--muted)}
 .mg-gram{background:var(--sunk);border-radius:8px;padding:10px 12px}
+.mg-poem{background:var(--sunk);border-radius:10px;padding:14px 16px}
+.mg-poem .pt{font-family:var(--f-word);font-size:18px;margin:0 0 2px}
+.mg-poem .pa{color:var(--muted);font-size:13px;margin:0 0 10px}
+.mg-poem .pl{font-family:var(--f-word);font-size:19px;line-height:2.1;margin:0 0 10px}
+.mg-poem .pl p{margin:0}
+.mg-poem .px{font-size:14.5px;margin:6px 0 0}
+.mg-poem .px.zc{font-size:16px;line-height:2.4;margin:4px 0 10px}
+.mg-poem .px.tr{color:var(--muted)}
 .mg-q{margin:0;padding-left:1.3em;font-family:var(--f-word);font-size:16.5px;display:grid;gap:6px}
 .mg-src ul{margin:0;padding-left:1.1em}
 .mg-src a{color:var(--acc);word-break:break-word}
@@ -2578,7 +2586,7 @@ const MG={tr:null,mine:null,idx:null,days:{},di:0,key:null,zh:false,err:"",loadi
 const MGK="zili-read-v1";
 let MGS=(()=>{ try{ return JSON.parse(localStorage.getItem(MGK))||{}; }catch(e){ return {}; } })(); MGS.read=MGS.read||{};
 function mgSave(){ try{ localStorage.setItem(MGK,JSON.stringify(MGS)); }catch(e){} }
-const MG_KIND={picks:"推荐",news:"新闻",brief:"短讯",short:"短评",essay:"随笔",feature:"专题",story:"故事",dialogue:"对话"};
+const MG_KIND={jieqi:"节气",picks:"推荐",news:"新闻",brief:"短讯",short:"短评",essay:"随笔",feature:"专题",story:"故事",dialogue:"对话"};
 const MG_ORD=it=>it.hour?10:({dialogue:1,short:2,brief:3,picks:4}[it.kind]||0);
 const MG_MINOR=["brief","short","dialogue"];
 const MG_ETA={zh:"07:00"};
@@ -2590,6 +2598,7 @@ function mgLoad(){
     try{ MG.idx=await mgGet("reading/index.json"); if(MG.idx&&Array.isArray(MG.idx.days)) MG.idx.days=MG.idx.days.filter(d=>!/^\d{4}-\d\d-\d\d$/.test(d.date)||d.date<=today()); MG.err=""; }catch(e){ MG.err="文章目录没有载入（"+e.message+"）。检查网络后再试。"; }
     try{ MG.week=await mgGet("reading/weekly.json"); }catch(e){ MG.week=null; }
     try{ MG.lib=await mgGet("reading/lib.json"); MG.days.lib=MG.lib; }catch(e){ MG.lib=null; }
+    try{ MG.jq=await mgGet("reading/jieqi.json"); MG.days.jq=MG.jq; }catch(e){ MG.jq=null; }
     MG.loading=false;
   })();
   return MG.loading;
@@ -2599,10 +2608,26 @@ const LV_ORDER=["HSK1","HSK2","HSK3","HSK4","HSK5","HSK6"];
 function mgLevels(dayIdx,l){ const day=MG.idx&&MG.idx.days[dayIdx]; if(!day) return [];
   return [...new Set(day.items.filter(x=>x.lang===l&&x.kind!=="picks"&&x.level).map(x=>x.level))].sort((a,b)=>LV_ORDER.indexOf(a)-LV_ORDER.indexOf(b)); }
 function mgLvSel(dayIdx,l){ const lv=mgLevels(dayIdx,l), want=(S.settings.rdLv||{})[l]; return lv.length>1&&lv.includes(want)?want:null; }
+/* 二十四节气 (reading/jieqi.json): fixed texts. An item opens on its date and stays in the day's list until the next term;
+   from the second year on only month-day counts. On the term's own day it comes first in the list. */
+function jqAll(l){ const t=today(); return MG.jq?(MG.jq.items||[]).map((x,i)=>({...x,i})).filter(x=>x.lang===l&&x.date&&x.date<=t):[]; }
+function jqCur(l){ // items of the solar term we are in now
+  const xs=jqAll(l); if(!xs.length) return [];
+  const md=today().slice(5), terms=[...new Set(xs.map(x=>x.date.slice(5)))].sort();
+  const cur=terms.filter(m=>m<=md).pop()||terms[terms.length-1];
+  return xs.filter(x=>x.date.slice(5)===cur);
+}
+function jqEntries(l,sel){
+  let xs=jqCur(l); if(!xs.length) return [];
+  if(sel){ const want=["HSK1","HSK2","HSK3"].includes(sel)?"HSK2":"HSK4"; const m=xs.filter(x=>x.level===sel||x.level===want); xs=m.length?m:xs; }
+  return xs.map((x,n)=>({...x,n:100+n,date:"jq",jqDay:x.date.slice(5)===today().slice(5)}));
+}
 function mgEntries(dayIdx,l){
   const day=MG.idx&&MG.idx.days[dayIdx]; if(!day) return [];
   const sel=mgLvSel(dayIdx,l);
-  return day.items.filter(x=>x.lang===l&&(!sel||x.kind==="picks"||x.level===sel)).map((x,n)=>({...x,n,date:day.date})).sort((a,b)=>(MG_ORD(a)-MG_ORD(b))||String(a.hour||"").localeCompare(String(b.hour||""))||a.n-b.n);
+  const es=day.items.filter(x=>x.lang===l&&(!sel||x.kind==="picks"||x.level===sel)).map((x,n)=>({...x,n,date:day.date})).sort((a,b)=>(MG_ORD(a)-MG_ORD(b))||String(a.hour||"").localeCompare(String(b.hour||""))||a.n-b.n);
+  if(dayIdx!==0) return es;
+  const jq=jqEntries(l,sel); return jq.length&&jq[0].jqDay?[...jq,...es]:[...es,...jq];
 }
 function mgPick(){ // returns {date,i} of the article to show
   const l=lang(), es=mgEntries(MG.di,l);
@@ -2624,7 +2649,7 @@ function mgWrap(text,l,own){
   return mgSents(text).map(sen=>'<span class="s">'+sen.split(WRE).map((t,k)=>k%2?`<span class="mg-w${own.has(t.toLowerCase())?" saved":""}">${esc(t)}</span>`:esc(t)).join("")+'</span>').join(" ");
 }
 const OUTLETS={"taz.de":"taz","tagesspiegel.de":"Tagesspiegel","mediendienst-integration.de":"Mediendienst Integration","missy-magazine.de":"Missy Magazine","deutschlandfunk.de":"Deutschlandfunk","spektrum.de":"Spektrum","netzpolitik.org":"Netzpolitik","deutsch-perfekt.com":"Deutsch Perfekt","hannover.de":"Stadt Hannover","jacobin.com":"Jacobin","theintercept.com":"The Intercept","motherjones.com":"Mother Jones","dissentmagazine.org":"Dissent","newint.org":"New Internationalist","propublica.org":"ProPublica","themarshallproject.org":"The Marshall Project","restofworld.org":"Rest of World","19thnews.org":"The 19th","aeon.co":"Aeon","theguardian.com":"The Guardian","monde-diplomatique.fr":"Le Monde diplomatique","politis.fr":"Politis","humanite.fr":"L'Humanité","alternatives-economiques.fr":"Alternatives Économiques","lvsl.fr":"Le Vent Se Lève","revue-ballast.fr":"Ballast","regards.fr":"Regards","aoc.media":"AOC","liberation.fr":"Libération","mediapart.fr":"Mediapart","socialter.fr":"Socialter","frustrationmagazine.fr":"Frustration","orientxxi.info":"Orient XXI","afriquexxi.info":"Afrique XXI","rfi.fr":"RFI","radiofrance.fr":"Radio France","legrandcontinent.eu":"Le Grand Continent","theconversation.com":"The Conversation","philomag.com":"Philosophie Magazine","courrierinternational.com":"Courrier international","theatlantic.com":"The Atlantic"};
-function mgOutlet(it){ if(it.series&&it.series.name) return ""; const u=it.sources&&it.sources[0]&&it.sources[0].url; if(!u) return ""; try{ const h=new URL(u).hostname.replace(/^www\./,""); for(const k in OUTLETS) if(h===k||h.endsWith("."+k)) return OUTLETS[k]; return h.replace(/\.(de|com|org|net|co|fr|info|media|eu)$/,""); }catch(e){ return ""; } }
+function mgOutlet(it){ if((it.series&&it.series.name)||it.term) return ""; const u=it.sources&&it.sources[0]&&it.sources[0].url; if(!u) return ""; try{ const h=new URL(u).hostname.replace(/^www\./,""); for(const k in OUTLETS) if(h===k||h.endsWith("."+k)) return OUTLETS[k]; return h.replace(/\.(de|com|org|net|co|fr|info|media|eu)$/,""); }catch(e){ return ""; } }
 function mgMinutes(it){ if(it.lang==="zh"){ const n=(it.paragraphs||[]).join("").replace(/[^\u3400-\u9fff]/g,"").length; const r={HSK1:90,HSK2:110,HSK3:140,HSK4:170,HSK5:200,HSK6:230}[it.level]||150; return Math.max(1,Math.round(n/r)); } const w=(it.paragraphs||[]).join(" ").split(/\s+/).filter(Boolean).length; const rate=["A1","A2"].includes(it.level)?110:["B1","B2"].includes(it.level)?160:200; return Math.max(1,Math.round(w/rate)); }
 let MGZH=(()=>{ try{ return localStorage.getItem("zl-glzh")==="1"; }catch(e){ return false; } })();
 function mgFmt(d){ const [y,m,dd]=d.split("-").map(Number); return new Date(y,m-1,dd).toLocaleDateString(uiLocale(),{weekday:"long",month:"long",day:"numeric"}); }
@@ -2643,7 +2668,7 @@ async function mgRender(){
   pick=mgPick(); es=mgEntries(MG.di,l);
   h=!days.length?"":`<div class="mg-head"><button class="ib" id="mg-prev" aria-label="前一天" ${MG.di>=days.length-1?"disabled":""}>‹</button><span class="d">${days[MG.di]?mgFmt(days[MG.di].date):""}</span><button class="ib" id="mg-next" aria-label="后一天" ${MG.di<=0?"disabled":""}>›</button><span class="spacer"></span><button class="ib" id="mg-reload" aria-label="刷新" title="刷新">↻</button></div>`;
   { const lvs=mgLevels(MG.di,l); if(lvs.length>1){ const sel=mgLvSel(MG.di,l); h+=`<div class="mg-lvs" role="tablist" aria-label="Level"><button type="button" data-mglv="" aria-pressed="${!sel}">${esc(trOne("全部")||"全部")}</button>${lvs.map(v=>`<button type="button" data-mglv="${v}" aria-pressed="${sel===v}">${v}</button>`).join("")}</div>`; } }
-  if(es.length) h+=`<nav class="mg-toc">${es.map(e=>`<button data-mg="${e.date}|${e.i}" aria-current="${!!pick&&!pick.older&&pick.date===e.date&&pick.i===e.i}"><span class="k">${esc(e.hour||MG_KIND[e.kind]||e.kind||"")}</span><span class="t zc" lang="zh-CN">${esc(zs(e.title))}</span><span class="m">${mgRead(e.date,e.i)?"✓":""}</span></button>`).join("")}<button class="mg-addchip" data-mineopen="1" type="button">＋ 我的文章</button></nav>`;
+  if(es.length) h+=`<nav class="mg-toc">${es.map(e=>`<button data-mg="${e.date}|${e.i}" aria-current="${!!pick&&!pick.older&&pick.date===e.date&&pick.i===e.i}"><span class="k">${esc(e.term||e.hour||MG_KIND[e.kind]||e.kind||"")}</span><span class="t zc" lang="zh-CN">${esc(zs(e.title))}</span><span class="m">${mgRead(e.date,e.i)?"✓":""}</span></button>`).join("")}<button class="mg-addchip" data-mineopen="1" type="button">＋ 我的文章</button></nav>`;
   if(!pick){ main.innerHTML=h+`<div class="empty"><b>还没有${LANG[l].zh}文章</b>每天 ${MG_ETA[l]} 左右送到。</div>`; mgArch(null); return; }
   try{ const day=await mgDay(pick.date); it=day.items[pick.i]; }catch(e){ main.innerHTML=h+`<div class="empty"><b>这篇没有载入</b>${esc(e.message)}</div>`; return; }
   if(!it){ main.innerHTML=h; return; }
@@ -2651,13 +2676,17 @@ async function mgRender(){
   const easy=["HSK1","HSK2"].includes(it.level), qs=it.questions||[], gx=new Set((it.glossary||[]).map(g=>String(g.w||"").trim()).filter(w=>HAN.test(w)));
   const own=new Set(S[l].custom.map(c=>String(c.w||"").trim()));
   h+=`<article class="mg-art${MG_MINOR.includes(it.kind)?" minor":""}${it.kind==="picks"?" picks":""}">
-    <div class="mg-kick">${it.series&&it.series.episode&&it.series.name===it.section?"":`<span>${esc(it.section||MG_KIND[it.kind]||"")}</span>`}${it.series&&it.series.episode?`<span>${esc(it.series.name||"")} · ${esc(it.series.episode)}</span>`:""}${mgOutlet(it)?`<span>${esc(mgOutlet(it))}</span>`:""}${it.level?`<span class="lv lv-${esc(it.level)}">${esc(it.level)}</span>`:""}${it.kind!=="picks"&&(it.paragraphs||[]).length?`<span>${mgMinutes(it)} 分钟</span>`:""}${pick.older?`<span class="g">${mgFmt(pick.date)} · 今天的 ${MG_ETA[l]} 送到</span>`:""}${pick.date==="lib"?`<span>课文库</span>`:""}</div>
+    <div class="mg-kick">${it.series&&it.series.episode&&it.series.name===it.section?"":`<span>${esc(it.section||MG_KIND[it.kind]||"")}</span>`}${it.series&&it.series.episode?`<span>${esc(it.series.name||"")} · ${esc(it.series.episode)}</span>`:""}${mgOutlet(it)?`<span>${esc(mgOutlet(it))}</span>`:""}${it.level?`<span class="lv lv-${esc(it.level)}">${esc(it.level)}</span>`:""}${it.kind!=="picks"&&(it.paragraphs||[]).length?`<span>${mgMinutes(it)} 分钟</span>`:""}${pick.older?`<span class="g">${mgFmt(pick.date)} · 今天的 ${MG_ETA[l]} 送到</span>`:""}${pick.date==="lib"?`<span>课文库</span>`:""}${it.term?`<span>${esc(it.term)}</span>`:""}</div>
     <h2 data-noi18n lang="zh-CN" class="zh2 zc">${zWrap(it.title,own,gx)}</h2>${(()=>{ const t=glSel().map(k=>it["title_"+k]).filter(Boolean); return t.length?`<p class="mg-tt" data-noi18n>${t.map(esc).join(" · ")}</p>`:""; })()}
     ${it.dek?`<p class="mg-dek zc" data-noi18n lang="zh-CN">${esc(zs(it.dek))}</p>`:""}
     <div class="mg-tools"><button class="tb" id="mg-say" aria-label="朗读全文">${I.spk}<span>朗读</span></button>${it.paragraphs_en&&it.paragraphs_en.length?`<button class="tb" id="mg-enb" aria-pressed="${MG.tr==="en"}" aria-label="English translation">English</button>`:""}${it.paragraphs_de&&it.paragraphs_de.length?`<button class="tb" id="mg-deb" aria-pressed="${MG.tr==="de"}" aria-label="Deutsche Übersetzung">Deutsch</button>`:""}<span class="spacer"></span><button class="tb" id="mg-py" aria-pressed="${pyOn()}">拼音</button><button class="tb" id="mg-tone" aria-pressed="${tonesOn()}">声调</button><button class="tb" id="mg-scr" aria-pressed="${scr()==="t"}" data-noi18n>${scr()==="t"?"繁體":"简体"}</button></div>
     ${onbActive()&&!(onb().t||{}).read?`<p class="onb-tip">💡 <span>点任何一个词，看读音、意思和笔顺，还可以收进生词。</span></p>`:""}
     <div class="mg-body zhb zc${easy?" easy":""}${it.kind==="dialogue"?" dlg":""}" id="mg-body" data-noi18n lang="zh-CN">${(it.paragraphs||[]).map((p,k)=>`<p>${zWrap(p,own,gx)}</p>${MG.tr&&it["paragraphs_"+MG.tr]&&it["paragraphs_"+MG.tr][k]?`<span class="mg-zh mg-tr-${MG.tr}" lang="${MG.tr}">${esc(it["paragraphs_"+MG.tr][k])}</span>`:""}`).join("")}</div>
     ${it.kind==="picks"?mgPicks(it):""}
+    ${it.poem&&it.poem.lines?(()=>{ const pm=it.poem, tr=(UIL==="de"&&pm.explain_de)||pm.explain_en||pm.explain_de;
+      return `<div class="mg-blk"><h3>古诗</h3><div class="mg-poem"><p class="pt zc" lang="zh-CN" data-noi18n>${zWrap(pm.title,own,gx)}</p><p class="pa zc" lang="zh-CN" data-noi18n>${esc(zs([pm.dynasty,pm.author].filter(Boolean).join(" · ")))}</p>
+        <div class="pl zc${easy?" easy":""}" lang="zh-CN" data-noi18n>${pm.lines.map(x=>`<p>${zWrap(x,own,gx)}</p>`).join("")}</div>
+        ${pm.explain_zh?`<p class="px zc" lang="zh-CN" data-noi18n>${zWrap(pm.explain_zh,own,gx)}</p>`:""}${tr?`<p class="px tr" data-noi18n>${esc(tr)}</p>`:""}</div></div>`; })():""}
     ${it.grammar||it.grammar_de?`<div class="mg-blk"><h3>语法</h3><div class="mg-gram" data-noi18n>${esc((UIL==="de"&&it.grammar_de)||it.grammar||it.grammar_de)}</div></div>`:""}
     ${it.glossary&&it.glossary.length?`<div class="mg-blk mg-glb"><dl class="mg-gl zgl" data-noi18n>${it.glossary.map(g=>`<dt><span class="zc" lang="zh-CN">${esc(zs(g.w))}</span><span class="py">${esc(g.p||zPy(g.w))}</span></dt><dd>${glSel().filter(k=>g[k]).map(k=>`<span lang="${k}">${esc(g[k])}</span>`).join("")||esc(g.en||g.de||"")}</dd>`).join("")}</dl></div>`:""}
     ${qs.length?`<div class="mg-blk"><h3>想一想</h3><ol class="mg-q zc" data-noi18n lang="zh-CN">${qs.map(q=>`<li>${esc(zs(q))}</li>`).join("")}</ol></div>`:""}
@@ -2674,7 +2703,12 @@ function mgArch(pick){
   const l=lang(), rows=[]; (MG.idx?MG.idx.days:[]).forEach((d,di)=>d.items.forEach(x=>{ if(x.lang===l) rows.push({...x,date:d.date,di}); }));
   rows.sort((a,b)=>b.date.localeCompare(a.date)||(MG_ORD(a)-MG_ORD(b)));
   const show=MG.archAll?rows:rows.slice(0,12);
-  $("#mg-arch").innerHTML=`<h3 style="margin:0 0 8px"><span>往期</span> · <span>${rows.length} 篇</span></h3>${rows.length?`<div class="mg-arch">${show.map(x=>`<button data-mg="${x.date}|${x.i}" data-di="${x.di}" aria-current="${!!pick&&pick.date===x.date&&pick.i===x.i}"><span class="k">${new Date(x.date+"T12:00").toLocaleDateString(uiLocale(),{month:"short",day:"numeric"})}</span><span class="t zc" lang="zh-CN">${esc(zs(x.title))}</span><span class="m">${mgRead(x.date,x.i)?"✓":""}</span></button>`).join("")}</div>${rows.length>12&&!MG.archAll?'<button class="btn ghost sm" id="mg-archall" type="button">显示全部</button>':""}`:'<p class="note">还没有往期文章。</p>'}`+mgLibList(pick);
+  $("#mg-arch").innerHTML=`<h3 style="margin:0 0 8px"><span>往期</span> · <span>${rows.length} 篇</span></h3>${rows.length?`<div class="mg-arch">${show.map(x=>`<button data-mg="${x.date}|${x.i}" data-di="${x.di}" aria-current="${!!pick&&pick.date===x.date&&pick.i===x.i}"><span class="k">${new Date(x.date+"T12:00").toLocaleDateString(uiLocale(),{month:"short",day:"numeric"})}</span><span class="t zc" lang="zh-CN">${esc(zs(x.title))}</span><span class="m">${mgRead(x.date,x.i)?"✓":""}</span></button>`).join("")}</div>${rows.length>12&&!MG.archAll?'<button class="btn ghost sm" id="mg-archall" type="button">显示全部</button>':""}`:'<p class="note">还没有往期文章。</p>'}`+mgJqList(pick)+mgLibList(pick);
+}
+function mgJqList(pick){
+  const xs=jqAll(lang()); if(!xs.length) return "";
+  return `<h3 style="margin:18px 0 8px"><span>二十四节气</span> · <span>${xs.length} 篇</span></h3>
+    <div class="mg-arch">${xs.map(x=>`<button data-mg="jq|${x.i}" aria-current="${!!pick&&pick.date==="jq"&&pick.i===x.i}"><span class="k">${esc(x.term)}</span><span class="t zc" lang="zh-CN">${esc(zs(x.title))}</span><span class="m">${esc(x.level)}${mgRead("jq",x.i)?" ✓":""}</span></button>`).join("")}</div>`;
 }
 function mgLibList(pick){
   const l=lang(), xs=mgLibItems(l); if(!xs.length) return "";
@@ -4675,6 +4709,8 @@ UI_DICT.push(
 ["★ 是增强/高级语音，听起来更自然。iPhone 可在「设置 → 辅助功能 → 朗读内容 → 声音 → 中文」里下载，比如 Tingting 或 Lilian（增强版）。", "★ marks enhanced/premium voices, which sound more natural. On iPhone, download one under Settings → Accessibility → Spoken Content → Voices → Chinese, e.g. Tingting or Lilian (Enhanced).", "★ sind erweiterte/Premium-Stimmen, sie klingen natürlicher. Auf dem iPhone unter Einstellungen → Bedienungshilfen → Gesprochene Inhalte → Stimmen → Chinesisch laden, z. B. Tingting oder Lilian (erweitert).", "★ marks enhanced/premium voices, which sound more natural. On iPhone, download one under Settings → Accessibility → Spoken Content → Voices → Chinese, e.g. Tingting or Lilian (Enhanced).", "★ 是增强/高级语音，听起来更自然。iPhone 可在「设置 → 辅助功能 → 朗读内容 → 声音 → 中文」里下载，比如 Tingting 或 Lilian（增强版）。"],
 ["拼音", "Pinyin", "Pinyin", "Pinyin", "拼音"],
 ["课文库", "Library", "Textsammlung", "Library", "课文库"],
+["二十四节气", "The 24 solar terms", "Die 24 Sonnenperioden", "Os 24 termos solares", "二十四節氣"],
+["古诗", "Classical poem", "Klassisches Gedicht", "Poema clássico", "古詩"],
 ["例句德文", "Example (German)", "Beispiel (Deutsch)", "Example (German)", "例句德文"],
 ["例如：雨伞", "e.g. 雨伞", "z. B. 雨伞", "e.g. 雨伞", "例如：雨伞"],
 ["我的释义（可选）", "My meaning (optional)", "Eigene Bedeutung (optional)", "My meaning (optional)", "我的释义（可选）"],
