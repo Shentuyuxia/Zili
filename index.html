@@ -3258,18 +3258,15 @@ function dicListen(){
 function dicPad(on){ const b=$("#dic-hwb"); if(b) b.setAttribute("aria-pressed",on); const w=$("#dic-padwrap"); if(!w) return; w.innerHTML=on?dicPadHtml():""; if(on){ DIC.strokes=[]; dicPadMount(); } }
 function dicPreload(){ dicLoadPy(); dicLoadTpl(); zStkLib(); zdLoad(); }
 
-/* photo → text, offline (Tesseract.js, Apache-2.0; Chinese LSTM data). The photo never leaves the device. */
-const OCR={w:null,lang:"",p:null,img:null,sel:null};
-function ocrWorker(){
-  const lang=scr()==="t"?"chi_tra":"chi_sim";
-  if(OCR.w&&OCR.lang===lang) return Promise.resolve(OCR.w);
-  if(OCR.p&&OCR.lang===lang) return OCR.p;
-  OCR.lang=lang;
-  OCR.p=(window.Tesseract?Promise.resolve():loadScript("vendor/tesseract/tesseract.min.js")).then(async()=>{
-    if(OCR.w){ try{ await OCR.w.terminate(); }catch(e){} OCR.w=null; }
-    const w=await Tesseract.createWorker(lang,1,{workerPath:"vendor/tesseract/worker.min.js",corePath:"vendor/tesseract/",langPath:"vendor/tesseract/lang",gzip:true});
-    await w.setParameters({preserve_interword_spaces:"0"}); OCR.w=w; return w;
-  }).catch(e=>{ OCR.p=null; throw e; });
+/* photo → text, offline: PaddleOCR PP-OCRv4 models (Apache-2.0) on onnxruntime-web (MIT), vendor/ocr/zocr.js. The photo never leaves the device. */
+const OCR={ok:false,p:null,img:null,sel:null};
+function ocrEngine(){ // PaddleOCR (PP-OCRv4) models on onnxruntime-web, all files under vendor/ocr/
+  if(OCR.ok) return Promise.resolve(window.ZOCR);
+  if(OCR.p) return OCR.p;
+  OCR.p=(window.ort?Promise.resolve():loadScript("vendor/ocr/ort.wasm.min.js"))
+    .then(()=>window.ZOCR?null:loadScript("vendor/ocr/zocr.js"))
+    .then(()=>ZOCR.init("vendor/ocr/")).then(()=>{ OCR.ok=true; return ZOCR; })
+    .catch(e=>{ OCR.p=null; throw e; });
   return OCR.p;
 }
 function ocrHtml(src){ return `<div class="dic-ocr" id="dic-ocr"><p class="small muted" style="margin:0">${esc(trOne("用手指框出要查的字，框得越准越好。不框就识别整张图。")||"")}</p>
@@ -3279,7 +3276,7 @@ function ocrOpen(file){
   if(!file) return; const url=URL.createObjectURL(file);
   const b=$("#dic-hwb"); if(b) b.setAttribute("aria-pressed","false");
   if(OCR.img) URL.revokeObjectURL(OCR.img); OCR.img=url; OCR.sel=null;
-  $("#dic-padwrap").innerHTML=ocrHtml(url); ocrWorker().catch(()=>{});
+  $("#dic-padwrap").innerHTML=ocrHtml(url); ocrEngine().catch(()=>{});
   const st=$("#ocr-stage"), box=$("#ocr-sel"); let a=null;
   const pt=e=>{ const r=$("#ocr-img").getBoundingClientRect(); return [Math.min(Math.max(e.clientX-r.left,0),r.width),Math.min(Math.max(e.clientY-r.top,0),r.height)]; };
   st.onpointerdown=e=>{ e.preventDefault(); st.setPointerCapture(e.pointerId); a=pt(e); OCR.sel=null; box.hidden=true; };
@@ -3292,21 +3289,19 @@ async function ocrRun(){
   const img=$("#ocr-img"), msg=$("#ocr-msg"); if(!img) return;
   const r=img.getBoundingClientRect(), kx=img.naturalWidth/r.width, ky=img.naturalHeight/r.height;
   let [x,y,w,h]=OCR.sel||[0,0,r.width,r.height];
-  if(OCR.sel){ const m=Math.max(6,h*.35); x-=m; y-=m; w+=2*m; h+=2*m; x=Math.max(0,x); y=Math.max(0,y); w=Math.min(r.width-x,w); h=Math.min(r.height-y,h); } // a finger box is rarely exact: take a margin around it
+  if(OCR.sel){ const m=Math.max(6,Math.min(w,h)*.25); x-=m; y-=m; w+=2*m; h+=2*m; x=Math.max(0,x); y=Math.max(0,y); w=Math.min(r.width-x,w); h=Math.min(r.height-y,h); } // a finger box is rarely exact: take a margin around it
   x*=kx; y*=ky; w*=kx; h*=ky;
-  // crop, enlarge small selections, greyscale with a little contrast
-  const scale=Math.min(4,Math.max(1,1000/Math.max(w,h))), c=document.createElement("canvas");
-  c.width=Math.round(w*scale); c.height=Math.round(h*scale); const g=c.getContext("2d"); g.imageSmoothingQuality="high";
-  g.drawImage(img,x,y,w,h,0,0,c.width,c.height);
-  const d=g.getImageData(0,0,c.width,c.height), p=d.data; for(let i=0;i<p.length;i+=4){ let v=.299*p[i]+.587*p[i+1]+.114*p[i+2]; v=Math.max(0,Math.min(255,(v-128)*1.35+128)); p[i]=p[i+1]=p[i+2]=v; } g.putImageData(d,0,0);
-  if(msg) msg.innerHTML=`<span class="spin"></span> ${esc(trOne(OCR.w?"正在识别…":"第一次要载入识别数据（约 5 MB）…")||"")}`;
+  // crop; enlarge small selections so characters are big enough, shrink huge photos
+  const L=Math.max(w,h), scale=L<640?Math.min(3,640/L):Math.min(1,1600/L), c=document.createElement("canvas");
+  c.width=Math.max(8,Math.round(w*scale)); c.height=Math.max(8,Math.round(h*scale)); const g=c.getContext("2d"); g.imageSmoothingQuality="high";
+  g.fillStyle="#fff"; g.fillRect(0,0,c.width,c.height); g.drawImage(img,x,y,w,h,0,0,c.width,c.height);
+  if(msg) msg.innerHTML=`<span class="spin"></span> ${esc(trOne(OCR.ok?"正在识别…":"第一次要载入识别模型（约 18 MB，只需一次）…")||"")}`;
   const go=$("#ocr-go"); if(go) go.disabled=true;
   try{
-    const wk=await ocrWorker(); if(msg) msg.innerHTML=`<span class="spin"></span> ${esc(trOne("正在识别…")||"")}`;
-    const res=await wk.recognize(c);
-    let t=String(res.data.text||"").replace(/[ \t　]+/g,"").replace(/\n{2,}/g,"\n").trim();
+    const z=await ocrEngine(); if(msg) msg.innerHTML=`<span class="spin"></span> ${esc(trOne("正在识别…")||"")}`;
+    let t=String(await z.read(c)||"").replace(/[ \t　]+/g,"").replace(/\n{2,}/g,"\n").trim();
     if(!HAN.test(t)){ if(msg) msg.textContent=trOne("没认出汉字。框小一点、拍清楚一点再试。")||""; if(go) go.disabled=false; return; }
-    t=t.replace(/[^㐀-鿿豈-﫿\n，。！？、；：0-9]/g,"").replace(/\n/g," ");
+    t=t.replace(/[^㐀-鿿豈-﫿\n，。！？、；：0-9]/g,"").replace(/\n/g," ");
     const q=$("#dic-q"); if(q) q.value=t; if(msg) msg.textContent="";
     $("#dic-padwrap").innerHTML=""; dicSearch(t);
   }catch(e){ if(msg) msg.textContent=(trOne("识别没成功：")||"")+(e&&e.message||e); if(go) go.disabled=false; }
@@ -4728,7 +4723,7 @@ const UI_DICT=[
 ["换一张", "Other photo", "Anderes Foto", "Outra foto", "換一張"],
 ["取消", "Cancel", "Abbrechen", "Cancelar", "取消"],
 ["正在识别…", "Reading…", "Wird erkannt…", "Reconhecendo…", "正在辨識…"],
-["第一次要载入识别数据（约 5 MB）…", "Loading the recognition data once (about 5 MB)…", "Erkennungsdaten werden einmalig geladen (etwa 5 MB)…", "Carregando os dados uma vez (cerca de 5 MB)…", "第一次要載入辨識資料（約 5 MB）…"],
+["第一次要载入识别模型（约 18 MB，只需一次）…", "Loading the recognition model once (about 18 MB)…", "Das Erkennungsmodell wird einmalig geladen (etwa 18 MB)…", "Carregando o modelo de reconhecimento uma vez (cerca de 18 MB)…", "第一次要載入識別模型（約 18 MB，只需一次）…"],
 ["没认出汉字。框小一点、拍清楚一点再试。", "No characters found. Try a tighter box or a sharper photo.", "Keine Zeichen erkannt. Enger rahmen oder schärfer fotografieren.", "Nenhum caractere. Tente um quadro menor ou uma foto mais nítida.", "沒認出漢字。框小一點、拍清楚一點再試。"],
 ["识别没成功：", "Recognition failed: ", "Erkennung fehlgeschlagen: ", "Falha no reconhecimento: ", "辨識沒成功："],
 ["重新看新手引导", "Show the welcome guide again", "Einführung erneut zeigen", "Ver o guia inicial de novo", "重新看新手引導"],
