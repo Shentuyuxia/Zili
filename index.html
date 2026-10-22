@@ -2691,7 +2691,7 @@ async function mgRender0(){
     pick={date:"mine",i:mine.id,older:false}; es=[]; it=mineItem(mine);
     h=`<div class="mg-head"><button class="btn ghost sm" id="mg-mineback" type="button">← 今日文章</button><span class="spacer"></span><button class="btn ghost sm mine-del" id="mg-minedel" type="button">删除这篇</button></div>`;
   } else {
-  if(MG.col&&MG.key){ const [d,i]=MG.key.split("|"); pick={date:d,i:+i,older:false}; es=[]; h=`<div class="mg-head"><button class="btn ghost sm" id="mg-colback" type="button">← <span>专栏</span></button></div>`; } else {
+  if(MG.col&&MG.key){ const [d,i]=MG.key.split("|"); pick={date:d,i:+i,older:false}; es=[]; h=`<div class="mg-head"><button class="btn ghost sm" id="mg-colback" type="button">← <span>书架</span></button></div>`; } else {
   pick=mgPick(); es=mgEntries(MG.di,l);
   h=!days.length?"":`<div class="mg-head"><button class="ib" id="mg-prev" aria-label="前一天" ${MG.di>=days.length-1?"disabled":""}>‹</button><span class="d">${days[MG.di]?mgFmt(days[MG.di].date):""}</span><button class="ib" id="mg-next" aria-label="后一天" ${MG.di<=0?"disabled":""}>›</button><span class="spacer"></span><button class="ib" id="mg-reload" aria-label="刷新" title="刷新">↻</button></div>`;
   { const lvs=mgLevels(MG.di,l); if(lvs.length>1){ const sel=mgLvSel(MG.di,l); h+=`<div class="mg-lvs" role="tablist" aria-label="Level"><button type="button" data-mglv="" aria-pressed="${!sel}">${esc(trOne("全部")||"全部")}</button>${lvs.map(v=>`<button type="button" data-mglv="${v}" aria-pressed="${sel===v}">${v}</button>`).join("")}</div>`; } }
@@ -2731,9 +2731,9 @@ function mgArch(pick){
   const l=lang(), rows=[]; (MG.idx?MG.idx.days:[]).forEach((d,di)=>d.items.forEach(x=>{ if(x.lang===l) rows.push({...x,date:d.date,di}); }));
   rows.sort((a,b)=>b.date.localeCompare(a.date)||(MG_ORD(a)-MG_ORD(b)));
   const show=MG.archAll?rows:rows.slice(0,12);
-  $("#mg-arch").innerHTML=`<h3 style="margin:0 0 8px"><span>往期</span> · <span>${rows.length} 篇</span></h3>${rows.length?`<div class="mg-arch">${show.map(x=>`<button data-mg="${x.date}|${x.i}" data-di="${x.di}" aria-current="${!!pick&&pick.date===x.date&&pick.i===x.i}"><span class="k">${new Date(x.date+"T12:00").toLocaleDateString(uiLocale(),{month:"short",day:"numeric"})}</span><span class="t zc" lang="zh-CN">${esc(zs(x.title))}</span><span class="m">${mgRead(x.date,x.i)?"✓":""}</span></button>`).join("")}</div>${rows.length>12&&!MG.archAll?'<button class="btn ghost sm" id="mg-archall" type="button">显示全部</button>':""}`:'<p class="note">还没有往期文章。</p>'}`; // 二十四节气 and 课文库 live on the 专栏 page
+  $("#mg-arch").innerHTML=`<h3 style="margin:0 0 8px"><span>往期</span> · <span>${rows.length} 篇</span></h3>${rows.length?`<div class="mg-arch">${show.map(x=>`<button data-mg="${x.date}|${x.i}" data-di="${x.di}" aria-current="${!!pick&&pick.date===x.date&&pick.i===x.i}"><span class="k">${new Date(x.date+"T12:00").toLocaleDateString(uiLocale(),{month:"short",day:"numeric"})}</span><span class="t zc" lang="zh-CN">${esc(zs(x.title))}</span><span class="m">${mgRead(x.date,x.i)?"✓":""}</span></button>`).join("")}</div>${rows.length>12&&!MG.archAll?'<button class="btn ghost sm" id="mg-archall" type="button">显示全部</button>':""}`:'<p class="note">还没有往期文章。</p>'}`; // 二十四节气 and 课文库 live on the 书架 page
 }
-/* 专栏: fixed collections — 二十四节气 (all 24 terms by season; unopened ones show their date) and the library */
+/* 书架: fixed collections — 二十四节气 (all 24 terms by season; unopened ones show their date) and the library */
 const SEASONS=["春","夏","秋","冬"];
 function mdFmt(md){ const [m,d]=md.split("-").map(Number); return new Date(2026,m-1,d).toLocaleDateString(uiLocale(),{month:"short",day:"numeric"}); }
 function mgColumn(){
@@ -2751,7 +2751,7 @@ function mgColumn(){
   return h+mgLibList(null);
 }
 function mgSwPut(){ const m=$("#mg-main"); if(!m||m.querySelector(".mg-sw")) return;
-  m.insertAdjacentHTML("afterbegin",`<div class="mg-sw" role="tablist"><button type="button" id="mg-sw-today" aria-pressed="${!MG.col}">今日</button><button type="button" id="mg-sw-col" aria-pressed="${!!MG.col}">专栏</button></div>`); }
+  m.insertAdjacentHTML("afterbegin",`<div class="mg-sw" role="tablist"><button type="button" id="mg-sw-today" aria-pressed="${!MG.col}">今日</button><button type="button" id="mg-sw-col" aria-pressed="${!!MG.col}">书架</button></div>`); }
 function mgJqList(pick){
   const xs=jqAll(lang()); if(!xs.length) return "";
   return `<h3 style="margin:18px 0 8px"><span>二十四节气</span> · <span>${xs.length} 篇</span></h3>
@@ -4761,7 +4761,7 @@ UI_DICT.push(
 ["二十四节气", "The 24 solar terms", "Die 24 Sonnenperioden", "Os 24 termos solares", "二十四節氣"],
 ["古诗", "Classical poem", "Klassisches Gedicht", "Poema clássico", "古詩"],
 ["今日", "Today", "Heute", "Hoje", "今日"],
-["专栏", "Collections", "Sammlungen", "Coleções", "專欄"],
+["书架", "Bookshelf", "Bücherregal", "Estante", "書架"],
 ["现在的节气", "Current solar term", "Aktuelle Sonnenperiode", "Termo solar atual", "現在的節氣"],
 ["开放", "opens", "öffnet", "abre", "開放"],
 ["每个节气两篇：HSK2 和 HSK4，各配一首古诗。节气那天开放。", "Two texts per term, HSK2 and HSK4, each with a classical poem. Each opens on its term's day.", "Zwei Texte pro Sonnenperiode, HSK2 und HSK4, jeweils mit einem klassischen Gedicht. Sie öffnen am Tag der Sonnenperiode.", "Dois textos por termo, HSK2 e HSK4, cada um com um poema clássico. Abrem no dia do termo.", "每個節氣兩篇：HSK2 和 HSK4，各配一首古詩。節氣那天開放。"],

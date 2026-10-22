@@ -33,7 +33,7 @@ The app's Reading tab reads this folder.
 
 Fixed texts in the spirit of Shiori: one term, two levels (HSK2 for children and beginners, HSK4 for adults), each with a classical poem.
 
-- The Reading tab has two views: **今日** (the day's graded texts) and **专栏** (fixed collections). The 专栏 page lists all 24 terms by season (`terms` in `jieqi.json`: season, name, usual date, EN/DE name); terms that aren't open yet show their date. Below it is the library (`lib.json`, 课文库).
+- The Reading tab has two views: **今日** (the day's graded texts) and **书架** (Bookshelf: fixed collections). The 书架 page lists all 24 terms by season (`terms` in `jieqi.json`: season, name, usual date, EN/DE name); terms that aren't open yet show their date. Below it is the library (`lib.json`, 课文库).
 - An item opens on its `date` (the term's date in the first year, e.g. `"2026-10-23"` for 霜降). On that day it also appears first in the 今日 list, and stays at the end of that list until the next term. From the second year on, only month and day count, so the cycle repeats every year.
 - Item format = the normal format above, plus:
 
