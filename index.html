@@ -114,6 +114,17 @@ nav.tabs button:not([aria-selected="true"]):hover{color:var(--ink)}
 .grid{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:22px;align-items:start}
 .grid.one{grid-template-columns:minmax(0,1fr)}
 @media (max-width:880px){.grid{grid-template-columns:minmax(0,1fr)}}
+.adbox{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px 16px;margin:0 0 14px}
+.adbox>summary{cursor:pointer;list-style:none;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.adbox>summary::-webkit-details-marker{display:none}
+.adbox>summary::before{content:"+";font-weight:600;color:var(--acc);width:1em}
+.adbox[open]>summary::before{content:"–"}
+.adbox .adt{font-weight:600;color:var(--acc)}
+.adgrid{display:grid;gap:16px;margin-top:12px}.adgrid .adside{display:grid;gap:16px}
+.adgrid .panel{padding:0;border:0;background:none}
+.dic-add{margin-top:10px}
+.adgrid #new-title{display:none}.adgrid .sesshead{justify-content:flex-end;margin:0}
+.admore{margin:4px 0 2px}.admore>summary{cursor:pointer;color:var(--muted);font-size:14px;margin:4px 0 8px}
 .panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px;min-width:0}
 .side{display:flex;flex-direction:column;gap:14px;min-width:0}
 .side .panel{padding:16px}
@@ -686,7 +697,7 @@ body.lean .hint, body.lean .help{display:none!important}
   nav.tabs button.dict-tab .tl{color:var(--acc)!important;font-weight:600}
   nav.tabs button{padding:7px 0 4px}
   #t-pile{display:none!important}
-  /* sub-switch inside 词库 / 更多 */
+  /* sub-switch inside 字匣 / 更多 */
   .subsw{display:flex;gap:6px;grid-column:1 / -1;margin:0 0 4px}
   .subsw button{flex:1;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 10px;font:inherit;font-size:14px;color:var(--muted);cursor:pointer}
   .subsw button[aria-pressed="true"]{border-color:var(--acc);background:var(--acc-soft);color:var(--ink);font-weight:600}
@@ -1110,9 +1121,8 @@ body:not(.tones) .tone-opts{opacity:.55}
     <button role="tab" data-tab="today" aria-selected="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/><path d="m9 14.5 2 2 4-4"/></svg><span class="tl">今日学习</span></button>
     <button role="tab" data-tab="read" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5c3-1.2 6-1.2 9 .8 3-2 6-2 9-.8v13c-3-1.2-6-1.2-9 .8-3-2-6-2-9-.8z"/><path d="M12 6.3v13"/></svg><span class="tl">阅读</span></button>
     <button type="button" data-dict="1" id="dict-open" class="dict-tab" aria-label="字典"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg><span class="tl">字典</span></button>
-    <button role="tab" data-tab="new" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 8v8M8 12h8"/></svg><span class="tl">录入新词</span></button>
     <button role="tab" data-tab="pile" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><span class="tl">生词堆</span><span id="t-pile">0</span></button>
-    <button role="tab" data-tab="browse" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h12M8 12h12M8 18h12"/><circle cx="4" cy="6" r=".6" fill="currentColor"/><circle cx="4" cy="12" r=".6" fill="currentColor"/><circle cx="4" cy="18" r=".6" fill="currentColor"/></svg><span class="tl">词库</span></button>
+    <button role="tab" data-tab="browse" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h12M8 12h12M8 18h12"/><circle cx="4" cy="6" r=".6" fill="currentColor"/><circle cx="4" cy="12" r=".6" fill="currentColor"/><circle cx="4" cy="18" r=".6" fill="currentColor"/></svg><span class="tl">字匣</span></button>
     <button role="tab" data-tab="stats" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M21 20H3"/></svg><span class="tl">进度</span><span class="tl-m">我的</span></button>
     <button role="tab" data-tab="settings" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg><span class="tl">设置与备份</span></button>
   </nav>
@@ -1148,7 +1158,7 @@ body:not(.tones) .tone-opts{opacity:.55}
       <div id="onb-day"></div>
       <div class="sesshead"><h2 id="sess-title">今日学习</h2><div class="row" id="sess-actions"></div></div>
       <div class="bar"><i id="sess-bar"></i></div>
-      <div id="card-area"><div class="empty"><b>正在载入词库…</b></div></div>
+      <div id="card-area"><div class="empty"><b>正在载入字匣…</b></div></div>
     </div>
     <aside class="side">
       <div class="panel" id="plan-panel"></div>
@@ -1205,9 +1215,42 @@ body:not(.tones) .tone-opts{opacity:.55}
   </section>
 
   <!-- NEW WORD -->
-  <section id="tab-new" class="grid" hidden>
+
+  <!-- PILE -->
+  <section id="tab-pile" class="grid" hidden>
+    <div class="subsw" role="tablist"><button type="button" data-sub="browse">字匣</button><button type="button" data-sub="pile">生词堆 <span class="ct" id="sub-pile-ct"></span></button></div>
     <div class="panel">
-      <div class="sesshead"><h2 id="new-title">录入新词</h2><button class="btn ghost sm" id="n-clear" type="button">清空</button></div>
+      <div class="sesshead">
+        <h2 id="pile-title">生词堆</h2>
+        <div class="row">
+          <select id="pile-lv" aria-label="按级别筛选" style="width:auto"></select>
+          <button class="btn primary" id="pile-go">复习生词堆</button>
+        </div>
+      </div>
+      <div id="pile-list"></div>
+    </div>
+    <aside class="side">
+      <div class="panel help">
+        <h3>生词堆怎么用</h3>
+        <p class="note">不熟的词点卡片右上角的星标，就会放进生词堆；在字匣里也可以直接加。</p>
+        <p class="note">「复习生词堆」不管有没有到期，会把堆里的词全部过一遍。评为「简单」的词会自动移出生词堆，其余的留着下次再练。</p>
+        <p class="note">点单词可以打开详情，写例句、录发音。</p>
+      </div>
+      <div class="panel help">
+        <h3>掌握程度分级</h3>
+        <div class="lvrows small" id="stage-legend"></div>
+      </div>
+    </aside>
+  </section>
+
+  <!-- BROWSE -->
+  <section id="tab-browse" class="grid one" hidden>
+    <div class="subsw" role="tablist"><button type="button" data-sub="browse">字匣</button><button type="button" data-sub="pile">生词堆 <span class="ct" id="sub-pile-ct"></span></button></div>
+    <details class="adbox" id="add-box">
+      <summary><span class="adt">自己录入</span><span class="small muted ads">字典里没有的词 · 拍照识词 · 批量导入</span></summary>
+      <div class="adgrid">
+    <div class="panel">
+      <div class="sesshead"><h2 id="new-title">自己录入</h2><button class="btn ghost sm" id="n-clear" type="button">清空</button></div>
       <form id="n-form" autocomplete="off">
         <div class="newhead">
           <input type="text" id="n-w" aria-label="汉字" required autocapitalize="off" spellcheck="false">
@@ -1217,17 +1260,19 @@ body:not(.tones) .tone-opts{opacity:.55}
         <div class="newsimple">
           <div class="field"><label for="n-x">拼音</label><input type="text" id="n-x" autocapitalize="off" spellcheck="false"></div>
           <div class="field"><label for="n-mean">释义</label><input type="text" id="n-mean" placeholder="用你习惯的语言写"></div>
+          <details class="admore" id="n-more"><summary>例句、记忆提示（可选）</summary>
           <div class="field"><label for="n-ex">例句（可选）</label><input type="text" id="n-ex"></div>
           <div class="field"><label for="n-memo">记忆提示（可选）</label><input type="text" id="n-memo" placeholder="谐音、画面、部首……"></div>
+          </details>
           <p class="small muted" id="n-lvinfo" style="margin:2px 0 0"></p>
         </div>
-        <div class="row" style="margin-top:8px"><button class="btn primary" type="submit" id="n-save">保存到词库</button><span class="small muted" id="n-msg"></span></div>
+        <div class="row" style="margin-top:8px"><button class="btn primary" type="submit" id="n-save">保存到字匣</button><span class="small muted" id="n-msg"></span></div>
       </form>
     </div>
-    <aside class="side">
+    <div class="adside">
       <div class="panel">
         <h3>拍照识词</h3>
-        <p class="note hint">拍下课本、笔记、菜单、路牌或手写词表，AI 把里面值得学的词挑出来，配好释义和例句，你勾选后加入词库。</p>
+        <p class="note hint">拍下课本、笔记、菜单、路牌或手写词表，AI 把里面值得学的词挑出来，配好释义和例句，你勾选后加入字匣。</p>
         <div class="row" style="margin-top:10px">
           <label class="btn primary sm filebtn" id="scan-cam-btn">拍照<input type="file" id="scan-cam" accept="image/*" capture="environment"></label>
           <label class="btn sm filebtn">选择图片<input type="file" id="scan-pick" accept="image/*" multiple></label>
@@ -1250,43 +1295,13 @@ body:not(.tones) .tone-opts{opacity:.55}
         </div>
         <p class="small muted" id="bulk-msg" style="margin:8px 0 0"></p>
       </div>
-    </aside>
-  </section>
-
-  <!-- PILE -->
-  <section id="tab-pile" class="grid" hidden>
-    <div class="subsw" role="tablist"><button type="button" data-sub="browse">词库</button><button type="button" data-sub="pile">生词堆 <span class="ct" id="sub-pile-ct"></span></button></div>
-    <div class="panel">
-      <div class="sesshead">
-        <h2 id="pile-title">生词堆</h2>
-        <div class="row">
-          <select id="pile-lv" aria-label="按级别筛选" style="width:auto"></select>
-          <button class="btn primary" id="pile-go">复习生词堆</button>
-        </div>
-      </div>
-      <div id="pile-list"></div>
     </div>
-    <aside class="side">
-      <div class="panel help">
-        <h3>生词堆怎么用</h3>
-        <p class="note">不熟的词点卡片右上角的星标，就会放进生词堆；在词库里也可以直接加。</p>
-        <p class="note">「复习生词堆」不管有没有到期，会把堆里的词全部过一遍。评为「简单」的词会自动移出生词堆，其余的留着下次再练。</p>
-        <p class="note">点单词可以打开详情，写例句、录发音。</p>
       </div>
-      <div class="panel help">
-        <h3>掌握程度分级</h3>
-        <div class="lvrows small" id="stage-legend"></div>
-      </div>
-    </aside>
-  </section>
-
-  <!-- BROWSE -->
-  <section id="tab-browse" class="grid one" hidden>
-    <div class="subsw" role="tablist"><button type="button" data-sub="browse">词库</button><button type="button" data-sub="pile">生词堆 <span class="ct" id="sub-pile-ct"></span></button></div>
+    </details>
     <div class="panel">
       <div class="levels" id="lv-cells"></div>
       <div class="filters">
-        <input type="text" id="b-search" placeholder="搜索汉字、拼音或释义…" aria-label="搜索">
+        <input type="text" id="b-search" placeholder="在字匣里找：汉字、拼音或释义…" aria-label="搜索">
         <select id="b-stage" aria-label="掌握程度"></select>
         <select id="b-src" aria-label="来源"><option value="">全部词</option><option value="mine">我录入的</option><option value="net">网络用语</option><option value="young">年轻人话题</option><option value="img">有图片的</option><option value="sent">有我的例句的</option><option value="aud">有我的录音的</option><option value="plan">学习计划里的</option></select>
         <button class="btn" id="b-cram">复习筛选出的已学词</button>
@@ -1825,7 +1840,7 @@ function renderPlan(){
   const b=(id,fn)=>{ const e=document.getElementById(id); if(e) e.onclick=fn; };
   b("plan-gen",generatePlan); b("plan-stop",stopGen); b("plan-edit",()=>openPlanForm(true));
   b("plan-end",()=>{ const e=$("#plan-end"); if(e.dataset.sure!=="1"){ e.dataset.sure="1"; e.textContent="再点一次确认结束"; e.classList.add("danger"); return; }
-    stopGen(); p.on=false; save(); renderPlan(); renderStrip(); buildDaily(); toast("计划已结束，生成的词都留在词库里"); });
+    stopGen(); p.on=false; save(); renderPlan(); renderStrip(); buildDaily(); toast("计划已结束，生成的词都留在字匣里"); });
 }
 function openPlanForm(edit){
   const p=planOf(), l=lang(), d=LANG[l];
@@ -1920,16 +1935,16 @@ function openScanResult(items,preview){
     <div class="mhead"><h2 style="flex:1;font-size:20px">从照片里找到 ${items.length} 个词</h2><button class="ib" id="d-close" aria-label="关闭">${I.x}</button></div>
     <div class="row" style="align-items:flex-start;gap:16px;flex-wrap:nowrap">
       <img src="${preview}" alt="" style="width:110px;border-radius:8px;flex:none;align-self:flex-start" class="scanprev">
-      <p class="note" style="flex:1">勾选要加入词库的词。已经在词库里的词默认不勾。释义和例句以后可以在词库里点开修改，也能录音。</p>
+      <p class="note" style="flex:1">勾选要加入字匣的词。已经在字匣里的词默认不勾。释义和例句以后可以在字匣里点开修改，也能录音。</p>
     </div>
     <div class="row" style="margin:10px 0"><button class="btn ghost sm" id="sc-all" type="button">全选</button><button class="btn ghost sm" id="sc-none" type="button">全不选</button><span class="spacer"></span><label class="tog"><input type="checkbox" id="sc-pile"> 同时放进生词堆</label></div>
     <div class="tbl scroll" style="max-height:52vh"><table style="min-width:0"><tbody>${items.map((o,i)=>`<tr><td style="width:28px"><input type="checkbox" data-i="${i}" ${o.dup?"":"checked"} aria-label="选择 ${esc(o.w)}" style="accent-color:var(--acc);width:18px;height:18px"></td>
-      <td class="w">${wordHTML(Object.assign({lang:l},o))}${o.extra&&o.extra!=="—"?` <span class="extra">${esc(o.extra)}</span>`:""}${o.dup?` <span class="chip">已在词库</span>`:""}${o.ex?`<span class="exs">${esc(zs(o.ex))}</span>`:""}</td>
+      <td class="w">${wordHTML(Object.assign({lang:l},o))}${o.extra&&o.extra!=="—"?` <span class="extra">${esc(o.extra)}</span>`:""}${o.dup?` <span class="chip">已在字匣</span>`:""}${o.ex?`<span class="exs">${esc(zs(o.ex))}</span>`:""}</td>
       <td data-noi18n>${esc(o[glSel()[0]]||o.en||o.de||"")}</td><td><span class="lv lv-${esc(o.lvl)}">${esc(o.lvl)}</span></td></tr>`).join("")}</tbody></table></div>
-    <div class="row" style="margin-top:14px"><button class="btn primary" id="sc-add" type="button">加入词库</button><button class="btn ghost" id="sc-cancel" type="button">取消</button></div>
+    <div class="row" style="margin-top:14px"><button class="btn primary" id="sc-add" type="button">加入字匣</button><button class="btn ghost" id="sc-cancel" type="button">取消</button></div>
   </div></div>`;
   const root=$("#detail-root"), boxes=()=>[...root.querySelectorAll("input[data-i]")];
-  const cnt=()=>{ const n=boxes().filter(b=>b.checked).length; $("#sc-add").textContent=`加入词库（${n} 个）`; $("#sc-add").disabled=!n; };
+  const cnt=()=>{ const n=boxes().filter(b=>b.checked).length; $("#sc-add").textContent=`加入字匣（${n} 个）`; $("#sc-add").disabled=!n; };
   boxes().forEach(b=>b.onchange=cnt); cnt();
   $("#sc-all").onclick=()=>{ boxes().forEach(b=>b.checked=true); cnt(); };
   $("#sc-none").onclick=()=>{ boxes().forEach(b=>b.checked=false); cnt(); };
@@ -2332,16 +2347,16 @@ function renderDone0(area){
       <div class="row" style="justify-content:center;margin-top:8px"><button class="btn primary" id="d-back">回到今日学习</button></div></div>`;
   } else if(log.c){
     h=`<div class="done"><div class="seal">${I.check}</div><h2>${d.ok}</h2><p class="muted">今天的${d.zh}打卡完成：新学 ${log.n} 个，复习 ${log.r} 次。连续打卡 ${streak()} 天。</p>
-      <div class="row" style="justify-content:center;margin-top:8px">${fp?`<button class="btn" id="d-more">再学 5 个新词</button>`:""}${Object.keys(L().pile).length?`<button class="btn" id="d-pile">复习生词堆</button>`:""}<button class="btn" id="d-new">录入新词</button></div></div>`;
+      <div class="row" style="justify-content:center;margin-top:8px">${fp?`<button class="btn" id="d-more">再学 5 个新词</button>`:""}${Object.keys(L().pile).length?`<button class="btn" id="d-pile">复习生词堆</button>`:""}<button class="btn" id="d-new">自己录入</button></div></div>`;
   } else if(fp===0&&due===0){
-    h=`<div class="done"><h2>选中的级别学完了</h2><p class="muted">在右边「新词从哪些级别来」里勾选其他级别，或者去「录入新词」加自己的词。</p></div>`;
+    h=`<div class="done"><h2>选中的级别学完了</h2><p class="muted">在右边「新词从哪些级别来」里勾选其他级别，或者去「字匣」自己录入。</p></div>`;
   } else {
     h=`<div class="done"><h2>${d.done}</h2><p class="muted">今天这轮做完了。还差一点就能打卡：新词 ${log.n} / ${goal()}，待复习 ${due}。</p>
       <div class="row" style="justify-content:center;margin-top:8px"><button class="btn primary" id="d-cont">继续</button></div></div>`;
   }
   area.innerHTML=h;
   const b=(id,fn)=>{ const e=document.getElementById(id); if(e) e.onclick=fn; };
-  b("d-back",buildDaily); b("d-more",()=>buildExtra(5)); b("d-pile",()=>startCram(pileCards(),"复习生词堆","pile")); b("d-cont",buildDaily); b("d-new",()=>showTab("new"));
+  b("d-back",buildDaily); b("d-more",()=>buildExtra(5)); b("d-pile",()=>startCram(pileCards(),"复习生词堆","pile")); b("d-cont",buildDaily); b("d-new",()=>addOpen());
 }
 document.addEventListener("keydown",e=>{
   if(detailOpen){ if(e.key==="Escape") closeDetail(); return; }
@@ -2404,7 +2419,7 @@ function renderDetail(note){
           <div class="recs" id="d-recs">${recRowsHTML("d",au)}</div></div>
       </div>
     </div>
-    ${c.custom?`<div class="row" style="margin-top:16px;border-top:1px solid var(--line);padding-top:12px"><span class="small muted">这是你录入的词。</span><span class="spacer"></span><button class="btn ghost sm" id="d-delword" type="button">从词库删除</button></div>`:""}
+    ${c.custom?`<div class="row" style="margin-top:16px;border-top:1px solid var(--line);padding-top:12px"><span class="small muted">这是你录入的词。</span><span class="spacer"></span><button class="btn ghost sm" id="d-delword" type="button">从字匣删除</button></div>`:""}
   </div></div>`;
   fillImgs($("#detail-root"));
   const root=$("#detail-root");
@@ -2443,7 +2458,7 @@ function renderDetail(note){
     if(dw.dataset.sure!=="1"){ dw.dataset.sure="1"; dw.textContent="再点一次确认删除"; dw.classList.remove("ghost"); dw.classList.add("danger"); return; }
     const LL=L(); LL.custom=LL.custom.filter(x=>x.id!==id); (LL.del||(LL.del={}))[id]=Date.now(); delete LL.srs[id]; delete LL.pile[id]; delete LL.mine[id]; delete LL.memo[id]; removeImg(id);
     SLOTS.forEach(([s])=>removeAud(id,s));
-    save(); rebuildCards(); closeDetail(); renderStrip(); toast("已从词库删除");
+    save(); rebuildCards(); closeDetail(); renderStrip(); toast("已从字匣删除");
   };
 }
 function bindRecs(box,prefix,h){
@@ -2477,7 +2492,7 @@ async function autoLevel(w){
   await zdLoad(); const c=ZD&&ZD.get(w);
   const lv=c==null?"HSK6":c<=10?"HSK3":c<=12?"HSK4":c<=14?"HSK5":"HSK6"; return {lv,how:"est"}; }
 function renderNewForm(){
-  $("#new-title").textContent="录入新词";
+  $("#new-title").textContent="自己录入";
   $("#n-w").placeholder="输入汉字，例如：雨伞";
   $("#bulk-hint").innerHTML=`每行一个词：<span class="mono">汉字 | 释义 | 例句</span>，后两项可以省略。拼音和级别会自动补上。`;
   $("#bulk").placeholder="雨伞 | umbrella | 下雨了，带上雨伞吧。\n插座 | Steckdose";
@@ -2511,14 +2526,14 @@ function formCard(){
 }
 function fillForm(r){
   const set=(id,v)=>{ if(v!=null&&String(v).trim()) $("#"+id).value=String(v).trim(); };
-  set("n-x",r.extra); set("n-ex",r.ex); set("n-memo",r.memo);
+  set("n-x",r.extra); set("n-ex",r.ex); set("n-memo",r.memo); if(r.ex||r.memo){ const m=$("#n-more"); if(m) m.open=true; }
   if(!$("#n-mean").value.trim()){ const k=glSel()[0]; set("n-mean",r[k]||r.en||r.de); }
   if(r.level&&LV().includes(r.level)&&NLV.how!=="hsk"){ NLV.lv=r.level; $("#n-lvinfo").textContent=trOne("级别：")+r.level; }
 }
 $("#n-ai").addEventListener("click",async()=>{
   const w=$("#n-w").value.trim(); if(!w){ setStatus("先输入汉字。",true); $("#n-w").focus(); return; }
   if(aiState!=="ready") return;
-  if(ALL.some(c=>c.w===w)){ setStatus("这个词已经在词库里了。",true); return; }
+  if(ALL.some(c=>c.w===w)){ setStatus("这个词已经在字匣里了。",true); return; }
   busy=true; renderNewButtons(); setStatus("AI 正在补全释义和例句…",false,true);
   try{ const r=await aiEntry(lang(),w); if(!r||typeof r!=="object") throw {code:"invalid_json"}; fillForm(r); setStatus(""); }
   catch(e){ setStatus(aiErr(e),true); }
@@ -2532,7 +2547,7 @@ $("#n-form").addEventListener("submit",async e=>{
   if(!o.w){ setStatus("先输入汉字。",true); return; }
   if(!HAN.test(o.w)){ setStatus("请输入汉字。",true); return; }
   if(!o.mean){ setStatus("写一个释义。",true); $("#n-mean").focus(); return; }
-  if(ALL.some(c=>c.w===o.w)){ setStatus("这个词已经在词库里了。",true); return; }
+  if(ALL.some(c=>c.w===o.w)){ setStatus("这个词已经在字匣里了。",true); return; }
   const lv=NLV.w===o.w&&NLV.lv?NLV.lv:(await autoLevel(o.w)).lv;
   const id="u:"+Date.now().toString(36)+Math.random().toString(36).slice(2,6);
   // the one meaning is kept as the card's gloss (shown without a language label) — en is used so word list, search and sync keep working
@@ -3171,8 +3186,9 @@ async function dicSearch(q){
       items=(typeof pyPrefix!=="undefined"&&pyPrefix)||!items.length?extra.concat(items.filter(x=>!extra.some(b=>b.w===x.w))):items.concat(extra); }
   }
   if(DIC.last!==q) return;
-  if(!items.length){ res.innerHTML=`<p class="small muted">${esc(trOne("没有找到。")||"没有找到。")}</p>`; return; }
-  res.innerHTML=`<div class="dic-res" data-noi18n>${items.map(x=>`<button class="it" type="button" data-dw="${esc(x.w)}"><span class="w">${zToneText(x.w,x.py)}</span><span class="p">${zTonePy(x.py)}</span><span class="m" data-dm="${esc(x.w)}">${esc(x.m||"")}</span></button>`).join("")}</div>`;
+  if(!items.length){ res.innerHTML=`<p class="small muted">${esc(trOne("没有找到。")||"没有找到。")}</p>${HAN.test(q)?`<button class="btn sm dic-add" type="button" data-dadd="${esc(q.trim())}">${esc(trOne("自己录入")||"自己录入")}「${esc(q.trim())}」</button>`:""}`; return; }
+  res.innerHTML=`<div class="dic-res" data-noi18n>${items.map(x=>`<button class="it" type="button" data-dw="${esc(x.w)}"><span class="w">${zToneText(x.w,x.py)}</span><span class="p">${zTonePy(x.py)}</span><span class="m" data-dm="${esc(x.w)}">${esc(x.m||"")}</span></button>`).join("")}</div>`
+  { const qq=String(q||"").trim(); if(HAN.test(qq)&&!items.some(x=>x.w===qq)) res.insertAdjacentHTML("beforeend",`<p class="small muted dic-add"><span>${esc(trOne("字典里没有这个词？")||"字典里没有这个词？")}</span> <button class="btn sm" type="button" data-dadd="${esc(qq)}">${esc(trOne("自己录入")||"自己录入")}「${esc(qq)}」</button></p>`); }
   // meanings for the first results (word bank first, else dictionary shard)
   items.slice(0,12).forEach(async x=>{ if(x.m) return; const c=syFind("zh",x.w); let m=c?[c.en,c.de].filter(Boolean).join(" · "):"";
     if(!m){ const rows=await zdGet(x.w); if(rows&&rows[0]) m=[zdShort(rows[0][1]),zdShort(rows[0][2])].filter(Boolean).join(" · "); }
@@ -3180,7 +3196,7 @@ async function dicSearch(q){
 }
 async function dicShow(w){
   const rows=await zdGet(w), res=$("#dic-res"); if(!res) return; DIC.view="word"; DIC.cur=w;
-  if(!rows){ res.innerHTML=`<p class="small muted">${esc(trOne("词典里没有这个词。")||"词典里没有这个词。")}</p>`; return; }
+  if(!rows){ res.innerHTML=`<p class="small muted">${esc(trOne("词典里没有这个词。")||"词典里没有这个词。")}</p><button class="btn sm dic-add" type="button" data-dadd="${esc(w)}">${esc(trOne("自己录入")||"自己录入")}「${esc(w)}」</button>`; return; }
   const gl=glSel().concat(["en","de"].filter(k=>!glSel().includes(k))), hsk=rows[0][3]||0, have=syFind("zh",w);
   res.innerHTML=`<div class="dic-det">${DIC.last&&DIC.last!==w?`<button class="btn ghost sm" type="button" id="dic-back">← ${esc(trOne("返回")||"返回")}</button>`:""}
     <div class="hd" data-noi18n><span class="w">${zToneText(w,rows[0][0])}</span><span class="p">${zTonePy(rows[0][0])}</span>${hsk?`<span class="zd-h" style="font-size:12px;border:1px solid var(--line);border-radius:999px;padding:0 8px;color:var(--acc)">HSK ${hsk}</span>`:""}</div>
@@ -3193,7 +3209,7 @@ async function dicShow(w){
 function dicSave(){ const w=DIC.cur; if(!w) return; zdGet(w).then(rows=>{ if(!rows) return; const r=rows[0];
   const v={lang:"zh",word:w,lemma:w,py:r[0],en:zdShort(r[1]),de:zdShort(r[2]),source:"字典",level:r[3]?"HSK"+r[3]:undefined};
   if(!v.en&&!v.de) v.en=r[1]||r[2]; const x=addFromReader(v);
-  toast(x==="ok"?"已收进「"+zs(w)+"」，在生词堆里":x==="dup"?"已经在词库里，放进了生词堆":"没有保存"); }); }
+  toast(x==="ok"?"已收进「"+zs(w)+"」，在生词堆里":x==="dup"?"已经在字匣里，放进了生词堆":"没有保存"); }); }
 /* handwriting pad */
 function dicPadHtml(){ return `<div class="dic-pad" id="dic-pad"><div class="dic-cv" id="dic-cv"><svg class="mz-grid" viewBox="0 0 100 100" aria-hidden="true"><rect x="1" y="1" width="98" height="98" rx="4"/><path d="M50 1V99M1 50H99M1 1L99 99M99 1L1 99"/></svg><canvas id="dic-canvas"></canvas></div>
   <div class="dic-cands" id="dic-cands" data-noi18n></div><div class="dic-padacts"><button class="btn ghost sm" type="button" id="dic-undo">撤销一笔</button><button class="btn ghost sm" type="button" id="dic-clear">清除</button></div></div>`; }
@@ -3246,6 +3262,7 @@ function dicOpen(){
   q.addEventListener("keydown",e=>{ if(e.key==="Enter"){ e.preventDefault(); clearTimeout(tm); dicSearch(q.value); q.blur(); } });
   root.addEventListener("click",e=>{ const b=e.target.closest("button"); if(!b) return;
     if(b.dataset.dw){ dicShow(b.dataset.dw); return; }
+    if(b.dataset.dadd!=null){ const w=b.dataset.dadd; closeDetail(); addOpen(w); return; }
     if(b.dataset.cand!=null){ q.value=(q.value||"")+b.dataset.cand; dicClearPad(); dicSearch(q.value); return; }
     if(b.id==="dic-hwb"){ const on=b.getAttribute("aria-pressed")!=="true"; dicPad(on); S.settings.dicHw=on; save(); return; }
     if(b.id==="dic-undo"){ DIC.strokes.pop(); DIC.redraw&&DIC.redraw(); dicCands(); return; }
@@ -3404,7 +3421,7 @@ function mgPaint(){
   el.hidden=false;
   if(s.zh){ const gl=glSel().concat(["en","de"].filter(k=>!glSel().includes(k)));
     $("#mg-sheet-in").innerHTML=`<div class="row"><span class="w zc${[...s.lemma].length>3?" long":""}" lang="zh-CN" data-noi18n>${zToneText(s.lemma,s.py)}</span><span class="py" data-noi18n>${zTonePy(s.py||"")}</span><span class="small muted">${esc(s.pos||"")}</span><span class="spacer"></span><button class="ib" id="mg-ssay" aria-label="朗读">${I.spk}</button>${hasTTS&&MG.sIdx>=0?`<button class="ib" id="mg-sfrom" aria-label="从这句读">${I.play}</button>`:""}<button class="ib" id="mg-sx" aria-label="关闭">${I.x}</button></div>
-    ${s.have?'<p class="small muted" style="margin:0">这个词已经在词库里了，点保存会放进生词堆。</p>':""}
+    ${s.have?'<p class="small muted" style="margin:0">这个词已经在字匣里了，点保存会放进生词堆。</p>':""}
     ${s.en||s.de?`<div class="zgl-l" data-noi18n>${gl.filter(k=>s[k]).map(k=>`<div lang="${k}"><span class="k">${GLS[k]}</span>${esc(s[k])}</div>`).join("")}</div>`:""}
     ${s.dict&&s.dict.length?`<details class="zd"${!(s.en||s.de)||s.dict.length>1?" open":""}><summary>词典${s.hsk?` <span class="zd-h" data-noi18n>HSK ${s.hsk}</span>`:""}${s.dict.length>1?` <span class="zd-n" data-noi18n>${s.dict.length} × pinyin</span>`:""}</summary>${s.dict.map(r=>`<div class="zd-r" data-noi18n><span class="zd-p">${esc(r[0])}</span>${gl.filter(k=>k==="en"?r[1]:r[2]).map(k=>`<div lang="${k}"><span class="k">${GLS[k]}</span>${esc(k==="en"?r[1]:r[2])}</div>`).join("")}</div>`).join("")}<p class="zd-src" data-noi18n>CC-CEDICT · HanDeDict</p></details>`:s.dstate==="load"&&!s.en&&!s.de?`<p class="small muted wk-msg">正在查词典…</p>`:""}
     ${s.wk&&s.wk.state==="ok"&&!s.en?`<div class="wk" lang="en" data-noi18n>${s.wk.senses.map(x=>`<div class="wk-s"><span class="wk-p">${esc(x.pos)}</span><ol>${x.defs.map(d=>`<li>${esc(d.t)}</li>`).join("")}</ol></div>`).join("")}<a class="wk-src" href="${esc(s.wk.url)}" target="_blank" rel="noopener">Wiktionary ↗</a></div>`
@@ -3418,7 +3435,7 @@ function mgPaint(){
     <div class="row"><button class="btn primary" id="mg-ssave" type="button">${s.have?"放进生词堆":"收进生词"}</button>${aiState==="ready"?`<button class="btn sm" id="mg-sai" type="button" ${s.state==="ai"?"disabled":""}>${s.state==="ai"?"查询中…":"用 Claude 查"}</button>`:""}<span class="small muted" id="mg-smsg"></span></div>`;
     zStkMount(s.lemma); return; }
   $("#mg-sheet-in").innerHTML=`<div class="row"><span class="w" lang="${lang()}">${esc(s.lemma)}</span><span class="small muted">${esc([s.gender,s.pos].filter(Boolean).join(" · "))}</span><span class="spacer"></span><button class="ib" id="mg-ssay" aria-label="朗读">${I.spk}</button>${hasTTS&&MG.sIdx>=0?`<button class="ib" id="mg-sfrom" aria-label="从这句读">${I.play}</button>`:""}<button class="ib" id="mg-sx" aria-label="关闭">${I.x}</button></div>
-    ${s.have?'<p class="small muted" style="margin:0">这个词已经在词库里了，点保存会放进生词堆。</p>':""}
+    ${s.have?'<p class="small muted" style="margin:0">这个词已经在字匣里了，点保存会放进生词堆。</p>':""}
     ${s.wk&&s.wk.state==="ok"?`<div class="wk" lang="en" data-noi18n>${s.wk.form?`<p class="wk-form">${esc(s.wk.form)}</p>`:""}${s.wk.senses.map(x=>`<div class="wk-s"><span class="wk-p">${esc(x.pos)}</span><ol>${x.defs.map(d=>`<li>${esc(d.t)}</li>`).join("")}</ol></div>`).join("")}<a class="wk-src" href="${esc(s.wk.url)}" target="_blank" rel="noopener">Wiktionary ↗</a></div>`
       :s.wk&&s.wk.state==="load"?`<p class="small muted wk-msg">正在查 Wiktionary…</p>`:s.wk&&s.wk.state==="none"?`<p class="small muted wk-msg">Wiktionary 没有收这个词</p>`:""}
     ${s.en?`<p class="wk-en" lang="en" data-noi18n>${esc(s.en)}</p>`:""}
@@ -3466,14 +3483,14 @@ function mgSaveWord(){
     if(mine) v[glSel()[0]==="de"?"de":"en"]=mine;
     if(!v.en&&!v.de){ $("#mg-smsg").textContent="先填一个释义。"; $("#mg-zh-in").focus(); return; }
     const r=addFromReader(v);
-    toast(r==="ok"?"已收进「"+zs(s.lemma)+"」，在生词堆里":r==="dup"?"已经在词库里，放进了生词堆":"没有保存");
+    toast(r==="ok"?"已收进「"+zs(s.lemma)+"」，在生词堆里":r==="dup"?"已经在字匣里，放进了生词堆":"没有保存");
     MG.sheet=null; mgPaint(); $$(".mg-w.on").forEach(x=>x.classList.remove("on"));
     if(r==="ok") mgRender(); return; }
   s.zh=($("#mg-zh-in").value||"").trim();
   const def=s.en||wkShort(s);
   if(!s.zh&&!def){ $("#mg-smsg").textContent="先填一个中文释义。"; $("#mg-zh-in").focus(); return; }
   const r=addFromReader({lang:lang(),word:s.word,lemma:s.lemma,zh:s.zh,def,pos:s.pos,gender:s.gender,note:s.note,sentence:s.sentence,source:it.title,date:MG.cur.date,level:it.level});
-  toast(r==="ok"?"已收进「"+s.lemma+"」，在生词堆里":r==="dup"?"已经在词库里，放进了生词堆":"没有保存");
+  toast(r==="ok"?"已收进「"+s.lemma+"」，在生词堆里":r==="dup"?"已经在字匣里，放进了生词堆":"没有保存");
   MG.sheet=null; mgPaint(); $$(".mg-w.on").forEach(x=>x.classList.remove("on"));
   if(r==="ok") mgRender();
 }
@@ -3562,7 +3579,7 @@ function renderPile(){
   const p=L().pile, list=pileCards().sort((a,b)=>p[b.id]-p[a.id]);
   $("#pile-title").textContent="生词堆 · "+LANG[lang()].name;
   $("#pile-go").textContent="复习生词堆（"+list.length+"）"; $("#pile-go").disabled=!list.length;
-  if(!Object.keys(p).length){ $("#pile-list").innerHTML=`<div class="empty"><b>生词堆还是空的</b>学习时点卡片右上角的星标，或者在词库里点星标，就能把不熟的词放进来。</div>`; return; }
+  if(!Object.keys(p).length){ $("#pile-list").innerHTML=`<div class="empty"><b>生词堆还是空的</b>学习时点卡片右上角的星标，或者在字匣里点星标，就能把不熟的词放进来。</div>`; return; }
   if(!list.length){ $("#pile-list").innerHTML=`<div class="empty">这个级别没有生词。</div>`; return; }
   const srs=L().srs;
   $("#pile-list").innerHTML=`<div class="tbl scroll"><table><thead><tr><th>单词</th><th>释义</th><th>级别</th><th>掌握</th><th></th></tr></thead><tbody>${
@@ -4110,15 +4127,21 @@ const UI_DICT=[
 ["今日学习", "Today", "Heute", "Hoje", "今日學習"],
 ["阅读", "Read", "Lesen", "Leitura", "閱讀"],
 ["录入新词", "Add words", "Wörter eintragen", "Adicionar palavras", "錄入新詞"],
-["词库", "Word list", "Wortschatz", "Vocabulário", "詞庫"],
+["自己录入", "Add your own", "Selbst eintragen", "Adicionar à mão", "自己錄入"],
+["字典里没有这个词？", "Not in the dictionary?", "Nicht im Wörterbuch?", "Não está no dicionário?", "字典裡沒有這個詞？"],
+["例句、记忆提示（可选）", "Example, memory hint (optional)", "Beispiel, Eselsbrücke (optional)", "Exemplo, dica de memória (opcional)", "例句、記憶提示（可選）"],
+["字典里没有的词 · 拍照识词 · 批量导入", "Words not in the dictionary · from a photo · bulk import", "Wörter, die nicht im Wörterbuch stehen · per Foto · als Liste", "Palavras fora do dicionário · por foto · em lote", "字典裡沒有的詞 · 拍照識詞 · 批量導入"],
+["在字匣里找：汉字、拼音或释义…", "Find in your word box: characters, pinyin or meaning…", "Im Wortkästchen suchen: Zeichen, Pinyin oder Bedeutung…", "Procurar na caixa: caracteres, pinyin ou significado…", "在字匣裡找：漢字、拼音或釋義…"],
+
+["字匣", "Word box", "Wortkästchen", "Caixa de palavras", "字匣"],
 ["进度", "Progress", "Fortschritt", "Progresso", "進度"],
 ["设置与备份", "Settings & backup", "Einstellungen & Sicherung", "Ajustes e backup", "設定與備份"],
 ["录入新词 · {0}", "Add words · {0}", "Wörter eintragen · {0}", "Adicionar palavras · {0}", "錄入新詞 · {0}"],
 ["生词堆 · {0}", "Practice pile · {0}", "Übungsstapel · {0}", "Pilha de prática · {0}", "生詞堆 · {0}"],
 // today / settings side
-["正在载入词库…", "Loading word list…", "Wortschatz wird geladen …", "Carregando vocabulário…", "正在載入詞庫…"],
-["正在载入{0}词库…", "Loading {0} word list…", "{0} Wortschatz wird geladen …", "Carregando vocabulário de {0}…", "正在載入{0}詞庫…"],
-["词库没有载入", "Word list did not load", "Wortschatz nicht geladen", "O vocabulário não carregou", "詞庫沒有載入"],
+["正在载入字匣…", "Loading word box…", "Wortkästchen wird geladen …", "Carregando vocabulário…", "正在載入字匣…"],
+["正在载入{0}字匣…", "Loading {0} word box…", "{0} Wortkästchen wird geladen …", "Carregando vocabulário de {0}…", "正在載入{0}字匣…"],
+["字匣没有载入", "Word box did not load", "Wortkästchen nicht geladen", "O vocabulário não carregou", "字匣沒有載入"],
 ["请检查网络后刷新页面。（{0}）", "Check your connection and reload the page. ({0})", "Prüfe die Verbindung und lade die Seite neu. ({0})", "Verifique a conexão e recarregue a página. ({0})", "請檢查網路後重新整理頁面。（{0}）"],
 ["每日打卡", "Daily goal", "Tagesziel", "Meta diária", "每日打卡"],
 ["每天新词数", "New words per day", "Neue Wörter pro Tag", "Palavras novas por dia", "每天新詞數"],
@@ -4162,9 +4185,9 @@ const UI_DICT=[
 ["上传图片", "Upload picture", "Bild hochladen", "Enviar imagem", "上傳圖片"],
 ["去掉图片", "Remove picture", "Bild entfernen", "Remover imagem", "去掉圖片"],
 ["我的发音", "My pronunciation", "Meine Aussprache", "Minha pronúncia", "我的發音"],
-["保存到词库", "Save to word list", "Im Wortschatz speichern", "Salvar no vocabulário", "儲存到詞庫"],
+["保存到字匣", "Save to word box", "Im Wortkästchen speichern", "Salvar no vocabulário", "儲存到字匣"],
 ["拍照识词", "Words from a photo", "Wörter aus einem Foto", "Palavras de uma foto", "拍照識詞"],
-["拍下课本、笔记、菜单、路牌或手写词表，AI 把里面值得学的词挑出来，配好释义和例句，你勾选后加入词库。", "Photograph a textbook, notes, a menu, a street sign or a handwritten list. AI picks out words worth learning with meanings and examples; tick the ones you want to add.", "Fotografiere Lehrbuch, Notizen, Speisekarte, Schild oder eine handschriftliche Liste. Die KI wählt lernenswerte Wörter mit Bedeutung und Beispiel aus; du hakst ab, was du übernehmen willst.", "Fotografe um livro, anotações, cardápio, placa ou lista à mão. A IA escolhe palavras que valem a pena, com significado e exemplo; marque as que quer adicionar.", "拍下課本、筆記、選單、路牌或手寫詞表，AI 把裡面值得學的詞挑出來，配好釋義和例句，你勾選後加入詞庫。"],
+["拍下课本、笔记、菜单、路牌或手写词表，AI 把里面值得学的词挑出来，配好释义和例句，你勾选后加入字匣。", "Photograph a textbook, notes, a menu, a street sign or a handwritten list. AI picks out words worth learning with meanings and examples; tick the ones you want to add.", "Fotografiere Lehrbuch, Notizen, Speisekarte, Schild oder eine handschriftliche Liste. Die KI wählt lernenswerte Wörter mit Bedeutung und Beispiel aus; du hakst ab, was du übernehmen willst.", "Fotografe um livro, anotações, cardápio, placa ou lista à mão. A IA escolhe palavras que valem a pena, com significado e exemplo; marque as que quer adicionar.", "拍下課本、筆記、選單、路牌或手寫詞表，AI 把裡面值得學的詞挑出來，配好釋義和例句，你勾選後加入字匣。"],
 ["拍照", "Take photo", "Foto aufnehmen", "Tirar foto", "拍照"],
 ["选择图片", "Choose pictures", "Bilder wählen", "Escolher imagens", "選擇圖片"],
 ["怎么录入", "How to add words", "So trägst du Wörter ein", "Como adicionar palavras", "怎麼錄入"],
@@ -4192,12 +4215,12 @@ const UI_DICT=[
 ["先输入单词。", "Type a word first.", "Erst ein Wort eingeben.", "Digite uma palavra primeiro.", "先輸入單詞。"],
 ["正在画插图…（通常 10–60 秒）", "Drawing… (usually 10–60 s)", "Zeichne … (meist 10–60 s)", "Desenhando… (geralmente 10–60 s)", "正在畫插圖…（通常 10–60 秒）"],
 ["插图画好了。不满意可以重画或上传自己的图片。", "Picture ready. Redraw or upload your own if you don't like it.", "Bild fertig. Neu zeichnen oder eigenes hochladen, wenn es nicht passt.", "Imagem pronta. Redesenhe ou envie a sua se não gostar.", "插圖畫好了。不滿意可以重畫或上傳自己的圖片。"],
-["这个词已经在词库里了，可以在「词库」里点它，写例句、录音。", "This word is already in your word list. Open it under “Word list” to add sentences or a recording.", "Dieses Wort ist schon im Wortschatz. Öffne es unter „Wortschatz“, um Sätze oder eine Aufnahme hinzuzufügen.", "Esta palavra já está no vocabulário. Abra-a em “Vocabulário” para adicionar frases ou uma gravação.", "這個詞已經在詞庫裡了，可以在「詞庫」裡點它，寫例句、錄音。"],
+["这个词已经在字匣里了，可以在「字匣」里点它，写例句、录音。", "This word is already in your word box. Open it under “Word box” to add sentences or a recording.", "Dieses Wort ist schon im Wortkästchen. Öffne es unter „Wortkästchen“, um Sätze oder eine Aufnahme hinzuzufügen.", "Esta palavra já está no vocabulário. Abra-a em “Caixa de palavras” para adicionar frases ou uma gravação.", "這個詞已經在字匣裡了，可以在「字匣」裡點它，寫例句、錄音。"],
 ["AI 正在补全释义和例句…", "AI is filling in meanings and examples…", "Die KI ergänzt Bedeutung und Beispiele …", "A IA está completando significado e exemplos…", "AI 正在補全釋義和例句…"],
 ["已使用你上传的图片。", "Using your uploaded picture.", "Dein hochgeladenes Bild wird verwendet.", "Usando a imagem que você enviou.", "已使用你上傳的圖片。"],
 ["这张图片读不出来，换一张试试。", "Couldn't read this picture. Try another one.", "Dieses Bild ließ sich nicht lesen. Versuch ein anderes.", "Não deu para ler esta imagem. Tente outra.", "這張圖片讀不出來，換一張試試。"],
 ["至少填一种释义。", "Fill in at least one meaning.", "Mindestens eine Bedeutung angeben.", "Preencha pelo menos um significado.", "至少填一種釋義。"],
-["这个词已经在词库里了。", "This word is already in your word list.", "Dieses Wort ist schon im Wortschatz.", "Esta palavra já está no vocabulário.", "這個詞已經在詞庫裡了。"],
+["这个词已经在字匣里了。", "This word is already in your word box.", "Dieses Wort ist schon im Wortkästchen.", "Esta palavra já está no vocabulário.", "這個詞已經在字匣裡了。"],
 ["正在录音，先点「停止」。", "Recording — tap “Stop” first.", "Aufnahme läuft – erst „Stopp“ tippen.", "Gravando — toque em “Parar” primeiro.", "正在錄音，先點「停止」。"],
 ["「{0}」已保存，会作为新词优先出现。", "“{0}” saved. It will come up first as a new word.", "„{0}“ gespeichert. Es kommt als Nächstes als neues Wort.", "“{0}” salva. Vai aparecer primeiro como palavra nova.", "「{0}」已儲存，會作為新詞優先出現。"],
 // photo scan
@@ -4208,14 +4231,14 @@ const UI_DICT=[
 ["图片里没找到{0}的词。", "No {0} words found in the picture.", "Keine Wörter auf {0} im Bild gefunden.", "Nenhuma palavra em {0} na imagem.", "圖片裡沒找到{0}的詞。"],
 ["拍照识词结果", "Photo results", "Foto-Ergebnis", "Resultado da foto", "拍照識詞結果"],
 ["从照片里找到 {0} 个词", "{0} words found in the photo", "{0} Wörter im Foto gefunden", "{0} palavras encontradas na foto", "從照片裡找到 {0} 個詞"],
-["勾选要加入词库的词。已经在词库里的词默认不勾。释义和例句以后可以在词库里点开修改，也能录音。", "Tick the words to add. Words already in your list are unticked. You can edit meanings and examples later in the word list and add recordings.", "Wörter zum Hinzufügen ankreuzen. Wörter, die schon im Wortschatz sind, sind nicht angekreuzt. Bedeutungen und Beispiele kannst du später im Wortschatz ändern und Aufnahmen ergänzen.", "Marque as palavras para adicionar. As que já estão no vocabulário ficam desmarcadas. Depois você pode editar significados e exemplos e gravar a pronúncia.", "勾選要加入詞庫的詞。已經在詞庫裡的詞預設不勾。釋義和例句以後可以在詞庫裡點開修改，也能錄音。"],
+["勾选要加入字匣的词。已经在字匣里的词默认不勾。释义和例句以后可以在字匣里点开修改，也能录音。", "Tick the words to add. Words already in your list are unticked. You can edit meanings and examples later in the word box and add recordings.", "Wörter zum Hinzufügen ankreuzen. Wörter, die schon im Wortkästchen sind, sind nicht angekreuzt. Bedeutungen und Beispiele kannst du später im Wortkästchen ändern und Aufnahmen ergänzen.", "Marque as palavras para adicionar. As que já estão no vocabulário ficam desmarcadas. Depois você pode editar significados e exemplos e gravar a pronúncia.", "勾選要加入字匣的詞。已經在字匣裡的詞預設不勾。釋義和例句以後可以在字匣裡點開修改，也能錄音。"],
 ["全选", "Select all", "Alle", "Todas", "全選"],
 ["全不选", "Select none", "Keine", "Nenhuma", "全不選"],
 ["同时放进生词堆", "Also add to practice pile", "Auch in den Übungsstapel", "Também na pilha de prática", "同時放進生詞堆"],
 ["选择 {0}", "Select {0}", "{0} auswählen", "Selecionar {0}", "選擇 {0}"],
-["已在词库", "In word list", "Im Wortschatz", "No vocabulário", "已在詞庫"],
-["加入词库", "Add to word list", "Zum Wortschatz hinzufügen", "Adicionar ao vocabulário", "加入詞庫"],
-["加入词库（{0} 个）", "Add to word list ({0})", "Zum Wortschatz ({0})", "Adicionar ({0})", "加入詞庫（{0} 個）"],
+["已在字匣", "In word box", "Im Wortkästchen", "No vocabulário", "已在字匣"],
+["加入字匣", "Add to word box", "Zum Wortkästchen hinzufügen", "Adicionar ao vocabulário", "加入字匣"],
+["加入字匣（{0} 个）", "Add to word box ({0})", "Zum Wortkästchen ({0})", "Adicionar ({0})", "加入字匣（{0} 個）"],
 ["已加入 {0} 个词，会作为新词优先出现。", "Added {0} words. They'll come up first as new words.", "{0} Wörter hinzugefügt. Sie kommen als Nächstes dran.", "{0} palavras adicionadas. Vão aparecer primeiro como novas.", "已加入 {0} 個詞，會作為新詞優先出現。"],
 ["已加入 {0} 个词", "Added {0} words", "{0} Wörter hinzugefügt", "{0} palavras adicionadas", "已加入 {0} 個詞"],
 ["取消", "Cancel", "Abbrechen", "Cancelar", "取消"],
@@ -4225,12 +4248,12 @@ const UI_DICT=[
 ["复习生词堆", "Review practice pile", "Übungsstapel wiederholen", "Revisar a pilha", "複習生詞堆"],
 ["复习生词堆（{0}）", "Review practice pile ({0})", "Übungsstapel wiederholen ({0})", "Revisar a pilha ({0})", "複習生詞堆（{0}）"],
 ["生词堆怎么用", "How the practice pile works", "So funktioniert der Übungsstapel", "Como funciona a pilha", "生詞堆怎麼用"],
-["不熟的词点卡片右上角的星标，就会放进生词堆；在词库里也可以直接加。", "Tap the star on a card to put a word you don't know well into the pile. You can also add words from the word list.", "Tippe auf den Stern einer Karte, um ein unsicheres Wort auf den Stapel zu legen. Das geht auch im Wortschatz.", "Toque na estrela do cartão para pôr uma palavra difícil na pilha. Também dá para adicionar pelo vocabulário.", "不熟的詞點卡片右上角的星標，就會放進生詞堆；在詞庫裡也可以直接加。"],
+["不熟的词点卡片右上角的星标，就会放进生词堆；在字匣里也可以直接加。", "Tap the star on a card to put a word you don't know well into the pile. You can also add words from the word box.", "Tippe auf den Stern einer Karte, um ein unsicheres Wort auf den Stapel zu legen. Das geht auch im Wortkästchen.", "Toque na estrela do cartão para pôr uma palavra difícil na pilha. Também dá para adicionar pelo vocabulário.", "不熟的詞點卡片右上角的星標，就會放進生詞堆；在字匣裡也可以直接加。"],
 ["「复习生词堆」不管有没有到期，会把堆里的词全部过一遍。评为「简单」的词会自动移出生词堆，其余的留着下次再练。", "“Review practice pile” goes through every word in the pile, due or not. Words rated “Easy” leave the pile; the rest stay for next time.", "„Übungsstapel wiederholen“ geht alle Wörter im Stapel durch, fällig oder nicht. Mit „Leicht“ bewertete Wörter verlassen den Stapel, der Rest bleibt.", "“Revisar a pilha” passa por todas as palavras da pilha, vencidas ou não. As marcadas “Fácil” saem; o resto fica para a próxima.", "「複習生詞堆」不管有沒有到期，會把堆裡的詞全部過一遍。評為「簡單」的詞會自動移出生詞堆，其餘的留著下次再練。"],
 ["点单词可以打开详情，写例句、录发音。", "Tap a word to open it and add sentences or your pronunciation.", "Tippe ein Wort an, um Sätze oder deine Aussprache hinzuzufügen.", "Toque numa palavra para adicionar frases ou a sua pronúncia.", "點單詞可以開啟詳情，寫例句、錄發音。"],
 ["掌握程度分级", "Mastery levels", "Lernstufen", "Níveis de domínio", "掌握程度分級"],
 ["生词堆还是空的", "The practice pile is empty", "Der Übungsstapel ist leer", "A pilha está vazia", "生詞堆還是空的"],
-["学习时点卡片右上角的星标，或者在词库里点星标，就能把不熟的词放进来。", "Tap the star on a card while studying, or in the word list, to add words you don't know well.", "Tippe beim Lernen oder im Wortschatz auf den Stern, um unsichere Wörter hinzuzufügen.", "Toque na estrela no cartão ou no vocabulário para adicionar palavras difíceis.", "學習時點卡片右上角的星標，或者在詞庫裡點星標，就能把不熟的詞放進來。"],
+["学习时点卡片右上角的星标，或者在字匣里点星标，就能把不熟的词放进来。", "Tap the star on a card while studying, or in the word box, to add words you don't know well.", "Tippe beim Lernen oder im Wortkästchen auf den Stern, um unsichere Wörter hinzuzufügen.", "Toque na estrela no cartão ou no vocabulário para adicionar palavras difíceis.", "學習時點卡片右上角的星標，或者在字匣裡點星標，就能把不熟的詞放進來。"],
 ["这个级别没有生词。", "No pile words at this level.", "Keine Stapelwörter auf diesem Niveau.", "Nenhuma palavra da pilha neste nível.", "這個級別沒有生詞。"],
 ["释义", "Meaning", "Bedeutung", "Significado", "釋義"],
 ["掌握", "Known", "Gekonnt", "Sabida", "掌握"],
@@ -4328,7 +4351,7 @@ const UI_DICT=[
 ["今天的{0}打卡完成：新学 {1} 个，复习 {2} 次。连续打卡 {3} 天。", "Today's {0} goal is done: {1} new words, {2} reviews. {3}-day streak.", "Tagesziel {0} erreicht: {1} neue Wörter, {2} Wiederholungen. {3} Tage in Folge.", "Meta de {0} cumprida: {1} palavras novas, {2} revisões. {3} dias seguidos.", "今天的{0}打卡完成：新學 {1} 個，複習 {2} 次。連續打卡 {3} 天。"],
 ["再学 5 个新词", "5 more new words", "5 neue Wörter mehr", "Mais 5 palavras novas", "再學 5 個新詞"],
 ["选中的级别学完了", "You've finished the selected levels", "Die gewählten Niveaus sind fertig", "Você terminou os níveis selecionados", "選中的級別學完了"],
-["在右边「新词从哪些级别来」里勾选其他级别，或者去「录入新词」加自己的词。", "Choose more levels under “Levels for new words”, or add your own under “Add words”.", "Wähle unter „Niveaus für neue Wörter“ weitere Niveaus oder trag eigene Wörter ein.", "Escolha mais níveis em “Níveis das palavras novas” ou adicione as suas em “Adicionar palavras”.", "在右邊「新詞從哪些級別來」裡勾選其他級別，或者去「錄入新詞」加自己的詞。"],
+["在右边「新词从哪些级别来」里勾选其他级别，或者去「字匣」自己录入。", "Choose more levels under “Levels for new words”, or add your own in the word box.", "Wähle unter „Niveaus für neue Wörter“ weitere Niveaus oder trag eigene Wörter ein.", "Escolha mais níveis em “Níveis das palavras novas” ou adicione as suas na caixa de palavras.", "在右邊「新詞從哪些級別來」裡勾選其他級別，或者去「錄入新詞」加自己的詞。"],
 ["今天这轮做完了。还差一点就能打卡：新词 {0} / {1}，待复习 {2}。", "This round is done. Almost at your goal: new {0} / {1}, due {2}.", "Runde geschafft. Fast am Ziel: neu {0} / {1}, fällig {2}.", "Rodada concluída. Quase lá: novas {0} / {1}, para revisar {2}.", "今天這輪做完了。還差一點就能打卡：新詞 {0} / {1}，待複習 {2}。"],
 ["继续", "Continue", "Weiter", "Continuar", "繼續"],
 // detail
@@ -4357,7 +4380,7 @@ const UI_DICT=[
 ["标准", "standard", "Standardaussprache", "pronúncia padrão", "標準"],
 ["再录，对比着听。", "then record and compare.", "anhören, dann aufnehmen und vergleichen.", "e depois grave para comparar.", "再錄，對比著聽。"],
 ["这是你录入的词。", "You added this word.", "Dieses Wort hast du eingetragen.", "Você adicionou esta palavra.", "這是你錄入的詞。"],
-["从词库删除", "Delete from word list", "Aus dem Wortschatz löschen", "Apagar do vocabulário", "從詞庫刪除"],
+["从字匣删除", "Delete from word box", "Aus dem Wortkästchen löschen", "Apagar do vocabulário", "從字匣刪除"],
 ["记忆提示已保存", "Memory hint saved", "Merkhilfe gespeichert", "Dica salva", "記憶提示已儲存"],
 ["已保存", "Saved", "Gespeichert", "Salvo", "已儲存"],
 ["已改用修改后的句子", "Using the corrected sentence", "Korrigierter Satz übernommen", "Usando a frase corrigida", "已改用修改後的句子"],
@@ -4367,7 +4390,7 @@ const UI_DICT=[
 ["图片已保存", "Picture saved", "Bild gespeichert", "Imagem salva", "圖片已儲存"],
 ["图片已删除", "Picture deleted", "Bild gelöscht", "Imagem apagada", "圖片已刪除"],
 ["再点一次确认删除", "Tap again to delete", "Zum Löschen erneut tippen", "Toque de novo para apagar", "再點一次確認刪除"],
-["已从词库删除", "Deleted from word list", "Aus dem Wortschatz gelöscht", "Apagada do vocabulário", "已從詞庫刪除"],
+["已从字匣删除", "Deleted from word box", "Aus dem Wortkästchen gelöscht", "Apagada do vocabulário", "已從字匣刪除"],
 ["音频太大了（超过 3 MB），请录短一点。", "The audio is too large (over 3 MB). Record something shorter.", "Die Aufnahme ist zu groß (über 3 MB). Bitte kürzer aufnehmen.", "O áudio é grande demais (mais de 3 MB). Grave algo mais curto.", "音訊太大了（超過 3 MB），請錄短一點。"],
 ["AI 正在检查…", "AI is checking…", "Die KI prüft …", "A IA está corrigindo…", "AI 正在檢查…"],
 ["没问题，很自然。", "Correct and natural.", "Korrekt und natürlich.", "Correto e natural.", "沒問題，很自然。"],
@@ -4405,7 +4428,7 @@ const UI_DICT=[
 ["调整", "Adjust", "Anpassen", "Ajustar", "調整"],
 ["结束计划", "End plan", "Plan beenden", "Encerrar plano", "結束計劃"],
 ["再点一次确认结束", "Tap again to end", "Zum Beenden erneut tippen", "Toque de novo para encerrar", "再點一次確認結束"],
-["计划已结束，生成的词都留在词库里", "Plan ended; generated words stay in your word list", "Plan beendet; erstellte Wörter bleiben im Wortschatz", "Plano encerrado; as palavras geradas continuam no vocabulário", "計劃已結束，生成的詞都留在詞庫裡"],
+["计划已结束，生成的词都留在字匣里", "Plan ended; generated words stay in your word box", "Plan beendet; erstellte Wörter bleiben im Wortkästchen", "Plano encerrado; as palavras geradas continuam no vocabulário", "計劃已結束，生成的詞都留在字匣裡"],
 ["目标级别", "Target level", "Zielniveau", "Nível alvo", "目標級別"],
 ["总词数", "Total words", "Wörter gesamt", "Total de palavras", "總詞數"],
 ["完成日期", "End date", "Enddatum", "Data final", "完成日期"],
@@ -4732,7 +4755,7 @@ const UI_DICT=[
 ["专题", "Feature", "Hintergrund", "Reportagem", "專題"],
 ["故事", "Story", "Geschichte", "Conto", "故事"],
 ["对话", "Dialogue", "Dialog", "Diálogo", "對話"],
-["这个词已经在词库里了，点保存会放进生词堆。", "This word is already in your list; saving puts it in the practice pile.", "Das Wort ist schon im Wortschatz; Speichern legt es in den Übungsstapel.", "Esta palavra já está no vocabulário; salvar a põe na pilha.", "這個詞已經在詞庫裡了，點儲存會放進生詞堆。"],
+["这个词已经在字匣里了，点保存会放进生词堆。", "This word is already in your list; saving puts it in the practice pile.", "Das Wort ist schon im Wortkästchen; Speichern legt es in den Übungsstapel.", "Esta palavra já está no vocabulário; salvar a põe na pilha.", "這個詞已經在字匣裡了，點儲存會放進生詞堆。"],
 ["中文释义", "Meaning (Chinese)", "Bedeutung (Chinesisch)", "Significado (chinês)", "中文釋義"],
 ["释义（中文）", "Meaning (Chinese)", "Bedeutung (Chinesisch)", "Significado (chinês)", "釋義（中文）"],
 ["我的笔记", "My notes", "Meine Notizen", "Minhas anotações", "我的筆記"],
@@ -4745,7 +4768,7 @@ const UI_DICT=[
 ["用 Claude 查", "Look up with Claude", "Mit Claude nachschlagen", "Consultar com o Claude", "用 Claude 查"],
 ["先填一个中文释义。", "Add a meaning first.", "Erst eine Bedeutung eintragen.", "Adicione um significado primeiro.", "先填一箇中文釋義。"],
 ["已收进「{0}」，在生词堆里", "Saved “{0}” to the practice pile", "„{0}“ im Übungsstapel gespeichert", "“{0}” guardada na pilha", "已收進「{0}」，在生詞堆裡"],
-["已经在词库里，放进了生词堆", "Already in your list; added to the pile", "Schon im Wortschatz; in den Stapel gelegt", "Já estava no vocabulário; posta na pilha", "已經在詞庫裡，放進了生詞堆"],
+["已经在字匣里，放进了生词堆", "Already in your list; added to the pile", "Schon im Wortkästchen; in den Stapel gelegt", "Já estava no vocabulário; posta na pilha", "已經在字匣裡，放進了生詞堆"],
 ["没有保存", "Not saved", "Nicht gespeichert", "Não salvo", "沒有儲存"],
 ["出自 {0}", "from {0}", "aus {0}", "de {0}", "出自 {0}"]
 ];
@@ -4866,8 +4889,14 @@ $("#ui-lang").addEventListener("change",e=>{ UIL=e.target.value; try{ localStora
 
 /* ---------- tabs & language ---------- */
 let cur="today";
-const TABS=["today","read","new","pile","browse","stats","settings"];
+const TABS=["today","read","pile","browse","stats","settings"];
+function addOpen(w){ // the old 录入新词 tab now lives in 字匣 → 自己录入
+  showTab("browse"); const d=$("#add-box"); if(!d) return; d.open=true;
+  if(w){ const i=$("#n-w"); i.value=w; i.dispatchEvent(new Event("input")); }
+  setTimeout(()=>{ d.scrollIntoView({behavior:"smooth",block:"start"}); $("#n-w").focus({preventScroll:true}); },60);
+}
 function showTab(t){
+  if(t==="new"){ addOpen(); return; }
   if(!TABS.includes(t)) t="today";
   cur=t; const grp={pile:"browse",settings:"stats"}[t]||t;
   $$("#tabs button").forEach(b=>{ b.setAttribute("aria-selected",b.dataset.tab===t); b.classList.toggle("grp-on",b.dataset.tab===grp); });
@@ -4890,9 +4919,9 @@ async function applyLang(){
   if(MG.sheet) mgClose(); MG.key=null; MG.tr=null;
   renderSettings(); renderNewForm(); voiceNote(); renderNT(); renderStrip(); renderBackupHint();
   if(hasTTS) speechSynthesis.cancel();
-  if(!DATA[l]){ $("#card-area").innerHTML=`<div class="empty"><b>正在载入${LANG[l].zh}词库…</b></div>`; $("#sess-bar").style.width="0"; }
+  if(!DATA[l]){ $("#card-area").innerHTML=`<div class="empty"><b>正在载入${LANG[l].zh}字匣…</b></div>`; $("#sess-bar").style.width="0"; }
   try{ await loadLang(l); }
-  catch(e){ $("#card-area").innerHTML=`<div class="empty"><b>词库没有载入</b>请检查网络后刷新页面。（${esc(e.message)}）</div>`; return; }
+  catch(e){ $("#card-area").innerHTML=`<div class="empty"><b>字匣没有载入</b>请检查网络后刷新页面。（${esc(e.message)}）</div>`; return; }
   if(lang()!==l) return;
   rebuildCards(); buildDaily(); renderStrip();
   if(cur!=="today") showTab(cur);
