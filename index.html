@@ -364,6 +364,29 @@ ol.steps li{margin:3px 0}
 .mg-gl dt{font-family:var(--f-word);font-weight:600}
 .mg-gl dd{margin:0;color:var(--muted)}
 .mg-gram{background:var(--sunk);border-radius:8px;padding:10px 12px}
+.mg-sw{display:flex;gap:4px;background:var(--sunk);border-radius:99px;padding:3px;width:max-content;margin:0 0 12px}
+.mg-sw button{border:0;background:none;border-radius:99px;padding:5px 16px;font:500 13.5px var(--f-ui);color:var(--muted);cursor:pointer}
+.mg-sw button[aria-pressed="true"]{background:var(--card,#fff);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.col-h{display:flex;align-items:baseline;gap:10px;margin:6px 0 4px}.col-h h2{margin:0;font-family:var(--f-word);font-size:22px;font-weight:500}
+.col-h .n{color:var(--muted);font-size:13px}
+.col-lead{color:var(--muted);font-size:14px;margin:0 0 14px}
+.col-now{border:1px solid var(--acc-soft,var(--line));border-radius:12px;padding:12px 14px;margin:0 0 18px}
+.col-now .k{font-size:12px;letter-spacing:.08em;color:var(--acc);margin:0 0 2px}
+.col-now .tn{font-family:var(--f-word);font-size:20px;margin:0}
+.col-now .tn small{font-family:var(--f-ui);font-size:13px;color:var(--muted);margin-left:8px}
+.col-sea{font-size:12px;letter-spacing:.14em;color:var(--muted);margin:16px 0 4px;border-bottom:1px solid var(--line);padding-bottom:4px}
+.col-t{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 12px;padding:10px 0;border-bottom:1px solid var(--sunk);align-items:baseline}
+.col-t .nm{font-family:var(--f-word);font-size:17px;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.col-t .nm small{font-family:var(--f-ui);font-size:12px;color:var(--muted);margin-left:8px}
+.col-t .rs{grid-column:1/-1;padding-left:2px}
+.col-t.off .nm{color:var(--muted)}
+.col-t.cur .nm{color:var(--acc);font-weight:600}
+.col-t .rs{display:grid;gap:6px;min-width:0}
+.col-t .rs button{display:flex;gap:8px;align-items:baseline;border:0;background:none;padding:0;text-align:left;cursor:pointer;color:inherit;font:inherit;min-width:0}
+.col-t .rs button .lv{font:500 11px var(--f-ui);color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:0 7px;flex:none}
+.col-t .rs button .t{font-family:var(--f-word);font-size:15.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.col-t .rs button .ok{color:var(--acc);font-size:12px;flex:none}
+.col-t .when{color:var(--muted);font-size:13px}
 .mg-poem{background:var(--sunk);border-radius:10px;padding:14px 16px}
 .mg-poem .pt{font-family:var(--f-word);font-size:18px;margin:0 0 2px}
 .mg-poem .pa{color:var(--muted);font-size:13px;margin:0 0 10px}
@@ -2653,22 +2676,27 @@ function mgOutlet(it){ if((it.series&&it.series.name)||it.term) return ""; const
 function mgMinutes(it){ if(it.lang==="zh"){ const n=(it.paragraphs||[]).join("").replace(/[^\u3400-\u9fff]/g,"").length; const r={HSK1:90,HSK2:110,HSK3:140,HSK4:170,HSK5:200,HSK6:230}[it.level]||150; return Math.max(1,Math.round(n/r)); } const w=(it.paragraphs||[]).join(" ").split(/\s+/).filter(Boolean).length; const rate=["A1","A2"].includes(it.level)?110:["B1","B2"].includes(it.level)?160:200; return Math.max(1,Math.round(w/rate)); }
 let MGZH=(()=>{ try{ return localStorage.getItem("zl-glzh")==="1"; }catch(e){ return false; } })();
 function mgFmt(d){ const [y,m,dd]=d.split("-").map(Number); return new Date(y,m-1,dd).toLocaleDateString(uiLocale(),{weekday:"long",month:"long",day:"numeric"}); }
-async function mgRender(){
+async function mgRender(){ await mgRender0(); mgSwPut(); }
+async function mgRender0(){
   const main=$("#mg-main"); if(!main) return;
   if(!MG.idx&&!MG.err){ main.innerHTML='<div class="empty"><b>正在载入文章…</b></div>'; await mgLoad(); if(cur!=="read") return; }
   if(!MG.idx&&!MG.err) return;
   if(MG.err){ main.innerHTML=`<div class="empty"><b>文章没有载入</b>${esc(MG.err)}<div style="margin-top:12px"><button class="btn sm" id="mg-retry" type="button">重试</button></div></div>`; $("#mg-arch").innerHTML=""; return; }
   const l=lang(), days=MG.idx.days; if(MG.di>=days.length) MG.di=0;
+  $("#mg-arch").hidden=!!MG.col;
+  if(MG.col&&!MG.key&&!MG.mine){ main.innerHTML=mgColumn(); $("#mg-week").hidden=true; MG.cur=null; return; }
   let pick, es, it, h;
   const mine=MG.mine?mineAll().find(a=>a.id===MG.mine&&a.lang===l):null;
   if(mine){
     pick={date:"mine",i:mine.id,older:false}; es=[]; it=mineItem(mine);
     h=`<div class="mg-head"><button class="btn ghost sm" id="mg-mineback" type="button">← 今日文章</button><span class="spacer"></span><button class="btn ghost sm mine-del" id="mg-minedel" type="button">删除这篇</button></div>`;
   } else {
+  if(MG.col&&MG.key){ const [d,i]=MG.key.split("|"); pick={date:d,i:+i,older:false}; es=[]; h=`<div class="mg-head"><button class="btn ghost sm" id="mg-colback" type="button">← <span>专栏</span></button></div>`; } else {
   pick=mgPick(); es=mgEntries(MG.di,l);
   h=!days.length?"":`<div class="mg-head"><button class="ib" id="mg-prev" aria-label="前一天" ${MG.di>=days.length-1?"disabled":""}>‹</button><span class="d">${days[MG.di]?mgFmt(days[MG.di].date):""}</span><button class="ib" id="mg-next" aria-label="后一天" ${MG.di<=0?"disabled":""}>›</button><span class="spacer"></span><button class="ib" id="mg-reload" aria-label="刷新" title="刷新">↻</button></div>`;
   { const lvs=mgLevels(MG.di,l); if(lvs.length>1){ const sel=mgLvSel(MG.di,l); h+=`<div class="mg-lvs" role="tablist" aria-label="Level"><button type="button" data-mglv="" aria-pressed="${!sel}">${esc(trOne("全部")||"全部")}</button>${lvs.map(v=>`<button type="button" data-mglv="${v}" aria-pressed="${sel===v}">${v}</button>`).join("")}</div>`; } }
   if(es.length) h+=`<nav class="mg-toc">${es.map(e=>`<button data-mg="${e.date}|${e.i}" aria-current="${!!pick&&!pick.older&&pick.date===e.date&&pick.i===e.i}"><span class="k">${esc(e.term||e.hour||MG_KIND[e.kind]||e.kind||"")}</span><span class="t zc" lang="zh-CN">${esc(zs(e.title))}</span><span class="m">${mgRead(e.date,e.i)?"✓":""}</span></button>`).join("")}<button class="mg-addchip" data-mineopen="1" type="button">＋ 我的文章</button></nav>`;
+  }
   if(!pick){ main.innerHTML=h+`<div class="empty"><b>还没有${LANG[l].zh}文章</b>每天 ${MG_ETA[l]} 左右送到。</div>`; mgArch(null); return; }
   try{ const day=await mgDay(pick.date); it=day.items[pick.i]; }catch(e){ main.innerHTML=h+`<div class="empty"><b>这篇没有载入</b>${esc(e.message)}</div>`; return; }
   if(!it){ main.innerHTML=h; return; }
@@ -2703,8 +2731,27 @@ function mgArch(pick){
   const l=lang(), rows=[]; (MG.idx?MG.idx.days:[]).forEach((d,di)=>d.items.forEach(x=>{ if(x.lang===l) rows.push({...x,date:d.date,di}); }));
   rows.sort((a,b)=>b.date.localeCompare(a.date)||(MG_ORD(a)-MG_ORD(b)));
   const show=MG.archAll?rows:rows.slice(0,12);
-  $("#mg-arch").innerHTML=`<h3 style="margin:0 0 8px"><span>往期</span> · <span>${rows.length} 篇</span></h3>${rows.length?`<div class="mg-arch">${show.map(x=>`<button data-mg="${x.date}|${x.i}" data-di="${x.di}" aria-current="${!!pick&&pick.date===x.date&&pick.i===x.i}"><span class="k">${new Date(x.date+"T12:00").toLocaleDateString(uiLocale(),{month:"short",day:"numeric"})}</span><span class="t zc" lang="zh-CN">${esc(zs(x.title))}</span><span class="m">${mgRead(x.date,x.i)?"✓":""}</span></button>`).join("")}</div>${rows.length>12&&!MG.archAll?'<button class="btn ghost sm" id="mg-archall" type="button">显示全部</button>':""}`:'<p class="note">还没有往期文章。</p>'}`+mgJqList(pick)+mgLibList(pick);
+  $("#mg-arch").innerHTML=`<h3 style="margin:0 0 8px"><span>往期</span> · <span>${rows.length} 篇</span></h3>${rows.length?`<div class="mg-arch">${show.map(x=>`<button data-mg="${x.date}|${x.i}" data-di="${x.di}" aria-current="${!!pick&&pick.date===x.date&&pick.i===x.i}"><span class="k">${new Date(x.date+"T12:00").toLocaleDateString(uiLocale(),{month:"short",day:"numeric"})}</span><span class="t zc" lang="zh-CN">${esc(zs(x.title))}</span><span class="m">${mgRead(x.date,x.i)?"✓":""}</span></button>`).join("")}</div>${rows.length>12&&!MG.archAll?'<button class="btn ghost sm" id="mg-archall" type="button">显示全部</button>':""}`:'<p class="note">还没有往期文章。</p>'}`; // 二十四节气 and 课文库 live on the 专栏 page
 }
+/* 专栏: fixed collections — 二十四节气 (all 24 terms by season; unopened ones show their date) and the library */
+const SEASONS=["春","夏","秋","冬"];
+function mdFmt(md){ const [m,d]=md.split("-").map(Number); return new Date(2026,m-1,d).toLocaleDateString(uiLocale(),{month:"short",day:"numeric"}); }
+function mgColumn(){
+  const l=lang(), terms=(MG.jq&&MG.jq.terms)||[], all=MG.jq?(MG.jq.items||[]).map((x,i)=>({...x,i})).filter(x=>x.lang===l):[];
+  const open=jqAll(l), cur=jqCur(l), curT=cur.length?cur[0].term:null, nm=t=>(UIL==="de"?t.de:t.en)||"";
+  const row=t=>{ const xs=all.filter(x=>x.term===t.term).sort((a,b)=>LV_ORDER.indexOf(a.level)-LV_ORDER.indexOf(b.level)), op=xs.filter(x=>open.some(o=>o.i===x.i));
+    const body=op.length?`<span class="when">${esc(mdFmt(op[0].date.slice(5)))}</span><div class="rs">`+op.map(x=>`<button data-mg="jq|${x.i}"><span class="lv">${esc(x.level)}</span><span class="t zc" lang="zh-CN">${esc(zs(x.title.replace(/^[^：]*：/,"")))}</span>${mgRead("jq",x.i)?'<span class="ok">✓</span>':""}</button>`).join("")+`</div>`
+      :`<span class="when">${esc(mdFmt(xs.length?xs[0].date.slice(5):t.md))}${xs.length?' · <span>开放</span>':""}</span>`;
+    return `<div class="col-t${op.length?"":" off"}${t.term===curT?" cur":""}"><span class="nm zc" lang="zh-CN">${esc(zs(t.term))}<small data-noi18n>${esc(nm(t))}</small></span>${body}</div>`; };
+  let h=`<div class="col-h"><h2 class="zc" lang="zh-CN"><span>二十四节气</span></h2><span class="n">${open.length?new Set(open.map(x=>x.term)).size:0} / 24</span></div>
+    <p class="col-lead"><span>每个节气两篇：HSK2 和 HSK4，各配一首古诗。节气那天开放。</span></p>`;
+  if(curT){ const t=terms.find(x=>x.term===curT)||{term:curT,md:cur[0].date.slice(5)};
+    h+=`<div class="col-now"><p class="k"><span>现在的节气</span></p><p class="tn zc" lang="zh-CN">${esc(zs(curT))}<small data-noi18n>${esc(nm(t))} · ${esc(mdFmt(t.md))}</small></p><div class="col-t" style="border:0;padding:6px 0 0;grid-template-columns:minmax(0,1fr)"><div class="rs">${cur.map(x=>`<button data-mg="jq|${x.i}"><span class="lv">${esc(x.level)}</span><span class="t zc" lang="zh-CN">${esc(zs(x.title.replace(/^[^：]*：/,"")))}</span>${mgRead("jq",x.i)?'<span class="ok">✓</span>':""}</button>`).join("")}</div></div></div>`; }
+  for(const se of SEASONS){ const ts=terms.filter(t=>t.season===se); if(ts.length) h+=`<div class="col-sea zc" lang="zh-CN">${esc(zs(se))}</div>`+ts.map(row).join(""); }
+  return h+mgLibList(null);
+}
+function mgSwPut(){ const m=$("#mg-main"); if(!m||m.querySelector(".mg-sw")) return;
+  m.insertAdjacentHTML("afterbegin",`<div class="mg-sw" role="tablist"><button type="button" id="mg-sw-today" aria-pressed="${!MG.col}">今日</button><button type="button" id="mg-sw-col" aria-pressed="${!!MG.col}">专栏</button></div>`); }
 function mgJqList(pick){
   const xs=jqAll(lang()); if(!xs.length) return "";
   return `<h3 style="margin:18px 0 8px"><span>二十四节气</span> · <span>${xs.length} 篇</span></h3>
@@ -3433,12 +3480,14 @@ $("#tab-read").addEventListener("click",e=>{
     $$(".mg-w.on").forEach(x=>x.classList.remove("on")); w.classList.add("on"); mgOpen(w.dataset.w||zPlain(w),mgSentenceOf(w)); return; }
   if(!b) return;
   if(b.dataset.mine){ MG.mine=b.dataset.mine; MG.tr=null; mgClose(); mgRender(); mineList(); { const m=$("#mg-main"); const y=m.getBoundingClientRect().top+scrollY-(innerWidth>640?$("#tabs").offsetHeight+4:4); if(scrollY>y) window.scrollTo({top:y,behavior:"smooth"}); } return; }
-  if(b.dataset.liblv!=null){ MG.libLv=b.dataset.liblv||""; mgArch(MG.cur); return; }
+  if(b.dataset.liblv!=null){ MG.libLv=b.dataset.liblv||""; if(MG.col) mgRender(); else mgArch(MG.cur); return; }
   if(b.dataset.mglv!=null){ S.settings.rdLv=S.settings.rdLv||{}; S.settings.rdLv[lang()]=b.dataset.mglv||null; save(); MG.key=null; MG.tr=null; mgClose(); rdStop(); mgRender(); return; }
   if(b.dataset.mineopen){ const d=$("#mine-box"); d.open=true; d.scrollIntoView({behavior:"smooth",block:"start"}); return; }
   if(b.dataset.mg){ MG.mine=null; MG.key=b.dataset.mg; if(b.dataset.di!=null) MG.di=+b.dataset.di; else { const d=b.dataset.mg.split("|")[0]; const k=MG.idx.days.findIndex(x=>x.date===d); if(k>=0) MG.di=k; } MG.tr=null; mgClose(); mgRender(); { const m=$("#mg-main"); const y=m.getBoundingClientRect().top+scrollY-(innerWidth>640?$("#tabs").offsetHeight+4:4); if(scrollY>y) window.scrollTo({top:y,behavior:"smooth"}); } return; }
   if(b.dataset.wq!=null){ MG.wpick[b.dataset.wq]=+b.dataset.wo; mgWeek(); return; }
   const id=b.id;
+  if(id==="mg-sw-today"||id==="mg-sw-col"){ MG.col=id==="mg-sw-col"; MG.key=null; MG.mine=null; MG.tr=null; mgClose(); rdStop(); mgRender(); window.scrollTo({top:0}); return; }
+  if(id==="mg-colback"){ MG.key=null; MG.tr=null; mgClose(); rdStop(); mgRender(); return; }
   if(id==="mg-prev"){ MG.di++; MG.key=null; mgRender(); } else if(id==="mg-next"){ MG.di--; MG.key=null; mgRender(); }
   else if(id==="mg-reload"||id==="mg-retry"){ MG.idx=null; MG.days={}; MG.err=""; MG.key=null; MG.di=0; mgRender(); }
   else if(id==="mg-glzh"){ MGZH=!MGZH; try{ localStorage.setItem("zl-glzh",MGZH?"1":""); }catch(e){} const d=$(".mg-gl"); if(d) d.classList.toggle("hidezh",!MGZH); b.setAttribute("aria-pressed",MGZH); }
@@ -4711,6 +4760,15 @@ UI_DICT.push(
 ["课文库", "Library", "Textsammlung", "Library", "课文库"],
 ["二十四节气", "The 24 solar terms", "Die 24 Sonnenperioden", "Os 24 termos solares", "二十四節氣"],
 ["古诗", "Classical poem", "Klassisches Gedicht", "Poema clássico", "古詩"],
+["今日", "Today", "Heute", "Hoje", "今日"],
+["专栏", "Collections", "Sammlungen", "Coleções", "專欄"],
+["现在的节气", "Current solar term", "Aktuelle Sonnenperiode", "Termo solar atual", "現在的節氣"],
+["开放", "opens", "öffnet", "abre", "開放"],
+["每个节气两篇：HSK2 和 HSK4，各配一首古诗。节气那天开放。", "Two texts per term, HSK2 and HSK4, each with a classical poem. Each opens on its term's day.", "Zwei Texte pro Sonnenperiode, HSK2 und HSK4, jeweils mit einem klassischen Gedicht. Sie öffnen am Tag der Sonnenperiode.", "Dois textos por termo, HSK2 e HSK4, cada um com um poema clássico. Abrem no dia do termo.", "每個節氣兩篇：HSK2 和 HSK4，各配一首古詩。節氣那天開放。"],
+["春", "Spring", "Frühling", "Primavera", "春"],
+["夏", "Summer", "Sommer", "Verão", "夏"],
+["秋", "Autumn", "Herbst", "Outono", "秋"],
+["冬", "Winter", "Winter", "Inverno", "冬"],
 ["例句德文", "Example (German)", "Beispiel (Deutsch)", "Example (German)", "例句德文"],
 ["例如：雨伞", "e.g. 雨伞", "z. B. 雨伞", "e.g. 雨伞", "例如：雨伞"],
 ["我的释义（可选）", "My meaning (optional)", "Eigene Bedeutung (optional)", "My meaning (optional)", "我的释义（可选）"],

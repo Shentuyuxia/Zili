@@ -1,6 +1,176 @@
 {
  "title": "二十四节气",
- "note": "Fixed texts for the 24 solar terms. Each item opens on its date (YYYY-MM-DD, first year) and stays in the day's reading list until the next term; afterwards it is in the 二十四节气 shelf. From the second year on, the month and day are used. Two levels per term: HSK2 (children and beginners) and HSK4 (adults). Written by hand, never by the daily tasks.",
+ "note": "Fixed texts for the 24 solar terms. Each item opens on its date (YYYY-MM-DD, first year) and stays in the day's reading list until the next term; afterwards it is in the 二十四节气 shelf. From the second year on, the month and day are used. Two levels per term: HSK2 (children and beginners) and HSK4 (adults). Written by hand, never by the daily tasks. 'terms' lists all 24 terms in traditional order (from 立春) with their usual date (Hong Kong Observatory 2026 calendar; real dates shift by a day between years) and EN/DE names, for the 专栏 page.",
+ "terms": [
+  {
+   "season": "春",
+   "term": "立春",
+   "md": "02-04",
+   "en": "Start of Spring",
+   "de": "Frühlingsanfang"
+  },
+  {
+   "season": "春",
+   "term": "雨水",
+   "md": "02-18",
+   "en": "Rain Water",
+   "de": "Regenwasser"
+  },
+  {
+   "season": "春",
+   "term": "惊蛰",
+   "md": "03-05",
+   "en": "Awakening of Insects",
+   "de": "Erwachen der Insekten"
+  },
+  {
+   "season": "春",
+   "term": "春分",
+   "md": "03-20",
+   "en": "Spring Equinox",
+   "de": "Frühlings-Tagundnachtgleiche"
+  },
+  {
+   "season": "春",
+   "term": "清明",
+   "md": "04-05",
+   "en": "Clear and Bright",
+   "de": "Klares Licht"
+  },
+  {
+   "season": "春",
+   "term": "谷雨",
+   "md": "04-20",
+   "en": "Grain Rain",
+   "de": "Kornregen"
+  },
+  {
+   "season": "夏",
+   "term": "立夏",
+   "md": "05-05",
+   "en": "Start of Summer",
+   "de": "Sommeranfang"
+  },
+  {
+   "season": "夏",
+   "term": "小满",
+   "md": "05-21",
+   "en": "Grain Buds",
+   "de": "Kornfülle"
+  },
+  {
+   "season": "夏",
+   "term": "芒种",
+   "md": "06-05",
+   "en": "Grain in Ear",
+   "de": "Grannenähren"
+  },
+  {
+   "season": "夏",
+   "term": "夏至",
+   "md": "06-21",
+   "en": "Summer Solstice",
+   "de": "Sommersonnenwende"
+  },
+  {
+   "season": "夏",
+   "term": "小暑",
+   "md": "07-07",
+   "en": "Minor Heat",
+   "de": "Kleine Hitze"
+  },
+  {
+   "season": "夏",
+   "term": "大暑",
+   "md": "07-23",
+   "en": "Major Heat",
+   "de": "Große Hitze"
+  },
+  {
+   "season": "秋",
+   "term": "立秋",
+   "md": "08-07",
+   "en": "Start of Autumn",
+   "de": "Herbstanfang"
+  },
+  {
+   "season": "秋",
+   "term": "处暑",
+   "md": "08-23",
+   "en": "End of Heat",
+   "de": "Ende der Hitze"
+  },
+  {
+   "season": "秋",
+   "term": "白露",
+   "md": "09-07",
+   "en": "White Dew",
+   "de": "Weißer Tau"
+  },
+  {
+   "season": "秋",
+   "term": "秋分",
+   "md": "09-23",
+   "en": "Autumn Equinox",
+   "de": "Herbst-Tagundnachtgleiche"
+  },
+  {
+   "season": "秋",
+   "term": "寒露",
+   "md": "10-08",
+   "en": "Cold Dew",
+   "de": "Kalter Tau"
+  },
+  {
+   "season": "秋",
+   "term": "霜降",
+   "md": "10-23",
+   "en": "Frost's Descent",
+   "de": "Reifbeginn"
+  },
+  {
+   "season": "冬",
+   "term": "立冬",
+   "md": "11-07",
+   "en": "Start of Winter",
+   "de": "Winteranfang"
+  },
+  {
+   "season": "冬",
+   "term": "小雪",
+   "md": "11-22",
+   "en": "Minor Snow",
+   "de": "Leichter Schnee"
+  },
+  {
+   "season": "冬",
+   "term": "大雪",
+   "md": "12-07",
+   "en": "Major Snow",
+   "de": "Großer Schnee"
+  },
+  {
+   "season": "冬",
+   "term": "冬至",
+   "md": "12-22",
+   "en": "Winter Solstice",
+   "de": "Wintersonnenwende"
+  },
+  {
+   "season": "冬",
+   "term": "小寒",
+   "md": "01-05",
+   "en": "Minor Cold",
+   "de": "Kleine Kälte"
+  },
+  {
+   "season": "冬",
+   "term": "大寒",
+   "md": "01-20",
+   "en": "Major Cold",
+   "de": "Große Kälte"
+  }
+ ],
  "items": [
   {
    "lang": "zh",
