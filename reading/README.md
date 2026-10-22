@@ -46,4 +46,5 @@ Fixed texts in the spirit of Shiori: one term, two levels (HSK2 for children and
 
 - `node tools/reading.js` checks this file too (term, date, poem) and fills glossary pinyin.
 - Dates of the terms: Hong Kong Observatory calendar (hko.gov.hk). Every cultural fact needs a source you opened; folk sayings are labelled as sayings.
+- **Sources — preference of the app's owner:** do not use Xinhua (新华网/新华社), People's Daily (人民日报/人民网), CCTV/CGTN or similar central state outlets. Prefer Hong Kong and Taiwan media (e.g. 香港天文台, 端传媒, 报导者, 中央社 culture pages, 中国时报), museums and heritage institutions, encyclopedias, scholarly sources, and mainland culture/feature outlets such as 澎湃新闻 (The Paper) or 文汇报 culture pages. When sources disagree on a fact, write the version they share, or name the difference.
 - Written so far: 霜降 (10-23), 立冬 (11-07).

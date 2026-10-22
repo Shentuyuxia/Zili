@@ -362,21 +362,21 @@
     "立冬一般在每年的十一月七日或八日，是冬季的第一个节气。“立”是“开始”的意思，所以立冬就是冬天开始的日子。",
     "古人观察到，立冬以后“水始冰，地始冻”：水面开始结冰，土地也开始冻硬了。这时候，农民已经把一年的粮食收进了仓库，忙碌的农活告一段落，人们开始为过冬做准备。",
     "北方人立冬喜欢吃饺子。有一种说法是，“饺子”和“交子”读音相近，意思是秋天和冬天在这一天交替。还有一句有名的俗话：“立冬不端饺子碗，冻掉耳朵没人管。”",
-    "南方的一些地方则有别的习惯。比如在浙江绍兴，酿黄酒的人从立冬开始“冬酿”。立冬以后，用来酿酒的鉴湖水更清、更稳定。从立冬到立春这九十天，是一年里酿酒最关键的时候。",
+    "南方的一些地方则有别的习惯。比如在浙江绍兴，黄酒是在冬天酿的。当地有一句老话：“立冬投料，立春开榨。”意思是立冬前后开始酿酒，到第二年立春，才把酒榨出来。酿酒用的水，来自绍兴的鉴湖。",
     "在德国，十一月常常是灰色的：天黑得早，雨也多。不过，很多人喜欢在这样的晚上点一支蜡烛，泡一杯热茶，和朋友慢慢聊天。德语里有一个专门的词来形容这种温暖、舒服的感觉。也许这正是冬天的意义：外面越冷，人和人之间就越温暖。"
    ],
    "paragraphs_en": [
     "The Start of Winter usually falls on 7 or 8 November each year and is the first solar term of winter. 立 means \"to begin\", so 立冬 is the day winter begins.",
     "The ancients observed that after the Start of Winter \"water begins to ice over, the earth begins to freeze\": the surface of the water starts to freeze, and the ground grows hard. By now farmers have brought the year's grain into storage, the busy farm work comes to a pause, and people begin to prepare for the winter.",
     "In the north, people like to eat dumplings at the Start of Winter. One explanation is that 饺子 (dumplings) sounds like 交子, \"the moment of handing over\": on this day autumn hands over to winter. There is also a famous saying: \"If you don't hold a bowl of dumplings at the Start of Winter, your ears will freeze off and no one will care.\"",
-    "Some places in the south have other customs. In Shaoxing in Zhejiang, for example, the makers of yellow rice wine begin their \"winter brewing\" at the Start of Winter. After the Start of Winter, the water of Jianhu Lake that they brew with is clearer and more stable. The ninety days from the Start of Winter to the Start of Spring are the most important brewing time of the year.",
+    "Some places in the south have other customs. In Shaoxing in Zhejiang, for example, yellow rice wine is brewed in winter. A local saying goes: \"Start the mash at the Start of Winter, press the wine at the Start of Spring.\" Brewing begins around the Start of Winter, and only at the Start of Spring the following year is the wine pressed. The water for brewing comes from Shaoxing's Jianhu Lake.",
     "In Germany, November is often grey: it gets dark early and it rains a lot. Yet many people like to light a candle on evenings like these, make a cup of hot tea and talk with friends at leisure. German has a special word for this warm, cosy feeling: Gemütlichkeit. Perhaps this is what winter is about: the colder it is outside, the warmer people are to each other."
    ],
    "paragraphs_de": [
     "Der Winteranfang fällt meist auf den 7. oder 8. November und ist die erste Sonnenperiode des Winters. 立 heißt „beginnen“, also ist 立冬 der Tag, an dem der Winter beginnt.",
     "Schon in alter Zeit beobachtete man, dass nach dem Winteranfang „das Wasser zu gefrieren und die Erde hart zu werden beginnt“. Jetzt haben die Bauern das Getreide des Jahres in die Speicher gebracht, die viele Feldarbeit ruht, und man bereitet sich auf den Winter vor.",
     "Im Norden isst man zum Winteranfang gern Jiaozi. Einer Erklärung nach klingt 饺子 (Jiaozi) ähnlich wie 交子, „der Moment der Übergabe“: An diesem Tag übergibt der Herbst an den Winter. Bekannt ist auch der Spruch: „Wer zum Winteranfang keine Schale Jiaozi in der Hand hält, dem frieren die Ohren ab, und keiner kümmert sich darum.“",
-    "Manche Orte im Süden haben andere Bräuche. In Shaoxing in der Provinz Zhejiang zum Beispiel beginnen die Hersteller von Gelbwein zum Winteranfang mit dem „Winterbrauen“. Nach dem Winteranfang ist das Wasser des Jianhu-Sees, mit dem sie brauen, klarer und gleichmäßiger. Die neunzig Tage vom Winteranfang bis zum Frühlingsanfang sind die wichtigste Brauzeit des Jahres.",
+    "Manche Orte im Süden haben andere Bräuche. In Shaoxing in der Provinz Zhejiang zum Beispiel wird Gelbwein im Winter gebraut. Ein alter Spruch dort lautet: „Zum Winteranfang ansetzen, zum Frühlingsanfang pressen.“ Gebraut wird also ab etwa dem Winteranfang, und erst zum Frühlingsanfang im nächsten Jahr wird der Wein gepresst. Das Wasser dafür kommt aus dem Jianhu-See bei Shaoxing.",
     "In Deutschland ist der November oft grau: Es wird früh dunkel und regnet viel. Trotzdem zünden viele an solchen Abenden gern eine Kerze an, kochen sich einen heißen Tee und unterhalten sich in Ruhe mit Freunden. Für dieses warme, behagliche Gefühl hat das Deutsche ein eigenes Wort: Gemütlichkeit. Vielleicht ist genau das der Sinn des Winters: Je kälter es draußen ist, desto wärmer gehen die Menschen miteinander um."
    ],
    "glossary": [
@@ -447,10 +447,16 @@
      "de": "beschreiben"
     },
     {
-     "w": "关键",
-     "p": "guān jiàn",
-     "en": "key, crucial",
-     "de": "entscheidend"
+     "w": "老话",
+     "p": "lǎo huà",
+     "en": "old saying",
+     "de": "alter Spruch, Redensart"
+    },
+    {
+     "w": "榨",
+     "p": "zhà",
+     "en": "to press, squeeze out",
+     "de": "pressen, auspressen"
     }
    ],
    "grammar": "则 (written style) marks a contrast with what came before, like \"while; on the other hand\": 北方人吃饺子，南方的一些地方则有别的习惯. It comes after the subject, before the verb.",
@@ -481,8 +487,13 @@
      "license": "official"
     },
     {
-     "title": "新华网：立冬开酿，绍兴黄酒冬酿（2025-11-07）",
-     "url": "https://www.news.cn/culture/20251107/0deb7f5c8ba54f28a16bda14bb1c1d33/c.html",
+     "title": "文汇报：绍兴黄酒的冬酿（2016-01-26）",
+     "url": "https://www.whb.cn/zhuzhan/kandian/20160126/48568.html",
+     "license": "link only"
+    },
+    {
+     "title": "东方早报 · 王嵬：绍兴黄酒酿制（转载于中国非物质文化遗产网）",
+     "url": "https://www.ihchina.cn/news_1_details/10807.html",
      "license": "link only"
     }
    ]
