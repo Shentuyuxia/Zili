@@ -2462,7 +2462,7 @@
    "dek": "白天开始变短了，天气却越来越热。",
    "paragraphs": [
     "夏至一般在每年六月二十一日或二十二日。这一天，太阳直射北回归线，北半球白天最长。从这天起，白天开始一点点变短，可是天气却越来越热，因为地面积累的热量还在增加，最热的日子还在后面。",
-    "夏至的三候是“鹿角解、蜩始鸣、半夏生”：鹿开始脱角；知了开始鸣叫；一种叫“半夏”的草药，在夏天过了一半的时候长了出来。有意思的是，冬至的三候里也有“麋角解”：古人认为，鹿和麋一个在夏至脱角，一个在冬至脱角。",
+    "夏至的三候是“鹿角解、蜩始鸣、半夏生”：鹿开始脱角；知了开始鸣叫；一种叫“半夏”的草药，在夏天过了一半的时候冒了出来。有意思的是，冬至的三候里也有“麋角解”：古人认为，鹿和麋一个在夏至脱角，一个在冬至脱角。",
     "北方有“冬至饺子夏至面”的说法。夏至前后，新麦刚刚收割，磨成面粉，做一碗凉面，正好消暑。",
     "在欧洲，夏至也是重要的日子。在德国，六月二十四日前后的“圣约翰节”，有些地方会点起篝火；在北欧，仲夏节是一年中最重要的节日之一。很多德国城市在六月二十一日举办“音乐节”，街头巷尾都是免费的音乐会。"
    ],
@@ -3052,6 +3052,1217 @@
     "explain_zh": "夜里还是和中午一样热，诗人打开门，在月光下站了一会儿。在竹子深深、树木密密、虫子鸣叫的地方，常常有一丝淡淡的凉意——可那并不是风带来的。",
     "explain_en": "The night is as hot as noon; the poet opens the door and stands a while in the moonlight. Where the bamboo is deep, the trees dense and the insects sing, now and then there is a faint coolness – yet it isn't the wind.",
     "explain_de": "Die Nacht ist so heiß wie der Mittag; der Dichter öffnet die Tür und steht eine Weile im Mondlicht. Wo der Bambus tief, die Bäume dicht sind und die Insekten zirpen, ist manchmal eine leise Kühle – und doch ist es nicht der Wind."
+   },
+   "sources": [
+    {
+     "title": "農業部：二十四節氣（引用臺北市立天文科學教育館資料）",
+     "url": "https://www.moa.gov.tw/ws.php?id=2507770",
+     "license": "link only"
+    },
+    {
+     "title": "国立天文台 暦Wiki：七十二候",
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/wiki/B5A8C0E12FBCB7BDBDC6F3B8F5.html",
+     "license": "link only"
+    }
+   ]
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "立秋",
+   "date": "2026-08-07",
+   "title": "立秋：秋老虎",
+   "title_en": "Start of Autumn: the autumn tiger",
+   "title_de": "Herbstanfang: der Herbsttiger",
+   "dek": "秋天开始了，可是还很热。",
+   "paragraphs": [
+    "八月七日前后是立秋。立秋就是秋天开始了。可是这时候天气常常还很热，大家叫它“秋老虎”。",
+    "立秋以后，早上和晚上慢慢凉快了。古人说“凉风至”：凉凉的风来了。",
+    "北京人立秋这天喜欢炖肉吃，叫“贴秋膘”。南方人喜欢吃西瓜，叫“啃秋瓜”。",
+    "在德国，八月很多人还在度假。可是到了晚上，有时候要穿一件薄外套了。"
+   ],
+   "paragraphs_en": [
+    "The Start of Autumn falls around 7 August. 立秋 means autumn is beginning. But it is often still hot, and people call this heat the \"autumn tiger\".",
+    "After the Start of Autumn, mornings and evenings slowly get cooler. The ancients said \"cool winds arrive\".",
+    "In Beijing people like to eat stewed meat on this day; it's called \"putting on autumn fat\". In the south people like to eat watermelon – \"biting into autumn melon\".",
+    "In Germany many people are still on holiday in August. But in the evenings you sometimes need a light jacket."
+   ],
+   "paragraphs_de": [
+    "Um den 7. August ist Herbstanfang. 立秋 heißt: Der Herbst beginnt. Aber es ist oft noch heiß, und man nennt diese Hitze den „Herbsttiger“.",
+    "Nach dem Herbstanfang werden Morgen und Abende langsam kühler. Früher sagte man „kühle Winde kommen“.",
+    "In Peking isst man an diesem Tag gern Schmorfleisch; das heißt „Herbstspeck ansetzen“. Im Süden isst man gern Wassermelone – „in die Herbstmelone beißen“.",
+    "In Deutschland sind im August viele noch im Urlaub. Aber abends braucht man manchmal schon eine dünne Jacke."
+   ],
+   "glossary": [
+    {
+     "w": "立秋",
+     "p": "lì qiū",
+     "en": "Start of Autumn (solar term, around 7 August)",
+     "de": "Herbstanfang (Sonnenperiode, um den 7. August)"
+    },
+    {
+     "w": "秋老虎",
+     "p": "qiū lǎo hǔ",
+     "en": "\"autumn tiger\" (late summer heat)",
+     "de": "„Herbsttiger“ (Hitze im Spätsommer)"
+    },
+    {
+     "w": "凉快",
+     "p": "liáng kuai",
+     "en": "pleasantly cool",
+     "de": "angenehm kühl"
+    },
+    {
+     "w": "炖",
+     "p": "dùn",
+     "en": "to stew",
+     "de": "schmoren"
+    },
+    {
+     "w": "贴秋膘",
+     "p": "tiē qiū biāo",
+     "en": "\"put on autumn fat\" (eat meat at 立秋)",
+     "de": "„Herbstspeck ansetzen“ (Fleisch essen zum Herbstanfang)"
+    },
+    {
+     "w": "啃",
+     "p": "kěn",
+     "en": "to gnaw, bite",
+     "de": "knabbern, beißen"
+    },
+    {
+     "w": "度假",
+     "p": "dù jià",
+     "en": "to be on holiday",
+     "de": "Urlaub machen"
+    },
+    {
+     "w": "外套",
+     "p": "wài tào",
+     "en": "jacket",
+     "de": "die Jacke"
+    }
+   ],
+   "grammar": "叫 can mean \"to call (something)\": 大家叫它“秋老虎” = people call it the \"autumn tiger\". Pattern: A 叫 B “name”.",
+   "grammar_de": "叫 kann „nennen“ heißen: 大家叫它“秋老虎” = Man nennt sie den „Herbsttiger“. Muster: A 叫 B „Name“.",
+   "questions": [
+    "什么是“秋老虎”？",
+    "北京人立秋这天吃什么？",
+    "你喜欢夏天还是秋天？"
+   ],
+   "poem": {
+    "title": "立秋",
+    "author": "刘翰",
+    "dynasty": "宋",
+    "lines": [
+     "乳鸦啼散玉屏空，",
+     "一枕新凉一扇风。",
+     "睡起秋声无觅处，",
+     "满阶梧叶月明中。"
+    ],
+    "explain_zh": "小乌鸦叫着飞走了，屋子里的屏风静静的。躺在枕头上，扇着扇子，感到一阵新来的凉快。睡醒以后，诗人想找秋天的声音，可是找不到，只看见台阶上落满了梧桐叶，在明亮的月光下。",
+    "explain_en": "The young crows have cried and flown away; the jade screen stands empty. On the pillow, a new coolness; from the fan, a breeze. Waking, the poet looks for the sound of autumn and cannot find it – only the steps covered with fallen wutong leaves in the bright moonlight.",
+    "explain_de": "Die jungen Krähen haben gerufen und sind davongeflogen; der Jadeschirm steht leer. Auf dem Kissen eine neue Kühle, vom Fächer ein Lufthauch. Erwacht, sucht der Dichter den Klang des Herbstes und findet ihn nicht – nur die Stufen voller Wutong-Blätter im hellen Mondlicht."
+   },
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK4",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "立秋",
+   "date": "2026-08-07",
+   "title": "立秋：一叶知秋",
+   "title_en": "Start of Autumn: one leaf tells of autumn",
+   "title_de": "Herbstanfang: Ein Blatt kündet vom Herbst",
+   "dek": "秋天来了，秋老虎还没走。",
+   "paragraphs": [
+    "立秋一般在每年八月七日到九日之间，是秋季的第一个节气。不过，立秋并不代表天气马上就凉快下来。很多地方立秋以后还会热上一段时间，人们把这种炎热叫作“秋老虎”。",
+    "立秋的三候是“凉风至、白露降、寒蝉鸣”：早晚开始吹起凉风；清晨的草叶上出现了露水；蝉的叫声也变得凄凉起来。",
+    "北京有“贴秋膘”的习俗。“膘”是肥肉的意思：夏天天气热，人们吃得少，人也瘦了，所以立秋这天要炖一锅肉，把夏天掉的“膘”补回来。南方则有“啃秋瓜”的习惯，立秋当天多吃西瓜。",
+    "古人对季节的变化特别敏感。成语“一叶知秋”说的就是：看到一片树叶落下，就知道秋天要来了。后来，这个成语也用来比喻从小小的迹象看出大的变化。",
+    "在德国，八月常常还是一年里最热的时候之一，但晚上已经能感觉到一丝凉意。超市里开始卖书包和文具——对很多德国孩子来说，新学年就要开始了。"
+   ],
+   "paragraphs_en": [
+    "The Start of Autumn usually falls between 7 and 9 August and is the first solar term of autumn. But it doesn't mean the weather cools down straight away. In many places it stays hot for a while afterwards, and people call this heat the \"autumn tiger\".",
+    "Its three pentads are \"cool winds arrive, white dew descends, the cold cicada sings\": cool breezes begin to blow mornings and evenings; dew appears on the grass at dawn; and the cicadas' song turns melancholy.",
+    "Beijing has the custom of \"putting on autumn fat\". 膘 means fat: in the summer heat people eat little and lose weight, so on this day they stew a pot of meat to win back the \"fat\" lost in summer. In the south, people \"bite into autumn melon\", eating plenty of watermelon on the day.",
+    "The ancients were especially sensitive to the change of seasons. The idiom 一叶知秋, \"one leaf tells of autumn\", says that when you see a single leaf fall, you know autumn is coming. Later it also came to mean seeing a big change in a small sign.",
+    "In Germany, August is often still one of the hottest times of the year, but in the evenings you can feel a hint of coolness. Supermarkets start selling school bags and stationery – for many German children, the new school year is about to begin."
+   ],
+   "paragraphs_de": [
+    "Der Herbstanfang fällt meist zwischen den 7. und 9. August und ist die erste Sonnenperiode des Herbstes. Das heißt aber nicht, dass es sofort kühler wird. Vielerorts bleibt es noch eine Weile heiß, und man nennt diese Hitze den „Herbsttiger“.",
+    "Die drei „Hou“ lauten „kühle Winde kommen, weißer Tau fällt, die Herbstzikade singt“: Morgens und abends weht kühler Wind; frühmorgens liegt Tau auf dem Gras; und der Gesang der Zikaden klingt wehmütig.",
+    "In Peking gibt es den Brauch, „Herbstspeck anzusetzen“. 膘 heißt Speck: In der Sommerhitze isst man wenig und nimmt ab, also schmort man an diesem Tag einen Topf Fleisch, um den im Sommer verlorenen „Speck“ zurückzuholen. Im Süden „beißt man in die Herbstmelone“ und isst an diesem Tag viel Wassermelone.",
+    "Man achtete früher sehr genau auf den Wechsel der Jahreszeiten. Die Redewendung 一叶知秋, „ein Blatt kündet vom Herbst“, sagt: Wer ein einzelnes Blatt fallen sieht, weiß, dass der Herbst kommt. Später bedeutete sie auch, an einem kleinen Zeichen eine große Veränderung zu erkennen.",
+    "In Deutschland ist der August oft noch eine der heißesten Zeiten des Jahres, aber abends spürt man schon einen Hauch Kühle. Die Supermärkte verkaufen Schulranzen und Schreibwaren – für viele deutsche Kinder beginnt bald das neue Schuljahr."
+   ],
+   "glossary": [
+    {
+     "w": "代表",
+     "p": "dài biǎo",
+     "en": "to mean, represent",
+     "de": "bedeuten, stehen für"
+    },
+    {
+     "w": "炎热",
+     "p": "yán rè",
+     "en": "scorching heat",
+     "de": "die Hitze"
+    },
+    {
+     "w": "露水",
+     "p": "lù shuǐ",
+     "en": "dew",
+     "de": "der Tau"
+    },
+    {
+     "w": "凄凉",
+     "p": "qī liáng",
+     "en": "melancholy, dreary",
+     "de": "wehmütig, trostlos"
+    },
+    {
+     "w": "瘦",
+     "p": "shòu",
+     "en": "thin",
+     "de": "dünn, schlank"
+    },
+    {
+     "w": "补",
+     "p": "bǔ",
+     "en": "to make up for",
+     "de": "ausgleichen, nachholen"
+    },
+    {
+     "w": "敏感",
+     "p": "mǐn gǎn",
+     "en": "sensitive",
+     "de": "empfindlich, feinfühlig"
+    },
+    {
+     "w": "成语",
+     "p": "chéng yǔ",
+     "en": "idiom (four-character)",
+     "de": "die Redewendung (vier Zeichen)"
+    },
+    {
+     "w": "比喻",
+     "p": "bǐ yù",
+     "en": "to use as a metaphor",
+     "de": "bildlich bezeichnen"
+    },
+    {
+     "w": "迹象",
+     "p": "jì xiàng",
+     "en": "sign, indication",
+     "de": "das Anzeichen"
+    },
+    {
+     "w": "凉意",
+     "p": "liáng yì",
+     "en": "a touch of coolness",
+     "de": "die Kühle"
+    },
+    {
+     "w": "文具",
+     "p": "wén jù",
+     "en": "stationery",
+     "de": "die Schreibwaren"
+    }
+   ],
+   "grammar": "把 A 叫作 B = to call A B: 人们把这种炎热叫作“秋老虎” = people call this heat the \"autumn tiger\".",
+   "grammar_de": "把 A 叫作 B = A als B bezeichnen: 人们把这种炎热叫作“秋老虎” = Man nennt diese Hitze den „Herbsttiger“.",
+   "questions": [
+    "为什么立秋以后还会热？",
+    "“一叶知秋”是什么意思？你能举一个生活中的例子吗？",
+    "对你来说，什么是秋天来了的第一个信号？"
+   ],
+   "poem": {
+    "title": "山居秋暝",
+    "author": "王维",
+    "dynasty": "唐",
+    "lines": [
+     "空山新雨后，",
+     "天气晚来秋。",
+     "明月松间照，",
+     "清泉石上流。",
+     "竹喧归浣女，",
+     "莲动下渔舟。",
+     "随意春芳歇，",
+     "王孙自可留。"
+    ],
+    "explain_zh": "空空的山里刚下过一场雨，傍晚的空气已经有了秋天的味道。明亮的月光照在松树之间，清清的泉水在石头上流过。竹林里传来笑声，是洗衣服的姑娘们回来了；莲叶晃动，是渔船顺流而下。春天的花草谢了也没关系，这样的秋山，值得人留下来。",
+    "explain_en": "In the empty mountains after fresh rain, the evening air already feels like autumn. The bright moon shines between the pines; a clear spring flows over the stones. Laughter in the bamboo – the washerwomen coming home; lotus leaves stir – a fishing boat drifting downstream. Let the spring flowers fade: in mountains like these, one can stay.",
+    "explain_de": "In den leeren Bergen nach frischem Regen fühlt sich die Abendluft schon nach Herbst an. Der helle Mond scheint zwischen den Kiefern, eine klare Quelle fließt über die Steine. Lachen im Bambus – die Wäscherinnen kommen heim; die Lotusblätter bewegen sich – ein Fischerboot treibt flussab. Sollen die Frühlingsblumen ruhig verblühen: In solchen Bergen kann man bleiben."
+   },
+   "sources": [
+    {
+     "title": "農業部：二十四節氣（引用臺北市立天文科學教育館資料）",
+     "url": "https://www.moa.gov.tw/ws.php?id=2507770",
+     "license": "link only"
+    },
+    {
+     "title": "国立天文台 暦Wiki：七十二候",
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/wiki/B5A8C0E12FBCB7BDBDC6F3B8F5.html",
+     "license": "link only"
+    },
+    {
+     "title": "Marie Claire 台灣：立秋習俗（貼秋膘、秋老虎）",
+     "url": "https://www.marieclaire.com.tw/lifestyle/news/67413",
+     "license": "link only"
+    }
+   ]
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "处暑",
+   "date": "2026-08-23",
+   "title": "处暑：热天要走了",
+   "title_en": "End of Heat: the hot days are leaving",
+   "title_de": "Ende der Hitze: Die heißen Tage gehen",
+   "dek": "抬头看看月亮。",
+   "paragraphs": [
+    "八月二十三日前后是处暑。“处”是停下来的意思，处暑就是热天要结束了。",
+    "处暑以后，晚上越来越凉快，天上的月亮也特别亮。",
+    "晚上睡觉以前，抬头看看月亮吧。很多中国人看到月亮，就会想起家。",
+    "在德国，八月底、九月初，很多地方的孩子开学了。"
+   ],
+   "paragraphs_en": [
+    "The End of Heat falls around 23 August. 处 means \"to stop\": the hot days are coming to an end.",
+    "After it, the nights get cooler and cooler, and the moon in the sky is especially bright.",
+    "Before you go to bed, look up at the moon. When many Chinese people see the moon, they think of home.",
+    "In Germany, at the end of August and in early September, school starts again in many places."
+   ],
+   "paragraphs_de": [
+    "Um den 23. August beginnt „Ende der Hitze“. 处 heißt „aufhören“: Die heißen Tage gehen zu Ende.",
+    "Danach werden die Nächte immer kühler, und der Mond am Himmel ist besonders hell.",
+    "Schau vor dem Schlafengehen einmal zum Mond. Viele Chinesen denken an zu Hause, wenn sie den Mond sehen.",
+    "In Deutschland beginnt Ende August, Anfang September an vielen Orten wieder die Schule."
+   ],
+   "glossary": [
+    {
+     "w": "处暑",
+     "p": "chǔ shǔ",
+     "en": "End of Heat (solar term, around 23 August)",
+     "de": "Ende der Hitze (Sonnenperiode, um den 23. August)"
+    },
+    {
+     "w": "停",
+     "p": "tíng",
+     "en": "to stop",
+     "de": "aufhören"
+    },
+    {
+     "w": "结束",
+     "p": "jié shù",
+     "en": "to end",
+     "de": "enden"
+    },
+    {
+     "w": "亮",
+     "p": "liàng",
+     "en": "bright",
+     "de": "hell"
+    },
+    {
+     "w": "抬头",
+     "p": "tái tóu",
+     "en": "to look up",
+     "de": "aufschauen"
+    },
+    {
+     "w": "想起",
+     "p": "xiǎng qǐ",
+     "en": "to think of",
+     "de": "denken an"
+    },
+    {
+     "w": "开学",
+     "p": "kāi xué",
+     "en": "school starts",
+     "de": "die Schule beginnt"
+    }
+   ],
+   "grammar": "……就会…… = then (naturally) …: 看到月亮，就会想起家 = when they see the moon, they think of home.",
+   "grammar_de": "……就会…… = dann (ganz von selbst) …: 看到月亮，就会想起家 = Wenn sie den Mond sehen, denken sie an zu Hause.",
+   "questions": [
+    "“处暑”的“处”是什么意思？",
+    "很多中国人看到月亮会想起什么？",
+    "你看到月亮的时候，会想起什么？"
+   ],
+   "poem": {
+    "title": "静夜思",
+    "author": "李白",
+    "dynasty": "唐",
+    "lines": [
+     "床前明月光，",
+     "疑是地上霜。",
+     "举头望明月，",
+     "低头思故乡。"
+    ],
+    "explain_zh": "床前有一片明亮的月光，诗人以为是地上的霜。他抬起头，看着天上的明月；又低下头，想起了远方的家乡。",
+    "explain_en": "Before my bed, bright moonlight – I wonder if it's frost on the ground. I raise my head and gaze at the bright moon; I lower my head and think of home.",
+    "explain_de": "Vor meinem Bett helles Mondlicht – ist es Reif auf dem Boden? Ich hebe den Kopf und schaue zum hellen Mond; ich senke den Kopf und denke an die Heimat."
+   },
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK4",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "处暑",
+   "date": "2026-08-23",
+   "title": "处暑：炎热到此为止",
+   "title_en": "End of Heat: this is where the heat stops",
+   "title_de": "Ende der Hitze: Bis hierher und nicht weiter",
+   "dek": "夏天的最后几个夜晚。",
+   "paragraphs": [
+    "处暑一般在每年八月二十二日到二十四日之间。“处”是“止”的意思，处暑就是说，炎热到此为止。虽然白天有时还很热，但早晚已经明显凉爽，昼夜温差变大了。",
+    "处暑的三候是“鹰乃祭鸟、天地始肃、禾乃登”：鹰开始大量捕鸟，常把猎物摆在地上，古人觉得像在祭祀；天地之间有了秋天清冷的气息，草木渐渐凋零；庄稼成熟，可以收获了。",
+    "夏末秋初的夜晚，人们喜欢坐在院子里乘凉、看星星。银河两边有两颗很亮的星：牛郎星和织女星。传说他们一年只能在七夕相见一次，而七夕常常就在八月。",
+    "在德国，八月底很多城市还有露天电影和音乐会，人们抓紧享受夏天最后的温暖。"
+   ],
+   "paragraphs_en": [
+    "The End of Heat usually falls between 22 and 24 August. 处 means \"to stop\", so the name says: this is where the heat ends. Although the days can still be hot, mornings and evenings are noticeably cooler, and the difference between day and night temperatures grows.",
+    "Its three pentads are \"the hawk offers birds, heaven and earth grow solemn, the grain is ready\": hawks hunt many birds and often lay their prey out on the ground, which looked to the ancients like an offering; the air between heaven and earth takes on autumn's chill and plants begin to wither; the crops ripen and can be harvested.",
+    "On late-summer evenings people like to sit in the courtyard to cool off and watch the stars. On either side of the Milky Way are two bright stars: the Cowherd and the Weaver Girl. Legend says they can meet only once a year, on the Qixi festival – which often falls in August.",
+    "In Germany, at the end of August many towns still have open-air cinemas and concerts, and people make the most of the last of the summer warmth."
+   ],
+   "paragraphs_de": [
+    "Das „Ende der Hitze“ fällt meist zwischen den 22. und 24. August. 处 heißt „aufhören“, der Name sagt also: Hier endet die Hitze. Auch wenn die Tage noch heiß sein können, sind Morgen und Abende deutlich kühler, und der Unterschied zwischen Tag- und Nachttemperatur wächst.",
+    "Die drei „Hou“ lauten „der Habicht opfert Vögel, Himmel und Erde werden ernst, das Korn ist reif“: Habichte jagen viele Vögel und legen die Beute oft auf den Boden, was früher wie eine Opfergabe aussah; zwischen Himmel und Erde liegt herbstliche Kühle, und die Pflanzen beginnen zu welken; das Getreide ist reif und kann geerntet werden.",
+    "An Spätsommerabenden sitzt man gern im Hof, genießt die Kühle und schaut in die Sterne. Zu beiden Seiten der Milchstraße stehen zwei helle Sterne: der Kuhhirte und die Weberin. Der Legende nach dürfen sie sich nur einmal im Jahr treffen, am Qixi-Fest – und das fällt oft in den August.",
+    "In Deutschland gibt es Ende August in vielen Städten noch Freiluftkino und Konzerte, und man genießt die letzte Sommerwärme, so gut es geht."
+   ],
+   "glossary": [
+    {
+     "w": "止",
+     "p": "zhǐ",
+     "en": "to stop",
+     "de": "aufhören"
+    },
+    {
+     "w": "凉爽",
+     "p": "liáng shuǎng",
+     "en": "cool and refreshing",
+     "de": "angenehm kühl"
+    },
+    {
+     "w": "温差",
+     "p": "wēn chā",
+     "en": "temperature difference",
+     "de": "der Temperaturunterschied"
+    },
+    {
+     "w": "猎物",
+     "p": "liè wù",
+     "en": "prey",
+     "de": "die Beute"
+    },
+    {
+     "w": "气息",
+     "p": "qì xī",
+     "en": "air, atmosphere",
+     "de": "der Hauch, die Stimmung"
+    },
+    {
+     "w": "凋零",
+     "p": "diāo líng",
+     "en": "to wither",
+     "de": "welken"
+    },
+    {
+     "w": "庄稼",
+     "p": "zhuāng jia",
+     "en": "crops",
+     "de": "das Getreide, die Feldfrüchte"
+    },
+    {
+     "w": "乘凉",
+     "p": "chéng liáng",
+     "en": "to enjoy the cool",
+     "de": "sich abkühlen, die Kühle genießen"
+    },
+    {
+     "w": "银河",
+     "p": "yín hé",
+     "en": "Milky Way",
+     "de": "die Milchstraße"
+    },
+    {
+     "w": "七夕",
+     "p": "qī xī",
+     "en": "Qixi (Chinese Valentine's Day)",
+     "de": "Qixi (chinesischer Valentinstag)"
+    },
+    {
+     "w": "露天",
+     "p": "lù tiān",
+     "en": "open-air",
+     "de": "unter freiem Himmel"
+    },
+    {
+     "w": "抓紧",
+     "p": "zhuā jǐn",
+     "en": "to make the most of",
+     "de": "die Zeit nutzen"
+    }
+   ],
+   "grammar": "到此为止 = up to here and no further: 炎热到此为止 = the heat stops here. Also as a phrase: 今天就到此为止 = that's all for today.",
+   "grammar_de": "到此为止 = bis hierher und nicht weiter: 炎热到此为止 = Hier hört die Hitze auf. Auch als Wendung: 今天就到此为止 = Das war's für heute.",
+   "questions": [
+    "处暑的名字说的是什么？",
+    "牛郎和织女的故事说了什么？",
+    "你最喜欢夏天的哪一个夜晚？"
+   ],
+   "poem": {
+    "title": "秋夕",
+    "author": "杜牧",
+    "dynasty": "唐",
+    "lines": [
+     "银烛秋光冷画屏，",
+     "轻罗小扇扑流萤。",
+     "天阶夜色凉如水，",
+     "卧看牵牛织女星。"
+    ],
+    "explain_zh": "秋夜里，银色的烛光照着画屏，显得冷冷清清。一个宫女拿着轻轻的小扇子，扑打飞来飞去的萤火虫。宫里的石阶上，夜色像水一样凉。她躺下来，看着天上的牛郎星和织女星。",
+    "explain_en": "On an autumn night, silver candlelight makes the painted screen look cold. With a light silk fan, a palace maid swats at drifting fireflies. On the palace steps the night is cool as water; she lies down and gazes at the Cowherd and the Weaver Girl.",
+    "explain_de": "In einer Herbstnacht lässt silbernes Kerzenlicht den bemalten Wandschirm kalt aussehen. Mit einem leichten Seidenfächer schlägt eine Hofdame nach umherschwebenden Glühwürmchen. Auf den Palaststufen ist die Nacht kühl wie Wasser; sie legt sich hin und schaut zum Kuhhirten und zur Weberin hinauf."
+   },
+   "sources": [
+    {
+     "title": "農業部：二十四節氣（引用臺北市立天文科學教育館資料）",
+     "url": "https://www.moa.gov.tw/ws.php?id=2507770",
+     "license": "link only"
+    },
+    {
+     "title": "国立天文台 暦Wiki：七十二候",
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/wiki/B5A8C0E12FBCB7BDBDC6F3B8F5.html",
+     "license": "link only"
+    }
+   ]
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "白露",
+   "date": "2026-09-07",
+   "title": "白露：草上的露水",
+   "title_en": "White Dew: dew on the grass",
+   "title_de": "Weißer Tau: Tau auf dem Gras",
+   "dek": "早上的小水珠。",
+   "paragraphs": [
+    "九月七日前后是白露。早上，草上和花上有很多小小的水珠，白白的，亮亮的，这就是露水。",
+    "天凉了，夜里空气里的水变成了露水。白露以后，早上出门要多穿一件衣服。",
+    "古人说，这时候大雁从北方飞来了，燕子也要飞回南方了。",
+    "在德国，九月是收葡萄的季节，很多地方有葡萄酒节。"
+   ],
+   "paragraphs_en": [
+    "White Dew falls around 7 September. In the morning there are many tiny water drops on the grass and flowers, white and shining – that is dew.",
+    "It has turned cool, and at night the water in the air becomes dew. After White Dew, put on an extra layer when you go out in the morning.",
+    "The ancients said that now the wild geese come from the north and the swallows get ready to fly back south.",
+    "In Germany, September is grape harvest time, and many places hold wine festivals."
+   ],
+   "paragraphs_de": [
+    "Um den 7. September beginnt „Weißer Tau“. Morgens liegen auf Gras und Blumen viele winzige Wassertropfen, weiß und glänzend – das ist Tau.",
+    "Es ist kühl geworden, und nachts wird das Wasser in der Luft zu Tau. Nach dem Weißen Tau zieht man morgens etwas mehr an.",
+    "Früher sagte man, dass jetzt die Wildgänse aus dem Norden kommen und die Schwalben in den Süden zurückfliegen wollen.",
+    "In Deutschland ist September Zeit der Weinlese, und vielerorts gibt es Weinfeste."
+   ],
+   "glossary": [
+    {
+     "w": "白露",
+     "p": "bái lù",
+     "en": "White Dew (solar term, around 7 September)",
+     "de": "Weißer Tau (Sonnenperiode, um den 7. September)"
+    },
+    {
+     "w": "水珠",
+     "p": "shuǐ zhū",
+     "en": "water drop",
+     "de": "der Wassertropfen"
+    },
+    {
+     "w": "露水",
+     "p": "lù shuǐ",
+     "en": "dew",
+     "de": "der Tau"
+    },
+    {
+     "w": "大雁",
+     "p": "dà yàn",
+     "en": "wild goose",
+     "de": "die Wildgans"
+    },
+    {
+     "w": "燕子",
+     "p": "yàn zi",
+     "en": "swallow",
+     "de": "die Schwalbe"
+    },
+    {
+     "w": "葡萄",
+     "p": "pú tao",
+     "en": "grape",
+     "de": "die Traube"
+    }
+   ],
+   "grammar": "要……了 = about to …: 燕子要飞回南方了 = the swallows are about to fly back south.",
+   "grammar_de": "要……了 = gleich, bald …: 燕子要飞回南方了 = Die Schwalben fliegen bald in den Süden zurück.",
+   "questions": [
+    "露水是从哪里来的？",
+    "白露的时候，燕子要去哪儿？",
+    "你早上见过草上的露水吗？"
+   ],
+   "poem": {
+    "title": "古朗月行（节选）",
+    "author": "李白",
+    "dynasty": "唐",
+    "lines": [
+     "小时不识月，",
+     "呼作白玉盘。",
+     "又疑瑶台镜，",
+     "飞在青云端。"
+    ],
+    "explain_zh": "小时候不认识月亮，就把它叫作白玉做的盘子。又以为它是神仙住的瑶台上的镜子，飞到了青云的上面。（这是一首长诗的开头。）",
+    "explain_en": "As a child I didn't know the moon; I called it a white jade plate. Or I thought it was the mirror from the immortals' jasper terrace, flying high above the blue clouds. (The opening of a longer poem.)",
+    "explain_de": "Als Kind kannte ich den Mond nicht; ich nannte ihn einen Teller aus weißer Jade. Oder ich hielt ihn für den Spiegel von der Jaspisterrasse der Unsterblichen, der hoch über den blauen Wolken fliegt. (Der Anfang eines längeren Gedichts.)"
+   },
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK4",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "白露",
+   "date": "2026-09-07",
+   "title": "白露：在水一方",
+   "title_en": "White Dew: on the other side of the water",
+   "title_de": "Weißer Tau: auf der anderen Seite des Wassers",
+   "dek": "蒹葭苍苍，白露为霜。",
+   "paragraphs": [
+    "白露一般在每年九月七日到九日之间。这时天气转凉，夜里空气中的水汽遇冷，在草叶上凝结成露珠，在晨光中闪着白光，所以叫“白露”。",
+    "白露的三候是“鸿雁来、玄鸟归、群鸟养羞”：大雁从北方飞来；燕子飞回南方；许多鸟儿开始储存食物，准备过冬。“羞”在这里同“馐”，是食物的意思。",
+    "白露也是中国诗歌里最有名的意象之一。《诗经》里写：“蒹葭苍苍，白露为霜。所谓伊人，在水一方。”芦苇青青，露水结成了霜，心里想着的那个人，就在河水的另一边。两千多年来，这几句诗一直被用来形容一种“看得见，却走不近”的思念。",
+    "在德国，九月是收获的季节。莱茵河和摩泽尔河一带的葡萄园开始采摘，各地的葡萄酒节一个接一个。新酿的葡萄酒还带着甜味，配上洋葱饼，是很多德国人心中秋天的开始。"
+   ],
+   "paragraphs_en": [
+    "White Dew usually falls between 7 and 9 September. The weather is turning cool; at night the water vapour in the air meets the cold and condenses into dewdrops on the grass, shining white in the morning light – hence the name.",
+    "Its three pentads are \"the wild geese come, the swallows return south, the birds store food\": wild geese arrive from the north; swallows fly back south; many birds begin to lay in food for the winter. 羞 here is the same as 馐, \"food\".",
+    "White dew is also one of the most famous images in Chinese poetry. The Book of Songs says: \"The reeds are lush and green, the white dew turns to frost. The one I long for is on the other side of the water.\" For more than two thousand years these lines have described a longing for someone \"you can see but cannot reach\".",
+    "In Germany September is harvest time. The vineyards along the Rhine and the Moselle begin picking, and wine festivals follow one another. Young, still-sweet new wine with onion tart is, for many Germans, the start of autumn."
+   ],
+   "paragraphs_de": [
+    "„Weißer Tau“ fällt meist zwischen den 7. und 9. September. Es wird kühler; nachts trifft der Wasserdampf in der Luft auf Kälte und kondensiert auf den Gräsern zu Tautropfen, die im Morgenlicht weiß glänzen – daher der Name.",
+    "Die drei „Hou“ lauten „die Wildgänse kommen, die Schwalben kehren heim, die Vögel legen Vorräte an“: Wildgänse kommen aus dem Norden; Schwalben fliegen zurück in den Süden; viele Vögel legen Futter für den Winter an. 羞 steht hier für 馐, „Speise“.",
+    "Weißer Tau ist auch eines der berühmtesten Bilder der chinesischen Dichtung. Im Buch der Lieder heißt es: „Das Schilf steht dicht und grün, der weiße Tau wird zu Reif. Die, nach der ich mich sehne, ist auf der anderen Seite des Wassers.“ Seit über zweitausend Jahren beschreiben diese Zeilen eine Sehnsucht nach jemandem, den man „sieht, aber nicht erreicht“.",
+    "In Deutschland ist September Erntezeit. In den Weinbergen an Rhein und Mosel beginnt die Lese, und ein Weinfest folgt dem nächsten. Neuer Wein, noch süß, mit Zwiebelkuchen – für viele Deutsche der Beginn des Herbstes."
+   ],
+   "glossary": [
+    {
+     "w": "转凉",
+     "p": "zhuǎn liáng",
+     "en": "to turn cool",
+     "de": "kühl werden"
+    },
+    {
+     "w": "凝结",
+     "p": "níng jié",
+     "en": "to condense",
+     "de": "kondensieren"
+    },
+    {
+     "w": "露珠",
+     "p": "lù zhū",
+     "en": "dewdrop",
+     "de": "der Tautropfen"
+    },
+    {
+     "w": "储存",
+     "p": "chǔ cún",
+     "en": "to store",
+     "de": "lagern, Vorräte anlegen"
+    },
+    {
+     "w": "意象",
+     "p": "yì xiàng",
+     "en": "image (in poetry)",
+     "de": "das (poetische) Bild"
+    },
+    {
+     "w": "芦苇",
+     "p": "lú wěi",
+     "en": "reed",
+     "de": "das Schilf"
+    },
+    {
+     "w": "思念",
+     "p": "sī niàn",
+     "en": "to long for, miss",
+     "de": "sich sehnen nach"
+    },
+    {
+     "w": "收获",
+     "p": "shōu huò",
+     "en": "harvest",
+     "de": "die Ernte"
+    },
+    {
+     "w": "葡萄园",
+     "p": "pú tao yuán",
+     "en": "vineyard",
+     "de": "der Weinberg"
+    },
+    {
+     "w": "采摘",
+     "p": "cǎi zhāi",
+     "en": "to pick",
+     "de": "pflücken, lesen"
+    },
+    {
+     "w": "一个接一个",
+     "p": "yí ge jiē yí ge",
+     "en": "one after another",
+     "de": "einer nach dem anderen"
+    },
+    {
+     "w": "洋葱饼",
+     "p": "yáng cōng bǐng",
+     "en": "onion tart",
+     "de": "der Zwiebelkuchen"
+    }
+   ],
+   "grammar": "被用来 + verb = to be used to …: 这几句诗一直被用来形容思念 = these lines have always been used to describe longing.",
+   "grammar_de": "被用来 + Verb = dazu benutzt werden, … zu: 这几句诗一直被用来形容思念 = Diese Zeilen werden seit jeher benutzt, um Sehnsucht zu beschreiben.",
+   "questions": [
+    "露水是怎么形成的？",
+    "“在水一方”现在常用来形容什么样的感情？",
+    "有没有一个人或一个地方，让你觉得“看得见，却走不近”？"
+   ],
+   "poem": {
+    "title": "诗经·秦风·蒹葭（第一章）",
+    "author": "佚名",
+    "dynasty": "先秦",
+    "lines": [
+     "蒹葭苍苍，",
+     "白露为霜。",
+     "所谓伊人，",
+     "在水一方。",
+     "溯洄从之，",
+     "道阻且长。",
+     "溯游从之，",
+     "宛在水中央。"
+    ],
+    "explain_zh": "河边的芦苇长得又密又青，白色的露水结成了霜。我想念的那个人，就在河水的另一边。逆着水流去找她，路又难走又远；顺着水流去找她，她又好像在水的中央。",
+    "explain_en": "The reeds grow thick and green, the white dew turns to frost. The one I long for is on the other side of the water. I go upstream to find her: the way is hard and long. I go downstream to find her: she seems to be in the middle of the water.",
+    "explain_de": "Das Schilf steht dicht und grün, der weiße Tau wird zu Reif. Die, nach der ich mich sehne, ist auf der anderen Seite des Wassers. Ich gehe flussauf, sie zu suchen: Der Weg ist schwer und lang. Ich gehe flussab, sie zu suchen: Sie scheint mitten im Wasser zu sein."
+   },
+   "sources": [
+    {
+     "title": "農業部：二十四節氣（引用臺北市立天文科學教育館資料）",
+     "url": "https://www.moa.gov.tw/ws.php?id=2507770",
+     "license": "link only"
+    },
+    {
+     "title": "国立天文台 暦Wiki：七十二候",
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/wiki/B5A8C0E12FBCB7BDBDC6F3B8F5.html",
+     "license": "link only"
+    }
+   ]
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "秋分",
+   "date": "2026-09-23",
+   "title": "秋分：看月亮",
+   "title_en": "Autumn Equinox: moon-watching",
+   "title_de": "Herbst-Tagundnachtgleiche: Mond schauen",
+   "dek": "和春分一样，白天和晚上一样长。",
+   "paragraphs": [
+    "九月二十三日前后是秋分。和春分一样，这一天白天和晚上差不多一样长。",
+    "秋分以后，晚上比白天长了。",
+    "古时候，秋分是祭月的日子。中秋节也常常在秋分前后。一家人一起吃月饼，看月亮。",
+    "秋天天气好，风也不大不小，正是放风筝的好时候。",
+    "在德国，秋天的树林里有很多蘑菇和栗子。"
+   ],
+   "paragraphs_en": [
+    "The Autumn Equinox falls around 23 September. Just like the Spring Equinox, day and night are almost the same length on this day.",
+    "After the equinox, the nights are longer than the days.",
+    "In ancient times the Autumn Equinox was the day for honouring the moon. The Mid-Autumn Festival often falls around the equinox too. The family eats mooncakes together and looks at the moon.",
+    "The autumn weather is good, and the wind is just right – a great time for flying kites.",
+    "In Germany, there are lots of mushrooms and chestnuts in the autumn woods."
+   ],
+   "paragraphs_de": [
+    "Um den 23. September ist Herbst-Tagundnachtgleiche. Wie bei der Frühlings-Tagundnachtgleiche sind Tag und Nacht an diesem Tag fast gleich lang.",
+    "Danach sind die Nächte länger als die Tage.",
+    "Früher war die Herbst-Tagundnachtgleiche der Tag, an dem man den Mond ehrte. Auch das Mondfest liegt oft um diese Zeit. Die Familie isst zusammen Mondkuchen und schaut den Mond an.",
+    "Im Herbst ist das Wetter schön und der Wind gerade richtig – eine gute Zeit zum Drachensteigen.",
+    "In Deutschland gibt es in den Herbstwäldern viele Pilze und Kastanien."
+   ],
+   "glossary": [
+    {
+     "w": "秋分",
+     "p": "qiū fēn",
+     "en": "Autumn Equinox (around 23 September)",
+     "de": "Herbst-Tagundnachtgleiche (um den 23. September)"
+    },
+    {
+     "w": "祭月",
+     "p": "jì yuè",
+     "en": "to honour the moon",
+     "de": "den Mond ehren"
+    },
+    {
+     "w": "中秋节",
+     "p": "zhōng qiū jié",
+     "en": "Mid-Autumn Festival",
+     "de": "das Mondfest"
+    },
+    {
+     "w": "月饼",
+     "p": "yuè bǐng",
+     "en": "mooncake",
+     "de": "der Mondkuchen"
+    },
+    {
+     "w": "风筝",
+     "p": "fēng zheng",
+     "en": "kite",
+     "de": "der Drachen"
+    },
+    {
+     "w": "蘑菇",
+     "p": "mó gu",
+     "en": "mushroom",
+     "de": "der Pilz"
+    },
+    {
+     "w": "栗子",
+     "p": "lì zi",
+     "en": "chestnut",
+     "de": "die Kastanie"
+    }
+   ],
+   "grammar": "和 A 一样 = the same as A: 和春分一样，白天和晚上一样长 = just like the Spring Equinox, day and night are equally long.",
+   "grammar_de": "和 A 一样 = genauso wie A: 和春分一样，白天和晚上一样长 = Wie bei der Frühlings-Tagundnachtgleiche sind Tag und Nacht gleich lang.",
+   "questions": [
+    "秋分以后，白天长还是晚上长？",
+    "中秋节的时候，一家人做什么？",
+    "你喜欢吃月饼吗？"
+   ],
+   "poem": {
+    "title": "十五夜望月",
+    "author": "王建",
+    "dynasty": "唐",
+    "lines": [
+     "中庭地白树栖鸦，",
+     "冷露无声湿桂花。",
+     "今夜月明人尽望，",
+     "不知秋思落谁家。"
+    ],
+    "explain_zh": "院子里的地被月光照得白白的，乌鸦在树上睡着了。冷冷的露水没有声音，打湿了桂花。今天晚上的月亮这么亮，大家都在看月亮，不知道这秋天的思念，会落到谁的家里。",
+    "explain_en": "In the courtyard the ground is white with moonlight; crows roost in the trees. Cold dew silently wets the osmanthus. Tonight everyone gazes at the bright moon – I wonder whose home the autumn longing will fall upon.",
+    "explain_de": "Im Hof ist der Boden weiß vom Mondlicht; Krähen schlafen in den Bäumen. Kalter Tau benetzt lautlos die Duftblüten. Heute Nacht schauen alle zum hellen Mond – ich frage mich, auf wessen Haus die Herbstsehnsucht fällt."
+   },
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK4",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "秋分",
+   "date": "2026-09-23",
+   "title": "秋分：雷声收起来了",
+   "title_en": "Autumn Equinox: the thunder is put away",
+   "title_de": "Herbst-Tagundnachtgleiche: Der Donner wird eingepackt",
+   "dek": "同一个“分”字，春天和秋天的感觉完全不同。",
+   "paragraphs": [
+    "秋分一般在每年九月二十二日到二十四日之间。这一天，太阳又一次直射赤道，昼夜几乎等长。“秋分”有两层意思：一是昼夜平分，二是秋天已经过了一半。秋分以后，北半球的夜晚就比白天长了。",
+    "秋分的三候是“雷乃收声、蛰虫坯户、水始涸”：雷声不再响了——正好和春分的“雷乃发声”相对；小虫子开始用泥土封住洞口，准备过冬；雨水减少，河湖的水开始变浅。",
+    "古时候，秋分是“祭月节”，后来祭月的习俗慢慢移到了中秋。秋分前后天高气爽，风不大不小，也很适合放风筝。",
+    "同一个“分”字，在春天和秋天给人的感觉却完全不同：春分以后，白天一天比一天长，人越来越有精神；秋分以后，夜晚一天比一天长，人也慢慢安静下来。古人说“春女思，秋士悲”：春天让人想念，秋天让人感伤。",
+    "在德国，秋分前后常常有一段晴朗温暖的日子，空中飘着细细的蛛丝。德语给它起了一个有趣的名字，直译是“老妇人的夏天”。"
+   ],
+   "paragraphs_en": [
+    "The Autumn Equinox usually falls between 22 and 24 September. On this day the sun once again stands directly over the equator, and day and night are almost equal. 秋分 has two meanings: day and night are divided equally, and autumn is already half over. After it, nights in the northern hemisphere are longer than days.",
+    "Its three pentads are \"thunder withdraws its voice, insects seal their burrows, waters begin to dry up\": the thunder falls silent – the exact counterpart of \"thunder begins to sound\" at the Spring Equinox; small insects begin to seal their holes with earth for the winter; there is less rain, and rivers and lakes grow shallower.",
+    "In ancient times the Autumn Equinox was the \"moon-honouring festival\"; later the custom gradually moved to the Mid-Autumn Festival. The skies around the equinox are high and clear, and the wind is just right for flying kites.",
+    "The same word 分 feels completely different in spring and in autumn: after the Spring Equinox the days grow longer and people livelier; after the Autumn Equinox the nights grow longer and people slowly become quieter. An old saying goes: \"In spring women yearn, in autumn scholars grieve\" – spring makes us long, autumn makes us wistful.",
+    "In Germany there is often a spell of clear, warm days around the equinox, with fine threads of spider silk drifting in the air. German has a funny name for it – literally \"old women's summer\"."
+   ],
+   "paragraphs_de": [
+    "Die Herbst-Tagundnachtgleiche fällt meist zwischen den 22. und 24. September. An diesem Tag steht die Sonne wieder senkrecht über dem Äquator, und Tag und Nacht sind fast gleich lang. 秋分 hat zwei Bedeutungen: Tag und Nacht teilen sich gleich auf, und der Herbst ist schon zur Hälfte vorbei. Danach sind auf der Nordhalbkugel die Nächte länger als die Tage.",
+    "Die drei „Hou“ lauten „der Donner zieht seine Stimme zurück, die Insekten verschließen ihre Höhlen, die Gewässer beginnen auszutrocknen“: Der Donner verstummt – genau das Gegenstück zu „der Donner beginnt zu grollen“ im Frühling; kleine Insekten verschließen ihre Löcher mit Erde für den Winter; es regnet weniger, und Flüsse und Seen werden flacher.",
+    "Früher war die Herbst-Tagundnachtgleiche das „Fest zu Ehren des Mondes“; später wanderte der Brauch allmählich zum Mondfest. Um diese Zeit ist der Himmel hoch und klar, und der Wind ist genau richtig zum Drachensteigen.",
+    "Dasselbe Zeichen 分 fühlt sich im Frühling und im Herbst ganz anders an: Nach der Frühlings-Tagundnachtgleiche werden die Tage länger und die Menschen lebhafter; nach der Herbst-Tagundnachtgleiche werden die Nächte länger, und man wird langsam stiller. Ein alter Spruch sagt: „Im Frühling sehnen sich die Frauen, im Herbst trauern die Gelehrten“ – der Frühling weckt Sehnsucht, der Herbst Wehmut.",
+    "In Deutschland gibt es um die Tagundnachtgleiche oft eine Reihe klarer, warmer Tage, an denen feine Spinnfäden durch die Luft schweben: den Altweibersommer."
+   ],
+   "glossary": [
+    {
+     "w": "等长",
+     "p": "děng cháng",
+     "en": "of equal length",
+     "de": "gleich lang"
+    },
+    {
+     "w": "相对",
+     "p": "xiāng duì",
+     "en": "to correspond, be opposite",
+     "de": "gegenüberstehen"
+    },
+    {
+     "w": "封",
+     "p": "fēng",
+     "en": "to seal",
+     "de": "verschließen"
+    },
+    {
+     "w": "洞口",
+     "p": "dòng kǒu",
+     "en": "mouth of a hole",
+     "de": "der Eingang (einer Höhle)"
+    },
+    {
+     "w": "涸",
+     "p": "hé",
+     "en": "to dry up",
+     "de": "austrocknen"
+    },
+    {
+     "w": "移",
+     "p": "yí",
+     "en": "to move",
+     "de": "verlegen, wandern"
+    },
+    {
+     "w": "天高气爽",
+     "p": "tiān gāo qì shuǎng",
+     "en": "high sky and crisp air (autumn)",
+     "de": "hoher Himmel, klare Luft (Herbst)"
+    },
+    {
+     "w": "精神",
+     "p": "jīng shen",
+     "en": "lively, energetic",
+     "de": "munter"
+    },
+    {
+     "w": "感伤",
+     "p": "gǎn shāng",
+     "en": "sad, wistful",
+     "de": "wehmütig"
+    },
+    {
+     "w": "晴朗",
+     "p": "qíng lǎng",
+     "en": "clear, sunny",
+     "de": "klar, sonnig"
+    },
+    {
+     "w": "蛛丝",
+     "p": "zhū sī",
+     "en": "spider silk",
+     "de": "der Spinnfaden"
+    },
+    {
+     "w": "直译",
+     "p": "zhí yì",
+     "en": "literal translation",
+     "de": "wörtliche Übersetzung"
+    }
+   ],
+   "grammar": "同一个 + noun = the same …: 同一个“分”字，感觉却完全不同 = the same word 分, but a completely different feeling.",
+   "grammar_de": "同一个 + Nomen = derselbe/dieselbe …: 同一个“分”字，感觉却完全不同 = dasselbe Zeichen 分, aber ein ganz anderes Gefühl.",
+   "questions": [
+    "秋分和春分的三候有什么相对的地方？",
+    "你同意“春女思，秋士悲”吗？",
+    "秋天让你想起什么？"
+   ],
+   "poem": {
+    "title": "望月怀远",
+    "author": "张九龄",
+    "dynasty": "唐",
+    "lines": [
+     "海上生明月，",
+     "天涯共此时。",
+     "情人怨遥夜，",
+     "竟夕起相思。",
+     "灭烛怜光满，",
+     "披衣觉露滋。",
+     "不堪盈手赠，",
+     "还寝梦佳期。"
+    ],
+    "explain_zh": "明月从海上升起，远在天边的人，这时也在看同一个月亮。想念远方的人，怨这长长的夜，整夜都在思念。吹灭蜡烛，爱这满屋的月光；披上衣服走到外面，觉得露水湿了衣裳。可惜不能捧一把月光送给你，只好回去睡觉，在梦里和你相见。",
+    "explain_en": "The bright moon rises over the sea; at the ends of the earth we share this moment. Lovers resent the long night and long for each other until dawn. I blow out the candle to love the moonlight that fills the room; I put on a coat and feel the dew. I cannot give you a handful of moonlight – so I go back to sleep, hoping to meet you in a dream.",
+    "explain_de": "Der helle Mond steigt über dem Meer auf; bis ans Ende der Welt teilen wir diesen Augenblick. Liebende klagen über die lange Nacht und sehnen sich bis zum Morgen. Ich lösche die Kerze, um das Mondlicht im Zimmer zu lieben; ich werfe mir etwas über und spüre den Tau. Ich kann dir keine Handvoll Mondlicht schenken – also lege ich mich wieder schlafen und hoffe, dich im Traum zu treffen."
+   },
+   "sources": [
+    {
+     "title": "農業部：二十四節氣（引用臺北市立天文科學教育館資料）",
+     "url": "https://www.moa.gov.tw/ws.php?id=2507770",
+     "license": "link only"
+    },
+    {
+     "title": "Hong Kong Observatory: 2026 major solar terms",
+     "url": "https://my.weather.gov.hk/en/gts/astron2026/files/2026SolarTerms24.pdf",
+     "license": "official"
+    },
+    {
+     "title": "国立天文台 暦Wiki：七十二候",
+     "url": "https://eco.mtk.nao.ac.jp/koyomi/wiki/B5A8C0E12FBCB7BDBDC6F3B8F5.html",
+     "license": "link only"
+    },
+    {
+     "title": "香港教育局：二十四節氣（小學教學資源）",
+     "url": "https://www.edb.gov.hk/attachment/tc/curriculum-development/cross-kla-studies/ph-primary/references-resources/MET_series/24_Solar_Terms.pdf",
+     "license": "official"
+    }
+   ]
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "寒露",
+   "date": "2026-10-08",
+   "title": "寒露：菊花开了",
+   "title_en": "Cold Dew: the chrysanthemums bloom",
+   "title_de": "Kalter Tau: Die Chrysanthemen blühen",
+   "dek": "露水快要变成霜了。",
+   "paragraphs": [
+    "十月八日前后是寒露。早上的露水更冷了，快要变成霜了。",
+    "这个时候，菊花开了，有黄的，有白的，也有紫的。",
+    "重阳节常常在寒露前后。这一天，人们去爬山、看菊花，也想念不在身边的家人。",
+    "在德国，十月的第一个星期天是丰收节。教堂里放着南瓜、苹果和面包，谢谢这一年的收获。"
+   ],
+   "paragraphs_en": [
+    "Cold Dew falls around 8 October. The morning dew is colder now and will soon turn to frost.",
+    "At this time the chrysanthemums bloom – yellow, white and purple.",
+    "The Double Ninth Festival often falls around Cold Dew. On this day people climb hills, admire chrysanthemums, and miss family members who are far away.",
+    "In Germany, the first Sunday in October is Harvest Festival. Churches are decorated with pumpkins, apples and bread to give thanks for the year's harvest."
+   ],
+   "paragraphs_de": [
+    "Um den 8. Oktober beginnt „Kalter Tau“. Der Morgentau ist jetzt kälter und wird bald zu Reif.",
+    "Jetzt blühen die Chrysanthemen – gelb, weiß und lila.",
+    "Das Doppel-Neun-Fest liegt oft um diese Zeit. An diesem Tag steigt man auf Berge, schaut Chrysanthemen an und denkt an Angehörige, die weit weg sind.",
+    "In Deutschland ist am ersten Sonntag im Oktober Erntedankfest. In den Kirchen liegen Kürbisse, Äpfel und Brot, um für die Ernte des Jahres zu danken."
+   ],
+   "glossary": [
+    {
+     "w": "寒露",
+     "p": "hán lù",
+     "en": "Cold Dew (solar term, around 8 October)",
+     "de": "Kalter Tau (Sonnenperiode, um den 8. Oktober)"
+    },
+    {
+     "w": "霜",
+     "p": "shuāng",
+     "en": "frost",
+     "de": "der Reif"
+    },
+    {
+     "w": "菊花",
+     "p": "jú huā",
+     "en": "chrysanthemum",
+     "de": "die Chrysantheme"
+    },
+    {
+     "w": "紫",
+     "p": "zǐ",
+     "en": "purple",
+     "de": "lila"
+    },
+    {
+     "w": "重阳节",
+     "p": "chóng yáng jié",
+     "en": "Double Ninth Festival",
+     "de": "das Doppel-Neun-Fest"
+    },
+    {
+     "w": "想念",
+     "p": "xiǎng niàn",
+     "en": "to miss",
+     "de": "vermissen"
+    },
+    {
+     "w": "丰收节",
+     "p": "fēng shōu jié",
+     "en": "Harvest Festival",
+     "de": "das Erntedankfest"
+    },
+    {
+     "w": "南瓜",
+     "p": "nán guā",
+     "en": "pumpkin",
+     "de": "der Kürbis"
+    }
+   ],
+   "grammar": "快要……了 = soon, about to: 露水快要变成霜了 = the dew will soon turn to frost.",
+   "grammar_de": "快要……了 = bald, gleich: 露水快要变成霜了 = Der Tau wird bald zu Reif.",
+   "questions": [
+    "寒露的时候，什么花开了？",
+    "重阳节的时候，人们做什么？",
+    "你想念谁？"
+   ],
+   "poem": {
+    "title": "九月九日忆山东兄弟",
+    "author": "王维",
+    "dynasty": "唐",
+    "lines": [
+     "独在异乡为异客，",
+     "每逢佳节倍思亲。",
+     "遥知兄弟登高处，",
+     "遍插茱萸少一人。"
+    ],
+    "explain_zh": "一个人在外地，是一个外乡人。每到过节的时候，就更想家里的亲人。我知道，今天兄弟们一起去爬山，每个人身上都插着茱萸，只是少了我一个人。",
+    "explain_en": "Alone in a strange land, a stranger far from home – at every festival I miss my family twice as much. I know that today my brothers are climbing the hills, each wearing a sprig of dogwood – and one of them is missing: me.",
+    "explain_de": "Allein in der Fremde, ein Fremder fern von daheim – an jedem Festtag vermisse ich meine Familie doppelt. Ich weiß, heute steigen meine Brüder auf die Berge, jeder mit einem Hartriegelzweig – und einer fehlt: ich."
+   },
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK4",
+   "kind": "jieqi",
+   "section": "节气",
+   "term": "寒露",
+   "date": "2026-10-08",
+   "title": "寒露：每逢佳节倍思亲",
+   "title_en": "Cold Dew: missing family twice as much at festivals",
+   "title_de": "Kalter Tau: An Festtagen doppelt Heimweh",
+   "dek": "露水更冷，菊花正黄。",
+   "paragraphs": [
+    "寒露一般在每年十月七日到九日之间。和白露相比，这时的露水更冷，快要凝结成霜了。从寒露到霜降，是秋天由凉转寒的时候。",
+    "寒露的三候是“鸿雁来宾、雀入大水为蛤、菊有黄华”：最后一批大雁也飞来了，像客人一样；天冷以后，常见的麻雀少了，海边的蛤蜊却多了起来，而且蛤蜊壳上的花纹和麻雀的羽毛有点像，古人就以为麻雀飞进海里变成了蛤蜊；菊花开出了黄色的花。",
+    "重阳节（农历九月初九）常常就在寒露前后。古人在这一天登高、赏菊、插茱萸，祈求平安。王维十七岁时写下的“独在异乡为异客，每逢佳节倍思亲”，到今天还是很多海外游子最懂的一句诗。",
+    "在德国，十月的第一个星期天是丰收感恩节，教堂里摆满南瓜、苹果、葡萄和面包。对住在德国的华人来说，这两个节日离得很近：一个感谢土地，一个想念家人。"
+   ],
+   "paragraphs_en": [
+    "Cold Dew usually falls between 7 and 9 October. Compared with White Dew, the dew is colder now and close to freezing into frost. From Cold Dew to Frost's Descent, autumn turns from cool to cold.",
+    "Its three pentads are \"the wild geese arrive as guests, sparrows enter the sea and become clams, chrysanthemums bloom yellow\": the last flocks of geese arrive like visitors; as it gets colder there are fewer sparrows but more clams on the shore, and the patterns on clam shells look a little like sparrow feathers, so the ancients thought the sparrows had flown into the sea and turned into clams; the chrysanthemums open yellow flowers.",
+    "The Double Ninth Festival (the ninth day of the ninth lunar month) often falls around Cold Dew. On this day people used to climb heights, admire chrysanthemums and wear sprigs of dogwood to pray for safety. The line Wang Wei wrote at seventeen – \"Alone in a strange land, a stranger far from home, at every festival I miss my family twice as much\" – is still the one many Chinese abroad understand best.",
+    "In Germany, the first Sunday of October is Harvest Thanksgiving, and churches are filled with pumpkins, apples, grapes and bread. For Chinese people living in Germany the two festivals lie close together: one gives thanks to the land, the other misses the family."
+   ],
+   "paragraphs_de": [
+    "„Kalter Tau“ fällt meist zwischen den 7. und 9. Oktober. Im Vergleich zum Weißen Tau ist der Tau jetzt kälter und wird bald zu Reif. Vom Kalten Tau bis zum Reifbeginn geht der Herbst von kühl zu kalt über.",
+    "Die drei „Hou“ lauten „die Wildgänse kommen als Gäste, die Spatzen gehen ins Meer und werden zu Muscheln, die Chrysanthemen blühen gelb“: Die letzten Gänse kommen wie Besucher; wenn es kälter wird, sieht man weniger Spatzen, am Strand aber mehr Muscheln, deren Schalenmuster ein wenig an Spatzenfedern erinnert – also glaubte man, die Spatzen seien ins Meer geflogen und zu Muscheln geworden; die Chrysanthemen öffnen gelbe Blüten.",
+    "Das Doppel-Neun-Fest (der neunte Tag des neunten Mondmonats) liegt oft um den Kalten Tau. Früher stieg man an diesem Tag auf Anhöhen, bewunderte Chrysanthemen und steckte sich Hartriegelzweige an, um für Sicherheit zu beten. Die Zeile, die Wang Wei mit siebzehn schrieb – „Allein in der Fremde, ein Fremder fern von daheim, an jedem Festtag vermisse ich meine Familie doppelt“ – verstehen viele Chinesen im Ausland bis heute am besten.",
+    "In Deutschland ist am ersten Sonntag im Oktober Erntedank, und die Kirchen sind voller Kürbisse, Äpfel, Trauben und Brot. Für Chinesen in Deutschland liegen beide Feste nah beieinander: Das eine dankt der Erde, das andere vermisst die Familie."
+   ],
+   "glossary": [
+    {
+     "w": "相比",
+     "p": "xiāng bǐ",
+     "en": "to compare",
+     "de": "vergleichen"
+    },
+    {
+     "w": "由……转……",
+     "p": "yóu … … zhuǎn … …",
+     "en": "to change from … to …",
+     "de": "von … zu … übergehen"
+    },
+    {
+     "w": "批",
+     "p": "pī",
+     "en": "batch, group",
+     "de": "die Gruppe, die Schar"
+    },
+    {
+     "w": "麻雀",
+     "p": "má què",
+     "en": "sparrow",
+     "de": "der Spatz"
+    },
+    {
+     "w": "蛤蜊",
+     "p": "gé lí",
+     "en": "clam",
+     "de": "die Muschel"
+    },
+    {
+     "w": "花纹",
+     "p": "huā wén",
+     "en": "pattern",
+     "de": "das Muster"
+    },
+    {
+     "w": "登高",
+     "p": "dēng gāo",
+     "en": "to climb a height",
+     "de": "auf eine Anhöhe steigen"
+    },
+    {
+     "w": "茱萸",
+     "p": "zhū yú",
+     "en": "dogwood (cornel)",
+     "de": "der Hartriegel"
+    },
+    {
+     "w": "祈求",
+     "p": "qí qiú",
+     "en": "to pray for",
+     "de": "bitten um"
+    },
+    {
+     "w": "游子",
+     "p": "yóu zǐ",
+     "en": "person far from home",
+     "de": "jemand in der Fremde"
+    },
+    {
+     "w": "感恩",
+     "p": "gǎn ēn",
+     "en": "to give thanks",
+     "de": "danken"
+    },
+    {
+     "w": "土地",
+     "p": "tǔ dì",
+     "en": "land, soil",
+     "de": "das Land, die Erde"
+    }
+   ],
+   "grammar": "和 A 相比 = compared with A: 和白露相比，这时的露水更冷 = compared with White Dew, the dew is colder now. Often followed by 更.",
+   "grammar_de": "和 A 相比 = verglichen mit A: 和白露相比，这时的露水更冷 = Verglichen mit dem Weißen Tau ist der Tau jetzt kälter. Oft folgt 更.",
+   "questions": [
+    "古人为什么说“雀入大水为蛤”？",
+    "为什么“每逢佳节倍思亲”是海外游子最懂的一句诗？",
+    "过节的时候，你会想念谁？"
+   ],
+   "poem": {
+    "title": "登高",
+    "author": "杜甫",
+    "dynasty": "唐",
+    "lines": [
+     "风急天高猿啸哀，",
+     "渚清沙白鸟飞回。",
+     "无边落木萧萧下，",
+     "不尽长江滚滚来。",
+     "万里悲秋常作客，",
+     "百年多病独登台。",
+     "艰难苦恨繁霜鬓，",
+     "潦倒新停浊酒杯。"
+    ],
+    "explain_zh": "风很急，天很高，猿猴的叫声很悲伤；水中的小洲清清的，沙滩白白的，鸟儿在空中盘旋。无边无际的树叶萧萧地落下，长江的水滚滚地流来，没有尽头。离家万里，在秋天里常常做客他乡；一生多病，一个人登上高台。艰难和苦恨让鬓发白了很多，身体不好，连浊酒也刚刚戒了。",
+    "explain_en": "Fierce wind, high sky, the gibbons' mournful cries; clear islets, white sand, birds circling back. Endless leaves fall rustling down; the unending Yangtze rolls on. Ten thousand miles from home, often a guest in sad autumns; a lifetime of illness, I climb the terrace alone. Hardship and bitterness have frosted my temples; worn down, I have just given up even my cup of cloudy wine.",
+    "explain_de": "Scharfer Wind, hoher Himmel, die klagenden Rufe der Gibbons; klare Inseln, weißer Sand, kreisende Vögel. Endlos fällt raschelnd das Laub; unaufhörlich rollt der Jangtse heran. Zehntausend Meilen von daheim, im traurigen Herbst oft zu Gast; ein Leben lang krank, steige ich allein auf die Terrasse. Mühsal und Kummer haben meine Schläfen bereift; erschöpft habe ich gerade sogar den trüben Wein aufgegeben."
    },
    "sources": [
     {

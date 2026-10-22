@@ -1590,8 +1590,10 @@ const ZSEG=(()=>{ try{ return new Intl.Segmenter("zh",{granularity:"word"}); }ca
 /* offline dictionary (dict/): seg.txt = words with a frequency cost for the segmenter; d/NN.json = definitions (CC-CEDICT EN, HanDeDict DE) */
 let ZD=null, ZDMAX=1, ZDP=null; const ZDS=new Map();
 let PYFIX=new Map(); // word → dictionary reading where pinyin-pro guesses wrong (种草 zhòng cǎo, 时候 shí hou)
+let PYPHR=[]; // dict/pyphrase.txt: hand-made phrase readings applied across word boundaries (长得 zhǎng de, 北风卷地 juǎn)
 function zdLoad(){
   if(ZDP) return ZDP;
+  fetch("dict/pyphrase.txt").then(r=>r.ok?r.text():"").then(t=>{ const a=[]; for(const l of t.split("\n")){ if(!l||l[0]==="#") continue; const i=l.indexOf("\t"); if(i<1) continue; const w=l.slice(0,i), y=l.slice(i+1).trim().split(/\s+/); if(y.length===[...w].length) a.push([w,y]); } PYPHR=a.sort((x,y)=>y[0].length-x[0].length); }).catch(()=>{});
   const fix=fetch("dict/pyfix.txt").then(r=>r.ok?r.text():"").then(t=>{ const m=new Map(); for(const l of t.split("\n")){ const i=l.indexOf("\t"); if(i>0) m.set(l.slice(0,i),l.slice(i+1)); } PYFIX=m; }).catch(()=>{});
   ZDP=fetch("dict/seg.txt").then(r=>r.ok?r.text():Promise.reject(r.status)).then(t=>{
     const m=new Map(); let c=20;
@@ -1642,10 +1644,12 @@ function zSents(p){ return String(p).split(/(?<=[。！？!?…；]+[”」』�
 function zWrap(text,own,extra){ // a paragraph → sentences → tappable words with pinyin
   return zSents(text).map(sen=>{
     const py=zPyArr(sen); let k=0;
+    const ph=[]; for(const [w,y] of PYPHR){ let p=sen.indexOf(w); while(p>=0){ y.forEach((x,j)=>{ if(x!=="-"&&!ph[p+j]) ph[p+j]=x; }); p=sen.indexOf(w,p+w.length); } } // phrase readings (dict/pyphrase.txt) win over everything else
     const toks0=zSeg(sen,extra);
     const toks=toks0.map((t,i)=>{ let a=py.slice(k,k+t.w.length); k+=t.w.length; const f=!t.punct&&t.w.length>1&&PYFIX.get(t.w); if(f){ const y=f.split(" "); if(y.length===t.w.length) a=y; }
       // structural particles after a word: 跑得快 de, 慢慢地 de, 看着 zhe (pinyin-pro often says dé / dì / zháo)
       if(t.w.length===1&&ZPART[t.w]&&i>0&&!toks0[i-1].punct&&!(t.w==="得"&&toks0[i+1]&&/^到/.test(toks0[i+1].w))) a=[ZPART[t.w]];
+      if(ph.length){ const k0=k-t.w.length; a=a.map((x,j)=>ph[k0+j]||x); }
       return {...t,py:a}; });
     // words are nowrap (a word never splits over two lines), so the line-break chance between two words is given explicitly with <wbr>; none before punctuation, so ，。 never start a line
     return `<span class="s" data-t="${esc(sen)}">`+toks.map((t,i)=>{

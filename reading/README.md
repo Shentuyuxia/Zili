@@ -48,4 +48,6 @@ Fixed texts in the spirit of Shiori: one term, two levels (HSK2 for children and
 - `node tools/reading.js` checks this file too (term, date, poem) and fills glossary pinyin.
 - Dates of the terms: Hong Kong Observatory calendar (hko.gov.hk). Every cultural fact needs a source you opened; folk sayings are labelled as sayings.
 - **Sources — preference of the app's owner:** do not use Xinhua (新华网/新华社), People's Daily (人民日报/人民网), CCTV/CGTN or similar central state outlets. Prefer Hong Kong and Taiwan media (e.g. 香港天文台, 端传媒, 报导者, 中央社 culture pages, 中国时报), museums and heritage institutions, encyclopedias, scholarly sources, and mainland culture/feature outlets such as 澎湃新闻 (The Paper) or 文汇报 culture pages. When sources disagree on a fact, write the version they share, or name the difference.
-- Written so far: 霜降 (10-23), 立冬 (11-07).
+- All 24 terms are written (48 texts). Sources used throughout: dates — 農業部 / 臺北市立天文科學教育館 and the Hong Kong Observatory; the three 候 of each term — 国立天文台 暦Wiki (七十二候, Chinese version); customs — 香港教育局, 星島教室, 康健雜誌, 淡江時報, Marie Claire 台灣, Our China Story, 米芝蓮指南; each item lists its own sources.
+- Poems are all classical (pre-1912) and public domain; excerpts are marked （节选）.
+- Pinyin: if the app shows a wrong reading for a polyphone in a phrase (长得, 北风卷地), add the phrase to `dict/pyphrase.txt`.

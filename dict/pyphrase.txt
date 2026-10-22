@@ -1,0 +1,31 @@
+# Phrase readings, applied to every sentence before it is split into words (tab-separated: phrase<TAB>syllables).
+# Use this for polyphones that pinyin-pro gets wrong across word boundaries (长得 zhǎng de, 北风卷地 juǎn).
+# One syllable per character; "-" for punctuation such as quotation marks. Standard: 现代汉语词典.
+# Edit by hand; the app loads this file directly (no build step).
+长得	zhǎng de
+长出	zhǎng chū
+长高	zhǎng gāo
+长成	zhǎng chéng
+数完	shǔ wán
+数着	shǔ zhe
+数到	shǔ dào
+开始数“	kāi shǐ shǔ -
+开始数，	kāi shǐ shǔ -
+种出	zhòng chū
+种水稻	zhòng shuǐ dào
+忙种	máng zhòng
+“种”	- zhòng -
+“处”	- chǔ -
+二十四种	èr shí sì zhǒng
+寒号鸟	hán háo niǎo
+曲项	qū xiàng
+卷地	juǎn dì
+卷过	juǎn guò
+未肯降	wèi kěn xiáng
+更著	gèng zhuó
+还应	hái yīng
+教儿	jiāo ér
+女娲教	nǚ wā jiāo
+为蛤	wéi gé
+时钟调回	shí zhōng tiáo huí
+应怜	yīng lián

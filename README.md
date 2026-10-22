@@ -72,6 +72,7 @@ python3 tools/wb_examples.py --count  # words still without an example sentence 
 python3 tools/build_dict.py      # rebuild dict/ (sources: tools/src/README.md)
 python3 tools/build_hw.py         # dict/hw.txt handwriting templates (after build_strokes)
 node tools/build_pyfix.js         # dict/pyfix.txt: dictionary readings where pinyin-pro guesses wrong (+ tools/pyfix_extra.txt hand fixes)
+# dict/pyphrase.txt (edit by hand, no build): phrase readings applied across word boundaries, e.g. 长得 zhǎng de, 北风卷地 juǎn
 python3 tools/build_pyindex.py    # dict/py.txt pinyin search index (after build_dict)
 python3 tools/build_strokes.py    # rebuild strokes/ (needs tools/src/hwd = npm hanzi-writer-data)
 python3 tools/build_wordbank.py  # add missing official HSK words; tools/zh_fix.json holds hand corrections
