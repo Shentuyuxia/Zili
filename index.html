@@ -1032,6 +1032,13 @@ body:not(.tones) .tone-opts{opacity:.55}
 .dic-in .ib[aria-pressed="true"]{border-color:var(--acc);color:var(--acc);background:var(--acc-soft)}
 .dic-in .ib.live{border-color:var(--bad);color:var(--bad)}
 .dic-pad{display:grid;justify-items:center;gap:8px;margin-top:12px}
+.dic-in label.ib{display:inline-flex;align-items:center;justify-content:center;cursor:pointer;border:1px solid var(--line);border-radius:50%}
+.dic-in label.ib svg{width:20px;height:20px}
+.dic-ocr{display:grid;gap:8px;margin-top:12px}
+.dic-ocr .stage{position:relative;max-height:56vh;overflow:hidden;border-radius:10px;background:var(--sunk);touch-action:none;-webkit-user-select:none;user-select:none}
+.dic-ocr .stage img{display:block;width:100%;height:auto;max-height:56vh;object-fit:contain;pointer-events:none}
+.dic-ocr .sel{position:absolute;border:2px solid var(--acc);background:color-mix(in srgb,var(--acc) 12%,transparent);box-shadow:0 0 0 9999px rgba(0,0,0,.35);border-radius:4px;pointer-events:none}
+.dic-ocr .acts{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .dic-cv{position:relative;width:min(300px,78vw);aspect-ratio:1;background:var(--surface);border-radius:6px;touch-action:none}
 .dic-cv canvas{position:absolute;inset:0;width:100%;height:100%;cursor:crosshair;touch-action:none}
 .dic-cands{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;min-height:46px}
@@ -3250,6 +3257,60 @@ function dicListen(){
 }
 function dicPad(on){ const b=$("#dic-hwb"); if(b) b.setAttribute("aria-pressed",on); const w=$("#dic-padwrap"); if(!w) return; w.innerHTML=on?dicPadHtml():""; if(on){ DIC.strokes=[]; dicPadMount(); } }
 function dicPreload(){ dicLoadPy(); dicLoadTpl(); zStkLib(); zdLoad(); }
+
+/* photo → text, offline (Tesseract.js, Apache-2.0; Chinese LSTM data). The photo never leaves the device. */
+const OCR={w:null,lang:"",p:null,img:null,sel:null};
+function ocrWorker(){
+  const lang=scr()==="t"?"chi_tra":"chi_sim";
+  if(OCR.w&&OCR.lang===lang) return Promise.resolve(OCR.w);
+  if(OCR.p&&OCR.lang===lang) return OCR.p;
+  OCR.lang=lang;
+  OCR.p=(window.Tesseract?Promise.resolve():loadScript("vendor/tesseract/tesseract.min.js")).then(async()=>{
+    if(OCR.w){ try{ await OCR.w.terminate(); }catch(e){} OCR.w=null; }
+    const w=await Tesseract.createWorker(lang,1,{workerPath:"vendor/tesseract/worker.min.js",corePath:"vendor/tesseract/",langPath:"vendor/tesseract/lang",gzip:true});
+    await w.setParameters({preserve_interword_spaces:"0"}); OCR.w=w; return w;
+  }).catch(e=>{ OCR.p=null; throw e; });
+  return OCR.p;
+}
+function ocrHtml(src){ return `<div class="dic-ocr" id="dic-ocr"><p class="small muted" style="margin:0">${esc(trOne("用手指框出要查的字，框得越准越好。不框就识别整张图。")||"")}</p>
+  <div class="stage" id="ocr-stage"><img id="ocr-img" alt="" src="${src}"><div class="sel" id="ocr-sel" hidden></div></div>
+  <div class="acts"><button class="btn primary sm" type="button" id="ocr-go">${esc(trOne("识别")||"识别")}</button><label class="btn ghost sm">${esc(trOne("换一张")||"换一张")}<input type="file" id="dic-cam2" accept="image/*" hidden></label><button class="btn ghost sm" type="button" id="ocr-x">${esc(trOne("取消")||"取消")}</button><span class="small muted" id="ocr-msg"></span></div></div>`; }
+function ocrOpen(file){
+  if(!file) return; const url=URL.createObjectURL(file);
+  const b=$("#dic-hwb"); if(b) b.setAttribute("aria-pressed","false");
+  if(OCR.img) URL.revokeObjectURL(OCR.img); OCR.img=url; OCR.sel=null;
+  $("#dic-padwrap").innerHTML=ocrHtml(url); ocrWorker().catch(()=>{});
+  const st=$("#ocr-stage"), box=$("#ocr-sel"); let a=null;
+  const pt=e=>{ const r=$("#ocr-img").getBoundingClientRect(); return [Math.min(Math.max(e.clientX-r.left,0),r.width),Math.min(Math.max(e.clientY-r.top,0),r.height)]; };
+  st.onpointerdown=e=>{ e.preventDefault(); st.setPointerCapture(e.pointerId); a=pt(e); OCR.sel=null; box.hidden=true; };
+  st.onpointermove=e=>{ if(!a) return; const b=pt(e), x=Math.min(a[0],b[0]), y=Math.min(a[1],b[1]), w=Math.abs(b[0]-a[0]), h=Math.abs(b[1]-a[1]);
+    if(w<6||h<6) return; Object.assign(box.style,{left:x+"px",top:y+"px",width:w+"px",height:h+"px"}); box.hidden=false; OCR.sel=[x,y,w,h]; };
+  st.onpointerup=st.onpointercancel=()=>{ a=null; };
+  $("#dic-cam2").addEventListener("change",e=>{ const f=e.target.files&&e.target.files[0]; e.target.value=""; ocrOpen(f); });
+}
+async function ocrRun(){
+  const img=$("#ocr-img"), msg=$("#ocr-msg"); if(!img) return;
+  const r=img.getBoundingClientRect(), kx=img.naturalWidth/r.width, ky=img.naturalHeight/r.height;
+  let [x,y,w,h]=OCR.sel||[0,0,r.width,r.height];
+  if(OCR.sel){ const m=Math.max(6,h*.35); x-=m; y-=m; w+=2*m; h+=2*m; x=Math.max(0,x); y=Math.max(0,y); w=Math.min(r.width-x,w); h=Math.min(r.height-y,h); } // a finger box is rarely exact: take a margin around it
+  x*=kx; y*=ky; w*=kx; h*=ky;
+  // crop, enlarge small selections, greyscale with a little contrast
+  const scale=Math.min(4,Math.max(1,1000/Math.max(w,h))), c=document.createElement("canvas");
+  c.width=Math.round(w*scale); c.height=Math.round(h*scale); const g=c.getContext("2d"); g.imageSmoothingQuality="high";
+  g.drawImage(img,x,y,w,h,0,0,c.width,c.height);
+  const d=g.getImageData(0,0,c.width,c.height), p=d.data; for(let i=0;i<p.length;i+=4){ let v=.299*p[i]+.587*p[i+1]+.114*p[i+2]; v=Math.max(0,Math.min(255,(v-128)*1.35+128)); p[i]=p[i+1]=p[i+2]=v; } g.putImageData(d,0,0);
+  if(msg) msg.innerHTML=`<span class="spin"></span> ${esc(trOne(OCR.w?"正在识别…":"第一次要载入识别数据（约 5 MB）…")||"")}`;
+  const go=$("#ocr-go"); if(go) go.disabled=true;
+  try{
+    const wk=await ocrWorker(); if(msg) msg.innerHTML=`<span class="spin"></span> ${esc(trOne("正在识别…")||"")}`;
+    const res=await wk.recognize(c);
+    let t=String(res.data.text||"").replace(/[ \t　]+/g,"").replace(/\n{2,}/g,"\n").trim();
+    if(!HAN.test(t)){ if(msg) msg.textContent=trOne("没认出汉字。框小一点、拍清楚一点再试。")||""; if(go) go.disabled=false; return; }
+    t=t.replace(/[^㐀-鿿豈-﫿\n，。！？、；：0-9]/g,"").replace(/\n/g," ");
+    const q=$("#dic-q"); if(q) q.value=t; if(msg) msg.textContent="";
+    $("#dic-padwrap").innerHTML=""; dicSearch(t);
+  }catch(e){ if(msg) msg.textContent=(trOne("识别没成功：")||"")+(e&&e.message||e); if(go) go.disabled=false; }
+}
 function dicOpen(){ showTab("dict"); }
 function dicMount(){ // the dictionary page (bottom bar, middle)
   const host=$("#dict-host"); if(!host) return; if(host.dataset.on){ const q=$("#dic-q"); if(q&&!S.settings.dicHw) setTimeout(()=>{ try{ q.focus({preventScroll:true}); }catch(e){} },60); return; } host.dataset.on="1";
@@ -3258,7 +3319,8 @@ function dicMount(){ // the dictionary page (bottom bar, middle)
   host.innerHTML=`
     <div class="dic-in"><input type="search" id="dic-q" placeholder="汉字 · pinyin · English · Deutsch" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search">
       <button class="ib" type="button" id="dic-hwb" aria-pressed="false" aria-label="手写" title="手写">${I.pen}</button>
-      <button class="ib" type="button" id="dic-mic" aria-label="说" title="说">${I.mic}</button></div>
+      <button class="ib" type="button" id="dic-mic" aria-label="说" title="说">${I.mic}</button>
+      <label class="ib" id="dic-camb" aria-label="拍照识字" title="拍照识字"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-2.5h6L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.6"/></svg><input type="file" id="dic-cam" accept="image/*" hidden></label></div>
     <div id="dic-padwrap"></div>
     <p class="small muted dic-msg" id="dic-msg"></p><div id="dic-res"></div>`;
   const root=host;
@@ -3273,10 +3335,13 @@ function dicMount(){ // the dictionary page (bottom bar, middle)
     if(b.id==="dic-undo"){ DIC.strokes.pop(); DIC.redraw&&DIC.redraw(); dicCands(); return; }
     if(b.id==="dic-clear"){ dicClearPad(); return; }
     if(b.id==="dic-mic"){ dicListen(); return; }
+    if(b.id==="ocr-go"){ ocrRun(); return; }
+    if(b.id==="ocr-x"){ $("#dic-padwrap").innerHTML=""; return; }
     if(b.id==="dic-back"){ q.value=DIC.last; dicSearch(DIC.last); return; }
     if(b.id==="dic-say"&&DIC.cur){ speak(DIC.cur); return; }
     if(b.id==="dic-save"){ dicSave(); return; }
   });
+  $("#dic-cam").addEventListener("change",e=>{ const f=e.target.files&&e.target.files[0]; e.target.value=""; ocrOpen(f); });
   dicSearch(""); dicPreload();
   if(S.settings.dicHw) dicPad(true); else setTimeout(()=>{ try{ q.focus({preventScroll:true}); }catch(e){} },60);
 }
@@ -4657,6 +4722,15 @@ const UI_DICT=[
 ["笔顺", "Stroke order", "Strichfolge", "Ordem dos traços", "筆順"],
 ["画", "strokes", "Striche", "traços", "畫"],
 ["描", "Trace", "Nachfahren", "Traçar", "描"],
+["拍照识字", "Photo", "Foto", "Foto", "拍照識字"],
+["用手指框出要查的字，框得越准越好。不框就识别整张图。", "Drag a box around the characters you want — the tighter, the better. No box: the whole picture is read.", "Zieh einen Rahmen um die gesuchten Zeichen – je enger, desto besser. Ohne Rahmen wird das ganze Bild gelesen.", "Arraste um quadro em volta dos caracteres — quanto mais justo, melhor. Sem quadro, lê a imagem inteira.", "用手指框出要查的字，框得越準越好。不框就辨識整張圖。"],
+["识别", "Read text", "Erkennen", "Reconhecer", "辨識"],
+["换一张", "Other photo", "Anderes Foto", "Outra foto", "換一張"],
+["取消", "Cancel", "Abbrechen", "Cancelar", "取消"],
+["正在识别…", "Reading…", "Wird erkannt…", "Reconhecendo…", "正在辨識…"],
+["第一次要载入识别数据（约 5 MB）…", "Loading the recognition data once (about 5 MB)…", "Erkennungsdaten werden einmalig geladen (etwa 5 MB)…", "Carregando os dados uma vez (cerca de 5 MB)…", "第一次要載入辨識資料（約 5 MB）…"],
+["没认出汉字。框小一点、拍清楚一点再试。", "No characters found. Try a tighter box or a sharper photo.", "Keine Zeichen erkannt. Enger rahmen oder schärfer fotografieren.", "Nenhum caractere. Tente um quadro menor ou uma foto mais nítida.", "沒認出漢字。框小一點、拍清楚一點再試。"],
+["识别没成功：", "Recognition failed: ", "Erkennung fehlgeschlagen: ", "Falha no reconhecimento: ", "辨識沒成功："],
 ["重新看新手引导", "Show the welcome guide again", "Einführung erneut zeigen", "Ver o guia inicial de novo", "重新看新手引導"],
 ["欢迎来到字里", "Welcome to Zili", "Willkommen bei Zili", "Bem-vindo ao Zili", "歡迎來到字里"],
 ["先回答三个小问题，我们帮你调好难度。", "Three quick questions, so we can set the right level for you.", "Drei kurze Fragen, damit wir das passende Niveau einstellen.", "Três perguntas rápidas para ajustar o nível.", "先回答三個小問題，我們幫你調好難度。"],

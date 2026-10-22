@@ -55,6 +55,7 @@ Third-party components / Komponenten Dritter / 第三方组件
 ================================================================
 - dict/ — adapted from CC-CEDICT and HanDeDict: CC BY-SA 4.0 (dict/LICENSE.md)
 - strokes/, dict/hw.txt — from Make Me a Hanzi / hanzi-writer-data: Arphic Public License (strokes/ARPHICPL.TXT)
+- vendor/tesseract/ — Tesseract.js and tesseract.js-core (Apache-2.0), Chinese traineddata (Apache-2.0 / MIT packaging)
 - vendor/hanzi-writer.min.js (MIT), vendor/pinyin-pro.js (MIT), pdf.js (Apache-2.0), mammoth.js (BSD-2-Clause)
 - fonts/ — LXGW WenKai, LXGW WenKai TC, Source Sans 3, Source Serif 4 (SIL OFL 1.1); LXGW Neo XiHei (IPA Font License)
 - word frequencies from jieba (MIT); HSK levels from complete-hsk-vocabulary (MIT); Traditional characters from OpenCC (Apache-2.0)
