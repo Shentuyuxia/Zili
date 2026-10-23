@@ -1,0 +1,524 @@
+{
+ "date": "2026-10-23",
+ "createdBy": "claude",
+ "items": [
+  {
+   "lang": "zh",
+   "level": "HSK1",
+   "kind": "dialogue",
+   "section": "休闲",
+   "title": "星期五晚上",
+   "title_en": "Friday evening",
+   "title_de": "Freitagabend",
+   "paragraphs": [
+    "大卫：小美，今天是星期五。晚上你想做什么？",
+    "小美：我想看电影。你呢？",
+    "大卫：我也想看。几点的电影？",
+    "小美：七点半的。我们六点去饭馆吃饭，好吗？",
+    "大卫：好！电影票多少钱？",
+    "小美：一张四十块。我买两张。",
+    "大卫：谢谢你！明天我请你喝茶。"
+   ],
+   "paragraphs_en": [
+    "David: Xiaomei, today is Friday. What do you want to do this evening?",
+    "Xiaomei: I want to watch a film. And you?",
+    "David: I want to watch one too. What time is the film?",
+    "Xiaomei: Half past seven. Let's go to a restaurant to eat at six, OK?",
+    "David: OK! How much is a cinema ticket?",
+    "Xiaomei: Forty kuai each. I'll buy two.",
+    "David: Thank you! Tomorrow I'll treat you to tea."
+   ],
+   "paragraphs_de": [
+    "David: Xiaomei, heute ist Freitag. Was möchtest du heute Abend machen?",
+    "Xiaomei: Ich möchte einen Film sehen. Und du?",
+    "David: Ich möchte auch einen sehen. Um wie viel Uhr läuft der Film?",
+    "Xiaomei: Um halb acht. Gehen wir um sechs ins Restaurant essen, ja?",
+    "David: Gut! Wie viel kostet eine Kinokarte?",
+    "Xiaomei: Vierzig Kuai pro Karte. Ich kaufe zwei.",
+    "David: Danke! Morgen lade ich dich zum Tee ein."
+   ],
+   "glossary": [
+    {
+     "w": "星期五",
+     "p": "xīng qī wǔ",
+     "en": "Friday",
+     "de": "der Freitag"
+    },
+    {
+     "w": "晚上",
+     "p": "wǎn shang",
+     "en": "evening",
+     "de": "der Abend"
+    },
+    {
+     "w": "电影",
+     "p": "diàn yǐng",
+     "en": "film, movie",
+     "de": "der Film"
+    },
+    {
+     "w": "几点",
+     "p": "jǐ diǎn",
+     "en": "what time",
+     "de": "um wie viel Uhr"
+    },
+    {
+     "w": "半",
+     "p": "bàn",
+     "en": "half",
+     "de": "halb"
+    },
+    {
+     "w": "饭馆",
+     "p": "fàn guǎn",
+     "en": "restaurant",
+     "de": "das Restaurant"
+    },
+    {
+     "w": "票",
+     "p": "piào",
+     "en": "ticket",
+     "de": "die Karte; das Ticket"
+    },
+    {
+     "w": "请",
+     "p": "qǐng",
+     "en": "to treat, to invite",
+     "de": "einladen"
+    }
+   ],
+   "grammar": "Time words come before the verb: 我们六点去饭馆吃饭 'we at six go to a restaurant to eat'. 七点半 means 'half past seven' – the 半 comes after the hour.",
+   "grammar_de": "Zeitangaben stehen vor dem Verb: 我们六点去饭馆吃饭 „wir um sechs gehen ins Restaurant essen“. 七点半 heißt „halb acht“ (wörtlich: sieben Uhr halb) – 半 steht nach der Stunde.",
+   "questions": [
+    "今天星期几？",
+    "电影几点开始？",
+    "一张电影票多少钱？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "feature",
+   "section": "休闲",
+   "title": "公园里的乒乓球",
+   "title_en": "Table tennis in the park",
+   "title_de": "Tischtennis im Park",
+   "paragraphs": [
+    "我叫安娜，住在柏林。我家旁边有一个公园，公园里有两张乒乓球桌。天气好的时候，很多人在那儿打乒乓球。",
+    "以前我不会打，但是我的中国同事小王打得非常好。因为他从小就打乒乓球，所以打得又快又好。现在他每个星期五下班以后都教我。",
+    "开始的时候，球总是飞得很远，我跑来跑去，非常累。小王笑着说：“没关系，慢慢来。”",
+    "现在我已经打得不错了，还认识了几个新朋友。我觉得，星期五晚上去公园打球，比在家看手机好多了。"
+   ],
+   "paragraphs_en": [
+    "My name is Anna and I live in Berlin. Next to my home there is a park, and in the park there are two table tennis tables. When the weather is good, lots of people play table tennis there.",
+    "I used to not know how to play, but my Chinese colleague Xiao Wang plays really well. Because he has played table tennis since he was little, he plays fast and well. Now he teaches me every Friday after work.",
+    "At the beginning, the ball always flew far away, and I ran back and forth and got very tired. Xiao Wang laughed and said: “Never mind, take it slowly.”",
+    "Now I already play quite well, and I have also got to know a few new friends. I think going to the park to play on a Friday evening is much better than looking at my phone at home."
+   ],
+   "paragraphs_de": [
+    "Ich heiße Anna und wohne in Berlin. Neben meiner Wohnung gibt es einen Park, und im Park stehen zwei Tischtennisplatten. Wenn das Wetter schön ist, spielen dort viele Leute Tischtennis.",
+    "Früher konnte ich nicht spielen, aber mein chinesischer Kollege Xiao Wang spielt sehr gut. Weil er schon als Kind Tischtennis gespielt hat, spielt er schnell und gut. Jetzt bringt er es mir jeden Freitag nach der Arbeit bei.",
+    "Am Anfang flog der Ball immer weit weg, ich rannte hin und her und war sehr müde. Xiao Wang lachte und sagte: „Macht nichts, immer mit der Ruhe.“",
+    "Jetzt spiele ich schon ganz gut und habe auch ein paar neue Freunde kennengelernt. Ich finde, am Freitagabend im Park zu spielen ist viel schöner, als zu Hause aufs Handy zu schauen."
+   ],
+   "glossary": [
+    {
+     "w": "乒乓球",
+     "p": "pīng pāng qiú",
+     "en": "table tennis",
+     "de": "das Tischtennis"
+    },
+    {
+     "w": "公园",
+     "p": "gōng yuán",
+     "en": "park",
+     "de": "der Park"
+    },
+    {
+     "w": "同事",
+     "p": "tóng shì",
+     "en": "colleague",
+     "de": "der Kollege / die Kollegin"
+    },
+    {
+     "w": "从小",
+     "p": "cóng xiǎo",
+     "en": "since childhood",
+     "de": "von klein auf"
+    },
+    {
+     "w": "下班",
+     "p": "xià bān",
+     "en": "to finish work",
+     "de": "Feierabend haben"
+    },
+    {
+     "w": "教",
+     "p": "jiāo",
+     "en": "to teach",
+     "de": "beibringen; unterrichten"
+    },
+    {
+     "w": "跑来跑去",
+     "p": "pǎo lái pǎo qù",
+     "en": "to run back and forth",
+     "de": "hin und her rennen"
+    },
+    {
+     "w": "慢慢来",
+     "p": "màn màn lái",
+     "en": "take your time",
+     "de": "immer mit der Ruhe"
+    }
+   ],
+   "grammar": "Verb + 得 + description says how well someone does something: 他打得非常好 'he plays very well'. 又……又…… joins two qualities: 打得又快又好 'plays both fast and well'.",
+   "grammar_de": "Verb + 得 + Beschreibung sagt, wie gut man etwas tut: 他打得非常好 „er spielt sehr gut“. 又……又…… verbindet zwei Eigenschaften: 打得又快又好 „spielt schnell und gut“.",
+   "questions": [
+    "安娜家旁边有什么？",
+    "小王为什么打得很好？",
+    "小王什么时候教安娜打乒乓球？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK3",
+   "kind": "feature",
+   "section": "休闲",
+   "title": "桌游之夜",
+   "title_en": "Board game night",
+   "title_de": "Spieleabend",
+   "dek": "来德国以前，我从来没玩过这么多桌游。",
+   "paragraphs": [
+    "来德国以前，我以为德国人周末最喜欢去酒吧。来了以后才发现，我的很多德国朋友更喜欢请朋友来家里，一起玩桌游。",
+    "上个星期五，我的室友托马斯请了几个朋友来吃晚饭。吃完饭，桌子上放着很多盒子，有的游戏要用卡片，有的要用小木头人。我以前只玩过手机游戏，还没玩过这么多种桌游。",
+    "第一个游戏的规则有点儿复杂，托马斯用英语给我讲了两遍，我才明白。开始我一直输，后来慢慢找到了方法。最后一局，我居然赢了！大家都笑着给我鼓掌。",
+    "玩桌游比玩手机游戏慢，可是大家坐在一起，一边喝茶吃点心，一边聊天，比一个人看屏幕热闹多了。那天晚上，我们一直玩到一点才结束。",
+    "现在我也买了一个桌游，准备过年的时候带回中国，教我的表哥和表妹玩。"
+   ],
+   "paragraphs_en": [
+    "Before I came to Germany, I thought Germans liked going to bars most at the weekend. Only after I arrived did I discover that many of my German friends prefer inviting friends home to play board games together.",
+    "Last Friday my flatmate Thomas invited a few friends over for dinner. After dinner there were lots of boxes on the table: some games used cards, others little wooden figures. I had only ever played games on my phone and had never played so many kinds of board games.",
+    "The rules of the first game were a bit complicated. Thomas explained them to me twice in English before I understood. At first I kept losing, but then I slowly found a strategy. In the last round I actually won! Everyone laughed and clapped for me.",
+    "Board games are slower than phone games, but everyone sits together, drinking tea, eating snacks and chatting – much livelier than staring at a screen alone. That evening we played all the way until one o'clock.",
+    "Now I have bought a board game too, and I plan to take it back to China for New Year to teach my cousins how to play."
+   ],
+   "paragraphs_de": [
+    "Bevor ich nach Deutschland kam, dachte ich, die Deutschen gehen am Wochenende am liebsten in Bars. Erst hier habe ich gemerkt, dass viele meiner deutschen Freunde lieber Freunde zu sich nach Hause einladen und zusammen Brettspiele spielen.",
+    "Letzten Freitag hat mein Mitbewohner Thomas ein paar Freunde zum Abendessen eingeladen. Nach dem Essen standen viele Schachteln auf dem Tisch: Für manche Spiele brauchte man Karten, für andere kleine Holzfiguren. Ich hatte vorher nur Handyspiele gespielt und noch nie so viele verschiedene Brettspiele.",
+    "Die Regeln des ersten Spiels waren ein bisschen kompliziert. Thomas hat sie mir zweimal auf Englisch erklärt, bis ich sie verstanden habe. Am Anfang habe ich immer verloren, dann habe ich langsam eine Strategie gefunden. In der letzten Runde habe ich tatsächlich gewonnen! Alle haben gelacht und für mich geklatscht.",
+    "Brettspiele sind langsamer als Handyspiele, aber alle sitzen zusammen, trinken Tee, essen Snacks und unterhalten sich – viel geselliger, als allein auf einen Bildschirm zu schauen. An dem Abend haben wir bis ein Uhr gespielt.",
+    "Jetzt habe ich mir auch ein Brettspiel gekauft. Ich will es zum chinesischen Neujahr mit nach China nehmen und es meinen Cousins und Cousinen beibringen."
+   ],
+   "glossary": [
+    {
+     "w": "桌游",
+     "p": "zhuō yóu",
+     "en": "board game",
+     "de": "das Brettspiel"
+    },
+    {
+     "w": "以为",
+     "p": "yǐ wéi",
+     "en": "to (wrongly) think",
+     "de": "(fälschlich) glauben"
+    },
+    {
+     "w": "室友",
+     "p": "shì yǒu",
+     "en": "flatmate, roommate",
+     "de": "der Mitbewohner / die Mitbewohnerin"
+    },
+    {
+     "w": "盒子",
+     "p": "hé zi",
+     "en": "box",
+     "de": "die Schachtel"
+    },
+    {
+     "w": "规则",
+     "p": "guī zé",
+     "en": "rule",
+     "de": "die Regel"
+    },
+    {
+     "w": "复杂",
+     "p": "fù zá",
+     "en": "complicated",
+     "de": "kompliziert"
+    },
+    {
+     "w": "输",
+     "p": "shū",
+     "en": "to lose",
+     "de": "verlieren"
+    },
+    {
+     "w": "赢",
+     "p": "yíng",
+     "en": "to win",
+     "de": "gewinnen"
+    },
+    {
+     "w": "局",
+     "p": "jú",
+     "en": "round, game (measure word)",
+     "de": "die Runde, die Partie (Zählwort)"
+    },
+    {
+     "w": "居然",
+     "p": "jū rán",
+     "en": "unexpectedly, actually",
+     "de": "tatsächlich, überraschenderweise"
+    },
+    {
+     "w": "鼓掌",
+     "p": "gǔ zhǎng",
+     "en": "to clap, to applaud",
+     "de": "klatschen, applaudieren"
+    },
+    {
+     "w": "屏幕",
+     "p": "píng mù",
+     "en": "screen",
+     "de": "der Bildschirm"
+    }
+   ],
+   "grammar": "Place + verb + 着 + thing describes what is (lying, standing) somewhere: 桌子上放着很多盒子 'on the table lie many boxes'. Compare with 比: A 比 B + adjective + 多了 means 'A is much more … than B'.",
+   "grammar_de": "Ort + Verb + 着 + Sache beschreibt, was irgendwo liegt oder steht: 桌子上放着很多盒子 „auf dem Tisch liegen viele Schachteln“. Vergleich mit 比: A 比 B + Adjektiv + 多了 heißt „A ist viel … als B“.",
+   "questions": [
+    "来德国以前，“我”以为德国人周末喜欢做什么？",
+    "第一个游戏的规则，托马斯讲了几遍？",
+    "“我”为什么觉得玩桌游比玩手机游戏热闹？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK4",
+   "kind": "feature",
+   "section": "休闲",
+   "title": "你看剧开倍速吗？",
+   "title_en": "Do you watch series at double speed?",
+   "title_de": "Schaust du Serien mit erhöhter Geschwindigkeit?",
+   "dek": "越来越多的人用1.5倍速看电视剧。这是聪明的办法，还是一种可惜？",
+   "paragraphs": [
+    "最近我发现，身边很多朋友看电视剧时都会打开“倍速”功能，用1.5倍甚至2倍的速度看。我的室友说，一部四十集的剧，用正常速度要看三十多个小时，开了倍速，一个周末就能看完。",
+    "支持倍速的人认为，现在的生活节奏太快，空闲时间很少。有些剧情发展得太慢，对话又长，开倍速可以节省不少时间。也有人说，自己只是想知道故事的结局，并不在乎中间的细节。而且，第二天同事们都在讨论同一部剧，如果没看完，就没办法加入话题。",
+    "但是也有人反对。我的一个朋友是学电影的，她说，导演安排每一个镜头的长短都是有原因的。一段安静的画面、演员的一个眼神，如果被快速跳过，观众就感受不到里面的情绪。在她看来，倍速看剧就像吃饭吃得太快，吃饱了，却尝不出味道。",
+    "我自己的做法是：看轻松的综艺节目时，偶尔开一下倍速；看认真拍的电影，就用正常速度，最好还把手机放远一点儿。如果一部剧的第一集就让我觉得无聊，我干脆换一部，而不是用倍速硬着头皮看完。毕竟，看剧本来是为了放松，如果连休息都变成了任务，那就有点儿可惜了。",
+    "你呢？你看剧的时候会开倍速吗？"
+   ],
+   "paragraphs_en": [
+    "Recently I noticed that many friends around me switch on the “playback speed” function when they watch TV series, watching at 1.5 or even 2 times the speed. My flatmate says that a 40-episode series takes over thirty hours at normal speed, but with the speed turned up you can finish it in one weekend.",
+    "People who support speeding up think that life today moves too fast and free time is scarce. Some plots develop too slowly and the dialogues are long, so speeding up saves quite a lot of time. Others say they only want to know how the story ends and don't care about the details in between. Besides, the next day all your colleagues are discussing the same series, and if you haven't finished it, you can't join the conversation.",
+    "But some people are against it. One of my friends studies film. She says directors decide the length of every shot for a reason. If a quiet scene or a single look from an actor is skipped quickly, the audience can't feel the emotion in it. In her view, watching at high speed is like eating too fast: you get full, but you don't taste anything.",
+    "My own approach: when I watch a light-hearted variety show, I sometimes speed it up; when I watch a carefully made film, I use normal speed and ideally put my phone a bit further away. If the first episode of a series already bores me, I simply switch to another one instead of forcing myself through it at double speed. After all, watching series is meant to relax you – if even rest turns into a task, that's a bit of a shame.",
+    "What about you? Do you speed things up when you watch series?"
+   ],
+   "paragraphs_de": [
+    "Neulich ist mir aufgefallen, dass viele Freunde um mich herum beim Serienschauen die Funktion „Wiedergabegeschwindigkeit“ einschalten und mit 1,5- oder sogar doppelter Geschwindigkeit schauen. Mein Mitbewohner sagt, für eine Serie mit vierzig Folgen braucht man bei normalem Tempo über dreißig Stunden – mit erhöhter Geschwindigkeit schafft man sie an einem Wochenende.",
+    "Die Befürworter meinen, das Leben sei heute zu schnell und freie Zeit knapp. Manche Handlungen entwickeln sich zu langsam und die Dialoge sind lang, da spart das schnellere Abspielen viel Zeit. Andere sagen, sie wollen nur wissen, wie die Geschichte ausgeht, die Details dazwischen sind ihnen egal. Außerdem reden am nächsten Tag alle Kollegen über dieselbe Serie – wer sie nicht zu Ende gesehen hat, kann nicht mitreden.",
+    "Es gibt aber auch Gegner. Eine Freundin von mir studiert Film. Sie sagt, Regisseure legen die Länge jeder Einstellung aus einem Grund fest. Wenn man eine ruhige Szene oder einen Blick eines Schauspielers schnell überspringt, spürt das Publikum die Gefühle darin nicht. Für sie ist schnelles Serienschauen wie zu schnelles Essen: Man wird satt, schmeckt aber nichts.",
+    "Ich mache es so: Bei lockeren Unterhaltungsshows spule ich manchmal schneller; bei sorgfältig gemachten Filmen bleibe ich bei normaler Geschwindigkeit und lege am besten auch das Handy etwas weg. Wenn mich schon die erste Folge einer Serie langweilt, wechsle ich einfach zu einer anderen, statt mich im Schnelldurchlauf durchzuquälen. Schließlich soll Serienschauen entspannen – wenn sogar die Erholung zur Aufgabe wird, ist das ein bisschen schade.",
+    "Und du? Schaust du Serien schneller?"
+   ],
+   "glossary": [
+    {
+     "w": "倍速",
+     "p": "bèi sù",
+     "en": "multiple playback speed",
+     "de": "erhöhte Wiedergabegeschwindigkeit"
+    },
+    {
+     "w": "功能",
+     "p": "gōng néng",
+     "en": "function, feature",
+     "de": "die Funktion"
+    },
+    {
+     "w": "集",
+     "p": "jí",
+     "en": "episode (measure word)",
+     "de": "die Folge (Zählwort)"
+    },
+    {
+     "w": "节奏",
+     "p": "jié zòu",
+     "en": "rhythm, pace",
+     "de": "der Rhythmus, das Tempo"
+    },
+    {
+     "w": "剧情",
+     "p": "jù qíng",
+     "en": "plot, storyline",
+     "de": "die Handlung"
+    },
+    {
+     "w": "节省",
+     "p": "jié shěng",
+     "en": "to save (time, money)",
+     "de": "sparen (Zeit, Geld)"
+    },
+    {
+     "w": "话题",
+     "p": "huà tí",
+     "en": "topic of conversation",
+     "de": "das Gesprächsthema"
+    },
+    {
+     "w": "导演",
+     "p": "dǎo yǎn",
+     "en": "film director",
+     "de": "der Regisseur / die Regisseurin"
+    },
+    {
+     "w": "镜头",
+     "p": "jìng tóu",
+     "en": "shot, scene (in film)",
+     "de": "die Einstellung, die Szene"
+    },
+    {
+     "w": "眼神",
+     "p": "yǎn shén",
+     "en": "look, expression in the eyes",
+     "de": "der Blick"
+    },
+    {
+     "w": "综艺节目",
+     "p": "zōng yì jié mù",
+     "en": "variety show",
+     "de": "die Unterhaltungsshow"
+    },
+    {
+     "w": "毕竟",
+     "p": "bì jìng",
+     "en": "after all",
+     "de": "schließlich, immerhin"
+    }
+   ],
+   "grammar": "在……看来 introduces someone's point of view: 在她看来 'in her view, as she sees it'. It usually opens the sentence, followed by the opinion.",
+   "grammar_de": "在……看来 leitet die Sichtweise einer Person ein: 在她看来 „aus ihrer Sicht, ihrer Meinung nach“. Es steht meist am Satzanfang, danach folgt die Meinung.",
+   "questions": [
+    "支持倍速的人有哪些理由？",
+    "学电影的朋友为什么反对倍速看剧？",
+    "作者看什么节目的时候会开倍速？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK5",
+   "kind": "feature",
+   "section": "旅行",
+   "title": "旅行，不必走马观花",
+   "title_en": "Travel without rushing past everything",
+   "title_de": "Reisen, ohne nur durchzuhetzen",
+   "dek": "一个假期去六个国家，还是在一个小镇住三天？",
+   "paragraphs": [
+    "很多第一次来欧洲的游客，行程都排得满满的：今天巴黎，明天布鲁塞尔，后天阿姆斯特丹。十天走完六七个国家，拍了几千张照片，回家以后却常常想不起来，哪张照片是在哪儿拍的。这种旅行方式，用一个成语来形容，就是“走马观花”。",
+    "其实这也不难理解。机票不便宜，假期又短，好不容易来一趟，谁都想多去几个地方。我第一次在欧洲旅行时也是这样，每天早上六点起床赶火车，晚上回到酒店，累得连话都不想说。有的旅行团甚至在一个城市只停留两三个小时，上车睡觉，下车拍照，这几乎成了很多人共同的回忆。",
+    "后来，一位德国朋友邀请我去她的老家，一个只有几千人的小镇。我们在那儿待了整整三天，一个有名的景点也没去。白天沿着河边散步，看山坡上的人收葡萄；晚上在小酒馆里，听当地老人用方言聊天。虽然一句也听不懂，但是那种安静和自在，让人心旷神怡。第三天离开的时候，面包店的老板已经认识我们了，笑着问我们明年还来不来。",
+    "那次旅行让我恍然大悟：旅行的意义也许不在于去了多少地方，而在于你在一个地方真正停留了多久。只有慢下来，才有时间观察当地人怎么生活、怎么吃饭、怎么打招呼。比如在德国，星期天大部分商店都不开门，人们去散步、看朋友、在家喝咖啡，生活的节奏一下子就慢了下来。入乡随俗，学着像他们一样过几天日子，这样留下的记忆往往最深刻。",
+    "当然，走马观花也有它的好处，至少能让人对一个地区有个大概的印象。不过，下一次计划假期的时候，不妨少安排一两个城市，给自己留一个下午，什么也不做，只是坐在广场上喝杯咖啡，看看来来往往的行人。旅行不是比赛，没有人会给你打分。说不定，那会是整个旅程中最美好的时刻。"
+   ],
+   "paragraphs_en": [
+    "Many tourists coming to Europe for the first time pack their itinerary to the brim: Paris today, Brussels tomorrow, Amsterdam the day after. They cover six or seven countries in ten days and take thousands of photos, yet back home they often can't remember which photo was taken where. There's an idiom for this way of travelling: “looking at flowers from a galloping horse”.",
+    "Actually, this isn't hard to understand. Flights aren't cheap and holidays are short; when you've finally made it here, everyone wants to see as many places as possible. My first trip around Europe was just like that: up at six every morning to catch a train, and back at the hotel at night, too tired even to talk. Some tour groups even stay only two or three hours in a city: sleep on the coach, get off and take photos – almost a shared memory for many people.",
+    "Later, a German friend invited me to her home town, a small town with only a few thousand inhabitants. We stayed there for three whole days and didn't visit a single famous sight. During the day we walked along the river and watched people picking grapes on the hillside; in the evening, in a small tavern, we listened to old locals chatting in dialect. I didn't understand a word, but the calm and ease of it all made me feel completely refreshed. When we left on the third day, the baker already knew us and asked with a smile whether we'd come back next year.",
+    "That trip was a sudden revelation: perhaps the point of travelling lies not in how many places you have been to, but in how long you have really stayed in one place. Only when you slow down do you have time to see how local people live, eat and greet each other. In Germany, for example, most shops are closed on Sundays; people go for walks, visit friends or have coffee at home, and the pace of life suddenly slows down. When in Rome, do as the Romans do – living a few days the way they do often leaves the deepest memories.",
+    "Of course, rushing through has its advantages too: at least it gives you a rough impression of a region. But next time you plan a holiday, why not cut one or two cities and leave yourself an afternoon to do nothing – just sit in a square with a coffee and watch the people passing by. Travelling isn't a competition; nobody is going to grade you. Who knows, that might be the most beautiful moment of the whole trip."
+   ],
+   "paragraphs_de": [
+    "Viele Touristen, die zum ersten Mal nach Europa kommen, haben einen randvollen Reiseplan: heute Paris, morgen Brüssel, übermorgen Amsterdam. In zehn Tagen klappern sie sechs, sieben Länder ab und machen tausende Fotos – doch zu Hause wissen sie oft nicht mehr, welches Foto wo entstanden ist. Für diese Art zu reisen gibt es ein Sprichwort: „vom galoppierenden Pferd aus Blumen betrachten“.",
+    "Eigentlich ist das gut zu verstehen. Flüge sind nicht billig, der Urlaub ist kurz, und wenn man es endlich einmal hierher geschafft hat, will jeder möglichst viele Orte sehen. Bei meiner ersten Europareise war es genauso: Jeden Morgen um sechs aufstehen, um den Zug zu erwischen, und abends im Hotel so müde, dass ich nicht einmal mehr reden wollte. Manche Reisegruppen bleiben sogar nur zwei, drei Stunden in einer Stadt: im Bus schlafen, aussteigen, Fotos machen – fast eine gemeinsame Erinnerung vieler Menschen.",
+    "Später hat mich eine deutsche Freundin in ihren Heimatort eingeladen, eine Kleinstadt mit nur ein paar tausend Einwohnern. Wir blieben drei volle Tage und besuchten keine einzige berühmte Sehenswürdigkeit. Tagsüber spazierten wir am Fluss entlang und sahen den Leuten bei der Weinlese am Hang zu; abends hörten wir in einer kleinen Weinstube alten Einheimischen zu, die Dialekt sprachen. Ich verstand kein Wort, aber diese Ruhe und Gelassenheit taten unglaublich gut. Als wir am dritten Tag abreisten, kannte uns der Bäcker schon und fragte lächelnd, ob wir nächstes Jahr wiederkommen.",
+    "Auf dieser Reise ging mir ein Licht auf: Vielleicht liegt der Sinn des Reisens nicht darin, wie viele Orte man besucht hat, sondern darin, wie lange man wirklich an einem Ort geblieben ist. Nur wenn man langsamer wird, hat man Zeit zu beobachten, wie die Menschen vor Ort leben, essen und sich begrüßen. In Deutschland zum Beispiel haben sonntags die meisten Geschäfte geschlossen; die Leute gehen spazieren, besuchen Freunde oder trinken zu Hause Kaffee, und das Lebenstempo wird plötzlich langsamer. Andere Länder, andere Sitten – ein paar Tage so zu leben wie sie hinterlässt oft die tiefsten Erinnerungen.",
+    "Natürlich hat das schnelle Durchreisen auch Vorteile: Man bekommt zumindest einen groben Eindruck von einer Gegend. Aber wenn du das nächste Mal Urlaub planst, streich doch ein oder zwei Städte und gönn dir einen Nachmittag, an dem du nichts tust – setz dich einfach mit einem Kaffee auf einen Platz und schau den Leuten zu, die vorbeigehen. Reisen ist kein Wettbewerb, niemand gibt dir eine Note. Vielleicht wird das der schönste Moment der ganzen Reise."
+   ],
+   "glossary": [
+    {
+     "w": "走马观花",
+     "p": "zǒu mǎ guān huā",
+     "en": "idiom: 'look at flowers from a galloping horse' – to take only a quick, superficial look",
+     "de": "Chengyu: „vom galoppierenden Pferd Blumen betrachten“ – etwas nur flüchtig ansehen"
+    },
+    {
+     "w": "行程",
+     "p": "xíng chéng",
+     "en": "itinerary",
+     "de": "der Reiseplan"
+    },
+    {
+     "w": "形容",
+     "p": "xíng róng",
+     "en": "to describe",
+     "de": "beschreiben"
+    },
+    {
+     "w": "好不容易",
+     "p": "hǎo bù róng yì",
+     "en": "with great difficulty, finally",
+     "de": "mit Mühe; endlich"
+    },
+    {
+     "w": "赶",
+     "p": "gǎn",
+     "en": "to hurry to catch (a train etc.)",
+     "de": "eilen, (einen Zug) erwischen"
+    },
+    {
+     "w": "邀请",
+     "p": "yāo qǐng",
+     "en": "to invite",
+     "de": "einladen"
+    },
+    {
+     "w": "景点",
+     "p": "jǐng diǎn",
+     "en": "sight, tourist attraction",
+     "de": "die Sehenswürdigkeit"
+    },
+    {
+     "w": "心旷神怡",
+     "p": "xīn kuàng shén yí",
+     "en": "idiom: 'open heart, joyful spirit' – relaxed and refreshed",
+     "de": "Chengyu: „weites Herz, froher Geist“ – entspannt und erfrischt"
+    },
+    {
+     "w": "恍然大悟",
+     "p": "huǎng rán dà wù",
+     "en": "idiom: to suddenly see the light",
+     "de": "Chengyu: plötzlich begreifen, ein Licht geht auf"
+    },
+    {
+     "w": "停留",
+     "p": "tíng liú",
+     "en": "to stay, to stop over",
+     "de": "sich aufhalten, verweilen"
+    },
+    {
+     "w": "入乡随俗",
+     "p": "rù xiāng suí sú",
+     "en": "idiom: 'enter a village, follow its customs' – when in Rome, do as the Romans do",
+     "de": "Chengyu: „ins Dorf kommen, den Sitten folgen“ – andere Länder, andere Sitten"
+    },
+    {
+     "w": "不妨",
+     "p": "bù fáng",
+     "en": "might as well, why not",
+     "de": "ruhig; warum nicht"
+    }
+   ],
+   "grammar": "不在于A，而在于B means 'lies not in A, but in B' – a formal way to say what really matters: 旅行的意义不在于去了多少地方，而在于…… 'the point of travel lies not in how many places …, but in …'.",
+   "grammar_de": "不在于A，而在于B bedeutet „liegt nicht in A, sondern in B“ – eine gehobene Art zu sagen, worauf es wirklich ankommt: 旅行的意义不在于去了多少地方，而在于…… „der Sinn des Reisens liegt nicht darin, wie viele Orte …, sondern darin …“.",
+   "questions": [
+    "什么样的旅行方式可以叫“走马观花”？",
+    "作者在朋友的老家做了些什么？",
+    "作者给读者什么建议？"
+   ],
+   "sources": []
+  }
+ ]
+}
