@@ -16,6 +16,7 @@
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <script src="vendor/pinyin-pro.js"></script>
+<script src="vendor/printkit.js"></script>
 <link rel="stylesheet" href="fonts/fonts.css">
 <style>
 /* Layout: header with language switch + today's check-in strip; tabs; main work column with a notes aside. Look follows Shiori: cool paper, ink-indigo text, hairlines instead of boxes, one muted accent per language (celadon PT, slate blue DE, ochre EN). */
@@ -485,7 +486,7 @@ nav.tabs button{font-weight:500;padding:11px 12px}
 .side .panel{padding:0}
 .side .panel ~ .panel{padding-top:18px}
 @media (min-width:881px){ .grid:not(.one) > aside, .grid:not(.one) > aside.side{border-left:1px solid var(--line);padding-left:24px;min-height:100%} }
-.side h3, .panel h3.ph3, #mg-arch > h3, #mg-week > h3, .rd-paste summary h3{font-size:12px!important;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.side h3, .panel h3.ph3, #mg-arch > h3,#mg-fav > h3, #mg-week > h3, .rd-paste summary h3{font-size:12px!important;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
 .sesshead h2, #pile-title{font-family:var(--f-word);font-size:22px;font-weight:600;letter-spacing:.01em}
 h3.sec{font-family:var(--f-word);font-size:17px;font-weight:600}
 .btn{border-radius:8px;font-weight:500}
@@ -600,13 +601,13 @@ body.lean .hint, body.lean .help{display:none!important}
 
 /* ===== readable small print (explanatory text, labels, chips) ===== */
 .note,.small{font-size:14px}
-.side h3, .panel h3.ph3, #mg-arch > h3, #mg-week > h3, .rd-paste summary h3, .mg-blk h3{font-size:12.5px!important}
+.side h3, .panel h3.ph3, #mg-arch > h3,#mg-fav > h3, #mg-week > h3, .rd-paste summary h3, .mg-blk h3{font-size:12.5px!important}
 .mg-gl dd,.mg-gram{font-size:15px}
 @media (max-width:640px){
   body{font-size:16px}
   .note,.small,.status,.legend,.foot{font-size:14.5px;line-height:1.6}
   .muted{line-height:1.6}
-  .side h3, .panel h3.ph3, #mg-arch > h3, #mg-week > h3, .rd-paste summary h3, .mg-blk h3{font-size:13.5px!important;letter-spacing:.08em}
+  .side h3, .panel h3.ph3, #mg-arch > h3,#mg-fav > h3, #mg-week > h3, .rd-paste summary h3, .mg-blk h3{font-size:13.5px!important;letter-spacing:.08em}
   .ring .t span,.stat span{font-size:12.5px}
   .ring .t b,.stat b{font-size:17px}
   .badge,.sync{font-size:13.5px}
@@ -758,9 +759,9 @@ body.lean .hint, body.lean .help{display:none!important}
 body{font-variant-numeric:tabular-nums}
 .mg-body,.word,.ex .t,.mg-art h2,.mg-dek,.mg-q,.pk-t{font-variant-numeric:normal}
 /* labels: normal case, no tracking */
-.side h3,.panel h3.ph3,#mg-arch > h3,#mg-week > h3,.rd-paste summary h3,.mg-blk h3,.mg-kick,.pk-o,.wk-p,.mg-toc .k,.mg-arch .k{text-transform:none!important;letter-spacing:0!important}
-.side h3,.panel h3.ph3,#mg-arch > h3,#mg-week > h3,.rd-paste summary h3{font-size:14px!important;font-weight:600!important;color:var(--ink)!important}
-.panel h3.ph3,#mg-arch > h3,#mg-week > h3{border-top:2px solid var(--rule);padding-top:10px}
+.side h3,.panel h3.ph3,#mg-arch > h3,#mg-fav > h3,#mg-week > h3,.rd-paste summary h3,.mg-blk h3,.mg-kick,.pk-o,.wk-p,.mg-toc .k,.mg-arch .k{text-transform:none!important;letter-spacing:0!important}
+.side h3,.panel h3.ph3,#mg-arch > h3,#mg-fav > h3,#mg-week > h3,.rd-paste summary h3{font-size:14px!important;font-weight:600!important;color:var(--ink)!important}
+.panel h3.ph3,#mg-arch > h3,#mg-fav > h3,#mg-week > h3{border-top:2px solid var(--rule);padding-top:10px}
 .panel ~ .panel{border-top:0!important}
 /* stats strip: newspaper data row */
 .strip{background:none!important;border:0!important;border-top:2px solid var(--rule)!important;border-bottom:1px solid var(--line)!important;border-radius:0!important;padding:10px 0!important;display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr));gap:0!important}
@@ -894,7 +895,7 @@ body{font-variant-numeric:tabular-nums}
 .mg-head .d{font-size:14.5px!important;font-weight:500!important;color:color-mix(in srgb,var(--ink) 72%,var(--bg))!important}
 .mg-head .ib{color:color-mix(in srgb,var(--ink) 70%,var(--bg))}
 .mine-imp,.uilang{font-weight:500!important;color:color-mix(in srgb,var(--ink) 70%,var(--bg))!important}
-.side h3,.panel h3.ph3,#mg-arch > h3,#mg-week > h3,.rd-paste summary h3,.mg-blk h3{font-weight:600!important}
+.side h3,.panel h3.ph3,#mg-arch > h3,#mg-fav > h3,#mg-week > h3,.rd-paste summary h3,.mg-blk h3{font-weight:600!important}
 .mg-kick{font-weight:500!important}
 .mg-arch .k,.mg-toc .k{font-weight:500!important}
 
@@ -1097,6 +1098,8 @@ body:not(.tones) .tone-opts{opacity:.55}
 .tb[aria-pressed="true"]{color:var(--acc)}
 .lv-HSK1{color:var(--a1)} .lv-HSK2{color:var(--a2)} .lv-HSK3{color:var(--b1)} .lv-HSK4{color:var(--b2)} .lv-HSK5{color:var(--c1)} .lv-HSK6{color:var(--c2)}
 .libtag{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px;margin-left:6px}
+.mg-favb .st{font-size:16px;line-height:1}.mg-favb[aria-pressed="true"] .st{color:#d4a017}
+.mg-favx{margin-top:10px}.mg-favx .btn svg{width:16px;height:16px;margin-right:6px;vertical-align:-3px}
 </style>
 </head>
 <body>
@@ -1158,6 +1161,7 @@ body:not(.tones) .tone-opts{opacity:.55}
         <div class="row" style="margin-top:8px"><button class="btn primary sm" id="mine-add" type="button">保存并阅读</button></div>
         <div class="mg-arch" id="mine-list" style="margin-top:12px"></div>
       </details>
+      <div class="panel" id="mg-fav" hidden></div>
       <div class="panel" id="mg-arch"></div>
     </aside>
   </section>
@@ -1496,6 +1500,7 @@ const POSOPT={
 const XLAB={zh:["拼音","yǔ sǎn"],fr:["变形 / 备注（可选）","les parapluies · (s')ouvrir"],pt:["变形 / 备注（可选）",""],de:["复数 / 动词变形","die Regenschirme · fährt ab · fuhr ab · ist abgefahren"],en:["音标","/ˈʌmbrelə/"]};
 const SLOTS=[["w","单词"],["s","例句"]];
 const I={
+ exp:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></svg>',
  spk:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>',
  star:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3l-5.6 2.9 1.1-6.2L3 9.6l6.2-.9z"/></svg>',
  starF:'<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3l-5.6 2.9 1.1-6.2L3 9.6l6.2-.9z"/></svg>',
@@ -2639,7 +2644,7 @@ function addFromReader0(v){
 /* ---------- reading tab (Marginalia) ---------- */
 const MG={tr:null,mine:null,idx:null,days:{},di:0,key:null,zh:false,err:"",loading:false,week:null,wpick:{},sheet:null,ctl:null};
 const MGK="zili-read-v1";
-let MGS=(()=>{ try{ return JSON.parse(localStorage.getItem(MGK))||{}; }catch(e){ return {}; } })(); MGS.read=MGS.read||{};
+let MGS=(()=>{ try{ return JSON.parse(localStorage.getItem(MGK))||{}; }catch(e){ return {}; } })(); MGS.read=MGS.read||{}; MGS.fav=MGS.fav||{};
 function mgSave(){ try{ localStorage.setItem(MGK,JSON.stringify(MGS)); }catch(e){} }
 const MG_KIND={jieqi:"节气",picks:"推荐",news:"新闻",brief:"短讯",short:"短评",essay:"随笔",feature:"专题",story:"故事",dialogue:"对话"};
 const MG_ORD=it=>it.hour?10:({dialogue:1,short:2,brief:3,picks:4}[it.kind]||0);
@@ -2700,6 +2705,61 @@ function mgLibPick(l){ // nothing dated yet: open a library text at the reader's
   return {date:"lib",i:m.i,older:false,lib:true};
 }
 const mgRead=(d,i)=>!!MGS.read[d+"|"+i];
+/* favourites: MGS.fav[key]={lang,title,date,level,ts}; a removed one keeps {del:ts} so other devices learn about it */
+const mgFavOn=k=>{ const f=MGS.fav[k]; return !!(f&&!f.del); };
+function mgFavToggle(){ const c=MG.cur; if(!c||!c.it) return; const k=c.date+"|"+c.i;
+  MGS.fav[k]=mgFavOn(k)?{del:Date.now()}:{lang:lang(),title:c.it.title||"",date:/^\d{4}-\d\d-\d\d$/.test(c.date)?c.date:"",level:c.it.level||"",ts:Date.now()}; mgSave(); }
+function favMerge(a,b){ const o=Object.assign({},a||{}); for(const k in (b||{})){ const x=o[k], y=b[k]; const tx=x?(x.ts||x.del||0):-1, ty=y?(y.ts||y.del||0):-1; if(ty>tx) o[k]=y; } return o; }
+function favBtn(cls){ const c=MG.cur, on=!!c&&mgFavOn(c.date+"|"+c.i); return `<button class="${cls} mg-favb" data-favb="1" type="button" aria-pressed="${on}"><span class="st" aria-hidden="true">${on?"★":"☆"}</span>${cls==="btn"?" ":""}<span>${on?"已收藏":"收藏"}</span></button>`; }
+function mgFavList(){
+  const box=$("#mg-fav"); if(!box) return; const l=lang();
+  const rows=Object.entries(MGS.fav).filter(([k,f])=>f&&!f.del&&f.lang===l).sort((a,b)=>b[1].ts-a[1].ts);
+  if(!rows.length){ box.hidden=true; box.innerHTML=""; return; } box.hidden=false;
+  const cur=MG.cur?MG.cur.date+"|"+MG.cur.i:"";
+  box.innerHTML=`<h3 style="margin:0 0 8px"><span>我的收藏</span> · <span>${rows.length} 篇</span></h3><div class="mg-arch">${rows.map(([k,f])=>{ const mine=k.startsWith("mine|");
+    return `<button ${mine?`data-mine="${esc(k.slice(5))}"`:`data-mg="${esc(k)}"`} aria-current="${k===cur}"><span class="k">${f.date?new Date(f.date+"T12:00").toLocaleDateString(uiLocale(),{month:"short",day:"numeric"}):"★"}</span><span class="t zc" lang="zh-CN">${esc(zs(f.title))}</span><span class="m">${f.level?esc(f.level):""}</span></button>`; }).join("")}</div><div class="mg-favx"><button class="btn ghost sm" id="mg-favexp" type="button" aria-haspopup="menu">${I.exp}<span>导出全部</span></button></div>`;
+}
+/* print / Word export (vendor/printkit.js): characters with pinyin above, word list, translation */
+const pkL=t=>trOne(t)||t;
+function pkRuby(text){ // → [seg…]: Han characters get their pinyin as ruby (sentence context helps the polyphones)
+  text=String(text||""); const ch=[...text]; let py=zPyArr(text); if(py.length!==ch.length) py=ch.map(c=>HAN.test(c)?zPyArr(c)[0]||"":"");
+  const out=[]; let buf="";
+  ch.forEach((c,i)=>{ const r=HAN.test(c)&&py[i]; if(r){ if(buf){ out.push(buf); buf=""; } out.push({b:zs(c),r:py[i]}); } else buf+=zs(c); });
+  if(buf) out.push(buf); return out;
+}
+function pkDoc(it,date){
+  const ruby=pyOn(), segs=t=>ruby?pkRuby(t):[zs(t)];
+  const meta=[it.term||it.section||MG_KIND[it.kind]||"",it.level||"",date&&/^\d{4}-\d\d-\d\d$/.test(date)?mgFmt(date):"",mgOutlet(it)].filter(Boolean).join(" · ");
+  const tk=[MG.tr,UIL==="de"?"de":"en","en","de"].find(k=>k&&(it["paragraphs_"+k]||[]).length);
+  const pm=it.poem&&it.poem.lines?it.poem:null, ptr=pm&&((UIL==="de"&&pm.explain_de)||pm.explain_en||pm.explain_de);
+  const gtxt=(UIL==="de"&&it.grammar_de)||it.grammar||it.grammar_de;
+  const tt=glSel().map(k=>it["title_"+k]).filter(Boolean).join(" · ");
+  return {title:zs(it.title||""),titleRuby:ruby?pkRuby(it.title||""):null,sub:[it.dek?zs(it.dek):"",tt].filter(Boolean).join(" — "),meta,lang:scr()==="t"?"zh-TW":"zh-CN",
+    paras:(it.paragraphs||[]).map(segs),
+    blocks:[pm?{label:pkL("古诗"),early:true,paras:[segs(pm.title||""),[zs([pm.dynasty,pm.author].filter(Boolean).join(" · "))],...pm.lines.map(segs),...(pm.explain_zh?[segs(pm.explain_zh)]:[]),...(ptr?[[ptr]]:[])]}:null,
+      (it.picks||[]).length?{label:pkL("推荐"),early:true,paras:it.picks.map(x=>[[x.outlet,x.title].filter(Boolean).join(": ")+(x.url?"  "+x.url:"")])}:null,
+      gtxt?{label:pkL("语法"),paras:[[gtxt]]}:null,
+      (it.questions||[]).length?{label:pkL("想一想"),paras:it.questions.map((q,i)=>[(i+1)+". ",...segs(q)])}:null].filter(Boolean),
+    gloss:(it.glossary||[]).length?{label:pkL("重点词汇"),rows:it.glossary.map(g=>({w:zs(g.w),r:g.p||zPy(g.w),m:glSel().filter(k=>g[k]).map(k=>g[k]).concat(glSel().some(k=>g[k])?[]:[g.en||g.de||""])}))}:null,
+    trans:tk?{label:pkL("译文")+" · "+({en:"English",de:"Deutsch"}[tk]||tk),lang:tk,paras:it["paragraphs_"+tk]}:null,
+    src:it.sources||[],srcLabel:pkL("来源")};
+}
+async function pkFavDocs(){
+  const l=lang(); await mgLoad(); const out=[];
+  const rows=Object.entries(MGS.fav).filter(([k,f])=>f&&!f.del&&f.lang===l).sort((a,b)=>b[1].ts-a[1].ts);
+  for(const [k] of rows){ try{
+    if(k.startsWith("mine|")){ const a=mineAll().find(x=>String(x.id)===k.slice(5)); if(a) out.push(pkDoc(mineItem(a),"")); }
+    else { const [d,i]=k.split("|"), day=await mgDay(d), it=day&&day.items[+i]; if(it) out.push(pkDoc(it,d)); }
+  }catch(e){} }
+  return out;
+}
+function pkMenu(btn,getDocs,name){
+  if(!window.PrintKit){ toast(pkL("导出功能没有载入，请刷新页面再试。")); return; }
+  const go=async kind=>{ const docs=await getDocs(); if(!docs.length){ toast(pkL("没有可以导出的文章。")); return; }
+    const opt={title:name,filename:name,footer:"字里 · Zili",ea:scr()==="t"?"zht":"zh",creator:"Zili"};
+    if(kind==="print") PrintKit.print(docs,opt); else PrintKit.docx(docs,opt); };
+  PrintKit.menu(btn,[{label:pkL("打印 / 存成 PDF"),run:()=>go("print")},{label:pkL("Word 文件 (.docx)"),run:()=>go("docx")}]);
+}
 const WRE=/([\p{L}\p{M}]+(?:['’\-][\p{L}\p{M}]+)*)/u;
 function mgSents(p){ return p.split(/(?<=(?<!\d)[.!?…]["»“]?)\s+(?=[\p{Lu}—–„«"\d])/u); }
 function mgWrap(text,l,own){
@@ -2710,7 +2770,7 @@ function mgOutlet(it){ if((it.series&&it.series.name)||it.term) return ""; const
 function mgMinutes(it){ if(it.lang==="zh"){ const n=(it.paragraphs||[]).join("").replace(/[^\u3400-\u9fff]/g,"").length; const r={HSK1:90,HSK2:110,HSK3:140,HSK4:170,HSK5:200,HSK6:230}[it.level]||150; return Math.max(1,Math.round(n/r)); } const w=(it.paragraphs||[]).join(" ").split(/\s+/).filter(Boolean).length; const rate=["A1","A2"].includes(it.level)?110:["B1","B2"].includes(it.level)?160:200; return Math.max(1,Math.round(w/rate)); }
 let MGZH=(()=>{ try{ return localStorage.getItem("zl-glzh")==="1"; }catch(e){ return false; } })();
 function mgFmt(d){ const [y,m,dd]=d.split("-").map(Number); return new Date(y,m-1,dd).toLocaleDateString(uiLocale(),{weekday:"long",month:"long",day:"numeric"}); }
-async function mgRender(){ await mgRender0(); mgSwPut(); }
+async function mgRender(){ await mgRender0(); mgSwPut(); mgFavList(); }
 async function mgRender0(){
   const main=$("#mg-main"); if(!main) return;
   if(!MG.idx&&!MG.err){ main.innerHTML='<div class="empty"><b>正在载入文章…</b></div>'; await mgLoad(); if(cur!=="read") return; }
@@ -2741,7 +2801,7 @@ async function mgRender0(){
     <div class="mg-kick">${it.series&&it.series.episode&&it.series.name===it.section?"":`<span>${esc(it.section||MG_KIND[it.kind]||"")}</span>`}${it.series&&it.series.episode?`<span>${esc(it.series.name||"")} · ${esc(it.series.episode)}</span>`:""}${mgOutlet(it)?`<span>${esc(mgOutlet(it))}</span>`:""}${it.level?`<span class="lv lv-${esc(it.level)}">${esc(it.level)}</span>`:""}${it.kind!=="picks"&&(it.paragraphs||[]).length?`<span>${mgMinutes(it)} 分钟</span>`:""}${pick.older?`<span class="g">${mgFmt(pick.date)} · 今天的 ${MG_ETA[l]} 送到</span>`:""}${pick.date==="lib"?`<span>课文库</span>`:""}${it.term?`<span>${esc(it.term)}</span>`:""}</div>
     <h2 data-noi18n lang="zh-CN" class="zh2 zc">${zWrap(it.title,own,gx)}</h2>${(()=>{ const t=glSel().map(k=>it["title_"+k]).filter(Boolean); return t.length?`<p class="mg-tt" data-noi18n>${t.map(esc).join(" · ")}</p>`:""; })()}
     ${it.dek?`<p class="mg-dek zc" data-noi18n lang="zh-CN">${esc(zs(it.dek))}</p>`:""}
-    <div class="mg-tools"><button class="tb" id="mg-say" aria-label="朗读全文">${I.spk}<span>朗读</span></button>${it.paragraphs_en&&it.paragraphs_en.length?`<button class="tb" id="mg-enb" aria-pressed="${MG.tr==="en"}" aria-label="English translation">English</button>`:""}${it.paragraphs_de&&it.paragraphs_de.length?`<button class="tb" id="mg-deb" aria-pressed="${MG.tr==="de"}" aria-label="Deutsche Übersetzung">Deutsch</button>`:""}<span class="spacer"></span><button class="tb" id="mg-py" aria-pressed="${pyOn()}">拼音</button><button class="tb" id="mg-tone" aria-pressed="${tonesOn()}">声调</button><button class="tb" id="mg-scr" aria-pressed="${scr()==="t"}" data-noi18n>${scr()==="t"?"繁體":"简体"}</button></div>
+    <div class="mg-tools"><button class="tb" id="mg-say" aria-label="朗读全文">${I.spk}<span>朗读</span></button>${(()=>{ const on=mgFavOn(pick.date+"|"+pick.i); return `<button class="tb mg-favb" data-favb="1" type="button" aria-pressed="${on}"><span class="st" aria-hidden="true">${on?"★":"☆"}</span><span>${on?"已收藏":"收藏"}</span></button>`; })()}<button class="tb" id="mg-exp" type="button" aria-haspopup="menu">${I.exp}<span>导出</span></button>${it.paragraphs_en&&it.paragraphs_en.length?`<button class="tb" id="mg-enb" aria-pressed="${MG.tr==="en"}" aria-label="English translation">English</button>`:""}${it.paragraphs_de&&it.paragraphs_de.length?`<button class="tb" id="mg-deb" aria-pressed="${MG.tr==="de"}" aria-label="Deutsche Übersetzung">Deutsch</button>`:""}<span class="spacer"></span><button class="tb" id="mg-py" aria-pressed="${pyOn()}">拼音</button><button class="tb" id="mg-tone" aria-pressed="${tonesOn()}">声调</button><button class="tb" id="mg-scr" aria-pressed="${scr()==="t"}" data-noi18n>${scr()==="t"?"繁體":"简体"}</button></div>
     ${onbActive()&&!(onb().t||{}).read?`<p class="onb-tip">💡 <span>点任何一个词，看读音、意思和笔顺，还可以收进生词。</span></p>`:""}
     <div class="mg-body zhb zc${easy?" easy":""}${it.kind==="dialogue"?" dlg":""}" id="mg-body" data-noi18n lang="zh-CN">${(it.paragraphs||[]).map((p,k)=>`<p>${zWrap(p,own,gx)}</p>${MG.tr&&it["paragraphs_"+MG.tr]&&it["paragraphs_"+MG.tr][k]?`<span class="mg-zh mg-tr-${MG.tr}" lang="${MG.tr}">${esc(it["paragraphs_"+MG.tr][k])}</span>`:""}`).join("")}</div>
     ${it.kind==="picks"?mgPicks(it):""}
@@ -2753,7 +2813,7 @@ async function mgRender0(){
     ${it.glossary&&it.glossary.length?`<div class="mg-blk mg-glb"><dl class="mg-gl zgl" data-noi18n>${it.glossary.map(g=>`<dt><span class="zc" lang="zh-CN">${esc(zs(g.w))}</span><span class="py">${esc(g.p||zPy(g.w))}</span></dt><dd>${glSel().filter(k=>g[k]).map(k=>`<span lang="${k}">${esc(g[k])}</span>`).join("")||esc(g.en||g.de||"")}</dd>`).join("")}</dl></div>`:""}
     ${qs.length?`<div class="mg-blk"><h3>想一想</h3><ol class="mg-q zc" data-noi18n lang="zh-CN">${qs.map(q=>`<li>${esc(zs(q))}</li>`).join("")}</ol></div>`:""}
     ${it.sources&&it.sources.length?`<div class="mg-blk mg-src"><h3>来源</h3><ul>${it.sources.map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>${s.license?`<span class="lic">${esc(s.license)}</span>`:""}</li>`).join("")}</ul></div>`:""}
-    <div class="mg-fin">${mgRead(pick.date,pick.i)?'<span class="small muted">✓ 读完了</span>':`<button class="btn primary" id="mg-done" type="button">读完了</button>`}
+    <div class="mg-fin">${(()=>{ const on=mgFavOn(pick.date+"|"+pick.i); return `<button class="btn mg-favb" data-favb="1" type="button" aria-pressed="${on}"><span class="st" aria-hidden="true">${on?"★":"☆"}</span> <span>${on?"已收藏":"收藏"}</span></button>`; })()}${mgRead(pick.date,pick.i)?'<span class="small muted">✓ 读完了</span>':`<button class="btn primary" id="mg-done" type="button">读完了</button>`}
     ${(()=>{ const k=es.findIndex(e=>e.date===pick.date&&e.i===pick.i); const nx=!pick.older&&k>=0?es[k+1]:null; return nx?`<button class="btn" data-mg="${nx.date}|${nx.i}" type="button">下一篇 →</button>`:""; })()}</div>
   </article>`;
   main.innerHTML=h; MG.cur={...pick,it};
@@ -3585,6 +3645,9 @@ $("#tab-read").addEventListener("click",e=>{
   else if(id==="mg-scr"){ S.settings.script=scr()==="t"?"s":"t"; save(); applyScr(); renderSettings(); mgRender(); }
   else if(id==="mg-enb"){ MG.tr=MG.tr==="en"?null:"en"; mgRender(); }
   else if(id==="mg-say"){ if(RD.src==="art"&&RD.on) rdToggle(); else rdStart("art",0); }
+  else if(b.dataset.favb){ mgFavToggle(); const on=mgFavOn(MG.cur.date+"|"+MG.cur.i); $$("[data-favb]").forEach(x=>{ x.setAttribute("aria-pressed",on); x.innerHTML=`<span class="st" aria-hidden="true">${on?"★":"☆"}</span>${x.classList.contains("btn")?" ":""}<span>${esc(trOne(on?"已收藏":"收藏")||(on?"已收藏":"收藏"))}</span>`; }); mgFavList(); syLater(); }
+  else if(id==="mg-exp"){ const c=MG.cur; if(c&&c.it) pkMenu(b,async()=>[pkDoc(c.it,c.date)],zs(c.it.title||"Zili").slice(0,60)); }
+  else if(id==="mg-favexp"){ pkMenu(b,pkFavDocs,pkL("我的收藏")+" "+today()); }
   else if(id==="mg-done"){ MGS.read[MG.cur.date+"|"+MG.cur.i]=1; mgSave(); mgRender(); }
   else if(id==="mg-mineback"){ MG.mine=null; mgRender(); mineList(); }
   else if(id==="mg-minedel"){ if(confirm(trOne("删除这篇文章？")||"删除这篇文章？")){ { const dl=(()=>{ try{ return JSON.parse(localStorage.getItem("zl-mine-del"))||{}; }catch(e){ return {}; } })(); dl[MG.mine]=Date.now(); try{ localStorage.setItem("zl-mine-del",JSON.stringify(dl)); }catch(e){} } mineSave(mineAll().filter(a=>a.id!==MG.mine)); MG.mine=null; if(typeof syLater==="function") syLater(); mgRender(); mineList(); } }
@@ -3776,6 +3839,7 @@ async function doImport(){
   $("#bk-msg").textContent="导入完成。";
   if(Array.isArray(p.mine)&&p.mine.length){ const have=mineAll(), ids=new Set(have.map(a=>a.id)); mineSave([...have,...p.mine.filter(a=>a&&a.id&&!ids.has(a.id))].slice(0,200)); }
   if(p.mgs&&p.mgs.read){ MGS.read=Object.assign({},p.mgs.read,MGS.read); mgSave(); }
+  if(p.mgs&&p.mgs.fav){ MGS.fav=favMerge(MGS.fav,p.mgs.fav); mgSave(); }
   if(S.settings.lang!==keepLang||true) await applyLang();
 }
 
@@ -3808,7 +3872,7 @@ async function ghPut(text,sha){
   return fetch(ghURL(),{method:"PUT",headers:Object.assign(ghH(),{"Content-Type":"application/json"}),body:JSON.stringify({message:"sync from "+devName(),content:btoa(text),sha:sha||undefined})});
 }
 function mineDel(){ try{ return JSON.parse(localStorage.getItem(MINEDK))||{}; }catch(e){ return {}; } }
-function syPack(){ return {v:1,state:S,mine:SY.mine===false?null:mineAll(),mineDel:mineDel(),read:MGS.read||{}}; }
+function syPack(){ return {v:1,state:S,mine:SY.mine===false?null:mineAll(),mineDel:mineDel(),read:MGS.read||{},fav:MGS.fav||{}}; }
 const tsMax=(a,b)=>{ const o=Object.assign({},a||{}); for(const k in (b||{})) o[k]=Math.max(o[k]||0,b[k]||0); return o; };
 function syMergeState(A,B){
   const o=clone(A);
@@ -3840,6 +3904,7 @@ function syMerge(L0,R){
   if(L0.mine===null) out.mine=R.mine||null;
   else { const have=new Set((L0.mine||[]).map(a=>a.id)); out.mine=[...(L0.mine||[]),...((R.mine||[]).filter(a=>a&&a.id&&!have.has(a.id)))].filter(a=>!out.mineDel[a.id]).sort((p,q)=>String(q.id).localeCompare(String(p.id))).slice(0,200); }
   out.read=Object.assign({},R.read||{},L0.read||{});
+  out.fav=favMerge(R.fav,L0.fav);
   return out;
 }
 function syApply(P){
@@ -3848,7 +3913,7 @@ function syApply(P){
   try{ localStorage.setItem(LS,JSON.stringify(S)); }catch(e){}
   if(SY.mine!==false&&Array.isArray(P.mine)) mineSave(P.mine);
   try{ localStorage.setItem(MINEDK,JSON.stringify(P.mineDel||{})); }catch(e){}
-  MGS.read=P.read||{}; mgSave();
+  MGS.read=P.read||{}; MGS.fav=favMerge(MGS.fav,P.fav); mgSave();
   return before!==JSON.stringify(S);
 }
 function stableStr(v){ if(Array.isArray(v)) return "["+v.map(stableStr).join(",")+"]"; if(v&&typeof v==="object") return "{"+Object.keys(v).sort().filter(k=>v[k]!==undefined).map(k=>JSON.stringify(k)+":"+stableStr(v[k])).join(",")+"}"; return JSON.stringify(v===undefined?null:v); }
@@ -3856,7 +3921,7 @@ async function canon(P){
   const st=clone(P.state||{}); delete st.updated; delete st.lastBackup;
   for(const l of Object.keys(LANG)) if(st[l]&&Array.isArray(st[l].custom)) st[l].custom.sort((a,b)=>String(a.id).localeCompare(String(b.id)));
   const m=Array.isArray(P.mine)?[...P.mine].sort((a,b)=>String(a.id).localeCompare(String(b.id))):null;
-  const txt=stableStr({state:st,mine:m,mineDel:P.mineDel||{},read:P.read||{}});
+  const txt=stableStr({state:st,mine:m,mineDel:P.mineDel||{},read:P.read||{},fav:P.fav||{}});
   const h=new Uint8Array(await crypto.subtle.digest("SHA-256",new TextEncoder().encode(txt)));
   return [...h].map(x=>x.toString(16).padStart(2,"0")).join("");
 }
@@ -4815,6 +4880,16 @@ const UI_DICT=[
 ["读完了", "Mark as read", "Gelesen", "Marcar como lido", "讀完了"],
 ["下一篇 →", "Next →", "Weiter →", "Próximo →", "下一篇 →"],
 ["往期", "Archive", "Archiv", "Arquivo", "往期"],
+["收藏", "Save", "Merken", "Guardar", "收藏"],
+["已收藏", "Saved", "Gemerkt", "Guardado", "已收藏"],
+["我的收藏", "Saved texts", "Gemerkte Texte", "Textos guardados", "我的收藏"],
+["导出", "Export", "Exportieren", "Exportar", "匯出"],
+["导出全部", "Export all", "Alle exportieren", "Exportar todos", "匯出全部"],
+["打印 / 存成 PDF", "Print / save as PDF", "Drucken / als PDF sichern", "Imprimir / salvar PDF", "列印 / 存成 PDF"],
+["Word 文件 (.docx)", "Word document (.docx)", "Word-Dokument (.docx)", "Documento Word (.docx)", "Word 檔案 (.docx)"],
+["译文", "Translation", "Übersetzung", "Tradução", "譯文"],
+["导出功能没有载入，请刷新页面再试。", "Export didn't load. Please reload the page.", "Export wurde nicht geladen. Bitte Seite neu laden.", "A exportação não carregou. Recarregue a página.", "匯出功能沒有載入，請重新整理頁面。"],
+["没有可以导出的文章。", "Nothing to export.", "Nichts zu exportieren.", "Nada para exportar.", "沒有可以匯出的文章。"],
 ["{0} 分钟", "{0} min", "{0} Min.", "{0} min", "{0} 分鐘"],
 ["{0} 篇", "{0} articles", "{0} Artikel", "{0} artigos", "{0} 篇"],
 ["还没有往期文章。", "No older articles yet.", "Noch keine älteren Artikel.", "Ainda sem artigos anteriores.", "還沒有往期文章。"],
