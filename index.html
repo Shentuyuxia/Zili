@@ -1099,7 +1099,7 @@ body:not(.tones) .tone-opts{opacity:.55}
 .lv-HSK1{color:var(--a1)} .lv-HSK2{color:var(--a2)} .lv-HSK3{color:var(--b1)} .lv-HSK4{color:var(--b2)} .lv-HSK5{color:var(--c1)} .lv-HSK6{color:var(--c2)}
 .libtag{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px;margin-left:6px}
 .mg-favb .st{font-size:16px;line-height:1}.mg-favb[aria-pressed="true"] .st{color:#d4a017}
-.mg-favx{margin-top:10px}.mg-favx .btn svg{width:16px;height:16px;margin-right:6px;vertical-align:-3px}
+.mg-favx{margin-top:10px}.mg-fin .btn svg{width:16px;height:16px;margin-right:6px;vertical-align:-3px}.mg-favx .btn svg{width:16px;height:16px;margin-right:6px;vertical-align:-3px}
 </style>
 </head>
 <body>
@@ -1674,8 +1674,7 @@ function zSeg(s,extra){ // with the dictionary: best split by word frequency; be
 }
 const ZPART={"得":"de","地":"de","着":"zhe"};
 function zSents(p){ return String(p).split(/(?<=[。！？!?…；]+[”」』）"]?)/).filter(x=>x.trim()); }
-function zWrap(text,own,extra){ // a paragraph → sentences → tappable words with pinyin
-  return zSents(text).map(sen=>{
+function zToks(sen,extra){ // a sentence → words with corrected pinyin (one syllable per character)
     const py=zPyArr(sen); let k=0;
     const ph=[]; for(const [w,y] of PYPHR){ let p=sen.indexOf(w); while(p>=0){ y.forEach((x,j)=>{ if(x!=="-"&&!ph[p+j]) ph[p+j]=x; }); p=sen.indexOf(w,p+w.length); } } // phrase readings (dict/pyphrase.txt) win over everything else
     const toks0=zSeg(sen,extra);
@@ -1684,6 +1683,11 @@ function zWrap(text,own,extra){ // a paragraph → sentences → tappable words 
       if(t.w.length===1&&ZPART[t.w]&&i>0&&!toks0[i-1].punct&&!(t.w==="得"&&toks0[i+1]&&/^到/.test(toks0[i+1].w))) a=[ZPART[t.w]];
       if(ph.length){ const k0=k-t.w.length; a=a.map((x,j)=>ph[k0+j]||x); }
       return {...t,py:a}; });
+    return toks;
+}
+function zWrap(text,own,extra){ // a paragraph → sentences → tappable words with pinyin
+  return zSents(text).map(sen=>{
+    const toks=zToks(sen,extra);
     // words are nowrap (a word never splits over two lines), so the line-break chance between two words is given explicitly with <wbr>; none before punctuation, so ，。 never start a line
     return `<span class="s" data-t="${esc(sen)}">`+toks.map((t,i)=>{
       if(t.punct) return esc(zs(t.w));
@@ -2721,20 +2725,26 @@ function mgFavList(){
 }
 /* print / Word export (vendor/printkit.js): characters with pinyin above, word list, translation */
 const pkL=t=>trOne(t)||t;
-function pkRuby(text){ // → [seg…]: Han characters get their pinyin as ruby (sentence context helps the polyphones)
-  text=String(text||""); const ch=[...text]; let py=zPyArr(text); if(py.length!==ch.length) py=ch.map(c=>HAN.test(c)?zPyArr(c)[0]||"":"");
+function pkRuby(text,gx){ // → [seg…]: the reader's own words and pinyin (same readings as on screen), one syllable over each character
   const out=[]; let buf="";
-  ch.forEach((c,i)=>{ const r=HAN.test(c)&&py[i]; if(r){ if(buf){ out.push(buf); buf=""; } out.push({b:zs(c),r:py[i]}); } else buf+=zs(c); });
-  if(buf) out.push(buf); return out;
+  const flush=()=>{ if(buf){ out.push(buf); buf=""; } };
+  zSents(String(text||"")).forEach(sen=>{ zToks(sen,gx).forEach(t=>{
+    if(t.punct){ buf+=zs(t.w); return; }
+    const a=t.py.slice(); if(t.w.length>1&&t.w.endsWith("儿")&&!ER_X.test(t.w)) a[a.length-1]="r";
+    const ch=[...zs(t.w)]; let k=0;
+    ch.forEach(c=>{ if(!HAN.test(c)){ buf+=c; return; } const y=a[k++]||""; if(!y){ buf+=c; return; } flush(); out.push({b:c,r:y}); });
+  }); });
+  flush(); return out;
 }
 function pkDoc(it,date){
-  const ruby=pyOn(), segs=t=>ruby?pkRuby(t):[zs(t)];
+  const gx=new Set((it.glossary||[]).map(g=>String(g.w||"").trim()).filter(w=>HAN.test(w)));
+  const ruby=pyOn(), segs=t=>ruby?pkRuby(t,gx):[zs(t)];
   const meta=[it.term||it.section||MG_KIND[it.kind]||"",it.level||"",date&&/^\d{4}-\d\d-\d\d$/.test(date)?mgFmt(date):"",mgOutlet(it)].filter(Boolean).join(" · ");
   const tk=[MG.tr,UIL==="de"?"de":"en","en","de"].find(k=>k&&(it["paragraphs_"+k]||[]).length);
   const pm=it.poem&&it.poem.lines?it.poem:null, ptr=pm&&((UIL==="de"&&pm.explain_de)||pm.explain_en||pm.explain_de);
   const gtxt=(UIL==="de"&&it.grammar_de)||it.grammar||it.grammar_de;
   const tt=glSel().map(k=>it["title_"+k]).filter(Boolean).join(" · ");
-  return {title:zs(it.title||""),titleRuby:ruby?pkRuby(it.title||""):null,sub:[it.dek?zs(it.dek):"",tt].filter(Boolean).join(" — "),meta,lang:scr()==="t"?"zh-TW":"zh-CN",
+  return {title:zs(it.title||""),titleRuby:ruby?pkRuby(it.title||"",gx):null,sub:[it.dek?zs(it.dek):"",tt].filter(Boolean).join(" — "),meta,lang:scr()==="t"?"zh-TW":"zh-CN",
     paras:(it.paragraphs||[]).map(segs),
     blocks:[pm?{label:pkL("古诗"),early:true,paras:[segs(pm.title||""),[zs([pm.dynasty,pm.author].filter(Boolean).join(" · "))],...pm.lines.map(segs),...(pm.explain_zh?[segs(pm.explain_zh)]:[]),...(ptr?[[ptr]]:[])]}:null,
       (it.picks||[]).length?{label:pkL("推荐"),early:true,paras:it.picks.map(x=>[[x.outlet,x.title].filter(Boolean).join(": ")+(x.url?"  "+x.url:"")])}:null,
@@ -2756,7 +2766,7 @@ async function pkFavDocs(){
 function pkMenu(btn,getDocs,name){
   if(!window.PrintKit){ toast(pkL("导出功能没有载入，请刷新页面再试。")); return; }
   const go=async kind=>{ const docs=await getDocs(); if(!docs.length){ toast(pkL("没有可以导出的文章。")); return; }
-    const opt={title:name,filename:name,footer:"字里 · Zili",ea:scr()==="t"?"zht":"zh",creator:"Zili"};
+    const opt={title:name,filename:name,ea:scr()==="t"?"zht":"zh",creator:"Zili",brand:{name:"字里 · Zili",url:"shentuyuxia.github.io/Zili",accent:"#2c6b64",font:"var(--f-cn)",sans:"var(--f-ui)",docFont:"Georgia",docEa:scr()==="t"?"PMingLiU":"KaiTi"}};
     if(kind==="print") PrintKit.print(docs,opt); else PrintKit.docx(docs,opt); };
   PrintKit.menu(btn,[{label:pkL("打印 / 存成 PDF"),run:()=>go("print")},{label:pkL("Word 文件 (.docx)"),run:()=>go("docx")}]);
 }
@@ -2801,7 +2811,7 @@ async function mgRender0(){
     <div class="mg-kick">${it.series&&it.series.episode&&it.series.name===it.section?"":`<span>${esc(it.section||MG_KIND[it.kind]||"")}</span>`}${it.series&&it.series.episode?`<span>${esc(it.series.name||"")} · ${esc(it.series.episode)}</span>`:""}${mgOutlet(it)?`<span>${esc(mgOutlet(it))}</span>`:""}${it.level?`<span class="lv lv-${esc(it.level)}">${esc(it.level)}</span>`:""}${it.kind!=="picks"&&(it.paragraphs||[]).length?`<span>${mgMinutes(it)} 分钟</span>`:""}${pick.older?`<span class="g">${mgFmt(pick.date)} · 今天的 ${MG_ETA[l]} 送到</span>`:""}${pick.date==="lib"?`<span>课文库</span>`:""}${it.term?`<span>${esc(it.term)}</span>`:""}</div>
     <h2 data-noi18n lang="zh-CN" class="zh2 zc">${zWrap(it.title,own,gx)}</h2>${(()=>{ const t=glSel().map(k=>it["title_"+k]).filter(Boolean); return t.length?`<p class="mg-tt" data-noi18n>${t.map(esc).join(" · ")}</p>`:""; })()}
     ${it.dek?`<p class="mg-dek zc" data-noi18n lang="zh-CN">${esc(zs(it.dek))}</p>`:""}
-    <div class="mg-tools"><button class="tb" id="mg-say" aria-label="朗读全文">${I.spk}<span>朗读</span></button>${(()=>{ const on=mgFavOn(pick.date+"|"+pick.i); return `<button class="tb mg-favb" data-favb="1" type="button" aria-pressed="${on}"><span class="st" aria-hidden="true">${on?"★":"☆"}</span><span>${on?"已收藏":"收藏"}</span></button>`; })()}<button class="tb" id="mg-exp" type="button" aria-haspopup="menu">${I.exp}<span>导出</span></button>${it.paragraphs_en&&it.paragraphs_en.length?`<button class="tb" id="mg-enb" aria-pressed="${MG.tr==="en"}" aria-label="English translation">English</button>`:""}${it.paragraphs_de&&it.paragraphs_de.length?`<button class="tb" id="mg-deb" aria-pressed="${MG.tr==="de"}" aria-label="Deutsche Übersetzung">Deutsch</button>`:""}<span class="spacer"></span><button class="tb" id="mg-py" aria-pressed="${pyOn()}">拼音</button><button class="tb" id="mg-tone" aria-pressed="${tonesOn()}">声调</button><button class="tb" id="mg-scr" aria-pressed="${scr()==="t"}" data-noi18n>${scr()==="t"?"繁體":"简体"}</button></div>
+    <div class="mg-tools"><button class="tb" id="mg-say" aria-label="朗读全文">${I.spk}<span>朗读</span></button>${(()=>{ const on=mgFavOn(pick.date+"|"+pick.i); return `<button class="tb mg-favb" data-favb="1" type="button" aria-pressed="${on}"><span class="st" aria-hidden="true">${on?"★":"☆"}</span><span>${on?"已收藏":"收藏"}</span></button>`; })()}${it.paragraphs_en&&it.paragraphs_en.length?`<button class="tb" id="mg-enb" aria-pressed="${MG.tr==="en"}" aria-label="English translation">English</button>`:""}${it.paragraphs_de&&it.paragraphs_de.length?`<button class="tb" id="mg-deb" aria-pressed="${MG.tr==="de"}" aria-label="Deutsche Übersetzung">Deutsch</button>`:""}<span class="spacer"></span><button class="tb" id="mg-py" aria-pressed="${pyOn()}">拼音</button><button class="tb" id="mg-tone" aria-pressed="${tonesOn()}">声调</button><button class="tb" id="mg-scr" aria-pressed="${scr()==="t"}" data-noi18n>${scr()==="t"?"繁體":"简体"}</button></div>
     ${onbActive()&&!(onb().t||{}).read?`<p class="onb-tip">💡 <span>点任何一个词，看读音、意思和笔顺，还可以收进生词。</span></p>`:""}
     <div class="mg-body zhb zc${easy?" easy":""}${it.kind==="dialogue"?" dlg":""}" id="mg-body" data-noi18n lang="zh-CN">${(it.paragraphs||[]).map((p,k)=>`<p>${zWrap(p,own,gx)}</p>${MG.tr&&it["paragraphs_"+MG.tr]&&it["paragraphs_"+MG.tr][k]?`<span class="mg-zh mg-tr-${MG.tr}" lang="${MG.tr}">${esc(it["paragraphs_"+MG.tr][k])}</span>`:""}`).join("")}</div>
     ${it.kind==="picks"?mgPicks(it):""}
@@ -2813,7 +2823,7 @@ async function mgRender0(){
     ${it.glossary&&it.glossary.length?`<div class="mg-blk mg-glb"><dl class="mg-gl zgl" data-noi18n>${it.glossary.map(g=>`<dt><span class="zc" lang="zh-CN">${esc(zs(g.w))}</span><span class="py">${esc(g.p||zPy(g.w))}</span></dt><dd>${glSel().filter(k=>g[k]).map(k=>`<span lang="${k}">${esc(g[k])}</span>`).join("")||esc(g.en||g.de||"")}</dd>`).join("")}</dl></div>`:""}
     ${qs.length?`<div class="mg-blk"><h3>想一想</h3><ol class="mg-q zc" data-noi18n lang="zh-CN">${qs.map(q=>`<li>${esc(zs(q))}</li>`).join("")}</ol></div>`:""}
     ${it.sources&&it.sources.length?`<div class="mg-blk mg-src"><h3>来源</h3><ul>${it.sources.map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>${s.license?`<span class="lic">${esc(s.license)}</span>`:""}</li>`).join("")}</ul></div>`:""}
-    <div class="mg-fin">${(()=>{ const on=mgFavOn(pick.date+"|"+pick.i); return `<button class="btn mg-favb" data-favb="1" type="button" aria-pressed="${on}"><span class="st" aria-hidden="true">${on?"★":"☆"}</span> <span>${on?"已收藏":"收藏"}</span></button>`; })()}${mgRead(pick.date,pick.i)?'<span class="small muted">✓ 读完了</span>':`<button class="btn primary" id="mg-done" type="button">读完了</button>`}
+    <div class="mg-fin">${(()=>{ const on=mgFavOn(pick.date+"|"+pick.i); return `<button class="btn mg-favb" data-favb="1" type="button" aria-pressed="${on}"><span class="st" aria-hidden="true">${on?"★":"☆"}</span> <span>${on?"已收藏":"收藏"}</span></button>`; })()}<button class="btn" id="mg-exp" type="button" aria-haspopup="menu">${I.exp}<span>导出</span></button>${mgRead(pick.date,pick.i)?'<span class="small muted">✓ 读完了</span>':`<button class="btn primary" id="mg-done" type="button">读完了</button>`}
     ${(()=>{ const k=es.findIndex(e=>e.date===pick.date&&e.i===pick.i); const nx=!pick.older&&k>=0?es[k+1]:null; return nx?`<button class="btn" data-mg="${nx.date}|${nx.i}" type="button">下一篇 →</button>`:""; })()}</div>
   </article>`;
   main.innerHTML=h; MG.cur={...pick,it};
