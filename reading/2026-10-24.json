@@ -1,0 +1,524 @@
+{
+ "date": "2026-10-24",
+ "createdBy": "claude",
+ "items": [
+  {
+   "lang": "zh",
+   "level": "HSK1",
+   "kind": "dialogue",
+   "section": "文化与节日",
+   "title": "去朋友家",
+   "title_en": "Visiting a friend's home",
+   "title_de": "Zu Besuch bei einer Freundin",
+   "paragraphs": [
+    "安娜：王明，你好！这是我的家。请进！",
+    "王明：谢谢！这是水果，给你。",
+    "安娜：太谢谢你了！请坐。你想喝茶还是喝水？",
+    "王明：我喝茶，谢谢。",
+    "安娜：我妈妈做了很多菜。我们六点吃饭，好吗？",
+    "王明：好！在中国，去朋友家的时候，很多人买水果。",
+    "安娜：在德国，很多人买花。",
+    "王明：下个星期六，你来我家吃饭吧！"
+   ],
+   "paragraphs_en": [
+    "Anna: Hello, Wang Ming! This is my home. Come in, please!",
+    "Wang Ming: Thank you! This is some fruit, for you.",
+    "Anna: Thank you so much! Please sit down. Would you like tea or water?",
+    "Wang Ming: I'll have tea, thanks.",
+    "Anna: My mum has made a lot of dishes. We'll eat at six, OK?",
+    "Wang Ming: Great! In China, when people visit a friend's home, many of them bring fruit.",
+    "Anna: In Germany, many people bring flowers.",
+    "Wang Ming: Next Saturday, come to my place for dinner!"
+   ],
+   "paragraphs_de": [
+    "Anna: Hallo, Wang Ming! Das ist meine Wohnung. Komm doch rein!",
+    "Wang Ming: Danke! Hier ist etwas Obst, für dich.",
+    "Anna: Vielen Dank! Setz dich bitte. Möchtest du Tee oder Wasser?",
+    "Wang Ming: Ich nehme Tee, danke.",
+    "Anna: Meine Mutter hat viele Gerichte gekocht. Wir essen um sechs, okay?",
+    "Wang Ming: Gut! Wenn man in China Freunde zu Hause besucht, bringen viele Leute Obst mit.",
+    "Anna: In Deutschland bringen viele Leute Blumen mit.",
+    "Wang Ming: Nächsten Samstag kommst du zu mir zum Essen!"
+   ],
+   "glossary": [
+    {
+     "w": "请进",
+     "p": "qǐng jìn",
+     "en": "please come in",
+     "de": "komm(en Sie) bitte herein"
+    },
+    {
+     "w": "水果",
+     "p": "shuǐ guǒ",
+     "en": "fruit",
+     "de": "das Obst"
+    },
+    {
+     "w": "给",
+     "p": "gěi",
+     "en": "to give; for",
+     "de": "geben; für"
+    },
+    {
+     "w": "请坐",
+     "p": "qǐng zuò",
+     "en": "please sit down",
+     "de": "bitte setz dich"
+    },
+    {
+     "w": "还是",
+     "p": "hái shi",
+     "en": "or (in questions)",
+     "de": "oder (in Fragen)"
+    },
+    {
+     "w": "菜",
+     "p": "cài",
+     "en": "dish; food",
+     "de": "das Gericht; das Essen"
+    },
+    {
+     "w": "花",
+     "p": "huā",
+     "en": "flower",
+     "de": "die Blume"
+    },
+    {
+     "w": "星期六",
+     "p": "xīng qī liù",
+     "en": "Saturday",
+     "de": "der Samstag"
+    }
+   ],
+   "grammar": "还是 means 'or' in a question that offers a choice: 你想喝茶还是喝水？ 'Do you want tea or water?' The answer picks one. No 吗 is needed at the end.",
+   "grammar_de": "还是 bedeutet „oder“ in einer Frage mit Auswahl: 你想喝茶还是喝水？ „Möchtest du Tee oder Wasser?“ Die Antwort wählt eins aus. Am Ende steht kein 吗.",
+   "questions": [
+    "王明给安娜什么？",
+    "王明想喝什么？",
+    "他们几点吃饭？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "feature",
+   "section": "文化与节日",
+   "title": "爷爷的重阳节",
+   "title_en": "Grandpa's Double Ninth Festival",
+   "title_de": "Opas Doppelneunfest",
+   "paragraphs": [
+    "昨天爷爷给我打电话。他问我：“上个星期是重阳节，你知道吗？”我不知道。爷爷告诉我，重阳节是农历九月初九，今年是十月十八日。",
+    "这一天，很多人去爬山，还喜欢看菊花。因为“九九”听起来像“久久”，所以重阳节也是关心老人的日子。很多年轻人会回家看爷爷奶奶，给他们做饭。",
+    "我在德国学习，不能回家。但是我和爷爷视频了半个小时。我给他看了学校旁边的小山，山上的树叶都红了。爷爷笑着说：“明年重阳节，我们一起去爬山吧！”"
+   ],
+   "paragraphs_en": [
+    "Yesterday Grandpa phoned me. He asked: 'Last week was the Double Ninth Festival, did you know?' I didn't. Grandpa told me that the Double Ninth Festival falls on the ninth day of the ninth month of the lunar calendar; this year it was on 18 October.",
+    "On this day many people go hiking in the hills, and they also like to look at chrysanthemums. Because 'nine nine' (jiǔ jiǔ) sounds like 'for a long, long time' (jiǔ jiǔ), the Double Ninth is also a day for caring about older people. Many young people go home to see their grandparents and cook for them.",
+    "I'm studying in Germany, so I can't go home. But Grandpa and I video-chatted for half an hour. I showed him the little hill next to my university; the leaves on the trees there have all turned red. Grandpa smiled and said: 'Next Double Ninth, let's go hiking together!'"
+   ],
+   "paragraphs_de": [
+    "Gestern hat Opa mich angerufen. Er fragte: „Letzte Woche war das Doppelneunfest, wusstest du das?“ Ich wusste es nicht. Opa erklärte mir, dass das Doppelneunfest am neunten Tag des neunten Monats im Mondkalender ist; dieses Jahr war es der 18. Oktober.",
+    "An diesem Tag wandern viele Leute auf die Berge, und sie schauen sich gern Chrysanthemen an. Weil „neun neun“ (jiǔ jiǔ) wie „lange, lange“ (jiǔ jiǔ) klingt, ist das Doppelneunfest auch ein Tag, an dem man sich um ältere Menschen kümmert. Viele junge Leute fahren nach Hause, besuchen Oma und Opa und kochen für sie.",
+    "Ich studiere in Deutschland und kann nicht nach Hause fahren. Aber ich habe eine halbe Stunde mit Opa per Video gesprochen. Ich habe ihm den kleinen Hügel neben meiner Uni gezeigt; die Blätter an den Bäumen dort sind alle rot geworden. Opa lachte und sagte: „Nächstes Jahr zum Doppelneunfest gehen wir zusammen wandern!“"
+   ],
+   "glossary": [
+    {
+     "w": "重阳节",
+     "p": "Chóng yáng jié",
+     "en": "Double Ninth Festival",
+     "de": "das Doppelneunfest"
+    },
+    {
+     "w": "农历",
+     "p": "nóng lì",
+     "en": "Chinese lunar calendar",
+     "de": "der chinesische Mondkalender"
+    },
+    {
+     "w": "爬山",
+     "p": "pá shān",
+     "en": "to climb a hill; to go hiking",
+     "de": "auf einen Berg steigen; wandern"
+    },
+    {
+     "w": "菊花",
+     "p": "jú huā",
+     "en": "chrysanthemum",
+     "de": "die Chrysantheme"
+    },
+    {
+     "w": "听起来",
+     "p": "tīng qǐ lai",
+     "en": "to sound (like)",
+     "de": "klingen (wie)"
+    },
+    {
+     "w": "久",
+     "p": "jiǔ",
+     "en": "long (time)",
+     "de": "lange"
+    },
+    {
+     "w": "关心",
+     "p": "guān xīn",
+     "en": "to care about",
+     "de": "sich kümmern um"
+    },
+    {
+     "w": "视频",
+     "p": "shì pín",
+     "en": "video; to video-chat",
+     "de": "das Video; per Video sprechen"
+    }
+   ],
+   "grammar": "因为……所以…… links a reason and a result: 因为“九九”听起来像“久久”，所以…… 'Because … , (so) …'. In Chinese you usually keep both words, while English uses only 'because' or 'so'.",
+   "grammar_de": "因为……所以…… verbindet Grund und Folge: 因为“九九”听起来像“久久”，所以…… „Weil …, (deshalb) …“. Im Chinesischen stehen meist beide Wörter, im Deutschen reicht oft „weil“ oder „deshalb“.",
+   "questions": [
+    "重阳节是农历哪一天？",
+    "重阳节很多人做什么？",
+    "“我”为什么不能回家？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK3",
+   "kind": "feature",
+   "section": "文化与节日",
+   "title": "送礼物的小规矩",
+   "title_en": "Little rules for giving gifts",
+   "title_de": "Kleine Regeln beim Schenken",
+   "dek": "在中国送礼物，不只是看东西好不好，还要听听它的“声音”。",
+   "paragraphs": [
+    "上个月，我的德国朋友莉娜要去上海看她的中国同事。她以前没去过中国，所以问我：“我应该带什么礼物？”这个问题看起来很简单，其实有一些小规矩。",
+    "我先告诉她，最好不要送钟。“送钟”和“送终”的发音一样，而“送终”的意思是陪老人走完生命的最后一段路，所以很多人觉得送钟不吉利。她听了以后很吃惊：“我本来想送一个漂亮的德国钟呢！”",
+    "我还告诉她，朋友之间最好不要分着吃一个梨，因为“分梨”听起来像“分离”。莉娜笑了：“原来中文里的礼物，还要听它的声音！”",
+    "那送什么好呢？我建议她带一些德国特产，比如巧克力、饼干，或者一本有很多照片的书。中国人收到礼物时，常常先说“你太客气了”，有时候不马上打开。莉娜说，在德国，大家一般会当面打开礼物，然后说谢谢。",
+    "最后莉娜带了一盒巧克力和一本柏林的照片书。她的同事特别高兴，把书放在了客厅最显眼的地方。看来，礼物不在贵，心意最重要。"
+   ],
+   "paragraphs_en": [
+    "Last month my German friend Lina was going to Shanghai to visit her Chinese colleague. She had never been to China before, so she asked me: 'What present should I bring?' The question looks simple, but there are actually a few little rules.",
+    "First I told her it's best not to give a clock. 'Giving a clock' (sòng zhōng) sounds exactly like sòng zhōng meaning 'to accompany an elderly person through the last stretch of life', so many people feel that giving a clock brings bad luck. She was surprised to hear it: 'I was actually going to give a beautiful German clock!'",
+    "I also told her that it's best for friends not to share a pear, because 'sharing a pear' (fēn lí) sounds like 'separation' (fēn lí). Lina laughed: 'So in Chinese you even have to listen to what a present sounds like!'",
+    "So what's a good present? I suggested she take some German specialities, such as chocolate or biscuits, or a book with lots of photos. When Chinese people receive a present, they often first say 'You're too kind', and sometimes they don't open it straight away. Lina said that in Germany people usually open a present in front of the giver and then say thank you.",
+    "In the end Lina took a box of chocolates and a photo book about Berlin. Her colleague was really pleased and put the book in the most eye-catching spot in the living room. It seems a present doesn't have to be expensive; what matters most is the thought behind it."
+   ],
+   "paragraphs_de": [
+    "Letzten Monat wollte meine deutsche Freundin Lina ihre chinesische Kollegin in Shanghai besuchen. Sie war noch nie in China gewesen und fragte mich deshalb: „Welches Geschenk soll ich mitbringen?“ Die Frage sieht einfach aus, aber es gibt tatsächlich ein paar kleine Regeln.",
+    "Zuerst sagte ich ihr, dass man besser keine Uhr verschenkt. „Eine Uhr schenken“ (sòng zhōng) klingt genauso wie sòng zhōng, „einen alten Menschen auf dem letzten Stück seines Lebens begleiten“, deshalb finden viele, dass eine Uhr als Geschenk Unglück bringt. Sie war überrascht: „Ich wollte eigentlich eine schöne deutsche Uhr verschenken!“",
+    "Ich erzählte ihr auch, dass Freunde sich besser keine Birne teilen, weil „eine Birne teilen“ (fēn lí) wie „Trennung“ (fēn lí) klingt. Lina lachte: „Bei Geschenken auf Chinesisch muss man also sogar auf den Klang hören!“",
+    "Was ist dann ein gutes Geschenk? Ich schlug ihr vor, deutsche Spezialitäten mitzunehmen, zum Beispiel Schokolade, Kekse oder ein Buch mit vielen Fotos. Wenn Chinesen ein Geschenk bekommen, sagen sie oft zuerst „Das wäre doch nicht nötig gewesen“, und manchmal öffnen sie es nicht sofort. Lina sagte, in Deutschland packt man ein Geschenk meistens gleich vor dem Schenkenden aus und bedankt sich dann.",
+    "Am Ende nahm Lina eine Schachtel Pralinen und einen Fotoband über Berlin mit. Ihre Kollegin freute sich sehr und stellte das Buch an die auffälligste Stelle im Wohnzimmer. Offenbar muss ein Geschenk nicht teuer sein; am wichtigsten ist die Geste dahinter."
+   ],
+   "glossary": [
+    {
+     "w": "规矩",
+     "p": "guī ju",
+     "en": "rule; custom",
+     "de": "die Regel; der Brauch"
+    },
+    {
+     "w": "钟",
+     "p": "zhōng",
+     "en": "clock",
+     "de": "die Uhr (Wand-/Standuhr)"
+    },
+    {
+     "w": "发音",
+     "p": "fā yīn",
+     "en": "pronunciation",
+     "de": "die Aussprache"
+    },
+    {
+     "w": "送终",
+     "p": "sòng zhōng",
+     "en": "to be with a dying relative at the end",
+     "de": "einen Sterbenden bis zum Ende begleiten"
+    },
+    {
+     "w": "吉利",
+     "p": "jí lì",
+     "en": "lucky, auspicious",
+     "de": "glückverheißend"
+    },
+    {
+     "w": "吃惊",
+     "p": "chī jīng",
+     "en": "surprised, startled",
+     "de": "überrascht, erstaunt"
+    },
+    {
+     "w": "本来",
+     "p": "běn lái",
+     "en": "originally, actually",
+     "de": "eigentlich, ursprünglich"
+    },
+    {
+     "w": "分离",
+     "p": "fēn lí",
+     "en": "to separate; separation",
+     "de": "sich trennen; die Trennung"
+    },
+    {
+     "w": "特产",
+     "p": "tè chǎn",
+     "en": "local speciality",
+     "de": "die regionale Spezialität"
+    },
+    {
+     "w": "当面",
+     "p": "dāng miàn",
+     "en": "face to face, in front of sb.",
+     "de": "persönlich, vor jemandem"
+    },
+    {
+     "w": "显眼",
+     "p": "xiǎn yǎn",
+     "en": "eye-catching, conspicuous",
+     "de": "auffällig, gut sichtbar"
+    },
+    {
+     "w": "心意",
+     "p": "xīn yì",
+     "en": "kind thought, regard",
+     "de": "die Aufmerksamkeit; gute Absicht"
+    }
+   ],
+   "grammar": "把 moves the object before the verb when you do something to it and it ends up somewhere: 她把书放在了客厅。 'She put the book in the living room.' Pattern: subject + 把 + object + verb + 在 + place.",
+   "grammar_de": "Mit 把 steht das Objekt vor dem Verb, wenn man etwas damit tut und es irgendwo landet: 她把书放在了客厅。 „Sie stellte das Buch ins Wohnzimmer.“ Muster: Subjekt + 把 + Objekt + Verb + 在 + Ort.",
+   "questions": [
+    "为什么很多人觉得送钟不好？",
+    "在德国，收到礼物的人一般会做什么？",
+    "莉娜最后带了什么礼物？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK4",
+   "kind": "feature",
+   "section": "文化与节日",
+   "title": "谁来买单？",
+   "title_en": "Who's paying?",
+   "title_de": "Wer zahlt?",
+   "dek": "在中国的饭馆里，你可能会看到朋友们“抢着”付钱。",
+   "paragraphs": [
+    "第一次和中国朋友出去吃饭的时候，我看到了一个让我很惊讶的场面：饭还没吃完，两个朋友就站了起来，一个说“我来！”，另一个说“不行，这次我请！”，两个人几乎是抢着去前台付钱。我坐在那儿，不知道自己应该做什么。",
+    "后来我才明白，在很多中国人看来，请朋友吃饭不仅是付一顿饭的钱，更是表达友谊和热情的方式。今天你请我，下次我请你，关系就在这样一来一往中慢慢变近。如果每次都算得清清楚楚，有的人反而会觉得有点儿“见外”。",
+    "而在德国，朋友一起吃饭，常常是各付各的。服务员走过来，会问：“一起付还是分开付？”大家觉得这样很公平，谁也不欠谁，心里也轻松。中文把这种做法叫作“AA制”。现在，中国的年轻人，尤其是同学和同事之间，也越来越习惯AA制了。",
+    "我觉得这两种习惯都有道理。抢着买单让人感到温暖，可是如果总是同一个人付钱，另一个人也许会有压力；AA制虽然简单方便，但是有时候会让气氛显得有点儿冷。关键是了解对方的习惯，互相尊重。",
+    "现在和中国朋友吃饭时，我也学会了“抢”一下。不过我的办法比较聪明：趁大家聊得正高兴，我悄悄去前台把账结了。朋友们发现以后，都笑着说我已经是“半个中国人”了。"
+   ],
+   "paragraphs_en": [
+    "The first time I went out to eat with Chinese friends, I saw a scene that really surprised me: before we had even finished eating, two friends stood up. One said 'I've got this!', the other said 'No way, this time it's on me!', and the two of them practically raced each other to the counter to pay. I sat there, not knowing what I was supposed to do.",
+    "Only later did I understand that for many Chinese people, treating a friend to a meal isn't just paying for food; it's a way of showing friendship and warmth. Today you treat me, next time I treat you, and the relationship slowly grows closer through this back and forth. If you always split everything down to the last cent, some people might actually feel you're 'treating them like a stranger'.",
+    "In Germany, on the other hand, friends who eat together often pay separately. The waiter comes over and asks: 'Together or separately?' Everyone thinks this is fair; nobody owes anybody anything, and it feels relaxed. In Chinese this practice is called 'AA制' (going Dutch). Nowadays young people in China, especially classmates and colleagues, are getting more and more used to it too.",
+    "I think both habits make sense. Fighting over the bill feels warm, but if it's always the same person who pays, the other one may feel under pressure. Going Dutch is simple and convenient, but sometimes it can make the atmosphere feel a bit cool. The key is to understand the other person's habits and to respect each other.",
+    "Now, when I eat with Chinese friends, I've learned to 'fight' a bit too. But my method is rather clever: while everyone is happily chatting, I quietly go to the counter and settle the bill. When my friends find out, they all laugh and say I'm already 'half Chinese'."
+   ],
+   "paragraphs_de": [
+    "Als ich zum ersten Mal mit chinesischen Freunden essen ging, erlebte ich eine Szene, die mich sehr überraschte: Wir waren noch nicht fertig mit dem Essen, da standen zwei Freunde auf. Einer sagte „Ich mach das!“, der andere „Kommt nicht in Frage, diesmal lade ich ein!“, und die beiden liefen fast um die Wette zur Theke, um zu bezahlen. Ich saß da und wusste nicht, was ich tun sollte.",
+    "Erst später verstand ich, dass für viele Chinesen eine Einladung zum Essen nicht nur bedeutet, eine Mahlzeit zu bezahlen, sondern vor allem eine Art ist, Freundschaft und Herzlichkeit zu zeigen. Heute lädst du mich ein, nächstes Mal ich dich – durch dieses Hin und Her kommt man sich langsam näher. Wenn man jedes Mal alles genau abrechnet, haben manche sogar das Gefühl, man behandle sie „wie Fremde“.",
+    "In Deutschland dagegen zahlen Freunde, die zusammen essen, oft getrennt. Die Bedienung kommt und fragt: „Zusammen oder getrennt?“ Alle finden das fair: Niemand schuldet dem anderen etwas, und man fühlt sich entspannt. Auf Chinesisch nennt man das „AA制“. Heute gewöhnen sich auch junge Leute in China, vor allem unter Kommilitonen und Kollegen, immer mehr daran.",
+    "Ich finde, beide Gewohnheiten haben ihren Sinn. Wenn man sich darum streitet, wer zahlt, wirkt das herzlich; aber wenn immer dieselbe Person zahlt, fühlt sich der andere vielleicht unter Druck. Getrennt zahlen ist einfach und bequem, kann die Stimmung aber manchmal etwas kühl wirken lassen. Entscheidend ist, die Gewohnheiten des anderen zu kennen und sich gegenseitig zu respektieren.",
+    "Wenn ich jetzt mit chinesischen Freunden essen gehe, habe ich auch gelernt, ein bisschen zu „kämpfen“. Meine Methode ist allerdings ziemlich schlau: Während alle gerade fröhlich plaudern, gehe ich leise zur Theke und begleiche die Rechnung. Wenn meine Freunde es merken, lachen alle und sagen, ich sei schon ein „halber Chinese“."
+   ],
+   "glossary": [
+    {
+     "w": "买单",
+     "p": "mǎi dān",
+     "en": "to pay the bill",
+     "de": "die Rechnung bezahlen"
+    },
+    {
+     "w": "抢",
+     "p": "qiǎng",
+     "en": "to scramble for; to rush",
+     "de": "sich um etwas reißen; eilen"
+    },
+    {
+     "w": "场面",
+     "p": "chǎng miàn",
+     "en": "scene",
+     "de": "die Szene"
+    },
+    {
+     "w": "前台",
+     "p": "qián tái",
+     "en": "front desk, counter",
+     "de": "die Theke; der Empfang"
+    },
+    {
+     "w": "表达",
+     "p": "biǎo dá",
+     "en": "to express",
+     "de": "ausdrücken"
+    },
+    {
+     "w": "友谊",
+     "p": "yǒu yì",
+     "en": "friendship",
+     "de": "die Freundschaft"
+    },
+    {
+     "w": "见外",
+     "p": "jiàn wài",
+     "en": "to treat sb. as an outsider",
+     "de": "jemanden wie einen Fremden behandeln"
+    },
+    {
+     "w": "各付各的",
+     "p": "gè fù gè dì",
+     "en": "each pays for themselves",
+     "de": "jeder zahlt für sich"
+    },
+    {
+     "w": "欠",
+     "p": "qiàn",
+     "en": "to owe",
+     "de": "schulden"
+    },
+    {
+     "w": "气氛",
+     "p": "qì fēn",
+     "en": "atmosphere",
+     "de": "die Stimmung, die Atmosphäre"
+    },
+    {
+     "w": "趁",
+     "p": "chèn",
+     "en": "to take advantage of (a moment)",
+     "de": "(einen Moment) nutzen"
+    },
+    {
+     "w": "结账",
+     "p": "jié zhàng",
+     "en": "to settle the bill",
+     "de": "die Rechnung begleichen"
+    }
+   ],
+   "grammar": "不仅……更是…… means 'not only … but even more …'. It adds a second, more important point: 请朋友吃饭不仅是付一顿饭的钱，更是表达友谊的方式。 Compare 不但……而且……, which adds points of equal weight.",
+   "grammar_de": "不仅……更是…… bedeutet „nicht nur …, sondern vor allem …“. Es fügt einen zweiten, wichtigeren Punkt hinzu: 请朋友吃饭不仅是付一顿饭的钱，更是表达友谊的方式。 Vergleiche 不但……而且……, das gleichwertige Punkte verbindet.",
+   "questions": [
+    "作者第一次和中国朋友吃饭时看到了什么？",
+    "在德国，服务员常常问什么？",
+    "作者现在用什么办法“抢”着买单？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK5",
+   "kind": "feature",
+   "section": "文化与节日",
+   "title": "四个字里的故事",
+   "title_en": "Stories in four characters",
+   "title_de": "Geschichten in vier Schriftzeichen",
+   "dek": "短短四个字的成语背后，常常藏着一个两千多年前的故事。",
+   "paragraphs": [
+    "学中文的人，迟早会遇到成语。成语大多只有四个字，看起来简单，意思却常常不能从字面上猜出来。比如“守株待兔”，每个字我都认识，合在一起却让我一头雾水。直到老师讲了它背后的故事，我才恍然大悟。",
+    "这个故事出自《韩非子》。从前，宋国有个农夫在田里干活，忽然看见一只兔子跑过来，一头撞在树桩上，折断脖子死了。他白白得到一只兔子，高兴极了。从那以后，他放下农具，天天守在树桩旁边，等着下一只兔子撞上来。结果兔子再也没有出现，他自己倒成了全国人的笑话。后来，人们就用“守株待兔”来形容不主动努力、只想靠运气的人。",
+    "另一个我很喜欢的成语是“画蛇添足”，出自《战国策》。几个人得到一壶酒，不够大家喝，于是约定比赛画蛇，谁先画完，酒就归谁。有一个人最先画好，见别人还没画完，就得意地给蛇添上了脚。这时另一个人画完了，一把拿过酒说：“蛇本来就没有脚，你画的已经不是蛇了！”这个成语提醒我们：做事要恰到好处，多此一举反而会坏事。",
+    "在我看来，成语就像一扇扇小窗户，透过它们，可以看到古人的生活和智慧。有意思的是，德语里也有相似的说法。德国人常说，烤好的鸽子不会自己飞进嘴里，道理和“守株待兔”差不多，都是在劝人别光等着好事从天上掉下来。",
+    "当然，学成语也不必急于求成。我的方法是每周只学两三个：先弄懂故事，再试着在聊天中用一用。用错了也没关系，中国朋友往往会笑着纠正我，有时还会再给我讲一个新故事。日积月累，这些四个字的小故事，就慢慢变成了我自己的语言。"
+   ],
+   "paragraphs_en": [
+    "Anyone learning Chinese will sooner or later come across chengyu, set idioms. Most have only four characters; they look simple, but you often can't guess their meaning from the literal words. Take 守株待兔, 'guarding a tree stump, waiting for a hare': I knew every character, but put together they left me completely baffled. Only when our teacher told the story behind it did it suddenly click.",
+    "The story comes from the Han Feizi. Long ago, a farmer in the state of Song was working in his field when he suddenly saw a hare dash past, run headfirst into a tree stump, break its neck and die. He had got a hare for nothing and was overjoyed. From then on he put down his farming tools and waited by the stump every day for the next hare to run into it. Of course, no hare ever came again, and he himself became the laughing stock of the whole state. Since then people have used 守株待兔 to describe someone who makes no effort and just relies on luck.",
+    "Another chengyu I really like is 画蛇添足, 'drawing a snake and adding feet', from the Strategies of the Warring States. A few people were given a jug of wine that wasn't enough for all of them, so they agreed on a contest: whoever finished drawing a snake first would get the wine. One man finished first and, seeing the others hadn't, smugly added feet to his snake. Just then another man finished, grabbed the wine and said: 'Snakes don't have feet; what you've drawn isn't a snake any more!' The idiom reminds us to do things just right: doing more than is needed can actually spoil things.",
+    "To me, chengyu are like a row of little windows through which you can glimpse the lives and wisdom of people long ago. Interestingly, German has a similar saying. Germans often say that roasted pigeons don't fly into your mouth by themselves. The lesson is much the same as 守株待兔: both advise you not to just sit and wait for good things to fall from the sky.",
+    "Of course, there's no need to rush when learning chengyu. My method is to learn only two or three a week: first understand the story, then try using them in conversation. It doesn't matter if I get one wrong; Chinese friends usually correct me with a smile, and sometimes they tell me a new story as well. Little by little, these four-character stories are slowly becoming part of my own language."
+   ],
+   "paragraphs_de": [
+    "Wer Chinesisch lernt, stößt früher oder später auf Chengyu, feste Redewendungen. Die meisten haben nur vier Schriftzeichen; sie sehen einfach aus, aber ihre Bedeutung lässt sich oft nicht aus dem Wortlaut erraten. Nehmen wir 守株待兔, „einen Baumstumpf bewachen und auf Hasen warten“: Ich kannte jedes Zeichen, aber zusammen verstand ich nur Bahnhof. Erst als unsere Lehrerin die Geschichte dahinter erzählte, ging mir ein Licht auf.",
+    "Die Geschichte stammt aus dem Han Feizi. Vor langer Zeit arbeitete ein Bauer im Staat Song auf seinem Feld, als plötzlich ein Hase angerannt kam, kopfüber gegen einen Baumstumpf prallte, sich das Genick brach und starb. Er hatte den Hasen geschenkt bekommen und freute sich riesig. Von da an legte er sein Werkzeug weg und wartete jeden Tag neben dem Baumstumpf darauf, dass der nächste Hase dagegenrennt. Natürlich kam nie wieder ein Hase, und er selbst wurde zum Gespött des ganzen Landes. Seitdem beschreibt man mit 守株待兔 jemanden, der sich nicht anstrengt und nur auf sein Glück vertraut.",
+    "Ein anderes Chengyu, das ich sehr mag, ist 画蛇添足, „eine Schlange malen und Füße hinzufügen“, aus den Strategien der Streitenden Reiche. Ein paar Leute bekamen einen Krug Wein, der nicht für alle reichte. Also vereinbarten sie einen Wettbewerb: Wer zuerst eine Schlange gemalt hatte, bekam den Wein. Einer war als Erster fertig, und als er sah, dass die anderen noch malten, fügte er selbstzufrieden noch Füße hinzu. Da wurde ein anderer fertig, schnappte sich den Wein und sagte: „Schlangen haben doch gar keine Füße – was du gemalt hast, ist keine Schlange mehr!“ Die Redewendung erinnert uns daran, Dinge genau richtig zu machen: Wer mehr tut als nötig, verdirbt es eher.",
+    "Für mich sind Chengyu wie eine Reihe kleiner Fenster, durch die man auf das Leben und die Weisheit der Menschen von früher blicken kann. Interessanterweise gibt es im Deutschen eine ähnliche Redensart: Die gebratenen Tauben fliegen einem nicht in den Mund. Die Lehre ist ähnlich wie bei 守株待兔: Beide raten, nicht nur darauf zu warten, dass einem das Glück vom Himmel fällt.",
+    "Natürlich muss man beim Lernen von Chengyu nichts überstürzen. Meine Methode: nur zwei oder drei pro Woche lernen – erst die Geschichte verstehen, dann versuchen, sie im Gespräch zu benutzen. Wenn ich eins falsch verwende, ist das nicht schlimm; chinesische Freunde verbessern mich meist mit einem Lächeln und erzählen mir manchmal gleich noch eine neue Geschichte. Nach und nach werden diese Geschichten in vier Zeichen langsam zu einem Teil meiner eigenen Sprache."
+   ],
+   "glossary": [
+    {
+     "w": "成语",
+     "p": "chéng yǔ",
+     "en": "set idiom (usually four characters)",
+     "de": "feste Redewendung (meist vier Zeichen)"
+    },
+    {
+     "w": "迟早",
+     "p": "chí zǎo",
+     "en": "sooner or later",
+     "de": "früher oder später"
+    },
+    {
+     "w": "一头雾水",
+     "p": "yì tóu wù shuǐ",
+     "en": "completely confused (lit. a head full of fog)",
+     "de": "völlig verwirrt (wörtl. ein Kopf voller Nebel)"
+    },
+    {
+     "w": "恍然大悟",
+     "p": "huǎng rán dà wù",
+     "en": "to suddenly understand",
+     "de": "plötzlich begreifen; ein Licht geht auf"
+    },
+    {
+     "w": "守株待兔",
+     "p": "shǒu zhū dài tù",
+     "en": "to wait for luck instead of working (lit. guard a stump, wait for hares)",
+     "de": "untätig auf Glück warten (wörtl. Baumstumpf bewachen, auf Hasen warten)"
+    },
+    {
+     "w": "树桩",
+     "p": "shù zhuāng",
+     "en": "tree stump",
+     "de": "der Baumstumpf"
+    },
+    {
+     "w": "画蛇添足",
+     "p": "huà shé tiān zú",
+     "en": "to spoil sth. by overdoing it (lit. add feet to a drawn snake)",
+     "de": "etwas durch Übertreibung verderben (wörtl. der Schlange Füße malen)"
+    },
+    {
+     "w": "得意",
+     "p": "dé yì",
+     "en": "pleased with oneself, smug",
+     "de": "selbstzufrieden, stolz"
+    },
+    {
+     "w": "恰到好处",
+     "p": "qià dào hǎo chù",
+     "en": "just right",
+     "de": "genau richtig, im rechten Maß"
+    },
+    {
+     "w": "多此一举",
+     "p": "duō cǐ yì jǔ",
+     "en": "an unnecessary extra step",
+     "de": "überflüssig, ein unnötiger Schritt"
+    },
+    {
+     "w": "急于求成",
+     "p": "jí yú qiú chéng",
+     "en": "impatient for quick success",
+     "de": "übereilt Erfolg wollen"
+    },
+    {
+     "w": "日积月累",
+     "p": "rì jī yuè lěi",
+     "en": "little by little over time",
+     "de": "nach und nach, mit der Zeit"
+    }
+   ],
+   "grammar": "直到……才…… means 'not until … did …': 直到老师讲了它背后的故事，我才恍然大悟。 'Only when the teacher told the story did I understand.' 才 stresses that the result came late, after the condition in the 直到 clause.",
+   "grammar_de": "直到……才…… bedeutet „erst als … , (da) …“: 直到老师讲了它背后的故事，我才恍然大悟。 „Erst als die Lehrerin die Geschichte erzählte, verstand ich es.“ 才 betont, dass das Ergebnis spät kam, erst nach der Bedingung im 直到-Satz.",
+   "questions": [
+    "“守株待兔”的故事里，农夫为什么天天守在树桩旁边？",
+    "比赛画蛇的时候，最先画好的人为什么没有喝到酒？",
+    "作者用什么方法学成语？"
+   ],
+   "sources": []
+  }
+ ]
+}

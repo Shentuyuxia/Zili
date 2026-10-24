@@ -1,6 +1,46 @@
 {
- "updated": "2026-10-23T03:47:00Z",
+ "updated": "2026-10-24T03:47:17Z",
  "days": [
+  {
+   "date": "2026-10-24",
+   "items": [
+    {
+     "i": 0,
+     "lang": "zh",
+     "title": "去朋友家",
+     "kind": "dialogue",
+     "level": "HSK1"
+    },
+    {
+     "i": 1,
+     "lang": "zh",
+     "title": "爷爷的重阳节",
+     "kind": "feature",
+     "level": "HSK2"
+    },
+    {
+     "i": 2,
+     "lang": "zh",
+     "title": "送礼物的小规矩",
+     "kind": "feature",
+     "level": "HSK3"
+    },
+    {
+     "i": 3,
+     "lang": "zh",
+     "title": "谁来买单？",
+     "kind": "feature",
+     "level": "HSK4"
+    },
+    {
+     "i": 4,
+     "lang": "zh",
+     "title": "四个字里的故事",
+     "kind": "feature",
+     "level": "HSK5"
+    }
+   ]
+  },
   {
    "date": "2026-10-23",
    "items": [
