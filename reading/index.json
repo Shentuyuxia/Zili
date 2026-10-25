@@ -1,6 +1,46 @@
 {
- "updated": "2026-10-24T03:47:17Z",
+ "updated": "2026-10-25T04:46:48Z",
  "days": [
+  {
+   "date": "2026-10-25",
+   "items": [
+    {
+     "i": 0,
+     "lang": "zh",
+     "title": "今天多睡一个小时",
+     "kind": "dialogue",
+     "level": "HSK1"
+    },
+    {
+     "i": 1,
+     "lang": "zh",
+     "title": "公园里的栗子",
+     "kind": "feature",
+     "level": "HSK2"
+    },
+    {
+     "i": 2,
+     "lang": "zh",
+     "title": "阳台上的小菜园",
+     "kind": "feature",
+     "level": "HSK3"
+    },
+    {
+     "i": 3,
+     "lang": "zh",
+     "title": "断舍离，你试过吗？",
+     "kind": "feature",
+     "level": "HSK4"
+    },
+    {
+     "i": 4,
+     "lang": "zh",
+     "title": "一叶知秋",
+     "kind": "feature",
+     "level": "HSK5"
+    }
+   ]
+  },
   {
    "date": "2026-10-24",
    "items": [

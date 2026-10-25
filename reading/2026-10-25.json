@@ -1,0 +1,530 @@
+{
+ "date": "2026-10-25",
+ "createdBy": "claude",
+ "items": [
+  {
+   "lang": "zh",
+   "level": "HSK1",
+   "kind": "dialogue",
+   "section": "自然与生活",
+   "title": "今天多睡一个小时",
+   "title_en": "An extra hour of sleep today",
+   "title_de": "Heute eine Stunde länger schlafen",
+   "paragraphs": [
+    "安娜：李文，早上好！现在几点？",
+    "李文：早上好！我的手表是九点。",
+    "安娜：不对，现在是八点。",
+    "李文：八点？为什么？",
+    "安娜：今天是十月二十五号。在德国，今天早上三点的时候，时间变成了两点。",
+    "李文：啊！那我今天多睡了一个小时！",
+    "安娜：对！你的手表也要改一下。",
+    "李文：好。今天天气很好，我们中午去公园吧！",
+    "安娜：好啊！以后天黑得很早，中午出去走走很好。"
+   ],
+   "paragraphs_en": [
+    "Anna: Good morning, Li Wen! What time is it now?",
+    "Li Wen: Good morning! My watch says nine o'clock.",
+    "Anna: No, it's eight o'clock now.",
+    "Li Wen: Eight? Why?",
+    "Anna: Today is the twenty-fifth of October. In Germany, at three o'clock this morning the time turned into two o'clock.",
+    "Li Wen: Oh! So I slept an hour longer today!",
+    "Anna: Right! You need to change your watch too.",
+    "Li Wen: OK. The weather is nice today, let's go to the park at noon!",
+    "Anna: Sure! From now on it gets dark very early, so going out for a walk at noon is nice."
+   ],
+   "paragraphs_de": [
+    "Anna: Guten Morgen, Li Wen! Wie spät ist es jetzt?",
+    "Li Wen: Guten Morgen! Meine Uhr zeigt neun Uhr.",
+    "Anna: Nein, es ist jetzt acht Uhr.",
+    "Li Wen: Acht? Warum?",
+    "Anna: Heute ist der 25. Oktober. In Deutschland ist heute früh um drei Uhr die Zeit auf zwei Uhr zurückgegangen.",
+    "Li Wen: Ach! Dann habe ich heute eine Stunde länger geschlafen!",
+    "Anna: Genau! Du musst deine Uhr auch umstellen.",
+    "Li Wen: Gut. Heute ist schönes Wetter, lass uns mittags in den Park gehen!",
+    "Anna: Gern! Ab jetzt wird es sehr früh dunkel, da ist ein Spaziergang am Mittag schön."
+   ],
+   "glossary": [
+    {
+     "w": "手表",
+     "p": "shǒu biǎo",
+     "en": "wristwatch",
+     "de": "die Armbanduhr"
+    },
+    {
+     "w": "不对",
+     "p": "bú duì",
+     "en": "not right; no",
+     "de": "nicht richtig; nein"
+    },
+    {
+     "w": "时间",
+     "p": "shí jiān",
+     "en": "time",
+     "de": "die Zeit"
+    },
+    {
+     "w": "变成",
+     "p": "biàn chéng",
+     "en": "to turn into; to become",
+     "de": "werden zu; sich verwandeln in"
+    },
+    {
+     "w": "多睡",
+     "p": "duō shuì",
+     "en": "to sleep longer",
+     "de": "länger schlafen"
+    },
+    {
+     "w": "改",
+     "p": "gǎi",
+     "en": "to change; to correct",
+     "de": "ändern; umstellen"
+    },
+    {
+     "w": "中午",
+     "p": "zhōng wǔ",
+     "en": "noon; midday",
+     "de": "der Mittag"
+    },
+    {
+     "w": "天黑",
+     "p": "tiān hēi",
+     "en": "to get dark",
+     "de": "dunkel werden"
+    }
+   ],
+   "grammar": "多 + verb + amount means 'to do something that much more than usual': 多睡了一个小时 'slept one hour more'. 多 comes before the verb, the amount comes after it.",
+   "grammar_de": "多 + Verb + Menge bedeutet „etwas um so viel mehr als sonst tun“: 多睡了一个小时 „eine Stunde länger geschlafen“. 多 steht vor dem Verb, die Menge danach.",
+   "questions": [
+    "李文的手表是几点？现在几点？",
+    "今天早上三点的时候，时间变成了几点？",
+    "他们中午想去哪儿？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "feature",
+   "section": "自然与生活",
+   "title": "公园里的栗子",
+   "title_en": "Chestnuts in the park",
+   "title_de": "Kastanien im Park",
+   "paragraphs": [
+    "十月，德国的公园里有很多栗子。地上有红红黄黄的叶子，还有一个一个小小的、亮亮的栗子。孩子们很喜欢在树下捡栗子。",
+    "但是，公园里的这种栗子不能吃。德国的孩子常常用它们做小动物和小人，放在桌子上，非常可爱。",
+    "在中国，秋天也有栗子，可是这种栗子能吃。北方的街上常常有人卖糖炒栗子，又甜又香。因为天气冷了，所以很多人下班的时候买一小袋，一边走一边吃。",
+    "我的中国朋友第一次在德国看到这么多栗子，非常高兴，还想拿回家做饭。我马上告诉他：“这个不能吃！”我们两个人都笑了。"
+   ],
+   "paragraphs_en": [
+    "In October, there are lots of chestnuts in German parks. On the ground there are red and yellow leaves, and little shiny chestnuts, one after another. Children love picking up chestnuts under the trees.",
+    "But this kind of chestnut in the park can't be eaten. German children often use them to make little animals and figures and put them on the table. They are very cute.",
+    "In China there are chestnuts in autumn too, but this kind can be eaten. In the north, people often sell sugar-roasted chestnuts on the street; they are sweet and fragrant. Because the weather has turned cold, many people buy a small bag on their way home from work and eat them as they walk.",
+    "The first time my Chinese friend saw so many chestnuts in Germany, he was very happy and even wanted to take them home to cook. I told him right away: “You can't eat these!” We both laughed."
+   ],
+   "paragraphs_de": [
+    "Im Oktober liegen in den deutschen Parks viele Kastanien. Auf dem Boden gibt es rote und gelbe Blätter und eine kleine, glänzende Kastanie neben der anderen. Kinder sammeln sehr gern Kastanien unter den Bäumen.",
+    "Aber diese Kastanien aus dem Park kann man nicht essen. Deutsche Kinder basteln oft kleine Tiere und Männchen daraus und stellen sie auf den Tisch. Das ist sehr niedlich.",
+    "In China gibt es im Herbst auch Kastanien, aber diese kann man essen. Im Norden verkaufen oft Leute auf der Straße in Zucker geröstete Maronen, süß und duftend. Weil es kalt geworden ist, kaufen viele nach der Arbeit eine kleine Tüte und essen sie im Gehen.",
+    "Als mein chinesischer Freund zum ersten Mal so viele Kastanien in Deutschland sah, freute er sich sehr und wollte sie sogar zum Kochen mit nach Hause nehmen. Ich sagte ihm sofort: „Die kann man nicht essen!“ Wir haben beide gelacht."
+   ],
+   "glossary": [
+    {
+     "w": "栗子",
+     "p": "lì zi",
+     "en": "chestnut",
+     "de": "die Kastanie; die Marone"
+    },
+    {
+     "w": "叶子",
+     "p": "yè zi",
+     "en": "leaf",
+     "de": "das Blatt"
+    },
+    {
+     "w": "亮",
+     "p": "liàng",
+     "en": "shiny; bright",
+     "de": "glänzend; hell"
+    },
+    {
+     "w": "捡",
+     "p": "jiǎn",
+     "en": "to pick up (from the ground)",
+     "de": "aufheben; sammeln"
+    },
+    {
+     "w": "可爱",
+     "p": "kě ài",
+     "en": "cute; lovely",
+     "de": "niedlich; süß"
+    },
+    {
+     "w": "糖炒栗子",
+     "p": "táng chǎo lì zi",
+     "en": "sugar-roasted chestnuts",
+     "de": "in Zucker geröstete Maronen"
+    },
+    {
+     "w": "香",
+     "p": "xiāng",
+     "en": "fragrant; smells good",
+     "de": "duftend; lecker riechend"
+    },
+    {
+     "w": "袋",
+     "p": "dài",
+     "en": "bag (measure word)",
+     "de": "Tüte, Beutel (Zählwort)"
+    }
+   ],
+   "grammar": "一边……一边…… means doing two things at the same time: 一边走一边吃 'eat while walking'. Put 一边 before each verb.",
+   "grammar_de": "一边……一边…… bedeutet, zwei Dinge gleichzeitig zu tun: 一边走一边吃 „beim Gehen essen“. 一边 steht vor jedem Verb.",
+   "questions": [
+    "德国公园里的栗子能吃吗？",
+    "德国的孩子用栗子做什么？",
+    "在中国北方，人们秋天在街上买什么？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK3",
+   "kind": "feature",
+   "section": "自然与生活",
+   "title": "阳台上的小菜园",
+   "title_en": "The little garden on my balcony",
+   "title_de": "Der kleine Garten auf meinem Balkon",
+   "dek": "天冷了，阳台上的植物也要准备“过冬”。",
+   "paragraphs": [
+    "我住在汉堡一个不大的公寓里，家里没有花园，只有一个小阳台。今年春天，我在阳台上种了几盆植物：薄荷、罗勒，还有两棵小番茄。",
+    "夏天的时候，阳台成了我最喜欢的地方。早上我坐在那儿喝咖啡，看着番茄一天比一天红。做饭的时候，我随手摘几片罗勒放在意大利面上，比超市买的香多了。",
+    "可是到了十月，天气越来越冷，晚上有时候只有三四度。番茄早就吃完了，罗勒的叶子也开始变黑。邻居告诉我，罗勒很怕冷，最好把它搬进屋里。",
+    "于是，我把罗勒放在了厨房的窗台上，那儿有阳光，也比外面暖和。薄荷不太怕冷，我就让它留在阳台上。邻居说，冬天它的叶子会掉，但是明年春天又会长出来。",
+    "现在每次做饭，我都会看一看窗台上的那盆绿色。冬天虽然很长，但是厨房里还留着一点儿夏天的味道。"
+   ],
+   "paragraphs_en": [
+    "I live in a small flat in Hamburg. I don't have a garden, just a little balcony. This spring I planted a few pots on it: mint, basil and two small tomato plants.",
+    "In summer the balcony became my favourite place. In the mornings I sat there drinking coffee and watched the tomatoes get redder day by day. When I cooked, I simply picked a few basil leaves and put them on my pasta – they smelled much better than the ones from the supermarket.",
+    "But by October it was getting colder and colder; some nights it was only three or four degrees. The tomatoes had long been eaten, and the basil leaves were starting to turn black. My neighbour told me that basil really doesn't like the cold and that I'd better move it inside.",
+    "So I put the basil on the kitchen windowsill, where there is sunlight and it is warmer than outside. Mint doesn't mind the cold so much, so I let it stay on the balcony. My neighbour says its leaves will drop in winter, but it will grow back next spring.",
+    "Now every time I cook, I take a look at the pot of green on the windowsill. Winter may be long, but there is still a little taste of summer in my kitchen."
+   ],
+   "paragraphs_de": [
+    "Ich wohne in einer kleinen Wohnung in Hamburg. Ich habe keinen Garten, nur einen kleinen Balkon. In diesem Frühling habe ich dort ein paar Töpfe bepflanzt: Minze, Basilikum und zwei kleine Tomatenpflanzen.",
+    "Im Sommer wurde der Balkon mein Lieblingsplatz. Morgens saß ich dort, trank Kaffee und sah zu, wie die Tomaten von Tag zu Tag röter wurden. Beim Kochen zupfte ich einfach ein paar Basilikumblätter ab und legte sie auf meine Nudeln – die dufteten viel besser als die aus dem Supermarkt.",
+    "Aber im Oktober wurde es immer kälter, nachts waren es manchmal nur drei oder vier Grad. Die Tomaten waren längst aufgegessen, und die Blätter des Basilikums wurden langsam schwarz. Mein Nachbar sagte mir, Basilikum verträgt Kälte sehr schlecht, ich solle es besser ins Haus holen.",
+    "Also stellte ich das Basilikum auf die Fensterbank in der Küche. Dort gibt es Sonne, und es ist wärmer als draußen. Minze ist nicht so kälteempfindlich, deshalb ließ ich sie auf dem Balkon. Mein Nachbar sagt, im Winter fallen ihre Blätter ab, aber im nächsten Frühling wächst sie wieder nach.",
+    "Jetzt schaue ich jedes Mal beim Kochen auf den grünen Topf auf der Fensterbank. Der Winter ist zwar lang, aber in meiner Küche bleibt noch ein bisschen Sommergeschmack."
+   ],
+   "glossary": [
+    {
+     "w": "阳台",
+     "p": "yáng tái",
+     "en": "balcony",
+     "de": "der Balkon"
+    },
+    {
+     "w": "公寓",
+     "p": "gōng yù",
+     "en": "flat; apartment",
+     "de": "die Wohnung"
+    },
+    {
+     "w": "种",
+     "p": "zhòng",
+     "en": "to plant; to grow",
+     "de": "pflanzen; anbauen"
+    },
+    {
+     "w": "盆",
+     "p": "pén",
+     "en": "pot (measure word for potted plants)",
+     "de": "Topf (Zählwort für Topfpflanzen)"
+    },
+    {
+     "w": "薄荷",
+     "p": "bò he",
+     "en": "mint",
+     "de": "die Minze"
+    },
+    {
+     "w": "罗勒",
+     "p": "luó lè",
+     "en": "basil",
+     "de": "das Basilikum"
+    },
+    {
+     "w": "番茄",
+     "p": "fān qié",
+     "en": "tomato",
+     "de": "die Tomate"
+    },
+    {
+     "w": "随手",
+     "p": "suí shǒu",
+     "en": "conveniently; without extra effort",
+     "de": "nebenbei; einfach so"
+    },
+    {
+     "w": "摘",
+     "p": "zhāi",
+     "en": "to pick (leaves, fruit)",
+     "de": "pflücken; abzupfen"
+    },
+    {
+     "w": "邻居",
+     "p": "lín jū",
+     "en": "neighbour",
+     "de": "der Nachbar; die Nachbarin"
+    },
+    {
+     "w": "窗台",
+     "p": "chuāng tái",
+     "en": "windowsill",
+     "de": "die Fensterbank"
+    },
+    {
+     "w": "暖和",
+     "p": "nuǎn huo",
+     "en": "warm (pleasantly)",
+     "de": "warm; angenehm warm"
+    }
+   ],
+   "grammar": "一天比一天 + adjective describes a steady change, 'more and more … every day': 番茄一天比一天红 'the tomatoes got redder day by day'. Compare 越来越冷 'colder and colder', which is used for the same idea without counting days.",
+   "grammar_de": "一天比一天 + Adjektiv beschreibt eine stetige Veränderung, „von Tag zu Tag …er“: 番茄一天比一天红 „die Tomaten wurden von Tag zu Tag röter“. Vergleiche 越来越冷 „immer kälter“, das dieselbe Idee ohne Bezug auf Tage ausdrückt.",
+   "questions": [
+    "作者在阳台上种了什么？",
+    "为什么作者把罗勒搬进了屋里？",
+    "薄荷冬天会怎么样？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK4",
+   "kind": "feature",
+   "section": "自然与生活",
+   "title": "断舍离，你试过吗？",
+   "title_en": "Have you tried “danshari”?",
+   "title_de": "Schon mal „Danshari“ ausprobiert?",
+   "dek": "东西少一点，生活会不会更轻松？",
+   "paragraphs": [
+    "最近，“断舍离”这个词在中文网络上很常见。它来自日语，意思是：不买不需要的东西，处理掉用不上的东西，不再被物品“绑住”。很多年轻人在社交媒体上分享自己整理房间前后的对比照片，看起来非常舒服。",
+    "我也决定试一试。上周末，我把衣柜里的衣服全部拿了出来，结果吓了一跳：有好几件衣服买回来以后，我一次都没穿过。于是我给自己定了一个简单的规则：如果一件东西一年都没用过，就考虑让它“离开”。",
+    "不过，“离开”不一定是扔掉。在德国，处理旧东西的办法其实很多：旧衣服可以放进街边的旧衣回收箱；很多城市有公共书柜，旧书放进去，别人就可以免费拿走；家具和小电器还可以在网上卖掉，或者送给邻居。这样做，既清理了房间，又不会浪费。",
+    "整理完以后，我的房间空了不少，找东西也快多了。但是我觉得，断舍离最大的变化不在房间里，而在购物的时候。现在买东西以前，我会先问自己：我真的需要它吗？家里是不是已经有一个差不多的？",
+    "当然，我并不认为每个人都要过“极简”的生活。有的人喜欢收藏，满满的书架让他们觉得幸福，这也没什么不好。在我看来，断舍离的重点不是东西越少越好，而是留下来的东西，都是自己真正喜欢、真正会用的。"
+   ],
+   "paragraphs_en": [
+    "Lately the word “danshari” (断舍离) has become very common on the Chinese internet. It comes from Japanese and means: don't buy things you don't need, get rid of things you no longer use, and stop being “tied down” by possessions. Many young people share before-and-after photos of their tidied rooms on social media, and they look very pleasant.",
+    "I decided to give it a try too. Last weekend I took all the clothes out of my wardrobe and got quite a shock: there were several items I had never worn even once since buying them. So I set myself a simple rule: if I haven't used something for a whole year, I'll consider letting it “leave”.",
+    "But “leaving” doesn't have to mean throwing away. In Germany there are actually many ways to deal with old things: old clothes can go into the clothes collection bins on the street; many cities have public bookcases where you put old books and others can take them for free; furniture and small appliances can be sold online or given to the neighbours. That way you clear your room without wasting anything.",
+    "After tidying up, my room was a lot emptier and I could find things much faster. But I think the biggest change from danshari isn't in the room – it's when I go shopping. Now, before I buy something, I first ask myself: do I really need it? Don't I already have something similar at home?",
+    "Of course, I don't think everyone has to live a “minimalist” life. Some people love collecting, and a full bookshelf makes them happy – there's nothing wrong with that. In my view, the point of danshari isn't that fewer things are always better, but that the things you keep are ones you truly like and will truly use."
+   ],
+   "paragraphs_de": [
+    "In letzter Zeit sieht man das Wort „Danshari“ (断舍离) sehr oft im chinesischen Internet. Es kommt aus dem Japanischen und bedeutet: nichts Unnötiges kaufen, Dinge loswerden, die man nicht mehr braucht, und sich nicht mehr von Besitz „fesseln“ lassen. Viele junge Leute teilen in den sozialen Medien Vorher-nachher-Fotos ihrer aufgeräumten Zimmer, die sehr angenehm aussehen.",
+    "Ich wollte es auch einmal ausprobieren. Letztes Wochenende habe ich alle Kleider aus meinem Schrank geholt und bin ziemlich erschrocken: Einige Stücke hatte ich seit dem Kauf kein einziges Mal getragen. Also habe ich mir eine einfache Regel gesetzt: Wenn ich etwas ein ganzes Jahr nicht benutzt habe, überlege ich, es „gehen“ zu lassen.",
+    "Aber „gehen lassen“ heißt nicht unbedingt wegwerfen. In Deutschland gibt es eigentlich viele Möglichkeiten für alte Sachen: Alte Kleidung kommt in die Altkleidercontainer an der Straße; viele Städte haben öffentliche Bücherschränke, in die man alte Bücher stellt und aus denen andere sie kostenlos mitnehmen können; Möbel und kleine Elektrogeräte kann man online verkaufen oder den Nachbarn schenken. So räumt man das Zimmer auf, ohne etwas zu verschwenden.",
+    "Nach dem Aufräumen war mein Zimmer deutlich leerer, und ich fand Dinge viel schneller. Aber ich finde, die größte Veränderung durch Danshari ist nicht im Zimmer, sondern beim Einkaufen. Bevor ich jetzt etwas kaufe, frage ich mich zuerst: Brauche ich das wirklich? Habe ich nicht schon etwas Ähnliches zu Hause?",
+    "Natürlich meine ich nicht, dass jeder „minimalistisch“ leben muss. Manche sammeln gern, und ein volles Bücherregal macht sie glücklich – daran ist nichts Schlechtes. Für mich ist der Kern von Danshari nicht, dass weniger immer besser ist, sondern dass die Dinge, die man behält, solche sind, die man wirklich mag und wirklich benutzt."
+   ],
+   "glossary": [
+    {
+     "w": "断舍离",
+     "p": "duàn shě lí",
+     "en": "decluttering (from Japanese “danshari”)",
+     "de": "Ausmisten, Entrümpeln (aus dem Japanischen „Danshari“)"
+    },
+    {
+     "w": "物品",
+     "p": "wù pǐn",
+     "en": "things; belongings",
+     "de": "die Gegenstände; der Besitz"
+    },
+    {
+     "w": "绑",
+     "p": "bǎng",
+     "en": "to tie; to bind",
+     "de": "fesseln; festbinden"
+    },
+    {
+     "w": "整理",
+     "p": "zhěng lǐ",
+     "en": "to tidy up; to sort out",
+     "de": "aufräumen; ordnen"
+    },
+    {
+     "w": "对比",
+     "p": "duì bǐ",
+     "en": "comparison; contrast",
+     "de": "der Vergleich"
+    },
+    {
+     "w": "衣柜",
+     "p": "yī guì",
+     "en": "wardrobe",
+     "de": "der Kleiderschrank"
+    },
+    {
+     "w": "吓了一跳",
+     "p": "xià le yí tiào",
+     "en": "to get a fright; to be startled",
+     "de": "erschrecken; einen Schreck bekommen"
+    },
+    {
+     "w": "规则",
+     "p": "guī zé",
+     "en": "rule",
+     "de": "die Regel"
+    },
+    {
+     "w": "回收箱",
+     "p": "huí shōu xiāng",
+     "en": "recycling / collection bin",
+     "de": "der Sammelcontainer"
+    },
+    {
+     "w": "浪费",
+     "p": "làng fèi",
+     "en": "to waste",
+     "de": "verschwenden"
+    },
+    {
+     "w": "极简",
+     "p": "jí jiǎn",
+     "en": "minimalist",
+     "de": "minimalistisch"
+    },
+    {
+     "w": "收藏",
+     "p": "shōu cáng",
+     "en": "to collect (as a hobby)",
+     "de": "sammeln (als Hobby)"
+    }
+   ],
+   "grammar": "不是……而是…… 'not … but rather …' corrects an idea and gives the right one: 重点不是东西越少越好，而是…… 'the point isn't that fewer is better, but …'. The similar 不在……而在…… is used for where something lies: 变化不在房间里，而在购物的时候.",
+   "grammar_de": "不是……而是…… „nicht …, sondern …“ korrigiert eine Vorstellung und nennt die richtige: 重点不是东西越少越好，而是…… „es geht nicht darum, dass weniger besser ist, sondern …“. Das ähnliche 不在……而在…… sagt, wo etwas liegt: 变化不在房间里，而在购物的时候.",
+   "questions": [
+    "“断舍离”是什么意思？",
+    "在德国，旧书可以怎么处理？",
+    "作者觉得断舍离最大的变化是什么？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK5",
+   "kind": "feature",
+   "section": "自然与生活",
+   "title": "一叶知秋",
+   "title_en": "One leaf tells of autumn",
+   "title_de": "Ein Blatt kündet vom Herbst",
+   "dek": "秋天的颜色，像是树木写给我们的一封信。",
+   "paragraphs": [
+    "中国有一个成语叫“一叶知秋”，意思是看到一片叶子落下来，就知道秋天到了。这个说法可以追溯到两千多年前的古书《淮南子》，后来人们也用它比喻从一个小小的变化，看出事情发展的方向。每年十月，走在德国的街道上，我常常会想起这四个字：一阵风吹过，黄色的椴树叶在空中转几个圈，轻轻落进自行车的车筐里，秋天就这样不知不觉地来了。",
+    "小时候，我以为树叶是到了秋天才“变成”黄色的。后来才知道，事实恰恰相反。叶子里一直都有黄色和橙色的色素，只是在春天和夏天，大量绿色的叶绿素把它们遮住了。天气变冷、白天变短以后，树木慢慢停止制造叶绿素，绿色渐渐退去，原来藏在里面的黄色才露了出来。",
+    "红色却是另一回事。像枫树这样的树，在秋天会新产生一种红色的色素。所以同样是秋天，银杏一片金黄，枫叶却红得像火，整片树林五彩缤纷。古人虽然不懂这些科学知识，却早就写下了“霜叶红于二月花”这样的诗句，把这种美看得清清楚楚。",
+    "中国和欧洲的秋天各有各的味道。北京人喜欢在这个季节去香山看红叶，德国人则喜欢在周末去森林里散步，脚下踩着厚厚的落叶，回家以后再煮一壶热茶。方式不同，心情却很相似：趁着冬天还没来，多看几眼这一年最后的热闹。",
+    "有人说秋天让人多愁善感，因为它意味着一年快要结束了。中国古代诗人写秋天，也常常写离别和思念。但我觉得，秋天更像一个温柔的提醒：树木在冬天到来之前，放下多余的叶子，安安静静地休息，等待来年春天重新出发。人又何尝不是如此？忙碌了一整年，不妨也给自己留一点空白，慢下来，看看窗外的颜色。"
+   ],
+   "paragraphs_en": [
+    "There is a Chinese idiom, “one leaf tells of autumn” (一叶知秋): when you see a single leaf fall, you know autumn has arrived. The saying can be traced back more than two thousand years to the ancient book Huainanzi, and later people also used it to mean seeing, from one small change, which way things are heading. Every October, walking through German streets, I often think of these four characters: a gust of wind blows, a yellow linden leaf spins a few times in the air and lands softly in a bicycle basket – and autumn has arrived without anyone noticing.",
+    "As a child, I thought leaves only “turned” yellow once autumn came. Later I learned that the truth is exactly the opposite. Leaves contain yellow and orange pigments all along; it's just that in spring and summer, large amounts of green chlorophyll cover them up. When the weather gets colder and the days shorter, trees gradually stop producing chlorophyll, the green slowly fades, and only then does the yellow that was hidden inside show through.",
+    "Red, though, is another story. Trees such as maples produce a new red pigment in autumn. That's why, in the same season, ginkgo trees turn all golden while maple leaves become as red as fire, and whole woods are a riot of colour. Although people in ancient times knew nothing of this science, they long ago wrote lines like “frosted leaves are redder than the flowers of the second month”, seeing this beauty with perfect clarity.",
+    "Autumn in China and in Europe each has its own flavour. People in Beijing like to go to the Fragrant Hills in this season to see the red leaves, while Germans like to walk in the forest at weekends, treading on thick layers of fallen leaves, and brew a pot of hot tea when they get home. The ways differ, but the feeling is much the same: while winter hasn't come yet, take a few more looks at the year's last splash of colour.",
+    "Some say autumn makes people melancholy, because it means the year is almost over. Classical Chinese poets, too, often wrote about parting and longing when they wrote about autumn. But to me, autumn is more like a gentle reminder: before winter arrives, trees let go of the leaves they no longer need, rest quietly, and wait to start again next spring. Isn't the same true of people? After a whole busy year, why not leave a little blank space for yourself, too – slow down and look at the colours outside the window."
+   ],
+   "paragraphs_de": [
+    "Im Chinesischen gibt es die Redewendung „ein Blatt kündet vom Herbst“ (一叶知秋): Sieht man ein einziges Blatt fallen, weiß man, dass der Herbst gekommen ist. Der Ausdruck lässt sich über zweitausend Jahre bis zum alten Buch Huainanzi zurückverfolgen; später benutzte man ihn auch dafür, an einer kleinen Veränderung zu erkennen, in welche Richtung sich etwas entwickelt. Jedes Jahr im Oktober, wenn ich durch deutsche Straßen gehe, denke ich oft an diese vier Zeichen: Ein Windstoß, ein gelbes Lindenblatt dreht ein paar Kreise in der Luft und landet sanft im Fahrradkorb – und so ist der Herbst ganz unbemerkt da.",
+    "Als Kind dachte ich, die Blätter würden erst im Herbst gelb „werden“. Später erfuhr ich, dass es genau umgekehrt ist. In den Blättern sind die ganze Zeit gelbe und orange Farbstoffe, nur werden sie im Frühling und Sommer von großen Mengen grünem Chlorophyll verdeckt. Wenn es kälter wird und die Tage kürzer werden, hören die Bäume allmählich auf, Chlorophyll zu bilden, das Grün verblasst langsam, und erst dann kommt das Gelb zum Vorschein, das darin verborgen war.",
+    "Mit dem Rot ist es dagegen etwas anderes. Bäume wie der Ahorn bilden im Herbst einen neuen roten Farbstoff. Deshalb wird im selben Herbst der Ginkgo ganz goldgelb, während die Ahornblätter rot wie Feuer leuchten und der ganze Wald in allen Farben strahlt. Obwohl die Menschen früher dieses Wissen nicht hatten, schrieben sie schon vor langer Zeit Verse wie „die bereiften Blätter sind röter als die Blüten des zweiten Monats“ und sahen diese Schönheit ganz genau.",
+    "Der Herbst in China und in Europa hat jeweils seinen eigenen Reiz. In Peking fährt man in dieser Jahreszeit gern zu den Duftenden Bergen (Xiangshan), um das rote Laub zu sehen; in Deutschland geht man am Wochenende gern im Wald spazieren, läuft über dicke Schichten Laub und kocht sich zu Hause eine Kanne heißen Tee. Die Arten sind verschieden, das Gefühl aber ähnlich: Solange der Winter noch nicht da ist, schaut man sich die letzte Farbenpracht des Jahres noch ein paar Mal an.",
+    "Manche sagen, der Herbst mache wehmütig, weil er bedeutet, dass das Jahr bald zu Ende geht. Auch die klassischen chinesischen Dichter schrieben im Herbst oft über Abschied und Sehnsucht. Mir aber scheint der Herbst eher eine sanfte Erinnerung zu sein: Bevor der Winter kommt, lassen die Bäume die überflüssigen Blätter los, ruhen still und warten darauf, im nächsten Frühling neu zu beginnen. Ist es bei uns Menschen nicht genauso? Nach einem ganzen arbeitsreichen Jahr kann man sich ruhig auch ein wenig freien Raum gönnen – langsamer werden und die Farben vor dem Fenster anschauen."
+   ],
+   "glossary": [
+    {
+     "w": "一叶知秋",
+     "p": "yí yè zhī qiū",
+     "en": "(idiom) one falling leaf tells that autumn has come; to see the big picture from a small sign",
+     "de": "(Chengyu) ein fallendes Blatt zeigt den Herbst an; aus einem kleinen Zeichen das Ganze erkennen"
+    },
+    {
+     "w": "追溯",
+     "p": "zhuī sù",
+     "en": "to trace back (to)",
+     "de": "zurückverfolgen (bis)"
+    },
+    {
+     "w": "比喻",
+     "p": "bǐ yù",
+     "en": "to use as a metaphor; metaphor",
+     "de": "bildlich ausdrücken; die Metapher"
+    },
+    {
+     "w": "椴树",
+     "p": "duàn shù",
+     "en": "linden tree",
+     "de": "die Linde"
+    },
+    {
+     "w": "不知不觉",
+     "p": "bù zhī bù jué",
+     "en": "(idiom) unnoticed; without realising it",
+     "de": "(Chengyu) unbemerkt; ohne es zu merken"
+    },
+    {
+     "w": "恰恰相反",
+     "p": "qià qià xiāng fǎn",
+     "en": "exactly the opposite",
+     "de": "genau umgekehrt"
+    },
+    {
+     "w": "色素",
+     "p": "sè sù",
+     "en": "pigment",
+     "de": "der Farbstoff; das Pigment"
+    },
+    {
+     "w": "叶绿素",
+     "p": "yè lǜ sù",
+     "en": "chlorophyll",
+     "de": "das Chlorophyll; das Blattgrün"
+    },
+    {
+     "w": "遮住",
+     "p": "zhē zhù",
+     "en": "to cover; to hide from view",
+     "de": "verdecken"
+    },
+    {
+     "w": "五彩缤纷",
+     "p": "wǔ cǎi bīn fēn",
+     "en": "(idiom) a riot of colour; colourful",
+     "de": "(Chengyu) farbenprächtig; bunt"
+    },
+    {
+     "w": "多愁善感",
+     "p": "duō chóu shàn gǎn",
+     "en": "(idiom) melancholy; easily moved to sadness",
+     "de": "(Chengyu) wehmütig; sentimental"
+    },
+    {
+     "w": "何尝",
+     "p": "hé cháng",
+     "en": "(rhetorical) how could it not …; isn't it also …",
+     "de": "(rhetorisch) etwa nicht …; ist es nicht auch …"
+    }
+   ],
+   "grammar": "……才…… after a time or condition stresses that something happens only then, later than expected: 绿色渐渐退去，原来藏在里面的黄色才露了出来 'only when the green fades does the hidden yellow show'. The rhetorical 何尝不是如此 'how is it not so?' means 'it is just the same'.",
+   "grammar_de": "……才…… nach einer Zeit- oder Bedingungsangabe betont, dass etwas erst dann geschieht, später als erwartet: 绿色渐渐退去，原来藏在里面的黄色才露了出来 „erst wenn das Grün verblasst, kommt das verborgene Gelb zum Vorschein“. Das rhetorische 何尝不是如此 „wie sollte es nicht so sein?“ bedeutet „es ist genauso“.",
+   "questions": [
+    "“一叶知秋”是什么意思？",
+    "为什么秋天的树叶会变黄？",
+    "作者觉得秋天给人什么样的提醒？"
+   ],
+   "sources": []
+  }
+ ]
+}
