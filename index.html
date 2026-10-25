@@ -2871,8 +2871,8 @@ function mgWeek(){
   const w=MG.week, box=$("#mg-week");
   if(!w||!w.weekOf||Date.now()-new Date(w.weekOf+"T00:00:00").getTime()>8*864e5){ box.hidden=true; return; }
   box.hidden=false;
-  box.innerHTML=`<h3 style="margin:0 0 8px">每周回顾 <span class="small muted">${esc(w.weekOf.slice(5))} 起</span></h3>${w.summary_en||w.summary_zh?`<p data-noi18n>${esc(w.summary_en||w.summary_zh)}</p>`:""}${(w.quiz||[]).map((q,qi)=>{ const pk=MG.wpick[qi], done=pk!=null;
-    return `<div class="mg-wq" data-noi18n><div class="p" lang="${esc(q.lang)}"><span class="chip">${esc(String(q.lang||"").toUpperCase())}</span> ${esc(q.prompt)}</div><div class="o">${(q.options||[]).map((o,oi)=>`<button data-wq="${qi}" data-wo="${oi}" class="${done?(oi===q.answer?"ok":oi===pk?"bad":""):""}" ${done?"disabled":""}>${esc(o)}</button>`).join("")}</div>${done&&(q.explain_en||q.explain)?`<div class="x">${esc(q.explain_en||q.explain)}</div>`:""}</div>`; }).join("")}`;
+  box.innerHTML=`<h3 style="margin:0 0 8px">每周回顾 <span class="small muted">${esc(w.weekOf.slice(5))} 起</span></h3>${w.summary_en||w.summary_de||w.summary_zh?`<p data-noi18n>${esc((UIL==="de"&&w.summary_de)||w.summary_en||w.summary_zh||w.summary_de)}</p>`:""}${(w.quiz||[]).map((q,qi)=>{ const pk=MG.wpick[qi], done=pk!=null;
+    return `<div class="mg-wq" data-noi18n><div class="p" lang="${esc(q.lang)}"><span class="chip">${esc(String(q.lang||"").toUpperCase())}</span> ${esc(q.prompt)}</div><div class="o">${(q.options||[]).map((o,oi)=>`<button data-wq="${qi}" data-wo="${oi}" class="${done?(oi===q.answer?"ok":oi===pk?"bad":""):""}" ${done?"disabled":""}>${esc(o)}</button>`).join("")}</div>${done&&(q.explain_en||q.explain_de||q.explain)?`<div class="x">${esc((UIL==="de"&&q.explain_de)||q.explain_en||q.explain||q.explain_de)}</div>`:""}</div>`; }).join("")}`;
 }
 /* read-aloud player: sentence by sentence, highlighted */
 const RD_RATES=[0.6,0.75,0.9,1,1.15];
