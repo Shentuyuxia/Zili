@@ -28,54 +28,67 @@
      "w": "爸爸",
      "p": "bà ba",
      "en": "dad",
-     "de": "Papa"
+     "de": "Papa",
+     "pt": "o papai; o pai"
     },
     {
      "w": "老师",
      "p": "lǎo shī",
      "en": "teacher",
-     "de": "Lehrer/in"
+     "de": "Lehrer/in",
+     "pt": "o professor; a professora"
     },
     {
      "w": "妈妈",
      "p": "mā ma",
      "en": "mom",
-     "de": "Mama"
+     "de": "Mama",
+     "pt": "a mamãe; a mãe"
     },
     {
      "w": "做饭",
      "p": "zuò fàn",
      "en": "cook",
-     "de": "kochen"
+     "de": "kochen",
+     "pt": "cozinhar"
     },
     {
      "w": "好吃",
      "p": "hǎo chī",
      "en": "delicious",
-     "de": "lecker"
+     "de": "lecker",
+     "pt": "gostoso; delicioso"
     },
     {
      "w": "一个",
      "p": "yí ge",
      "en": "a; one",
-     "de": "ein"
+     "de": "ein",
+     "pt": "um; uma"
     },
     {
      "w": "弟弟",
      "p": "dì di",
      "en": "younger brother",
-     "de": "jüngerer Bruder"
+     "de": "jüngerer Bruder",
+     "pt": "o irmão mais novo"
     },
     {
      "w": "我们",
      "p": "wǒ men",
      "en": "we",
-     "de": "wir"
+     "de": "wir",
+     "pt": "nós"
     }
    ],
    "questions": [],
    "sources": [],
-   "legacy": "k1"
+   "legacy": "k1",
+   "title_pt": "Minha família",
+   "paragraphs_pt": [
+    "Na minha família somos quatro pessoas. Meu pai é professor. Minha mãe sabe cozinhar, e a comida dela é uma delícia.",
+    "Eu tenho um irmão mais novo. Nós amamos muito a nossa casa."
+   ]
   },
   {
    "lang": "zh",
@@ -103,78 +116,95 @@
      "w": "早上",
      "p": "zǎo shang",
      "en": "in the morning",
-     "de": "am Morgen"
+     "de": "am Morgen",
+     "pt": "de manhã; a manhã"
     },
     {
      "w": "七点",
      "p": "qī diǎn",
      "en": "seven o'clock",
-     "de": "sieben Uhr"
+     "de": "sieben Uhr",
+     "pt": "sete horas"
     },
     {
      "w": "起床",
      "p": "qǐ chuáng",
      "en": "get up",
-     "de": "aufstehen"
+     "de": "aufstehen",
+     "pt": "levantar(-se) da cama"
     },
     {
      "w": "刷牙",
      "p": "shuā yá",
      "en": "brush teeth",
-     "de": "Zähne putzen"
+     "de": "Zähne putzen",
+     "pt": "escovar os dentes"
     },
     {
      "w": "洗脸",
      "p": "xǐ liǎn",
      "en": "wash one's face",
-     "de": "Gesicht waschen"
+     "de": "Gesicht waschen",
+     "pt": "lavar o rosto"
     },
     {
      "w": "学校",
      "p": "xué xiào",
      "en": "school",
-     "de": "Schule"
+     "de": "Schule",
+     "pt": "a escola"
     },
     {
      "w": "上课",
      "p": "shàng kè",
      "en": "have class",
-     "de": "Unterricht haben"
+     "de": "Unterricht haben",
+     "pt": "ter aula; ir à aula"
     },
     {
      "w": "中午",
      "p": "zhōng wǔ",
      "en": "noon",
-     "de": "Mittag"
+     "de": "Mittag",
+     "pt": "o meio-dia"
     },
     {
      "w": "朋友",
      "p": "péng you",
      "en": "friend",
-     "de": "Freund/in"
+     "de": "Freund/in",
+     "pt": "o amigo; a amiga"
     },
     {
      "w": "一起",
      "p": "yì qǐ",
      "en": "together",
-     "de": "zusammen"
+     "de": "zusammen",
+     "pt": "juntos"
     },
     {
      "w": "吃饭",
      "p": "chī fàn",
      "en": "eat a meal",
-     "de": "essen"
+     "de": "essen",
+     "pt": "comer; fazer uma refeição"
     },
     {
      "w": "晚上",
      "p": "wǎn shang",
      "en": "evening",
-     "de": "Abend"
+     "de": "Abend",
+     "pt": "a noite; à noite"
     }
    ],
    "questions": [],
    "sources": [],
-   "legacy": "k2"
+   "legacy": "k2",
+   "title_pt": "O meu dia",
+   "paragraphs_pt": [
+    "Às sete da manhã eu me levanto. Escovo os dentes e lavo o rosto. Vou para a escola ter aula.",
+    "Ao meio-dia, almoço com meus amigos. À noite, faço a lição de casa e depois vou dormir."
+   ]
   },
   {
    "lang": "zh",
@@ -202,36 +232,46 @@
      "w": "一只",
      "p": "yì zhī",
      "en": "one (animal)",
-     "de": "ein (Tier)"
+     "de": "ein (Tier)",
+     "pt": "um (animal)"
     },
     {
      "w": "小猫",
      "p": "xiǎo māo",
      "en": "kitten",
-     "de": "Kätzchen"
+     "de": "Kätzchen",
+     "pt": "o gatinho"
     },
     {
      "w": "可爱",
      "p": "kě ài",
      "en": "cute",
-     "de": "süß"
+     "de": "süß",
+     "pt": "fofo; bonitinho"
     },
     {
      "w": "喜欢",
      "p": "xǐ huan",
      "en": "like",
-     "de": "mögen"
+     "de": "mögen",
+     "pt": "gostar de"
     },
     {
      "w": "动物",
      "p": "dòng wù",
      "en": "animal",
-     "de": "Tier"
+     "de": "Tier",
+     "pt": "o animal"
     }
    ],
    "questions": [],
    "sources": [],
-   "legacy": "k3"
+   "legacy": "k3",
+   "title_pt": "O gatinho e os animais",
+   "paragraphs_pt": [
+    "Eu tenho um gatinho. O gatinho é muito fofo. Ele gosta de comer peixe.",
+    "O cachorro corre muito rápido. Eu gosto de animais."
+   ]
   },
   {
    "lang": "zh",
@@ -259,78 +299,95 @@
      "w": "今天",
      "p": "jīn tiān",
      "en": "today",
-     "de": "heute"
+     "de": "heute",
+     "pt": "hoje"
     },
     {
      "w": "天气",
      "p": "tiān qì",
      "en": "weather",
-     "de": "Wetter"
+     "de": "Wetter",
+     "pt": "o tempo (clima)"
     },
     {
      "w": "太阳",
      "p": "tài yang",
      "en": "sun",
-     "de": "Sonne"
+     "de": "Sonne",
+     "pt": "o sol"
     },
     {
      "w": "我们",
      "p": "wǒ men",
      "en": "we",
-     "de": "wir"
+     "de": "wir",
+     "pt": "nós"
     },
     {
      "w": "公园",
      "p": "gōng yuán",
      "en": "park",
-     "de": "Park"
+     "de": "Park",
+     "pt": "o parque"
     },
     {
      "w": "很多",
      "p": "hěn duō",
      "en": "many",
-     "de": "viele"
+     "de": "viele",
+     "pt": "muitos; muito"
     },
     {
      "w": "下雨",
      "p": "xià yǔ",
      "en": "rain",
-     "de": "regnen"
+     "de": "regnen",
+     "pt": "chover"
     },
     {
      "w": "的时候",
      "p": "de shí hòu",
      "en": "when",
-     "de": "wenn; als"
+     "de": "wenn; als",
+     "pt": "quando"
     },
     {
      "w": "在家",
      "p": "zài jiā",
      "en": "at home",
-     "de": "zu Hause"
+     "de": "zu Hause",
+     "pt": "em casa"
     },
     {
      "w": "看书",
      "p": "kàn shū",
      "en": "read books",
-     "de": "lesen"
+     "de": "lesen",
+     "pt": "ler (livros)"
     },
     {
      "w": "喜欢",
      "p": "xǐ huan",
      "en": "like",
-     "de": "mögen"
+     "de": "mögen",
+     "pt": "gostar de"
     },
     {
      "w": "春天",
      "p": "chūn tiān",
      "en": "spring",
-     "de": "Frühling"
+     "de": "Frühling",
+     "pt": "a primavera"
     }
    ],
    "questions": [],
    "sources": [],
-   "legacy": "k4"
+   "legacy": "k4",
+   "title_pt": "O tempo hoje",
+   "paragraphs_pt": [
+    "Hoje o tempo está ótimo. O sol está forte, vamos ao parque. No parque há muitas flores.",
+    "Quando chove, a gente lê em casa. Eu gosto mais da primavera."
+   ]
   },
   {
    "lang": "zh",
@@ -358,78 +415,95 @@
      "w": "周末",
      "p": "zhōu mò",
      "en": "weekend",
-     "de": "Wochenende"
+     "de": "Wochenende",
+     "pt": "o fim de semana"
     },
     {
      "w": "爸爸",
      "p": "bà ba",
      "en": "dad",
-     "de": "Papa"
+     "de": "Papa",
+     "pt": "o papai; o pai"
     },
     {
      "w": "公园",
      "p": "gōng yuán",
      "en": "park",
-     "de": "Park"
+     "de": "Park",
+     "pt": "o parque"
     },
     {
      "w": "很多",
      "p": "hěn duō",
      "en": "many",
-     "de": "viele"
+     "de": "viele",
+     "pt": "muitos; muito"
     },
     {
      "w": "跑步",
      "p": "pǎo bù",
      "en": "run",
-     "de": "joggen"
+     "de": "joggen",
+     "pt": "correr (como exercício)"
     },
     {
      "w": "弟弟",
      "p": "dì di",
      "en": "younger brother",
-     "de": "jüngerer Bruder"
+     "de": "jüngerer Bruder",
+     "pt": "o irmão mais novo"
     },
     {
      "w": "一起",
      "p": "yì qǐ",
      "en": "together",
-     "de": "zusammen"
+     "de": "zusammen",
+     "pt": "juntos"
     },
     {
      "w": "自行车",
      "p": "zì xíng chē",
      "en": "bicycle",
-     "de": "Fahrrad"
+     "de": "Fahrrad",
+     "pt": "a bicicleta"
     },
     {
      "w": "我们",
      "p": "wǒ men",
      "en": "we",
-     "de": "wir"
+     "de": "wir",
+     "pt": "nós"
     },
     {
      "w": "冰淇淋",
      "p": "bīng qí lín",
      "en": "ice cream",
-     "de": "Eis"
+     "de": "Eis",
+     "pt": "o sorvete"
     },
     {
      "w": "觉得",
      "p": "jué de",
      "en": "feel",
-     "de": "finden"
+     "de": "finden",
+     "pt": "achar; sentir"
     },
     {
      "w": "快乐",
      "p": "kuài lè",
      "en": "happy",
-     "de": "fröhlich"
+     "de": "fröhlich",
+     "pt": "feliz; alegre"
     }
    ],
    "questions": [],
    "sources": [],
-   "legacy": "k5"
+   "legacy": "k5",
+   "title_pt": "Um passeio no parque",
+   "paragraphs_pt": [
+    "No fim de semana, meu pai me leva ao parque. No parque tem muita gente correndo. Eu ando de bicicleta com meu irmão mais novo.",
+    "Quando cansamos de brincar, tomamos sorvete. Acho que o fim de semana é muito divertido!"
+   ]
   },
   {
    "lang": "zh",
@@ -454,60 +528,73 @@
      "w": "一个",
      "p": "yí ge",
      "en": "a; one",
-     "de": "ein"
+     "de": "ein",
+     "pt": "um; uma"
     },
     {
      "w": "红色",
      "p": "hóng sè",
      "en": "red",
-     "de": "rot"
+     "de": "rot",
+     "pt": "vermelho"
     },
     {
      "w": "书包",
      "p": "shū bāo",
      "en": "schoolbag",
-     "de": "Schulranzen"
+     "de": "Schulranzen",
+     "pt": "a mochila (escolar)"
     },
     {
      "w": "本子",
      "p": "běn zi",
      "en": "notebook",
-     "de": "Heft"
+     "de": "Heft",
+     "pt": "o caderno"
     },
     {
      "w": "铅笔",
      "p": "qiān bǐ",
      "en": "pencil",
-     "de": "Bleistift"
+     "de": "Bleistift",
+     "pt": "o lápis"
     },
     {
      "w": "每天",
      "p": "měi tiān",
      "en": "every day",
-     "de": "jeden Tag"
+     "de": "jeden Tag",
+     "pt": "todo dia"
     },
     {
      "w": "上学",
      "p": "shàng xué",
      "en": "go to school",
-     "de": "zur Schule gehen"
+     "de": "zur Schule gehen",
+     "pt": "ir à escola"
     },
     {
      "w": "检查",
      "p": "jiǎn chá",
      "en": "check",
-     "de": "prüfen"
+     "de": "prüfen",
+     "pt": "conferir; verificar"
     },
     {
      "w": "喜欢",
      "p": "xǐ huan",
      "en": "like",
-     "de": "mögen"
+     "de": "mögen",
+     "pt": "gostar de"
     }
    ],
    "questions": [],
    "sources": [],
-   "legacy": "k6"
+   "legacy": "k6",
+   "title_pt": "Minha mochila",
+   "paragraphs_pt": [
+    "Eu tenho uma mochila vermelha. Na mochila tem livros, cadernos e lápis. Todo dia, antes de ir para a escola, eu confiro tudo. Minha mochila é pesada, mas eu gosto muito dela."
+   ]
   },
   {
    "lang": "zh",
@@ -532,54 +619,66 @@
      "w": "早上",
      "p": "zǎo shang",
      "en": "in the morning",
-     "de": "am Morgen"
+     "de": "am Morgen",
+     "pt": "de manhã; a manhã"
     },
     {
      "w": "一个",
      "p": "yí ge",
      "en": "a; one",
-     "de": "ein"
+     "de": "ein",
+     "pt": "um; uma"
     },
     {
      "w": "苹果",
      "p": "píng guǒ",
      "en": "apple",
-     "de": "Apfel"
+     "de": "Apfel",
+     "pt": "a maçã"
     },
     {
      "w": "中午",
      "p": "zhōng wǔ",
      "en": "noon",
-     "de": "Mittag"
+     "de": "Mittag",
+     "pt": "o meio-dia"
     },
     {
      "w": "妈妈",
      "p": "mā ma",
      "en": "mom",
-     "de": "Mama"
+     "de": "Mama",
+     "pt": "a mamãe; a mãe"
     },
     {
      "w": "西瓜",
      "p": "xī guā",
      "en": "watermelon",
-     "de": "Wassermelone"
+     "de": "Wassermelone",
+     "pt": "a melancia"
     },
     {
      "w": "水果",
      "p": "shuǐ guǒ",
      "en": "fruit",
-     "de": "Obst"
+     "de": "Obst",
+     "pt": "a fruta"
     },
     {
      "w": "身体",
      "p": "shēn tǐ",
      "en": "body",
-     "de": "Körper"
+     "de": "Körper",
+     "pt": "o corpo; a saúde"
     }
    ],
    "questions": [],
    "sources": [],
-   "legacy": "k7"
+   "legacy": "k7",
+   "title_pt": "Comer frutas",
+   "paragraphs_pt": [
+    "De manhã eu como uma maçã. Ao meio-dia, minha mãe cortou uma melancia para mim. A melancia é doce e vermelhinha. Fruta faz bem para o corpo."
+   ]
   },
   {
    "lang": "zh",
@@ -607,78 +706,95 @@
      "w": "喜欢",
      "p": "xǐ huan",
      "en": "like",
-     "de": "mögen"
+     "de": "mögen",
+     "pt": "gostar de"
     },
     {
      "w": "画画",
      "p": "huà huà",
      "en": "draw",
-     "de": "malen"
+     "de": "malen",
+     "pt": "desenhar; pintar"
     },
     {
      "w": "每个",
      "p": "měi gè",
      "en": "each",
-     "de": "jede"
+     "de": "jede",
+     "pt": "cada"
     },
     {
      "w": "周末",
      "p": "zhōu mò",
      "en": "weekend",
-     "de": "Wochenende"
+     "de": "Wochenende",
+     "pt": "o fim de semana"
     },
     {
      "w": "很多",
      "p": "hěn duō",
      "en": "many",
-     "de": "viele"
+     "de": "viele",
+     "pt": "muitos; muito"
     },
     {
      "w": "小动物",
      "p": "xiǎo dòng wù",
      "en": "small animals",
-     "de": "kleine Tiere"
+     "de": "kleine Tiere",
+     "pt": "o bichinho"
     },
     {
      "w": "大树",
      "p": "dà shù",
      "en": "big tree",
-     "de": "großer Baum"
+     "de": "großer Baum",
+     "pt": "a árvore grande"
     },
     {
      "w": "一只",
      "p": "yì zhī",
      "en": "one (animal)",
-     "de": "ein (Tier)"
+     "de": "ein (Tier)",
+     "pt": "um (animal)"
     },
     {
      "w": "老师",
      "p": "lǎo shī",
      "en": "teacher",
-     "de": "Lehrer/in"
+     "de": "Lehrer/in",
+     "pt": "o professor; a professora"
     },
     {
      "w": "想象力",
      "p": "xiǎng xiàng lì",
      "en": "imagination",
-     "de": "Fantasie"
+     "de": "Fantasie",
+     "pt": "a imaginação"
     },
     {
      "w": "以后",
      "p": "yǐ hòu",
      "en": "afterwards",
-     "de": "danach"
+     "de": "danach",
+     "pt": "depois; no futuro"
     },
     {
      "w": "画家",
      "p": "huà jiā",
      "en": "painter",
-     "de": "Maler/in"
+     "de": "Maler/in",
+     "pt": "o pintor; a pintora"
     }
    ],
    "questions": [],
    "sources": [],
-   "legacy": "k8"
+   "legacy": "k8",
+   "title_pt": "Eu sei desenhar",
+   "paragraphs_pt": [
+    "Eu gosto de desenhar e faço muitos desenhos todo fim de semana. O que eu mais gosto de desenhar são bichinhos e árvores grandes. Uma vez eu desenhei um gato que voava.",
+    "A professora disse que meu desenho tem muita imaginação. No futuro eu quero ser pintor."
+   ]
   },
   {
    "lang": "zh",
@@ -703,78 +819,94 @@
      "w": "今天",
      "p": "jīn tiān",
      "en": "today",
-     "de": "heute"
+     "de": "heute",
+     "pt": "hoje"
     },
     {
      "w": "生日",
      "p": "shēng rì",
      "en": "birthday",
-     "de": "Geburtstag"
+     "de": "Geburtstag",
+     "pt": "o aniversário"
     },
     {
      "w": "七岁",
      "p": "qī suì",
      "en": "seven years old",
-     "de": "sieben Jahre alt"
+     "de": "sieben Jahre alt",
+     "pt": "sete anos (de idade)"
     },
     {
      "w": "爸爸",
      "p": "bà ba",
      "en": "dad",
-     "de": "Papa"
+     "de": "Papa",
+     "pt": "o papai; o pai"
     },
     {
      "w": "妈妈",
      "p": "mā ma",
      "en": "mom",
-     "de": "Mama"
+     "de": "Mama",
+     "pt": "a mamãe; a mãe"
     },
     {
      "w": "一个",
      "p": "yí ge",
      "en": "a; one",
-     "de": "ein"
+     "de": "ein",
+     "pt": "um; uma"
     },
     {
      "w": "蛋糕",
      "p": "dàn gāo",
      "en": "cake",
-     "de": "Kuchen"
+     "de": "Kuchen",
+     "pt": "o bolo"
     },
     {
      "w": "朋友",
      "p": "péng you",
      "en": "friend",
-     "de": "Freund/in"
+     "de": "Freund/in",
+     "pt": "o amigo; a amiga"
     },
     {
      "w": "生日歌",
      "p": "shēng rì gē",
      "en": "birthday song",
-     "de": "Geburtstagslied"
+     "de": "Geburtstagslied",
+     "pt": "o parabéns (canção de aniversário)"
     },
     {
      "w": "开心",
      "p": "kāi xīn",
      "en": "happy",
-     "de": "fröhlich"
+     "de": "fröhlich",
+     "pt": "feliz; contente"
     },
     {
      "w": "愿望",
      "p": "yuàn wàng",
      "en": "wish",
-     "de": "Wunsch"
+     "de": "Wunsch",
+     "pt": "o desejo; o pedido"
     },
     {
      "w": "然后",
      "p": "rán hòu",
      "en": "then",
-     "de": "dann"
+     "de": "dann",
+     "pt": "depois; em seguida"
     }
    ],
    "questions": [],
    "sources": [],
-   "legacy": "k9"
+   "legacy": "k9",
+   "title_pt": "Feliz aniversário",
+   "paragraphs_pt": [
+    "Hoje é meu aniversário, fiz sete anos. Meus pais fizeram um bolo grande. Meus amigos cantam parabéns e eu fico muito feliz. Fiz um pedido e depois apaguei as velas."
+   ]
   },
   {
    "lang": "zh",
@@ -799,66 +931,80 @@
      "w": "喜欢",
      "p": "xǐ huan",
      "en": "like",
-     "de": "mögen"
+     "de": "mögen",
+     "pt": "gostar de"
     },
     {
      "w": "颜色",
      "p": "yán sè",
      "en": "color",
-     "de": "Farbe"
+     "de": "Farbe",
+     "pt": "a cor"
     },
     {
      "w": "蓝色",
      "p": "lán sè",
      "en": "blue",
-     "de": "blau"
+     "de": "blau",
+     "pt": "azul"
     },
     {
      "w": "天空",
      "p": "tiān kōng",
      "en": "sky",
-     "de": "Himmel"
+     "de": "Himmel",
+     "pt": "o céu"
     },
     {
      "w": "漂亮",
      "p": "piào liang",
      "en": "pretty",
-     "de": "schön"
+     "de": "schön",
+     "pt": "bonito"
     },
     {
      "w": "红色",
      "p": "hóng sè",
      "en": "red",
-     "de": "rot"
+     "de": "rot",
+     "pt": "vermelho"
     },
     {
      "w": "热闹",
      "p": "rè nao",
      "en": "lively",
-     "de": "lebhaft"
+     "de": "lebhaft",
+     "pt": "animado; movimentado"
     },
     {
      "w": "黄色",
      "p": "huáng sè",
      "en": "yellow",
-     "de": "gelb"
+     "de": "gelb",
+     "pt": "amarelo"
     },
     {
      "w": "温暖",
      "p": "wēn nuǎn",
      "en": "warm",
-     "de": "warm"
+     "de": "warm",
+     "pt": "quente; acolhedor"
     },
     {
      "w": "什么",
      "p": "shén me",
      "en": "what",
-     "de": "was"
+     "de": "was",
+     "pt": "que; o quê"
     }
    ],
    "questions": [],
    "sources": [],
-   "legacy": "k10"
+   "legacy": "k10",
+   "title_pt": "Minha cor preferida",
+   "paragraphs_pt": [
+    "Minha cor preferida é o azul. O céu azul é muito bonito. O vermelho é alegre e animado, o amarelo é acolhedor. De que cor você gosta?"
+   ]
   },
   {
    "lang": "zh",
@@ -883,78 +1029,94 @@
      "w": "晚上",
      "p": "wǎn shang",
      "en": "evening",
-     "de": "Abend"
+     "de": "Abend",
+     "pt": "a noite; à noite"
     },
     {
      "w": "朋友",
      "p": "péng you",
      "en": "friend",
-     "de": "Freund/in"
+     "de": "Freund/in",
+     "pt": "o amigo; a amiga"
     },
     {
      "w": "一起",
      "p": "yì qǐ",
      "en": "together",
-     "de": "zusammen"
+     "de": "zusammen",
+     "pt": "juntos"
     },
     {
      "w": "商量",
      "p": "shāng liang",
      "en": "discuss",
-     "de": "besprechen"
+     "de": "besprechen",
+     "pt": "combinar; discutir"
     },
     {
      "w": "周末",
      "p": "zhōu mò",
      "en": "weekend",
-     "de": "Wochenende"
+     "de": "Wochenende",
+     "pt": "o fim de semana"
     },
     {
      "w": "计划",
      "p": "jì huà",
      "en": "plan",
-     "de": "Plan"
+     "de": "Plan",
+     "pt": "o plano"
     },
     {
      "w": "爬山",
      "p": "pá shān",
      "en": "hike",
-     "de": "wandern"
+     "de": "wandern",
+     "pt": "fazer trilha; subir a montanha"
     },
     {
      "w": "在家",
      "p": "zài jiā",
      "en": "at home",
-     "de": "zu Hause"
+     "de": "zu Hause",
+     "pt": "em casa"
     },
     {
      "w": "睡懒觉",
      "p": "shuì lǎn jiào",
      "en": "sleep in",
-     "de": "lange schlafen"
+     "de": "lange schlafen",
+     "pt": "dormir até tarde"
     },
     {
      "w": "我们",
      "p": "wǒ men",
      "en": "we",
-     "de": "wir"
+     "de": "wir",
+     "pt": "nós"
     },
     {
      "w": "决定",
      "p": "jué dìng",
      "en": "decide",
-     "de": "entscheiden"
+     "de": "entscheiden",
+     "pt": "decidir"
     },
     {
      "w": "周六",
      "p": "zhōu liù",
      "en": "Saturday",
-     "de": "Samstag"
+     "de": "Samstag",
+     "pt": "o sábado"
     }
    ],
    "questions": [],
    "sources": [],
-   "legacy": "y1"
+   "legacy": "y1",
+   "title_pt": "Os planos do fim de semana",
+   "paragraphs_pt": [
+    "Na sexta à noite, eu e meus amigos combinamos os planos do fim de semana. Alguns queriam fazer trilha, outros queriam dormir até tarde em casa. No fim decidimos ir à feira no sábado e ao cinema no domingo. Todo mundo diz que só assim o fim de semana não é desperdiçado."
+   ]
   },
   {
    "lang": "zh",
@@ -982,78 +1144,95 @@
      "w": "早上",
      "p": "zǎo shang",
      "en": "in the morning",
-     "de": "am Morgen"
+     "de": "am Morgen",
+     "pt": "de manhã; a manhã"
     },
     {
      "w": "地铁",
      "p": "dì tiě",
      "en": "subway",
-     "de": "U-Bahn"
+     "de": "U-Bahn",
+     "pt": "o metrô"
     },
     {
      "w": "公司",
      "p": "gōng sī",
      "en": "company",
-     "de": "Firma"
+     "de": "Firma",
+     "pt": "a empresa"
     },
     {
      "w": "非常",
      "p": "fēi cháng",
      "en": "very",
-     "de": "sehr"
+     "de": "sehr",
+     "pt": "muito; extremamente"
     },
     {
      "w": "上午",
      "p": "shàng wǔ",
      "en": "morning",
-     "de": "Vormittag"
+     "de": "Vormittag",
+     "pt": "a manhã"
     },
     {
      "w": "两个",
      "p": "liǎng ge",
      "en": "two",
-     "de": "zwei"
+     "de": "zwei",
+     "pt": "dois; duas"
     },
     {
      "w": "回复",
      "p": "huí fù",
      "en": "reply",
-     "de": "antworten"
+     "de": "antworten",
+     "pt": "responder"
     },
     {
      "w": "很多",
      "p": "hěn duō",
      "en": "many",
-     "de": "viele"
+     "de": "viele",
+     "pt": "muitos; muito"
     },
     {
      "w": "邮件",
      "p": "yóu jiàn",
      "en": "email",
-     "de": "E-Mail"
+     "de": "E-Mail",
+     "pt": "o e-mail"
     },
     {
      "w": "中午",
      "p": "zhōng wǔ",
      "en": "noon",
-     "de": "Mittag"
+     "de": "Mittag",
+     "pt": "o meio-dia"
     },
     {
      "w": "同事",
      "p": "tóng shì",
      "en": "colleague",
-     "de": "Kollege/Kollegin"
+     "de": "Kollege/Kollegin",
+     "pt": "o colega de trabalho"
     },
     {
      "w": "一起",
      "p": "yì qǐ",
      "en": "together",
-     "de": "zusammen"
+     "de": "zusammen",
+     "pt": "juntos"
     }
    ],
    "questions": [],
    "sources": [],
-   "legacy": "y2"
+   "legacy": "y2",
+   "title_pt": "Um dia de trabalhador",
+   "paragraphs_pt": [
+    "Às oito da manhã pego o metrô para o trabalho, e está lotado. De manhã tive duas reuniões e ainda preciso responder muitos e-mails. Ao meio-dia almoço com os colegas e conversamos sobre o trabalho.",
+    "À tarde fico meio cansado e, de vez em quando, enrolo um pouco olhando o celular escondido. Depois do trabalho, só quero deitar no sofá e descansar."
+   ]
   },
   {
    "lang": "zh",
@@ -1081,78 +1260,95 @@
      "w": "今天",
      "p": "jīn tiān",
      "en": "today",
-     "de": "heute"
+     "de": "heute",
+     "pt": "hoje"
     },
     {
      "w": "考试",
      "p": "kǎo shì",
      "en": "exam",
-     "de": "Prüfung"
+     "de": "Prüfung",
+     "pt": "a prova; o exame"
     },
     {
      "w": "真的",
      "p": "zhēn de",
      "en": "really",
-     "de": "wirklich"
+     "de": "wirklich",
+     "pt": "de verdade; realmente"
     },
     {
      "w": "破防",
      "p": "pò fáng",
      "en": "to be emotionally shaken",
-     "de": "emotional erschüttert sein"
+     "de": "emotional erschüttert sein",
+     "pt": "ficar abalado (gíria)"
     },
     {
      "w": "这家",
      "p": "zhè jiā",
      "en": "this",
-     "de": "dieses"
+     "de": "dieses",
+     "pt": "este (estabelecimento)"
     },
     {
      "w": "奶茶",
      "p": "nǎi chá",
      "en": "bubble tea",
-     "de": "Bubble Tea"
+     "de": "Bubble Tea",
+     "pt": "o chá com leite (bubble tea)"
     },
     {
      "w": "好喝",
      "p": "hǎo hē",
      "en": "tasty (drink)",
-     "de": "lecker (Getränk)"
+     "de": "lecker (Getränk)",
+     "pt": "gostoso (bebida)"
     },
     {
      "w": "绝绝子",
      "p": "jué jué zǐ",
      "en": "absolutely amazing (slang)",
-     "de": "super genial (Slang)"
+     "de": "super genial (Slang)",
+     "pt": "incrível; demais (gíria)"
     },
     {
      "w": "大家",
      "p": "dà jiā",
      "en": "everyone",
-     "de": "alle"
+     "de": "alle",
+     "pt": "todo mundo"
     },
     {
      "w": "努力",
      "p": "nǔ lì",
      "en": "hard-working",
-     "de": "sich anstrengen"
+     "de": "sich anstrengen",
+     "pt": "esforçar-se; esforçado"
     },
     {
      "w": "竞争",
      "p": "jìng zhēng",
      "en": "competition",
-     "de": "Konkurrenz"
+     "de": "Konkurrenz",
+     "pt": "a concorrência; a competição"
     },
     {
      "w": "激烈",
      "p": "jī liè",
      "en": "fierce",
-     "de": "heftig"
+     "de": "heftig",
+     "pt": "acirrado; intenso"
     }
    ],
    "questions": [],
    "sources": [],
-   "legacy": "n1"
+   "legacy": "n1",
+   "title_pt": "Gírias da internet",
+   "paragraphs_pt": [
+    "A prova de hoje foi difícil demais, fiquei arrasado de verdade. O chá com leite desta loja é bom demais, simplesmente incrível! Todo mundo se esforça muito e a concorrência é feroz — é a tal da competição desenfreada.",
+    "No fim de semana não quero sair, fico em casa de boa. Quando vi esse café, já fiquei com vontade de experimentar. Segunda de novo tem trabalho: somos todos trabalhadores."
+   ]
   },
   {
    "lang": "zh",
@@ -1177,72 +1373,87 @@
      "w": "常常",
      "p": "cháng cháng",
      "en": "often",
-     "de": "oft"
+     "de": "oft",
+     "pt": "muitas vezes; frequentemente"
     },
     {
      "w": "一杯",
      "p": "yì bēi",
      "en": "a cup",
-     "de": "eine Tasse"
+     "de": "eine Tasse",
+     "pt": "uma xícara; um copo"
     },
     {
      "w": "绿茶",
      "p": "lǜ chá",
      "en": "green tea",
-     "de": "grüner Tee"
+     "de": "grüner Tee",
+     "pt": "o chá verde"
     },
     {
      "w": "香味",
      "p": "xiāng wèi",
      "en": "aroma",
-     "de": "Duft"
+     "de": "Duft",
+     "pt": "o aroma; o cheiro bom"
     },
     {
      "w": "出来",
      "p": "chū lái",
      "en": "come out",
-     "de": "herauskommen"
+     "de": "herauskommen",
+     "pt": "sair; aparecer"
     },
     {
      "w": "窗边",
      "p": "chuāng biān",
      "en": "by the window",
-     "de": "am Fenster"
+     "de": "am Fenster",
+     "pt": "ao lado da janela"
     },
     {
      "w": "什么",
      "p": "shén me",
      "en": "what",
-     "de": "was"
+     "de": "was",
+     "pt": "que; o quê"
     },
     {
      "w": "时间",
      "p": "shí jiān",
      "en": "time",
-     "de": "Zeit"
+     "de": "Zeit",
+     "pt": "o tempo"
     },
     {
      "w": "一天",
      "p": "yì tiān",
      "en": "a day",
-     "de": "ein Tag"
+     "de": "ein Tag",
+     "pt": "um dia"
     },
     {
      "w": "安静",
      "p": "ān jìng",
      "en": "quiet",
-     "de": "ruhig"
+     "de": "ruhig",
+     "pt": "silencioso; tranquilo"
     },
     {
      "w": "的时候",
      "p": "de shí hòu",
      "en": "when",
-     "de": "wenn; als"
+     "de": "wenn; als",
+     "pt": "quando"
     }
    ],
    "questions": [],
    "sources": [],
-   "legacy": "a4"
+   "legacy": "a4",
+   "title_pt": "O tempo de uma xícara de chá",
+   "paragraphs_pt": [
+    "Às três da tarde, muitas vezes preparo uma xícara de chá verde. O chá vai ficando verde aos poucos, e o aroma também vai aparecendo. Sento ao lado da janela, sem pensar em nada, só tomando chá. O tempo desta xícara de chá é o momento mais tranquilo do meu dia."
+   ]
   },
   {
    "lang": "zh",
@@ -1267,78 +1478,94 @@
      "w": "周六",
      "p": "zhōu liù",
      "en": "Saturday",
-     "de": "Samstag"
+     "de": "Samstag",
+     "pt": "o sábado"
     },
     {
      "w": "喜欢",
      "p": "xǐ huan",
      "en": "like",
-     "de": "mögen"
+     "de": "mögen",
+     "pt": "gostar de"
     },
     {
      "w": "一个人",
      "p": "yí gè rén",
      "en": "alone",
-     "de": "allein"
+     "de": "allein",
+     "pt": "sozinho"
     },
     {
      "w": "书店",
      "p": "shū diàn",
      "en": "bookshop",
-     "de": "Buchhandlung"
+     "de": "Buchhandlung",
+     "pt": "a livraria"
     },
     {
      "w": "书架",
      "p": "shū jià",
      "en": "bookshelf",
-     "de": "Regal"
+     "de": "Regal",
+     "pt": "a estante"
     },
     {
      "w": "一排排",
      "p": "yì pái pái",
      "en": "in rows",
-     "de": "reihenweise"
+     "de": "reihenweise",
+     "pt": "em fileiras"
     },
     {
      "w": "知道",
      "p": "zhī dao",
      "en": "know",
-     "de": "wissen"
+     "de": "wissen",
+     "pt": "saber"
     },
     {
      "w": "一会儿",
      "p": "yí huì r",
      "en": "a while",
-     "de": "eine Weile"
+     "de": "eine Weile",
+     "pt": "um pouco; um instante"
     },
     {
      "w": "诗集",
      "p": "shī jí",
      "en": "poetry collection",
-     "de": "Gedichtband"
+     "de": "Gedichtband",
+     "pt": "a coletânea de poemas"
     },
     {
      "w": "回家",
      "p": "huí jiā",
      "en": "go home",
-     "de": "nach Hause gehen"
+     "de": "nach Hause gehen",
+     "pt": "voltar para casa"
     },
     {
      "w": "路上",
      "p": "lù shang",
      "en": "on the way",
-     "de": "unterwegs"
+     "de": "unterwegs",
+     "pt": "no caminho"
     },
     {
      "w": "一直",
      "p": "yì zhí",
      "en": "continuously",
-     "de": "immer weiter"
+     "de": "immer weiter",
+     "pt": "o tempo todo; sempre"
     }
    ],
    "questions": [],
    "sources": [],
-   "legacy": "a5"
+   "legacy": "a5",
+   "title_pt": "Na livraria",
+   "paragraphs_pt": [
+    "No sábado à tarde gosto de ir sozinho à livraria. As estantes ficam em fileiras, e a gente nem sabe qual livro olhar primeiro. Folheei um pouco e comprei uma coletânea de poemas usada. No caminho de volta para casa, fui lendo um dos poemas o tempo todo."
+   ]
   },
   {
    "lang": "zh",
@@ -1363,78 +1590,94 @@
      "w": "下雨",
      "p": "xià yǔ",
      "en": "rain",
-     "de": "regnen"
+     "de": "regnen",
+     "pt": "chover"
     },
     {
      "w": "午后",
      "p": "wǔ hòu",
      "en": "afternoon",
-     "de": "Nachmittag"
+     "de": "Nachmittag",
+     "pt": "a tarde (depois do almoço)"
     },
     {
      "w": "咖啡馆",
      "p": "kā fēi guǎn",
      "en": "café",
-     "de": "Café"
+     "de": "Café",
+     "pt": "o café (lugar)"
     },
     {
      "w": "安静",
      "p": "ān jìng",
      "en": "quiet",
-     "de": "ruhig"
+     "de": "ruhig",
+     "pt": "silencioso; tranquilo"
     },
     {
      "w": "雨滴",
      "p": "yǔ dī",
      "en": "raindrop",
-     "de": "Regentropfen"
+     "de": "Regentropfen",
+     "pt": "a gota de chuva"
     },
     {
      "w": "玻璃",
      "p": "bō li",
      "en": "glass",
-     "de": "Glas"
+     "de": "Glas",
+     "pt": "o vidro"
     },
     {
      "w": "发出",
      "p": "fā chū",
      "en": "make (a sound)",
-     "de": "erzeugen"
+     "de": "erzeugen",
+     "pt": "emitir (um som); fazer (barulho)"
     },
     {
      "w": "声音",
      "p": "shēng yīn",
      "en": "sound",
-     "de": "Geräusch"
+     "de": "Geräusch",
+     "pt": "o som; a voz"
     },
     {
      "w": "一杯",
      "p": "yì bēi",
      "en": "a cup",
-     "de": "eine Tasse"
+     "de": "eine Tasse",
+     "pt": "uma xícara; um copo"
     },
     {
      "w": "拿铁",
      "p": "ná tiě",
      "en": "latte",
-     "de": "Latte"
+     "de": "Latte",
+     "pt": "o café com leite (latte)"
     },
     {
      "w": "的时候",
      "p": "de shí hòu",
      "en": "when",
-     "de": "wenn; als"
+     "de": "wenn; als",
+     "pt": "quando"
     },
     {
      "w": "发现",
      "p": "fā xiàn",
      "en": "realise",
-     "de": "bemerken"
+     "de": "bemerken",
+     "pt": "perceber; descobrir"
     }
    ],
    "questions": [],
    "sources": [],
-   "legacy": "a7"
+   "legacy": "a7",
+   "title_pt": "Um café num dia de chuva",
+   "paragraphs_pt": [
+    "Numa tarde de chuva, o café fica bem tranquilo. As gotas de chuva batem no vidro da janela, fazendo um barulhinho suave. Pedi um latte e fui lendo um livro com calma. Quando a chuva parou, percebi que já estava sentado ali havia duas horas."
+   ]
   },
   {
    "lang": "zh",
@@ -1459,72 +1702,87 @@
      "w": "很多",
      "p": "hěn duō",
      "en": "many",
-     "de": "viele"
+     "de": "viele",
+     "pt": "muitos; muito"
     },
     {
      "w": "年轻人",
      "p": "nián qīng rén",
      "en": "young people",
-     "de": "junge Leute"
+     "de": "junge Leute",
+     "pt": "os jovens"
     },
     {
      "w": "周末",
      "p": "zhōu mò",
      "en": "weekend",
-     "de": "Wochenende"
+     "de": "Wochenende",
+     "pt": "o fim de semana"
     },
     {
      "w": "健身房",
      "p": "jiàn shēn fáng",
      "en": "gym",
-     "de": "Fitnessstudio"
+     "de": "Fitnessstudio",
+     "pt": "a academia"
     },
     {
      "w": "身材",
      "p": "shēn cái",
      "en": "figure",
-     "de": "Figur"
+     "de": "Figur",
+     "pt": "a forma física; o corpo"
     },
     {
      "w": "运动",
      "p": "yùn dòng",
      "en": "sport",
-     "de": "Sport"
+     "de": "Sport",
+     "pt": "o esporte; fazer exercício"
     },
     {
      "w": "精神",
      "p": "jīng shen",
      "en": "energetic",
-     "de": "munter"
+     "de": "munter",
+     "pt": "disposto; a energia; o ânimo"
     },
     {
      "w": "半个",
      "p": "bàn ge",
      "en": "half",
-     "de": "eine halbe"
+     "de": "eine halbe",
+     "pt": "meio; metade"
     },
     {
      "w": "重要",
      "p": "zhòng yào",
      "en": "important",
-     "de": "wichtig"
+     "de": "wichtig",
+     "pt": "importante"
     },
     {
      "w": "坚持",
      "p": "jiān chí",
      "en": "persist",
-     "de": "durchhalten"
+     "de": "durchhalten",
+     "pt": "persistir; não desistir"
     },
     {
      "w": "一下子",
      "p": "yí xià zi",
      "en": "suddenly",
-     "de": "plötzlich"
+     "de": "plötzlich",
+     "pt": "de repente; de uma vez"
     }
    ],
    "questions": [],
    "sources": [],
-   "legacy": "y5"
+   "legacy": "y5",
+   "title_pt": "Academia no fim de semana",
+   "paragraphs_pt": [
+    "Muitos jovens vão à academia no fim de semana, e não só pela forma física. Eles dizem que o exercício deixa a gente com mais energia. Vou três vezes por semana, e cada vez treino só meia hora. O importante é persistir, e não treinar demais de uma vez."
+   ]
   },
   {
    "lang": "zh",
@@ -1549,78 +1807,94 @@
      "w": "一个人",
      "p": "yí gè rén",
      "en": "alone",
-     "de": "allein"
+     "de": "allein",
+     "pt": "sozinho"
     },
     {
      "w": "吃饭",
      "p": "chī fàn",
      "en": "eat a meal",
-     "de": "essen"
+     "de": "essen",
+     "pt": "comer; fazer uma refeição"
     },
     {
      "w": "很多",
      "p": "hěn duō",
      "en": "many",
-     "de": "viele"
+     "de": "viele",
+     "pt": "muitos; muito"
     },
     {
      "w": "觉得",
      "p": "jué de",
      "en": "feel",
-     "de": "finden"
+     "de": "finden",
+     "pt": "achar; sentir"
     },
     {
      "w": "尴尬",
      "p": "gān gà",
      "en": "awkward",
-     "de": "peinlich"
+     "de": "peinlich",
+     "pt": "constrangedor; sem graça"
     },
     {
      "w": "现在",
      "p": "xiàn zài",
      "en": "now",
-     "de": "jetzt"
+     "de": "jetzt",
+     "pt": "agora"
     },
     {
      "w": "越来越",
      "p": "yuè lái yuè",
      "en": "more and more",
-     "de": "immer mehr"
+     "de": "immer mehr",
+     "pt": "cada vez mais"
     },
     {
      "w": "年轻人",
      "p": "nián qīng rén",
      "en": "young people",
-     "de": "junge Leute"
+     "de": "junge Leute",
+     "pt": "os jovens"
     },
     {
      "w": "喜欢",
      "p": "xǐ huan",
      "en": "like",
-     "de": "mögen"
+     "de": "mögen",
+     "pt": "gostar de"
     },
     {
      "w": "餐厅",
      "p": "cān tīng",
      "en": "restaurant",
-     "de": "Restaurant"
+     "de": "Restaurant",
+     "pt": "o restaurante"
     },
     {
      "w": "可以",
      "p": "kě yǐ",
      "en": "may",
-     "de": "können"
+     "de": "können",
+     "pt": "poder"
     },
     {
      "w": "随时",
      "p": "suí shí",
      "en": "at any time",
-     "de": "jederzeit"
+     "de": "jederzeit",
+     "pt": "a qualquer momento"
     }
    ],
    "questions": [],
    "sources": [],
-   "legacy": "y7"
+   "legacy": "y7",
+   "title_pt": "Comer sozinho",
+   "paragraphs_pt": [
+    "Antigamente, muita gente achava meio constrangedor comer sozinha. Hoje em dia, cada vez mais jovens gostam de ir sozinhos a restaurantes. Eles podem comer devagar e olhar o celular quando quiserem. Às vezes, uma refeição tranquila é a melhor forma de relaxar."
+   ]
   },
   {
    "lang": "zh",
@@ -1645,78 +1919,94 @@
      "w": "城市里",
      "p": "chéng shì lǐ",
      "en": "in the city",
-     "de": "in der Stadt"
+     "de": "in der Stadt",
+     "pt": "na cidade"
     },
     {
      "w": "生活",
      "p": "shēng huó",
      "en": "life",
-     "de": "Leben"
+     "de": "Leben",
+     "pt": "a vida; viver"
     },
     {
      "w": "很多",
      "p": "hěn duō",
      "en": "many",
-     "de": "viele"
+     "de": "viele",
+     "pt": "muitos; muito"
     },
     {
      "w": "一只",
      "p": "yì zhī",
      "en": "one (animal)",
-     "de": "ein (Tier)"
+     "de": "ein (Tier)",
+     "pt": "um (animal)"
     },
     {
      "w": "小狗",
      "p": "xiǎo gǒu",
      "en": "little dog",
-     "de": "kleiner Hund"
+     "de": "kleiner Hund",
+     "pt": "o cachorrinho"
     },
     {
      "w": "小猫",
      "p": "xiǎo māo",
      "en": "kitten",
-     "de": "Kätzchen"
+     "de": "Kätzchen",
+     "pt": "o gatinho"
     },
     {
      "w": "下班",
      "p": "xià bān",
      "en": "finish work",
-     "de": "Feierabend machen"
+     "de": "Feierabend machen",
+     "pt": "sair do trabalho"
     },
     {
      "w": "回家",
      "p": "huí jiā",
      "en": "go home",
-     "de": "nach Hause gehen"
+     "de": "nach Hause gehen",
+     "pt": "voltar para casa"
     },
     {
      "w": "门口",
      "p": "mén kǒu",
      "en": "door",
-     "de": "Tür"
+     "de": "Tür",
+     "pt": "a porta; a entrada"
     },
     {
      "w": "心情",
      "p": "xīn qíng",
      "en": "mood",
-     "de": "Stimmung"
+     "de": "Stimmung",
+     "pt": "o humor; o estado de espírito"
     },
     {
      "w": "养宠物",
      "p": "yǎng chǒng wù",
      "en": "keep a pet",
-     "de": "Haustier halten"
+     "de": "Haustier halten",
+     "pt": "ter um bicho de estimação"
     },
     {
      "w": "需要",
      "p": "xū yào",
      "en": "need",
-     "de": "brauchen"
+     "de": "brauchen",
+     "pt": "precisar"
     }
    ],
    "questions": [],
    "sources": [],
-   "legacy": "y8"
+   "legacy": "y8",
+   "title_pt": "A companhia dos bichos de estimação",
+   "paragraphs_pt": [
+    "Quem vive na cidade muitas vezes tem um cachorrinho ou um gatinho. Quando chego do trabalho e vejo os dois me esperando na porta, meu humor melhora na hora. Ter um bicho de estimação exige tempo e também dinheiro. Mas, para muita gente, esse tipo de companhia é muito precioso."
+   ]
   },
   {
    "lang": "zh",
@@ -1741,78 +2031,94 @@
      "w": "现在",
      "p": "xiàn zài",
      "en": "now",
-     "de": "jetzt"
+     "de": "jetzt",
+     "pt": "agora"
     },
     {
      "w": "流行",
      "p": "liú xíng",
      "en": "be trendy",
-     "de": "angesagt sein"
+     "de": "angesagt sein",
+     "pt": "estar na moda; popular"
     },
     {
      "w": "搭子",
      "p": "dā zi",
      "en": "buddy",
-     "de": "Buddy"
+     "de": "Buddy",
+     "pt": "o parceiro (para uma atividade, gíria)"
     },
     {
      "w": "一起",
      "p": "yì qǐ",
      "en": "together",
-     "de": "zusammen"
+     "de": "zusammen",
+     "pt": "juntos"
     },
     {
      "w": "伙伴",
      "p": "huǒ bàn",
      "en": "partner",
-     "de": "Partner"
+     "de": "Partner",
+     "pt": "o parceiro; o companheiro"
     },
     {
      "w": "吃饭",
      "p": "chī fàn",
      "en": "eat a meal",
-     "de": "essen"
+     "de": "essen",
+     "pt": "comer; fazer uma refeição"
     },
     {
      "w": "健身",
      "p": "jiàn shēn",
      "en": "fitness",
-     "de": "Fitness"
+     "de": "Fitness",
+     "pt": "malhar; fazer exercício"
     },
     {
      "w": "周一",
      "p": "zhōu yī",
      "en": "Monday",
-     "de": "Montag"
+     "de": "Montag",
+     "pt": "a segunda-feira"
     },
     {
      "w": "运动",
      "p": "yùn dòng",
      "en": "sport",
-     "de": "Sport"
+     "de": "Sport",
+     "pt": "o esporte; fazer exercício"
     },
     {
      "w": "亲密",
      "p": "qīn mì",
      "en": "close",
-     "de": "eng"
+     "de": "eng",
+     "pt": "íntimo; próximo"
     },
     {
      "w": "互相",
      "p": "hù xiāng",
      "en": "mutually",
-     "de": "gegenseitig"
+     "de": "gegenseitig",
+     "pt": "um ao outro; mutuamente"
     },
     {
      "w": "陪伴",
      "p": "péi bàn",
      "en": "company",
-     "de": "Gesellschaft"
+     "de": "Gesellschaft",
+     "pt": "a companhia; fazer companhia"
     }
    ],
    "questions": [],
    "sources": [],
-   "legacy": "n2"
+   "legacy": "n2",
+   "title_pt": "A cultura do “dazi”",
+   "paragraphs_pt": [
+    "Agora está na moda o “dazi”, um parceiro para fazer alguma coisa junto. Tem gente que é parceiro de almoço: come junto sem precisar conversar. Tem gente que é parceiro de academia e vai malhar junto toda semana. Sem ser muito íntimos, mas fazendo companhia um ao outro — muita gente gosta desse tipo de relação."
+   ]
   },
   {
    "lang": "zh",
@@ -1837,78 +2143,94 @@
      "w": "最近",
      "p": "zuì jìn",
      "en": "recently",
-     "de": "in letzter Zeit"
+     "de": "in letzter Zeit",
+     "pt": "ultimamente; recente"
     },
     {
      "w": "很多",
      "p": "hěn duō",
      "en": "many",
-     "de": "viele"
+     "de": "viele",
+     "pt": "muitos; muito"
     },
     {
      "w": "喜欢",
      "p": "xǐ huan",
      "en": "like",
-     "de": "mögen"
+     "de": "mögen",
+     "pt": "gostar de"
     },
     {
      "w": "城市里",
      "p": "chéng shì lǐ",
      "en": "in the city",
-     "de": "in der Stadt"
+     "de": "in der Stadt",
+     "pt": "na cidade"
     },
     {
      "w": "赶时间",
      "p": "gǎn shí jiān",
      "en": "in a hurry",
-     "de": "eilig"
+     "de": "eilig",
+     "pt": "estar com pressa"
     },
     {
      "w": "看看",
      "p": "kàn kan",
      "en": "have a look",
-     "de": "mal schauen"
+     "de": "mal schauen",
+     "pt": "dar uma olhada"
     },
     {
      "w": "街道",
      "p": "jiē dào",
      "en": "street",
-     "de": "Straße"
+     "de": "Straße",
+     "pt": "a rua"
     },
     {
      "w": "小吃",
      "p": "xiǎo chī",
      "en": "snack",
-     "de": "Snack"
+     "de": "Snack",
+     "pt": "o petisco; a comida de rua"
     },
     {
      "w": "朋友圈",
      "p": "péng you quān",
      "en": "WeChat Moments",
-     "de": "WeChat-Freundeskreis"
+     "de": "WeChat-Freundeskreis",
+     "pt": "os Momentos do WeChat"
     },
     {
      "w": "分享",
      "p": "fēn xiǎng",
      "en": "share",
-     "de": "teilen"
+     "de": "teilen",
+     "pt": "compartilhar"
     },
     {
      "w": "路线",
      "p": "lù xiàn",
      "en": "route",
-     "de": "Route"
+     "de": "Route",
+     "pt": "o roteiro; a rota"
     },
     {
      "w": "这种",
      "p": "zhè zhǒng",
      "en": "this kind",
-     "de": "diese Art"
+     "de": "diese Art",
+     "pt": "este tipo de"
     }
    ],
    "questions": [],
    "sources": [],
-   "legacy": "n3"
+   "legacy": "n3",
+   "title_pt": "City Walk",
+   "paragraphs_pt": [
+    "Ultimamente, muita gente gosta de fazer “City Walk”, ou seja, andar devagar pela cidade. Eles não têm pressa: olham as ruas e provam uns petiscos. Muita gente compartilha os roteiros nos Momentos do WeChat. Esse tipo de viagem em ritmo lento deixa a gente especialmente relaxado."
+   ]
   },
   {
    "lang": "zh",
@@ -1933,78 +2255,94 @@
      "w": "最近",
      "p": "zuì jìn",
      "en": "recently",
-     "de": "in letzter Zeit"
+     "de": "in letzter Zeit",
+     "pt": "ultimamente; recente"
     },
     {
      "w": "流行",
      "p": "liú xíng",
      "en": "be trendy",
-     "de": "angesagt sein"
+     "de": "angesagt sein",
+     "pt": "estar na moda; popular"
     },
     {
      "w": "多巴胺",
      "p": "duō bā àn",
      "en": "dopamine",
-     "de": "Dopamin"
+     "de": "Dopamin",
+     "pt": "a dopamina"
     },
     {
      "w": "穿搭",
      "p": "chuān dā",
      "en": "outfit",
-     "de": "Outfit"
+     "de": "Outfit",
+     "pt": "o look; a combinação de roupas"
     },
     {
      "w": "颜色",
      "p": "yán sè",
      "en": "color",
-     "de": "Farbe"
+     "de": "Farbe",
+     "pt": "a cor"
     },
     {
      "w": "鲜艳",
      "p": "xiān yàn",
      "en": "bright",
-     "de": "leuchtend"
+     "de": "leuchtend",
+     "pt": "vibrante; vivo (cor)"
     },
     {
      "w": "黄色",
      "p": "huáng sè",
      "en": "yellow",
-     "de": "gelb"
+     "de": "gelb",
+     "pt": "amarelo"
     },
     {
      "w": "外套",
      "p": "wài tào",
      "en": "jacket",
-     "de": "Jacke"
+     "de": "Jacke",
+     "pt": "o casaco; a jaqueta"
     },
     {
      "w": "粉色",
      "p": "fěn sè",
      "en": "pink",
-     "de": "rosa"
+     "de": "rosa",
+     "pt": "rosa"
     },
     {
      "w": "裙子",
      "p": "qún zi",
      "en": "skirt",
-     "de": "Rock"
+     "de": "Rock",
+     "pt": "a saia"
     },
     {
      "w": "活力",
      "p": "huó lì",
      "en": "energy",
-     "de": "Energie"
+     "de": "Energie",
+     "pt": "a energia; a vitalidade"
     },
     {
      "w": "今天",
      "p": "jīn tiān",
      "en": "today",
-     "de": "heute"
+     "de": "heute",
+     "pt": "hoje"
     }
    ],
    "questions": [],
    "sources": [],
-   "legacy": "n5"
+   "legacy": "n5",
+   "title_pt": "Look dopamina",
+   "paragraphs_pt": [
+    "Agora está na moda o “look dopamina”: quanto mais vibrantes as cores, melhor. Jaqueta amarela, saia rosa — o visual fica cheio de energia. Não costumo usar cores vibrantes, mas hoje experimentei. Quando saí, uma amiga disse que eu parecia muito feliz."
+   ]
   },
   {
    "lang": "zh",
@@ -2029,78 +2367,94 @@
      "w": "每天",
      "p": "měi tiān",
      "en": "every day",
-     "de": "jeden Tag"
+     "de": "jeden Tag",
+     "pt": "todo dia"
     },
     {
      "w": "早上",
      "p": "zǎo shang",
      "en": "in the morning",
-     "de": "am Morgen"
+     "de": "am Morgen",
+     "pt": "de manhã; a manhã"
     },
     {
      "w": "地铁站",
      "p": "dì tiě zhàn",
      "en": "subway station",
-     "de": "U-Bahn-Station"
+     "de": "U-Bahn-Station",
+     "pt": "a estação de metrô"
     },
     {
      "w": "附近",
      "p": "fù jìn",
      "en": "nearby",
-     "de": "in der Nähe"
+     "de": "in der Nähe",
+     "pt": "perto; nas proximidades"
     },
     {
      "w": "咖啡店",
      "p": "kā fēi diàn",
      "en": "café",
-     "de": "Café"
+     "de": "Café",
+     "pt": "a cafeteria"
     },
     {
      "w": "一杯",
      "p": "yì bēi",
      "en": "a cup",
-     "de": "eine Tasse"
+     "de": "eine Tasse",
+     "pt": "uma xícara; um copo"
     },
     {
      "w": "咖啡",
      "p": "kā fēi",
      "en": "coffee",
-     "de": "Kaffee"
+     "de": "Kaffee",
+     "pt": "o café"
     },
     {
      "w": "店员",
      "p": "diàn yuán",
      "en": "shop assistant",
-     "de": "Verkäufer/in"
+     "de": "Verkäufer/in",
+     "pt": "o atendente; a atendente"
     },
     {
      "w": "总是",
      "p": "zǒng shì",
      "en": "always",
-     "de": "immer"
+     "de": "immer",
+     "pt": "sempre"
     },
     {
      "w": "打招呼",
      "p": "dǎ zhāo hu",
      "en": "say hello",
-     "de": "grüßen"
+     "de": "grüßen",
+     "pt": "cumprimentar"
     },
     {
      "w": "虽然",
      "p": "suī rán",
      "en": "although",
-     "de": "obwohl"
+     "de": "obwohl",
+     "pt": "embora; apesar de"
     },
     {
      "w": "我们",
      "p": "wǒ men",
      "en": "we",
-     "de": "wir"
+     "de": "wir",
+     "pt": "nós"
     }
    ],
    "questions": [],
    "sources": [],
-   "legacy": "a1"
+   "legacy": "a1",
+   "title_pt": "Uma manhã na cidade",
+   "paragraphs_pt": [
+    "Toda manhã compro um café quente numa cafeteria perto da estação de metrô. A atendente sempre me cumprimenta sorrindo, embora a gente não se conheça muito. Esse pequeno hábito deixou o começo do meu dia muito mais leve. Às vezes fico na janela vendo o vaivém das pessoas e acho a cidade muito gentil."
+   ]
   },
   {
    "lang": "zh",
@@ -2125,78 +2479,94 @@
      "w": "学习",
      "p": "xué xí",
      "en": "study",
-     "de": "lernen"
+     "de": "lernen",
+     "pt": "estudar; aprender"
     },
     {
      "w": "外语",
      "p": "wài yǔ",
      "en": "foreign language",
-     "de": "Fremdsprache"
+     "de": "Fremdsprache",
+     "pt": "a língua estrangeira"
     },
     {
      "w": "重要",
      "p": "zhòng yào",
      "en": "important",
-     "de": "wichtig"
+     "de": "wichtig",
+     "pt": "importante"
     },
     {
      "w": "坚持",
      "p": "jiān chí",
      "en": "persist",
-     "de": "durchhalten"
+     "de": "durchhalten",
+     "pt": "persistir; não desistir"
     },
     {
      "w": "每天",
      "p": "měi tiān",
      "en": "every day",
-     "de": "jeden Tag"
+     "de": "jeden Tag",
+     "pt": "todo dia"
     },
     {
      "w": "需要",
      "p": "xū yào",
      "en": "need",
-     "de": "brauchen"
+     "de": "brauchen",
+     "pt": "precisar"
     },
     {
      "w": "二十",
      "p": "èr shí",
      "en": "twenty",
-     "de": "zwanzig"
+     "de": "zwanzig",
+     "pt": "vinte"
     },
     {
      "w": "分钟",
      "p": "fēn zhōng",
      "en": "minute",
-     "de": "Minute"
+     "de": "Minute",
+     "pt": "o minuto"
     },
     {
      "w": "保持",
      "p": "bǎo chí",
      "en": "keep up",
-     "de": "beibehalten"
+     "de": "beibehalten",
+     "pt": "manter"
     },
     {
      "w": "下去",
      "p": "xià qù",
      "en": "continue",
-     "de": "weitermachen"
+     "de": "weitermachen",
+     "pt": "continuar (depois de verbo)"
     },
     {
      "w": "不必",
      "p": "bú bì",
      "en": "need not",
-     "de": "nicht nötig"
+     "de": "nicht nötig",
+     "pt": "não é preciso"
     },
     {
      "w": "一开始",
      "p": "yì kāi shǐ",
      "en": "at first",
-     "de": "am Anfang"
+     "de": "am Anfang",
+     "pt": "no início"
     }
    ],
    "questions": [],
    "sources": [],
-   "legacy": "a2"
+   "legacy": "a2",
+   "title_pt": "Como estudar",
+   "paragraphs_pt": [
+    "Ao aprender uma língua estrangeira, o mais importante é persistir. Bastam vinte minutos por dia, mas é preciso manter o ritmo. Não é preciso decorar muitas palavras novas logo de início; dá para começar pelas mais usadas. Ouvir e falar bastante funciona melhor do que decorar."
+   ]
   },
   {
    "lang": "zh",
@@ -2224,78 +2594,95 @@
      "w": "中秋节",
      "p": "zhōng qiū jié",
      "en": "Mid-Autumn Festival",
-     "de": "Mondfest"
+     "de": "Mondfest",
+     "pt": "a Festa do Meio do Outono"
     },
     {
      "w": "中国",
      "p": "zhōng guó",
      "en": "China",
-     "de": "China"
+     "de": "China",
+     "pt": "a China"
     },
     {
      "w": "传统",
      "p": "chuán tǒng",
      "en": "tradition",
-     "de": "Tradition"
+     "de": "Tradition",
+     "pt": "a tradição; tradicional"
     },
     {
      "w": "节日",
      "p": "jié rì",
      "en": "festival",
-     "de": "Feiertag"
+     "de": "Feiertag",
+     "pt": "a festa; o feriado"
     },
     {
      "w": "每年",
      "p": "měi nián",
      "en": "every year",
-     "de": "jedes Jahr"
+     "de": "jedes Jahr",
+     "pt": "todo ano"
     },
     {
      "w": "农历",
      "p": "nóng lì",
      "en": "lunar calendar",
-     "de": "Mondkalender"
+     "de": "Mondkalender",
+     "pt": "o calendário lunar"
     },
     {
      "w": "八月",
      "p": "bā yuè",
      "en": "eighth month",
-     "de": "August"
+     "de": "August",
+     "pt": "agosto; o oitavo mês"
     },
     {
      "w": "十五",
      "p": "shí wǔ",
      "en": "fifteen",
-     "de": "fünfzehn"
+     "de": "fünfzehn",
+     "pt": "quinze"
     },
     {
      "w": "这一天",
      "p": "zhè yì tiān",
      "en": "this day",
-     "de": "dieser Tag"
+     "de": "dieser Tag",
+     "pt": "neste dia"
     },
     {
      "w": "家人",
      "p": "jiā rén",
      "en": "family members",
-     "de": "Familienmitglieder"
+     "de": "Familienmitglieder",
+     "pt": "a família; os familiares"
     },
     {
      "w": "一起",
      "p": "yì qǐ",
      "en": "together",
-     "de": "zusammen"
+     "de": "zusammen",
+     "pt": "juntos"
     },
     {
      "w": "月饼",
      "p": "yuè bǐng",
      "en": "mooncake",
-     "de": "Mondkuchen"
+     "de": "Mondkuchen",
+     "pt": "o bolo da lua"
     }
    ],
    "questions": [],
    "sources": [],
-   "legacy": "a3"
+   "legacy": "a3",
+   "title_pt": "A Festa do Meio do Outono",
+   "paragraphs_pt": [
+    "A Festa do Meio do Outono é uma festa tradicional chinesa, no dia 15 do oitavo mês lunar. Neste dia, a família se reúne para comer bolo da lua e admirar a lua. As pessoas acreditam que a lua cheia simboliza a reunião da família.",
+    "Enquanto comem bolo da lua, todos contam histórias sobre a lua. O bolo da lua é doce e cheiroso, um quitute indispensável na festa."
+   ]
   },
   {
    "lang": "zh",
@@ -2320,78 +2707,94 @@
      "w": "现在",
      "p": "xiàn zài",
      "en": "now",
-     "de": "jetzt"
+     "de": "jetzt",
+     "pt": "agora"
     },
     {
      "w": "很多",
      "p": "hěn duō",
      "en": "many",
-     "de": "viele"
+     "de": "viele",
+     "pt": "muitos; muito"
     },
     {
      "w": "年轻人",
      "p": "nián qīng rén",
      "en": "young people",
-     "de": "junge Leute"
+     "de": "junge Leute",
+     "pt": "os jovens"
     },
     {
      "w": "喜欢",
      "p": "xǐ huan",
      "en": "like",
-     "de": "mögen"
+     "de": "mögen",
+     "pt": "gostar de"
     },
     {
      "w": "社交媒体",
      "p": "shè jiāo méi tǐ",
      "en": "social media",
-     "de": "soziale Medien"
+     "de": "soziale Medien",
+     "pt": "as redes sociais"
     },
     {
      "w": "分享",
      "p": "fēn xiǎng",
      "en": "share",
-     "de": "teilen"
+     "de": "teilen",
+     "pt": "compartilhar"
     },
     {
      "w": "自己",
      "p": "zì jǐ",
      "en": "oneself",
-     "de": "selbst"
+     "de": "selbst",
+     "pt": "si mesmo; próprio"
     },
     {
      "w": "生活",
      "p": "shēng huó",
      "en": "life",
-     "de": "Leben"
+     "de": "Leben",
+     "pt": "a vida; viver"
     },
     {
      "w": "好看",
      "p": "hǎo kàn",
      "en": "nice to look at",
-     "de": "schön"
+     "de": "schön",
+     "pt": "bonito (de ver)"
     },
     {
      "w": "照片",
      "p": "zhào piàn",
      "en": "photo",
-     "de": "Foto"
+     "de": "Foto",
+     "pt": "a foto"
     },
     {
      "w": "常常",
      "p": "cháng cháng",
      "en": "often",
-     "de": "oft"
+     "de": "oft",
+     "pt": "muitas vezes; frequentemente"
     },
     {
      "w": "看很久",
      "p": "kàn hěn jiǔ",
      "en": "look at for a long time",
-     "de": "lange anschauen"
+     "de": "lange anschauen",
+     "pt": "olhar por muito tempo"
     }
    ],
    "questions": [],
    "sources": [],
-   "legacy": "y3"
+   "legacy": "y3",
+   "title_pt": "A vida nas redes sociais",
+   "paragraphs_pt": [
+    "Hoje muitos jovens gostam de compartilhar a própria vida nas redes sociais. Uma foto bonita muitas vezes faz a gente parar e olhar por muito tempo. Porém, às vezes só conseguimos ver o melhor lado dos outros. Por isso, devemos nos importar mais com a vida real, e não só correr atrás de curtidas."
+   ]
   },
   {
    "lang": "zh",
@@ -2416,78 +2819,94 @@
      "w": "城市",
      "p": "chéng shì",
      "en": "city",
-     "de": "Stadt"
+     "de": "Stadt",
+     "pt": "a cidade"
     },
     {
      "w": "房子",
      "p": "fáng zi",
      "en": "apartment",
-     "de": "Wohnung"
+     "de": "Wohnung",
+     "pt": "a casa; o apartamento"
     },
     {
      "w": "容易",
      "p": "róng yì",
      "en": "easy",
-     "de": "einfach"
+     "de": "einfach",
+     "pt": "fácil"
     },
     {
      "w": "房租",
      "p": "fáng zū",
      "en": "rent",
-     "de": "Miete"
+     "de": "Miete",
+     "pt": "o aluguel"
     },
     {
      "w": "通常",
      "p": "tōng cháng",
      "en": "usually",
-     "de": "normalerweise"
+     "de": "normalerweise",
+     "pt": "normalmente"
     },
     {
      "w": "很多",
      "p": "hěn duō",
      "en": "many",
-     "de": "viele"
+     "de": "viele",
+     "pt": "muitos; muito"
     },
     {
      "w": "网上",
      "p": "wǎng shàng",
      "en": "online",
-     "de": "online"
+     "de": "online",
+     "pt": "na internet"
     },
     {
      "w": "搜索",
      "p": "sōu suǒ",
      "en": "search",
-     "de": "suchen"
+     "de": "suchen",
+     "pt": "pesquisar; buscar"
     },
     {
      "w": "合适",
      "p": "hé shì",
      "en": "suitable",
-     "de": "passend"
+     "de": "passend",
+     "pt": "adequado"
     },
     {
      "w": "房源",
      "p": "fáng yuán",
      "en": "listing",
-     "de": "Wohnungsangebot"
+     "de": "Wohnungsangebot",
+     "pt": "o imóvel disponível"
     },
     {
      "w": "然后",
      "p": "rán hòu",
      "en": "then",
-     "de": "dann"
+     "de": "dann",
+     "pt": "depois; em seguida"
     },
     {
      "w": "看房",
      "p": "kàn fáng",
      "en": "view an apartment",
-     "de": "Wohnung besichtigen"
+     "de": "Wohnung besichtigen",
+     "pt": "visitar um imóvel"
     }
    ],
    "questions": [],
    "sources": [],
-   "legacy": "y4"
+   "legacy": "y4",
+   "title_pt": "Procurar apartamento na Europa",
+   "paragraphs_pt": [
+    "Achar apartamento numa cidade grande não é nada fácil, e o aluguel costuma ser caro. Muita gente procura na internet um imóvel adequado e depois vai visitá-lo. Antes de assinar o contrato, leia as cláusulas com atenção. Se tiver algum problema, é melhor perguntar logo ao proprietário, e não se arrepender depois da mudança."
+   ]
   },
   {
    "lang": "zh",
@@ -2512,78 +2931,94 @@
      "w": "目的地",
      "p": "mù dì dì",
      "en": "destination",
-     "de": "Ziel"
+     "de": "Ziel",
+     "pt": "o destino"
     },
     {
      "w": "散步",
      "p": "sàn bù",
      "en": "walk",
-     "de": "spazieren gehen"
+     "de": "spazieren gehen",
+     "pt": "caminhar; o passeio a pé"
     },
     {
      "w": "可以",
      "p": "kě yǐ",
      "en": "may",
-     "de": "können"
+     "de": "können",
+     "pt": "poder"
     },
     {
      "w": "重新",
      "p": "chóng xīn",
      "en": "again",
-     "de": "neu"
+     "de": "neu",
+     "pt": "de novo; novamente"
     },
     {
      "w": "认识",
      "p": "rèn shi",
      "en": "get to know",
-     "de": "kennenlernen"
+     "de": "kennenlernen",
+     "pt": "conhecer"
     },
     {
      "w": "城市",
      "p": "chéng shì",
      "en": "city",
-     "de": "Stadt"
+     "de": "Stadt",
+     "pt": "a cidade"
     },
     {
      "w": "沿着",
      "p": "yán zhe",
      "en": "along",
-     "de": "entlang"
+     "de": "entlang",
+     "pt": "ao longo de"
     },
     {
      "w": "经过",
      "p": "jīng guò",
      "en": "pass",
-     "de": "vorbei an"
+     "de": "vorbei an",
+     "pt": "passar por"
     },
     {
      "w": "小店",
      "p": "xiǎo diàn",
      "en": "small shop",
-     "de": "kleiner Laden"
+     "de": "kleiner Laden",
+     "pt": "a lojinha"
     },
     {
      "w": "老房子",
      "p": "lǎo fáng zi",
      "en": "old house",
-     "de": "altes Haus"
+     "de": "altes Haus",
+     "pt": "a casa antiga"
     },
     {
      "w": "偶尔",
      "p": "ǒu ěr",
      "en": "occasionally",
-     "de": "gelegentlich"
+     "de": "gelegentlich",
+     "pt": "de vez em quando"
     },
     {
      "w": "照片",
      "p": "zhào piàn",
      "en": "photo",
-     "de": "Foto"
+     "de": "Foto",
+     "pt": "a foto"
     }
    ],
    "questions": [],
    "sources": [],
-   "legacy": "a6"
+   "legacy": "a6",
+   "title_pt": "Caminhar pela cidade",
+   "paragraphs_pt": [
+    "Uma caminhada sem destino pode fazer a gente conhecer uma cidade de novo. Vou andando pela beira do rio, passando por lojinhas e casas antigas. De vez em quando paro para tirar uma foto ou comer um baozi quentinho. Uma caminhada assim deixa a gente mais feliz do que qualquer GPS."
+   ]
   },
   {
    "lang": "zh",
@@ -2608,78 +3043,94 @@
      "w": "第一次",
      "p": "dì yī cì",
      "en": "first time",
-     "de": "das erste Mal"
+     "de": "das erste Mal",
+     "pt": "a primeira vez"
     },
     {
      "w": "番茄",
      "p": "fān qié",
      "en": "tomato",
-     "de": "Tomate"
+     "de": "Tomate",
+     "pt": "o tomate"
     },
     {
      "w": "结果",
      "p": "jié guǒ",
      "en": "result",
-     "de": "Ergebnis"
+     "de": "Ergebnis",
+     "pt": "o resultado; no fim"
     },
     {
      "w": "一个",
      "p": "yí ge",
      "en": "a; one",
-     "de": "ein"
+     "de": "ein",
+     "pt": "um; uma"
     },
     {
      "w": "教学",
      "p": "jiào xué",
      "en": "teaching",
-     "de": "Lehr-"
+     "de": "Lehr-",
+     "pt": "o ensino; didático"
     },
     {
      "w": "视频",
      "p": "shì pín",
      "en": "video",
-     "de": "Video"
+     "de": "Video",
+     "pt": "o vídeo"
     },
     {
      "w": "明白",
      "p": "míng bai",
      "en": "understand",
-     "de": "verstehen"
+     "de": "verstehen",
+     "pt": "entender; claro"
     },
     {
      "w": "火候",
      "p": "huǒ hou",
      "en": "heat (cooking)",
-     "de": "Hitze"
+     "de": "Hitze",
+     "pt": "o ponto do fogo"
     },
     {
      "w": "重要",
      "p": "zhòng yào",
      "en": "important",
-     "de": "wichtig"
+     "de": "wichtig",
+     "pt": "importante"
     },
     {
      "w": "做饭",
      "p": "zuò fàn",
      "en": "cook",
-     "de": "kochen"
+     "de": "kochen",
+     "pt": "cozinhar"
     },
     {
      "w": "其实",
      "p": "qí shí",
      "en": "actually",
-     "de": "eigentlich"
+     "de": "eigentlich",
+     "pt": "na verdade"
     },
     {
      "w": "关键",
      "p": "guān jiàn",
      "en": "key",
-     "de": "entscheidend"
+     "de": "entscheidend",
+     "pt": "a chave; o essencial"
     }
    ],
    "questions": [],
    "sources": [],
-   "legacy": "a8"
+   "legacy": "a8",
+   "title_pt": "Aprender a fazer um prato",
+   "paragraphs_pt": [
+    "A primeira vez que tentei fazer ovo mexido com tomate, ficou salgado demais. Depois assisti a um vídeo de receita e entendi como o ponto do fogo é importante. Cozinhar na verdade não é difícil, o segredo é a paciência. Agora, todo fim de semana eu faço um prato novo."
+   ]
   },
   {
    "lang": "zh",
@@ -2704,78 +3155,94 @@
      "w": "同事",
      "p": "tóng shì",
      "en": "colleague",
-     "de": "Kollege/Kollegin"
+     "de": "Kollege/Kollegin",
+     "pt": "o colega de trabalho"
     },
     {
      "w": "临时",
      "p": "lín shí",
      "en": "at short notice",
-     "de": "kurzfristig"
+     "de": "kurzfristig",
+     "pt": "de última hora; temporário"
     },
     {
      "w": "周末",
      "p": "zhōu mò",
      "en": "weekend",
-     "de": "Wochenende"
+     "de": "Wochenende",
+     "pt": "o fim de semana"
     },
     {
      "w": "加班",
      "p": "jiā bān",
      "en": "work overtime",
-     "de": "Überstunden machen"
+     "de": "Überstunden machen",
+     "pt": "fazer hora extra"
     },
     {
      "w": "为难",
      "p": "wéi nán",
      "en": "feel torn",
-     "de": "in der Klemme sein"
+     "de": "in der Klemme sein",
+     "pt": "ficar sem saber o que fazer; constranger"
     },
     {
      "w": "总是",
      "p": "zǒng shì",
      "en": "always",
-     "de": "immer"
+     "de": "immer",
+     "pt": "sempre"
     },
     {
      "w": "答应",
      "p": "dā ying",
      "en": "agree",
-     "de": "zusagen"
+     "de": "zusagen",
+     "pt": "aceitar; dizer sim"
     },
     {
      "w": "然后",
      "p": "rán hòu",
      "en": "then",
-     "de": "dann"
+     "de": "dann",
+     "pt": "depois; em seguida"
     },
     {
      "w": "现在",
      "p": "xiàn zài",
      "en": "now",
-     "de": "jetzt"
+     "de": "jetzt",
+     "pt": "agora"
     },
     {
      "w": "礼貌",
      "p": "lǐ mào",
      "en": "polite",
-     "de": "höflich"
+     "de": "höflich",
+     "pt": "educado; a educação"
     },
     {
      "w": "拒绝",
      "p": "jù jué",
      "en": "refuse",
-     "de": "ablehnen"
+     "de": "ablehnen",
+     "pt": "recusar; dizer não"
     },
     {
      "w": "安排",
      "p": "ān pái",
      "en": "plans",
-     "de": "Pläne"
+     "de": "Pläne",
+     "pt": "o compromisso; organizar"
     }
    ],
    "questions": [],
    "sources": [],
-   "legacy": "y6"
+   "legacy": "y6",
+   "title_pt": "Aprender a dizer não",
+   "paragraphs_pt": [
+    "Um colega me pediu de última hora para trabalhar no fim de semana, e fiquei sem saber o que fazer. Antes eu sempre dizia sim e ficava exausto. Agora aprendi a dizer não com educação. Eu disse: “Esta semana já tenho compromisso, da próxima vez eu ajudo com certeza.”"
+   ]
   },
   {
    "lang": "zh",
@@ -2800,78 +3267,94 @@
      "w": "城市里",
      "p": "chéng shì lǐ",
      "en": "in the city",
-     "de": "in der Stadt"
+     "de": "in der Stadt",
+     "pt": "na cidade"
     },
     {
      "w": "单车",
      "p": "dān chē",
      "en": "bicycle",
-     "de": "Fahrrad"
+     "de": "Fahrrad",
+     "pt": "a bicicleta"
     },
     {
      "w": "方便",
      "p": "fāng biàn",
      "en": "convenient",
-     "de": "praktisch"
+     "de": "praktisch",
+     "pt": "prático; conveniente"
     },
     {
      "w": "出行",
      "p": "chū xíng",
      "en": "travel",
-     "de": "reisen"
+     "de": "reisen",
+     "pt": "locomover-se; sair (de viagem)"
     },
     {
      "w": "方式",
      "p": "fāng shì",
      "en": "way",
-     "de": "Weise"
+     "de": "Weise",
+     "pt": "o jeito; a forma"
     },
     {
      "w": "很多",
      "p": "hěn duō",
      "en": "many",
-     "de": "viele"
+     "de": "viele",
+     "pt": "muitos; muito"
     },
     {
      "w": "选择",
      "p": "xuǎn zé",
      "en": "choose",
-     "de": "wählen"
+     "de": "wählen",
+     "pt": "escolher; a escolha"
     },
     {
      "w": "一辆",
      "p": "yí liàng",
      "en": "a (vehicle)",
-     "de": "ein (Fahrzeug)"
+     "de": "ein (Fahrzeug)",
+     "pt": "um (veículo)"
     },
     {
      "w": "共享",
      "p": "gòng xiǎng",
      "en": "shared",
-     "de": "geteilt"
+     "de": "geteilt",
+     "pt": "compartilhado"
     },
     {
      "w": "手机",
      "p": "shǒu jī",
      "en": "phone",
-     "de": "Handy"
+     "de": "Handy",
+     "pt": "o celular"
     },
     {
      "w": "解锁",
      "p": "jiě suǒ",
      "en": "unlock",
-     "de": "entsperren"
+     "de": "entsperren",
+     "pt": "desbloquear"
     },
     {
      "w": "不过",
      "p": "bú guò",
      "en": "however",
-     "de": "aber; allerdings"
+     "de": "aber; allerdings",
+     "pt": "porém; mas"
     }
    ],
    "questions": [],
    "sources": [],
-   "legacy": "y9"
+   "legacy": "y9",
+   "title_pt": "Alugar uma bicicleta",
+   "paragraphs_pt": [
+    "Nas cidades grandes, andar de bicicleta é um jeito muito prático de se locomover. Muita gente prefere alugar uma bicicleta compartilhada e desbloqueá-la pelo celular. Mas é preciso tomar cuidado onde estacionar, para não bloquear a calçada. Pedalando pela cidade, com o vento no rosto, a sensação é de liberdade total."
+   ]
   },
   {
    "lang": "zh",
@@ -2896,78 +3379,94 @@
      "w": "年轻人",
      "p": "nián qīng rén",
      "en": "young people",
-     "de": "junge Leute"
+     "de": "junge Leute",
+     "pt": "os jovens"
     },
     {
      "w": "松弛感",
      "p": "sōng chí gǎn",
      "en": "relaxed ease",
-     "de": "entspannte Gelassenheit"
+     "de": "entspannte Gelassenheit",
+     "pt": "a leveza; a descontração"
     },
     {
      "w": "什么",
      "p": "shén me",
      "en": "what",
-     "de": "was"
+     "de": "was",
+     "pt": "que; o quê"
     },
     {
      "w": "焦虑",
      "p": "jiāo lǜ",
      "en": "anxiety",
-     "de": "Angst"
+     "de": "Angst",
+     "pt": "a ansiedade; ansioso"
     },
     {
      "w": "控制",
      "p": "kòng zhì",
      "en": "control",
-     "de": "kontrollieren"
+     "de": "kontrollieren",
+     "pt": "controlar; o controle"
     },
     {
      "w": "工作",
      "p": "gōng zuò",
      "en": "work; job",
-     "de": "Arbeit"
+     "de": "Arbeit",
+     "pt": "o trabalho; trabalhar"
     },
     {
      "w": "完成",
      "p": "wán chéng",
      "en": "complete",
-     "de": "erledigen"
+     "de": "erledigen",
+     "pt": "concluir; terminar"
     },
     {
      "w": "以后",
      "p": "yǐ hòu",
      "en": "afterwards",
-     "de": "danach"
+     "de": "danach",
+     "pt": "depois; no futuro"
     },
     {
      "w": "放下",
      "p": "fàng xià",
      "en": "put down",
-     "de": "weglegen"
+     "de": "weglegen",
+     "pt": "largar; pôr de lado"
     },
     {
      "w": "手机",
      "p": "shǒu jī",
      "en": "phone",
-     "de": "Handy"
+     "de": "Handy",
+     "pt": "o celular"
     },
     {
      "w": "休息",
      "p": "xiū xi",
      "en": "rest",
-     "de": "sich ausruhen"
+     "de": "sich ausruhen",
+     "pt": "descansar"
     },
     {
      "w": "生活",
      "p": "shēng huó",
      "en": "life",
-     "de": "Leben"
+     "de": "Leben",
+     "pt": "a vida; viver"
     }
    ],
    "questions": [],
    "sources": [],
-   "legacy": "n4"
+   "legacy": "n4",
+   "title_pt": "Leveza",
+   "paragraphs_pt": [
+    "Os jovens costumam dizer que é preciso ter “leveza” na vida. Ter leveza não é não fazer nada, e sim não se deixar controlar pela ansiedade. Por exemplo: terminado o trabalho, largue o celular e descanse de verdade. Com uma rotina na vida, o humor naturalmente melhora."
+   ]
   },
   {
    "lang": "zh",
@@ -2992,78 +3491,94 @@
      "w": "很多",
      "p": "hěn duō",
      "en": "many",
-     "de": "viele"
+     "de": "viele",
+     "pt": "muitos; muito"
     },
     {
      "w": "提供",
      "p": "tí gōng",
      "en": "provide",
-     "de": "bieten"
+     "de": "bieten",
+     "pt": "oferecer; fornecer"
     },
     {
      "w": "情绪价值",
      "p": "qíng xù jià zhí",
      "en": "emotional value",
-     "de": "emotionaler Wert"
+     "de": "emotionaler Wert",
+     "pt": "o apoio emocional"
     },
     {
      "w": "朋友",
      "p": "péng you",
      "en": "friend",
-     "de": "Freund/in"
+     "de": "Freund/in",
+     "pt": "o amigo; a amiga"
     },
     {
      "w": "理解",
      "p": "lǐ jiě",
      "en": "understand",
-     "de": "verstehen"
+     "de": "verstehen",
+     "pt": "entender; compreender"
     },
     {
      "w": "觉得",
      "p": "jué de",
      "en": "feel",
-     "de": "finden"
+     "de": "finden",
+     "pt": "achar; sentir"
     },
     {
      "w": "照顾",
      "p": "zhào gu",
      "en": "look after",
-     "de": "sich kümmern"
+     "de": "sich kümmern",
+     "pt": "cuidar de"
     },
     {
      "w": "辛苦",
      "p": "xīn kǔ",
      "en": "hard",
-     "de": "anstrengend"
+     "de": "anstrengend",
+     "pt": "cansativo; trabalhoso"
     },
     {
      "w": "有时候",
      "p": "yǒu shí hou",
      "en": "sometimes",
-     "de": "manchmal"
+     "de": "manchmal",
+     "pt": "às vezes"
     },
     {
      "w": "道理",
      "p": "dào li",
      "en": "reason",
-     "de": "Einsicht"
+     "de": "Einsicht",
+     "pt": "a razão; o argumento; o conselho"
     },
     {
      "w": "我们",
      "p": "wǒ men",
      "en": "we",
-     "de": "wir"
+     "de": "wir",
+     "pt": "nós"
     },
     {
      "w": "可以",
      "p": "kě yǐ",
      "en": "may",
-     "de": "können"
+     "de": "können",
+     "pt": "poder"
     }
    ],
    "questions": [],
    "sources": [],
-   "legacy": "n6"
+   "legacy": "n6",
+   "title_pt": "Apoio emocional",
+   "paragraphs_pt": [
+    "Muita gente diz que é bom ter por perto amigos que deem “apoio emocional”. Ou seja, a pessoa escuta você, entende você e faz você se sentir cuidado. Às vezes, um simples “você deve estar cansado” vale mais do que muitos conselhos. Também podemos tentar dar um pouco mais de carinho a quem está à nossa volta."
+   ]
   }
  ]
 }

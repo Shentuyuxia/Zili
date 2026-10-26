@@ -27,65 +27,80 @@
      "w": "胶片相机",
      "p": "jiāo piàn xiàng jī",
      "en": "film camera",
-     "de": "Filmkamera"
+     "de": "Filmkamera",
+     "pt": "a câmera analógica"
     },
     {
      "w": "拍照",
      "p": "pāi zhào",
      "en": "take photos",
-     "de": "fotografieren"
+     "de": "fotografieren",
+     "pt": "tirar fotos"
     },
     {
      "w": "胶卷",
      "p": "jiāo juǎn",
      "en": "roll of film",
-     "de": "Filmrolle"
+     "de": "Filmrolle",
+     "pt": "o filme fotográfico"
     },
     {
      "w": "张数",
      "p": "zhāng shù",
      "en": "number of frames",
-     "de": "Anzahl der Bilder"
+     "de": "Anzahl der Bilder",
+     "pt": "o número de poses"
     },
     {
      "w": "有限",
      "p": "yǒu xiàn",
      "en": "limited",
-     "de": "begrenzt"
+     "de": "begrenzt",
+     "pt": "limitado"
     },
     {
      "w": "想好",
      "p": "xiǎng hǎo",
      "en": "think through",
-     "de": "sich überlegen"
+     "de": "sich überlegen",
+     "pt": "pensar bem"
     },
     {
      "w": "拍完",
      "p": "pāi wán",
      "en": "finish shooting",
-     "de": "fertig fotografieren"
+     "de": "fertig fotografieren",
+     "pt": "terminar de fotografar"
     },
     {
      "w": "冲洗",
      "p": "chōng xǐ",
      "en": "develop (photos)",
-     "de": "entwickeln (Fotos)"
+     "de": "entwickeln (Fotos)",
+     "pt": "revelar (fotos)"
     },
     {
      "w": "等待",
      "p": "děng dài",
      "en": "wait",
-     "de": "warten"
+     "de": "warten",
+     "pt": "esperar; a espera"
     },
     {
      "w": "过程",
      "p": "guò chéng",
      "en": "process",
-     "de": "Verlauf; Prozess"
+     "de": "Verlauf; Prozess",
+     "pt": "o processo"
     }
    ],
    "questions": [],
-   "sources": []
+   "sources": [],
+   "title_pt": "Câmeras analógicas",
+   "paragraphs_pt": [
+    "Ultimamente, muitos jovens começaram a fotografar com câmeras analógicas. O filme tem poucas poses, então é preciso pensar bem em cada foto.",
+    "Depois de fotografar, os amigos vão juntos revelar as fotos. A espera é demorada, mas deixa a gente muito feliz."
+   ]
   },
   {
    "lang": "zh",
@@ -116,49 +131,57 @@
      "w": "画",
      "p": "huà",
      "en": "to draw; to paint",
-     "de": "malen; zeichnen"
+     "de": "malen; zeichnen",
+     "pt": "desenhar; pintar"
     },
     {
      "w": "手机",
      "p": "shǒu jī",
      "en": "mobile phone",
-     "de": "das Handy"
+     "de": "das Handy",
+     "pt": "o celular"
     },
     {
      "w": "拍",
      "p": "pāi",
      "en": "to take (a photo)",
-     "de": "(ein Foto) machen"
+     "de": "(ein Foto) machen",
+     "pt": "tirar (foto)"
     },
     {
      "w": "照片",
      "p": "zhào piàn",
      "en": "photo",
-     "de": "das Foto"
+     "de": "das Foto",
+     "pt": "a foto"
     },
     {
      "w": "发",
      "p": "fā",
      "en": "to send",
-     "de": "schicken; senden"
+     "de": "schicken; senden",
+     "pt": "mandar; enviar"
     },
     {
      "w": "远",
      "p": "yuǎn",
      "en": "far",
-     "de": "weit"
+     "de": "weit",
+     "pt": "longe"
     },
     {
      "w": "大拇指",
      "p": "dà mu zhǐ",
      "en": "thumb; thumbs-up",
-     "de": "der Daumen; Daumen hoch"
+     "de": "der Daumen; Daumen hoch",
+     "pt": "o polegar; o joinha"
     },
     {
      "w": "点赞",
      "p": "diǎn zàn",
      "en": "to give a like",
-     "de": "liken; ein Like geben"
+     "de": "liken; ein Like geben",
+     "pt": "curtir (uma postagem)"
     }
    ],
    "grammar": "画得很好 'drew very well': verb + 得 + adjective describes how well an action is done.",
@@ -168,7 +191,14 @@
     "奶奶回了什么？",
     "明天小月想画什么？"
    ],
-   "sources": []
+   "sources": [],
+   "title_pt": "O joinha da vovó",
+   "paragraphs_pt": [
+    "Hoje é quarta-feira. Em casa, Xiaoyue desenhou um gatinho. A mamãe tirou uma foto com o celular e mandou para a vovó.",
+    "A vovó mora muito longe. Alguns minutos depois, ela respondeu com um joinha. Xiaoyue perguntou: “Mamãe, o que é isso?”",
+    "A mamãe disse: “Isso se chama curtir. A vovó está dizendo que você desenhou muito bem!” Xiaoyue ficou muito feliz: “Amanhã vou desenhar um cachorrinho!”"
+   ],
+   "grammar_pt": "画得很好 “desenhou muito bem”: verbo + 得 + adjetivo descreve como uma ação é feita."
   },
   {
    "lang": "zh",
@@ -217,61 +247,71 @@
      "w": "打卡",
      "p": "dǎ kǎ",
      "en": "to clock in; to 'check in' at a place or log a daily habit online",
-     "de": "einstempeln; „einchecken“ (Ort besuchen oder Gewohnheit online festhalten)"
+     "de": "einstempeln; „einchecken“ (Ort besuchen oder Gewohnheit online festhalten)",
+     "pt": "bater o ponto; fazer check-in (num lugar ou num hábito diário, online)"
     },
     {
      "w": "火",
      "p": "huǒ",
      "en": "popular, trending (colloquial)",
-     "de": "angesagt; beliebt (umgangssprachlich)"
+     "de": "angesagt; beliebt (umgangssprachlich)",
+     "pt": "bombando; em alta (coloquial)"
     },
     {
      "w": "有名",
      "p": "yǒu míng",
      "en": "famous",
-     "de": "bekannt; berühmt"
+     "de": "bekannt; berühmt",
+     "pt": "famoso"
     },
     {
      "w": "原来",
      "p": "yuán lái",
      "en": "so that's how it is",
-     "de": "ach so; also doch"
+     "de": "ach so; also doch",
+     "pt": "ah, então é isso"
     },
     {
      "w": "记",
      "p": "jì",
      "en": "to note down",
-     "de": "aufschreiben; notieren"
+     "de": "aufschreiben; notieren",
+     "pt": "anotar"
     },
     {
      "w": "坚持",
      "p": "jiān chí",
      "en": "to keep at it; persevere",
-     "de": "durchhalten; dranbleiben"
+     "de": "durchhalten; dranbleiben",
+     "pt": "persistir; não desistir"
     },
     {
      "w": "养成",
      "p": "yǎng chéng",
      "en": "to form (a habit)",
-     "de": "(eine Gewohnheit) entwickeln"
+     "de": "(eine Gewohnheit) entwickeln",
+     "pt": "criar (um hábito)"
     },
     {
      "w": "习惯",
      "p": "xí guàn",
      "en": "habit",
-     "de": "die Gewohnheit"
+     "de": "die Gewohnheit",
+     "pt": "o hábito"
     },
     {
      "w": "连着",
      "p": "lián zhe",
      "en": "in a row",
-     "de": "hintereinander"
+     "de": "hintereinander",
+     "pt": "seguidos"
     },
     {
      "w": "认真",
      "p": "rèn zhēn",
      "en": "conscientious; serious",
-     "de": "gewissenhaft; ernsthaft"
+     "de": "gewissenhaft; ernsthaft",
+     "pt": "dedicado; sério"
     }
    ],
    "grammar": "A 比 B + adjective + 多了 means 'A is much more … than B': 你比我认真多了 'You are much more disciplined than me.'",
@@ -281,7 +321,20 @@
     "小王已经连着跑了多少天？",
     "林林打算每天做什么？"
    ],
-   "sources": []
+   "sources": [],
+   "title_pt": "Você já fez check-in hoje?",
+   "paragraphs_pt": [
+    "Linlin: O que você está fotografando? Já tirou um monte de fotos.",
+    "Xiao Wang: Estou fazendo check-in. Este café está bombando ultimamente, muita gente da internet já veio aqui.",
+    "Linlin: Check-in? Não é só quando a gente bate o ponto no trabalho?",
+    "Xiao Wang: Antes era assim. Agora “打卡” tem mais sentidos: ir a um lugar famoso, tirar uma foto e postar na internet também se chama fazer check-in.",
+    "Linlin: Ah, então é isso. E as fotos que você posta todo dia depois de correr?",
+    "Xiao Wang: Também é check-in! Se você registra o que faz todo dia e mantém isso por um mês, fica fácil criar um bom hábito. Já corri vinte dias seguidos.",
+    "Linlin: Você é muito mais disciplinado do que eu. Mês passado comprei um livro de inglês e até agora só li três páginas.",
+    "Xiao Wang: Então experimenta também. Lê dez minutos por dia, quando terminar faz o check-in, e eu te dou uma curtida.",
+    "Linlin: Combinado, começo hoje mesmo! Ah, e da próxima vez que você vier fazer check-in neste café, me chama também."
+   ],
+   "grammar_pt": "A 比 B + adjetivo + 多了 significa “A é muito mais … do que B”: 你比我认真多了 “Você é muito mais disciplinado do que eu.”"
   },
   {
    "lang": "zh",
@@ -318,61 +371,71 @@
      "w": "社交软件",
      "p": "shè jiāo ruǎn jiàn",
      "en": "social media app",
-     "de": "die Social-Media-App"
+     "de": "die Social-Media-App",
+     "pt": "o aplicativo de rede social"
     },
     {
      "w": "种草",
      "p": "zhòng cǎo",
      "en": "to make sb want sth by recommending it (lit. plant grass)",
-     "de": "jdm. Lust auf etwas machen (wörtl. Gras pflanzen)"
+     "de": "jdm. Lust auf etwas machen (wörtl. Gras pflanzen)",
+     "pt": "deixar alguém com vontade de algo recomendando (lit. plantar grama)"
     },
     {
      "w": "拔草",
      "p": "bá cǎo",
      "en": "to finally try/buy sth, or lose interest in it (lit. pull grass)",
-     "de": "etwas endlich ausprobieren oder die Lust daran verlieren (wörtl. Gras ausreißen)"
+     "de": "etwas endlich ausprobieren oder die Lust daran verlieren (wörtl. Gras ausreißen)",
+     "pt": "finalmente experimentar ou comprar algo, ou perder o interesse (lit. arrancar grama)"
     },
     {
      "w": "推荐",
      "p": "tuī jiàn",
      "en": "to recommend; recommendation",
-     "de": "empfehlen; die Empfehlung"
+     "de": "empfehlen; die Empfehlung",
+     "pt": "recomendar; a recomendação"
     },
     {
      "w": "种子",
      "p": "zhǒng zi",
      "en": "seed",
-     "de": "der Samen"
+     "de": "der Samen",
+     "pt": "a semente"
     },
     {
      "w": "相对",
      "p": "xiāng duì",
      "en": "opposite; corresponding",
-     "de": "entgegengesetzt; gegenüberstehend"
+     "de": "entgegengesetzt; gegenüberstehend",
+     "pt": "oposto; correspondente"
     },
     {
      "w": "值得",
      "p": "zhí de",
      "en": "to be worth",
-     "de": "sich lohnen; wert sein"
+     "de": "sich lohnen; wert sein",
+     "pt": "valer a pena"
     },
     {
      "w": "刷",
      "p": "shuā",
      "en": "to scroll (through feeds)",
-     "de": "(durch Feeds) scrollen"
+     "de": "(durch Feeds) scrollen",
+     "pt": "rolar (o feed)"
     },
     {
      "w": "愿望清单",
      "p": "yuàn wàng qīng dān",
      "en": "wish list",
-     "de": "die Wunschliste"
+     "de": "die Wunschliste",
+     "pt": "a lista de desejos"
     },
     {
      "w": "地道",
      "p": "dì dao",
      "en": "authentic; idiomatic",
-     "de": "authentisch; idiomatisch"
+     "de": "authentisch; idiomatisch",
+     "pt": "autêntico; idiomático"
     }
    ],
    "grammar": "不但……而且…… 'not only … but also …' links two positive points: 这些内容不但方便，而且很有意思.",
@@ -382,7 +445,16 @@
     "“拔草”有哪两种用法？",
     "看到推荐的时候，文章建议先做什么？"
    ],
-   "sources": []
+   "sources": [],
+   "title_pt": "Plantar e arrancar “grama”",
+   "paragraphs_pt": [
+    "Quem usa muito as redes sociais com certeza já viu a palavra “种草” (plantar grama). Um amigo posta a foto de um fone de ouvido novo e diz que o som é ótimo; depois de ver, você também fica com vontade de comprar um — isso se chama “ter a grama plantada”. A ideia é que a recomendação dos outros é como uma semente plantada no seu coração.",
+    "O contrário de “种草” é “拔草” (arrancar a grama). A expressão tem dois usos. Um é quando você finalmente compra aquilo que queria, ou vai ao restaurante que sempre quis conhecer: a “grama” no seu coração foi arrancada. O outro é quando você descobre que a coisa não é tão boa quanto todos diziam e perde a vontade — isso também se chama arrancar a grama.",
+    "Hoje há muito conteúdo de “plantar grama” na internet: tem gente que mostra materiais de papelaria práticos, gente que apresenta lojinhas que valem a visita, gente que recomenda livros para ler no fim de semana. Esse conteúdo é prático e também divertido, por isso muita gente rola o feed sempre que tem um tempinho. Com tanta gente vendo, algumas lojinhas viram de repente lugares onde todo mundo faz fila para entrar.",
+    "Mas há quem lembre: quando você vir uma recomendação, é melhor pensar antes se realmente precisa daquilo. Algumas coisas parecem ótimas, mas, depois de compradas, quase não são usadas. Um jeito simples é colocar na “lista de desejos” primeiro e decidir alguns dias depois.",
+    "Quem estuda chinês na Alemanha também pode experimentar essas palavras. Por exemplo, conversando com um amigo chinês: “Aquele restaurante de macarrão que você falou, já fui e arranquei a grama — é uma delícia!” Seu amigo com certeza vai achar o seu chinês muito autêntico."
+   ],
+   "grammar_pt": "不但……而且…… “não só … como também …” liga dois pontos positivos: 这些内容不但方便，而且很有意思."
   },
   {
    "lang": "zh",
@@ -422,61 +494,71 @@
      "w": "搭子",
      "p": "dā zi",
      "en": "partner for one particular activity (internet slang)",
-     "de": "der Partner für eine bestimmte Aktivität (Netzjargon)"
+     "de": "der Partner für eine bestimmte Aktivität (Netzjargon)",
+     "pt": "o parceiro para uma atividade específica (gíria da internet)"
     },
     {
      "w": "所谓",
      "p": "suǒ wèi",
      "en": "so-called; what is meant by",
-     "de": "sogenannt; was man unter … versteht"
+     "de": "sogenannt; was man unter … versteht",
+     "pt": "o chamado; o que se entende por"
     },
     {
      "w": "伙伴",
      "p": "huǒ bàn",
      "en": "partner; companion",
-     "de": "der Partner; der Gefährte"
+     "de": "der Partner; der Gefährte",
+     "pt": "o parceiro; o companheiro"
     },
     {
      "w": "遛狗",
      "p": "liù gǒu",
      "en": "to walk a dog",
-     "de": "Gassi gehen; den Hund ausführen"
+     "de": "Gassi gehen; den Hund ausführen",
+     "pt": "passear com o cachorro"
     },
     {
      "w": "互不打扰",
      "p": "hù bù dǎ rǎo",
      "en": "not to bother each other",
-     "de": "sich gegenseitig in Ruhe lassen"
+     "de": "sich gegenseitig in Ruhe lassen",
+     "pt": "não incomodar um ao outro"
     },
     {
      "w": "精力",
      "p": "jīng lì",
      "en": "energy",
-     "de": "die Energie; die Kraft"
+     "de": "die Energie; die Kraft",
+     "pt": "a energia"
     },
     {
      "w": "节奏",
      "p": "jié zòu",
      "en": "pace; rhythm",
-     "de": "das Tempo; der Rhythmus"
+     "de": "das Tempo; der Rhythmus",
+     "pt": "o ritmo"
     },
     {
      "w": "培养",
      "p": "péi yǎng",
      "en": "to cultivate; develop",
-     "de": "pflegen; entwickeln"
+     "de": "pflegen; entwickeln",
+     "pt": "cultivar; desenvolver"
     },
     {
      "w": "冷清",
      "p": "lěng qing",
      "en": "lonely; deserted",
-     "de": "einsam; verlassen"
+     "de": "einsam; verlassen",
+     "pt": "solitário; vazio"
     },
     {
      "w": "陪伴",
      "p": "péi bàn",
      "en": "to keep sb company",
-     "de": "Gesellschaft leisten; begleiten"
+     "de": "Gesellschaft leisten; begleiten",
+     "pt": "fazer companhia"
     }
    ],
    "grammar": "即使……也…… 'even if … still …' states a condition that doesn't change the result: 即使想交朋友，也不一定有时间.",
@@ -486,7 +568,17 @@
     "为什么“搭子”这个词这么流行？",
     "第一次跟网上认识的搭子见面，要注意什么？"
    ],
-   "sources": []
+   "sources": [],
+   "title_pt": "Arranje um “dazi”",
+   "paragraphs_pt": [
+    "Nos últimos dois anos, “搭子” (dazi) virou uma palavra muito popular na internet. O chamado dazi é um parceiro para fazer uma determinada coisa junto: quem come junto é “parceiro de refeição”, quem vai junto à academia é “parceiro de academia”, quem estuda junto é “parceiro de estudo”, e tem até o “parceiro de passeio com cachorro”.",
+    "Qual é a diferença entre um dazi e um amigo? Muita gente acha que entre amigos dá para conversar sobre tudo, a relação é mais profunda; já o dazi costuma ser parceiro em uma única coisa. Por exemplo: você e um colega almoçam juntos no refeitório todo dia, comentam se a comida estava boa, e depois do trabalho cada um vai para sua casa, sem incomodar o outro. É uma relação leve e simples, que não exige muita energia.",
+    "Por que essa palavra pegou tanto? Um motivo é que hoje o ritmo de vida é acelerado e o trabalho e os estudos ocupam muito tempo; mesmo quem quer fazer amigos nem sempre tem tempo de cultivar uma amizade aos poucos. Mas comer hot pot sozinho ou ver uma exposição sozinho dá uma sensação meio solitária. Com um dazi, você tem companhia sem muita pressão.",
+    "Quem mora na Alemanha talvez conheça bem isso. Em muitas cidades há encontros de troca de idiomas: você ensina chinês ao outro, o outro te ensina alemão, e vocês se encontram uma vez por semana num café. Esse “parceiro de idioma” é, na verdade, um parceiro de estudo. Algumas pessoas começam só praticando conversação e depois passam a combinar até trilhas no fim de semana — o dazi vira, aos poucos, um amigo de verdade.",
+    "Claro que é preciso ter cuidado ao procurar um dazi. Com alguém que você conheceu pela internet, é melhor marcar o primeiro encontro num lugar público e movimentado e avisar antes a família ou os amigos. Desde que haja respeito mútuo e uma distância adequada, a relação com um dazi pode trazer muita alegria ao dia a dia.",
+    "Que tipo de dazi você gostaria de ter? Um “parceiro de check-in” para acordar cedo e decorar palavras todo dia, ou um “parceiro de feira” para ir ao mercado no fim de semana? Quem sabe o seu próximo dazi já esteja bem do seu lado."
+   ],
+   "grammar_pt": "即使……也…… “mesmo que … ainda assim …” apresenta uma condição que não muda o resultado: 即使想交朋友，也不一定有时间."
   }
  ]
 }

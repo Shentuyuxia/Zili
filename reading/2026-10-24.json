@@ -45,49 +45,57 @@
      "w": "请进",
      "p": "qǐng jìn",
      "en": "please come in",
-     "de": "komm(en Sie) bitte herein"
+     "de": "komm(en Sie) bitte herein",
+     "pt": "entre, por favor"
     },
     {
      "w": "水果",
      "p": "shuǐ guǒ",
      "en": "fruit",
-     "de": "das Obst"
+     "de": "das Obst",
+     "pt": "a fruta"
     },
     {
      "w": "给",
      "p": "gěi",
      "en": "to give; for",
-     "de": "geben; für"
+     "de": "geben; für",
+     "pt": "dar; para"
     },
     {
      "w": "请坐",
      "p": "qǐng zuò",
      "en": "please sit down",
-     "de": "bitte setz dich"
+     "de": "bitte setz dich",
+     "pt": "sente-se, por favor"
     },
     {
      "w": "还是",
      "p": "hái shi",
      "en": "or (in questions)",
-     "de": "oder (in Fragen)"
+     "de": "oder (in Fragen)",
+     "pt": "ou (em perguntas)"
     },
     {
      "w": "菜",
      "p": "cài",
      "en": "dish; food",
-     "de": "das Gericht; das Essen"
+     "de": "das Gericht; das Essen",
+     "pt": "o prato; a comida"
     },
     {
      "w": "花",
      "p": "huā",
      "en": "flower",
-     "de": "die Blume"
+     "de": "die Blume",
+     "pt": "a flor"
     },
     {
      "w": "星期六",
      "p": "xīng qī liù",
      "en": "Saturday",
-     "de": "der Samstag"
+     "de": "der Samstag",
+     "pt": "o sábado"
     }
    ],
    "grammar": "还是 means 'or' in a question that offers a choice: 你想喝茶还是喝水？ 'Do you want tea or water?' The answer picks one. No 吗 is needed at the end.",
@@ -97,7 +105,19 @@
     "王明想喝什么？",
     "他们几点吃饭？"
    ],
-   "sources": []
+   "sources": [],
+   "title_pt": "Na casa de uma amiga",
+   "paragraphs_pt": [
+    "Anna: Oi, Wang Ming! Esta é a minha casa. Entre, por favor!",
+    "Wang Ming: Obrigado! Trouxe frutas para você.",
+    "Anna: Muito obrigada! Sente-se, por favor. Você quer chá ou água?",
+    "Wang Ming: Chá, obrigado.",
+    "Anna: A minha mãe fez muita comida. Vamos jantar às seis, pode ser?",
+    "Wang Ming: Pode! Na China, quando a gente vai à casa de um amigo, muita gente leva frutas.",
+    "Anna: Na Alemanha, muita gente leva flores.",
+    "Wang Ming: Sábado que vem, venha jantar na minha casa!"
+   ],
+   "grammar_pt": "还是 significa “ou” numa pergunta que oferece uma escolha: 你想喝茶还是喝水？ “Você quer chá ou água?” A resposta escolhe uma das opções. Não precisa de 吗 no fim."
   },
   {
    "lang": "zh",
@@ -127,49 +147,57 @@
      "w": "重阳节",
      "p": "Chóng yáng jié",
      "en": "Double Ninth Festival",
-     "de": "das Doppelneunfest"
+     "de": "das Doppelneunfest",
+     "pt": "a Festa do Duplo Nove"
     },
     {
      "w": "农历",
      "p": "nóng lì",
      "en": "Chinese lunar calendar",
-     "de": "der chinesische Mondkalender"
+     "de": "der chinesische Mondkalender",
+     "pt": "o calendário lunar chinês"
     },
     {
      "w": "爬山",
      "p": "pá shān",
      "en": "to climb a hill; to go hiking",
-     "de": "auf einen Berg steigen; wandern"
+     "de": "auf einen Berg steigen; wandern",
+     "pt": "subir montanha; fazer trilha"
     },
     {
      "w": "菊花",
      "p": "jú huā",
      "en": "chrysanthemum",
-     "de": "die Chrysantheme"
+     "de": "die Chrysantheme",
+     "pt": "o crisântemo"
     },
     {
      "w": "听起来",
      "p": "tīng qǐ lai",
      "en": "to sound (like)",
-     "de": "klingen (wie)"
+     "de": "klingen (wie)",
+     "pt": "soar (como)"
     },
     {
      "w": "久",
      "p": "jiǔ",
      "en": "long (time)",
-     "de": "lange"
+     "de": "lange",
+     "pt": "muito tempo"
     },
     {
      "w": "关心",
      "p": "guān xīn",
      "en": "to care about",
-     "de": "sich kümmern um"
+     "de": "sich kümmern um",
+     "pt": "cuidar de; importar-se com"
     },
     {
      "w": "视频",
      "p": "shì pín",
      "en": "video; to video-chat",
-     "de": "das Video; per Video sprechen"
+     "de": "das Video; per Video sprechen",
+     "pt": "o vídeo; fazer chamada de vídeo"
     }
    ],
    "grammar": "因为……所以…… links a reason and a result: 因为“九九”听起来像“久久”，所以…… 'Because … , (so) …'. In Chinese you usually keep both words, while English uses only 'because' or 'so'.",
@@ -179,7 +207,14 @@
     "重阳节很多人做什么？",
     "“我”为什么不能回家？"
    ],
-   "sources": []
+   "sources": [],
+   "title_pt": "A Festa do Duplo Nove do vovô",
+   "paragraphs_pt": [
+    "Ontem o vovô me ligou. Ele perguntou: “Semana passada foi a Festa do Duplo Nove, você sabia?” Eu não sabia. O vovô me contou que a festa cai no dia nove do nono mês do calendário lunar; este ano, foi em 18 de outubro.",
+    "Nesse dia, muita gente vai subir montanhas e gosta de ver crisântemos. Como “九九” (nove nove) soa parecido com “久久” (por muito tempo), a festa também é um dia para cuidar dos idosos. Muitos jovens voltam para casa para visitar os avós e cozinhar para eles.",
+    "Eu estudo na Alemanha e não posso voltar. Mas fiz uma chamada de vídeo de meia hora com o vovô. Mostrei para ele o morrinho ao lado da escola, onde as folhas das árvores já estão vermelhas. O vovô disse rindo: “Na Festa do Duplo Nove do ano que vem, vamos subir a montanha juntos!”"
+   ],
+   "grammar_pt": "因为……所以…… liga causa e consequência: 因为“九九”听起来像“久久”，所以…… “Como … , (então) …”. Em chinês, geralmente se usam as duas palavras, enquanto em português basta “porque” ou “por isso”."
   },
   {
    "lang": "zh",
@@ -216,73 +251,85 @@
      "w": "规矩",
      "p": "guī ju",
      "en": "rule; custom",
-     "de": "die Regel; der Brauch"
+     "de": "die Regel; der Brauch",
+     "pt": "a regra; o costume"
     },
     {
      "w": "钟",
      "p": "zhōng",
      "en": "clock",
-     "de": "die Uhr (Wand-/Standuhr)"
+     "de": "die Uhr (Wand-/Standuhr)",
+     "pt": "o relógio (de parede ou mesa)"
     },
     {
      "w": "发音",
      "p": "fā yīn",
      "en": "pronunciation",
-     "de": "die Aussprache"
+     "de": "die Aussprache",
+     "pt": "a pronúncia"
     },
     {
      "w": "送终",
      "p": "sòng zhōng",
      "en": "to be with a dying relative at the end",
-     "de": "einen Sterbenden bis zum Ende begleiten"
+     "de": "einen Sterbenden bis zum Ende begleiten",
+     "pt": "acompanhar um parente nos últimos momentos de vida"
     },
     {
      "w": "吉利",
      "p": "jí lì",
      "en": "lucky, auspicious",
-     "de": "glückverheißend"
+     "de": "glückverheißend",
+     "pt": "de sorte; auspicioso"
     },
     {
      "w": "吃惊",
      "p": "chī jīng",
      "en": "surprised, startled",
-     "de": "überrascht, erstaunt"
+     "de": "überrascht, erstaunt",
+     "pt": "espantado; surpreso"
     },
     {
      "w": "本来",
      "p": "běn lái",
      "en": "originally, actually",
-     "de": "eigentlich, ursprünglich"
+     "de": "eigentlich, ursprünglich",
+     "pt": "a princípio; na verdade"
     },
     {
      "w": "分离",
      "p": "fēn lí",
      "en": "to separate; separation",
-     "de": "sich trennen; die Trennung"
+     "de": "sich trennen; die Trennung",
+     "pt": "separar-se; a separação"
     },
     {
      "w": "特产",
      "p": "tè chǎn",
      "en": "local speciality",
-     "de": "die regionale Spezialität"
+     "de": "die regionale Spezialität",
+     "pt": "a especialidade local"
     },
     {
      "w": "当面",
      "p": "dāng miàn",
      "en": "face to face, in front of sb.",
-     "de": "persönlich, vor jemandem"
+     "de": "persönlich, vor jemandem",
+     "pt": "na frente de alguém; pessoalmente"
     },
     {
      "w": "显眼",
      "p": "xiǎn yǎn",
      "en": "eye-catching, conspicuous",
-     "de": "auffällig, gut sichtbar"
+     "de": "auffällig, gut sichtbar",
+     "pt": "chamativo; bem à vista"
     },
     {
      "w": "心意",
      "p": "xīn yì",
      "en": "kind thought, regard",
-     "de": "die Aufmerksamkeit; gute Absicht"
+     "de": "die Aufmerksamkeit; gute Absicht",
+     "pt": "a intenção; o carinho"
     }
    ],
    "grammar": "把 moves the object before the verb when you do something to it and it ends up somewhere: 她把书放在了客厅。 'She put the book in the living room.' Pattern: subject + 把 + object + verb + 在 + place.",
@@ -292,7 +339,16 @@
     "在德国，收到礼物的人一般会做什么？",
     "莉娜最后带了什么礼物？"
    ],
-   "sources": []
+   "sources": [],
+   "title_pt": "Pequenas regras para dar presentes",
+   "paragraphs_pt": [
+    "No mês passado, minha amiga alemã Lina ia a Xangai visitar uma colega chinesa. Ela nunca tinha ido à China, então me perguntou: “Que presente eu devo levar?” A pergunta parece simples, mas na verdade existem algumas regrinhas.",
+    "Primeiro, eu disse que é melhor não dar relógio de presente. “送钟” (dar um relógio) tem a mesma pronúncia de “送终”, que significa acompanhar um idoso no fim da vida, por isso muita gente acha que dar relógio dá azar. Ela ficou espantada: “Eu estava pensando justamente em levar um lindo relógio alemão!”",
+    "Também contei que, entre amigos, é melhor não dividir uma pera, porque “分梨” (dividir a pera) soa como “分离” (separação). Lina riu: “Então, em chinês, até o som do presente importa!”",
+    "E o que levar, então? Sugeri que ela levasse algumas especialidades alemãs, como chocolate, biscoitos ou um livro com muitas fotos. Quando recebem um presente, os chineses muitas vezes dizem primeiro “não precisava” e às vezes não abrem na hora. Lina disse que, na Alemanha, normalmente se abre o presente na frente da pessoa e depois se agradece.",
+    "No fim, Lina levou uma caixa de chocolates e um livro de fotos de Berlim. A colega ficou felicíssima e colocou o livro no lugar mais visível da sala. Pelo visto, o que conta num presente não é o preço, e sim a intenção."
+   ],
+   "grammar_pt": "把 coloca o objeto antes do verbo quando você faz algo com ele e ele vai parar em algum lugar: 她把书放在了客厅。 “Ela colocou o livro na sala.” Estrutura: sujeito + 把 + objeto + verbo + 在 + lugar."
   },
   {
    "lang": "zh",
@@ -329,73 +385,85 @@
      "w": "买单",
      "p": "mǎi dān",
      "en": "to pay the bill",
-     "de": "die Rechnung bezahlen"
+     "de": "die Rechnung bezahlen",
+     "pt": "pagar a conta"
     },
     {
      "w": "抢",
      "p": "qiǎng",
      "en": "to scramble for; to rush",
-     "de": "sich um etwas reißen; eilen"
+     "de": "sich um etwas reißen; eilen",
+     "pt": "disputar; correr para pegar"
     },
     {
      "w": "场面",
      "p": "chǎng miàn",
      "en": "scene",
-     "de": "die Szene"
+     "de": "die Szene",
+     "pt": "a cena"
     },
     {
      "w": "前台",
      "p": "qián tái",
      "en": "front desk, counter",
-     "de": "die Theke; der Empfang"
+     "de": "die Theke; der Empfang",
+     "pt": "o caixa; o balcão"
     },
     {
      "w": "表达",
      "p": "biǎo dá",
      "en": "to express",
-     "de": "ausdrücken"
+     "de": "ausdrücken",
+     "pt": "expressar"
     },
     {
      "w": "友谊",
      "p": "yǒu yì",
      "en": "friendship",
-     "de": "die Freundschaft"
+     "de": "die Freundschaft",
+     "pt": "a amizade"
     },
     {
      "w": "见外",
      "p": "jiàn wài",
      "en": "to treat sb. as an outsider",
-     "de": "jemanden wie einen Fremden behandeln"
+     "de": "jemanden wie einen Fremden behandeln",
+     "pt": "tratar alguém como estranho"
     },
     {
      "w": "各付各的",
      "p": "gè fù gè dì",
      "en": "each pays for themselves",
-     "de": "jeder zahlt für sich"
+     "de": "jeder zahlt für sich",
+     "pt": "cada um paga o seu"
     },
     {
      "w": "欠",
      "p": "qiàn",
      "en": "to owe",
-     "de": "schulden"
+     "de": "schulden",
+     "pt": "dever (algo a alguém)"
     },
     {
      "w": "气氛",
      "p": "qì fēn",
      "en": "atmosphere",
-     "de": "die Stimmung, die Atmosphäre"
+     "de": "die Stimmung, die Atmosphäre",
+     "pt": "o clima; o ambiente"
     },
     {
      "w": "趁",
      "p": "chèn",
      "en": "to take advantage of (a moment)",
-     "de": "(einen Moment) nutzen"
+     "de": "(einen Moment) nutzen",
+     "pt": "aproveitar (o momento)"
     },
     {
      "w": "结账",
      "p": "jié zhàng",
      "en": "to settle the bill",
-     "de": "die Rechnung begleichen"
+     "de": "die Rechnung begleichen",
+     "pt": "fechar a conta"
     }
    ],
    "grammar": "不仅……更是…… means 'not only … but even more …'. It adds a second, more important point: 请朋友吃饭不仅是付一顿饭的钱，更是表达友谊的方式。 Compare 不但……而且……, which adds points of equal weight.",
@@ -405,7 +473,16 @@
     "在德国，服务员常常问什么？",
     "作者现在用什么办法“抢”着买单？"
    ],
-   "sources": []
+   "sources": [],
+   "title_pt": "Quem paga a conta?",
+   "paragraphs_pt": [
+    "A primeira vez que saí para comer com amigos chineses, vi uma cena que me surpreendeu muito: antes mesmo de terminarmos, dois amigos se levantaram; um disse “Deixa comigo!”, o outro “Nada disso, desta vez eu pago!”, e os dois quase disputaram quem chegava primeiro ao caixa. Eu fiquei ali sentado sem saber o que fazer.",
+    "Só depois entendi que, para muitos chineses, pagar a refeição dos amigos não é só pagar uma conta: é também uma forma de mostrar amizade e calor humano. Hoje você paga para mim, da próxima vez eu pago para você, e é nesse vaivém que a relação vai ficando mais próxima. Se tudo for sempre calculado nos mínimos detalhes, algumas pessoas podem até achar que você as está tratando “como estranhas”.",
+    "Já na Alemanha, quando amigos comem juntos, muitas vezes cada um paga o seu. O garçom chega e pergunta: “Juntos ou separado?” Todos acham isso justo: ninguém fica devendo nada a ninguém, e fica todo mundo mais tranquilo. Em chinês, esse costume se chama “AA制”. Hoje em dia, os jovens chineses, sobretudo entre colegas de escola e de trabalho, estão cada vez mais acostumados a dividir a conta.",
+    "Acho que os dois costumes têm sua lógica. Disputar quem paga a conta transmite calor humano, mas se for sempre a mesma pessoa a pagar, a outra pode se sentir pressionada; dividir a conta é simples e prático, mas às vezes deixa o clima meio frio. O segredo é conhecer os hábitos do outro e respeitar um ao outro.",
+    "Agora, quando como com amigos chineses, também aprendi a “disputar” a conta. Mas o meu método é mais esperto: enquanto todos estão no meio de uma conversa animada, vou de fininho ao caixa e pago. Quando os amigos descobrem, dizem rindo que eu já sou “meio chinês”."
+   ],
+   "grammar_pt": "不仅……更是…… significa “não só … mas, mais ainda, …”. Acrescenta um segundo ponto, mais importante: 请朋友吃饭不仅是付一顿饭的钱，更是表达友谊的方式。 Compare com 不但……而且……, que soma pontos de mesmo peso."
   },
   {
    "lang": "zh",
@@ -442,73 +519,85 @@
      "w": "成语",
      "p": "chéng yǔ",
      "en": "set idiom (usually four characters)",
-     "de": "feste Redewendung (meist vier Zeichen)"
+     "de": "feste Redewendung (meist vier Zeichen)",
+     "pt": "o chengyu (expressão idiomática, geralmente de quatro caracteres)"
     },
     {
      "w": "迟早",
      "p": "chí zǎo",
      "en": "sooner or later",
-     "de": "früher oder später"
+     "de": "früher oder später",
+     "pt": "mais cedo ou mais tarde"
     },
     {
      "w": "一头雾水",
      "p": "yì tóu wù shuǐ",
      "en": "completely confused (lit. a head full of fog)",
-     "de": "völlig verwirrt (wörtl. ein Kopf voller Nebel)"
+     "de": "völlig verwirrt (wörtl. ein Kopf voller Nebel)",
+     "pt": "completamente perdido (lit. cabeça cheia de neblina)"
     },
     {
      "w": "恍然大悟",
      "p": "huǎng rán dà wù",
      "en": "to suddenly understand",
-     "de": "plötzlich begreifen; ein Licht geht auf"
+     "de": "plötzlich begreifen; ein Licht geht auf",
+     "pt": "cair a ficha de repente"
     },
     {
      "w": "守株待兔",
      "p": "shǒu zhū dài tù",
      "en": "to wait for luck instead of working (lit. guard a stump, wait for hares)",
-     "de": "untätig auf Glück warten (wörtl. Baumstumpf bewachen, auf Hasen warten)"
+     "de": "untätig auf Glück warten (wörtl. Baumstumpf bewachen, auf Hasen warten)",
+     "pt": "esperar pela sorte em vez de trabalhar (lit. vigiar o toco, esperar a lebre)"
     },
     {
      "w": "树桩",
      "p": "shù zhuāng",
      "en": "tree stump",
-     "de": "der Baumstumpf"
+     "de": "der Baumstumpf",
+     "pt": "o toco de árvore"
     },
     {
      "w": "画蛇添足",
      "p": "huà shé tiān zú",
      "en": "to spoil sth. by overdoing it (lit. add feet to a drawn snake)",
-     "de": "etwas durch Übertreibung verderben (wörtl. der Schlange Füße malen)"
+     "de": "etwas durch Übertreibung verderben (wörtl. der Schlange Füße malen)",
+     "pt": "estragar algo por exagero (lit. desenhar pés na cobra)"
     },
     {
      "w": "得意",
      "p": "dé yì",
      "en": "pleased with oneself, smug",
-     "de": "selbstzufrieden, stolz"
+     "de": "selbstzufrieden, stolz",
+     "pt": "todo orgulhoso; convencido"
     },
     {
      "w": "恰到好处",
      "p": "qià dào hǎo chù",
      "en": "just right",
-     "de": "genau richtig, im rechten Maß"
+     "de": "genau richtig, im rechten Maß",
+     "pt": "na medida certa"
     },
     {
      "w": "多此一举",
      "p": "duō cǐ yì jǔ",
      "en": "an unnecessary extra step",
-     "de": "überflüssig, ein unnötiger Schritt"
+     "de": "überflüssig, ein unnötiger Schritt",
+     "pt": "um passo desnecessário"
     },
     {
      "w": "急于求成",
      "p": "jí yú qiú chéng",
      "en": "impatient for quick success",
-     "de": "übereilt Erfolg wollen"
+     "de": "übereilt Erfolg wollen",
+     "pt": "ter pressa de resultados rápidos"
     },
     {
      "w": "日积月累",
      "p": "rì jī yuè lěi",
      "en": "little by little over time",
-     "de": "nach und nach, mit der Zeit"
+     "de": "nach und nach, mit der Zeit",
+     "pt": "aos poucos, com o tempo"
     }
    ],
    "grammar": "直到……才…… means 'not until … did …': 直到老师讲了它背后的故事，我才恍然大悟。 'Only when the teacher told the story did I understand.' 才 stresses that the result came late, after the condition in the 直到 clause.",
@@ -518,7 +607,16 @@
     "比赛画蛇的时候，最先画好的人为什么没有喝到酒？",
     "作者用什么方法学成语？"
    ],
-   "sources": []
+   "sources": [],
+   "title_pt": "Histórias em quatro caracteres",
+   "paragraphs_pt": [
+    "Quem estuda chinês, mais cedo ou mais tarde, vai topar com os chengyu. A maioria tem só quatro caracteres; parecem simples, mas muitas vezes o sentido não dá para adivinhar pela letra. Por exemplo, em “守株待兔” eu conhecia cada caractere, mas juntos eles me deixavam completamente perdido. Só quando a professora contou a história por trás é que caiu a ficha.",
+    "A história vem do livro Han Feizi. Antigamente, no reino de Song, um camponês trabalhava na roça quando viu de repente uma lebre vir correndo, bater com a cabeça num toco de árvore, quebrar o pescoço e morrer. Ele ganhou uma lebre de graça e ficou felicíssimo. A partir daí, largou as ferramentas e passou os dias ao lado do toco, esperando a próxima lebre trombar ali. Resultado: nenhuma lebre apareceu mais, e ele virou motivo de piada no país inteiro. Desde então, usa-se “守株待兔” para descrever quem não se esforça e só conta com a sorte.",
+    "Outro chengyu de que eu gosto muito é “画蛇添足” (desenhar pernas na cobra), do livro Estratégias dos Reinos Combatentes. Algumas pessoas ganharam um jarro de vinho, que não dava para todos, e então combinaram uma disputa de desenhar cobras: quem terminasse primeiro ficava com o vinho. Um deles terminou antes de todos e, vendo que os outros ainda não tinham acabado, todo orgulhoso acrescentou pés à cobra. Nesse momento outro terminou, pegou o vinho e disse: “Cobra não tem pé; o que você desenhou já não é uma cobra!” Esse chengyu nos lembra: as coisas devem ser feitas na medida certa; um passo a mais pode estragar tudo.",
+    "Para mim, os chengyu são como janelinhas através das quais se vê a vida e a sabedoria dos antigos. O curioso é que o alemão também tem expressões parecidas. Os alemães costumam dizer que o pombo assado não voa sozinho para dentro da boca — a ideia é quase a mesma de “守株待兔”: não fique só esperando que as coisas boas caiam do céu.",
+    "Claro que não é preciso ter pressa para aprender chengyu. O meu método é aprender só dois ou três por semana: primeiro entendo a história, depois tento usar numa conversa. Se eu usar errado, tudo bem: os amigos chineses costumam me corrigir rindo e às vezes ainda me contam outra história. Aos poucos, essas pequenas histórias de quatro caracteres vão virando a minha própria língua."
+   ],
+   "grammar_pt": "直到……才…… significa “só quando … é que …”: 直到老师讲了它背后的故事，我才恍然大悟。 “Só quando a professora contou a história é que eu entendi.” 才 enfatiza que o resultado veio tarde, depois da condição da oração com 直到."
   }
  ]
 }

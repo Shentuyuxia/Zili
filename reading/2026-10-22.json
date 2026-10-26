@@ -34,61 +34,71 @@
      "w": "星期一",
      "p": "xīng qī yī",
      "en": "Monday",
-     "de": "der Montag"
+     "de": "der Montag",
+     "pt": "a segunda-feira"
     },
     {
      "w": "学校",
      "p": "xué xiào",
      "en": "school",
-     "de": "die Schule"
+     "de": "die Schule",
+     "pt": "a escola"
     },
     {
      "w": "有一点儿",
      "p": "yǒu yì diǎn r",
      "en": "a little, a bit",
-     "de": "ein bisschen"
+     "de": "ein bisschen",
+     "pt": "um pouco"
     },
     {
      "w": "因为",
      "p": "yīn wèi",
      "en": "because",
-     "de": "weil"
+     "de": "weil",
+     "pt": "porque"
     },
     {
      "w": "上课",
      "p": "shàng kè",
      "en": "to have a lesson; class starts",
-     "de": "Unterricht haben"
+     "de": "Unterricht haben",
+     "pt": "ter aula; começar a aula"
     },
     {
      "w": "女孩子",
      "p": "nǚ hái zi",
      "en": "girl",
-     "de": "das Mädchen"
+     "de": "das Mädchen",
+     "pt": "a menina"
     },
     {
      "w": "名字",
      "p": "míng zi",
      "en": "name",
-     "de": "der Name"
+     "de": "der Name",
+     "pt": "o nome"
     },
     {
      "w": "下课",
      "p": "xià kè",
      "en": "class is over",
-     "de": "Unterrichtsschluss; die Stunde ist aus"
+     "de": "Unterrichtsschluss; die Stunde ist aus",
+     "pt": "acabar a aula"
     },
     {
      "w": "一起",
      "p": "yì qǐ",
      "en": "together",
-     "de": "zusammen"
+     "de": "zusammen",
+     "pt": "juntos"
     },
     {
      "w": "新",
      "p": "xīn",
      "en": "new",
-     "de": "neu"
+     "de": "neu",
+     "pt": "novo"
     }
    ],
    "grammar": "有一点儿 + adjective means “a little …” and is mostly used for things we don't like: 有一点儿不高兴 “a bit unhappy”. 因为 introduces the reason and often comes after the result. （有一点儿＋形容词，多用于不太好的感觉）",
@@ -98,7 +108,15 @@
     "她的新朋友叫什么名字？",
     "下课了，她们一起做什么？"
    ],
-   "sources": []
+   "sources": [],
+   "title_pt": "Uma amiga nova na escola",
+   "paragraphs_pt": [
+    "Hoje é segunda-feira. Xiaoyue vai para a escola. Ela está um pouco triste, porque não tem amigos nesta escola.",
+    "Na aula, uma menina se senta na frente dela. A menina diz: “Oi, eu me chamo Lili. Qual é o seu nome?”",
+    "Xiaoyue diz: “Eu me chamo Xiaoyue.” Depois da aula, elas comem maçã juntas e leem juntas.",
+    "Na volta para casa, Xiaoyue está muito feliz. Ela diz para a mãe: “Mamãe, eu tenho uma amiga nova!”"
+   ],
+   "grammar_pt": "有一点儿 + adjetivo significa “um pouco …” e é usado sobretudo para coisas de que não gostamos: 有一点儿不高兴 “um pouco triste”. 因为 introduz a causa e muitas vezes vem depois do resultado. （有一点儿＋形容词，多用于不太好的感觉）"
   },
   {
    "lang": "zh",
@@ -150,67 +168,78 @@
      "w": "来晚",
      "p": "lái wǎn",
      "en": "to arrive late",
-     "de": "zu spät kommen"
+     "de": "zu spät kommen",
+     "pt": "chegar atrasado"
     },
     {
      "w": "没关系",
      "p": "méi guān xi",
      "en": "it doesn't matter",
-     "de": "macht nichts"
+     "de": "macht nichts",
+     "pt": "não tem problema; tudo bem"
     },
     {
      "w": "公共汽车",
      "p": "gōng gòng qì chē",
      "en": "bus",
-     "de": "der Bus"
+     "de": "der Bus",
+     "pt": "o ônibus"
     },
     {
      "w": "介绍",
      "p": "jiè shào",
      "en": "to introduce; to present",
-     "de": "vorstellen"
+     "de": "vorstellen",
+     "pt": "apresentar"
     },
     {
      "w": "自己",
      "p": "zì jǐ",
      "en": "oneself; one's own",
-     "de": "selbst; eigen"
+     "de": "selbst; eigen",
+     "pt": "si mesmo; próprio"
     },
     {
      "w": "公司",
      "p": "gōng sī",
      "en": "company",
-     "de": "die Firma"
+     "de": "die Firma",
+     "pt": "a empresa"
     },
     {
      "w": "同事",
      "p": "tóng shì",
      "en": "colleague",
-     "de": "der Kollege / die Kollegin"
+     "de": "der Kollege / die Kollegin",
+     "pt": "o colega de trabalho"
     },
     {
      "w": "怕",
      "p": "pà",
      "en": "to be afraid of",
-     "de": "Angst haben vor"
+     "de": "Angst haben vor",
+     "pt": "ter medo de"
     },
     {
      "w": "越来越",
      "p": "yuè lái yuè",
      "en": "more and more",
-     "de": "immer mehr"
+     "de": "immer mehr",
+     "pt": "cada vez mais"
     },
     {
      "w": "主意",
      "p": "zhǔ yi",
      "en": "idea",
-     "de": "die Idee"
+     "de": "die Idee",
+     "pt": "a ideia"
     },
     {
      "w": "到时候",
      "p": "dào shí hou",
      "en": "when the time comes; then",
-     "de": "dann, wenn es so weit ist"
+     "de": "dann, wenn es so weit ist",
+     "pt": "quando chegar a hora; então"
     }
    ],
    "grammar": "越来越 + adjective means “more and more …”: 越来越好 “better and better”. 会……的 at the end makes a confident prediction: 你会越来越好的 “you will surely get better”. （越来越＋形容词；会……的 表示有把握的推测）",
@@ -220,7 +249,21 @@
     "安娜的同事是哪国人？",
     "下个星期安娜想做什么？"
    ],
-   "sources": []
+   "sources": [],
+   "title_pt": "Aula de chinês à noite",
+   "paragraphs_pt": [
+    "Anna: Boa noite, professor Wang! Desculpe, cheguei atrasada.",
+    "Professor Wang: Tudo bem, Anna. O ônibus hoje estava lento, não é?",
+    "Anna: Sim, está chovendo e tem muito carro na rua.",
+    "Professor Wang: Pode sentar. Hoje vamos aprender a apresentar o nosso trabalho.",
+    "Anna: Que ótimo! Eu trabalho numa empresa, e muitos dos meus colegas são chineses.",
+    "Professor Wang: Então você já pode falar com eles em chinês.",
+    "Anna: Mas o meu chinês ainda não é muito bom, tenho medo de errar.",
+    "Professor Wang: Errar não tem problema. Se você falar um pouquinho todo dia, vai melhorar cada vez mais.",
+    "Anna: Obrigada, professor! Semana que vem quero convidar meus colegas para um café, em chinês.",
+    "Professor Wang: Boa ideia! Depois me conta o que eles disseram."
+   ],
+   "grammar_pt": "越来越 + adjetivo significa “cada vez mais …”: 越来越好 “cada vez melhor”. 会……的 no fim da frase faz uma previsão confiante: 你会越来越好的 “com certeza você vai melhorar”. （越来越＋形容词；会……的 表示有把握的推测）"
   },
   {
    "lang": "zh",
@@ -254,85 +297,99 @@
      "w": "一边",
      "p": "yì biān",
      "en": "while (doing two things at once: 一边A一边B)",
-     "de": "während; gleichzeitig (一边A一边B)"
+     "de": "während; gleichzeitig (一边A一边B)",
+     "pt": "enquanto; ao mesmo tempo (一边A一边B)"
     },
     {
      "w": "叫作",
      "p": "jiào zuò",
      "en": "to be called",
-     "de": "nennen; heißen"
+     "de": "nennen; heißen",
+     "pt": "chamar-se; ser chamado de"
     },
     {
      "w": "实习生",
      "p": "shí xí sheng",
      "en": "intern",
-     "de": "der Praktikant / die Praktikantin"
+     "de": "der Praktikant / die Praktikantin",
+     "pt": "o estagiário"
     },
     {
      "w": "正式",
      "p": "zhèng shì",
      "en": "formal; regular (employee)",
-     "de": "offiziell; regulär"
+     "de": "offiziell; regulär",
+     "pt": "efetivo; contratado"
     },
     {
      "w": "员工",
      "p": "yuán gōng",
      "en": "employee",
-     "de": "der/die Angestellte"
+     "de": "der/die Angestellte",
+     "pt": "o funcionário"
     },
     {
      "w": "计算机",
      "p": "jì suàn jī",
      "en": "computer; computer science",
-     "de": "der Computer; die Informatik"
+     "de": "der Computer; die Informatik",
+     "pt": "o computador; a computação"
     },
     {
      "w": "检查",
      "p": "jiǎn chá",
      "en": "to check; to inspect",
-     "de": "prüfen, kontrollieren"
+     "de": "prüfen, kontrollieren",
+     "pt": "conferir; verificar"
     },
     {
      "w": "数据",
      "p": "shù jù",
      "en": "data",
-     "de": "die Daten"
+     "de": "die Daten",
+     "pt": "os dados"
     },
     {
      "w": "挣钱",
      "p": "zhèng qián",
      "en": "to earn money",
-     "de": "Geld verdienen"
+     "de": "Geld verdienen",
+     "pt": "ganhar dinheiro"
     },
     {
      "w": "房租",
      "p": "fáng zū",
      "en": "rent",
-     "de": "die Miete"
+     "de": "die Miete",
+     "pt": "o aluguel"
     },
     {
      "w": "提前",
      "p": "tí qián",
      "en": "in advance; early",
-     "de": "im Voraus; früher"
+     "de": "im Voraus; früher",
+     "pt": "de antemão; com antecedência"
     },
     {
      "w": "毕业",
      "p": "bì yè",
      "en": "to graduate",
-     "de": "den Abschluss machen"
+     "de": "den Abschluss machen",
+     "pt": "formar-se"
     },
     {
      "w": "请假",
      "p": "qǐng jià",
      "en": "to ask for leave; take time off",
-     "de": "freinehmen, Urlaub nehmen"
+     "de": "freinehmen, Urlaub nehmen",
+     "pt": "pedir folga"
     },
     {
      "w": "复习",
      "p": "fù xí",
      "en": "to revise; to review",
-     "de": "wiederholen, lernen"
+     "de": "wiederholen, lernen",
+     "pt": "revisar (a matéria)"
     }
    ],
    "grammar": "一边A，一边B: doing A and B at the same time — 一边上学，一边工作 “studying while working”. Note also 把A叫作B “to call A B”, a 把 sentence. （一边……一边……：两件事同时做）",
@@ -342,7 +399,15 @@
     "他觉得这份工作有哪两个好处？",
     "考试以前他常常要做什么？"
    ],
-   "sources": []
+   "sources": [],
+   "title_pt": "Estudar e trabalhar ao mesmo tempo",
+   "paragraphs_pt": [
+    "Na Alemanha, muitos universitários estudam e, ao mesmo tempo, trabalham numa empresa. Os alemães chamam esses estudantes de “Werkstudenten” (estudantes que trabalham). Eles não são estagiários, e sim funcionários contratados da empresa — só que trabalham menos horas por semana.",
+    "Li Ming é universitário em Hanôver e estuda computação. Toda semana ele trabalha vinte horas numa empresa. O trabalho não é muito difícil: ajuda os colegas a conferir dados e às vezes também participa de reuniões.",
+    "Li Ming acha que esse trabalho o ajuda muito. Primeiro, ele ganha um dinheiro e não precisa se preocupar tanto na hora de pagar o aluguel. Segundo, ele conhece de antemão como funciona uma empresa, e depois de formado vai ser mais fácil encontrar emprego.",
+    "Claro que estudar e trabalhar ao mesmo tempo também cansa. Antes das provas, ele muitas vezes precisa pedir folga para estudar. Mas ele diz: “Embora eu viva ocupado, aprendi muita coisa que não está nos livros.”"
+   ],
+   "grammar_pt": "一边A，一边B: fazer A e B ao mesmo tempo — 一边上学，一边工作 “estudar enquanto trabalha”. Repare também em 把A叫作B “chamar A de B”, uma frase com 把. （一边……一边……：两件事同时做）"
   },
   {
    "lang": "zh",
@@ -379,121 +444,141 @@
      "w": "自从",
      "p": "zì cóng",
      "en": "since (a point in time)",
-     "de": "seit"
+     "de": "seit",
+     "pt": "desde (um momento)"
     },
     {
      "w": "允许",
      "p": "yǔn xǔ",
      "en": "to allow; to permit",
-     "de": "erlauben"
+     "de": "erlauben",
+     "pt": "permitir"
     },
     {
      "w": "办公",
      "p": "bàn gōng",
      "en": "to work (in an office)",
-     "de": "im Büro arbeiten"
+     "de": "im Büro arbeiten",
+     "pt": "trabalhar (em escritório)"
     },
     {
      "w": "发生",
      "p": "fā shēng",
      "en": "to happen; to occur",
-     "de": "geschehen, sich ereignen"
+     "de": "geschehen, sich ereignen",
+     "pt": "acontecer"
     },
     {
      "w": "想象",
      "p": "xiǎng xiàng",
      "en": "to imagine",
-     "de": "sich vorstellen"
+     "de": "sich vorstellen",
+     "pt": "imaginar"
     },
     {
      "w": "视频会议",
      "p": "shì pín huì yì",
      "en": "video conference",
-     "de": "die Videokonferenz"
+     "de": "die Videokonferenz",
+     "pt": "a videoconferência"
     },
     {
      "w": "快递",
      "p": "kuài dì",
      "en": "parcel; express delivery",
-     "de": "das Paket; der Lieferdienst"
+     "de": "das Paket; der Lieferdienst",
+     "pt": "a encomenda; a entrega expressa"
     },
     {
      "w": "注意力",
      "p": "zhù yì lì",
      "en": "attention; concentration",
-     "de": "die Aufmerksamkeit"
+     "de": "die Aufmerksamkeit",
+     "pt": "a atenção; a concentração"
     },
     {
      "w": "集中",
      "p": "jí zhōng",
      "en": "to concentrate; to focus",
-     "de": "konzentrieren"
+     "de": "konzentrieren",
+     "pt": "concentrar(-se)"
     },
     {
      "w": "回复",
      "p": "huí fù",
      "en": "to reply",
-     "de": "antworten, beantworten"
+     "de": "antworten, beantworten",
+     "pt": "responder"
     },
     {
      "w": "界限",
      "p": "jiè xiàn",
      "en": "boundary; dividing line",
-     "de": "die Grenze"
+     "de": "die Grenze",
+     "pt": "o limite; a fronteira"
     },
     {
      "w": "规矩",
      "p": "guī ju",
      "en": "rule",
-     "de": "die Regel"
+     "de": "die Regel",
+     "pt": "a regra"
     },
     {
      "w": "准时",
      "p": "zhǔn shí",
      "en": "on time; punctual",
-     "de": "pünktlich"
+     "de": "pünktlich",
+     "pt": "pontual; na hora"
     },
     {
      "w": "布置",
      "p": "bù zhì",
      "en": "to arrange; to set up (a room)",
-     "de": "einrichten, gestalten"
+     "de": "einrichten, gestalten",
+     "pt": "arrumar; montar (um ambiente)"
     },
     {
      "w": "效率",
      "p": "xiào lǜ",
      "en": "efficiency",
-     "de": "die Effizienz"
+     "de": "die Effizienz",
+     "pt": "a eficiência"
     },
     {
      "w": "甚至",
      "p": "shèn zhì",
      "en": "even",
-     "de": "sogar"
+     "de": "sogar",
+     "pt": "até; inclusive"
     },
     {
      "w": "想念",
      "p": "xiǎng niàn",
      "en": "to miss (sb/sth)",
-     "de": "vermissen"
+     "de": "vermissen",
+     "pt": "sentir falta de"
     },
     {
      "w": "省下",
      "p": "shěng xià",
      "en": "to save (money, time)",
-     "de": "einsparen"
+     "de": "einsparen",
+     "pt": "economizar (dinheiro, tempo)"
     },
     {
      "w": "租金",
      "p": "zū jīn",
      "en": "rent",
-     "de": "die Miete"
+     "de": "die Miete",
+     "pt": "o aluguel"
     },
     {
      "w": "进度",
      "p": "jìn dù",
      "en": "progress; pace of work",
-     "de": "der Fortschritt, der Arbeitsstand"
+     "de": "der Fortschritt, der Arbeitsstand",
+     "pt": "o andamento; o ritmo de trabalho"
     }
    ],
    "grammar": "A 并不像……那么 + adjective: “A is not as … as (people think)” — 并不像很多人想象的那么轻松 “not as easy as many imagine”; 并 stresses that the expectation is wrong. Compare 甚至比……还……: “even more … than …”. （并不像……那么……：否定别人的看法）",
@@ -503,7 +588,16 @@
     "刚开始在家工作时，她遇到了什么问题？",
     "她给自己定了哪些规矩？"
    ],
-   "sources": []
+   "sources": [],
+   "title_pt": "Um dia de home office",
+   "paragraphs_pt": [
+    "Desde que a empresa passou a permitir que os funcionários trabalhem de casa dois dias por semana, a vida da senhora Lin mudou bastante. Antes, ela tinha que se levantar às seis e meia todo dia e pegar quarenta minutos de metrô para ir ao trabalho; agora, nos dias de home office, ela pode dormir meia hora a mais e tomar o café da manhã com calma.",
+    "Mas trabalhar em casa não é tão tranquilo quanto muita gente imagina. No começo, a senhora Lin muitas vezes participava de videoconferências pensando em lavar roupa ou receber encomendas, e tinha dificuldade de se concentrar. Às vezes, às oito da noite ela ainda estava respondendo e-mails; parecia que não havia mais limite entre trabalho e vida pessoal.",
+    "Depois, ela criou algumas regras para si mesma: todo dia, às nove em ponto, senta-se à escrivaninha, vestindo uma roupa um pouco mais formal; enquanto trabalha, deixa o celular em outro cômodo; às seis da tarde desliga o computador, e isso conta como “sair do trabalho”. Ela também transformou um canto da sala num pequeno escritório e só trabalha ali.",
+    "Para a empresa, o home office também tem vantagens: o escritório não precisa de tantos lugares, e dá para economizar no aluguel todo mês. Mas alguns gerentes se preocupam: sem ver os funcionários, fica mais difícil acompanhar o andamento do trabalho de todos.",
+    "Hoje, a senhora Lin acha que em casa ela é até mais produtiva do que no escritório. Mas também percebeu que sente um pouco de falta dos momentos de café e conversa com os colegas. Por isso, o arranjo de que ela mais gosta é: metade do tempo em casa, metade na empresa."
+   ],
+   "grammar_pt": "A 并不像……那么 + adjetivo: “A não é tão … quanto (as pessoas pensam)” — 并不像很多人想象的那么轻松 “não é tão fácil quanto muitos imaginam”; 并 reforça que a expectativa está errada. Compare com 甚至比……还……: “até mais … do que …”. （并不像……那么……：否定别人的看法）"
   },
   {
    "lang": "zh",
@@ -540,139 +634,162 @@
      "w": "场所",
      "p": "chǎng suǒ",
      "en": "place; venue",
-     "de": "der Ort, die Stätte"
+     "de": "der Ort, die Stätte",
+     "pt": "o local; o espaço"
     },
     {
      "w": "付费",
      "p": "fù fèi",
      "en": "to pay (a fee)",
-     "de": "bezahlen; kostenpflichtig"
+     "de": "bezahlen; kostenpflichtig",
+     "pt": "pagar (uma taxa)"
     },
     {
      "w": "自习室",
      "p": "zì xí shì",
      "en": "study room",
-     "de": "der Lernraum"
+     "de": "der Lernraum",
+     "pt": "a sala de estudo"
     },
     {
      "w": "柔和",
      "p": "róu hé",
      "en": "soft; gentle (light, colour)",
-     "de": "sanft, gedämpft"
+     "de": "sanft, gedämpft",
+     "pt": "suave (luz, cor)"
     },
     {
      "w": "隔板",
      "p": "gé bǎn",
      "en": "partition; divider",
-     "de": "die Trennwand"
+     "de": "die Trennwand",
+     "pt": "a divisória"
     },
     {
      "w": "禁止",
      "p": "jìn zhǐ",
      "en": "to forbid; to prohibit",
-     "de": "verbieten"
+     "de": "verbieten",
+     "pt": "proibir"
     },
     {
      "w": "尽量",
      "p": "jǐn liàng",
      "en": "as far as possible",
-     "de": "möglichst"
+     "de": "möglichst",
+     "pt": "o máximo possível"
     },
     {
      "w": "不等",
      "p": "bù děng",
      "en": "to vary; ranging from",
-     "de": "variieren; zwischen … und …"
+     "de": "variieren; zwischen … und …",
+     "pt": "variar; de … a …"
     },
     {
      "w": "证书",
      "p": "zhèng shū",
      "en": "certificate",
-     "de": "das Zertifikat"
+     "de": "das Zertifikat",
+     "pt": "o certificado"
     },
     {
      "w": "上班族",
      "p": "shàng bān zú",
      "en": "office workers; commuters",
-     "de": "die Berufstätigen"
+     "de": "die Berufstätigen",
+     "pt": "os trabalhadores de escritório"
     },
     {
      "w": "忍不住",
      "p": "rěn bú zhù",
      "en": "can't help (doing)",
-     "de": "nicht anders können als"
+     "de": "nicht anders können als",
+     "pt": "não conseguir se conter"
     },
     {
      "w": "偷懒",
      "p": "tōu lǎn",
      "en": "to slack off; be lazy",
-     "de": "faulenzen"
+     "de": "faulenzen",
+     "pt": "fazer corpo mole"
     },
     {
      "w": "经营者",
      "p": "jīng yíng zhě",
      "en": "operator; business owner",
-     "de": "der Betreiber"
+     "de": "der Betreiber",
+     "pt": "o dono do negócio"
     },
     {
      "w": "有限",
      "p": "yǒu xiàn",
      "en": "limited",
-     "de": "begrenzt"
+     "de": "begrenzt",
+     "pt": "limitado"
     },
     {
      "w": "预约",
      "p": "yù yuē",
      "en": "to book; to reserve",
-     "de": "reservieren, buchen"
+     "de": "reservieren, buchen",
+     "pt": "reservar; agendar"
     },
     {
      "w": "说到底",
      "p": "shuō dào dǐ",
      "en": "in the final analysis",
-     "de": "letztlich"
+     "de": "letztlich",
+     "pt": "no fundo; afinal"
     },
     {
      "w": "一座难求",
      "p": "yí zuò nán qiú",
      "en": "hard to get a seat",
-     "de": "heiß begehrt, kaum ein Platz zu bekommen"
+     "de": "heiß begehrt, kaum ein Platz zu bekommen",
+     "pt": "difícil conseguir lugar"
     },
     {
      "w": "消费",
      "p": "xiāo fèi",
      "en": "consumption; to spend",
-     "de": "der Konsum; konsumieren"
+     "de": "der Konsum; konsumieren",
+     "pt": "o consumo; gastar"
     },
     {
      "w": "愿望",
      "p": "yuàn wàng",
      "en": "wish; desire",
-     "de": "der Wunsch"
+     "de": "der Wunsch",
+     "pt": "o desejo"
     },
     {
      "w": "保管",
      "p": "bǎo guǎn",
      "en": "to keep safe; to look after",
-     "de": "aufbewahren, verwahren"
+     "de": "aufbewahren, verwahren",
+     "pt": "guardar; tomar conta"
     },
     {
      "w": "便利贴",
      "p": "biàn lì tiē",
      "en": "sticky note",
-     "de": "der Haftzettel"
+     "de": "der Haftzettel",
+     "pt": "o post-it"
     },
     {
      "w": "陌生人",
      "p": "mò shēng rén",
      "en": "stranger",
-     "de": "der/die Fremde"
+     "de": "der/die Fremde",
+     "pt": "o desconhecido"
     },
     {
      "w": "陪伴",
      "p": "péi bàn",
      "en": "to keep sb company",
-     "de": "Gesellschaft leisten, begleiten"
+     "de": "Gesellschaft leisten, begleiten",
+     "pt": "fazer companhia"
     }
    ],
    "grammar": "连……都……: “even …” — 连敲键盘的声音都要尽量放轻 “even the sound of typing must be kept low”. The thing after 连 is the most extreme case; 都 (or 也) follows before the verb. （连……都/也……：强调极端的情况）",
@@ -682,7 +799,16 @@
     "为什么有人愿意花钱去自习室？",
     "作者认为德国和中国的差别可能是什么原因？"
    ],
-   "sources": []
+   "sources": [],
+   "title_pt": "Pagar por um lugar tranquilo",
+   "paragraphs_pt": [
+    "Nos últimos anos, surgiu em muitas cidades chinesas um novo tipo de lugar para estudar: a sala de estudo paga. Parece um pouco um café e um pouco uma biblioteca: a luz é suave, as fileiras de lugares são separadas por divisórias e cada pessoa tem uma luminária de mesa à sua frente. A diferença é que aqui é proibido conversar, e até o som do teclado deve ser o mais baixo possível. Os clientes pagam por hora ou por mês, e os preços vão de uns dez a algumas dezenas de yuans.",
+    "Quem frequenta esses lugares? Universitários que se preparam para a prova de pós-graduação, trabalhadores que aproveitam o tempo depois do expediente para tirar certificados e também pessoas comuns que só querem ler alguns livros em silêncio no fim de semana. Uma cliente assídua conta que, em casa, ela sempre acaba deitando na cama e rolando o celular; já na sala de estudo, vendo todo mundo estudando com seriedade, ela fica sem graça de fazer corpo mole.",
+    "Algumas salas de estudo têm suas próprias regrinhas: antes de entrar, é preciso deixar o celular sob a “guarda” da recepção, ou colocar sobre a mesa um cartão com a meta de estudo do dia. À noite, há quem cole um post-it no mural de recados, por exemplo “hoje decorei duzentas palavras” ou “amanhã continuo firme”. Mesmo sem trocar uma palavra, os desconhecidos parecem fazer companhia uns aos outros.",
+    "Há também quem ache estranho: a biblioteca é de graça, por que pagar? A explicação dos donos é que as bibliotecas públicas têm poucos lugares e horários de funcionamento mais curtos; na época de provas, muitas vezes é preciso fazer fila e disputar um assento. Já a sala de estudo pode ser reservada com antecedência, e algumas ficam abertas até meia-noite. No fundo, o cliente não compra só uma mesa, mas um ambiente que obriga a gente a se concentrar.",
+    "Na Alemanha, nas épocas de prova também é difícil conseguir lugar nas bibliotecas universitárias, mas pouca gente aceita pagar para estudar. Em compensação, em cafés de algumas cidades, há quem organize “clubes de leitura silenciosa”: as pessoas se sentam juntas, cada uma lê o seu livro, e durante uma hora ninguém fala. Por trás dessa diferença talvez estejam pressões de estudo e hábitos de consumo diferentes. Mas uma coisa é certa: seja onde for, encontrar um lugar onde a gente consiga acalmar a mente é um desejo comum a muitos estudantes."
+   ],
+   "grammar_pt": "连……都……: “até …” — 连敲键盘的声音都要尽量放轻 “até o som do teclado deve ser o mais baixo possível”. O que vem depois de 连 é o caso mais extremo; 都 (ou 也) vem antes do verbo. （连……都/也……：强调极端的情况）"
   }
  ]
 }

@@ -45,43 +45,50 @@
      "w": "店员",
      "p": "diàn yuán",
      "en": "shop assistant",
-     "de": "der Verkäufer; die Verkäuferin"
+     "de": "der Verkäufer; die Verkäuferin",
+     "pt": "o atendente; a atendente"
     },
     {
      "w": "面包",
      "p": "miàn bāo",
      "en": "bread",
-     "de": "das Brot"
+     "de": "das Brot",
+     "pt": "o pão"
     },
     {
      "w": "小面包",
      "p": "xiǎo miàn bāo",
      "en": "bread roll",
-     "de": "das Brötchen"
+     "de": "das Brötchen",
+     "pt": "o pãozinho"
     },
     {
      "w": "别的",
      "p": "bié de",
      "en": "something else; other",
-     "de": "etwas anderes; andere"
+     "de": "etwas anderes; andere",
+     "pt": "outra coisa"
     },
     {
      "w": "一共",
      "p": "yí gòng",
      "en": "altogether; in total",
-     "de": "insgesamt; zusammen"
+     "de": "insgesamt; zusammen",
+     "pt": "ao todo"
     },
     {
      "w": "欧元",
      "p": "ōu yuán",
      "en": "euro",
-     "de": "der Euro"
+     "de": "der Euro",
+     "pt": "o euro"
     },
     {
      "w": "每天",
      "p": "měi tiān",
      "en": "every day",
-     "de": "jeden Tag"
+     "de": "jeden Tag",
+     "pt": "todo dia"
     }
    ],
    "grammar": "还 before a verb means 'also; in addition': 我还要一杯咖啡 'I'd also like a cup of coffee'. 你还要别的吗？ is the everyday way to ask 'Anything else?'. In 你明天还来吗？ 还 means 'again'.",
@@ -91,7 +98,19 @@
     "一共多少钱？",
     "马克每天早上几点来面包店？"
    ],
-   "sources": []
+   "sources": [],
+   "title_pt": "A padaria de manhã",
+   "paragraphs_pt": [
+    "Atendente: Bom dia! O que vai ser?",
+    "Mark: Bom dia! Quero quatro pãezinhos.",
+    "Atendente: Certo. Mais alguma coisa?",
+    "Mark: Também quero um café. Quanto dá tudo?",
+    "Atendente: Dá cinco euros.",
+    "Mark: Aqui está. Obrigado!",
+    "Atendente: Obrigada! Você volta amanhã?",
+    "Mark: Volto! Venho aqui todo dia às sete da manhã."
+   ],
+   "grammar_pt": "还 antes de um verbo significa “também; além disso”: 我还要一杯咖啡 “também quero um café”. 你还要别的吗？ é o jeito comum de perguntar “mais alguma coisa?”. Em 你明天还来吗？, 还 significa “de novo”."
   },
   {
    "lang": "zh",
@@ -124,49 +143,57 @@
      "w": "邻居",
      "p": "lín jū",
      "en": "neighbour",
-     "de": "der Nachbar; die Nachbarin"
+     "de": "der Nachbar; die Nachbarin",
+     "pt": "o vizinho; a vizinha"
     },
     {
      "w": "包裹",
      "p": "bāo guǒ",
      "en": "parcel; package",
-     "de": "das Paket"
+     "de": "das Paket",
+     "pt": "o pacote; a encomenda"
     },
     {
      "w": "快递员",
      "p": "kuài dì yuán",
      "en": "delivery driver; courier",
-     "de": "der Paketbote; der Kurier"
+     "de": "der Paketbote; der Kurier",
+     "pt": "o entregador"
     },
     {
      "w": "纸条",
      "p": "zhǐ tiáo",
      "en": "slip of paper; note",
-     "de": "der Zettel"
+     "de": "der Zettel",
+     "pt": "o bilhete"
     },
     {
      "w": "楼",
      "p": "lóu",
      "en": "building; floor",
-     "de": "das Gebäude; der Stock"
+     "de": "das Gebäude; der Stock",
+     "pt": "o prédio; o andar"
     },
     {
      "w": "敲门",
      "p": "qiāo mén",
      "en": "to knock on the door",
-     "de": "an die Tür klopfen"
+     "de": "an die Tür klopfen",
+     "pt": "bater na porta"
     },
     {
      "w": "收",
      "p": "shōu",
      "en": "to receive; to take in",
-     "de": "annehmen; empfangen"
+     "de": "annehmen; empfangen",
+     "pt": "receber"
     },
     {
      "w": "变成",
      "p": "biàn chéng",
      "en": "to become; to turn into",
-     "de": "werden zu"
+     "de": "werden zu",
+     "pt": "virar; tornar-se"
     }
    ],
    "grammar": "因为……所以…… gives a reason and its result: 因为我白天常常不在家，所以邻居们常常帮我收包裹 'Because I'm often out during the day, my neighbours often take in my parcels.' In English you use only 'because' or 'so'; in Chinese both words are normal together.",
@@ -176,7 +203,15 @@
     "为什么邻居们常常帮作者收包裹？",
     "昨天作者收了几个包裹？"
    ],
-   "sources": []
+   "sources": [],
+   "title_pt": "A encomenda na casa da vizinha",
+   "paragraphs_pt": [
+    "Moro num prédio antigo em Berlim, onde vivem oito famílias ao todo. Na Alemanha, se você não está em casa quando o entregador chega, ele muitas vezes deixa a encomenda com um vizinho.",
+    "Semana passada, vi um bilhetinho na porta: “Sua encomenda está no terceiro andar.” À noite, fui bater na porta do terceiro andar. Quem abriu foi uma senhora de mais de sessenta anos; ela me entregou o pacote sorrindo e ainda me ofereceu uma xícara de chá.",
+    "Como eu passo muito tempo fora de casa durante o dia, os vizinhos muitas vezes recebem encomendas para mim. Mas eu também ajudo eles. Ontem trabalhei em casa e, numa só manhã, recebi três encomendas!",
+    "Antes eu só conhecia um vizinho, o do andar de baixo; agora conheço metade do prédio. Um pequeno pacote fez a gente virar amigos."
+   ],
+   "grammar_pt": "因为……所以…… dá uma causa e sua consequência: 因为我白天常常不在家，所以邻居们常常帮我收包裹 “Como fico muito fora de casa durante o dia, os vizinhos muitas vezes recebem encomendas para mim.” Em português usamos só “como/porque” ou só “por isso”; em chinês é normal usar as duas palavras juntas."
   },
   {
    "lang": "zh",
@@ -210,67 +245,78 @@
      "w": "跳蚤市场",
      "p": "tiào zǎo shì chǎng",
      "en": "flea market",
-     "de": "der Flohmarkt"
+     "de": "der Flohmarkt",
+     "pt": "a feira de pulgas"
     },
     {
      "w": "各种各样",
      "p": "gè zhǒng gè yàng",
      "en": "all kinds of",
-     "de": "alle möglichen; verschiedenste"
+     "de": "alle möglichen; verschiedenste",
+     "pt": "todo tipo de"
     },
     {
      "w": "唱片",
      "p": "chàng piàn",
      "en": "record (music)",
-     "de": "die Schallplatte"
+     "de": "die Schallplatte",
+     "pt": "o disco (de música)"
     },
     {
      "w": "退休",
      "p": "tuì xiū",
      "en": "to retire; retired",
-     "de": "in Rente gehen; im Ruhestand"
+     "de": "in Rente gehen; im Ruhestand",
+     "pt": "aposentar-se; aposentado"
     },
     {
      "w": "收音机",
      "p": "shōu yīn jī",
      "en": "radio",
-     "de": "das Radio"
+     "de": "das Radio",
+     "pt": "o rádio (aparelho)"
     },
     {
      "w": "小摊",
      "p": "xiǎo tān",
      "en": "small stall",
-     "de": "der kleine Stand"
+     "de": "der kleine Stand",
+     "pt": "a barraquinha"
     },
     {
      "w": "茶壶",
      "p": "chá hú",
      "en": "teapot",
-     "de": "die Teekanne"
+     "de": "die Teekanne",
+     "pt": "o bule"
     },
     {
      "w": "讲价",
      "p": "jiǎng jià",
      "en": "to haggle",
-     "de": "handeln; feilschen"
+     "de": "handeln; feilschen",
+     "pt": "pechinchar"
     },
     {
      "w": "紧张",
      "p": "jǐn zhāng",
      "en": "nervous",
-     "de": "nervös; aufgeregt"
+     "de": "nervös; aufgeregt",
+     "pt": "nervoso"
     },
     {
      "w": "泡",
      "p": "pào",
      "en": "to steep; to make (tea)",
-     "de": "aufgießen; (Tee) machen"
+     "de": "aufgießen; (Tee) machen",
+     "pt": "preparar (chá); deixar em infusão"
     },
     {
      "w": "差不多",
      "p": "chà bu duō",
      "en": "about; almost",
-     "de": "ungefähr; fast"
+     "de": "ungefähr; fast",
+     "pt": "quase; mais ou menos"
     }
    ],
    "grammar": "Place + verb + 着 + thing describes what is at a place: 桌子上放着各种各样的东西 'On the tables lie all kinds of things'; 身边放着一台旧收音机 'beside him stands an old radio'. The place comes first, and 着 shows a lasting state, not an action.",
@@ -280,7 +326,15 @@
     "茶壶本来要多少钱？最后作者花了多少钱？",
     "作者为什么觉得这个茶壶比商店里的好？"
    ],
-   "sources": []
+   "sources": [],
+   "title_pt": "A feira de pulgas de domingo",
+   "paragraphs_pt": [
+    "Antes de vir para a Alemanha, eu nunca tinha ido a uma feira de pulgas. A primeira vez foi num domingo de manhã: um amigo me levou a um parque da cidade. O tempo não estava muito bom, mas havia muito mais gente na feira do que eu imaginava.",
+    "Nas mesas, uma atrás da outra, havia de tudo: livros usados, discos, canecas, faróis de bicicleta e até fotos antigas de décadas atrás. Entre os vendedores, alguns eram estudantes jovens, outros, idosos aposentados. Um senhor estava sentado numa cadeira com um rádio antigo ao lado, e o rádio ainda tocava música.",
+    "Numa barraquinha, vi um bule azul com uma etiqueta: “10 euros”. Meu amigo me disse baixinho que na feira de pulgas dá para pechinchar. Um pouco nervoso, perguntei: “Pode ser oito euros?” A moça que vendia riu: “Nove, vai!” E eu comprei o bule.",
+    "Em casa, lavei bem o bule e preparei um chá. Esse bule não é novo nem caro, mas tem uma história a mais do que os bules das lojas. Agora vou à feira de pulgas quase todo mês — nem sempre para comprar, só porque gosto de olhar."
+   ],
+   "grammar_pt": "Lugar + verbo + 着 + coisa descreve o que há num lugar: 桌子上放着各种各样的东西 “Nas mesas há todo tipo de coisa”; 身边放着一台旧收音机 “ao lado dele está um rádio antigo”. O lugar vem primeiro, e 着 indica um estado que dura, não uma ação."
   },
   {
    "lang": "zh",
@@ -317,73 +371,85 @@
      "w": "便利店",
      "p": "biàn lì diàn",
      "en": "convenience store",
-     "de": "der Convenience Store; kleiner Laden"
+     "de": "der Convenience Store; kleiner Laden",
+     "pt": "a loja de conveniência"
     },
     {
      "w": "加班",
      "p": "jiā bān",
      "en": "to work overtime",
-     "de": "Überstunden machen"
+     "de": "Überstunden machen",
+     "pt": "fazer hora extra"
     },
     {
      "w": "饭团",
      "p": "fàn tuán",
      "en": "rice ball",
-     "de": "der Reisball; Onigiri"
+     "de": "der Reisball; Onigiri",
+     "pt": "o bolinho de arroz (onigiri)"
     },
     {
      "w": "豆浆",
      "p": "dòu jiāng",
      "en": "soy milk",
-     "de": "die Sojamilch"
+     "de": "die Sojamilch",
+     "pt": "o leite de soja"
     },
     {
      "w": "拖鞋",
      "p": "tuō xié",
      "en": "slippers",
-     "de": "die Hausschuhe; Pantoffeln"
+     "de": "die Hausschuhe; Pantoffeln",
+     "pt": "o chinelo"
     },
     {
      "w": "营业",
      "p": "yíng yè",
      "en": "to be open for business",
-     "de": "geöffnet haben; Geschäftsbetrieb"
+     "de": "geöffnet haben; Geschäftsbetrieb",
+     "pt": "estar aberto (comércio)"
     },
     {
      "w": "剩下",
      "p": "shèng xià",
      "en": "to be left over",
-     "de": "übrig bleiben"
+     "de": "übrig bleiben",
+     "pt": "sobrar"
     },
     {
      "w": "零食",
      "p": "líng shí",
      "en": "snacks",
-     "de": "die Snacks; Knabbereien"
+     "de": "die Snacks; Knabbereien",
+     "pt": "os petiscos; os lanchinhos"
     },
     {
      "w": "气氛",
      "p": "qì fēn",
      "en": "atmosphere; mood",
-     "de": "die Stimmung; Atmosphäre"
+     "de": "die Stimmung; Atmosphäre",
+     "pt": "o clima; o ambiente"
     },
     {
      "w": "提前",
      "p": "tí qián",
      "en": "in advance; ahead of time",
-     "de": "im Voraus; vorher"
+     "de": "im Voraus; vorher",
+     "pt": "com antecedência"
     },
     {
      "w": "想念",
      "p": "xiǎng niàn",
      "en": "to miss (someone or something)",
-     "de": "vermissen"
+     "de": "vermissen",
+     "pt": "sentir falta de"
     },
     {
      "w": "随时",
      "p": "suí shí",
      "en": "at any time",
-     "de": "jederzeit"
+     "de": "jederzeit",
+     "pt": "a qualquer hora"
     }
    ],
    "grammar": "原来 introduces the explanation you have just discovered, 'it turns out (that)': 原来在德国，大部分商店星期天不营业 'It turned out that in Germany most shops are closed on Sundays.' It often follows a surprise introduced by 结果 'as it turned out; in the end' (结果发现……都关着门).",
@@ -393,7 +459,16 @@
     "来德国的第一个星期天，作者遇到了什么问题？",
     "作者觉得两种生活方式各有什么好处？"
    ],
-   "sources": []
+   "sources": [],
+   "title_pt": "Onde comprar leite às dez da noite?",
+   "paragraphs_pt": [
+    "Quando eu morava em Xangai, havia uma loja de conveniência bem embaixo do meu prédio, aberta 24 horas. À noite, depois de fazer hora extra, eu muitas vezes entrava para comprar um bolinho de arroz e um leite de soja quente; se de madrugada me dava vontade de tomar sorvete, era só descer de chinelo. Para mim, a loja de conveniência era quase parte da vida.",
+    "No meu primeiro domingo na Alemanha, resolvi ir ao supermercado fazer compras e descobri que quase todos estavam fechados. Na Alemanha, a maioria das lojas não abre aos domingos, e nos dias de semana muitas fecham às oito ou às dez da noite. Naquele dia, tive que cozinhar o macarrão que ainda restava em casa.",
+    "Depois, um colega alemão me contou que em Berlim existe um tipo de lojinha que todo mundo chama de “Späti”, algo como “a loja que fica aberta até tarde”. Elas costumam funcionar até altas horas, vendem bebidas, petiscos e jornais, e algumas ainda têm umas cadeiras na porta. Nas noites de verão, muitas vezes há jovens sentados do lado de fora, bebendo e conversando. Acho parecido com as lojas de conveniência da China, mas o clima é mais descontraído — é como a sala de estar da rua inteira.",
+    "No começo, eu achava muito inconveniente as lojas fecharem cedo. Mas, aos poucos, entendi a lógica: os funcionários também precisam descansar, e o domingo pode ficar para a família e os amigos. Agora aprendi a me planejar: no sábado já compro o que vou usar na semana seguinte. No domingo, vou passear no parque ou cozinho uma refeição com calma em casa.",
+    "Claro que às vezes ainda sinto falta daquela loja de conveniência sempre iluminada embaixo do meu prédio. Para mim, os dois estilos de vida têm suas vantagens: um deixa tudo prático a qualquer hora, o outro ensina a desacelerar. E você, de qual gosta mais?"
+   ],
+   "grammar_pt": "原来 introduz a explicação que você acabou de descobrir, “acontece que; na verdade”: 原来在德国，大部分商店星期天不营业 “Acontece que na Alemanha a maioria das lojas não abre aos domingos.” Costuma vir depois de uma surpresa introduzida por 结果 “no fim; acabou que” (结果发现……都关着门)."
   },
   {
    "lang": "zh",
@@ -430,73 +505,85 @@
      "w": "蒙蒙亮",
      "p": "mēng mēng liàng",
      "en": "(of the sky) just starting to get light",
-     "de": "(der Himmel) wird gerade hell"
+     "de": "(der Himmel) wird gerade hell",
+     "pt": "(o céu) começando a clarear"
     },
     {
      "w": "收摊",
      "p": "shōu tān",
      "en": "to pack up a stall",
-     "de": "den Stand abbauen; zusammenpacken"
+     "de": "den Stand abbauen; zusammenpacken",
+     "pt": "desmontar a barraca"
     },
     {
      "w": "人山人海",
      "p": "rén shān rén hǎi",
      "en": "idiom: 'mountains and seas of people' – huge crowds",
-     "de": "Redewendung: „Berge und Meere von Menschen“ – riesige Menschenmengen"
+     "de": "Redewendung: „Berge und Meere von Menschen“ – riesige Menschenmengen",
+     "pt": "(chengyu) “montanhas e mares de gente” – uma multidão enorme"
     },
     {
      "w": "此起彼伏",
      "p": "cǐ qǐ bǐ fú",
      "en": "idiom: 'here rising, there falling' – one after another, without pause",
-     "de": "Redewendung: „hier steigt es, dort sinkt es“ – eins nach dem anderen, ohne Pause"
+     "de": "Redewendung: „hier steigt es, dort sinkt es“ – eins nach dem anderen, ohne Pause",
+     "pt": "(chengyu) “aqui sobe, ali desce” – um após o outro, sem parar"
     },
     {
      "w": "五花八门",
      "p": "wǔ huā bā mén",
      "en": "idiom: 'five flowers, eight gates' – all sorts of, a wide variety",
-     "de": "Redewendung: „fünf Blumen, acht Tore“ – allerlei, bunt gemischt"
+     "de": "Redewendung: „fünf Blumen, acht Tore“ – allerlei, bunt gemischt",
+     "pt": "(chengyu) “cinco flores, oito portões” – de tudo um pouco, grande variedade"
     },
     {
      "w": "应有尽有",
      "p": "yīng yǒu jìn yǒu",
      "en": "idiom: everything one could wish for is there",
-     "de": "Redewendung: alles, was man sich wünschen kann, ist da"
+     "de": "Redewendung: alles, was man sich wünschen kann, ist da",
+     "pt": "(chengyu) tem tudo o que se possa querer"
     },
     {
      "w": "热气腾腾",
      "p": "rè qì téng téng",
      "en": "steaming hot",
-     "de": "dampfend heiß"
+     "de": "dampfend heiß",
+     "pt": "fumegante; quentinho"
     },
     {
      "w": "豆腐脑",
      "p": "dòu fu nǎo",
      "en": "silken tofu pudding (breakfast dish)",
-     "de": "Tofupudding (Frühstücksgericht)"
+     "de": "Tofupudding (Frühstücksgericht)",
+     "pt": "o doufunao (pudim de tofu, prato de café da manhã)"
     },
     {
      "w": "讨价还价",
      "p": "tǎo jià huán jià",
      "en": "idiom: to haggle over the price",
-     "de": "Redewendung: um den Preis feilschen"
+     "de": "Redewendung: um den Preis feilschen",
+     "pt": "(chengyu) pechinchar"
     },
     {
      "w": "烟火气",
      "p": "yān huǒ qì",
      "en": "'smoke and fire': the lively, homely feel of everyday life",
-     "de": "„Rauch und Feuer“: das lebendige, heimelige Gefühl des Alltags"
+     "de": "„Rauch und Feuer“: das lebendige, heimelige Gefühl des Alltags",
+     "pt": "“fumaça e fogo”: o ar animado e caseiro da vida cotidiana"
     },
     {
      "w": "亲切",
      "p": "qīn qiè",
      "en": "warm; familiar; cordial",
-     "de": "herzlich; vertraut"
+     "de": "herzlich; vertraut",
+     "pt": "acolhedor; familiar; cordial"
     },
     {
      "w": "一日之计在于晨",
      "p": "yí rì zhī jì zài yú chén",
      "en": "saying: the day's plan is made in the morning",
-     "de": "Sprichwort: Der Plan des Tages wird am Morgen gemacht"
+     "de": "Sprichwort: Der Plan des Tages wird am Morgen gemacht",
+     "pt": "ditado: o plano do dia se faz de manhã"
     }
    ],
    "grammar": "比起 A，B…… means 'compared with A, B …' and puts A first as the point of comparison: 比起整齐安静的大超市，早市显得有点儿乱 'Compared with a tidy, quiet supermarket, the morning market looks a bit chaotic.' Unlike A 比 B + adjective, the second part can be a whole clause with its own verb (显得, 让人觉得).",
@@ -506,7 +593,16 @@
     "在作者看来，讲价除了省钱，还是什么？",
     "“烟火气”原本是什么意思？现在用来形容什么？"
    ],
-   "sources": []
+   "sources": [],
+   "title_pt": "O calor humano da feira matinal",
+   "paragraphs_pt": [
+    "Em muitas cidades chinesas existe um mercado que pertence só às primeiras horas do dia: a feira matinal. Ela costuma acontecer em ruas ou terrenos perto de bairros residenciais; mal o dia clareia, as barracas abrem e, por volta das oito ou nove, os feirantes vão desmontando tudo, e a rua volta a ser o que era. Quem tem o hábito de dormir até tarde talvez nunca chegue a vê-la.",
+    "A primeira vez que fui a uma feira matinal foi na faculdade, quando passei as férias de verão na casa de um colega. Pouco depois das cinco, ele me arrancou da cama. Ao chegar na esquina, levei um susto: os dois lados da rua estavam tomados de barracas, havia gente por todo lado, e os pregões dos vendedores se sucediam sem parar. Gente vendendo verduras, frutas, ovos, e também consertando sapatos, fazendo cópias de chaves, vendendo meias — de tudo um pouco, não faltava nada.",
+    "O que mais me atraiu foi o café da manhã fumegante. Youtiao recém-saídos do óleo, tigelas de doufunao, baozi feitos na hora — o cheiro tomava a rua inteira. A gente ficava na beira da rua, com um youtiao numa mão e o leite de soja na outra, comendo até suar. A mãe do meu colega fazia compras ali perto e passou um bom tempo pechinchando com o feirante; no fim, ele ainda lhe deu de brinde um maço de cebolinha, e os dois riram. Só então entendi que pechinchar ali não é só para economizar uns centavos: é também uma forma de conversar.",
+    "Os chineses costumam usar a expressão “烟火气” (o “ar de fumaça e fogo”) para descrever lugares assim. Originalmente, a palavra se referia à fumaça e ao fogo da cozinha; hoje é usada sobretudo para descrever dias comuns, animados, reais e cheios de sabor de vida. Comparada a um supermercado grande, arrumado e silencioso, a feira matinal parece meio bagunçada, mas transmite uma sensação especialmente acolhedora. Muitos idosos vão todos os dias: comprar verduras é só um pretexto; o verdadeiro objetivo é rever os velhos amigos e jogar conversa fora.",
+    "Depois me mudei para a Alemanha e descobri que aqui também há lugares parecidos: as feiras ao ar livre, que abrem alguns dias fixos por semana. Não tem youtiao nem leite de soja, mas também há verduras frescas, pães e queijos, e também há gente conversando enquanto espera na fila. O moço do queijo deixa você provar um pedacinho antes, e a senhora das flores diz quais duram mais. Diz o ditado: “O plano do dia se faz de manhã.” Talvez, em qualquer cidade, a melhor forma de saber como vivem as pessoas do lugar seja acordar um pouco mais cedo e dar uma volta pela feira."
+   ],
+   "grammar_pt": "比起 A，B…… significa “comparado a A, B …” e põe A primeiro como ponto de comparação: 比起整齐安静的大超市，早市显得有点儿乱 “Comparada a um supermercado arrumado e silencioso, a feira matinal parece meio bagunçada.” Diferente de A 比 B + adjetivo, a segunda parte pode ser uma oração inteira com verbo próprio (显得, 让人觉得)."
   }
  ]
 }

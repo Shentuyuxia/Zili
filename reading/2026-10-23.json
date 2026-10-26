@@ -42,49 +42,57 @@
      "w": "星期五",
      "p": "xīng qī wǔ",
      "en": "Friday",
-     "de": "der Freitag"
+     "de": "der Freitag",
+     "pt": "a sexta-feira"
     },
     {
      "w": "晚上",
      "p": "wǎn shang",
      "en": "evening",
-     "de": "der Abend"
+     "de": "der Abend",
+     "pt": "a noite"
     },
     {
      "w": "电影",
      "p": "diàn yǐng",
      "en": "film, movie",
-     "de": "der Film"
+     "de": "der Film",
+     "pt": "o filme"
     },
     {
      "w": "几点",
      "p": "jǐ diǎn",
      "en": "what time",
-     "de": "um wie viel Uhr"
+     "de": "um wie viel Uhr",
+     "pt": "que horas"
     },
     {
      "w": "半",
      "p": "bàn",
      "en": "half",
-     "de": "halb"
+     "de": "halb",
+     "pt": "meia; metade"
     },
     {
      "w": "饭馆",
      "p": "fàn guǎn",
      "en": "restaurant",
-     "de": "das Restaurant"
+     "de": "das Restaurant",
+     "pt": "o restaurante"
     },
     {
      "w": "票",
      "p": "piào",
      "en": "ticket",
-     "de": "die Karte; das Ticket"
+     "de": "die Karte; das Ticket",
+     "pt": "o ingresso"
     },
     {
      "w": "请",
      "p": "qǐng",
      "en": "to treat, to invite",
-     "de": "einladen"
+     "de": "einladen",
+     "pt": "convidar; pagar (para alguém)"
     }
    ],
    "grammar": "Time words come before the verb: 我们六点去饭馆吃饭 'we at six go to a restaurant to eat'. 七点半 means 'half past seven' – the 半 comes after the hour.",
@@ -94,7 +102,18 @@
     "电影几点开始？",
     "一张电影票多少钱？"
    ],
-   "sources": []
+   "sources": [],
+   "title_pt": "Sexta-feira à noite",
+   "paragraphs_pt": [
+    "David: Xiaomei, hoje é sexta-feira. O que você quer fazer à noite?",
+    "Xiaomei: Quero ver um filme. E você?",
+    "David: Eu também quero. O filme é a que horas?",
+    "Xiaomei: Às sete e meia. Vamos jantar num restaurante às seis, que tal?",
+    "David: Ótimo! Quanto custa o ingresso?",
+    "Xiaomei: Quarenta yuans cada. Eu compro dois.",
+    "David: Obrigado! Amanhã eu te pago um chá."
+   ],
+   "grammar_pt": "As palavras de tempo vêm antes do verbo: 我们六点去饭馆吃饭 “nós às seis vamos ao restaurante comer”. 七点半 significa “sete e meia” — o 半 vem depois da hora."
   },
   {
    "lang": "zh",
@@ -127,49 +146,57 @@
      "w": "乒乓球",
      "p": "pīng pāng qiú",
      "en": "table tennis",
-     "de": "das Tischtennis"
+     "de": "das Tischtennis",
+     "pt": "o pingue-pongue"
     },
     {
      "w": "公园",
      "p": "gōng yuán",
      "en": "park",
-     "de": "der Park"
+     "de": "der Park",
+     "pt": "o parque"
     },
     {
      "w": "同事",
      "p": "tóng shì",
      "en": "colleague",
-     "de": "der Kollege / die Kollegin"
+     "de": "der Kollege / die Kollegin",
+     "pt": "o colega de trabalho"
     },
     {
      "w": "从小",
      "p": "cóng xiǎo",
      "en": "since childhood",
-     "de": "von klein auf"
+     "de": "von klein auf",
+     "pt": "desde pequeno"
     },
     {
      "w": "下班",
      "p": "xià bān",
      "en": "to finish work",
-     "de": "Feierabend haben"
+     "de": "Feierabend haben",
+     "pt": "sair do trabalho"
     },
     {
      "w": "教",
      "p": "jiāo",
      "en": "to teach",
-     "de": "beibringen; unterrichten"
+     "de": "beibringen; unterrichten",
+     "pt": "ensinar"
     },
     {
      "w": "跑来跑去",
      "p": "pǎo lái pǎo qù",
      "en": "to run back and forth",
-     "de": "hin und her rennen"
+     "de": "hin und her rennen",
+     "pt": "correr de um lado para o outro"
     },
     {
      "w": "慢慢来",
      "p": "màn màn lái",
      "en": "take your time",
-     "de": "immer mit der Ruhe"
+     "de": "immer mit der Ruhe",
+     "pt": "vai com calma"
     }
    ],
    "grammar": "Verb + 得 + description says how well someone does something: 他打得非常好 'he plays very well'. 又……又…… joins two qualities: 打得又快又好 'plays both fast and well'.",
@@ -179,7 +206,15 @@
     "小王为什么打得很好？",
     "小王什么时候教安娜打乒乓球？"
    ],
-   "sources": []
+   "sources": [],
+   "title_pt": "Pingue-pongue no parque",
+   "paragraphs_pt": [
+    "Meu nome é Anna e eu moro em Berlim. Perto da minha casa tem um parque, e no parque há duas mesas de pingue-pongue. Quando o tempo está bom, muita gente joga lá.",
+    "Antes eu não sabia jogar, mas o meu colega chinês Xiao Wang joga muito bem. Como joga desde pequeno, ele joga rápido e bem. Agora, toda sexta-feira depois do trabalho, ele me ensina.",
+    "No começo, a bola sempre voava longe e eu corria de um lado para o outro, muito cansada. Xiao Wang dizia rindo: “Não tem problema, vai com calma.”",
+    "Agora eu já jogo bem e ainda fiz alguns amigos novos. Acho que ir jogar no parque na sexta à noite é muito melhor do que ficar em casa olhando o celular."
+   ],
+   "grammar_pt": "Verbo + 得 + descrição diz como alguém faz algo: 他打得非常好 “ele joga muito bem”. 又……又…… junta duas qualidades: 打得又快又好 “joga rápido e bem”."
   },
   {
    "lang": "zh",
@@ -216,73 +251,85 @@
      "w": "桌游",
      "p": "zhuō yóu",
      "en": "board game",
-     "de": "das Brettspiel"
+     "de": "das Brettspiel",
+     "pt": "o jogo de tabuleiro"
     },
     {
      "w": "以为",
      "p": "yǐ wéi",
      "en": "to (wrongly) think",
-     "de": "(fälschlich) glauben"
+     "de": "(fälschlich) glauben",
+     "pt": "achar (erradamente)"
     },
     {
      "w": "室友",
      "p": "shì yǒu",
      "en": "flatmate, roommate",
-     "de": "der Mitbewohner / die Mitbewohnerin"
+     "de": "der Mitbewohner / die Mitbewohnerin",
+     "pt": "o colega de apartamento"
     },
     {
      "w": "盒子",
      "p": "hé zi",
      "en": "box",
-     "de": "die Schachtel"
+     "de": "die Schachtel",
+     "pt": "a caixa"
     },
     {
      "w": "规则",
      "p": "guī zé",
      "en": "rule",
-     "de": "die Regel"
+     "de": "die Regel",
+     "pt": "a regra"
     },
     {
      "w": "复杂",
      "p": "fù zá",
      "en": "complicated",
-     "de": "kompliziert"
+     "de": "kompliziert",
+     "pt": "complicado"
     },
     {
      "w": "输",
      "p": "shū",
      "en": "to lose",
-     "de": "verlieren"
+     "de": "verlieren",
+     "pt": "perder"
     },
     {
      "w": "赢",
      "p": "yíng",
      "en": "to win",
-     "de": "gewinnen"
+     "de": "gewinnen",
+     "pt": "ganhar"
     },
     {
      "w": "局",
      "p": "jú",
      "en": "round, game (measure word)",
-     "de": "die Runde, die Partie (Zählwort)"
+     "de": "die Runde, die Partie (Zählwort)",
+     "pt": "a rodada; a partida (classificador)"
     },
     {
      "w": "居然",
      "p": "jū rán",
      "en": "unexpectedly, actually",
-     "de": "tatsächlich, überraschenderweise"
+     "de": "tatsächlich, überraschenderweise",
+     "pt": "inesperadamente; acredita?"
     },
     {
      "w": "鼓掌",
      "p": "gǔ zhǎng",
      "en": "to clap, to applaud",
-     "de": "klatschen, applaudieren"
+     "de": "klatschen, applaudieren",
+     "pt": "aplaudir"
     },
     {
      "w": "屏幕",
      "p": "píng mù",
      "en": "screen",
-     "de": "der Bildschirm"
+     "de": "der Bildschirm",
+     "pt": "a tela"
     }
    ],
    "grammar": "Place + verb + 着 + thing describes what is (lying, standing) somewhere: 桌子上放着很多盒子 'on the table lie many boxes'. Compare with 比: A 比 B + adjective + 多了 means 'A is much more … than B'.",
@@ -292,7 +339,16 @@
     "第一个游戏的规则，托马斯讲了几遍？",
     "“我”为什么觉得玩桌游比玩手机游戏热闹？"
    ],
-   "sources": []
+   "sources": [],
+   "title_pt": "Noite de jogos de tabuleiro",
+   "paragraphs_pt": [
+    "Antes de vir para a Alemanha, eu achava que o que os alemães mais gostavam de fazer no fim de semana era ir ao bar. Só depois de chegar descobri que muitos dos meus amigos alemães preferem chamar os amigos para casa e jogar jogos de tabuleiro juntos.",
+    "Na sexta passada, meu colega de apartamento Thomas convidou alguns amigos para jantar. Depois do jantar, havia muitas caixas em cima da mesa: alguns jogos usam cartas, outros usam bonequinhos de madeira. Eu só tinha jogado jogos de celular e nunca tinha visto tantos tipos de jogos de tabuleiro.",
+    "As regras do primeiro jogo eram meio complicadas; Thomas me explicou duas vezes em inglês até eu entender. No começo eu só perdia, mas depois fui pegando o jeito. Na última rodada, acredita, eu ganhei! Todo mundo riu e me aplaudiu.",
+    "Jogo de tabuleiro é mais lento que jogo de celular, mas com todo mundo sentado junto, tomando chá, comendo uns petiscos e conversando, é muito mais animado do que ficar sozinho olhando uma tela. Naquela noite, a gente jogou até uma da manhã.",
+    "Agora eu também comprei um jogo de tabuleiro e quero levá-lo para a China no Ano-Novo para ensinar meus primos a jogar."
+   ],
+   "grammar_pt": "Lugar + verbo + 着 + coisa descreve o que está (deitado, de pé) em algum lugar: 桌子上放着很多盒子 “em cima da mesa há muitas caixas”. Compare com 比: A 比 B + adjetivo + 多了 significa “A é muito mais … do que B”."
   },
   {
    "lang": "zh",
@@ -329,73 +385,85 @@
      "w": "倍速",
      "p": "bèi sù",
      "en": "multiple playback speed",
-     "de": "erhöhte Wiedergabegeschwindigkeit"
+     "de": "erhöhte Wiedergabegeschwindigkeit",
+     "pt": "a velocidade acelerada (reprodução)"
     },
     {
      "w": "功能",
      "p": "gōng néng",
      "en": "function, feature",
-     "de": "die Funktion"
+     "de": "die Funktion",
+     "pt": "a função; o recurso"
     },
     {
      "w": "集",
      "p": "jí",
      "en": "episode (measure word)",
-     "de": "die Folge (Zählwort)"
+     "de": "die Folge (Zählwort)",
+     "pt": "o episódio (classificador)"
     },
     {
      "w": "节奏",
      "p": "jié zòu",
      "en": "rhythm, pace",
-     "de": "der Rhythmus, das Tempo"
+     "de": "der Rhythmus, das Tempo",
+     "pt": "o ritmo"
     },
     {
      "w": "剧情",
      "p": "jù qíng",
      "en": "plot, storyline",
-     "de": "die Handlung"
+     "de": "die Handlung",
+     "pt": "a trama; o enredo"
     },
     {
      "w": "节省",
      "p": "jié shěng",
      "en": "to save (time, money)",
-     "de": "sparen (Zeit, Geld)"
+     "de": "sparen (Zeit, Geld)",
+     "pt": "economizar (tempo, dinheiro)"
     },
     {
      "w": "话题",
      "p": "huà tí",
      "en": "topic of conversation",
-     "de": "das Gesprächsthema"
+     "de": "das Gesprächsthema",
+     "pt": "o assunto (da conversa)"
     },
     {
      "w": "导演",
      "p": "dǎo yǎn",
      "en": "film director",
-     "de": "der Regisseur / die Regisseurin"
+     "de": "der Regisseur / die Regisseurin",
+     "pt": "o diretor (de cinema)"
     },
     {
      "w": "镜头",
      "p": "jìng tóu",
      "en": "shot, scene (in film)",
-     "de": "die Einstellung, die Szene"
+     "de": "die Einstellung, die Szene",
+     "pt": "a cena; o plano (cinema)"
     },
     {
      "w": "眼神",
      "p": "yǎn shén",
      "en": "look, expression in the eyes",
-     "de": "der Blick"
+     "de": "der Blick",
+     "pt": "o olhar"
     },
     {
      "w": "综艺节目",
      "p": "zōng yì jié mù",
      "en": "variety show",
-     "de": "die Unterhaltungsshow"
+     "de": "die Unterhaltungsshow",
+     "pt": "o programa de variedades"
     },
     {
      "w": "毕竟",
      "p": "bì jìng",
      "en": "after all",
-     "de": "schließlich, immerhin"
+     "de": "schließlich, immerhin",
+     "pt": "afinal"
     }
    ],
    "grammar": "在……看来 introduces someone's point of view: 在她看来 'in her view, as she sees it'. It usually opens the sentence, followed by the opinion.",
@@ -405,7 +473,16 @@
     "学电影的朋友为什么反对倍速看剧？",
     "作者看什么节目的时候会开倍速？"
    ],
-   "sources": []
+   "sources": [],
+   "title_pt": "Você assiste séries em velocidade acelerada?",
+   "paragraphs_pt": [
+    "Ultimamente percebi que muitos amigos meus ativam a função de “velocidade acelerada” quando assistem a séries, vendo em 1,5 ou até 2 vezes a velocidade. Meu colega de apartamento diz que uma série de quarenta episódios leva mais de trinta horas na velocidade normal; acelerada, dá para terminar num fim de semana.",
+    "Quem defende a velocidade acelerada acha que o ritmo de vida hoje é rápido demais e o tempo livre é pouco. Algumas tramas andam devagar demais, os diálogos são longos, e acelerar economiza bastante tempo. Também há quem diga que só quer saber o final da história e não liga para os detalhes do meio. Além disso, no dia seguinte os colegas estão todos comentando a mesma série; se você não terminou, não consegue entrar na conversa.",
+    "Mas também há quem seja contra. Uma amiga minha estuda cinema e diz que o diretor decide a duração de cada cena por algum motivo. Uma imagem silenciosa, um olhar de um ator — se forem pulados rapidinho, o espectador não sente a emoção que está ali. Para ela, ver série acelerada é como comer rápido demais: você fica satisfeito, mas não sente o sabor.",
+    "O meu jeito é o seguinte: quando vejo um programa de variedades leve, às vezes acelero um pouco; quando é um filme feito com cuidado, vejo na velocidade normal e, de preferência, com o celular longe. Se o primeiro episódio de uma série já me deixa entediado, eu simplesmente troco por outra, em vez de acelerar e assistir na marra. Afinal, ver série é para relaxar; se até o descanso vira tarefa, aí é uma pena.",
+    "E você? Quando assiste a séries, você acelera?"
+   ],
+   "grammar_pt": "在……看来 introduz o ponto de vista de alguém: 在她看来 “na opinião dela; do ponto de vista dela”. Costuma abrir a frase, seguido da opinião."
   },
   {
    "lang": "zh",
@@ -442,73 +519,85 @@
      "w": "走马观花",
      "p": "zǒu mǎ guān huā",
      "en": "idiom: 'look at flowers from a galloping horse' – to take only a quick, superficial look",
-     "de": "Chengyu: „vom galoppierenden Pferd Blumen betrachten“ – etwas nur flüchtig ansehen"
+     "de": "Chengyu: „vom galoppierenden Pferd Blumen betrachten“ – etwas nur flüchtig ansehen",
+     "pt": "chengyu: “olhar as flores de cima de um cavalo a galope” – ver tudo por cima, superficialmente"
     },
     {
      "w": "行程",
      "p": "xíng chéng",
      "en": "itinerary",
-     "de": "der Reiseplan"
+     "de": "der Reiseplan",
+     "pt": "o roteiro; o itinerário"
     },
     {
      "w": "形容",
      "p": "xíng róng",
      "en": "to describe",
-     "de": "beschreiben"
+     "de": "beschreiben",
+     "pt": "descrever"
     },
     {
      "w": "好不容易",
      "p": "hǎo bù róng yì",
      "en": "with great difficulty, finally",
-     "de": "mit Mühe; endlich"
+     "de": "mit Mühe; endlich",
+     "pt": "finalmente; a muito custo"
     },
     {
      "w": "赶",
      "p": "gǎn",
      "en": "to hurry to catch (a train etc.)",
-     "de": "eilen, (einen Zug) erwischen"
+     "de": "eilen, (einen Zug) erwischen",
+     "pt": "correr para pegar (trem etc.)"
     },
     {
      "w": "邀请",
      "p": "yāo qǐng",
      "en": "to invite",
-     "de": "einladen"
+     "de": "einladen",
+     "pt": "convidar"
     },
     {
      "w": "景点",
      "p": "jǐng diǎn",
      "en": "sight, tourist attraction",
-     "de": "die Sehenswürdigkeit"
+     "de": "die Sehenswürdigkeit",
+     "pt": "o ponto turístico"
     },
     {
      "w": "心旷神怡",
      "p": "xīn kuàng shén yí",
      "en": "idiom: 'open heart, joyful spirit' – relaxed and refreshed",
-     "de": "Chengyu: „weites Herz, froher Geist“ – entspannt und erfrischt"
+     "de": "Chengyu: „weites Herz, froher Geist“ – entspannt und erfrischt",
+     "pt": "chengyu: “coração aberto, espírito alegre” – relaxado e renovado"
     },
     {
      "w": "恍然大悟",
      "p": "huǎng rán dà wù",
      "en": "idiom: to suddenly see the light",
-     "de": "Chengyu: plötzlich begreifen, ein Licht geht auf"
+     "de": "Chengyu: plötzlich begreifen, ein Licht geht auf",
+     "pt": "chengyu: cair a ficha de repente"
     },
     {
      "w": "停留",
      "p": "tíng liú",
      "en": "to stay, to stop over",
-     "de": "sich aufhalten, verweilen"
+     "de": "sich aufhalten, verweilen",
+     "pt": "ficar; fazer uma parada"
     },
     {
      "w": "入乡随俗",
      "p": "rù xiāng suí sú",
      "en": "idiom: 'enter a village, follow its customs' – when in Rome, do as the Romans do",
-     "de": "Chengyu: „ins Dorf kommen, den Sitten folgen“ – andere Länder, andere Sitten"
+     "de": "Chengyu: „ins Dorf kommen, den Sitten folgen“ – andere Länder, andere Sitten",
+     "pt": "chengyu: “ao entrar na aldeia, siga seus costumes” – em Roma, como os romanos"
     },
     {
      "w": "不妨",
      "p": "bù fáng",
      "en": "might as well, why not",
-     "de": "ruhig; warum nicht"
+     "de": "ruhig; warum nicht",
+     "pt": "por que não; não custa"
     }
    ],
    "grammar": "不在于A，而在于B means 'lies not in A, but in B' – a formal way to say what really matters: 旅行的意义不在于去了多少地方，而在于…… 'the point of travel lies not in how many places …, but in …'.",
@@ -518,7 +607,16 @@
     "作者在朋友的老家做了些什么？",
     "作者给读者什么建议？"
    ],
-   "sources": []
+   "sources": [],
+   "title_pt": "Viajar sem passar correndo por tudo",
+   "paragraphs_pt": [
+    "Muitos turistas que vêm à Europa pela primeira vez lotam o roteiro: hoje Paris, amanhã Bruxelas, depois de amanhã Amsterdã. Em dez dias passam por seis ou sete países e tiram milhares de fotos, mas, de volta para casa, muitas vezes não lembram onde cada foto foi tirada. Esse jeito de viajar se descreve com um chengyu: “走马观花”, olhar as flores de cima de um cavalo a galope.",
+    "Na verdade, isso não é difícil de entender. As passagens não são baratas, as férias são curtas, e quem finalmente consegue vir quer conhecer o máximo de lugares. Na minha primeira viagem pela Europa também foi assim: todo dia eu acordava às seis para pegar o trem e, à noite, chegava ao hotel tão cansado que nem queria falar. Alguns grupos de excursão ficam só duas ou três horas em cada cidade: no ônibus dorme, fora do ônibus tira foto — isso virou uma lembrança comum a muita gente.",
+    "Depois, uma amiga alemã me convidou para ir à cidade natal dela, uma cidadezinha de poucos milhares de habitantes. Ficamos lá três dias inteiros e não visitamos nenhum ponto turístico famoso. De dia caminhávamos à beira do rio e víamos as pessoas colhendo uvas na encosta; à noite, numa tavernazinha, ouvíamos os velhos do lugar conversando no dialeto local. Embora eu não entendesse uma palavra, aquela calma e aquela sensação de estar à vontade me deixaram renovado. No terceiro dia, quando fomos embora, o dono da padaria já nos conhecia e perguntou sorrindo se voltaríamos no ano seguinte.",
+    "Aquela viagem me fez cair a ficha: talvez o sentido de viajar não esteja em quantos lugares você visitou, e sim em quanto tempo você realmente ficou num lugar. Só desacelerando dá tempo de observar como as pessoas do lugar vivem, como comem, como se cumprimentam. Na Alemanha, por exemplo, aos domingos a maioria das lojas fecha; as pessoas vão passear, visitam amigos, tomam café em casa, e o ritmo da vida desacelera de repente. Em Roma, como os romanos: aprender a viver alguns dias como eles costuma deixar as lembranças mais profundas.",
+    "Claro que passar correndo também tem suas vantagens: pelo menos dá uma impressão geral de uma região. Mas, da próxima vez que planejar as férias, por que não incluir uma ou duas cidades a menos e reservar uma tarde só para você, sem fazer nada, apenas sentado numa praça tomando um café e olhando as pessoas que passam? Viagem não é competição; ninguém vai te dar nota. Quem sabe esse seja o momento mais bonito de toda a viagem."
+   ],
+   "grammar_pt": "不在于A，而在于B significa “não está em A, e sim em B” – um jeito formal de dizer o que realmente importa: 旅行的意义不在于去了多少地方，而在于…… “o sentido da viagem não está em quantos lugares …, e sim em …”."
   }
  ]
 }

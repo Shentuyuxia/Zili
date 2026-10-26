@@ -48,49 +48,57 @@
      "w": "手表",
      "p": "shǒu biǎo",
      "en": "wristwatch",
-     "de": "die Armbanduhr"
+     "de": "die Armbanduhr",
+     "pt": "o relógio de pulso"
     },
     {
      "w": "不对",
      "p": "bú duì",
      "en": "not right; no",
-     "de": "nicht richtig; nein"
+     "de": "nicht richtig; nein",
+     "pt": "errado; não"
     },
     {
      "w": "时间",
      "p": "shí jiān",
      "en": "time",
-     "de": "die Zeit"
+     "de": "die Zeit",
+     "pt": "o tempo; a hora"
     },
     {
      "w": "变成",
      "p": "biàn chéng",
      "en": "to turn into; to become",
-     "de": "werden zu; sich verwandeln in"
+     "de": "werden zu; sich verwandeln in",
+     "pt": "virar; tornar-se"
     },
     {
      "w": "多睡",
      "p": "duō shuì",
      "en": "to sleep longer",
-     "de": "länger schlafen"
+     "de": "länger schlafen",
+     "pt": "dormir mais"
     },
     {
      "w": "改",
      "p": "gǎi",
      "en": "to change; to correct",
-     "de": "ändern; umstellen"
+     "de": "ändern; umstellen",
+     "pt": "mudar; corrigir"
     },
     {
      "w": "中午",
      "p": "zhōng wǔ",
      "en": "noon; midday",
-     "de": "der Mittag"
+     "de": "der Mittag",
+     "pt": "o meio-dia"
     },
     {
      "w": "天黑",
      "p": "tiān hēi",
      "en": "to get dark",
-     "de": "dunkel werden"
+     "de": "dunkel werden",
+     "pt": "escurecer"
     }
    ],
    "grammar": "多 + verb + amount means 'to do something that much more than usual': 多睡了一个小时 'slept one hour more'. 多 comes before the verb, the amount comes after it.",
@@ -100,7 +108,20 @@
     "今天早上三点的时候，时间变成了几点？",
     "他们中午想去哪儿？"
    ],
-   "sources": []
+   "sources": [],
+   "title_pt": "Hoje dormimos uma hora a mais",
+   "paragraphs_pt": [
+    "Anna: Bom dia, Li Wen! Que horas são?",
+    "Li Wen: Bom dia! No meu relógio são nove horas.",
+    "Anna: Não, agora são oito.",
+    "Li Wen: Oito? Por quê?",
+    "Anna: Hoje é 25 de outubro. Na Alemanha, hoje às três da manhã o relógio voltou para as duas.",
+    "Li Wen: Ah! Então hoje eu dormi uma hora a mais!",
+    "Anna: Isso! Você também precisa acertar o seu relógio.",
+    "Li Wen: Tá bom. Hoje o tempo está ótimo, vamos ao parque ao meio-dia!",
+    "Anna: Vamos! De agora em diante vai escurecer cedo; é bom sair para caminhar ao meio-dia."
+   ],
+   "grammar_pt": "多 + verbo + quantidade significa “fazer algo tanto a mais que o normal”: 多睡了一个小时 “dormiu uma hora a mais”. 多 vem antes do verbo, e a quantidade, depois."
   },
   {
    "lang": "zh",
@@ -133,49 +154,57 @@
      "w": "栗子",
      "p": "lì zi",
      "en": "chestnut",
-     "de": "die Kastanie; die Marone"
+     "de": "die Kastanie; die Marone",
+     "pt": "a castanha"
     },
     {
      "w": "叶子",
      "p": "yè zi",
      "en": "leaf",
-     "de": "das Blatt"
+     "de": "das Blatt",
+     "pt": "a folha"
     },
     {
      "w": "亮",
      "p": "liàng",
      "en": "shiny; bright",
-     "de": "glänzend; hell"
+     "de": "glänzend; hell",
+     "pt": "brilhante; claro"
     },
     {
      "w": "捡",
      "p": "jiǎn",
      "en": "to pick up (from the ground)",
-     "de": "aufheben; sammeln"
+     "de": "aufheben; sammeln",
+     "pt": "catar; pegar (do chão)"
     },
     {
      "w": "可爱",
      "p": "kě ài",
      "en": "cute; lovely",
-     "de": "niedlich; süß"
+     "de": "niedlich; süß",
+     "pt": "fofo; bonitinho"
     },
     {
      "w": "糖炒栗子",
      "p": "táng chǎo lì zi",
      "en": "sugar-roasted chestnuts",
-     "de": "in Zucker geröstete Maronen"
+     "de": "in Zucker geröstete Maronen",
+     "pt": "as castanhas assadas com açúcar"
     },
     {
      "w": "香",
      "p": "xiāng",
      "en": "fragrant; smells good",
-     "de": "duftend; lecker riechend"
+     "de": "duftend; lecker riechend",
+     "pt": "cheiroso; perfumado"
     },
     {
      "w": "袋",
      "p": "dài",
      "en": "bag (measure word)",
-     "de": "Tüte, Beutel (Zählwort)"
+     "de": "Tüte, Beutel (Zählwort)",
+     "pt": "o saco (classificador)"
     }
    ],
    "grammar": "一边……一边…… means doing two things at the same time: 一边走一边吃 'eat while walking'. Put 一边 before each verb.",
@@ -185,7 +214,15 @@
     "德国的孩子用栗子做什么？",
     "在中国北方，人们秋天在街上买什么？"
    ],
-   "sources": []
+   "sources": [],
+   "title_pt": "Castanhas no parque",
+   "paragraphs_pt": [
+    "Em outubro, os parques da Alemanha ficam cheios de castanhas. No chão há folhas vermelhas e amarelas, e também castanhas pequeninas e brilhantes. As crianças adoram catar castanhas embaixo das árvores.",
+    "Mas essas castanhas do parque não se comem. As crianças alemãs costumam fazer bichinhos e bonequinhos com elas e colocá-los em cima da mesa — fica muito fofo.",
+    "Na China, no outono também há castanhas, mas essas se comem. Nas ruas do norte é comum ver gente vendendo castanhas assadas com açúcar, doces e cheirosas. Como o tempo esfria, muita gente compra um saquinho na saída do trabalho e vai comendo pelo caminho.",
+    "A primeira vez que meu amigo chinês viu tantas castanhas na Alemanha, ficou muito feliz e ainda quis levar para casa para cozinhar. Eu logo avisei: “Essas não se comem!” E nós dois rimos."
+   ],
+   "grammar_pt": "一边……一边…… indica duas ações ao mesmo tempo: 一边走一边吃 “comer enquanto anda”. Coloca-se 一边 antes de cada verbo."
   },
   {
    "lang": "zh",
@@ -222,73 +259,85 @@
      "w": "阳台",
      "p": "yáng tái",
      "en": "balcony",
-     "de": "der Balkon"
+     "de": "der Balkon",
+     "pt": "a varanda"
     },
     {
      "w": "公寓",
      "p": "gōng yù",
      "en": "flat; apartment",
-     "de": "die Wohnung"
+     "de": "die Wohnung",
+     "pt": "o apartamento"
     },
     {
      "w": "种",
      "p": "zhòng",
      "en": "to plant; to grow",
-     "de": "pflanzen; anbauen"
+     "de": "pflanzen; anbauen",
+     "pt": "plantar; cultivar"
     },
     {
      "w": "盆",
      "p": "pén",
      "en": "pot (measure word for potted plants)",
-     "de": "Topf (Zählwort für Topfpflanzen)"
+     "de": "Topf (Zählwort für Topfpflanzen)",
+     "pt": "o vaso (classificador para plantas)"
     },
     {
      "w": "薄荷",
      "p": "bò he",
      "en": "mint",
-     "de": "die Minze"
+     "de": "die Minze",
+     "pt": "a hortelã"
     },
     {
      "w": "罗勒",
      "p": "luó lè",
      "en": "basil",
-     "de": "das Basilikum"
+     "de": "das Basilikum",
+     "pt": "o manjericão"
     },
     {
      "w": "番茄",
      "p": "fān qié",
      "en": "tomato",
-     "de": "die Tomate"
+     "de": "die Tomate",
+     "pt": "o tomate"
     },
     {
      "w": "随手",
      "p": "suí shǒu",
      "en": "conveniently; without extra effort",
-     "de": "nebenbei; einfach so"
+     "de": "nebenbei; einfach so",
+     "pt": "de passagem; sem esforço"
     },
     {
      "w": "摘",
      "p": "zhāi",
      "en": "to pick (leaves, fruit)",
-     "de": "pflücken; abzupfen"
+     "de": "pflücken; abzupfen",
+     "pt": "colher; tirar (folhas, frutas)"
     },
     {
      "w": "邻居",
      "p": "lín jū",
      "en": "neighbour",
-     "de": "der Nachbar; die Nachbarin"
+     "de": "der Nachbar; die Nachbarin",
+     "pt": "o vizinho; a vizinha"
     },
     {
      "w": "窗台",
      "p": "chuāng tái",
      "en": "windowsill",
-     "de": "die Fensterbank"
+     "de": "die Fensterbank",
+     "pt": "o parapeito da janela"
     },
     {
      "w": "暖和",
      "p": "nuǎn huo",
      "en": "warm (pleasantly)",
-     "de": "warm; angenehm warm"
+     "de": "warm; angenehm warm",
+     "pt": "quentinho; agradável"
     }
    ],
    "grammar": "一天比一天 + adjective describes a steady change, 'more and more … every day': 番茄一天比一天红 'the tomatoes got redder day by day'. Compare 越来越冷 'colder and colder', which is used for the same idea without counting days.",
@@ -298,7 +347,16 @@
     "为什么作者把罗勒搬进了屋里？",
     "薄荷冬天会怎么样？"
    ],
-   "sources": []
+   "sources": [],
+   "title_pt": "A hortinha na varanda",
+   "paragraphs_pt": [
+    "Moro num apartamento pequeno em Hamburgo. Não tenho jardim, só uma varandinha. Nesta primavera, plantei alguns vasos na varanda: hortelã, manjericão e dois pés de tomate-cereja.",
+    "No verão, a varanda virou o meu lugar preferido. De manhã eu sentava lá para tomar café, vendo os tomates ficarem mais vermelhos a cada dia. Quando cozinhava, pegava umas folhas de manjericão e colocava no macarrão — muito mais cheiroso do que o do supermercado.",
+    "Mas, em outubro, foi esfriando cada vez mais, e à noite às vezes fazia só três ou quatro graus. Os tomates já tinham acabado havia tempo, e as folhas do manjericão começaram a escurecer. Uma vizinha me disse que o manjericão sente muito frio e que era melhor levá-lo para dentro.",
+    "Então coloquei o manjericão no parapeito da janela da cozinha, onde bate sol e é mais quentinho do que lá fora. A hortelã não sente tanto frio, então deixei na varanda. A vizinha disse que no inverno as folhas vão cair, mas na primavera que vem ela brota de novo.",
+    "Agora, toda vez que cozinho, dou uma olhada naquele vasinho verde na janela. O inverno é longo, mas na cozinha ainda ficou um pouquinho do gosto do verão."
+   ],
+   "grammar_pt": "一天比一天 + adjetivo descreve uma mudança constante, “mais … a cada dia”: 番茄一天比一天红 “os tomates ficavam mais vermelhos a cada dia”. Compare com 越来越冷 “cada vez mais frio”, usado para a mesma ideia sem contar os dias."
   },
   {
    "lang": "zh",
@@ -335,73 +393,85 @@
      "w": "断舍离",
      "p": "duàn shě lí",
      "en": "decluttering (from Japanese “danshari”)",
-     "de": "Ausmisten, Entrümpeln (aus dem Japanischen „Danshari“)"
+     "de": "Ausmisten, Entrümpeln (aus dem Japanischen „Danshari“)",
+     "pt": "o destralhe (do japonês “danshari”)"
     },
     {
      "w": "物品",
      "p": "wù pǐn",
      "en": "things; belongings",
-     "de": "die Gegenstände; der Besitz"
+     "de": "die Gegenstände; der Besitz",
+     "pt": "as coisas; os pertences"
     },
     {
      "w": "绑",
      "p": "bǎng",
      "en": "to tie; to bind",
-     "de": "fesseln; festbinden"
+     "de": "fesseln; festbinden",
+     "pt": "amarrar; prender"
     },
     {
      "w": "整理",
      "p": "zhěng lǐ",
      "en": "to tidy up; to sort out",
-     "de": "aufräumen; ordnen"
+     "de": "aufräumen; ordnen",
+     "pt": "arrumar; organizar"
     },
     {
      "w": "对比",
      "p": "duì bǐ",
      "en": "comparison; contrast",
-     "de": "der Vergleich"
+     "de": "der Vergleich",
+     "pt": "a comparação; o contraste"
     },
     {
      "w": "衣柜",
      "p": "yī guì",
      "en": "wardrobe",
-     "de": "der Kleiderschrank"
+     "de": "der Kleiderschrank",
+     "pt": "o guarda-roupa"
     },
     {
      "w": "吓了一跳",
      "p": "xià le yí tiào",
      "en": "to get a fright; to be startled",
-     "de": "erschrecken; einen Schreck bekommen"
+     "de": "erschrecken; einen Schreck bekommen",
+     "pt": "levar um susto"
     },
     {
      "w": "规则",
      "p": "guī zé",
      "en": "rule",
-     "de": "die Regel"
+     "de": "die Regel",
+     "pt": "a regra"
     },
     {
      "w": "回收箱",
      "p": "huí shōu xiāng",
      "en": "recycling / collection bin",
-     "de": "der Sammelcontainer"
+     "de": "der Sammelcontainer",
+     "pt": "o contêiner de coleta (reciclagem)"
     },
     {
      "w": "浪费",
      "p": "làng fèi",
      "en": "to waste",
-     "de": "verschwenden"
+     "de": "verschwenden",
+     "pt": "desperdiçar"
     },
     {
      "w": "极简",
      "p": "jí jiǎn",
      "en": "minimalist",
-     "de": "minimalistisch"
+     "de": "minimalistisch",
+     "pt": "minimalista"
     },
     {
      "w": "收藏",
      "p": "shōu cáng",
      "en": "to collect (as a hobby)",
-     "de": "sammeln (als Hobby)"
+     "de": "sammeln (als Hobby)",
+     "pt": "colecionar"
     }
    ],
    "grammar": "不是……而是…… 'not … but rather …' corrects an idea and gives the right one: 重点不是东西越少越好，而是…… 'the point isn't that fewer is better, but …'. The similar 不在……而在…… is used for where something lies: 变化不在房间里，而在购物的时候.",
@@ -411,7 +481,16 @@
     "在德国，旧书可以怎么处理？",
     "作者觉得断舍离最大的变化是什么？"
    ],
-   "sources": []
+   "sources": [],
+   "title_pt": "Você já experimentou o “danshari”?",
+   "paragraphs_pt": [
+    "Ultimamente, a palavra “断舍离” (danshari) aparece muito na internet chinesa. Ela vem do japonês e quer dizer: não comprar o que não precisa, desfazer-se do que não usa e não se deixar mais “prender” pelas coisas. Muitos jovens postam nas redes sociais fotos de antes e depois de arrumar o quarto, e o resultado parece muito agradável.",
+    "Eu também resolvi experimentar. No fim de semana passado, tirei todas as roupas do guarda-roupa e levei um susto: várias peças eu nunca tinha usado depois de comprar. Então criei uma regra simples: se uma coisa ficou um ano sem uso, pensar em deixá-la “ir embora”.",
+    "Mas “ir embora” não quer dizer necessariamente jogar fora. Na Alemanha, há muitas formas de lidar com coisas velhas: roupas usadas podem ir para os contêineres de coleta na rua; muitas cidades têm estantes públicas de livros, onde você deixa seus livros usados e outras pessoas podem levar de graça; móveis e pequenos eletrodomésticos podem ser vendidos pela internet ou dados aos vizinhos. Assim você arruma o quarto sem desperdiçar nada.",
+    "Depois de arrumar, o meu quarto ficou bem mais vazio, e achar as coisas ficou muito mais rápido. Mas acho que a maior mudança do danshari não está no quarto, e sim na hora de fazer compras. Agora, antes de comprar algo, eu me pergunto: eu realmente preciso disso? Já não tenho uma coisa parecida em casa?",
+    "Claro que não acho que todo mundo precise levar uma vida “minimalista”. Há quem goste de colecionar, e uma estante abarrotada de livros as deixa felizes — não há nada de errado nisso. Para mim, o essencial do danshari não é que quanto menos coisas, melhor, e sim que tudo o que fica seja algo de que você realmente gosta e que realmente vai usar."
+   ],
+   "grammar_pt": "不是……而是…… “não … e sim …” corrige uma ideia e apresenta a certa: 重点不是东西越少越好，而是…… “o essencial não é que quanto menos, melhor, e sim …”. A estrutura parecida 不在……而在…… indica onde algo está: 变化不在房间里，而在购物的时候."
   },
   {
    "lang": "zh",
@@ -448,73 +527,85 @@
      "w": "一叶知秋",
      "p": "yí yè zhī qiū",
      "en": "(idiom) one falling leaf tells that autumn has come; to see the big picture from a small sign",
-     "de": "(Chengyu) ein fallendes Blatt zeigt den Herbst an; aus einem kleinen Zeichen das Ganze erkennen"
+     "de": "(Chengyu) ein fallendes Blatt zeigt den Herbst an; aus einem kleinen Zeichen das Ganze erkennen",
+     "pt": "(chengyu) uma folha que cai anuncia o outono; perceber o todo a partir de um pequeno sinal"
     },
     {
      "w": "追溯",
      "p": "zhuī sù",
      "en": "to trace back (to)",
-     "de": "zurückverfolgen (bis)"
+     "de": "zurückverfolgen (bis)",
+     "pt": "remontar a"
     },
     {
      "w": "比喻",
      "p": "bǐ yù",
      "en": "to use as a metaphor; metaphor",
-     "de": "bildlich ausdrücken; die Metapher"
+     "de": "bildlich ausdrücken; die Metapher",
+     "pt": "usar como metáfora; a metáfora"
     },
     {
      "w": "椴树",
      "p": "duàn shù",
      "en": "linden tree",
-     "de": "die Linde"
+     "de": "die Linde",
+     "pt": "a tília"
     },
     {
      "w": "不知不觉",
      "p": "bù zhī bù jué",
      "en": "(idiom) unnoticed; without realising it",
-     "de": "(Chengyu) unbemerkt; ohne es zu merken"
+     "de": "(Chengyu) unbemerkt; ohne es zu merken",
+     "pt": "(chengyu) sem perceber"
     },
     {
      "w": "恰恰相反",
      "p": "qià qià xiāng fǎn",
      "en": "exactly the opposite",
-     "de": "genau umgekehrt"
+     "de": "genau umgekehrt",
+     "pt": "exatamente o contrário"
     },
     {
      "w": "色素",
      "p": "sè sù",
      "en": "pigment",
-     "de": "der Farbstoff; das Pigment"
+     "de": "der Farbstoff; das Pigment",
+     "pt": "o pigmento"
     },
     {
      "w": "叶绿素",
      "p": "yè lǜ sù",
      "en": "chlorophyll",
-     "de": "das Chlorophyll; das Blattgrün"
+     "de": "das Chlorophyll; das Blattgrün",
+     "pt": "a clorofila"
     },
     {
      "w": "遮住",
      "p": "zhē zhù",
      "en": "to cover; to hide from view",
-     "de": "verdecken"
+     "de": "verdecken",
+     "pt": "cobrir; esconder"
     },
     {
      "w": "五彩缤纷",
      "p": "wǔ cǎi bīn fēn",
      "en": "(idiom) a riot of colour; colourful",
-     "de": "(Chengyu) farbenprächtig; bunt"
+     "de": "(Chengyu) farbenprächtig; bunt",
+     "pt": "(chengyu) uma explosão de cores; colorido"
     },
     {
      "w": "多愁善感",
      "p": "duō chóu shàn gǎn",
      "en": "(idiom) melancholy; easily moved to sadness",
-     "de": "(Chengyu) wehmütig; sentimental"
+     "de": "(Chengyu) wehmütig; sentimental",
+     "pt": "(chengyu) melancólico; sentimental"
     },
     {
      "w": "何尝",
      "p": "hé cháng",
      "en": "(rhetorical) how could it not …; isn't it also …",
-     "de": "(rhetorisch) etwa nicht …; ist es nicht auch …"
+     "de": "(rhetorisch) etwa nicht …; ist es nicht auch …",
+     "pt": "(retórico) e não é também …?; como não …"
     }
    ],
    "grammar": "……才…… after a time or condition stresses that something happens only then, later than expected: 绿色渐渐退去，原来藏在里面的黄色才露了出来 'only when the green fades does the hidden yellow show'. The rhetorical 何尝不是如此 'how is it not so?' means 'it is just the same'.",
@@ -524,7 +615,16 @@
     "为什么秋天的树叶会变黄？",
     "作者觉得秋天给人什么样的提醒？"
    ],
-   "sources": []
+   "sources": [],
+   "title_pt": "Uma folha anuncia o outono",
+   "paragraphs_pt": [
+    "Há um chengyu chinês, “一叶知秋”, que quer dizer: ao ver uma folha caindo, sabe-se que o outono chegou. A expressão remonta a um livro antigo de mais de dois mil anos, o Huainanzi; mais tarde, passou a ser usada também como metáfora para perceber, a partir de uma pequena mudança, o rumo que as coisas vão tomar. Todo ano, em outubro, andando pelas ruas da Alemanha, eu me lembro desses quatro caracteres: uma rajada de vento passa, as folhas amarelas das tílias dão algumas voltas no ar e caem de leve no cestinho da bicicleta — e o outono chega assim, sem a gente perceber.",
+    "Quando eu era criança, achava que as folhas “viravam” amarelas só no outono. Depois descobri que é exatamente o contrário. As folhas sempre têm pigmentos amarelos e laranja; só que, na primavera e no verão, a grande quantidade de clorofila verde os encobre. Quando esfria e os dias ficam mais curtos, as árvores vão parando de produzir clorofila, o verde vai se desfazendo e só então o amarelo que estava escondido aparece.",
+    "Já o vermelho é outra história. Árvores como o bordo produzem no outono um pigmento vermelho novo. Por isso, no mesmo outono, o ginkgo fica todo dourado, enquanto as folhas do bordo ficam vermelhas como fogo, e o bosque inteiro se enche de cores. Os antigos não conheciam essa ciência, mas já tinham escrito versos como “as folhas tocadas pela geada são mais vermelhas que as flores de fevereiro”, enxergando essa beleza com toda a clareza.",
+    "O outono da China e o da Europa têm cada um o seu sabor. Os pequineses gostam de ir nesta estação à Montanha Perfumada (Xiangshan) ver as folhas vermelhas; os alemães preferem passear na floresta no fim de semana, pisando num tapete grosso de folhas, e depois voltar para casa e preparar um bule de chá quente. As formas são diferentes, mas o sentimento é parecido: aproveitar, antes de o inverno chegar, para olhar mais um pouco a última festa de cores do ano.",
+    "Há quem diga que o outono deixa as pessoas melancólicas, porque significa que o ano está chegando ao fim. Os poetas chineses antigos, quando escreviam sobre o outono, falavam muito de despedidas e saudade. Mas eu acho que o outono é mais como um lembrete gentil: antes da chegada do inverno, as árvores largam as folhas que sobram, descansam em silêncio e esperam para recomeçar na primavera seguinte. E não é assim também com as pessoas? Depois de um ano inteiro de correria, por que não deixar um espacinho em branco para si mesmo, desacelerar e olhar as cores do lado de fora da janela?"
+   ],
+   "grammar_pt": "……才…… depois de um tempo ou de uma condição enfatiza que algo só acontece então, mais tarde que o esperado: 绿色渐渐退去，原来藏在里面的黄色才露了出来 “só quando o verde se desfaz é que o amarelo escondido aparece”. A pergunta retórica 何尝不是如此 “como não seria assim?” quer dizer “é exatamente igual”."
   }
  ]
 }
