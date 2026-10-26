@@ -413,6 +413,36 @@ ol.steps li{margin:3px 0}
 .mg-src .lic{font-family:var(--f-mono);font-size:10.5px;color:var(--muted);margin-left:6px}
 .mg-fin{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:20px}
 .mg-week p{margin:0 0 10px;font-size:14px}
+.rb-shelf{display:flex;gap:12px;overflow-x:auto;padding:2px 2px 10px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+.rb-disc{flex:none;width:96px;border:0;background:none;padding:0;cursor:pointer;text-align:left;color:inherit;scroll-snap-align:start}
+.rb-sleeve{position:relative;display:flex;flex-direction:column;justify-content:flex-end;width:96px;height:96px;border-radius:6px;padding:8px;overflow:hidden;
+  background:linear-gradient(145deg,hsl(var(--h) 16% 44%),hsl(calc(var(--h) + 30) 20% 26%));color:#fff;box-shadow:0 2px 6px rgba(0,0,0,.18);transition:transform .15s}
+.rb-sleeve::before{content:"";position:absolute;right:-26px;top:-26px;width:64px;height:64px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.0) 0 18%,rgba(0,0,0,.35) 19% 100%);opacity:.55}
+.rb-sleeve i{position:absolute;left:8px;top:6px;font-style:normal;font-size:14px;opacity:.85}
+.rb-sleeve b{font-size:12.5px;line-height:1.2;font-weight:600;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.rb-disc:hover .rb-sleeve,.rb-disc.on .rb-sleeve{transform:translateY(-3px)}
+.rb-disc.on .rb-sleeve{outline:2px solid var(--acc);outline-offset:2px}
+.rb-a{display:block;font-size:11.5px;color:var(--muted);margin-top:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rb-card{border-top:1px solid var(--line);padding-top:10px;display:grid;gap:8px}
+.rb-h{display:grid;gap:2px} .rb-h b{font-size:16px}
+.rb-langs{display:inline-flex;border:1px solid var(--line);border-radius:99px;overflow:hidden;justify-self:start}
+.rb-langs button{border:0;background:none;padding:3px 11px;font-size:12.5px;color:var(--muted);cursor:pointer}
+.rb-langs button[aria-pressed="true"]{background:var(--acc-soft);color:var(--acc);font-weight:600}
+.rb-d{margin:0;font-size:14px;line-height:1.55}
+.rb-card .btn{justify-self:start;text-decoration:none!important;color:var(--ink)!important}
+.cu-card .rb-sleeve{width:110px;height:84px;border-radius:4px;background:repeating-linear-gradient(135deg,transparent 0 6px,rgba(255,255,255,.0) 6px 12px),linear-gradient(160deg,hsl(var(--h) 22% 95%),hsl(var(--h) 16% 87%));color:var(--ink);border:1px solid hsl(var(--h) 14% 80%);box-shadow:0 2px 5px rgba(0,0,0,.1)}
+.cu-card{width:110px}
+.cu-card .rb-sleeve::before{display:none}
+.cu-card .rb-sleeve i{font-size:18px;opacity:1;left:auto;right:7px;top:5px}
+.cu-card .rb-sleeve b{-webkit-line-clamp:3;font-size:12.5px}
+.cu-pt{margin:0;font-family:var(--f-word);font-size:16px;line-height:1.6}
+.cu-pt .cu-say{display:inline-flex;vertical-align:-4px;width:26px;height:26px;margin-left:2px}
+.cu-pt .cu-say svg{width:15px;height:15px}
+.rb-zh{margin:0;font-family:var(--f-cn);font-size:16.5px;line-height:1.75}
+.rb-zh .cu-say{display:inline-flex;vertical-align:-4px;width:26px;height:26px;margin-left:2px} .rb-zh .cu-say svg{width:15px;height:15px}
+.rb-py{margin:-4px 0 0;font-size:12.5px;color:var(--muted);line-height:1.5}
+.rb-tr{margin:0;font-size:14px;line-height:1.55;color:var(--muted)}
+.rb-sleeve b.zc{font-family:var(--f-cn);font-size:13.5px;font-weight:600}
 .mg-wq{display:grid;gap:6px;margin-top:12px}
 .mg-wq .p{font-family:var(--f-word);font-size:15.5px}
 .mg-wq .o{display:flex;flex-wrap:wrap;gap:6px}
@@ -1148,6 +1178,8 @@ body:not(.tones) .tone-opts{opacity:.55}
     <div class="panel" id="mg-main"></div>
     <aside style="display:grid;gap:22px;min-width:0">
       <div class="panel mg-week" id="mg-week" hidden></div>
+      <div class="panel rbox" id="rbox" hidden></div>
+      <div class="panel rbox cubox" id="cubox" hidden></div>
       <input type="file" id="mine-file" accept=".pdf,.docx,.txt,.md,.html,.htm,.srt,.vtt,application/pdf,text/plain,text/html,application/vnd.openxmlformats-officedocument.wordprocessingml.document" hidden>
       <details class="panel rd-paste" id="mine-box"><summary><h3>我的文章</h3><button class="mine-imp" id="mine-imp" type="button" title="导入 PDF / Word / 文本文件" aria-label="导入文件"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M12 11v6M9 14l3 3 3-3"/></svg><span>导入</span></button></summary>
         <div class="row" style="margin-top:10px"><label class="btn sm filebtn">拍照<input type="file" id="mine-cam" accept="image/*" capture="environment" multiple></label><label class="btn sm filebtn">选择图片<input type="file" id="mine-pick" accept="image/*" multiple></label><button class="btn sm" type="button" onclick="document.getElementById('mine-file').click()">导入文件</button></div>
@@ -2667,6 +2699,7 @@ function mgLoad(){
   MG.loading=(async()=>{
     try{ MG.idx=await mgGet("reading/index.json"); if(MG.idx&&Array.isArray(MG.idx.days)) MG.idx.days=MG.idx.days.filter(d=>!/^\d{4}-\d\d-\d\d$/.test(d.date)||d.date<=today()); MG.err=""; }catch(e){ MG.err="文章目录没有载入（"+e.message+"）。检查网络后再试。"; }
     try{ MG.week=await mgGet("reading/weekly.json"); }catch(e){ MG.week=null; }
+    try{ MG.rec=await mgGet("reading/records.json"); }catch(e){ MG.rec=null; }
     try{ MG.lib=await mgGet("reading/lib.json"); MG.days.lib=MG.lib; }catch(e){ MG.lib=null; }
     try{ MG.jq=await mgGet("reading/jieqi.json"); MG.days.jq=MG.jq; }catch(e){ MG.jq=null; }
     MG.loading=false;
@@ -2835,7 +2868,7 @@ async function mgRender0(){
   main.innerHTML=h; MG.cur={...pick,it};
   if(innerWidth>640) document.documentElement.style.setProperty("--tabs-h",$("#tabs").offsetHeight+"px");
   { const t=main.querySelector(".mg-toc"), a=t&&t.querySelector('[aria-current="true"]'); if(a) t.scrollLeft=a.offsetLeft-(t.clientWidth-a.offsetWidth)/2; }
-  mgArch(pick); mgWeek(); rdSync(); mineList();
+  mgArch(pick); mgWeek(); rbRender(); cuRender(); rdSync(); mineList();
 }
 function mgArch(pick){
   const l=lang(), rows=[]; (MG.idx?MG.idx.days:[]).forEach((d,di)=>d.items.forEach(x=>{ if(x.lang===l) rows.push({...x,date:d.date,di}); }));
@@ -2873,6 +2906,35 @@ function mgLibList(pick){
   return `<h3 style="margin:18px 0 8px"><span>课文库</span> · <span>${xs.length} 篇</span></h3><div class="mg-lvs" style="margin:0 0 8px"><button type="button" data-liblv="" aria-pressed="${!lv}">全部</button>${lvs.map(v=>`<button type="button" data-liblv="${v}" aria-pressed="${lv===v}">${v}</button>`).join("")}</div>
     <div class="mg-arch">${show.map(x=>`<button data-mg="lib|${x.i}" aria-current="${!!pick&&pick.date==="lib"&&pick.i===x.i}"><span class="k">${esc(x.level)}</span><span class="t zc" lang="zh-CN">${esc(zs(x.title))}</span><span class="m">${mgRead("lib",x.i)?"✓":""}</span></button>`).join("")}</div>`;
 }
+/* 唱片盒 · record box (Mandopop from Hong Kong, Taiwan and Singapore) and 茶余饭后 · small stories of the Chinese-speaking world — reading/records.json */
+const RB={open:-1}, CU={open:-1};
+function rbHue(t){ let h=0; for(const c of String(t)) h=(h*31+c.charCodeAt(0))%360; return h; }
+function rbText(o){ // the Chinese text (simplified/traditional, optional pinyin, read aloud) + the learner's chosen helper languages
+  const zh=zs(o.zh||""), tr=glSel().filter(k=>o[k]);
+  return `<p class="rb-zh zc" lang="${scr()==="t"?"zh-TW":"zh-CN"}" data-noi18n>${esc(zh)} <button type="button" class="ib cu-say" data-rbsay="1" aria-label="朗读">${I.spk}</button></p>${pyOn()?`<p class="rb-py" data-noi18n>${esc(zPy(o.zh||""))}</p>`:""}${tr.map(k=>`<p class="rb-tr" lang="${k}" data-noi18n>${esc(o[k])}</p>`).join("")}`;
+}
+function rbRender(){
+  const box=$("#rbox"); if(!box) return; const list=(MG.rec&&MG.rec.songs)||[];
+  if(!list.length){ box.hidden=true; return; } box.hidden=false; const cur=list[RB.open];
+  box.innerHTML=`<h3 style="margin:0 0 10px">${esc(trOne("唱片盒")||"唱片盒")} <span class="small muted">${list.length}</span></h3>
+    <div class="rb-shelf" role="list">${list.map((r,i)=>`<button type="button" class="rb-disc${i===RB.open?" on":""}" data-rb="${i}" role="listitem" style="--h:${rbHue(r.artist+r.title)}" title="${esc(zs(r.artist+" · "+r.title))}"><span class="rb-sleeve"><i>♪</i><b class="zc" data-noi18n>${esc(zs(r.title))}</b></span><span class="rb-a zc" data-noi18n>${esc(zs(r.artist))}</span></button>`).join("")}</div>
+    ${cur?`<div class="rb-card"><div class="rb-h"><b class="zc" data-noi18n>${esc(zs(cur.title))}</b><span class="small muted zc" data-noi18n>${esc(zs(cur.artist))} · ${esc(zs(cur.tag||""))}</span></div>
+      ${rbText(cur)}
+      <a class="btn sm" href="${esc(cur.url)}" target="_blank" rel="noopener">▶ ${esc(trOne("去听")||"去听")}</a></div>`:`<p class="small muted" style="margin:8px 0 0">${esc(trOne("点一张唱片，看它的故事。")||"点一张唱片，看它的故事。")}</p>`}`;
+}
+function cuRender(){
+  const box=$("#cubox"); if(!box) return; const list=(MG.rec&&MG.rec.curios)||[];
+  if(!list.length){ box.hidden=true; return; } box.hidden=false; const cur=list[CU.open];
+  box.innerHTML=`<h3 style="margin:0 0 10px">${esc(trOne("茶余饭后")||"茶余饭后")} <span class="small muted">${list.length}</span></h3>
+    <div class="rb-shelf" role="list">${list.map((c,i)=>`<button type="button" class="rb-disc cu-card${i===CU.open?" on":""}" data-cu="${i}" role="listitem" style="--h:${rbHue(c.title)}"><span class="rb-sleeve"><i>${esc(c.emoji||"✶")}</i><b class="zc" data-noi18n>${esc(zs(c.title))}</b></span><span class="rb-a zc" data-noi18n>${esc(zs(c.tag||""))}</span></button>`).join("")}</div>
+    ${cur?`<div class="rb-card"><div class="rb-h"><b class="zc" data-noi18n>${esc(cur.emoji||"")} ${esc(zs(cur.title))}</b><span class="small muted zc" data-noi18n>${esc(zs(cur.tag||""))}</span></div>${rbText(cur)}</div>`:`<p class="small muted" style="margin:8px 0 0">${esc(trOne("点一张小卡片，读一个华语世界的小故事。")||"点一张小卡片，读一个华语世界的小故事。")}</p>`}`;
+}
+$("#rbox").addEventListener("click",e=>{ const b=e.target.closest("button"); if(!b) return;
+  if(b.dataset.rb!=null){ const i=+b.dataset.rb; RB.open=RB.open===i?-1:i; rbRender(); }
+  else if(b.dataset.rbsay){ const r=((MG.rec&&MG.rec.songs)||[])[RB.open]; if(r) speak(r.zh); } });
+$("#cubox").addEventListener("click",e=>{ const b=e.target.closest("button"); if(!b) return;
+  if(b.dataset.cu!=null){ const i=+b.dataset.cu; CU.open=CU.open===i?-1:i; cuRender(); }
+  else if(b.dataset.rbsay){ const c=((MG.rec&&MG.rec.curios)||[])[CU.open]; if(c) speak(c.zh); } });
 function mgWeek(){
   const w=MG.week, box=$("#mg-week");
   if(!w||!w.weekOf||Date.now()-new Date(w.weekOf+"T00:00:00").getTime()>8*864e5){ box.hidden=true; return; }
@@ -4249,6 +4311,11 @@ function s2t(str){ // Simplified → Traditional (Taiwan), phrase-aware for comm
   return o;
 }
 const UI_DICT=[
+["唱片盒", "Record box", "Plattenkiste", "Caixa de discos", "唱片盒"],
+["点一张唱片，看它的故事。", "Tap a record to read its story.", "Tippe auf eine Platte für ihre Geschichte.", "Toque num disco para ver a história.", "點一張唱片，看它的故事。"],
+["去听", "Listen", "Anhören", "Ouvir", "去聽"],
+["茶余饭后", "Over tea", "Beim Tee", "Hora do chá", "茶餘飯後"],
+["点一张小卡片，读一个华语世界的小故事。", "Tap a card for a little story from the Chinese-speaking world.", "Tippe auf eine Karte für eine kleine Geschichte aus der chinesischsprachigen Welt.", "Toque num cartão para ler uma historinha do mundo de língua chinesa.", "點一張小卡片，讀一個華語世界的小故事。"],
 // header & strip
 ["学习语言", "Learning language", "Lernsprache", "Idioma de estudo", "學習語言"],
 ["今日打卡", "Today's goal", "Heutiges Ziel", "Meta de hoje", "今日打卡"],
