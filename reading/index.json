@@ -1,6 +1,46 @@
 {
- "updated": "2026-10-25T04:46:48Z",
+ "updated": "2026-10-26T04:47:04Z",
  "days": [
+  {
+   "date": "2026-10-26",
+   "items": [
+    {
+     "i": 0,
+     "lang": "zh",
+     "title": "早上的面包店",
+     "kind": "dialogue",
+     "level": "HSK1"
+    },
+    {
+     "i": 1,
+     "lang": "zh",
+     "title": "邻居家的包裹",
+     "kind": "feature",
+     "level": "HSK2"
+    },
+    {
+     "i": 2,
+     "lang": "zh",
+     "title": "星期天的跳蚤市场",
+     "kind": "feature",
+     "level": "HSK3"
+    },
+    {
+     "i": 3,
+     "lang": "zh",
+     "title": "晚上十点，去哪儿买牛奶？",
+     "kind": "feature",
+     "level": "HSK4"
+    },
+    {
+     "i": 4,
+     "lang": "zh",
+     "title": "早市里的烟火气",
+     "kind": "feature",
+     "level": "HSK5"
+    }
+   ]
+  },
   {
    "date": "2026-10-25",
    "items": [

@@ -1,0 +1,512 @@
+{
+ "date": "2026-10-26",
+ "createdBy": "claude",
+ "items": [
+  {
+   "lang": "zh",
+   "level": "HSK1",
+   "kind": "dialogue",
+   "section": "城市生活",
+   "title": "早上的面包店",
+   "title_en": "The bakery in the morning",
+   "title_de": "Morgens beim Bäcker",
+   "paragraphs": [
+    "店员：早上好！你要什么？",
+    "马克：早上好！我要四个小面包。",
+    "店员：好的。你还要别的吗？",
+    "马克：我还要一杯咖啡。一共多少钱？",
+    "店员：一共五欧元。",
+    "马克：给你。谢谢！",
+    "店员：谢谢！你明天还来吗？",
+    "马克：来！我每天早上七点都来这儿。"
+   ],
+   "paragraphs_en": [
+    "Shop assistant: Good morning! What would you like?",
+    "Mark: Good morning! I'd like four bread rolls.",
+    "Shop assistant: Sure. Would you like anything else?",
+    "Mark: I'd also like a cup of coffee. How much is it altogether?",
+    "Shop assistant: Five euros altogether.",
+    "Mark: Here you are. Thank you!",
+    "Shop assistant: Thank you! Will you come again tomorrow?",
+    "Mark: Yes! I come here every morning at seven."
+   ],
+   "paragraphs_de": [
+    "Verkäuferin: Guten Morgen! Was möchten Sie?",
+    "Mark: Guten Morgen! Ich möchte vier Brötchen.",
+    "Verkäuferin: Gern. Möchten Sie noch etwas anderes?",
+    "Mark: Ich möchte noch einen Kaffee. Was macht das zusammen?",
+    "Verkäuferin: Zusammen fünf Euro.",
+    "Mark: Bitte schön. Danke!",
+    "Verkäuferin: Danke! Kommen Sie morgen wieder?",
+    "Mark: Ja! Ich komme jeden Morgen um sieben Uhr hierher."
+   ],
+   "glossary": [
+    {
+     "w": "店员",
+     "p": "diàn yuán",
+     "en": "shop assistant",
+     "de": "der Verkäufer; die Verkäuferin"
+    },
+    {
+     "w": "面包",
+     "p": "miàn bāo",
+     "en": "bread",
+     "de": "das Brot"
+    },
+    {
+     "w": "小面包",
+     "p": "xiǎo miàn bāo",
+     "en": "bread roll",
+     "de": "das Brötchen"
+    },
+    {
+     "w": "别的",
+     "p": "bié de",
+     "en": "something else; other",
+     "de": "etwas anderes; andere"
+    },
+    {
+     "w": "一共",
+     "p": "yí gòng",
+     "en": "altogether; in total",
+     "de": "insgesamt; zusammen"
+    },
+    {
+     "w": "欧元",
+     "p": "ōu yuán",
+     "en": "euro",
+     "de": "der Euro"
+    },
+    {
+     "w": "每天",
+     "p": "měi tiān",
+     "en": "every day",
+     "de": "jeden Tag"
+    }
+   ],
+   "grammar": "还 before a verb means 'also; in addition': 我还要一杯咖啡 'I'd also like a cup of coffee'. 你还要别的吗？ is the everyday way to ask 'Anything else?'. In 你明天还来吗？ 还 means 'again'.",
+   "grammar_de": "还 vor einem Verb bedeutet „noch; außerdem“: 我还要一杯咖啡 „Ich möchte noch einen Kaffee“. 你还要别的吗？ ist die übliche Frage „Sonst noch etwas?“. In 你明天还来吗？ bedeutet 还 „wieder“.",
+   "questions": [
+    "马克要几个小面包？",
+    "一共多少钱？",
+    "马克每天早上几点来面包店？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "feature",
+   "section": "城市生活",
+   "title": "邻居家的包裹",
+   "title_en": "The parcel at the neighbour's",
+   "title_de": "Das Paket beim Nachbarn",
+   "paragraphs": [
+    "我住在柏林的一个老房子里，楼里一共有八家人。在德国，如果快递员来的时候你不在家，他常常把包裹给你的邻居。",
+    "上个星期，我在门上看到一张小纸条，上面写着：“你的包裹在三楼。”晚上我去三楼敲门。开门的是一位六十多岁的太太，她笑着把包裹给了我，还请我喝了一杯茶。",
+    "因为我白天常常不在家，所以邻居们常常帮我收包裹。但是我也帮他们。昨天我在家工作，一个上午就收了三个包裹！",
+    "以前我只认识楼下的一个邻居，现在我认识了半个楼的人。一个小包裹，让我们变成了朋友。"
+   ],
+   "paragraphs_en": [
+    "I live in an old building in Berlin; there are eight households in it altogether. In Germany, if you're not at home when the delivery driver comes, he often gives your parcel to a neighbour.",
+    "Last week I found a little note on my door. It said: 'Your parcel is on the third floor.' In the evening I went up and knocked. A lady in her sixties opened the door. She smiled as she handed me the parcel, and she even invited me in for a cup of tea.",
+    "Because I'm often out during the day, my neighbours often take in parcels for me. But I help them too. Yesterday I worked from home and took in three parcels in just one morning!",
+    "Before, I only knew one neighbour downstairs. Now I know half the building. One small parcel turned us into friends."
+   ],
+   "paragraphs_de": [
+    "Ich wohne in einem Altbau in Berlin, im Haus wohnen insgesamt acht Parteien. Wenn man in Deutschland nicht zu Hause ist, wenn der Paketbote kommt, gibt er das Paket oft bei den Nachbarn ab.",
+    "Letzte Woche fand ich an meiner Tür einen kleinen Zettel. Darauf stand: „Dein Paket ist im dritten Stock.“ Abends ging ich hinauf und klopfte. Eine Dame über sechzig öffnete die Tür. Sie gab mir lächelnd das Paket und lud mich sogar auf eine Tasse Tee ein.",
+    "Weil ich tagsüber oft nicht zu Hause bin, nehmen meine Nachbarn oft Pakete für mich an. Aber ich helfe ihnen auch. Gestern habe ich im Homeoffice gearbeitet und an einem einzigen Vormittag drei Pakete angenommen!",
+    "Früher kannte ich nur einen Nachbarn unten im Haus. Jetzt kenne ich das halbe Haus. Ein kleines Paket hat uns zu Freunden gemacht."
+   ],
+   "glossary": [
+    {
+     "w": "邻居",
+     "p": "lín jū",
+     "en": "neighbour",
+     "de": "der Nachbar; die Nachbarin"
+    },
+    {
+     "w": "包裹",
+     "p": "bāo guǒ",
+     "en": "parcel; package",
+     "de": "das Paket"
+    },
+    {
+     "w": "快递员",
+     "p": "kuài dì yuán",
+     "en": "delivery driver; courier",
+     "de": "der Paketbote; der Kurier"
+    },
+    {
+     "w": "纸条",
+     "p": "zhǐ tiáo",
+     "en": "slip of paper; note",
+     "de": "der Zettel"
+    },
+    {
+     "w": "楼",
+     "p": "lóu",
+     "en": "building; floor",
+     "de": "das Gebäude; der Stock"
+    },
+    {
+     "w": "敲门",
+     "p": "qiāo mén",
+     "en": "to knock on the door",
+     "de": "an die Tür klopfen"
+    },
+    {
+     "w": "收",
+     "p": "shōu",
+     "en": "to receive; to take in",
+     "de": "annehmen; empfangen"
+    },
+    {
+     "w": "变成",
+     "p": "biàn chéng",
+     "en": "to become; to turn into",
+     "de": "werden zu"
+    }
+   ],
+   "grammar": "因为……所以…… gives a reason and its result: 因为我白天常常不在家，所以邻居们常常帮我收包裹 'Because I'm often out during the day, my neighbours often take in my parcels.' In English you use only 'because' or 'so'; in Chinese both words are normal together.",
+   "grammar_de": "因为……所以…… nennt einen Grund und seine Folge: 因为我白天常常不在家，所以邻居们常常帮我收包裹 „Weil ich tagsüber oft nicht zu Hause bin, nehmen meine Nachbarn oft meine Pakete an.“ Im Deutschen sagt man nur „weil“ oder „deshalb“; im Chinesischen stehen beide Wörter ganz normal zusammen.",
+   "questions": [
+    "作者的包裹在几楼？",
+    "为什么邻居们常常帮作者收包裹？",
+    "昨天作者收了几个包裹？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK3",
+   "kind": "feature",
+   "section": "城市生活",
+   "title": "星期天的跳蚤市场",
+   "title_en": "The Sunday flea market",
+   "title_de": "Der Flohmarkt am Sonntag",
+   "dek": "在德国的很多城市，周末都能逛跳蚤市场。",
+   "paragraphs": [
+    "来德国以前，我从来没去过跳蚤市场。第一次去是一个星期天的早上，朋友带我去了城里的一个公园。那天天气不太好，可是市场上的人比我想的多得多。",
+    "一张张桌子上放着各种各样的东西：旧书、唱片、杯子、自行车灯，还有几十年前的老照片。卖东西的人有的是年轻学生，有的是退休的老人。一位老先生坐在椅子上，身边放着一台旧收音机，收音机里还放着音乐。",
+    "我在一个小摊前看到了一个蓝色的茶壶，上面写着“10欧”。朋友小声告诉我，在跳蚤市场可以讲价。我有点儿紧张，问：“八欧可以吗？”卖东西的女孩笑了：“九欧吧！”我就把茶壶买了下来。",
+    "回家以后，我把茶壶洗干净，泡了一壶茶。这个茶壶不是新的，也不贵，但是它比商店里的茶壶多了一个故事。现在，我差不多每个月都去一次跳蚤市场，不一定买东西，只是喜欢看看。"
+   ],
+   "paragraphs_en": [
+    "Before I came to Germany, I had never been to a flea market. The first time was on a Sunday morning, when a friend took me to a park in town. The weather wasn't great that day, but there were far more people at the market than I had expected.",
+    "Table after table was covered with all kinds of things: old books, records, cups, bicycle lights, and old photos from decades ago. Some of the sellers were young students, some were retired people. An old gentleman sat on a chair with an old radio beside him – and the radio was still playing music.",
+    "At one little stall I saw a blue teapot with '10 euros' written on it. My friend whispered that you can haggle at a flea market. I was a bit nervous and asked, 'Is eight euros OK?' The girl selling it laughed: 'Let's say nine!' And so I bought the teapot.",
+    "When I got home, I washed the teapot and made a pot of tea. It isn't new and it wasn't expensive, but compared with a teapot from a shop, it comes with one extra thing: a story. Now I go to the flea market about once a month – not always to buy something, I just like looking around."
+   ],
+   "paragraphs_de": [
+    "Bevor ich nach Deutschland kam, war ich noch nie auf einem Flohmarkt. Das erste Mal war an einem Sonntagmorgen, als mich ein Freund in einen Park in der Stadt mitnahm. Das Wetter war an dem Tag nicht besonders, aber auf dem Markt waren viel mehr Leute, als ich gedacht hatte.",
+    "Auf Tisch um Tisch lagen alle möglichen Dinge: alte Bücher, Schallplatten, Tassen, Fahrradlampen und alte Fotos von vor Jahrzehnten. Manche Verkäufer waren junge Studierende, manche Rentnerinnen und Rentner. Ein älterer Herr saß auf einem Stuhl, neben sich ein altes Radio – und aus dem Radio lief noch Musik.",
+    "An einem kleinen Stand sah ich eine blaue Teekanne, auf der „10 Euro“ stand. Mein Freund flüsterte mir zu, dass man auf dem Flohmarkt handeln kann. Ich war ein bisschen nervös und fragte: „Geht acht Euro?“ Das Mädchen, das sie verkaufte, lachte: „Sagen wir neun!“ Und so kaufte ich die Teekanne.",
+    "Zu Hause spülte ich die Teekanne sauber und kochte eine Kanne Tee. Sie ist nicht neu und war nicht teuer, aber im Vergleich zu einer Kanne aus dem Laden hat sie etwas mehr: eine Geschichte. Jetzt gehe ich ungefähr einmal im Monat auf den Flohmarkt – nicht unbedingt, um etwas zu kaufen, ich schaue mich einfach gern um."
+   ],
+   "glossary": [
+    {
+     "w": "跳蚤市场",
+     "p": "tiào zǎo shì chǎng",
+     "en": "flea market",
+     "de": "der Flohmarkt"
+    },
+    {
+     "w": "各种各样",
+     "p": "gè zhǒng gè yàng",
+     "en": "all kinds of",
+     "de": "alle möglichen; verschiedenste"
+    },
+    {
+     "w": "唱片",
+     "p": "chàng piàn",
+     "en": "record (music)",
+     "de": "die Schallplatte"
+    },
+    {
+     "w": "退休",
+     "p": "tuì xiū",
+     "en": "to retire; retired",
+     "de": "in Rente gehen; im Ruhestand"
+    },
+    {
+     "w": "收音机",
+     "p": "shōu yīn jī",
+     "en": "radio",
+     "de": "das Radio"
+    },
+    {
+     "w": "小摊",
+     "p": "xiǎo tān",
+     "en": "small stall",
+     "de": "der kleine Stand"
+    },
+    {
+     "w": "茶壶",
+     "p": "chá hú",
+     "en": "teapot",
+     "de": "die Teekanne"
+    },
+    {
+     "w": "讲价",
+     "p": "jiǎng jià",
+     "en": "to haggle",
+     "de": "handeln; feilschen"
+    },
+    {
+     "w": "紧张",
+     "p": "jǐn zhāng",
+     "en": "nervous",
+     "de": "nervös; aufgeregt"
+    },
+    {
+     "w": "泡",
+     "p": "pào",
+     "en": "to steep; to make (tea)",
+     "de": "aufgießen; (Tee) machen"
+    },
+    {
+     "w": "差不多",
+     "p": "chà bu duō",
+     "en": "about; almost",
+     "de": "ungefähr; fast"
+    }
+   ],
+   "grammar": "Place + verb + 着 + thing describes what is at a place: 桌子上放着各种各样的东西 'On the tables lie all kinds of things'; 身边放着一台旧收音机 'beside him stands an old radio'. The place comes first, and 着 shows a lasting state, not an action.",
+   "grammar_de": "Ort + Verb + 着 + Sache beschreibt, was sich an einem Ort befindet: 桌子上放着各种各样的东西 „Auf den Tischen liegen alle möglichen Dinge“; 身边放着一台旧收音机 „neben ihm steht ein altes Radio“. Der Ort steht am Anfang, und 着 zeigt einen andauernden Zustand, keine Handlung.",
+   "questions": [
+    "作者第一次去跳蚤市场是什么时候？",
+    "茶壶本来要多少钱？最后作者花了多少钱？",
+    "作者为什么觉得这个茶壶比商店里的好？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK4",
+   "kind": "feature",
+   "section": "城市生活",
+   "title": "晚上十点，去哪儿买牛奶？",
+   "title_en": "Where can you buy milk at 10 pm?",
+   "title_de": "Wo kauft man um 22 Uhr Milch?",
+   "dek": "从中国来到德国，很多人第一个不习惯的，是商店关门太早。",
+   "paragraphs": [
+    "我在上海生活的时候，楼下就有一家便利店，二十四小时开门。晚上加完班，我常常进去买一个饭团、一杯热豆浆；半夜忽然想吃冰淇淋，穿着拖鞋下楼就能买到。对我来说，便利店几乎是生活的一部分。",
+    "来德国的第一个星期天，我打算去超市买菜，结果发现几乎所有的超市都关着门。原来在德国，大部分商店星期天不营业，平时晚上也常常八点或者十点就关门了。那天我只好把家里剩下的面条煮了吃。",
+    "后来，一位德国同事告诉我，柏林有一种小店，大家叫它“Späti”，意思是“开到很晚的小店”。它们一般营业到深夜，卖饮料、零食和报纸，有的门口还放着几把椅子。夏天的晚上，常常有年轻人坐在外面，一边喝饮料一边聊天。我觉得它和中国的便利店有点儿像，但是气氛更轻松，像是整条街的客厅。",
+    "一开始，我觉得商店早关门很不方便。不过慢慢地，我也明白了其中的道理：店员也需要休息，星期天可以留给家人和朋友。现在我学会了提前计划，星期六就把下个星期要用的东西买好。星期天，我就去公园散步，或者在家慢慢做一顿饭。",
+    "当然，我有时候还是会想念楼下那家一直亮着灯的便利店。在我看来，两种生活方式各有各的好处：一种让人随时都很方便，一种让人学会慢下来。你更喜欢哪一种呢？"
+   ],
+   "paragraphs_en": [
+    "When I lived in Shanghai, there was a convenience store right downstairs, open 24 hours a day. After working late, I would often pop in for a rice ball and a hot soy milk; if I suddenly wanted ice cream in the middle of the night, I could go down in my slippers and buy some. For me, the convenience store was almost part of life.",
+    "On my first Sunday in Germany, I planned to go grocery shopping – and found that almost every supermarket was closed. It turned out that in Germany most shops don't open on Sundays, and on normal days they often close at eight or ten in the evening. That day I had no choice but to cook the leftover noodles I had at home.",
+    "Later a German colleague told me that Berlin has a kind of little shop people call a 'Späti', meaning 'a shop that stays open late'. They usually open until late at night and sell drinks, snacks and newspapers; some even have a few chairs outside the door. On summer evenings there are often young people sitting outside, chatting over a drink. I think it's a bit like a Chinese convenience store, but the atmosphere is more relaxed – like a living room for the whole street.",
+    "At first I found the early closing times very inconvenient. But gradually I understood the reasoning: shop staff need rest too, and Sundays can be kept for family and friends. Now I've learned to plan ahead and buy what I need for the next week on Saturday. On Sundays I go for a walk in the park, or take my time cooking a meal at home.",
+    "Of course, I still sometimes miss the convenience store downstairs with its lights always on. In my view, both ways of living have their own advantages: one makes everything convenient at any time, the other teaches you to slow down. Which one do you prefer?"
+   ],
+   "paragraphs_de": [
+    "Als ich in Shanghai lebte, gab es direkt unten im Haus einen Convenience Store, der rund um die Uhr geöffnet war. Wenn ich abends Überstunden gemacht hatte, ging ich oft hinein und kaufte einen Reisball und eine heiße Sojamilch; bekam ich mitten in der Nacht plötzlich Lust auf Eis, konnte ich in Hausschuhen nach unten gehen und welches kaufen. Für mich war der Convenience Store fast ein Teil des Lebens.",
+    "An meinem ersten Sonntag in Deutschland wollte ich im Supermarkt einkaufen – und stellte fest, dass fast alle Supermärkte geschlossen waren. Es stellte sich heraus, dass in Deutschland die meisten Geschäfte sonntags nicht öffnen und auch werktags abends oft um acht oder zehn Uhr schließen. An dem Tag blieb mir nichts anderes übrig, als die übrigen Nudeln zu kochen, die ich noch zu Hause hatte.",
+    "Später erzählte mir ein deutscher Kollege, dass es in Berlin eine Art kleinen Laden gibt, den alle „Späti“ nennen, also „ein Laden, der lange offen hat“. Sie haben meist bis spät in die Nacht geöffnet und verkaufen Getränke, Snacks und Zeitungen; manche haben sogar ein paar Stühle vor der Tür. An Sommerabenden sitzen oft junge Leute draußen und unterhalten sich bei einem Getränk. Ich finde, er ähnelt ein bisschen einem chinesischen Convenience Store, aber die Stimmung ist entspannter – wie ein Wohnzimmer für die ganze Straße.",
+    "Anfangs fand ich es sehr unpraktisch, dass die Geschäfte so früh schließen. Aber nach und nach habe ich verstanden, was dahintersteckt: Auch Verkäuferinnen und Verkäufer brauchen Ruhe, und der Sonntag kann der Familie und den Freunden gehören. Inzwischen habe ich gelernt, vorauszuplanen, und kaufe schon am Samstag, was ich für die nächste Woche brauche. Sonntags gehe ich im Park spazieren oder koche zu Hause in Ruhe ein Essen.",
+    "Natürlich vermisse ich manchmal noch den Convenience Store unten im Haus, in dem immer Licht brannte. Meiner Meinung nach haben beide Lebensweisen ihre eigenen Vorteile: Die eine macht alles jederzeit bequem, die andere lehrt einen, langsamer zu werden. Welche gefällt dir besser?"
+   ],
+   "glossary": [
+    {
+     "w": "便利店",
+     "p": "biàn lì diàn",
+     "en": "convenience store",
+     "de": "der Convenience Store; kleiner Laden"
+    },
+    {
+     "w": "加班",
+     "p": "jiā bān",
+     "en": "to work overtime",
+     "de": "Überstunden machen"
+    },
+    {
+     "w": "饭团",
+     "p": "fàn tuán",
+     "en": "rice ball",
+     "de": "der Reisball; Onigiri"
+    },
+    {
+     "w": "豆浆",
+     "p": "dòu jiāng",
+     "en": "soy milk",
+     "de": "die Sojamilch"
+    },
+    {
+     "w": "拖鞋",
+     "p": "tuō xié",
+     "en": "slippers",
+     "de": "die Hausschuhe; Pantoffeln"
+    },
+    {
+     "w": "营业",
+     "p": "yíng yè",
+     "en": "to be open for business",
+     "de": "geöffnet haben; Geschäftsbetrieb"
+    },
+    {
+     "w": "剩下",
+     "p": "shèng xià",
+     "en": "to be left over",
+     "de": "übrig bleiben"
+    },
+    {
+     "w": "零食",
+     "p": "líng shí",
+     "en": "snacks",
+     "de": "die Snacks; Knabbereien"
+    },
+    {
+     "w": "气氛",
+     "p": "qì fēn",
+     "en": "atmosphere; mood",
+     "de": "die Stimmung; Atmosphäre"
+    },
+    {
+     "w": "提前",
+     "p": "tí qián",
+     "en": "in advance; ahead of time",
+     "de": "im Voraus; vorher"
+    },
+    {
+     "w": "想念",
+     "p": "xiǎng niàn",
+     "en": "to miss (someone or something)",
+     "de": "vermissen"
+    },
+    {
+     "w": "随时",
+     "p": "suí shí",
+     "en": "at any time",
+     "de": "jederzeit"
+    }
+   ],
+   "grammar": "原来 introduces the explanation you have just discovered, 'it turns out (that)': 原来在德国，大部分商店星期天不营业 'It turned out that in Germany most shops are closed on Sundays.' It often follows a surprise introduced by 结果 'as it turned out; in the end' (结果发现……都关着门).",
+   "grammar_de": "原来 leitet die Erklärung ein, die man gerade herausgefunden hat, „es stellt sich heraus, dass“: 原来在德国，大部分商店星期天不营业 „Es stellte sich heraus, dass in Deutschland die meisten Geschäfte sonntags geschlossen sind.“ Oft folgt es auf eine Überraschung mit 结果 „schließlich; am Ende“ (结果发现……都关着门).",
+   "questions": [
+    "作者在上海的时候，晚上常常在便利店买什么？",
+    "来德国的第一个星期天，作者遇到了什么问题？",
+    "作者觉得两种生活方式各有什么好处？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK5",
+   "kind": "feature",
+   "section": "城市生活",
+   "title": "早市里的烟火气",
+   "title_en": "The lively warmth of the morning market",
+   "title_de": "Das Leben auf dem Morgenmarkt",
+   "dek": "在很多中国城市，天还没亮，早市就已经热闹起来了。",
+   "paragraphs": [
+    "在中国的很多城市，有一种只属于清晨的市场——早市。它们往往开在居民区附近的街道或空地上，天刚蒙蒙亮就开张，到了八九点钟，摊主们便陆续收摊，街道又恢复了原来的样子。如果你习惯睡懒觉，可能永远也见不到它。",
+    "我第一次逛早市，是大学时去同学家过暑假。五点多，同学就把我从床上拉了起来。走到街口，我吃了一惊：路两边摆满了摊位，到处人山人海，叫卖声此起彼伏。卖菜的、卖水果的、卖鸡蛋的，还有修鞋的、配钥匙的、卖袜子的，真是五花八门，应有尽有。",
+    "最吸引我的，是那些热气腾腾的早点。刚出锅的油条、一碗碗豆腐脑、现包的包子，香味飘满了整条街。我们站在路边，一手拿着油条，一手端着豆浆，吃得满头大汗。同学的妈妈在旁边买菜，和摊主讨价还价了半天，最后对方多送了她一把葱，两个人都笑了。我这才明白，讲价在这里不只是为了省几毛钱，也是一种聊天的方式。",
+    "中国人常用“烟火气”来形容这样的地方。这个词原本指做饭时的烟和火，现在多用来形容热闹、真实、充满生活味道的普通日子。比起整齐安静的大超市，早市显得有点儿乱，却让人觉得格外亲切。很多老人每天都来，买菜只是一个理由，见见老朋友、说几句家常话，才是真正的目的。",
+    "后来我搬到了德国，发现这里也有类似的地方——每周固定几天开放的露天集市。虽然没有油条和豆浆，但同样有新鲜的蔬菜、面包和奶酪，同样有人一边排队一边聊天。卖奶酪的大叔会让你先尝一小块，卖花的阿姨会告诉你哪种花能开得久一点儿。俗话说“一日之计在于晨”。也许在任何一座城市，想了解当地人怎么生活，最好的办法就是早点儿起床，去市场走一走。"
+   ],
+   "paragraphs_en": [
+    "In many Chinese cities there is a kind of market that belongs only to the early morning: the morning market. These markets are usually set up on streets or open spaces near residential areas. They open just as the sky starts to grow light, and by eight or nine o'clock the stallholders pack up one after another and the street goes back to how it was. If you like to sleep in, you may never see one.",
+    "The first time I went to a morning market was during university, when I spent the summer holidays at a classmate's home. Just after five, my classmate dragged me out of bed. When we reached the end of the street, I was astonished: both sides of the road were lined with stalls, there were crowds everywhere, and the sellers' calls rose and fell one after another. People were selling vegetables, fruit and eggs; others were mending shoes, cutting keys and selling socks – there was every kind of thing you could think of.",
+    "What attracted me most were the steaming breakfast foods. Fried dough sticks straight out of the oil, bowl after bowl of silken tofu pudding, freshly made steamed buns – the smell filled the whole street. We stood by the road with a dough stick in one hand and a soy milk in the other, eating until we were sweating. My classmate's mother was buying vegetables nearby and haggled with a stallholder for ages; in the end the seller threw in a bunch of spring onions for free, and they both laughed. Only then did I understand that haggling here isn't just about saving a few cents – it's also a way of chatting.",
+    "Chinese people often use the word 'yanhuoqi' – literally 'smoke and fire' – to describe places like this. Originally the word meant the smoke and fire of cooking; today it mostly describes ordinary days that are lively, real and full of the flavour of life. Compared with a tidy, quiet supermarket, a morning market looks a bit chaotic, yet it feels especially warm and familiar. Many older people come every day: buying vegetables is just an excuse – seeing old friends and having a little everyday chat is the real purpose.",
+    "Later I moved to Germany and found that there are similar places here: open-air markets held on fixed days every week. There are no fried dough sticks or soy milk, but there are fresh vegetables, bread and cheese, and people chatting while they queue. The cheese seller lets you try a small piece first, and the woman at the flower stall tells you which flowers will last a little longer. As the saying goes, 'The whole day's plan is made in the morning.' Perhaps in any city, the best way to learn how the locals live is to get up a little earlier and take a walk through the market."
+   ],
+   "paragraphs_de": [
+    "In vielen chinesischen Städten gibt es eine Art Markt, der nur dem frühen Morgen gehört: den Morgenmarkt. Er findet meist auf Straßen oder freien Plätzen in der Nähe von Wohnvierteln statt. Sobald der Himmel hell zu werden beginnt, öffnet er, und gegen acht oder neun Uhr packen die Händler nach und nach zusammen, und die Straße sieht wieder aus wie vorher. Wer gern ausschläft, bekommt ihn vielleicht nie zu sehen.",
+    "Zum ersten Mal war ich während des Studiums auf einem Morgenmarkt, als ich die Sommerferien bei einem Kommilitonen verbrachte. Kurz nach fünf zog er mich aus dem Bett. Als wir an die Straßenecke kamen, staunte ich: Beide Straßenseiten waren voller Stände, überall wimmelte es von Menschen, und die Rufe der Händler hallten von allen Seiten. Es gab Gemüse, Obst und Eier, und andere reparierten Schuhe, machten Schlüssel nach oder verkauften Socken – es gab wirklich alles, was man sich denken kann.",
+    "Am meisten zogen mich die dampfenden Frühstücksgerichte an. Frittierte Teigstangen direkt aus dem Öl, Schale um Schale Tofupudding, frisch gefüllte Dampfbrötchen – der Duft erfüllte die ganze Straße. Wir standen am Straßenrand, in der einen Hand eine Teigstange, in der anderen eine Sojamilch, und aßen, bis uns der Schweiß auf der Stirn stand. Die Mutter meines Kommilitonen kaufte nebenan Gemüse und feilschte lange mit einem Händler; am Ende legte er ihr noch ein Bund Frühlingszwiebeln gratis dazu, und beide lachten. Da verstand ich erst, dass es beim Handeln hier nicht nur darum geht, ein paar Cent zu sparen – es ist auch eine Art, sich zu unterhalten.",
+    "Für solche Orte verwenden Chinesen oft das Wort „yanhuoqi“, wörtlich „Rauch und Feuer“. Ursprünglich meinte es den Rauch und das Feuer beim Kochen; heute beschreibt es meist gewöhnliche Tage, die lebendig, echt und voller Lebensgeschmack sind. Verglichen mit einem ordentlichen, ruhigen Supermarkt wirkt ein Morgenmarkt etwas chaotisch, doch er fühlt sich besonders vertraut und herzlich an. Viele ältere Menschen kommen jeden Tag: Das Einkaufen ist nur ein Vorwand – alte Freunde zu treffen und ein wenig über Alltägliches zu plaudern, ist der eigentliche Zweck.",
+    "Später zog ich nach Deutschland und stellte fest, dass es hier etwas Ähnliches gibt: Märkte unter freiem Himmel, die jede Woche an festen Tagen stattfinden. Es gibt zwar keine Teigstangen und keine Sojamilch, aber ebenso frisches Gemüse, Brot und Käse, und ebenso Leute, die beim Anstehen miteinander plaudern. Der Käsehändler lässt einen erst ein kleines Stück probieren, und die Frau am Blumenstand verrät, welche Blumen etwas länger halten. Ein Sprichwort sagt: „Der Plan für den ganzen Tag wird am Morgen gemacht.“ Vielleicht ist es in jeder Stadt der beste Weg, das Leben der Menschen kennenzulernen, ein bisschen früher aufzustehen und über den Markt zu schlendern."
+   ],
+   "glossary": [
+    {
+     "w": "蒙蒙亮",
+     "p": "mēng mēng liàng",
+     "en": "(of the sky) just starting to get light",
+     "de": "(der Himmel) wird gerade hell"
+    },
+    {
+     "w": "收摊",
+     "p": "shōu tān",
+     "en": "to pack up a stall",
+     "de": "den Stand abbauen; zusammenpacken"
+    },
+    {
+     "w": "人山人海",
+     "p": "rén shān rén hǎi",
+     "en": "idiom: 'mountains and seas of people' – huge crowds",
+     "de": "Redewendung: „Berge und Meere von Menschen“ – riesige Menschenmengen"
+    },
+    {
+     "w": "此起彼伏",
+     "p": "cǐ qǐ bǐ fú",
+     "en": "idiom: 'here rising, there falling' – one after another, without pause",
+     "de": "Redewendung: „hier steigt es, dort sinkt es“ – eins nach dem anderen, ohne Pause"
+    },
+    {
+     "w": "五花八门",
+     "p": "wǔ huā bā mén",
+     "en": "idiom: 'five flowers, eight gates' – all sorts of, a wide variety",
+     "de": "Redewendung: „fünf Blumen, acht Tore“ – allerlei, bunt gemischt"
+    },
+    {
+     "w": "应有尽有",
+     "p": "yīng yǒu jìn yǒu",
+     "en": "idiom: everything one could wish for is there",
+     "de": "Redewendung: alles, was man sich wünschen kann, ist da"
+    },
+    {
+     "w": "热气腾腾",
+     "p": "rè qì téng téng",
+     "en": "steaming hot",
+     "de": "dampfend heiß"
+    },
+    {
+     "w": "豆腐脑",
+     "p": "dòu fu nǎo",
+     "en": "silken tofu pudding (breakfast dish)",
+     "de": "Tofupudding (Frühstücksgericht)"
+    },
+    {
+     "w": "讨价还价",
+     "p": "tǎo jià huán jià",
+     "en": "idiom: to haggle over the price",
+     "de": "Redewendung: um den Preis feilschen"
+    },
+    {
+     "w": "烟火气",
+     "p": "yān huǒ qì",
+     "en": "'smoke and fire': the lively, homely feel of everyday life",
+     "de": "„Rauch und Feuer“: das lebendige, heimelige Gefühl des Alltags"
+    },
+    {
+     "w": "亲切",
+     "p": "qīn qiè",
+     "en": "warm; familiar; cordial",
+     "de": "herzlich; vertraut"
+    },
+    {
+     "w": "一日之计在于晨",
+     "p": "yí rì zhī jì zài yú chén",
+     "en": "saying: the day's plan is made in the morning",
+     "de": "Sprichwort: Der Plan des Tages wird am Morgen gemacht"
+    }
+   ],
+   "grammar": "比起 A，B…… means 'compared with A, B …' and puts A first as the point of comparison: 比起整齐安静的大超市，早市显得有点儿乱 'Compared with a tidy, quiet supermarket, the morning market looks a bit chaotic.' Unlike A 比 B + adjective, the second part can be a whole clause with its own verb (显得, 让人觉得).",
+   "grammar_de": "比起 A，B…… bedeutet „verglichen mit A, ist B …“ und stellt A als Vergleichspunkt an den Anfang: 比起整齐安静的大超市，早市显得有点儿乱 „Verglichen mit einem ordentlichen, ruhigen Supermarkt wirkt der Morgenmarkt etwas chaotisch.“ Anders als bei A 比 B + Adjektiv kann der zweite Teil ein ganzer Satz mit eigenem Verb sein (显得, 让人觉得).",
+   "questions": [
+    "早市一般什么时候开张，什么时候收摊？",
+    "在作者看来，讲价除了省钱，还是什么？",
+    "“烟火气”原本是什么意思？现在用来形容什么？"
+   ],
+   "sources": []
+  }
+ ]
+}
