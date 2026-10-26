@@ -6,8 +6,9 @@
   python3 tools/wb_examples.py --apply rows.json    write examples (and corrections) back
 
 rows.json is a list of objects, one per word:
-  {"w": "词", "ex": "例句。", "ex_en": "English.", "ex_de": "Deutsch.",
-   optional corrections: "pos", "py", "en", "de"}
+  {"w": "词", "ex": "例句。", "ex_en": "English.", "ex_de": "Deutsch.", "ex_pt": "Português (Brasil).",
+   optional corrections: "pos", "py", "en", "de", "pt"}
+Portuguese (Brazilian) lives in data/zh-pt.json: {"词": ["pt gloss", "pt example translation"]}.
 Only words that are already in the bank are touched; the word itself and its level never change.
 """
 import json, os, re, sys
@@ -18,6 +19,7 @@ LV = ["HSK1", "HSK2", "HSK3", "HSK4", "HSK5", "HSK6"]
 POS = {"", "n", "v", "adj", "adv", "mw", "pron", "num", "prep", "conj", "part", "interj", "idiom", "expr"}
 HAN = re.compile(r"[㐀-鿿]")
 
+PT = os.path.join(D, "zh-pt.json")
 def path(lv): return os.path.join(D, f"zh-{lv}.json")
 def load(lv): return json.load(open(path(lv), encoding="utf8"))
 def save(lv, rows): json.dump(rows, open(path(lv), "w", encoding="utf8"), ensure_ascii=False, separators=(",", ":"))
@@ -27,12 +29,13 @@ def count():
         rows = load(lv); n = sum(1 for r in rows if not r[5].strip())
         print(f"{lv}: {n} of {len(rows)} without example")
 
+PTM = json.load(open(PT, encoding="utf8")) if os.path.exists(PT) else {}
 def todo(n):
     out = []
     for lv in LV:
         for r in load(lv):
             if not r[5].strip():
-                out.append({"level": lv, "w": r[0], "pos": r[1], "py": r[2], "en": r[3], "de": r[4]})
+                out.append({"level": lv, "w": r[0], "pos": r[1], "py": r[2], "en": r[3], "de": r[4], "pt": PTM.get(r[0], [""])[0]})
                 if len(out) >= n:
                     print(json.dumps(out, ensure_ascii=False, indent=0)); return
     print(json.dumps(out, ensure_ascii=False, indent=0))
@@ -46,9 +49,9 @@ def apply(f):
             x = new.get(r[0])
             if not x:
                 continue
-            ex, en, de = (x.get("ex") or "").strip(), (x.get("ex_en") or "").strip(), (x.get("ex_de") or "").strip()
-            if not ex or not HAN.search(ex) or not en or not de:
-                errors.append(f"{r[0]}: example and both translations needed"); continue
+            ex, en, de, pt = (x.get("ex") or "").strip(), (x.get("ex_en") or "").strip(), (x.get("ex_de") or "").strip(), (x.get("ex_pt") or "").strip()
+            if not ex or not HAN.search(ex) or not en or not de or not pt:
+                errors.append(f"{r[0]}: example and its English, German and Portuguese translations needed"); continue
             if r[0] not in ex:
                 errors.append(f"{r[0]}: example must contain the word"); continue
             if re.search(r"[āáǎàēéěèīíǐìōóǒòūúǔù]", ex):
@@ -59,9 +62,12 @@ def apply(f):
                 if x.get(k, "").strip() if isinstance(x.get(k), str) else False:
                     r[i] = x[k].strip()
             r[5], r[6], r[7] = ex, en, de
+            cur = PTM.get(r[0], [""])
+            PTM[r[0]] = [(x.get("pt") or "").strip() or cur[0], pt]
             done += 1; changed = True; new.pop(r[0])
         if changed:
             save(lv, rows)
+    json.dump(PTM, open(PT, "w", encoding="utf8"), ensure_ascii=False, separators=(",", ":"))
     for w in new:
         errors.append(f"{w}: not in the word bank")
     print(f"updated {done} rows")

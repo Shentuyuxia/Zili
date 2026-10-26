@@ -13,18 +13,21 @@ The app's Reading tab reads this folder.
 
 ```json
 {"lang":"zh","level":"HSK3","kind":"feature","section":"饮食",
- "title":"中文标题","title_en":"English title","title_de":"Deutscher Titel",
+ "title":"中文标题","title_en":"English title","title_de":"Deutscher Titel","title_pt":"Título em português",
  "dek":"一句中文导语（可选）",
  "paragraphs":["中文段落……"],
  "paragraphs_en":["English translation, same number of paragraphs"],
  "paragraphs_de":["Deutsche Übersetzung, gleiche Absatzzahl"],
- "glossary":[{"w":"词语","p":"cí yǔ","en":"word; expression","de":"Wort; Ausdruck"}],
+ "paragraphs_pt":["Tradução em português do Brasil, mesmo número de parágrafos"],
+ "glossary":[{"w":"词语","p":"cí yǔ","en":"word; expression","de":"Wort; Ausdruck","pt":"a palavra; a expressão"}],
  "grammar":"One short note in English on a structure in the text.",
  "grammar_de":"Dieselbe Notiz auf Deutsch.",
+ "grammar_pt":"A mesma nota em português.",
  "questions":["中文问题？"],
  "sources":[]}
 ```
 
+- Helper languages: English, German and Brazilian Portuguese (`_en`, `_de`, `_pt`). Each reader chooses which of them to see; the app shows only the chosen ones.
 - Simplified characters only; the app converts to Traditional and adds pinyin itself. Never put pinyin into `paragraphs`.
 - Texts are original. Topics are light and everyday (city life, food, internet slang, study and work, free time, customs, nature); no politics.
 - Level guide: HSK1 very short sentences and the most common words; each level up adds length, vocabulary and structures (see `config.json`).
@@ -42,7 +45,7 @@ Fixed texts in the spirit of Shiori: one term, two levels (HSK2 for children and
  "poem":{"title":"山行","author":"杜牧","dynasty":"唐",
          "lines":["远上寒山石径斜，","白云生处有人家。","停车坐爱枫林晚，","霜叶红于二月花。"],
          "explain_zh":"简单的白话解释（点词可查）",
-         "explain_en":"English explanation","explain_de":"Deutsche Erklärung"}}
+         "explain_en":"English explanation","explain_de":"Deutsche Erklärung","explain_pt":"Explicação em português"}}
 ```
 
 - `node tools/reading.js` checks this file too (term, date, poem) and fills glossary pinyin.
