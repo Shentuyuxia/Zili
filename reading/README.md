@@ -5,7 +5,7 @@ The app's Reading tab reads this folder.
 - `YYYY-MM-DD.json`: one day's texts, written each morning by a scheduled task.
 - `lib.json`: the library (课文库) — the original 33 Zili texts. Shown when there is no dated text yet, and always listed in the sidebar.
 - `index.json`: list of dates and titles. Rebuild with `node tools/reading.js` (also fills missing glossary pinyin and checks every file).
-- `config.json`: which HSK levels get a text each day, length per level, weekday themes, topics to avoid.
+- `config.json`: which HSK levels get a text each day, length per level, weekday themes, topics to avoid. Growth phase: one text per level every day until there are 50 daily texts; after that (`slow`), 2 texts a day at one level, the level rotating day by day.
 - `records.json`: **唱片盒** (record box: Mandarin songs from Hong Kong, Taiwan and Singapore, with a short introduction in simple Chinese and EN/DE/PT translations; a search link, no lyrics) and **茶余饭后** (small stories and customs of the Chinese-speaking world, simple Chinese + EN/DE/PT). Shown in the Reading tab beside the texts; the app shows only the helper languages the learner chose.
 - `jieqi.json`: **二十四节气** — fixed, hand-written texts for the 24 solar terms (not touched by the daily tasks). See below.
 

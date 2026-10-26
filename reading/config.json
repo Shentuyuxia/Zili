@@ -1,7 +1,25 @@
 {
- "levels": ["HSK1", "HSK2", "HSK3", "HSK4", "HSK5"],
- "note": "One text per level in this list every morning; readers pick their level in the app. Add or remove levels here (HSK1–HSK6); the daily task reads it before writing.",
- "length": {"HSK1": "60–120 characters", "HSK2": "120–220", "HSK3": "220–380", "HSK4": "380–550", "HSK5": "550–750", "HSK6": "750–1000"},
+ "levels": [
+  "HSK1",
+  "HSK2",
+  "HSK3",
+  "HSK4",
+  "HSK5"
+ ],
+ "note": "Growth phase: one text per level in 'levels' every morning, until there are 'slow.after' daily texts in total (all reading/YYYY-MM-DD.json files together; the library and the solar terms don't count). After that, 'slow' applies.",
+ "slow": {
+  "after": 50,
+  "perDay": 2,
+  "rule": "From then on: 2 texts a day, both at ONE level. The level rotates through 'levels': take the level whose most recent daily text is the oldest (if tied, the lower level). The two texts take different angles on today's theme and different kinds (e.g. one story or dialogue, one feature)."
+ },
+ "length": {
+  "HSK1": "60–120 characters",
+  "HSK2": "120–220",
+  "HSK3": "220–380",
+  "HSK4": "380–550",
+  "HSK5": "550–750",
+  "HSK6": "750–1000"
+ },
  "themes": {
   "Mon": "城市生活 City life (transport, neighbourhoods, cafés, markets, housing, life in Germany and in Chinese cities)",
   "Tue": "饮食 Food and drink (dishes, trends, tea, cooking, eating out, regional food)",
