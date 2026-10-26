@@ -32,7 +32,7 @@
   --f-cn:"LXGW WenKai", "Kaiti SC", "STKaiti", "EL Hei", serif; /* Chinese content: LXGW WenKai (Traditional: LXGW WenKai TC) */
   --f-cnui:"EL Hei", "PingFang SC", "Microsoft YaHei", sans-serif; /* logo and interface */
   --f-mono:"Source Sans 3", "EL Hei", sans-serif;
-  --tone:#3f6173; --t1:var(--t1l,var(--tone)); --t2:var(--t2l,var(--tone)); --t3:var(--t3l,var(--tone)); --t4:var(--t4l,var(--tone));
+  --tone:#1d7f99; --t1:var(--t1l,var(--tone)); --t2:var(--t2l,var(--tone)); --t3:var(--t3l,var(--tone)); --t4:var(--t4l,var(--tone));
   --r:12px; color-scheme:light;
 }
 @media (prefers-color-scheme: dark){ :root{
@@ -41,7 +41,7 @@
   --der:#9fb6dd; --die:#e08a7c; --das:#86c9a4;
   --a1:#9cc77f; --a2:#7cc4bd; --b1:#9fb6dd; --b2:#b7a3e0; --c1:#e09bbb; --c2:#e0a184;
   --ok:#86c9a4; --ok-soft:#1b3328; --warn:#d6ad5c; --warn-soft:#352a14; --bad:#e08a7c; --bad-soft:#3a201c;
-  --scrim:rgba(0,0,0,.55); --pt-mark:#2c6b64; --rule:#c9d2d4; --tone:#8ec6e2; --t1:var(--t1d,var(--tone)); --t2:var(--t2d,var(--tone)); --t3:var(--t3d,var(--tone)); --t4:var(--t4d,var(--tone)); color-scheme:dark }}
+  --scrim:rgba(0,0,0,.55); --pt-mark:#2c6b64; --rule:#c9d2d4; --tone:#46b3d9; --t1:var(--t1d,var(--tone)); --t2:var(--t2d,var(--tone)); --t3:var(--t3d,var(--tone)); --t4:var(--t4d,var(--tone)); color-scheme:dark }}
 
 html{-webkit-text-size-adjust:100%;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 body{margin:0;--acc:var(--pt);--acc-soft:var(--pt-soft);background:var(--bg);color:var(--ink);font-family:var(--f-ui);font-size:15px;line-height:1.55}
@@ -1177,7 +1177,6 @@ body:not(.tones) .tone-opts{opacity:.55}
   <section id="tab-read" class="grid" hidden>
     <div class="panel" id="mg-main"></div>
     <aside style="display:grid;gap:22px;min-width:0">
-      <div class="panel mg-week" id="mg-week" hidden></div>
       <div class="panel rbox" id="rbox" hidden></div>
       <div class="panel rbox cubox" id="cubox" hidden></div>
       <input type="file" id="mine-file" accept=".pdf,.docx,.txt,.md,.html,.htm,.srt,.vtt,application/pdf,text/plain,text/html,application/vnd.openxmlformats-officedocument.wordprocessingml.document" hidden>
@@ -1634,7 +1633,7 @@ function zPy(w){ const a=zPyArr(w); if(w.length>1&&w.endsWith("儿")&&!ER_X.test
 function zTone(syl){ // 1–4 from the tone mark, 5 = neutral
   const m=String(syl||"").normalize("NFD").match(/[\u0304\u0301\u030c\u0300]/); return m?{"\u0304":1,"\u0301":2,"\u030c":3,"\u0300":4}[m[0]]:5; }
 const tonesOn=()=>S.settings.tones===true;
-const TPAL=[["teal","#3f6173","#8ec6e2","黛青"],["coral","#a8423a","#f68876","朱砂"],["green","#3f7a64","#7fe5b2","石绿"],["amber","#8a5a3b","#f4a56d","赭石"],["yellow","#94741f","#f4ce59","藤黄"],["blue","#2f5793","#8bb1f8","青花"],["rose","#963a55","#f788a8","胭脂"]]; // key, light, dark, 中国传统色 // name, light, dark
+const TPAL=[["teal","#1d7f99","#46b3d9","黛青"],["coral","#cf3a2a","#f0705e","朱砂"],["green","#13885a","#3fcf8e","石绿"],["amber","#bd6418","#ee8d42","赭石"],["yellow","#a67c00","#e0b22a","藤黄"],["blue","#2d68d8","#6f9cf2","青花"],["rose","#c72e64","#ee6c95","胭脂"]]; // key, light, dark, 中国传统色 // name, light, dark
 const toneSel=()=>{ const t=S.settings.toneSel; return Array.isArray(t)?t.filter(k=>k>=1&&k<=4):[3]; };
 const toneCol=k=>(S.settings.toneCol||{})[k]||"teal"; // a palette name or "#rrggbb"
 function toneVars(){ const st=document.documentElement.style;
@@ -1642,7 +1641,7 @@ function toneVars(){ const st=document.documentElement.style;
     const l=p?p[1]:/^#[0-9a-f]{6}$/i.test(c)?c:TPAL[0][1], d=p?p[2]:/^#[0-9a-f]{6}$/i.test(c)?`color-mix(in srgb, ${c} 80%, #e8eef0)`:TPAL[0][2];
     st.setProperty("--t"+k+"l",l); st.setProperty("--t"+k+"d",d); } }
 function renderToneSw(){ $$("[data-sw]").forEach(el=>{ const k=+el.dataset.sw, cur=toneCol(k), custom=/^#/.test(cur);
-  el.innerHTML=TPAL.map(([n,l,,zh])=>`<button type="button" data-swk="${k}" data-swc="${n}" style="background:${l}" aria-label="${zh}" title="${zh}" aria-pressed="${cur===n}"></button>`).join("")+`<label class="cust${custom?" on":""}" title="自定义颜色"><input type="color" data-swk="${k}" value="${custom?cur:"#3f6173"}" aria-label="自定义颜色"></label><span class="swn" data-noi18n>${custom?cur:((TPAL.find(x=>x[0]===cur)||TPAL[0])[3])}</span>`; }); }
+  el.innerHTML=TPAL.map(([n,l,,zh])=>`<button type="button" data-swk="${k}" data-swc="${n}" style="background:${l}" aria-label="${zh}" title="${zh}" aria-pressed="${cur===n}"></button>`).join("")+`<label class="cust${custom?" on":""}" title="自定义颜色"><input type="color" data-swk="${k}" value="${custom?cur:"#1d7f99"}" aria-label="自定义颜色"></label><span class="swn" data-noi18n>${custom?cur:((TPAL.find(x=>x[0]===cur)||TPAL[0])[3])}</span>`; }); }
 function applyTones(){ toneVars(); const b=document.body; b.classList.toggle("tones",tonesOn()); for(const k of [1,2,3,4]) b.classList.toggle("tc"+k,toneSel().includes(k)); b.classList.toggle("tonepy",S.settings.toneWhere==="py"); }
 function zToneText(w,py){ // characters coloured by tone, no ruby (sheet headings)
   const ch=[...zs(w)], syl=String(py||"").trim().split(/\s+/).filter(Boolean), han=ch.filter(c=>HAN.test(c)).length;
@@ -2698,7 +2697,6 @@ function mgLoad(){
   if(MG.loading) return MG.loading;
   MG.loading=(async()=>{
     try{ MG.idx=await mgGet("reading/index.json"); if(MG.idx&&Array.isArray(MG.idx.days)) MG.idx.days=MG.idx.days.filter(d=>!/^\d{4}-\d\d-\d\d$/.test(d.date)||d.date<=today()); MG.err=""; }catch(e){ MG.err="文章目录没有载入（"+e.message+"）。检查网络后再试。"; }
-    try{ MG.week=await mgGet("reading/weekly.json"); }catch(e){ MG.week=null; }
     try{ MG.rec=await mgGet("reading/records.json"); }catch(e){ MG.rec=null; }
     try{ MG.lib=await mgGet("reading/lib.json"); MG.days.lib=MG.lib; }catch(e){ MG.lib=null; }
     try{ MG.jq=await mgGet("reading/jieqi.json"); MG.days.jq=MG.jq; }catch(e){ MG.jq=null; }
@@ -2827,7 +2825,7 @@ async function mgRender0(){
   if(MG.err){ main.innerHTML=`<div class="empty"><b>文章没有载入</b>${esc(MG.err)}<div style="margin-top:12px"><button class="btn sm" id="mg-retry" type="button">重试</button></div></div>`; $("#mg-arch").innerHTML=""; return; }
   const l=lang(), days=MG.idx.days; if(MG.di>=days.length) MG.di=0;
   $("#mg-arch").hidden=!!MG.col;
-  if(MG.col&&!MG.key&&!MG.mine){ main.innerHTML=mgColumn(); $("#mg-week").hidden=true; MG.cur=null; return; }
+  if(MG.col&&!MG.key&&!MG.mine){ main.innerHTML=mgColumn(); MG.cur=null; return; }
   let pick, es, it, h;
   const mine=MG.mine?mineAll().find(a=>a.id===MG.mine&&a.lang===l):null;
   if(mine){
@@ -2868,7 +2866,7 @@ async function mgRender0(){
   main.innerHTML=h; MG.cur={...pick,it};
   if(innerWidth>640) document.documentElement.style.setProperty("--tabs-h",$("#tabs").offsetHeight+"px");
   { const t=main.querySelector(".mg-toc"), a=t&&t.querySelector('[aria-current="true"]'); if(a) t.scrollLeft=a.offsetLeft-(t.clientWidth-a.offsetWidth)/2; }
-  mgArch(pick); mgWeek(); rbRender(); cuRender(); rdSync(); mineList();
+  mgArch(pick); rbRender(); cuRender(); rdSync(); mineList();
 }
 function mgArch(pick){
   const l=lang(), rows=[]; (MG.idx?MG.idx.days:[]).forEach((d,di)=>d.items.forEach(x=>{ if(x.lang===l) rows.push({...x,date:d.date,di}); }));
@@ -2935,13 +2933,6 @@ $("#rbox").addEventListener("click",e=>{ const b=e.target.closest("button"); if(
 $("#cubox").addEventListener("click",e=>{ const b=e.target.closest("button"); if(!b) return;
   if(b.dataset.cu!=null){ const i=+b.dataset.cu; CU.open=CU.open===i?-1:i; cuRender(); }
   else if(b.dataset.rbsay){ const c=((MG.rec&&MG.rec.curios)||[])[CU.open]; if(c) speak(c.zh); } });
-function mgWeek(){
-  const w=MG.week, box=$("#mg-week");
-  if(!w||!w.weekOf||Date.now()-new Date(w.weekOf+"T00:00:00").getTime()>8*864e5){ box.hidden=true; return; }
-  box.hidden=false;
-  box.innerHTML=`<h3 style="margin:0 0 8px">每周回顾 <span class="small muted">${esc(w.weekOf.slice(5))} 起</span></h3>${w.summary_en||w.summary_de||w.summary_pt||w.summary_zh?`<p data-noi18n>${esc(auxGet(w,"summary")||w.summary_zh||"")}</p>`:""}${(w.quiz||[]).map((q,qi)=>{ const pk=MG.wpick[qi], done=pk!=null;
-    return `<div class="mg-wq" data-noi18n><div class="p" lang="${esc(q.lang)}"><span class="chip">${esc(String(q.lang||"").toUpperCase())}</span> ${esc(q.prompt)}</div><div class="o">${(q.options||[]).map((o,oi)=>`<button data-wq="${qi}" data-wo="${oi}" class="${done?(oi===q.answer?"ok":oi===pk?"bad":""):""}" ${done?"disabled":""}>${esc(o)}</button>`).join("")}</div>${done&&(q.explain_en||q.explain_de||q.explain_pt||q.explain)?`<div class="x">${esc(auxGet(q,"explain")||q.explain||"")}</div>`:""}</div>`; }).join("")}`;
-}
 /* read-aloud player: sentence by sentence, highlighted */
 const RD_RATES=[0.6,0.75,0.9,1,1.15];
 const RD={src:null,key:null,i:0,on:false,loop:false,tok:0,u:null,rate:(()=>{ try{ const r=+localStorage.getItem("zl-rd-rate"); if(r) return r; }catch(e){} return 0.9; })()};
@@ -3710,7 +3701,6 @@ $("#tab-read").addEventListener("click",e=>{
   if(b.dataset.mglv!=null){ S.settings.rdLv=S.settings.rdLv||{}; S.settings.rdLv[lang()]=b.dataset.mglv||null; save(); MG.key=null; MG.tr=null; mgClose(); rdStop(); mgRender(); return; }
   if(b.dataset.mineopen){ const d=$("#mine-box"); d.open=true; d.scrollIntoView({behavior:"smooth",block:"start"}); return; }
   if(b.dataset.mg){ MG.mine=null; MG.key=b.dataset.mg; if(b.dataset.di!=null) MG.di=+b.dataset.di; else { const d=b.dataset.mg.split("|")[0]; const k=MG.idx.days.findIndex(x=>x.date===d); if(k>=0) MG.di=k; } MG.tr=null; mgClose(); mgRender(); { const m=$("#mg-main"); const y=m.getBoundingClientRect().top+scrollY-(innerWidth>640?$("#tabs").offsetHeight+4:4); if(scrollY>y) window.scrollTo({top:y,behavior:"smooth"}); } return; }
-  if(b.dataset.wq!=null){ MG.wpick[b.dataset.wq]=+b.dataset.wo; mgWeek(); return; }
   const id=b.id;
   if(id==="mg-sw-today"||id==="mg-sw-col"){ MG.col=id==="mg-sw-col"; MG.key=null; MG.mine=null; MG.tr=null; mgClose(); rdStop(); mgRender(); window.scrollTo({top:0}); return; }
   if(id==="mg-colback"){ MG.key=null; MG.tr=null; mgClose(); rdStop(); mgRender(); return; }
