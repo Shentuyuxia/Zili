@@ -12,6 +12,7 @@
   "perDay": 2,
   "rule": "From then on: 2 texts a day, both at ONE level. The level rotates through 'levels': take the level whose most recent daily text is the oldest (if tied, the lower level). The two texts take different angles on today's theme and different kinds (e.g. one story or dialogue, one feature)."
  },
+ "settings": "Readers live in many countries (Germany, Brazil, the UK, the US and elsewhere) and choose English, German or Portuguese as their helper language. Over a week, about half the texts may be set in Germany or involve life in Germany; the rest are set in Chinese-speaking places (mainland China, Taiwan, Hong Kong, Singapore), in other countries readers come from (Brazil, the UK, the US …), or are universal. Never assume the reader lives in Germany; when a text compares with 'home', keep it open or vary the country.",
  "length": {
   "HSK1": "60–120 characters",
   "HSK2": "120–220",

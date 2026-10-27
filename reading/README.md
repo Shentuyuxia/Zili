@@ -29,6 +29,7 @@ The app's Reading tab reads this folder.
 
 - Helper languages: English, German and Brazilian Portuguese (`_en`, `_de`, `_pt`). Each reader chooses which of them to see; the app shows only the chosen ones.
 - Simplified characters only; the app converts to Traditional and adds pinyin itself. Never put pinyin into `paragraphs`.
+- Readers live in many countries (Germany, Brazil, the UK, the US …): about half the texts may involve Germany, the rest Chinese-speaking places, other readers' countries, or nothing country-specific (`settings` in `config.json`).
 - Texts are original. Topics are light and everyday (city life, food, internet slang, study and work, free time, customs, nature); no politics.
 - Level guide: HSK1 very short sentences and the most common words; each level up adds length, vocabulary and structures (see `config.json`).
 
