@@ -1,0 +1,638 @@
+{
+ "date": "2026-10-27",
+ "createdBy": "claude",
+ "items": [
+  {
+   "lang": "zh",
+   "level": "HSK1",
+   "kind": "story",
+   "section": "饮食",
+   "title": "我家的早饭",
+   "title_en": "Breakfast at my house",
+   "title_de": "Frühstück bei uns zu Hause",
+   "title_pt": "O café da manhã lá em casa",
+   "paragraphs": [
+    "我叫小安，我七岁。我家在德国。",
+    "早上七点，我们一起吃早饭。",
+    "爸爸喜欢吃面包，他还喝一杯咖啡。",
+    "妈妈喜欢喝豆浆。",
+    "我喜欢吃包子。奶奶做的包子很好吃！",
+    "你早上吃什么？"
+   ],
+   "paragraphs_en": [
+    "My name is Xiao An. I am seven years old. My family lives in Germany.",
+    "At seven in the morning, we eat breakfast together.",
+    "Dad likes to eat bread, and he also drinks a cup of coffee.",
+    "Mum likes to drink soy milk.",
+    "I like to eat baozi (steamed buns). The baozi Grandma makes are very tasty!",
+    "What do you eat in the morning?"
+   ],
+   "paragraphs_de": [
+    "Ich heiße Xiao An und bin sieben Jahre alt. Meine Familie wohnt in Deutschland.",
+    "Um sieben Uhr morgens frühstücken wir zusammen.",
+    "Papa isst gern Brot und trinkt dazu eine Tasse Kaffee.",
+    "Mama trinkt gern Sojamilch.",
+    "Ich esse gern Baozi (gedämpfte Teigtaschen). Die Baozi von Oma schmecken sehr gut!",
+    "Was isst du morgens?"
+   ],
+   "paragraphs_pt": [
+    "Meu nome é Xiao An. Tenho sete anos. Minha família mora na Alemanha.",
+    "Às sete da manhã, a gente toma café da manhã junto.",
+    "O papai gosta de comer pão e também toma uma xícara de café.",
+    "A mamãe gosta de tomar leite de soja.",
+    "Eu gosto de comer baozi (pãezinhos no vapor). Os baozi que a vovó faz são muito gostosos!",
+    "O que você come de manhã?"
+   ],
+   "glossary": [
+    {
+     "w": "早饭",
+     "p": "zǎo fàn",
+     "en": "breakfast",
+     "de": "das Frühstück",
+     "pt": "o café da manhã"
+    },
+    {
+     "w": "一起",
+     "p": "yì qǐ",
+     "en": "together",
+     "de": "zusammen",
+     "pt": "junto"
+    },
+    {
+     "w": "咖啡",
+     "p": "kā fēi",
+     "en": "coffee",
+     "de": "der Kaffee",
+     "pt": "o café"
+    },
+    {
+     "w": "豆浆",
+     "p": "dòu jiāng",
+     "en": "soy milk",
+     "de": "die Sojamilch",
+     "pt": "o leite de soja"
+    },
+    {
+     "w": "包子",
+     "p": "bāo zi",
+     "en": "steamed bun (with filling)",
+     "de": "die gedämpfte Teigtasche",
+     "pt": "o pãozinho no vapor (recheado)"
+    },
+    {
+     "w": "奶奶",
+     "p": "nǎi nai",
+     "en": "grandma (father's mother)",
+     "de": "die Oma (väterlicherseits)",
+     "pt": "a avó (paterna)"
+    },
+    {
+     "w": "做",
+     "p": "zuò",
+     "en": "to make; to cook",
+     "de": "machen; kochen",
+     "pt": "fazer; cozinhar"
+    },
+    {
+     "w": "好吃",
+     "p": "hǎo chī",
+     "en": "tasty; delicious",
+     "de": "lecker",
+     "pt": "gostoso"
+    }
+   ],
+   "grammar": "喜欢 + verb + object means 'to like doing something': 爸爸喜欢吃面包 'Dad likes to eat bread', 妈妈喜欢喝豆浆 'Mum likes to drink soy milk'. Use 吃 for food and 喝 for drinks.",
+   "grammar_de": "喜欢 + Verb + Objekt bedeutet „etwas gern tun“: 爸爸喜欢吃面包 „Papa isst gern Brot“, 妈妈喜欢喝豆浆 „Mama trinkt gern Sojamilch“. 吃 benutzt man für Essen, 喝 für Getränke.",
+   "grammar_pt": "喜欢 + verbo + objeto significa “gostar de fazer algo”: 爸爸喜欢吃面包 “o papai gosta de comer pão”, 妈妈喜欢喝豆浆 “a mamãe gosta de tomar leite de soja”. Use 吃 para comida e 喝 para bebidas.",
+   "questions": [
+    "小安家在哪儿？",
+    "妈妈喜欢喝什么？",
+    "小安喜欢吃什么？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "dialogue",
+   "section": "饮食",
+   "title": "微辣就好",
+   "title_en": "Just a little spicy, please",
+   "title_de": "Bitte nur leicht scharf",
+   "title_pt": "Só um pouco apimentado, por favor",
+   "paragraphs": [
+    "服务员：你们好！这是菜单。你们想吃什么？",
+    "莉娜：我们要一个麻婆豆腐，一个宫保鸡丁。",
+    "服务员：好的。我们的麻婆豆腐很辣，可以吗？",
+    "莉娜：我很喜欢吃辣的，但是我朋友不太能吃辣。",
+    "小王：对。因为我是广东人，所以我家做菜很少放辣椒。",
+    "服务员：没问题，我们可以做微辣的。",
+    "小王：太好了，微辣就好！我们还要两碗米饭。",
+    "服务员：你们要喝点儿什么吗？",
+    "莉娜：两杯热茶吧，谢谢！"
+   ],
+   "paragraphs_en": [
+    "Waiter: Hello! Here is the menu. What would you like to eat?",
+    "Lena: We'd like a mapo tofu and a kung pao chicken.",
+    "Waiter: OK. Our mapo tofu is very spicy. Is that all right?",
+    "Lena: I love spicy food, but my friend can't really eat spicy things.",
+    "Xiao Wang: Right. Because I'm from Guangdong, my family hardly ever puts chillies in our cooking.",
+    "Waiter: No problem, we can make it mildly spicy.",
+    "Xiao Wang: Great, a little spicy is fine! We'd also like two bowls of rice.",
+    "Waiter: Would you like something to drink?",
+    "Lena: Two cups of hot tea, please. Thanks!"
+   ],
+   "paragraphs_de": [
+    "Kellner: Hallo! Hier ist die Speisekarte. Was möchten Sie essen?",
+    "Lena: Wir nehmen einmal Mapo-Tofu und einmal Gongbao-Hähnchen.",
+    "Kellner: Gern. Unser Mapo-Tofu ist sehr scharf. Ist das in Ordnung?",
+    "Lena: Ich esse sehr gern scharf, aber meine Freundin verträgt nicht so viel Schärfe.",
+    "Xiao Wang: Genau. Weil ich aus Guangdong komme, kochen wir zu Hause selten mit Chili.",
+    "Kellner: Kein Problem, wir können es leicht scharf machen.",
+    "Xiao Wang: Super, leicht scharf ist gut! Und wir möchten noch zwei Schalen Reis.",
+    "Kellner: Möchten Sie etwas trinken?",
+    "Lena: Zwei Tassen heißen Tee, bitte. Danke!"
+   ],
+   "paragraphs_pt": [
+    "Garçom: Olá! Aqui está o cardápio. O que vocês querem comer?",
+    "Lena: Queremos um mapo tofu e um frango kung pao.",
+    "Garçom: Certo. O nosso mapo tofu é bem apimentado. Tudo bem?",
+    "Lena: Eu adoro comida apimentada, mas minha amiga não aguenta muita pimenta.",
+    "Xiao Wang: É verdade. Como eu sou de Guangdong, lá em casa quase não se usa pimenta na comida.",
+    "Garçom: Sem problema, podemos fazer só um pouco apimentado.",
+    "Xiao Wang: Ótimo, um pouco apimentado está bom! Também queremos duas tigelas de arroz.",
+    "Garçom: Vocês querem beber alguma coisa?",
+    "Lena: Dois chás quentes, por favor. Obrigada!"
+   ],
+   "glossary": [
+    {
+     "w": "服务员",
+     "p": "fú wù yuán",
+     "en": "waiter; waitress",
+     "de": "der Kellner; die Kellnerin",
+     "pt": "o garçom; a garçonete"
+    },
+    {
+     "w": "菜单",
+     "p": "cài dān",
+     "en": "menu",
+     "de": "die Speisekarte",
+     "pt": "o cardápio"
+    },
+    {
+     "w": "辣",
+     "p": "là",
+     "en": "spicy; hot",
+     "de": "scharf",
+     "pt": "apimentado"
+    },
+    {
+     "w": "麻婆豆腐",
+     "p": "má pó dòu fǔ",
+     "en": "mapo tofu (spicy Sichuan tofu dish)",
+     "de": "der Mapo-Tofu (scharfes Tofugericht aus Sichuan)",
+     "pt": "o mapo tofu (prato apimentado de Sichuan)"
+    },
+    {
+     "w": "宫保鸡丁",
+     "p": "gōng bǎo jī dīng",
+     "en": "kung pao chicken",
+     "de": "das Gongbao-Hähnchen",
+     "pt": "o frango kung pao"
+    },
+    {
+     "w": "辣椒",
+     "p": "là jiāo",
+     "en": "chilli pepper",
+     "de": "die Chilischote",
+     "pt": "a pimenta"
+    },
+    {
+     "w": "微辣",
+     "p": "wēi là",
+     "en": "mildly spicy",
+     "de": "leicht scharf",
+     "pt": "levemente apimentado"
+    },
+    {
+     "w": "碗",
+     "p": "wǎn",
+     "en": "bowl (also a measure word)",
+     "de": "die Schale; die Schüssel (auch Zählwort)",
+     "pt": "a tigela (também classificador)"
+    }
+   ],
+   "grammar": "因为……所以…… means 'because … therefore …': 因为我是广东人，所以我家做菜很少放辣椒. Chinese often uses both words together, while English uses only 'because' or 'so'.",
+   "grammar_de": "因为……所以…… bedeutet „weil … deshalb …“: 因为我是广东人，所以我家做菜很少放辣椒. Im Chinesischen stehen oft beide Wörter zusammen, im Deutschen reicht meist „weil“ oder „deshalb“.",
+   "grammar_pt": "因为……所以…… significa “porque … por isso …”: 因为我是广东人，所以我家做菜很少放辣椒. Em chinês é comum usar as duas palavras juntas, enquanto em português basta “como” ou “por isso”.",
+   "questions": [
+    "莉娜喜欢吃辣的吗？",
+    "小王为什么不太能吃辣？",
+    "他们要喝什么？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK3",
+   "kind": "feature",
+   "section": "饮食",
+   "title": "在家吃火锅",
+   "title_en": "Hotpot at home",
+   "title_de": "Feuertopf zu Hause",
+   "title_pt": "Hot pot em casa",
+   "dek": "冬天到了，很多人想起的第一样东西是火锅。",
+   "paragraphs": [
+    "德国的冬天又冷又长，下午四点多天就黑了。这时候，很多在德国的中国留学生都会想起一样东西——火锅。",
+    "在饭馆吃火锅比较贵，所以大家常常在家里自己做。一个人带锅，一个人买肉和菜，还有一个人去亚洲超市买火锅底料。超市里的底料有很多种，有麻辣的，也有不辣的番茄味。",
+    "吃火锅的时候，桌子中间放着一个电火锅，汤一直开着，大家围着桌子坐。很多人喜欢鸳鸯锅：锅分成两边，一边辣，一边不辣，能吃辣的和不能吃辣的都很开心。",
+    "上个星期，我第一次带德国朋友吃火锅。他开始有点儿紧张，问我：“菜要自己煮？什么时候能吃？”吃了几口以后，他说这比他吃过的很多菜都好吃。最后，我们把锅里的菜都吃完了，一直聊到晚上十一点。",
+    "对很多人来说，火锅不只是一顿饭，也是和朋友在一起的好时光。"
+   ],
+   "paragraphs_en": [
+    "Winters in Germany are cold and long, and it gets dark soon after four in the afternoon. At this time of year, many Chinese students in Germany start thinking of one thing: hotpot.",
+    "Eating hotpot in a restaurant is fairly expensive, so people often make it themselves at home. One person brings the pot, one buys the meat and vegetables, and another goes to the Asian supermarket for the hotpot soup base. The supermarket has many kinds of soup base: numbing-spicy ones, and also a non-spicy tomato one.",
+    "When you eat hotpot, an electric hotpot sits in the middle of the table, the broth keeps bubbling, and everyone sits around the table. Many people like the 'yuanyang' pot: the pot is divided into two halves, one spicy and one not, so people who can eat spicy food and people who can't are both happy.",
+    "Last week I took a German friend to eat hotpot for the first time. At first he was a little nervous and asked me: 'I have to cook the food myself? When can I eat?' After a few bites, he said it was tastier than many dishes he had ever eaten. In the end we finished everything in the pot and kept chatting until eleven at night.",
+    "For many people, hotpot is not just a meal; it is also a good time spent with friends."
+   ],
+   "paragraphs_de": [
+    "Der Winter in Deutschland ist kalt und lang, schon kurz nach vier Uhr nachmittags wird es dunkel. In dieser Zeit denken viele chinesische Studierende in Deutschland an eine Sache: Feuertopf (Hotpot).",
+    "Im Restaurant ist Hotpot ziemlich teuer, deshalb machen ihn viele zu Hause selbst. Einer bringt den Topf mit, einer kauft Fleisch und Gemüse, und noch jemand geht in den Asia-Supermarkt und kauft die Brühenbasis. Dort gibt es viele Sorten: scharf-betäubende und auch eine nicht scharfe mit Tomatengeschmack.",
+    "Beim Hotpot steht ein elektrischer Topf in der Mitte des Tisches, die Brühe kocht die ganze Zeit, und alle sitzen um den Tisch herum. Viele mögen den „Yuanyang“-Topf: Er ist in zwei Hälften geteilt, eine scharf, eine nicht scharf – so sind alle zufrieden, egal ob sie Schärfe vertragen oder nicht.",
+    "Letzte Woche habe ich zum ersten Mal einen deutschen Freund zum Hotpot mitgenommen. Am Anfang war er etwas nervös und fragte: „Das Essen muss ich selbst kochen? Wann kann ich essen?“ Nach ein paar Bissen sagte er, es schmecke besser als viele Gerichte, die er je gegessen hat. Am Ende haben wir den ganzen Topf leer gegessen und bis elf Uhr abends geredet.",
+    "Für viele ist Hotpot nicht nur eine Mahlzeit, sondern auch eine schöne Zeit mit Freunden."
+   ],
+   "paragraphs_pt": [
+    "O inverno na Alemanha é frio e longo, e logo depois das quatro da tarde já escurece. Nessa época, muitos estudantes chineses na Alemanha lembram de uma coisa: o hot pot.",
+    "Comer hot pot no restaurante é bem caro, então o pessoal costuma fazer em casa. Uma pessoa leva a panela, outra compra a carne e os legumes, e mais alguém vai ao mercado asiático comprar o tempero para o caldo. No mercado tem vários tipos: os picantes que adormecem a boca e também um sem pimenta, de tomate.",
+    "Na hora do hot pot, fica uma panela elétrica no meio da mesa, o caldo fervendo o tempo todo, e todo mundo senta em volta. Muita gente gosta da panela “yuanyang”: ela é dividida em duas partes, uma apimentada e outra não, e assim quem come pimenta e quem não come fica feliz.",
+    "Na semana passada, levei um amigo alemão para comer hot pot pela primeira vez. No começo ele ficou um pouco nervoso e me perguntou: “Eu mesmo tenho que cozinhar a comida? Quando dá para comer?” Depois de umas garfadas, ele disse que era mais gostoso que muitos pratos que já tinha comido. No fim, a gente comeu tudo o que tinha na panela e ficou conversando até as onze da noite.",
+    "Para muita gente, o hot pot não é só uma refeição; é também um momento bom com os amigos."
+   ],
+   "glossary": [
+    {
+     "w": "火锅",
+     "p": "huǒ guō",
+     "en": "hotpot",
+     "de": "der Feuertopf; der Hotpot",
+     "pt": "o hot pot (fondue chinês)"
+    },
+    {
+     "w": "留学生",
+     "p": "liú xué shēng",
+     "en": "international student",
+     "de": "der/die internationale Studierende",
+     "pt": "o/a estudante estrangeiro(a)"
+    },
+    {
+     "w": "底料",
+     "p": "dǐ liào",
+     "en": "soup base (seasoning for hotpot)",
+     "de": "die Brühenbasis; die Würzpaste",
+     "pt": "o tempero base do caldo"
+    },
+    {
+     "w": "麻辣",
+     "p": "má là",
+     "en": "numbing and spicy",
+     "de": "scharf und betäubend",
+     "pt": "picante e que adormece a boca"
+    },
+    {
+     "w": "番茄",
+     "p": "fān qié",
+     "en": "tomato",
+     "de": "die Tomate",
+     "pt": "o tomate"
+    },
+    {
+     "w": "围",
+     "p": "wéi",
+     "en": "to surround; to sit around",
+     "de": "umgeben; herumsitzen",
+     "pt": "rodear; ficar em volta"
+    },
+    {
+     "w": "鸳鸯锅",
+     "p": "yuān yang guō",
+     "en": "split hotpot with two broths",
+     "de": "der geteilte Feuertopf (zwei Brühen)",
+     "pt": "a panela dividida (dois caldos)"
+    },
+    {
+     "w": "分成",
+     "p": "fēn chéng",
+     "en": "to divide into",
+     "de": "aufteilen in",
+     "pt": "dividir em"
+    },
+    {
+     "w": "紧张",
+     "p": "jǐn zhāng",
+     "en": "nervous",
+     "de": "nervös",
+     "pt": "nervoso"
+    },
+    {
+     "w": "煮",
+     "p": "zhǔ",
+     "en": "to boil; to cook in water",
+     "de": "kochen; sieden",
+     "pt": "cozinhar; ferver"
+    },
+    {
+     "w": "顿",
+     "p": "dùn",
+     "en": "measure word for meals",
+     "de": "Zählwort für Mahlzeiten",
+     "pt": "classificador para refeições"
+    },
+    {
+     "w": "时光",
+     "p": "shí guāng",
+     "en": "time; moments",
+     "de": "die Zeit; die Stunden",
+     "pt": "o tempo; os momentos"
+    }
+   ],
+   "grammar": "Verb + 着 describes a lasting state: 桌子中间放着一个电火锅 'an electric hotpot is placed (sits) in the middle of the table', 大家围着桌子坐 'everyone sits around the table'. The pattern 'place + verb + 着 + thing' tells you what is somewhere.",
+   "grammar_de": "Verb + 着 beschreibt einen andauernden Zustand: 桌子中间放着一个电火锅 „in der Mitte des Tisches steht ein elektrischer Topf“, 大家围着桌子坐 „alle sitzen um den Tisch herum“. Das Muster „Ort + Verb + 着 + Ding“ sagt, was sich irgendwo befindet.",
+   "grammar_pt": "Verbo + 着 descreve um estado que continua: 桌子中间放着一个电火锅 “no meio da mesa está uma panela elétrica”, 大家围着桌子坐 “todo mundo senta em volta da mesa”. O padrão “lugar + verbo + 着 + coisa” diz o que está em algum lugar.",
+   "questions": [
+    "为什么大家常常在家里吃火锅？",
+    "什么是鸳鸯锅？",
+    "德国朋友觉得火锅怎么样？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK4",
+   "kind": "feature",
+   "section": "饮食",
+   "title": "奶茶，几分糖？",
+   "title_en": "Bubble tea: how sweet?",
+   "title_de": "Bubble Tea – wie süß?",
+   "title_pt": "Bubble tea: quanto açúcar?",
+   "dek": "点一杯奶茶，要回答的问题比你想的多。",
+   "paragraphs": [
+    "这几年，在柏林、巴黎和米兰的街上，奶茶店越来越多了。店门口常常排着长队，排队的不只是亚洲人，还有很多欧洲年轻人。",
+    "珍珠奶茶一般被认为来自台湾，上世纪八十年代开始流行。所谓“珍珠”，其实是用木薯粉做的小圆球，吃起来软软的，很有弹性，所以要用一根很粗的吸管来喝。",
+    "第一次点奶茶的人常常会被问住，因为店员会问一连串问题：要大杯还是中杯？要几分糖？少冰、去冰还是常温？要不要加椰果或者布丁？有人觉得这样太麻烦，可是也有人认为，这正是奶茶的魅力：每个人都能做出一杯只属于自己的饮料。",
+    "我的德国同事以前只点全糖，后来她发现全糖实在太甜了，喝完以后一点儿也不想吃饭。现在她每次都说“三分糖，少冰”，发音比我还标准。她开玩笑说，学会点奶茶，是她学中文以后最有用的一件事。",
+    "当然，奶茶毕竟是一种甜饮料，偶尔喝一杯是小小的享受，天天喝就不太合适了。不过，对很多年轻人来说，和朋友一起排队、一起拍照、一起尝新口味，这个过程本身就是一种快乐。"
+   ],
+   "paragraphs_en": [
+    "In recent years there have been more and more bubble tea shops on the streets of Berlin, Paris and Milan. There are often long queues outside, and the people waiting are not only Asians but also lots of young Europeans.",
+    "Bubble tea is generally thought to come from Taiwan, where it became popular in the 1980s. The so-called 'pearls' are actually little balls made from tapioca (cassava) starch. They are soft and springy to chew, which is why you drink it through a very wide straw.",
+    "People ordering bubble tea for the first time are often stumped, because the staff ask a whole string of questions: large or medium? How much sugar? Less ice, no ice or room temperature? Would you like coconut jelly or pudding? Some find this too much hassle, but others think this is exactly the charm of bubble tea: everyone can create a drink that is theirs alone.",
+    "My German colleague used to order only full sugar. Later she found that full sugar was really far too sweet; after finishing one she didn't feel like eating at all. Now she always says 'thirty percent sugar, less ice', and her pronunciation is even more standard than mine. She jokes that learning to order bubble tea is the most useful thing she has got out of studying Chinese.",
+    "Of course, bubble tea is, after all, a sweet drink: one now and then is a small treat, but having it every day isn't really a good idea. Still, for many young people, queuing together with friends, taking photos together and trying new flavours together is a kind of happiness in itself."
+   ],
+   "paragraphs_de": [
+    "In den letzten Jahren gibt es auf den Straßen von Berlin, Paris und Mailand immer mehr Bubble-Tea-Läden. Davor stehen oft lange Schlangen, und es warten nicht nur Asiaten, sondern auch viele junge Europäer.",
+    "Bubble Tea stammt nach allgemeiner Ansicht aus Taiwan und wurde dort in den 1980er-Jahren populär. Die sogenannten „Perlen“ sind eigentlich kleine Kugeln aus Tapiokastärke (Maniok). Sie sind weich und elastisch beim Kauen, deshalb trinkt man den Tee mit einem sehr dicken Strohhalm.",
+    "Wer zum ersten Mal Bubble Tea bestellt, ist oft überfordert, denn das Personal stellt eine ganze Reihe von Fragen: groß oder mittel? Wie viel Zucker? Wenig Eis, kein Eis oder Raumtemperatur? Kokosgelee oder Pudding dazu? Manche finden das zu umständlich, andere meinen, genau das sei der Reiz von Bubble Tea: Jeder kann sich ein Getränk machen lassen, das nur ihm gehört.",
+    "Meine deutsche Kollegin hat früher immer die volle Zuckermenge bestellt. Dann merkte sie, dass das wirklich viel zu süß war – danach hatte sie überhaupt keinen Hunger mehr. Jetzt sagt sie jedes Mal „dreißig Prozent Zucker, wenig Eis“, und ihre Aussprache ist sogar besser als meine. Sie scherzt, Bubble Tea bestellen zu können sei das Nützlichste, was sie beim Chinesischlernen gelernt hat.",
+    "Natürlich ist Bubble Tea letztlich ein süßes Getränk: Ab und zu ein Becher ist ein kleiner Genuss, jeden Tag einen zu trinken ist eher keine gute Idee. Für viele junge Leute ist es aber schon an sich eine Freude, mit Freunden zusammen anzustehen, Fotos zu machen und neue Geschmacksrichtungen zu probieren."
+   ],
+   "paragraphs_pt": [
+    "Nos últimos anos, há cada vez mais lojas de bubble tea nas ruas de Berlim, Paris e Milão. Muitas vezes há filas longas na porta, e quem espera não são só asiáticos, mas também muitos jovens europeus.",
+    "Em geral, considera-se que o bubble tea surgiu em Taiwan e ficou popular nos anos 1980. As tais “pérolas” são, na verdade, bolinhas feitas de fécula de mandioca (tapioca). Elas são macias e elásticas ao mastigar, por isso se bebe com um canudo bem grosso.",
+    "Quem pede bubble tea pela primeira vez muitas vezes fica sem saber o que responder, porque o atendente faz uma série de perguntas: copo grande ou médio? Quanto açúcar? Pouco gelo, sem gelo ou temperatura ambiente? Quer adicionar geleia de coco ou pudim? Algumas pessoas acham isso complicado demais, mas outras acham que esse é justamente o charme do bubble tea: cada um pode montar uma bebida só sua.",
+    "Minha colega alemã antes só pedia com açúcar completo. Depois percebeu que era doce demais: depois de tomar, não tinha vontade nenhuma de comer. Agora ela sempre diz “trinta por cento de açúcar, pouco gelo”, e a pronúncia dela é ainda mais correta que a minha. Ela brinca que aprender a pedir bubble tea foi a coisa mais útil que tirou do estudo de chinês.",
+    "Claro, o bubble tea é, afinal, uma bebida doce: tomar um de vez em quando é um pequeno prazer, mas todo dia já não é tão adequado. Mesmo assim, para muitos jovens, fazer fila com os amigos, tirar fotos juntos e provar sabores novos já é, por si só, uma alegria."
+   ],
+   "glossary": [
+    {
+     "w": "排队",
+     "p": "pái duì",
+     "en": "to queue; to stand in line",
+     "de": "Schlange stehen",
+     "pt": "fazer fila"
+    },
+    {
+     "w": "珍珠",
+     "p": "zhēn zhū",
+     "en": "pearl (here: tapioca ball)",
+     "de": "die Perle (hier: Tapiokakugel)",
+     "pt": "a pérola (aqui: bolinha de tapioca)"
+    },
+    {
+     "w": "所谓",
+     "p": "suǒ wèi",
+     "en": "so-called",
+     "de": "sogenannt",
+     "pt": "o chamado; o tal"
+    },
+    {
+     "w": "木薯粉",
+     "p": "mù shǔ fěn",
+     "en": "tapioca (cassava) starch",
+     "de": "die Tapiokastärke",
+     "pt": "a fécula de mandioca"
+    },
+    {
+     "w": "弹性",
+     "p": "tán xìng",
+     "en": "springiness; elasticity",
+     "de": "die Elastizität",
+     "pt": "a elasticidade"
+    },
+    {
+     "w": "吸管",
+     "p": "xī guǎn",
+     "en": "drinking straw",
+     "de": "der Strohhalm",
+     "pt": "o canudo"
+    },
+    {
+     "w": "问住",
+     "p": "wèn zhù",
+     "en": "to stump someone with a question",
+     "de": "jemanden mit einer Frage in Verlegenheit bringen",
+     "pt": "deixar alguém sem resposta"
+    },
+    {
+     "w": "常温",
+     "p": "cháng wēn",
+     "en": "room temperature",
+     "de": "die Raumtemperatur",
+     "pt": "a temperatura ambiente"
+    },
+    {
+     "w": "魅力",
+     "p": "mèi lì",
+     "en": "charm; appeal",
+     "de": "der Reiz; der Charme",
+     "pt": "o charme"
+    },
+    {
+     "w": "属于",
+     "p": "shǔ yú",
+     "en": "to belong to",
+     "de": "gehören zu",
+     "pt": "pertencer a"
+    },
+    {
+     "w": "毕竟",
+     "p": "bì jìng",
+     "en": "after all",
+     "de": "schließlich; letztendlich",
+     "pt": "afinal"
+    },
+    {
+     "w": "偶尔",
+     "p": "ǒu ěr",
+     "en": "occasionally",
+     "de": "ab und zu",
+     "pt": "de vez em quando"
+    }
+   ],
+   "grammar": "毕竟 'after all' reminds the listener of a basic fact that explains or limits what you say: 奶茶毕竟是一种甜饮料 'bubble tea is, after all, a sweet drink'. It usually comes after the subject and is often followed by a conclusion (here: 天天喝就不太合适了).",
+   "grammar_de": "毕竟 „schließlich; letztendlich“ erinnert an eine grundlegende Tatsache, die das Gesagte erklärt oder einschränkt: 奶茶毕竟是一种甜饮料 „Bubble Tea ist schließlich ein süßes Getränk“. Es steht meist nach dem Subjekt, oft folgt eine Schlussfolgerung (hier: 天天喝就不太合适了).",
+   "grammar_pt": "毕竟 “afinal” lembra um fato básico que explica ou limita o que se diz: 奶茶毕竟是一种甜饮料 “o bubble tea é, afinal, uma bebida doce”. Costuma vir depois do sujeito e muitas vezes é seguido de uma conclusão (aqui: 天天喝就不太合适了).",
+   "questions": [
+    "珍珠奶茶里的“珍珠”是用什么做的？",
+    "点奶茶的时候，店员会问哪些问题？",
+    "那位德国同事现在怎么点奶茶？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK5",
+   "kind": "feature",
+   "section": "饮食",
+   "title": "甜豆花还是咸豆腐脑？",
+   "title_en": "Sweet or savoury tofu pudding?",
+   "title_de": "Süßer oder herzhafter Tofupudding?",
+   "title_pt": "Pudim de tofu doce ou salgado?",
+   "dek": "一碗豆腐脑，为什么能让网友们争个不停？",
+   "paragraphs": [
+    "在中文网络上，有一个话题几乎每年都会被拿出来讨论一次：豆腐脑到底应该是甜的还是咸的？这个看起来微不足道的问题，常常让网友们争得面红耳赤。",
+    "豆腐脑，有的地方也叫豆花，是用豆浆做成的一种很嫩的豆腐。在中国北方的很多地方，人们习惯在上面浇一勺咸香的卤汁，再加点儿香菜和辣油，当作早饭。到了南方的不少城市，豆花却常常配着糖水，有时候还加上姜汁或者红豆，是一道清爽的甜品。而在四川、重庆一带，豆花又常常蘸着辣椒酱，配一碗米饭就是一顿家常饭。",
+    "于是，“南甜北咸”成了网友们的口头禅。当然，这只是一个大概的说法，真实情况要复杂得多：北方也有人爱吃甜的，南方也有人离不开咸的。不过，每次说到这个话题，大家都会认真地为家乡的味道“辩护”，好像换了口味，就不再是家乡人了。",
+    "其实，这种争论与其说是在比较哪一种更好吃，不如说是在分享各自的记忆。一碗豆腐脑背后，有小时候的早市，有家人的手艺，也有一个地方的生活习惯。人们常说众口难调，正是因为每个人的口味里都藏着自己的故事。",
+    "对在欧洲学中文的人来说，这个话题也是一个很好的聊天开头。下次遇到中国朋友，不妨问一句：“你吃甜豆花还是咸豆腐脑？”十有八九，你会听到一段讲得津津有味的回忆。至于哪种更好，那就各有千秋了——就像德国人也会争论土豆沙拉该拌蛋黄酱，还是该用醋和清汤一样，没有标准答案。"
+   ],
+   "paragraphs_en": [
+    "On the Chinese internet, there is a topic that gets brought up for discussion almost every year: should tofu pudding (doufunao) be sweet or savoury? This seemingly trivial question regularly gets netizens arguing until they are red in the face.",
+    "Doufunao, called douhua in some places, is a very soft, tender tofu made from soy milk. In many parts of northern China, people usually pour a ladle of savoury gravy over it, add some coriander and chilli oil, and eat it for breakfast. In quite a few southern cities, however, douhua is often served with sugar syrup, sometimes with ginger juice or red beans, as a refreshing dessert. And in the Sichuan and Chongqing area, douhua is often dipped in chilli sauce and, with a bowl of rice, makes a simple home-style meal.",
+    "So 'sweet in the south, savoury in the north' has become a catchphrase among netizens. Of course, it is only a rough generalisation and reality is much more complicated: some northerners love the sweet version, and some southerners can't live without the savoury one. Yet whenever the topic comes up, everyone earnestly 'defends' the flavour of their hometown, as if switching flavours would make them no longer belong there.",
+    "In fact, rather than comparing which one tastes better, this kind of argument is really about sharing one's own memories. Behind a bowl of tofu pudding there is the morning market of one's childhood, a family member's cooking skills and the everyday habits of a place. People often say 'many mouths are hard to please', precisely because everyone's taste hides a story of its own.",
+    "For people learning Chinese in Europe, this topic is also a great way to start a conversation. Next time you meet a Chinese friend, why not ask: 'Do you eat sweet douhua or savoury doufunao?' Nine times out of ten, you'll hear a memory told with real relish. As for which one is better, each has its own merits – just as Germans argue about whether potato salad should be made with mayonnaise or with vinegar and broth: there is no right answer."
+   ],
+   "paragraphs_de": [
+    "Im chinesischen Internet gibt es ein Thema, das fast jedes Jahr wieder hervorgeholt wird: Soll Tofupudding (Doufunao) süß oder herzhaft sein? Diese scheinbar belanglose Frage lässt Internetnutzer oft streiten, bis sie rote Köpfe bekommen.",
+    "Doufunao, mancherorts auch Douhua genannt, ist ein sehr weicher, zarter Tofu aus Sojamilch. In vielen Gegenden Nordchinas gießt man gewöhnlich eine Kelle herzhafte Soße darüber, gibt etwas Koriander und Chiliöl dazu und isst ihn zum Frühstück. In nicht wenigen Städten des Südens dagegen wird Douhua oft mit Zuckersirup serviert, manchmal mit Ingwersaft oder roten Bohnen, als erfrischendes Dessert. Und in der Gegend um Sichuan und Chongqing tunkt man Douhua häufig in Chilisoße – mit einer Schale Reis ist das eine einfache Hausmannskost.",
+    "So wurde „süß im Süden, herzhaft im Norden“ zu einem geflügelten Wort im Netz. Natürlich ist das nur eine grobe Verallgemeinerung, die Wirklichkeit ist viel komplizierter: Auch im Norden essen manche lieber süß, und auch im Süden können manche nicht auf die herzhafte Variante verzichten. Doch jedes Mal, wenn das Thema aufkommt, „verteidigen“ alle ernsthaft den Geschmack ihrer Heimat, als würde man mit einem anderen Geschmack nicht mehr dazugehören.",
+    "Eigentlich geht es bei diesem Streit weniger darum, was besser schmeckt, als vielmehr darum, eigene Erinnerungen zu teilen. Hinter einer Schale Tofupudding stehen der Morgenmarkt der Kindheit, die Kochkünste der Familie und die Lebensgewohnheiten eines Ortes. Man sagt oft, man könne es nicht allen recht machen – gerade weil in jedem Geschmack eine eigene Geschichte steckt.",
+    "Für alle, die in Europa Chinesisch lernen, ist dieses Thema auch ein guter Gesprächseinstieg. Wenn Sie das nächste Mal chinesische Freunde treffen, fragen Sie doch einfach: „Isst du süßen Douhua oder herzhaften Doufunao?“ Mit ziemlicher Sicherheit hören Sie dann eine Erinnerung, die mit viel Genuss erzählt wird. Welche Variante besser ist? Jede hat ihre Vorzüge – so wie auch Deutsche darüber streiten, ob Kartoffelsalat mit Mayonnaise oder mit Essig und Brühe angemacht gehört: Eine richtige Antwort gibt es nicht."
+   ],
+   "paragraphs_pt": [
+    "Na internet chinesa, há um assunto que volta à discussão quase todo ano: o pudim de tofu (doufunao) deve ser doce ou salgado? Essa pergunta aparentemente insignificante muitas vezes faz os internautas discutirem até ficarem vermelhos.",
+    "O doufunao, que em alguns lugares se chama douhua, é um tofu bem macio e delicado feito de leite de soja. Em muitas regiões do norte da China, costuma-se jogar por cima uma concha de molho salgado, acrescentar um pouco de coentro e óleo de pimenta e comer no café da manhã. Já em várias cidades do sul, o douhua costuma vir com calda de açúcar, às vezes com suco de gengibre ou feijão vermelho, como uma sobremesa refrescante. E na região de Sichuan e Chongqing, o douhua muitas vezes é mergulhado em molho de pimenta e, com uma tigela de arroz, vira uma refeição caseira.",
+    "Assim, “doce no sul, salgado no norte” virou um bordão entre os internautas. Claro, é só uma generalização, e a realidade é bem mais complicada: no norte também há quem adore o doce, e no sul também há quem não viva sem o salgado. Mesmo assim, toda vez que o assunto aparece, todo mundo “defende” a sério o sabor da sua terra, como se trocar de sabor fosse deixar de ser de lá.",
+    "Na verdade, essa discussão é menos sobre qual é mais gostoso e mais sobre compartilhar lembranças. Por trás de uma tigela de pudim de tofu estão a feira da manhã da infância, a mão de um familiar na cozinha e os costumes de um lugar. Costuma-se dizer que é impossível agradar a todos os paladares, justamente porque cada gosto esconde uma história própria.",
+    "Para quem estuda chinês na Europa, esse assunto também é um ótimo jeito de puxar conversa. Da próxima vez que encontrar um amigo chinês, por que não perguntar: “Você come douhua doce ou doufunao salgado?” Em nove de cada dez casos, você vai ouvir uma lembrança contada com o maior gosto. Quanto a qual é melhor, cada um tem seus méritos – assim como os alemães discutem se a salada de batata deve levar maionese ou vinagre e caldo: não existe resposta certa."
+   ],
+   "glossary": [
+    {
+     "w": "微不足道",
+     "p": "wēi bù zú dào",
+     "en": "trivial; not worth mentioning (idiom)",
+     "de": "belanglos; nicht der Rede wert (Redewendung)",
+     "pt": "insignificante; que não vale a pena mencionar (expressão)"
+    },
+    {
+     "w": "面红耳赤",
+     "p": "miàn hóng ěr chì",
+     "en": "red in the face (from arguing or embarrassment; idiom)",
+     "de": "mit hochrotem Kopf (vor Streit oder Verlegenheit; Redewendung)",
+     "pt": "vermelho de raiva ou vergonha (expressão)"
+    },
+    {
+     "w": "嫩",
+     "p": "nèn",
+     "en": "tender; soft",
+     "de": "zart; weich",
+     "pt": "macio; tenro"
+    },
+    {
+     "w": "卤汁",
+     "p": "lǔ zhī",
+     "en": "savoury thickened gravy",
+     "de": "die herzhafte (gebundene) Soße",
+     "pt": "o molho salgado (engrossado)"
+    },
+    {
+     "w": "清爽",
+     "p": "qīng shuǎng",
+     "en": "refreshing; light",
+     "de": "erfrischend; leicht",
+     "pt": "refrescante; leve"
+    },
+    {
+     "w": "蘸",
+     "p": "zhàn",
+     "en": "to dip (in sauce)",
+     "de": "eintunken",
+     "pt": "mergulhar (no molho)"
+    },
+    {
+     "w": "口头禅",
+     "p": "kǒu tóu chán",
+     "en": "catchphrase; pet phrase",
+     "de": "die Redensart; das Lieblingswort",
+     "pt": "o bordão"
+    },
+    {
+     "w": "与其……不如……",
+     "p": "yǔ qí … bù rú …",
+     "en": "rather than … (it is better to say) …",
+     "de": "eher … als …; statt … lieber …",
+     "pt": "em vez de … melhor …"
+    },
+    {
+     "w": "众口难调",
+     "p": "zhòng kǒu nán tiáo",
+     "en": "you can't please every palate (idiom)",
+     "de": "man kann es nicht allen recht machen (Redewendung)",
+     "pt": "não dá para agradar a todos os paladares (expressão)"
+    },
+    {
+     "w": "不妨",
+     "p": "bù fáng",
+     "en": "might as well; why not",
+     "de": "ruhig; warum nicht",
+     "pt": "por que não; vale a pena"
+    },
+    {
+     "w": "津津有味",
+     "p": "jīn jīn yǒu wèi",
+     "en": "with great relish (idiom)",
+     "de": "mit großem Genuss (Redewendung)",
+     "pt": "com muito gosto (expressão)"
+    },
+    {
+     "w": "各有千秋",
+     "p": "gè yǒu qiān qiū",
+     "en": "each has its own merits (idiom)",
+     "de": "jedes hat seine Vorzüge (Redewendung)",
+     "pt": "cada um tem seus méritos (expressão)"
+    }
+   ],
+   "grammar": "与其说A，不如说B means 'it is not so much A as B': 这种争论与其说是在比较哪一种更好吃，不如说是在分享各自的记忆 'this argument is not so much comparing which tastes better as sharing memories'. The speaker prefers the second description (B).",
+   "grammar_de": "与其说A，不如说B bedeutet „weniger A als vielmehr B“: 这种争论与其说是在比较哪一种更好吃，不如说是在分享各自的记忆 „bei diesem Streit geht es weniger darum, was besser schmeckt, als vielmehr ums Teilen von Erinnerungen“. Die zweite Beschreibung (B) ist die zutreffendere.",
+   "grammar_pt": "与其说A，不如说B significa “não é tanto A, mas sim B”: 这种争论与其说是在比较哪一种更好吃，不如说是在分享各自的记忆 “essa discussão não é tanto sobre qual é mais gostoso, mas sim sobre compartilhar lembranças”. Quem fala prefere a segunda descrição (B).",
+   "questions": [
+    "在中国北方，豆腐脑一般是什么味道的？",
+    "“南甜北咸”是什么意思？",
+    "作者为什么说这个话题是很好的聊天开头？"
+   ],
+   "sources": []
+  }
+ ]
+}

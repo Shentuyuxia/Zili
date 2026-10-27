@@ -1,6 +1,46 @@
 {
- "updated": "2026-10-26T19:59:07Z",
+ "updated": "2026-10-27T04:47:09Z",
  "days": [
+  {
+   "date": "2026-10-27",
+   "items": [
+    {
+     "i": 0,
+     "lang": "zh",
+     "title": "我家的早饭",
+     "kind": "story",
+     "level": "HSK1"
+    },
+    {
+     "i": 1,
+     "lang": "zh",
+     "title": "微辣就好",
+     "kind": "dialogue",
+     "level": "HSK2"
+    },
+    {
+     "i": 2,
+     "lang": "zh",
+     "title": "在家吃火锅",
+     "kind": "feature",
+     "level": "HSK3"
+    },
+    {
+     "i": 3,
+     "lang": "zh",
+     "title": "奶茶，几分糖？",
+     "kind": "feature",
+     "level": "HSK4"
+    },
+    {
+     "i": 4,
+     "lang": "zh",
+     "title": "甜豆花还是咸豆腐脑？",
+     "kind": "feature",
+     "level": "HSK5"
+    }
+   ]
+  },
   {
    "date": "2026-10-26",
    "items": [
