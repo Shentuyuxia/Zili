@@ -1056,6 +1056,70 @@ body:not(.tones) .tone-opts{opacity:.55}
 .mz-acts .btn[aria-pressed="true"]{border-color:var(--acc);color:var(--acc)}
 /* dictionary */
 .dict-modal{max-width:600px;min-height:min(640px,86vh)}
+/* 拼音课 */
+.py{--py1:#d8402f;--py2:#17905f;--py3:#3270dc;--py4:#a43fb8;max-width:720px;margin:0 auto;width:100%}
+.py.pyown{--py1:var(--t1);--py2:var(--t2);--py3:var(--t3);--py4:var(--t4)}
+@media (prefers-color-scheme: dark){ .py:not(.pyown){--py1:#f0705e;--py2:#3fcf8e;--py3:#6f9cf2;--py4:#d27ee6} }
+.py .tn1{color:var(--py1)} .py .tn2{color:var(--py2)} .py .tn3{color:var(--py3)} .py .tn4{color:var(--py4)}
+.pyhead{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 6px}.pyhead h2{margin:0;font-size:20px}.pyhead .spacer{flex:1}
+.pyk{color:var(--muted);font-weight:500;font-size:.8em;margin-right:4px}
+.pycv{width:34px;height:30px;flex:none;overflow:visible}.pycv.big{width:52px;height:44px}
+.pycv path{fill:none;stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round}.pycv .pyst{stroke:var(--line);stroke-width:1;stroke-dasharray:2 3}
+.pyc1{stroke:var(--py1)}.pyc2{stroke:var(--py2)}.pyc3{stroke:var(--py3)}.pyc4{stroke:var(--py4)}.pyc0{fill:var(--muted)}
+.pymap{list-style:none;margin:12px 0;padding:0;display:grid;gap:8px}
+.pyli{width:100%;display:flex;align-items:center;gap:12px;text-align:left;border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:11px 14px;cursor:pointer;color:var(--ink);font:inherit}
+.pyli:disabled{cursor:default;opacity:.55}.pyli:not(:disabled):hover{border-color:var(--muted)}
+.pyli.next{border-color:var(--acc);box-shadow:0 0 0 1px var(--acc) inset}
+.pyno{width:30px;height:30px;border-radius:50%;background:var(--sunk);display:grid;place-items:center;font-weight:700;font-size:13px;flex:none}
+.pyli.done .pyno{background:var(--acc);color:var(--on-acc)}.pyno svg{width:15px;height:15px}
+.pyt{display:flex;flex-direction:column;min-width:0;flex:1}.pyt small{color:var(--muted);font-size:12.5px}
+.pyst2{font-size:12.5px;color:var(--muted);white-space:nowrap}.pyli.next .pyst2{color:var(--acc);font-weight:600}
+.pyfoot{margin-top:14px}
+.pyintro{font-size:15.5px;line-height:1.65;margin:8px 0 12px}
+.pytones{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:0 0 10px}
+.pytone{display:flex;gap:10px;align-items:center;text-align:left;border:1px solid var(--line);background:var(--sunk);border-radius:12px;padding:10px;cursor:pointer;color:var(--ink);font:inherit}
+.pytone span{display:flex;flex-direction:column}.pytone small{font-size:12.5px;color:var(--muted);line-height:1.4}
+.pygl{font-size:14px;margin:16px 0 8px;color:var(--muted);font-weight:600}
+.pygrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:8px}
+.pycard{display:flex;flex-direction:column;align-items:center;gap:2px;border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:10px 6px 8px;cursor:pointer;color:var(--ink);font:inherit;position:relative;min-width:0}
+.pygrid.g4{grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.pygrid.g4 .pycard .pyc{font-size:26px}.pygrid.g4 .pym{font-size:11px}
+.pycard:hover{border-color:var(--muted)}.pycard:active{transform:scale(.97)}
+.pycard .pyc{font-family:var(--f-cn);font-size:30px;line-height:1.2}.pycard .pyp{font-size:16px}
+.pycard .pym{font-size:12px;color:var(--muted);text-align:center;line-height:1.3}.pycard.none{opacity:.45;cursor:default}
+.pyv{position:absolute;top:5px;left:8px;font-size:12px;font-weight:700;color:var(--muted)}.pysay{font-size:11.5px;color:var(--muted)}
+.pytip{margin:16px 0 0;border-left:3px solid var(--acc);background:var(--sunk);border-radius:0 10px 10px 0;padding:10px 14px}.pytip p{margin:4px 0 0}
+.pyact{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:18px 0 4px}
+.pyvid{width:100%;border-radius:12px;margin:6px 0;background:#000}
+.pydots{display:flex;gap:5px;margin:4px 0 14px}.pydots i{flex:1;height:5px;border-radius:3px;background:var(--sunk)}
+.pydots i.cur{background:var(--muted)}.pydots i.ok{background:var(--py2)}.pydots i.no{background:var(--py1)}
+.pyq{text-align:center}.pyask{font-size:17px;font-weight:600;margin:4px 0 12px}
+.pybigplay{width:76px;height:76px;border-radius:50%;border:0;background:var(--acc);color:var(--on-acc);cursor:pointer;display:inline-grid;place-items:center;margin:0 0 16px}.pybigplay svg{width:32px;height:32px}
+.pybigpy{font-size:40px;font-weight:600;margin:0 0 2px}
+.pyopts{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;max-width:440px;margin:0 auto}
+.pyopts.mpair,.pyopts.rule{grid-template-columns:repeat(auto-fit,minmax(120px,1fr))}
+.pyopt{display:flex;flex-direction:column;align-items:center;gap:3px;border:1.5px solid var(--line);background:var(--surface);border-radius:12px;padding:12px 8px;cursor:pointer;color:var(--ink);font:inherit;font-size:16px}
+.pyopt small{color:var(--muted);font-size:12px}.pyopt .zc{font-family:var(--f-cn);font-size:26px}.pyopt .pycv{width:44px;height:34px}
+.pyopts.pick .pyopt{flex-direction:row;justify-content:center;gap:10px}.pyopt svg:not(.pycv){width:20px;height:20px}
+.pyn{font-weight:700;font-size:18px}.pyrev{display:block;width:100%;font-size:14px}.pyrev .zc{font-size:20px}
+.pyopt.sel{border-color:var(--acc);background:var(--acc-soft)}
+.pyopt.right{border-color:var(--py2);background:color-mix(in srgb,var(--py2) 12%,var(--surface))}
+.pyopt.wrong{border-color:var(--py1);background:color-mix(in srgb,var(--py1) 10%,var(--surface))}.pyopt:disabled{cursor:default;color:var(--ink)}
+.pyfb{margin:16px auto 0;max-width:440px;text-align:left;border-radius:12px;padding:12px 14px;background:var(--sunk)}
+.pyfb.ok>b:first-child{color:var(--py2)}.pyfb.no>b:first-child{color:var(--py1)}.pyfb .row{margin-top:10px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}.pyfb .spacer{flex:1}
+.pyans .zc{font-family:var(--f-cn);font-size:22px}.pyans .pym{color:var(--muted);font-size:13px}
+.pyres{text-align:center}.pyscore{font-size:54px;font-weight:700;line-height:1.1;margin-top:10px}.pyscore small{font-size:22px;color:var(--muted)}
+.pyres .pygrid,.pyres .pytip{text-align:left}
+.pyrow{display:flex;gap:10px;align-items:flex-start;padding:6px 0;border-top:1px solid var(--line)}
+.pyini{width:28px;flex:none;font-weight:700;color:var(--acc);padding-top:5px}.pysyl{display:flex;flex-wrap:wrap;gap:5px}
+.pysyl button{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:4px 8px;cursor:pointer;font:inherit;font-size:14px;color:var(--ink)}
+.pysyl button[aria-pressed="true"]{background:var(--acc);border-color:var(--acc);color:var(--on-acc)}
+.pycd{position:sticky;top:6px;z-index:3;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:0 0 10px;box-shadow:0 6px 18px rgba(0,0,0,.08)}
+.pycdh{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}.pycdh>b{font-size:20px}.pycdh svg{width:14px;height:14px}
+.pycd4{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}.pycd4 .pycard{padding:8px 2px}
+.py-entry{display:flex;gap:10px 16px;align-items:center;flex-wrap:wrap;border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:0 0 14px;background:var(--surface)}
+.pe-a{flex:1;min-width:180px;display:flex;flex-direction:column;gap:3px}.pe-a .pe-t{font-size:13.5px;color:var(--muted)}
+.pe-a .bar{height:5px;margin-top:4px}.pe-b{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.dict-hrow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 12px}.dict-hrow .dict-h{margin:0;flex:1}
 .dict-page{max-width:680px;margin:0 auto;width:100%}.dict-h{font-size:20px;margin:0 0 12px}
 .dic-in{display:flex;gap:6px;align-items:center}
 .dic-in input{flex:1;min-width:0;font-size:18px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:inherit;font-family:var(--f-word)}
@@ -1170,7 +1234,7 @@ body:not(.tones) .tone-opts{opacity:.55}
 
   <!-- DICTIONARY -->
   <section id="tab-dict" class="grid one" hidden>
-    <div class="panel dict-page"><h2 class="dict-h">字典</h2><div id="dict-host"></div></div>
+    <div class="panel dict-page"><div class="dict-hrow"><h2 class="dict-h">字典</h2><button class="btn sm" type="button" data-pyopen="chart">拼音表</button><button class="btn sm" type="button" data-pyopen="map">拼音课</button></div><div id="dict-host"></div></div>
   </section>
 
   <!-- READ (Marginalia) -->
@@ -1203,6 +1267,7 @@ body:not(.tones) .tone-opts{opacity:.55}
   <!-- TODAY -->
   <section id="tab-today" class="grid">
     <div class="panel">
+      <div id="py-entry"></div>
       <div id="onb-day"></div>
       <div class="sesshead"><h2 id="sess-title">今日学习</h2><div class="row" id="sess-actions"></div></div>
       <div class="bar"><i id="sess-bar"></i></div>
@@ -1359,10 +1424,14 @@ body:not(.tones) .tone-opts{opacity:.55}
     </div>
   </section>
 
+  <!-- PINYIN COURSE -->
+  <section id="tab-pinyin" class="grid one" hidden><div class="panel py" id="py-host"></div></section>
+
   <!-- STATS -->
   <section id="tab-stats" class="grid" hidden>
     <div class="acct" data-acct></div>
     <div class="subsw" role="tablist"><button type="button" data-sub="stats">进度</button><button type="button" data-sub="settings">设置与备份</button></div>
+    <div class="panel py-link"><div class="dict-hrow"><b class="dict-h" style="font-size:16px">拼音课</b><button class="btn sm" type="button" data-pyopen="map">全部课程</button><button class="btn sm" type="button" data-pyopen="chart">拼音表</button></div></div>
     <div class="panel" id="stats-main"></div>
     <aside class="side">
       <div class="panel help">
@@ -4306,6 +4375,52 @@ function s2t(str){ // Simplified → Traditional (Taiwan), phrase-aware for comm
   return o;
 }
 const UI_DICT=[
+["拼音课", "Pinyin course", "Pinyin-Kurs", "Curso de pinyin", "拼音課"],
+["第 {0} 课", "Lesson {0}", "Lektion {0}", "Lição {0}", "第 {0} 課"],
+["继续学习", "Continue", "Weiterlernen", "Continuar", "繼續學習"],
+["每日练声调", "Daily tone practice", "Tägliches Tontraining", "Treino diário de tons", "每日練聲調"],
+["拼音表", "Pinyin chart", "Pinyin-Tabelle", "Tabela de pinyin", "拼音表"],
+["全部课程", "All lessons", "Alle Lektionen", "Todas as lições", "全部課程"],
+["回到课程", "Back to the lesson", "Zurück zur Lektion", "Voltar à lição", "回到課程"],
+["即将上线", "Coming soon", "Bald verfügbar", "Em breve", "即將上線"],
+["开始练习", "Start practice", "Üben", "Começar a praticar", "開始練習"],
+["练习", "Practice", "Übung", "Prática", "練習"],
+["听一听，是第几声？", "Listen – which tone is it?", "Hör zu – welcher Ton ist das?", "Ouça — qual é o tom?", "聽一聽，是第幾聲？"],
+["听一听，是哪两个声调？", "Listen – which two tones?", "Hör zu – welche zwei Töne?", "Ouça — quais são os dois tons?", "聽一聽，是哪兩個聲調？"],
+["哪一个是 {0}？", "Which one is {0}?", "Welches ist {0}?", "Qual é {0}?", "哪一個是 {0}？"],
+["听到的是哪一个？", "Which one did you hear?", "Welches hast du gehört?", "Qual você ouviu?", "聽到的是哪一個？"],
+["点一下听，再选。", "Tap to listen, then choose.", "Antippen zum Hören, dann wählen.", "Toque para ouvir e depois escolha.", "點一下聽，再選。"],
+["确定", "Check", "Prüfen", "Conferir", "確定"],
+["对了！", "Right!", "Richtig!", "Certo!", "對了！"],
+["不对，正确答案是：", "Not quite – the answer is:", "Nicht ganz – richtig ist:", "Quase — a resposta é:", "不對，正確答案是："],
+["再听一次", "Listen again", "Nochmal hören", "Ouvir de novo", "再聽一次"],
+["对比听", "Compare", "Vergleichen", "Comparar", "對比聽"],
+["下一题", "Next", "Weiter", "Próxima", "下一題"],
+["看结果", "See results", "Ergebnis ansehen", "Ver resultado", "看結果"],
+["答对 {0} / {1}", "{0} of {1} correct", "{0} von {1} richtig", "{0} de {1} certas", "答對 {0} / {1}"],
+["需要多练", "Needs more practice", "Noch üben", "Precisa praticar mais", "需要多練"],
+["再练一次", "Practise again", "Nochmal üben", "Praticar de novo", "再練一次"],
+["下一课", "Next lesson", "Nächste Lektion", "Próxima lição", "下一課"],
+["第一声", "1st tone", "1. Ton", "1º tom", "第一聲"],
+["第二声", "2nd tone", "2. Ton", "2º tom", "第二聲"],
+["第三声", "3rd tone", "3. Ton", "3º tom", "第三聲"],
+["第四声", "4th tone", "4. Ton", "4º tom", "第四聲"],
+["轻声", "Neutral tone", "Neutraler Ton", "Tom neutro", "輕聲"],
+["点卡片听发音。", "Tap a card to hear it.", "Karte antippen zum Anhören.", "Toque num cartão para ouvir.", "點卡片聽發音。"],
+["小提示", "Tip", "Tipp", "Dica", "小提示"],
+["▶ 视频", "▶ Video", "▶ Video", "▶ Vídeo", "▶ 影片"],
+["发音来自设备的系统语音，以后会换成真人录音。", "For now the voice comes from your device; real recordings will replace it later.", "Die Stimme kommt vorerst von deinem Gerät; später ersetzen echte Aufnahmen sie.", "Por enquanto a voz vem do seu aparelho; depois virão gravações de verdade.", "發音來自裝置的系統語音，以後會換成真人錄音。"],
+["12 节课，先上线前三课，其他陆续补上。", "12 lessons: the first three are ready, the rest are on the way.", "12 Lektionen: Die ersten drei sind fertig, der Rest folgt.", "12 lições: as três primeiras estão prontas, as outras vêm aí.", "12 節課，先上線前三課，其他陸續補上。"],
+["点音节听四个声调。", "Tap a syllable to hear its four tones.", "Silbe antippen, um die vier Töne zu hören.", "Toque numa sílaba para ouvir os quatro tons.", "點音節聽四個聲調。"],
+["最容易错的是第 {0} 声。", "Tone {0} trips you up most.", "Ton {0} verwechselst du am häufigsten.", "O tom {0} é o que mais te confunde.", "最容易錯的是第 {0} 聲。"],
+["在文章里给第 {0} 声上色", "Colour tone {0} in texts", "Ton {0} in Texten einfärben", "Colorir o tom {0} nos textos", "在文章裡給第 {0} 聲上色"],
+["已上色", "Coloured", "Eingefärbt", "Colorido", "已上色"],
+["今天已经练过了", "Practised today ✓", "Heute schon geübt ✓", "Já praticou hoje ✓", "今天已經練過了"],
+["在今日页显示", "Show on Today", "Auf „Heute“ zeigen", "Mostrar em Hoje", "在今日頁顯示"],
+["从今日页收起", "Hide from Today", "Von „Heute“ ausblenden", "Ocultar de Hoje", "從今日頁收起"],
+["{0} 课已学完", "{0} lessons done", "{0} Lektionen fertig", "{0} lições concluídas", "{0} 課已學完"],
+["正在载入拼音课…", "Loading the pinyin course…", "Pinyin-Kurs wird geladen…", "Carregando o curso de pinyin…", "正在載入拼音課…"],
+["拼音课没有载入", "The pinyin course didn't load", "Pinyin-Kurs nicht geladen", "O curso de pinyin não carregou", "拼音課沒有載入"],
 ["唱片盒", "Record box", "Plattenkiste", "Caixa de discos", "唱片盒"],
 ["点一张唱片，看它的故事。", "Tap a record to read its story.", "Tippe auf eine Platte für ihre Geschichte.", "Toque num disco para ver a história.", "點一張唱片，看它的故事。"],
 ["去听", "Listen", "Anhören", "Ouvir", "去聽"],
@@ -5117,7 +5232,7 @@ $("#ui-lang").addEventListener("change",e=>{ UIL=e.target.value; try{ localStora
 
 /* ---------- tabs & language ---------- */
 let cur="today";
-const TABS=["today","read","dict","pile","browse","stats","settings"];
+const TABS=["today","read","dict","pile","browse","stats","settings","pinyin"];
 function addOpen(w){ // the old 录入新词 tab now lives in 字匣 → 自己录入
   showTab("browse"); const d=$("#add-box"); if(!d) return; d.open=true;
   if(w){ const i=$("#n-w"); i.value=w; i.dispatchEvent(new Event("input")); }
@@ -5126,13 +5241,13 @@ function addOpen(w){ // the old 录入新词 tab now lives in 字匣 → 自己�
 function showTab(t){
   if(t==="new"){ addOpen(); return; }
   if(!TABS.includes(t)) t="today";
-  cur=t; const grp={pile:"browse",settings:"stats"}[t]||t;
+  cur=t; const grp={pile:"browse",settings:"stats",pinyin:"today"}[t]||t;
   $$("#tabs button").forEach(b=>{ b.setAttribute("aria-selected",b.dataset.tab===t); b.classList.toggle("grp-on",b.dataset.tab===grp); });
   $$(".subsw button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.sub===t));
   TABS.forEach(k=>document.getElementById("tab-"+k).hidden=k!==t);
   if(t==="pile") renderPile(); if(t==="browse") renderBrowse(); if(t==="stats") renderStats(); if(t==="dict") dicMount(); else if(typeof dicStop==="function") dicStop();
   if(t==="settings"){ renderAISettings(); renderStorage(); renderBackupHint(); }
-  if(t==="today"&&sess) renderCard();
+  if(t==="today"&&sess) renderCard(); if(t==="today") pyEntry(); if(t==="pinyin") pyRender();
   if(t==="read") mgRender(); else { if(typeof mgClose==="function"&&MG.sheet) mgClose(); if(typeof rdStop==="function") rdStop(); }
   try{ localStorage.setItem("zl-tab",t); }catch(e){}
 }
@@ -5164,6 +5279,195 @@ $("#opt-hints").addEventListener("change",e=>{ lsSet("zl-hints",e.target.checked
 function applyTset(){ const open=lsGet("zl-tset","0")==="1"; const t=$("#tset-tog"); t.setAttribute("aria-expanded",String(open)); t.closest(".side").classList.toggle("tset-closed",!open); }
 $("#tset-tog").addEventListener("click",()=>{ lsSet("zl-tset",lsGet("zl-tset","0")==="1"?"0":"1"); applyTset(); });
 applyLean(); applyTset();
+
+/* ---------- 拼音课 · pinyin course (data/pinyin-course.json, data/pinyin-chart.json) ---------- */
+// Audio: an item's own recording (item.au) if there is one, otherwise the device voice reads the character.
+const PY={course:null,chart:null,view:"map",lid:1,q:null,sel:null,loading:null};
+function PYC(){ const p=S.settings.pyc||(S.settings.pyc={}); p.done=p.done||{}; p.err=p.err||{1:0,2:0,3:0,4:0}; return p; }
+function pyLoad(){ if(PY.loading) return PY.loading;
+  PY.loading=Promise.all([fetch("data/pinyin-course.json").then(r=>{ if(!r.ok) throw new Error(r.status); return r.json(); }),fetch("data/pinyin-chart.json").then(r=>r.ok?r.json():{}).catch(()=>({}))])
+    .then(([c,h])=>{ PY.course=c; PY.chart=h; return c; }).catch(e=>{ PY.loading=null; throw e; });
+  return PY.loading; }
+const pyL=()=>UIL==="zh"||UIL==="zht"?"zh":["en","de","pt"].includes(UIL)?UIL:auxL();
+function pyT(o){ if(!o) return ""; if(typeof o==="string") return o; const l=pyL(); let t=o[l]||o.en||o.zh||""; if(l==="zh"&&UIL==="zht") t=s2t(t); return t; }
+const pyLA=()=>{ const l=pyL(); return l==="zh"?"data-noi18n":`lang="${l==="pt"?"pt-BR":l}"`; };
+function pyM(it){ const m=it.m||{}, l=pyL()==="zh"?(glSel()[0]||"en"):pyL(); const t=m[l]||m.en||""; return t?`<span class="pym" lang="${l==="pt"?"pt-BR":l}">${esc(t)}</span>`:""; }
+const pyH=c=>`<span class="zc" lang="zh-CN">${esc(zs(c))}</span>`;
+const PYV={a:"āáǎà",e:"ēéěè",i:"īíǐì",o:"ōóǒò",u:"ūúǔù","ü":"ǖǘǚǜ"};
+function pyMark(s,t){ if(!t||t>4) return s; let i=s.indexOf("a"); if(i<0) i=s.indexOf("e"); if(i<0) i=s.indexOf("ou");
+  if(i<0) for(let k=s.length-1;k>=0;k--) if(PYV[s[k]]){ i=k; break; }
+  return i<0?s:s.slice(0,i)+PYV[s[i]][t-1]+s.slice(i+1); }
+function pyToneOf(py){ for(const ch of py) for(const v in PYV){ const i=PYV[v].indexOf(ch); if(i>=0) return i+1; } return 0; }
+function pyBase(py){ let o=""; for(const ch of py){ let b=ch; for(const v in PYV) if(PYV[v].includes(ch)) b=v; o+=b; } return o; }
+// tone contours on the 1–5 pitch scale: 55, 35, 214, 51; neutral = a short dot
+const PYCT={1:[5,5],2:[3,5],3:[2,1,4],4:[5,1]};
+function pyCurve(ts,cls){ ts=String(ts).split(""); const W=34,H=30,p=4, y=lv=>H-p-(lv-1)/4*(H-2*p);
+  let g=`<svg class="pycv ${cls||""}" viewBox="0 0 ${W*ts.length} ${H}"${ts.length>1?` style="width:${W*ts.length}px"`:""} aria-hidden="true">`;
+  for(const lv of [1,3,5]) g+=`<line x1="0" x2="${W*ts.length}" y1="${y(lv)}" y2="${y(lv)}" class="pyst"/>`;
+  ts.forEach((t,n)=>{ const x0=n*W+5, x1=n*W+W-5, pts=PYCT[t];
+    if(!pts){ g+=`<circle cx="${n*W+W/2}" cy="${y(2.6)}" r="3.4" class="pyc0"/>`; return; }
+    const d=pts.length===2?`M${x0} ${y(pts[0])}L${x1} ${y(pts[1])}`:`M${x0} ${y(pts[0])}Q${(x0+x1)/2-3} ${y(pts[1])+5} ${(x0+x1)/2} ${y(pts[1])}T${x1} ${y(pts[2])}`;
+    g+=`<path d="${d}" class="pyc${t}"/>`; });
+  return g+"</svg>"; }
+const PYTN=["轻声","第一声","第二声","第三声","第四声"];
+let pyAud=null;
+function pyPlay(it){ if(!it) return; try{ if(pyAud) pyAud.pause(); }catch(e){}
+  if(it.au){ pyAud=new Audio(it.au); pyAud.play().catch(()=>speak(it.c)); return; } speak(it.c); }
+const pyItems=L=>(L.groups||[]).flatMap(g=>g.items);
+const pyLessons=()=>PY.course?PY.course.lessons:[];
+const pyReady=()=>pyLessons().filter(L=>L.groups);
+function pyNext(){ const r=pyReady(), d=PYC().done; return r.find(L=>!d[L.id])||null; }
+function pyByChar(c){ for(const L of pyReady()) for(const it of pyItems(L)) if(it.c===c) return it; return null; }
+
+/* --- question building --- */
+function pyQTone(it,L){ const base=pyBase(it.py), sib=L?(L.groups||[]).find(g=>g.items.includes(it)):null;
+  return {type:"tone",it,ask:"听一听，是第几声？",ans:String(it.t),
+    opts:[1,2,3,4].map(t=>({k:String(t),html:`${pyCurve(t)}<b class="tn${t}" data-noi18n>${esc(pyMark(base,t))}</b><small>${PYTN[t]}</small>`,it:sib?sib.items.find(x=>x.t===t):null}))}; }
+function pyQPair(it,L){ const ans=String(it.t), cand=[];
+  for(const a of "1234") for(const b of ans.endsWith("0")?"12340":"1234") if(a+b!==ans&&a+b!=="33") cand.push(a+b);
+  const near=shuffle(cand.filter(x=>x[0]===ans[0]||x[1]===ans[1])), far=shuffle(cand.filter(x=>x[0]!==ans[0]&&x[1]!==ans[1]));
+  const ks=shuffle([ans,...[...new Set([...near.slice(0,2),...far,...near.slice(2)])].slice(0,3)]);
+  return {type:"pair",it,ask:"听一听，是哪两个声调？",ans,opts:ks.map(k=>({k,html:`${pyCurve(k)}<small data-noi18n>${k.split("").map(d=>d==="0"?"·":d).join(" + ")}</small>`}))}; }
+function pyQPick(it,L){ const g=(L.groups||[]).find(g=>g.items.includes(it)); let pool=g.items.filter(x=>x!==it&&x.py!==it.py);
+  if(String(it.t).length>1) pool=pool.filter(x=>x.t!==it.t);
+  const opts=shuffle([it,...shuffle(pool).slice(0,3)]);
+  return {type:"pick",it,ask:"哪一个是 {0}？",askArg:it.py,ans:it.c,opts:opts.map((x,n)=>({k:x.c,it:x,html:`<span class="pyn">${n+1}</span>${I.play}`}))}; }
+function pyQMp(p){ const side=Math.random()<.5?0:2, it=pyByChar(p[side])||{c:p[side],py:p[side+1],t:pyToneOf(p[side+1])};
+  const a={c:p[0],py:p[1]}, b={c:p[2],py:p[3]};
+  return {type:"mpair",it,ask:"听到的是哪一个？",ans:p[side],opts:shuffle([a,b]).map(x=>({k:x.c,it:pyByChar(x.c)||Object.assign(x,{t:pyToneOf(x.py)}),html:`<b data-noi18n>${esc(x.py)}</b>${pyH(x.c)}`}))}; }
+function pyQRule(r){ return {type:"rule",ask:pyT(r.q),askRaw:true,ans:r.a,opts:shuffle(r.o.slice()).map(o=>({k:o,html:`<b data-noi18n>${esc(o)}</b>`}))}; }
+function pyGen(L){ const qs=[], used=new Set(), its=pyItems(L);
+  const take=f=>{ const c=shuffle(its.filter(x=>f(x)&&!used.has(x.c))); const x=c[0]||shuffle(its.filter(f))[0]; if(x) used.add(x.c); return x; };
+  for(const p of L.practice||[]) for(let n=0;n<p.n;n++){ let q=null;
+    if(p.type==="tone"){ const x=take(x=>typeof x.t==="number"); if(x) q=pyQTone(x,L); }
+    else if(p.type==="pair"){ const x=take(x=>typeof x.t==="string"&&!x.say); if(x) q=pyQPair(x,L); }
+    else if(p.type==="pick"){ const x=take(x=>(L.groups.find(g=>g.items.includes(x))||{items:[]}).items.length>=3); if(x) q=pyQPick(x,L); }
+    else if(p.type==="mpair"&&L.pairs){ q=pyQMp(L.pairs[n%L.pairs.length]); }
+    else if(p.type==="rule"&&L.rules){ q=pyQRule(L.rules[n%L.rules.length]); }
+    if(q) qs.push(q); }
+  return qs; }
+function pyGenDaily(){ const d=PYC().done, err=PYC().err, L1=pyLessons().find(L=>L.id===1), qs=[];
+  const learned=pyReady().filter(L=>d[L.id]); const has=id=>learned.some(L=>L.id===id);
+  const tones=pyItems(L1).filter(x=>typeof x.t==="number"), w=x=>1+2*(err[x.t]||0);
+  const pickW=arr=>{ let s=arr.reduce((a,x)=>a+w(x),0)*Math.random(); for(const x of arr){ s-=w(x); if(s<=0) return x; } return arr[0]; };
+  const nPair=has(2)?3:0, nMp=has(3)?2:0, nTone=10-nPair-nMp, seen=new Set();
+  for(let n=0;n<nTone;n++){ let x=pickW(tones.filter(x=>!seen.has(x.c))); seen.add(x.c); qs.push(pyQTone(x,L1)); }
+  if(nPair){ const L2=pyLessons().find(L=>L.id===2); shuffle(pyItems(L2).filter(x=>!x.say)).slice(0,nPair).forEach(x=>qs.push(pyQPair(x,L2))); }
+  if(nMp){ const L3=pyLessons().find(L=>L.id===3); shuffle(L3.pairs.slice()).slice(0,nMp).forEach(p=>qs.push(pyQMp(p))); }
+  return shuffle(qs); }
+
+/* --- views --- */
+function pyOpen(view,id){ PY.view=view||"map"; if(id) PY.lid=+id; if(cur!=="pinyin") showTab("pinyin"); else pyRender(); window.scrollTo({top:0}); }
+function pyRender(){ const h=$("#py-host"); if(!h) return;
+  const own=new Set([1,2,3,4].map(toneCol)).size===4; h.classList.toggle("pyown",own);
+  if(!PY.course){ h.innerHTML=`<div class="empty"><b>正在载入拼音课…</b></div>`;
+    pyLoad().then(()=>{ if(cur==="pinyin") pyRender(); pyEntry(); }).catch(e=>{ h.innerHTML=`<div class="empty"><b>拼音课没有载入</b>请检查网络后刷新页面。（${esc(e.message)}）</div>`; }); return; }
+  const v=PY.view; h.innerHTML=v==="lesson"?pyVLesson():v==="quiz"?pyVQuiz():v==="chart"?pyVChart():pyVMap(); }
+function pyHead(back,title){ return `<div class="pyhead">${back?`<button class="btn ghost sm" type="button" data-py="${back}"><span aria-hidden="true">←</span><span>${back==="map"?"全部课程":"回到课程"}</span></button>`:""}<h2>${title}</h2></div>`; }
+function pyVMap(){ const d=PYC().done, nx=pyNext();
+  let h=`<div class="pyhead"><h2>拼音课</h2><span class="spacer"></span><button class="btn sm" type="button" data-py="daily">每日练声调</button><button class="btn sm" type="button" data-py="chart">拼音表</button></div>
+  <p class="muted small">12 节课，先上线前三课，其他陆续补上。</p><ol class="pymap">`;
+  for(const L of pyLessons()){ const r=d[L.id], ready=!!L.groups;
+    h+=`<li><button type="button" class="pyli${r?" done":""}${nx&&nx.id===L.id?" next":""}" ${ready?`data-py="lesson:${L.id}"`:"disabled"}><span class="pyno">${r?I.check:L.id}</span><span class="pyt"><b ${pyLA()}>${esc(pyT(L.title))}</b><small data-noi18n>${esc(pyT(L.sub))}</small></span><span class="pyst2">${r?`${Math.round(r.best*100)}%`:ready?(nx&&nx.id===L.id?"继续学习":""):"即将上线"}</span></button></li>`; }
+  h+=`</ol><p class="muted small pyfoot">发音来自设备的系统语音，以后会换成真人录音。</p>`;
+  if(PYC().hide) h+=`<button class="btn ghost sm" type="button" data-py="show">在今日页显示</button>`;
+  return h; }
+function pyCard(it){ const t=String(it.t), say=it.say?String(it.say):t;
+  const pyc=t.length===1?`<b class="pyp tn${t}" data-noi18n>${esc(it.py)}</b>`:`<b class="pyp" data-noi18n>${esc(it.py)}</b>`;
+  return `<button type="button" class="pycard" data-pyplay="${esc(it.c)}">${it.v?`<span class="pyv" data-noi18n>${esc(it.v)}</span>`:""}<span class="pyc">${pyH(it.c)}</span>${pyc}${pyCurve(say)}${it.say?`<small class="pysay" data-noi18n>${esc(t.split("").join("+"))} → ${esc(say.split("").join("+"))}</small>`:""}${pyM(it)}</button>`; }
+function pyVLesson(){ const L=pyLessons().find(x=>x.id===PY.lid)||pyReady()[0]; PY.lid=L.id; const la=pyLA();
+  let h=pyHead("map",`<span class="pyk">第 ${L.id} 课</span> <span ${la}>${esc(pyT(L.title))}</span>`);
+  if(L.video) h+=/\.(mp4|webm|m4v)(\?|$)/i.test(L.video)?`<video class="pyvid" src="${esc(L.video)}" controls playsinline preload="metadata"></video>`:`<a class="btn sm" href="${esc(L.video)}" target="_blank" rel="noopener">▶ 视频</a>`;
+  h+=`<p class="pyintro" ${la}>${esc(pyT(L.intro))}</p>`;
+  if(L.tones){ h+=`<div class="pytones">`; const g=L.groups[0].items;
+    for(const tn of L.tones){ const it=g.find(x=>x.t===tn.t); h+=`<button type="button" class="pytone" data-pyplay="${esc(it.c)}">${pyCurve(tn.t,"big")}<span><b class="tn${tn.t}">${PYTN[tn.t]}</b><small ${la}>${esc(pyT(tn).replace(/^[^：:]+[：:]\s*/,""))}</small></span></button>`; }
+    h+=`</div>`; }
+  h+=`<p class="muted small">点卡片听发音。</p>`;
+  for(const g of L.groups){ if(g.label) h+=`<h3 class="pygl" ${la}>${esc(pyT(g.label))}</h3>`; h+=`<div class="pygrid${g.items.length===4?" g4":""}">${g.items.map(pyCard).join("")}</div>`; }
+  if(L.tip) h+=`<div class="pytip"><b>小提示</b><p ${la}>${esc(pyT(L.tip))}</p></div>`;
+  h+=`<div class="pyact"><button class="btn primary" type="button" data-py="practice">开始练习</button></div>`;
+  return h; }
+function pyStart(daily){ const L=daily?null:pyLessons().find(x=>x.id===PY.lid); const list=daily?pyGenDaily():pyGen(L);
+  PY.q={daily:!!daily,lid:L&&L.id,list,i:0,right:0,miss:[],ans:null}; PY.sel=null; PY.view="quiz"; pyRender(); setTimeout(()=>pyPlayQ(),350); }
+function pyPlayQ(){ const Q=PY.q, q=Q&&Q.list[Q.i]; if(q&&q.it&&q.type!=="pick") pyPlay(q.it); }
+function pyVQuiz(){ const Q=PY.q; if(!Q) return pyVMap();
+  const back=Q.daily?"map":"lesson";
+  const title=Q.daily?"每日练声调":`<span class="pyk">第 ${Q.lid} 课</span> 练习`;
+  if(Q.i>=Q.list.length) return pyVResult(back,title);
+  const q=Q.list[Q.i], A=Q.ans!=null, ok=A&&Q.ans===q.ans;
+  let h=pyHead(back,title)+`<div class="pydots">${Q.list.map((x,n)=>`<i class="${n<Q.i?(x.ok?"ok":"no"):n===Q.i?"cur":""}"></i>`).join("")}</div>`;
+  const ask=q.askRaw?`<span ${pyLA()}>${esc(q.ask)}</span>`:esc(q.ask.replace("{0}",q.askArg||""));
+  h+=`<div class="pyq"><p class="pyask">${ask}</p>`;
+  if(q.type==="pick") h+=`<div class="pybigpy" data-noi18n>${esc(q.askArg)}</div><p class="muted small">点一下听，再选。</p>`;
+  else if(q.it) h+=`<button type="button" class="pybigplay" data-py="replay" aria-label="再听一次">${I.play}</button>`;
+  h+=`<div class="pyopts ${q.type}">${q.opts.map(o=>{ let c=""; if(A){ if(o.k===q.ans) c=" right"; else if(o.k===Q.ans) c=" wrong"; } else if(PY.sel===o.k) c=" sel";
+    return `<button type="button" class="pyopt${c}" data-pyopt="${esc(o.k)}" ${A&&q.type!=="pick"?"disabled":""}>${o.html}${A&&q.type==="pick"?`<span class="pyrev">${pyH(o.it.c)} <b data-noi18n>${esc(o.it.py)}</b></span>`:""}</button>`; }).join("")}</div>`;
+  if(!A&&q.type==="pick") h+=`<div class="pyact"><button class="btn primary" type="button" data-py="check" ${PY.sel?"":"disabled"}>确定</button></div>`;
+  if(A){ const it=q.it; h+=`<div class="pyfb ${ok?"ok":"no"}"><b>${ok?"对了！":"不对，正确答案是："}</b>`;
+    if(it) h+=` <span class="pyans">${pyH(it.c)} <b data-noi18n>${esc(it.py)}</b> ${pyM(it)}</span>`; else h+=` <b data-noi18n>${esc(q.ans)}</b>`;
+    h+=`<div class="row">`; if(it) h+=`<button class="btn sm" type="button" data-py="replay">再听一次</button>`;
+    const wo=!ok&&q.opts.find(o=>o.k===Q.ans); if(wo&&wo.it&&it) h+=`<button class="btn sm" type="button" data-py="contrast">对比听</button>`;
+    h+=`<span class="spacer"></span><button class="btn primary sm" type="button" data-py="next">${Q.i+1<Q.list.length?"下一题":"看结果"}</button></div></div>`; }
+  return h+`</div>`; }
+function pyAnswer(k){ const Q=PY.q, q=Q.list[Q.i]; if(Q.ans!=null) return; Q.ans=k; q.ok=k===q.ans; const err=PYC().err;
+  if(q.ok) Q.right++; else Q.miss.push(q);
+  if(q.type==="tone"){ const t=+q.ans; err[t]=q.ok?Math.max(0,(err[t]||0)-.34):(err[t]||0)+1; if(!q.ok) err[+k]=(err[+k]||0)+.5; }
+  if(q.type==="pair") q.ans.split("").forEach((d,n)=>{ if(+d<1||+d>4) return; err[d]=k[n]!==d?(err[d]||0)+1:Math.max(0,(err[d]||0)-.2); });
+  save(); pyRender(); if(!q.ok&&q.it) setTimeout(()=>pyPlay(q.it),300); }
+function pyVResult(back,title){ const Q=PY.q, n=Q.list.length, acc=n?Q.right/n:0, p=PYC();
+  if(!Q.saved){ Q.saved=true;
+    if(Q.daily) p.daily={at:today(),acc};
+    else { const o=p.done[Q.lid]||{best:0}; p.done[Q.lid]={best:Math.max(o.best||0,acc),last:acc,at:today()}; }
+    save(); pyEntry(); }
+  let h=pyHead(back,title)+`<div class="pyres"><div class="pyscore">${Q.right}<small>/${n}</small></div><p>答对 ${Q.right} / ${n}</p>`;
+  const miss=Q.miss.filter(q=>q.it);
+  if(miss.length) h+=`<h3 class="pygl">需要多练</h3><div class="pygrid">${[...new Map(miss.map(q=>[q.it.c,q.it])).values()].map(pyCard).join("")}</div>`;
+  const e=p.err, worst=[1,2,3,4].sort((a,b)=>(e[b]||0)-(e[a]||0))[0];
+  if(Q.daily&&(e[worst]||0)>=1){ const on=tonesOn()&&toneSel().includes(worst);
+    h+=`<div class="pytip"><p>最容易错的是第 ${worst} 声。</p>${on?`<span class="muted small">已上色</span>`:`<button class="btn sm" type="button" data-py="color:${worst}">在文章里给第 ${worst} 声上色</button>`}</div>`; }
+  const nx=pyNext();
+  h+=`<div class="pyact"><button class="btn sm" type="button" data-py="${Q.daily?"daily":"practice"}">再练一次</button>${!Q.daily&&nx?`<button class="btn primary sm" type="button" data-py="lesson:${nx.id}">下一课</button>`:`<button class="btn primary sm" type="button" data-py="map">全部课程</button>`}</div></div>`;
+  return h; }
+const PYINI=["b","p","m","f","d","t","n","l","g","k","h","j","q","x","zh","ch","sh","r","z","c","s","y","w",""];
+const PYFIN=["a","o","e","i","u","ü","er","ai","ei","ao","ou","an","en","ang","eng","ong","ia","ie","iao","iu","ian","in","iang","ing","iong","ua","uo","uai","ui","uan","un","uang","ue","üe","uan","ün"];
+function pyVChart(){ const ch=PY.chart||{}, grp={};
+  for(const s of Object.keys(ch)){ const m=s.match(/^(zh|ch|sh|[bpmfdtnlgkhjqxrzcsyw])/); const ini=m?m[1]:""; (grp[ini]=grp[ini]||[]).push(s); }
+  const fo=s=>{ const m=s.match(/^(zh|ch|sh|[bpmfdtnlgkhjqxrzcsyw])?(.*)$/); const i=PYFIN.indexOf(m[2]); return i<0?99:i; };
+  let h=pyHead("map","拼音表")+`<p class="muted small">点音节听四个声调。</p><div id="py-cd" class="pycd" hidden></div>`;
+  for(const ini of PYINI){ const ss=grp[ini]; if(!ss) continue; ss.sort((a,b)=>fo(a)-fo(b)||a.localeCompare(b));
+    h+=`<div class="pyrow"><span class="pyini" data-noi18n>${ini||"·"}</span><div class="pysyl">${ss.map(s=>`<button type="button" data-pysyl="${esc(s)}" data-noi18n>${esc(s)}</button>`).join("")}</div></div>`; }
+  return h; }
+function pyChartCell(s){ const cs=(PY.chart||{})[s]||[], el=$("#py-cd"); if(!el) return;
+  $$("[data-pysyl]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.pysyl===s));
+  el.hidden=false; el.innerHTML=`<div class="pycdh"><b data-noi18n>${esc(s)}</b><button class="btn sm" type="button" data-pyseq="${esc(cs.filter(Boolean).join(","))}">${I.play}<span data-noi18n>${[1,2,3,4].filter(t=>cs[t-1]).map(t=>esc(pyMark(s,t))).join(" ")}</span></button></div><div class="pycd4">${[1,2,3,4].map(t=>{ const c=cs[t-1]; return c?`<button type="button" class="pycard" data-pyplay="${esc(c)}"><b class="pyp tn${t}" data-noi18n>${esc(pyMark(s,t))}</b><span class="pyc">${pyH(c)}</span>${pyCurve(t)}</button>`:`<div class="pycard none"><b class="pyp" data-noi18n>${esc(pyMark(s,t))}</b><span class="muted">–</span></div>`; }).join("")}</div>`;
+  const seq=cs.filter(Boolean); if(seq.length) speak(seq.join("，")); }
+function pyEntry(){ const el=$("#py-entry"); if(!el) return; if(!PY.course||PYC().hide){ el.innerHTML=""; return; }
+  const nx=pyNext(), all=pyLessons().length, dn=Object.keys(PYC().done).length, dd=PYC().daily&&PYC().daily.at===today();
+  el.innerHTML=`<div class="py-entry"><div class="pe-a">${nx?`<b><span>拼音课</span> · <span>第 ${nx.id} 课</span></b><span class="pe-t" ${pyLA()}>${esc(pyT(nx.title))}</span>`:`<b>拼音课</b><span class="pe-t">${dn} 课已学完</span>`}<div class="bar"><i style="width:${Math.round(dn/all*100)}%"></i></div></div>
+  <div class="pe-b">${nx?`<button class="btn primary sm" type="button" data-pyopen="lesson:${nx.id}">继续学习</button>`:""}${dn?`<button class="btn sm" type="button" data-pyopen="daily">${dd?"今天已经练过了":"每日练声调"}</button>`:""}<button class="btn ghost sm" type="button" data-pyopen="map">全部课程</button><button class="ib sm" type="button" data-pyopen="hide" aria-label="从今日页收起" title="从今日页收起">${I.x}</button></div></div>`; }
+function pyAct(a){ const [k,v]=a.split(":");
+  if(k==="map"||k==="chart") pyOpen(k);
+  else if(k==="lesson") pyOpen("lesson",v);
+  else if(k==="practice") pyStart(false);
+  else if(k==="daily"){ if(!PY.course){ pyLoad().then(()=>pyAct(a)); return; } if(cur!=="pinyin") showTab("pinyin"); pyStart(true); }
+  else if(k==="replay") pyPlayQ();
+  else if(k==="next"){ const Q=PY.q; Q.i++; Q.ans=null; PY.sel=null; pyRender(); setTimeout(pyPlayQ,300); }
+  else if(k==="check"){ if(PY.sel) pyAnswer(PY.sel); }
+  else if(k==="contrast"){ const Q=PY.q, q=Q.list[Q.i], wo=q.opts.find(o=>o.k===Q.ans); if(wo&&wo.it) speak(wo.it.c+"，"+q.it.c); }
+  else if(k==="color"){ const t=+v; S.settings.tones=true; S.settings.toneSel=[...new Set(toneSel().concat(t))].sort(); save(); applyTones(); pyRender(); }
+  else if(k==="hide"){ PYC().hide=true; save(); pyEntry(); }
+  else if(k==="show"){ PYC().hide=false; save(); pyEntry(); pyRender(); } }
+document.addEventListener("click",e=>{
+  const o=e.target.closest("[data-pyopen]"); if(o){ const a=o.dataset.pyopen; if(a==="hide"||a==="daily"||a.startsWith("lesson")) pyAct(a); else pyOpen(a); return; }
+  if(!e.target.closest("#py-host")) return;
+  const b=e.target.closest("[data-py]"); if(b){ pyAct(b.dataset.py); return; }
+  const p=e.target.closest("[data-pyplay]"); if(p){ pyPlay(pyByChar(p.dataset.pyplay)||{c:p.dataset.pyplay}); return; }
+  const s=e.target.closest("[data-pysyl]"); if(s){ pyChartCell(s.dataset.pysyl); return; }
+  const q=e.target.closest("[data-pyseq]"); if(q){ speak(q.dataset.pyseq.split(",").join("，")); return; }
+  const op=e.target.closest("[data-pyopt]"); if(op&&PY.q){ const Q=PY.q, qq=Q.list[Q.i], k=op.dataset.pyopt;
+    if(qq.type==="pick"){ const it=qq.opts.find(x=>x.k===k).it; pyPlay(it); if(Q.ans==null){ PY.sel=k; pyRender(); } return; }
+    pyAnswer(k); } });
+pyLoad().then(()=>{ pyEntry(); if(cur==="pinyin") pyRender(); }).catch(()=>{});
 
 /* ---------- boot ---------- */
 applyUILang();

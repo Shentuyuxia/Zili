@@ -37,6 +37,9 @@ reading/                ← daily graded texts (format and rules: reading/README
   jieqi.json              二十四节气: fixed texts that open on each solar term's date (hand-written)
 
 data/zh-HSK1…6.json     word bank: HSK 2.0 words with pinyin, EN, DE, examples
+data/pinyin-course.json 拼音课: 12 lessons (1–3 written so far); texts in zh/en/de/pt, optional "video" URL per lesson,
+                          optional "au" (recording path) per item – the app plays it instead of the device voice
+data/pinyin-chart.json  拼音表: syllable → common character for tones 1–4 (built by tools/build_pychart.py)
 dict/                   offline dictionary, word segmentation, pinyin index, handwriting templates (generated)
 strokes/                stroke-order data, sharded by character code (generated)
 fonts/                  LXGW WenKai (text), WenKai TC (Traditional), Neo XiHei (UI), Latin fonts
