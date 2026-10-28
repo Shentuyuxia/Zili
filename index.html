@@ -1086,7 +1086,7 @@ body:not(.tones) .tone-opts{opacity:.55}
 .pycard:hover{border-color:var(--muted)}.pycard:active{transform:scale(.97)}
 .pycard .pyc{font-family:var(--f-cn);font-size:30px;line-height:1.2}.pycard .pyp{font-size:16px}
 .pycard .pym{font-size:12px;color:var(--muted);text-align:center;line-height:1.3}.pycard.none{opacity:.45;cursor:default}
-.pyv{position:absolute;top:5px;left:8px;font-size:12px;font-weight:700;color:var(--muted)}.pysay{font-size:11.5px;color:var(--muted)}
+.pyv{position:absolute;top:5px;left:8px;font-size:12px;font-weight:700;color:var(--muted)}.pysay{font-size:11.5px;color:var(--muted)}.pyvl{margin-top:3px;font-size:12px;font-weight:600;color:var(--acc);background:var(--acc-soft);border-radius:6px;padding:1px 6px}
 .pytip{margin:16px 0 0;border-left:3px solid var(--acc);background:var(--sunk);border-radius:0 10px 10px 0;padding:10px 14px}.pytip p{margin:4px 0 0}
 .pyact{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:18px 0 4px}
 .pyvid{width:100%;border-radius:12px;margin:6px 0;background:#000}
@@ -5323,10 +5323,11 @@ function pyByChar(c){ for(const L of pyReady()) for(const it of pyItems(L)) if(i
 function pyQTone(it,L){ const base=pyBase(it.py), sib=L?(L.groups||[]).find(g=>g.items.includes(it)):null;
   return {type:"tone",it,ask:"听一听，是第几声？",ans:String(it.t),
     opts:[1,2,3,4].map(t=>({k:String(t),html:`${pyCurve(t)}<b class="tn${t}" data-noi18n>${esc(pyMark(base,t))}</b><small>${PYTN[t]}</small>`,it:sib?sib.items.find(x=>x.t===t&&pyBase(x.py)===base):null}))}; }
-function pyQPair(it,L){ const ans=String(it.t), cand=[];
+function pyQPair(it,L,sd){ const ans=String(sd&&it.say?it.say:it.t), cand=[];
   for(const a of "1234") for(const b of ans.endsWith("0")?"12340":"1234") if(a+b!==ans&&a+b!=="33") cand.push(a+b);
   const near=shuffle(cand.filter(x=>x[0]===ans[0]||x[1]===ans[1])), far=shuffle(cand.filter(x=>x[0]!==ans[0]&&x[1]!==ans[1]));
-  const ks=shuffle([ans,...[...new Set([...near.slice(0,2),...far,...near.slice(2)])].slice(0,3)]);
+  const wr=sd&&String(it.t)!==ans?[String(it.t)]:[];
+  const ks=shuffle([ans,...[...new Set([...wr,...near.slice(0,2),...far,...near.slice(2)])].slice(0,3)]);
   return {type:"pair",it,ask:"听一听，是哪两个声调？",ans,opts:ks.map(k=>({k,html:`${pyCurve(k)}<small data-noi18n>${k.split("").map(d=>d==="0"?"·":d).join(" + ")}</small>`}))}; }
 function pyQPick(it,L){ const g=(L.groups||[]).find(g=>g.items.includes(it)); let pool=g.items.filter(x=>x!==it&&x.py!==it.py);
   if(String(it.t).length>1) pool=pool.filter(x=>x.t!==it.t);
@@ -5341,16 +5342,17 @@ function pyGen(L){ const qs=[], used=new Set(), its=pyItems(L);
   for(const p of L.practice||[]) for(let n=0;n<p.n;n++){ let q=null;
     if(p.type==="tone"){ const x=take(x=>typeof x.t==="number"); if(x) q=pyQTone(x,L); }
     else if(p.type==="pair"){ const x=take(x=>typeof x.t==="string"&&!x.say); if(x) q=pyQPair(x,L); }
+    else if(p.type==="sandhi"){ const x=take(x=>!!x.say); if(x) q=pyQPair(x,L,true); }
     else if(p.type==="pick"){ const x=take(x=>(L.groups.find(g=>g.items.includes(x))||{items:[]}).items.length>=3); if(x) q=pyQPick(x,L); }
     else if(p.type==="mpair"&&L.pairs){ if(n===0) L._pp=shuffle(L.pairs.slice()); q=pyQMp(L._pp[n%L._pp.length]); }
-    else if(p.type==="rule"&&L.rules){ q=pyQRule(L.rules[n%L.rules.length]); }
+    else if(p.type==="rule"&&L.rules){ if(n===0) L._rr=shuffle(L.rules.slice()); q=pyQRule(L._rr[n%L._rr.length]); }
     if(q) qs.push(q); }
   return qs; }
 function pyGenDaily(){ const d=PYC().done, err=PYC().err, L1=pyLessons().find(L=>L.id===1), qs=[];
   const learned=pyReady().filter(L=>d[L.id]); const has=id=>learned.some(L=>L.id===id);
   const tones=pyItems(L1).filter(x=>typeof x.t==="number"), w=x=>1+2*(err[x.t]||0);
   const pickW=arr=>{ let s=arr.reduce((a,x)=>a+w(x),0)*Math.random(); for(const x of arr){ s-=w(x); if(s<=0) return x; } return arr[0]; };
-  const mps=learned.flatMap(L=>L.pairs||[]), nPair=has(2)?3:0, nMp=Math.min(mps.length,learned.filter(L=>L.pairs).length*2), nTone=10-nPair-nMp, seen=new Set();
+  const mps=learned.flatMap(L=>L.pairs||[]), nPair=has(2)?3:0, nMp=Math.min(mps.length,learned.filter(L=>L.pairs).length*2,10-nPair-3), nTone=10-nPair-nMp, seen=new Set();
   for(let n=0;n<nTone;n++){ let x=pickW(tones.filter(x=>!seen.has(x.c))); seen.add(x.c); qs.push(pyQTone(x,L1)); }
   if(nPair){ const L2=pyLessons().find(L=>L.id===2); shuffle(pyItems(L2).filter(x=>!x.say)).slice(0,nPair).forEach(x=>qs.push(pyQPair(x,L2))); }
   if(nMp) shuffle(mps.slice()).slice(0,nMp).forEach(p=>qs.push(pyQMp(p)));
@@ -5374,7 +5376,8 @@ function pyVMap(){ const d=PYC().done, nx=pyNext();
   return h; }
 function pyCard(it){ const t=String(it.t), say=it.say?String(it.say):t;
   const pyc=t.length===1?`<b class="pyp tn${t}" data-noi18n>${esc(it.py)}</b>`:`<b class="pyp" data-noi18n>${esc(it.py)}</b>`;
-  return `<button type="button" class="pycard" data-pyplay="${esc(it.c)}">${it.v?`<span class="pyv" data-noi18n>${esc(it.v)}</span>`:""}<span class="pyc">${pyH(it.c)}</span>${pyc}${pyCurve(say)}${it.say?`<small class="pysay" data-noi18n>${esc(t.split("").join("+"))} → ${esc(say.split("").join("+"))}</small>`:""}${pyM(it)}</button>`; }
+  const vl=it.v&&it.v.length>3;
+  return `<button type="button" class="pycard" data-pyplay="${esc(it.c)}">${it.v&&!vl?`<span class="pyv" data-noi18n>${esc(it.v)}</span>`:""}<span class="pyc">${pyH(it.c)}</span>${pyc}${pyCurve(say)}${it.say?`<small class="pysay" data-noi18n>${esc(t.split("").join("+"))} → ${esc(say.split("").join("+"))}</small>`:""}${pyM(it)}${vl?`<small class="pyvl" data-noi18n>${esc(it.v)}</small>`:""}</button>`; }
 function pyVLesson(){ const L=pyLessons().find(x=>x.id===PY.lid)||pyReady()[0]; PY.lid=L.id; const la=pyLA();
   let h=pyHead("map",`<span class="pyk">第 ${L.id} 课</span> <span ${la}>${esc(pyT(L.title))}</span>`);
   if(L.video) h+=/\.(mp4|webm|m4v)(\?|$)/i.test(L.video)?`<video class="pyvid" src="${esc(L.video)}" controls playsinline preload="metadata"></video>`:`<a class="btn sm" href="${esc(L.video)}" target="_blank" rel="noopener">▶ 视频</a>`;
