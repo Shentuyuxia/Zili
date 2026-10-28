@@ -1071,7 +1071,7 @@ body:not(.tones) .tone-opts{opacity:.55}
 .pyli:disabled{cursor:default;opacity:.55}.pyli:not(:disabled):hover{border-color:var(--muted)}
 .pyli.next{border-color:var(--acc);box-shadow:0 0 0 1px var(--acc) inset}
 .pyno{width:30px;height:30px;border-radius:50%;background:var(--sunk);display:grid;place-items:center;font-weight:700;font-size:13px;flex:none}
-.pyli.done .pyno{background:var(--acc);color:var(--on-acc)}.pyno svg{width:15px;height:15px}
+.pyli.pydone .pyno{background:var(--acc);color:var(--on-acc)}.pyno svg{width:15px;height:15px}
 .pyt{display:flex;flex-direction:column;min-width:0;flex:1}.pyt small{color:var(--muted);font-size:12.5px}
 .pyst2{font-size:12.5px;color:var(--muted);white-space:nowrap}.pyli.next .pyst2{color:var(--acc);font-weight:600}
 .pyfoot{margin-top:14px}
@@ -5370,7 +5370,7 @@ function pyVMap(){ const d=PYC().done, nx=pyNext();
   let h=`<div class="pyhead"><h2>拼音课</h2><span class="spacer"></span><button class="btn sm" type="button" data-py="daily">每日练声调</button><button class="btn sm" type="button" data-py="chart">拼音表</button></div>
   <p class="muted small">12 节课，已上线 ${pyReady().length} 课，其他陆续补上。</p><ol class="pymap">`;
   for(const L of pyLessons()){ const r=d[L.id], ready=!!L.groups;
-    h+=`<li><button type="button" class="pyli${r?" done":""}${nx&&nx.id===L.id?" next":""}" ${ready?`data-py="lesson:${L.id}"`:"disabled"}><span class="pyno">${r?I.check:L.id}</span><span class="pyt"><b ${pyLA()}>${esc(pyT(L.title))}</b><small data-noi18n>${esc(pyT(L.sub))}</small></span><span class="pyst2">${r?`${Math.round(r.best*100)}%`:ready?(nx&&nx.id===L.id?"继续学习":""):"即将上线"}</span></button></li>`; }
+    h+=`<li><button type="button" class="pyli${r?" pydone":""}${nx&&nx.id===L.id?" next":""}" ${ready?`data-py="lesson:${L.id}"`:"disabled"}><span class="pyno">${r?I.check:L.id}</span><span class="pyt"><b ${pyLA()}>${esc(pyT(L.title))}</b><small data-noi18n>${esc(pyT(L.sub))}</small></span><span class="pyst2">${r?`${Math.round(r.best*100)}%`:ready?(nx&&nx.id===L.id?"继续学习":""):"即将上线"}</span></button></li>`; }
   h+=`</ol><p class="muted small pyfoot">发音来自设备的系统语音，以后会换成真人录音。</p>`;
   if(PYC().hide) h+=`<button class="btn ghost sm" type="button" data-py="show">在今日页显示</button>`;
   return h; }
@@ -5386,7 +5386,7 @@ function pyVLesson(){ const L=pyLessons().find(x=>x.id===PY.lid)||pyReady()[0]; 
     for(const tn of L.tones){ const it=g.find(x=>x.t===tn.t); h+=`<button type="button" class="pytone" data-pyplay="${esc(it.c)}">${pyCurve(tn.t,"big")}<span><b class="tn${tn.t}">${PYTN[tn.t]}</b><small ${la}>${esc(pyT(tn).replace(/^[^：:]+[：:]\s*/,""))}</small></span></button>`; }
     h+=`</div>`; }
   h+=`<p class="muted small">点卡片听发音。</p>`;
-  for(const g of L.groups){ if(g.label) h+=`<h3 class="pygl" ${la}>${esc(pyT(g.label))}</h3>`; h+=`<div class="pygrid${g.items.length%4===0?" g4":""}">${g.items.map(pyCard).join("")}</div>`; }
+  for(const g of L.groups){ if(g.label) h+=`<h3 class="pygl" ${la}>${esc(pyT(g.label))}</h3>`; h+=`<div class="pygrid${g.items.length%2===0&&g.items.length>=4?" g4":""}">${g.items.map(pyCard).join("")}</div>`; }
   if(L.tip) h+=`<div class="pytip"><b>小提示</b><p ${la}>${esc(pyT(L.tip))}</p></div>`;
   h+=`<div class="pyact"><button class="btn primary" type="button" data-py="practice">开始练习</button></div>`;
   return h; }
