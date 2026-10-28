@@ -4410,7 +4410,7 @@ const UI_DICT=[
 ["小提示", "Tip", "Tipp", "Dica", "小提示"],
 ["▶ 视频", "▶ Video", "▶ Video", "▶ Vídeo", "▶ 影片"],
 ["发音来自设备的系统语音，以后会换成真人录音。", "For now the voice comes from your device; real recordings will replace it later.", "Die Stimme kommt vorerst von deinem Gerät; später ersetzen echte Aufnahmen sie.", "Por enquanto a voz vem do seu aparelho; depois virão gravações de verdade.", "發音來自裝置的系統語音，以後會換成真人錄音。"],
-["12 节课，先上线前三课，其他陆续补上。", "12 lessons: the first three are ready, the rest are on the way.", "12 Lektionen: Die ersten drei sind fertig, der Rest folgt.", "12 lições: as três primeiras estão prontas, as outras vêm aí.", "12 節課，先上線前三課，其他陸續補上。"],
+["12 节课，已上线 {0} 课，其他陆续补上。", "12 lessons: {0} are ready, the rest are on the way.", "12 Lektionen: {0} sind fertig, der Rest folgt.", "12 lições: {0} já estão prontas, as outras vêm aí.", "12 節課，已上線 {0} 課，其他陸續補上。"],
 ["点音节听四个声调。", "Tap a syllable to hear its four tones.", "Silbe antippen, um die vier Töne zu hören.", "Toque numa sílaba para ouvir os quatro tons.", "點音節聽四個聲調。"],
 ["最容易错的是第 {0} 声。", "Tone {0} trips you up most.", "Ton {0} verwechselst du am häufigsten.", "O tom {0} é o que mais te confunde.", "最容易錯的是第 {0} 聲。"],
 ["在文章里给第 {0} 声上色", "Colour tone {0} in texts", "Ton {0} in Texten einfärben", "Colorir o tom {0} nos textos", "在文章裡給第 {0} 聲上色"],
@@ -5322,7 +5322,7 @@ function pyByChar(c){ for(const L of pyReady()) for(const it of pyItems(L)) if(i
 /* --- question building --- */
 function pyQTone(it,L){ const base=pyBase(it.py), sib=L?(L.groups||[]).find(g=>g.items.includes(it)):null;
   return {type:"tone",it,ask:"听一听，是第几声？",ans:String(it.t),
-    opts:[1,2,3,4].map(t=>({k:String(t),html:`${pyCurve(t)}<b class="tn${t}" data-noi18n>${esc(pyMark(base,t))}</b><small>${PYTN[t]}</small>`,it:sib?sib.items.find(x=>x.t===t):null}))}; }
+    opts:[1,2,3,4].map(t=>({k:String(t),html:`${pyCurve(t)}<b class="tn${t}" data-noi18n>${esc(pyMark(base,t))}</b><small>${PYTN[t]}</small>`,it:sib?sib.items.find(x=>x.t===t&&pyBase(x.py)===base):null}))}; }
 function pyQPair(it,L){ const ans=String(it.t), cand=[];
   for(const a of "1234") for(const b of ans.endsWith("0")?"12340":"1234") if(a+b!==ans&&a+b!=="33") cand.push(a+b);
   const near=shuffle(cand.filter(x=>x[0]===ans[0]||x[1]===ans[1])), far=shuffle(cand.filter(x=>x[0]!==ans[0]&&x[1]!==ans[1]));
@@ -5342,7 +5342,7 @@ function pyGen(L){ const qs=[], used=new Set(), its=pyItems(L);
     if(p.type==="tone"){ const x=take(x=>typeof x.t==="number"); if(x) q=pyQTone(x,L); }
     else if(p.type==="pair"){ const x=take(x=>typeof x.t==="string"&&!x.say); if(x) q=pyQPair(x,L); }
     else if(p.type==="pick"){ const x=take(x=>(L.groups.find(g=>g.items.includes(x))||{items:[]}).items.length>=3); if(x) q=pyQPick(x,L); }
-    else if(p.type==="mpair"&&L.pairs){ q=pyQMp(L.pairs[n%L.pairs.length]); }
+    else if(p.type==="mpair"&&L.pairs){ if(n===0) L._pp=shuffle(L.pairs.slice()); q=pyQMp(L._pp[n%L._pp.length]); }
     else if(p.type==="rule"&&L.rules){ q=pyQRule(L.rules[n%L.rules.length]); }
     if(q) qs.push(q); }
   return qs; }
@@ -5350,10 +5350,10 @@ function pyGenDaily(){ const d=PYC().done, err=PYC().err, L1=pyLessons().find(L=
   const learned=pyReady().filter(L=>d[L.id]); const has=id=>learned.some(L=>L.id===id);
   const tones=pyItems(L1).filter(x=>typeof x.t==="number"), w=x=>1+2*(err[x.t]||0);
   const pickW=arr=>{ let s=arr.reduce((a,x)=>a+w(x),0)*Math.random(); for(const x of arr){ s-=w(x); if(s<=0) return x; } return arr[0]; };
-  const nPair=has(2)?3:0, nMp=has(3)?2:0, nTone=10-nPair-nMp, seen=new Set();
+  const mps=learned.flatMap(L=>L.pairs||[]), nPair=has(2)?3:0, nMp=Math.min(mps.length,learned.filter(L=>L.pairs).length*2), nTone=10-nPair-nMp, seen=new Set();
   for(let n=0;n<nTone;n++){ let x=pickW(tones.filter(x=>!seen.has(x.c))); seen.add(x.c); qs.push(pyQTone(x,L1)); }
   if(nPair){ const L2=pyLessons().find(L=>L.id===2); shuffle(pyItems(L2).filter(x=>!x.say)).slice(0,nPair).forEach(x=>qs.push(pyQPair(x,L2))); }
-  if(nMp){ const L3=pyLessons().find(L=>L.id===3); shuffle(L3.pairs.slice()).slice(0,nMp).forEach(p=>qs.push(pyQMp(p))); }
+  if(nMp) shuffle(mps.slice()).slice(0,nMp).forEach(p=>qs.push(pyQMp(p)));
   return shuffle(qs); }
 
 /* --- views --- */
@@ -5366,7 +5366,7 @@ function pyRender(){ const h=$("#py-host"); if(!h) return;
 function pyHead(back,title){ return `<div class="pyhead">${back?`<button class="btn ghost sm" type="button" data-py="${back}"><span aria-hidden="true">←</span><span>${back==="map"?"全部课程":"回到课程"}</span></button>`:""}<h2>${title}</h2></div>`; }
 function pyVMap(){ const d=PYC().done, nx=pyNext();
   let h=`<div class="pyhead"><h2>拼音课</h2><span class="spacer"></span><button class="btn sm" type="button" data-py="daily">每日练声调</button><button class="btn sm" type="button" data-py="chart">拼音表</button></div>
-  <p class="muted small">12 节课，先上线前三课，其他陆续补上。</p><ol class="pymap">`;
+  <p class="muted small">12 节课，已上线 ${pyReady().length} 课，其他陆续补上。</p><ol class="pymap">`;
   for(const L of pyLessons()){ const r=d[L.id], ready=!!L.groups;
     h+=`<li><button type="button" class="pyli${r?" done":""}${nx&&nx.id===L.id?" next":""}" ${ready?`data-py="lesson:${L.id}"`:"disabled"}><span class="pyno">${r?I.check:L.id}</span><span class="pyt"><b ${pyLA()}>${esc(pyT(L.title))}</b><small data-noi18n>${esc(pyT(L.sub))}</small></span><span class="pyst2">${r?`${Math.round(r.best*100)}%`:ready?(nx&&nx.id===L.id?"继续学习":""):"即将上线"}</span></button></li>`; }
   h+=`</ol><p class="muted small pyfoot">发音来自设备的系统语音，以后会换成真人录音。</p>`;
@@ -5383,7 +5383,7 @@ function pyVLesson(){ const L=pyLessons().find(x=>x.id===PY.lid)||pyReady()[0]; 
     for(const tn of L.tones){ const it=g.find(x=>x.t===tn.t); h+=`<button type="button" class="pytone" data-pyplay="${esc(it.c)}">${pyCurve(tn.t,"big")}<span><b class="tn${tn.t}">${PYTN[tn.t]}</b><small ${la}>${esc(pyT(tn).replace(/^[^：:]+[：:]\s*/,""))}</small></span></button>`; }
     h+=`</div>`; }
   h+=`<p class="muted small">点卡片听发音。</p>`;
-  for(const g of L.groups){ if(g.label) h+=`<h3 class="pygl" ${la}>${esc(pyT(g.label))}</h3>`; h+=`<div class="pygrid${g.items.length===4?" g4":""}">${g.items.map(pyCard).join("")}</div>`; }
+  for(const g of L.groups){ if(g.label) h+=`<h3 class="pygl" ${la}>${esc(pyT(g.label))}</h3>`; h+=`<div class="pygrid${g.items.length%4===0?" g4":""}">${g.items.map(pyCard).join("")}</div>`; }
   if(L.tip) h+=`<div class="pytip"><b>小提示</b><p ${la}>${esc(pyT(L.tip))}</p></div>`;
   h+=`<div class="pyact"><button class="btn primary" type="button" data-py="practice">开始练习</button></div>`;
   return h; }

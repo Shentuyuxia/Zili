@@ -1,140 +1,1412 @@
 {
  "note": "拼音课 · Pinyin course. Each lesson: title/intro/tip in zh/en/de/pt, optional video URL, item groups (c = character played by the voice, py = pinyin as written, say = tones as actually spoken when different, e.g. 你好 = 23), practice question types. Items may get an 'au' field (path to a recording) later: the app then plays the recording instead of the system voice. Lessons without groups are listed as coming soon.",
  "lessons": [
-  {"id": 1, "key": "tones",
-   "title": {"zh": "四个声调", "en": "The four tones", "de": "Die vier Töne", "pt": "Os quatro tons"},
+  {
+   "id": 1,
+   "key": "tones",
+   "title": {
+    "zh": "四个声调",
+    "en": "The four tones",
+    "de": "Die vier Töne",
+    "pt": "Os quatro tons"
+   },
    "sub": "mā má mǎ mà",
    "video": "",
    "intro": {
     "zh": "普通话有四个声调。同一个音节，声调不一样，意思就不一样：妈、麻、马、骂。先听，再跟着说，手也可以跟着比画。",
     "en": "Mandarin has four tones. The same syllable with a different tone is a different word: mā (mum), má (hemp), mǎ (horse), mà (scold). Listen first, then say it – you can draw the tone in the air with your hand.",
     "de": "Hochchinesisch hat vier Töne. Dieselbe Silbe mit einem anderen Ton ist ein anderes Wort: mā (Mama), má (Hanf), mǎ (Pferd), mà (schimpfen). Erst hören, dann nachsprechen – und den Ton ruhig mit der Hand in die Luft malen.",
-    "pt": "O mandarim tem quatro tons. A mesma sílaba com outro tom vira outra palavra: mā (mãe), má (cânhamo), mǎ (cavalo), mà (xingar). Primeiro ouça, depois repita — dá para desenhar o tom no ar com a mão."},
+    "pt": "O mandarim tem quatro tons. A mesma sílaba com outro tom vira outra palavra: mā (mãe), má (cânhamo), mǎ (cavalo), mà (xingar). Primeiro ouça, depois repita — dá para desenhar o tom no ar com a mão."
+   },
    "tones": [
-    {"t": 1, "zh": "第一声：高而平，像唱一个长音。", "en": "1st tone: high and level, like singing one long note.", "de": "1. Ton: hoch und gleichbleibend, wie ein lang gesungener Ton.", "pt": "1º tom: alto e reto, como cantar uma nota longa."},
-    {"t": 2, "zh": "第二声：从中间往上升，像问“啊？”", "en": "2nd tone: rises from the middle, like asking “huh?”", "de": "2. Ton: steigt von der Mitte nach oben, wie ein fragendes „Hm?“", "pt": "2º tom: sobe do meio para cima, como perguntar “hã?”"},
-    {"t": 3, "zh": "第三声：很低，往下压。单独念时最后会再升上来一点。", "en": "3rd tone: low, pressed down. Said on its own it rises a little at the end.", "de": "3. Ton: tief, nach unten gedrückt. Allein gesprochen steigt er am Ende etwas an.", "pt": "3º tom: baixo, como se apertasse para baixo. Dito sozinho, sobe um pouco no final."},
-    {"t": 4, "zh": "第四声：从高快速降下来，像说“不！”", "en": "4th tone: falls fast from high to low, like a firm “No!”", "de": "4. Ton: fällt schnell von hoch nach tief, wie ein entschiedenes „Nein!“", "pt": "4º tom: cai rápido do alto para baixo, como um “Não!” firme."}
+    {
+     "t": 1,
+     "zh": "第一声：高而平，像唱一个长音。",
+     "en": "1st tone: high and level, like singing one long note.",
+     "de": "1. Ton: hoch und gleichbleibend, wie ein lang gesungener Ton.",
+     "pt": "1º tom: alto e reto, como cantar uma nota longa."
+    },
+    {
+     "t": 2,
+     "zh": "第二声：从中间往上升，像问“啊？”",
+     "en": "2nd tone: rises from the middle, like asking “huh?”",
+     "de": "2. Ton: steigt von der Mitte nach oben, wie ein fragendes „Hm?“",
+     "pt": "2º tom: sobe do meio para cima, como perguntar “hã?”"
+    },
+    {
+     "t": 3,
+     "zh": "第三声：很低，往下压。单独念时最后会再升上来一点。",
+     "en": "3rd tone: low, pressed down. Said on its own it rises a little at the end.",
+     "de": "3. Ton: tief, nach unten gedrückt. Allein gesprochen steigt er am Ende etwas an.",
+     "pt": "3º tom: baixo, como se apertasse para baixo. Dito sozinho, sobe um pouco no final."
+    },
+    {
+     "t": 4,
+     "zh": "第四声：从高快速降下来，像说“不！”",
+     "en": "4th tone: falls fast from high to low, like a firm “No!”",
+     "de": "4. Ton: fällt schnell von hoch nach tief, wie ein entschiedenes „Nein!“",
+     "pt": "4º tom: cai rápido do alto para baixo, como um “Não!” firme."
+    }
    ],
    "tip": {
     "zh": "第三声在句子里多半只是“低”，不必每次都升上去。",
     "en": "In a sentence the 3rd tone is mostly just “low” – it doesn't need to rise every time.",
     "de": "Im Satz ist der 3. Ton meistens einfach nur „tief“ – er muss nicht jedes Mal wieder ansteigen.",
-    "pt": "Dentro da frase, o 3º tom quase sempre é só “baixo” — não precisa subir toda vez."},
+    "pt": "Dentro da frase, o 3º tom quase sempre é só “baixo” — não precisa subir toda vez."
+   },
    "groups": [
-    {"items": [
-     {"c": "妈", "py": "mā", "t": 1, "m": {"en": "mum", "de": "Mama", "pt": "mãe"}},
-     {"c": "麻", "py": "má", "t": 2, "m": {"en": "hemp; numb", "de": "Hanf; taub", "pt": "cânhamo; dormente"}},
-     {"c": "马", "py": "mǎ", "t": 3, "m": {"en": "horse", "de": "Pferd", "pt": "cavalo"}},
-     {"c": "骂", "py": "mà", "t": 4, "m": {"en": "to scold", "de": "schimpfen", "pt": "xingar"}}]},
-    {"items": [
-     {"c": "八", "py": "bā", "t": 1, "m": {"en": "eight", "de": "acht", "pt": "oito"}},
-     {"c": "拔", "py": "bá", "t": 2, "m": {"en": "to pull out", "de": "herausziehen", "pt": "arrancar"}},
-     {"c": "把", "py": "bǎ", "t": 3, "m": {"en": "to hold; (measure word)", "de": "halten; (Zählwort)", "pt": "segurar; (classificador)"}},
-     {"c": "爸", "py": "bà", "t": 4, "m": {"en": "dad", "de": "Papa", "pt": "pai"}}]},
-    {"items": [
-     {"c": "衣", "py": "yī", "t": 1, "m": {"en": "clothes", "de": "Kleidung", "pt": "roupa"}},
-     {"c": "姨", "py": "yí", "t": 2, "m": {"en": "aunt (mother's sister)", "de": "Tante (Schwester der Mutter)", "pt": "tia (irmã da mãe)"}},
-     {"c": "椅", "py": "yǐ", "t": 3, "m": {"en": "chair", "de": "Stuhl", "pt": "cadeira"}},
-     {"c": "意", "py": "yì", "t": 4, "m": {"en": "meaning; idea", "de": "Bedeutung; Idee", "pt": "sentido; ideia"}}]},
-    {"items": [
-     {"c": "汤", "py": "tāng", "t": 1, "m": {"en": "soup", "de": "Suppe", "pt": "sopa"}},
-     {"c": "糖", "py": "táng", "t": 2, "m": {"en": "sugar; sweets", "de": "Zucker; Bonbon", "pt": "açúcar; bala"}},
-     {"c": "躺", "py": "tǎng", "t": 3, "m": {"en": "to lie down", "de": "liegen", "pt": "deitar-se"}},
-     {"c": "烫", "py": "tàng", "t": 4, "m": {"en": "scalding hot", "de": "sehr heiß", "pt": "muito quente"}}]}
+    {
+     "items": [
+      {
+       "c": "妈",
+       "py": "mā",
+       "t": 1,
+       "m": {
+        "en": "mum",
+        "de": "Mama",
+        "pt": "mãe"
+       }
+      },
+      {
+       "c": "麻",
+       "py": "má",
+       "t": 2,
+       "m": {
+        "en": "hemp; numb",
+        "de": "Hanf; taub",
+        "pt": "cânhamo; dormente"
+       }
+      },
+      {
+       "c": "马",
+       "py": "mǎ",
+       "t": 3,
+       "m": {
+        "en": "horse",
+        "de": "Pferd",
+        "pt": "cavalo"
+       }
+      },
+      {
+       "c": "骂",
+       "py": "mà",
+       "t": 4,
+       "m": {
+        "en": "to scold",
+        "de": "schimpfen",
+        "pt": "xingar"
+       }
+      }
+     ]
+    },
+    {
+     "items": [
+      {
+       "c": "八",
+       "py": "bā",
+       "t": 1,
+       "m": {
+        "en": "eight",
+        "de": "acht",
+        "pt": "oito"
+       }
+      },
+      {
+       "c": "拔",
+       "py": "bá",
+       "t": 2,
+       "m": {
+        "en": "to pull out",
+        "de": "herausziehen",
+        "pt": "arrancar"
+       }
+      },
+      {
+       "c": "把",
+       "py": "bǎ",
+       "t": 3,
+       "m": {
+        "en": "to hold; (measure word)",
+        "de": "halten; (Zählwort)",
+        "pt": "segurar; (classificador)"
+       }
+      },
+      {
+       "c": "爸",
+       "py": "bà",
+       "t": 4,
+       "m": {
+        "en": "dad",
+        "de": "Papa",
+        "pt": "pai"
+       }
+      }
+     ]
+    },
+    {
+     "items": [
+      {
+       "c": "衣",
+       "py": "yī",
+       "t": 1,
+       "m": {
+        "en": "clothes",
+        "de": "Kleidung",
+        "pt": "roupa"
+       }
+      },
+      {
+       "c": "姨",
+       "py": "yí",
+       "t": 2,
+       "m": {
+        "en": "aunt (mother's sister)",
+        "de": "Tante (Schwester der Mutter)",
+        "pt": "tia (irmã da mãe)"
+       }
+      },
+      {
+       "c": "椅",
+       "py": "yǐ",
+       "t": 3,
+       "m": {
+        "en": "chair",
+        "de": "Stuhl",
+        "pt": "cadeira"
+       }
+      },
+      {
+       "c": "意",
+       "py": "yì",
+       "t": 4,
+       "m": {
+        "en": "meaning; idea",
+        "de": "Bedeutung; Idee",
+        "pt": "sentido; ideia"
+       }
+      }
+     ]
+    },
+    {
+     "items": [
+      {
+       "c": "汤",
+       "py": "tāng",
+       "t": 1,
+       "m": {
+        "en": "soup",
+        "de": "Suppe",
+        "pt": "sopa"
+       }
+      },
+      {
+       "c": "糖",
+       "py": "táng",
+       "t": 2,
+       "m": {
+        "en": "sugar; sweets",
+        "de": "Zucker; Bonbon",
+        "pt": "açúcar; bala"
+       }
+      },
+      {
+       "c": "躺",
+       "py": "tǎng",
+       "t": 3,
+       "m": {
+        "en": "to lie down",
+        "de": "liegen",
+        "pt": "deitar-se"
+       }
+      },
+      {
+       "c": "烫",
+       "py": "tàng",
+       "t": 4,
+       "m": {
+        "en": "scalding hot",
+        "de": "sehr heiß",
+        "pt": "muito quente"
+       }
+      }
+     ]
+    }
    ],
-   "practice": [{"type": "tone", "n": 5}, {"type": "pick", "n": 3}]},
-
-  {"id": 2, "key": "pairs",
-   "title": {"zh": "声调组合", "en": "Tones in pairs", "de": "Töne im Doppelpack", "pt": "Tons em pares"},
+   "practice": [
+    {
+     "type": "tone",
+     "n": 5
+    },
+    {
+     "type": "pick",
+     "n": 3
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "key": "pairs",
+   "title": {
+    "zh": "声调组合",
+    "en": "Tones in pairs",
+    "de": "Töne im Doppelpack",
+    "pt": "Tons em pares"
+   },
    "sub": "jīntiān · xuéxiào · lǎoshī",
    "video": "",
    "intro": {
     "zh": "很多词有两个字，两个声调要连起来说。先听整个词，再看它是哪两个声调。轻声很短、很轻，没有自己的声调，比如“谢谢”的第二个字。",
     "en": "Many words have two syllables, and the two tones flow together. Listen to the whole word, then work out which two tones it has. The neutral tone is short and light and has no tone of its own – like the second syllable of xièxie (thank you).",
     "de": "Viele Wörter haben zwei Silben, und die beiden Töne gehen ineinander über. Hör dir das ganze Wort an und finde dann die beiden Töne. Der neutrale Ton ist kurz und leicht und hat keinen eigenen Ton – wie die zweite Silbe von xièxie (danke).",
-    "pt": "Muitas palavras têm duas sílabas, e os dois tons se juntam. Ouça a palavra inteira e depois descubra quais são os dois tons. O tom neutro é curto e leve, sem tom próprio — como a segunda sílaba de xièxie (obrigado)."},
+    "pt": "Muitas palavras têm duas sílabas, e os dois tons se juntam. Ouça a palavra inteira e depois descubra quais são os dois tons. O tom neutro é curto e leve, sem tom próprio — como a segunda sílaba de xièxie (obrigado)."
+   },
    "tip": {
     "zh": "两个第三声连在一起时，前一个要读成第二声：“你好”写 nǐ hǎo，说起来是 ní hǎo。",
     "en": "When two 3rd tones meet, the first one becomes a 2nd tone: 你好 is written nǐ hǎo but said ní hǎo.",
     "de": "Treffen zwei 3. Töne aufeinander, wird der erste zum 2. Ton: 你好 schreibt man nǐ hǎo, spricht aber ní hǎo.",
-    "pt": "Quando dois 3º tons se encontram, o primeiro vira 2º tom: 你好 se escreve nǐ hǎo, mas se fala ní hǎo."},
+    "pt": "Quando dois 3º tons se encontram, o primeiro vira 2º tom: 你好 se escreve nǐ hǎo, mas se fala ní hǎo."
+   },
    "groups": [
-    {"label": {"zh": "两个声调", "en": "Two tones", "de": "Zwei Töne", "pt": "Dois tons"}, "items": [
-     {"c": "今天", "py": "jīntiān", "t": "11", "m": {"en": "today", "de": "heute", "pt": "hoje"}},
-     {"c": "中国", "py": "Zhōngguó", "t": "12", "m": {"en": "China", "de": "China", "pt": "China"}},
-     {"c": "喝水", "py": "hē shuǐ", "t": "13", "m": {"en": "drink water", "de": "Wasser trinken", "pt": "beber água"}},
-     {"c": "面包", "py": "miànbāo", "t": "41", "m": {"en": "bread", "de": "Brot", "pt": "pão"}},
-     {"c": "熊猫", "py": "xióngmāo", "t": "21", "m": {"en": "panda", "de": "Panda", "pt": "panda"}},
-     {"c": "学校", "py": "xuéxiào", "t": "24", "m": {"en": "school", "de": "Schule", "pt": "escola"}},
-     {"c": "苹果", "py": "píngguǒ", "t": "23", "m": {"en": "apple", "de": "Apfel", "pt": "maçã"}},
-     {"c": "老师", "py": "lǎoshī", "t": "31", "m": {"en": "teacher", "de": "Lehrer/in", "pt": "professor(a)"}},
-     {"c": "米饭", "py": "mǐfàn", "t": "34", "m": {"en": "cooked rice", "de": "gekochter Reis", "pt": "arroz (cozido)"}},
-     {"c": "电脑", "py": "diànnǎo", "t": "43", "m": {"en": "computer", "de": "Computer", "pt": "computador"}},
-     {"c": "再见", "py": "zàijiàn", "t": "44", "m": {"en": "goodbye", "de": "auf Wiedersehen", "pt": "tchau"}},
-     {"c": "咖啡", "py": "kāfēi", "t": "11", "m": {"en": "coffee", "de": "Kaffee", "pt": "café"}}]},
-    {"label": {"zh": "轻声", "en": "Neutral tone", "de": "Neutraler Ton", "pt": "Tom neutro"}, "items": [
-     {"c": "谢谢", "py": "xièxie", "t": "40", "m": {"en": "thank you", "de": "danke", "pt": "obrigado"}},
-     {"c": "朋友", "py": "péngyou", "t": "20", "m": {"en": "friend", "de": "Freund/in", "pt": "amigo(a)"}},
-     {"c": "妈妈", "py": "māma", "t": "10", "m": {"en": "mum", "de": "Mama", "pt": "mãe"}},
-     {"c": "你们", "py": "nǐmen", "t": "30", "m": {"en": "you (plural)", "de": "ihr", "pt": "vocês"}}]},
-    {"label": {"zh": "两个第三声", "en": "Two 3rd tones", "de": "Zwei 3. Töne", "pt": "Dois 3º tons"}, "items": [
-     {"c": "你好", "py": "nǐ hǎo", "t": "33", "say": "23", "m": {"en": "hello", "de": "hallo", "pt": "olá"}},
-     {"c": "水果", "py": "shuǐguǒ", "t": "33", "say": "23", "m": {"en": "fruit", "de": "Obst", "pt": "fruta"}}]}
+    {
+     "label": {
+      "zh": "两个声调",
+      "en": "Two tones",
+      "de": "Zwei Töne",
+      "pt": "Dois tons"
+     },
+     "items": [
+      {
+       "c": "今天",
+       "py": "jīntiān",
+       "t": "11",
+       "m": {
+        "en": "today",
+        "de": "heute",
+        "pt": "hoje"
+       }
+      },
+      {
+       "c": "中国",
+       "py": "Zhōngguó",
+       "t": "12",
+       "m": {
+        "en": "China",
+        "de": "China",
+        "pt": "China"
+       }
+      },
+      {
+       "c": "喝水",
+       "py": "hē shuǐ",
+       "t": "13",
+       "m": {
+        "en": "drink water",
+        "de": "Wasser trinken",
+        "pt": "beber água"
+       }
+      },
+      {
+       "c": "面包",
+       "py": "miànbāo",
+       "t": "41",
+       "m": {
+        "en": "bread",
+        "de": "Brot",
+        "pt": "pão"
+       }
+      },
+      {
+       "c": "熊猫",
+       "py": "xióngmāo",
+       "t": "21",
+       "m": {
+        "en": "panda",
+        "de": "Panda",
+        "pt": "panda"
+       }
+      },
+      {
+       "c": "学校",
+       "py": "xuéxiào",
+       "t": "24",
+       "m": {
+        "en": "school",
+        "de": "Schule",
+        "pt": "escola"
+       }
+      },
+      {
+       "c": "苹果",
+       "py": "píngguǒ",
+       "t": "23",
+       "m": {
+        "en": "apple",
+        "de": "Apfel",
+        "pt": "maçã"
+       }
+      },
+      {
+       "c": "老师",
+       "py": "lǎoshī",
+       "t": "31",
+       "m": {
+        "en": "teacher",
+        "de": "Lehrer/in",
+        "pt": "professor(a)"
+       }
+      },
+      {
+       "c": "米饭",
+       "py": "mǐfàn",
+       "t": "34",
+       "m": {
+        "en": "cooked rice",
+        "de": "gekochter Reis",
+        "pt": "arroz (cozido)"
+       }
+      },
+      {
+       "c": "电脑",
+       "py": "diànnǎo",
+       "t": "43",
+       "m": {
+        "en": "computer",
+        "de": "Computer",
+        "pt": "computador"
+       }
+      },
+      {
+       "c": "再见",
+       "py": "zàijiàn",
+       "t": "44",
+       "m": {
+        "en": "goodbye",
+        "de": "auf Wiedersehen",
+        "pt": "tchau"
+       }
+      },
+      {
+       "c": "咖啡",
+       "py": "kāfēi",
+       "t": "11",
+       "m": {
+        "en": "coffee",
+        "de": "Kaffee",
+        "pt": "café"
+       }
+      }
+     ]
+    },
+    {
+     "label": {
+      "zh": "轻声",
+      "en": "Neutral tone",
+      "de": "Neutraler Ton",
+      "pt": "Tom neutro"
+     },
+     "items": [
+      {
+       "c": "谢谢",
+       "py": "xièxie",
+       "t": "40",
+       "m": {
+        "en": "thank you",
+        "de": "danke",
+        "pt": "obrigado"
+       }
+      },
+      {
+       "c": "朋友",
+       "py": "péngyou",
+       "t": "20",
+       "m": {
+        "en": "friend",
+        "de": "Freund/in",
+        "pt": "amigo(a)"
+       }
+      },
+      {
+       "c": "妈妈",
+       "py": "māma",
+       "t": "10",
+       "m": {
+        "en": "mum",
+        "de": "Mama",
+        "pt": "mãe"
+       }
+      },
+      {
+       "c": "你们",
+       "py": "nǐmen",
+       "t": "30",
+       "m": {
+        "en": "you (plural)",
+        "de": "ihr",
+        "pt": "vocês"
+       }
+      }
+     ]
+    },
+    {
+     "label": {
+      "zh": "两个第三声",
+      "en": "Two 3rd tones",
+      "de": "Zwei 3. Töne",
+      "pt": "Dois 3º tons"
+     },
+     "items": [
+      {
+       "c": "你好",
+       "py": "nǐ hǎo",
+       "t": "33",
+       "say": "23",
+       "m": {
+        "en": "hello",
+        "de": "hallo",
+        "pt": "olá"
+       }
+      },
+      {
+       "c": "水果",
+       "py": "shuǐguǒ",
+       "t": "33",
+       "say": "23",
+       "m": {
+        "en": "fruit",
+        "de": "Obst",
+        "pt": "fruta"
+       }
+      }
+     ]
+    }
    ],
-   "practice": [{"type": "pair", "n": 6}, {"type": "pick", "n": 2}]},
-
-  {"id": 3, "key": "vowels",
-   "title": {"zh": "单韵母和 ü", "en": "Simple vowels and ü", "de": "Einfache Vokale und ü", "pt": "Vogais simples e ü"},
+   "practice": [
+    {
+     "type": "pair",
+     "n": 6
+    },
+    {
+     "type": "pick",
+     "n": 2
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "key": "vowels",
+   "title": {
+    "zh": "单韵母和 ü",
+    "en": "Simple vowels and ü",
+    "de": "Einfache Vokale und ü",
+    "pt": "Vogais simples e ü"
+   },
    "sub": "a o e i u ü",
    "video": "",
    "intro": {
     "zh": "拼音有六个单韵母：a o e i u ü。a 嘴张大，o 嘴圆，e 不圆唇、声音在喉咙后面，i 像微笑，u 嘴往前撅，ü 是说 i 的时候把嘴唇撅圆。",
     "en": "Pinyin has six simple vowels: a o e i u ü. a – mouth wide open; o – lips round; e – lips not rounded, the sound sits at the back of the throat; i – like a smile; u – lips pushed forward; ü – say i and round your lips.",
     "de": "Pinyin hat sechs einfache Vokale: a o e i u ü. a – Mund weit offen; o – Lippen rund; e – Lippen nicht gerundet, der Laut sitzt hinten im Hals; i – wie ein Lächeln; u – Lippen nach vorn; ü – wie im Deutschen: i sagen und die Lippen runden.",
-    "pt": "O pinyin tem seis vogais simples: a o e i u ü. a – boca bem aberta; o – lábios redondos; e – lábios sem arredondar, o som fica no fundo da garganta; i – como um sorriso; u – lábios para a frente; ü – diga i e arredonde os lábios."},
+    "pt": "O pinyin tem seis vogais simples: a o e i u ü. a – boca bem aberta; o – lábios redondos; e – lábios sem arredondar, o som fica no fundo da garganta; i – como um sorriso; u – lábios para a frente; ü – diga i e arredonde os lábios."
+   },
    "tip": {
     "zh": "j q x 和 y 后面的 u 其实是 ü，只是不写两点：去 qù、鱼 yú、学 xué。",
     "en": "After j, q, x and y, the u is really ü – the two dots are just left out: qù (go), yú (fish), xué (study).",
     "de": "Nach j, q, x und y ist das u eigentlich ein ü – die zwei Punkte werden nur weggelassen: qù (gehen), yú (Fisch), xué (lernen).",
-    "pt": "Depois de j, q, x e y, o u na verdade é ü — só não se escrevem os dois pontinhos: qù (ir), yú (peixe), xué (estudar)."},
+    "pt": "Depois de j, q, x e y, o u na verdade é ü — só não se escrevem os dois pontinhos: qù (ir), yú (peixe), xué (estudar)."
+   },
    "groups": [
-    {"label": {"zh": "六个单韵母", "en": "Six vowels", "de": "Sechs Vokale", "pt": "Seis vogais"}, "items": [
-     {"c": "八", "py": "bā", "t": 1, "v": "a", "m": {"en": "eight", "de": "acht", "pt": "oito"}},
-     {"c": "波", "py": "bō", "t": 1, "v": "o", "m": {"en": "wave", "de": "Welle", "pt": "onda"}},
-     {"c": "饿", "py": "è", "t": 4, "v": "e", "m": {"en": "hungry", "de": "hungrig", "pt": "com fome"}},
-     {"c": "一", "py": "yī", "t": 1, "v": "i", "m": {"en": "one", "de": "eins", "pt": "um"}},
-     {"c": "五", "py": "wǔ", "t": 3, "v": "u", "m": {"en": "five", "de": "fünf", "pt": "cinco"}},
-     {"c": "鱼", "py": "yú", "t": 2, "v": "ü", "m": {"en": "fish", "de": "Fisch", "pt": "peixe"}}]},
-    {"label": {"zh": "u 还是 ü？", "en": "u or ü?", "de": "u oder ü?", "pt": "u ou ü?"}, "items": [
-     {"c": "路", "py": "lù", "t": 4, "m": {"en": "road", "de": "Straße", "pt": "rua; caminho"}},
-     {"c": "绿", "py": "lǜ", "t": 4, "m": {"en": "green", "de": "grün", "pt": "verde"}},
-     {"c": "努", "py": "nǔ", "t": 3, "m": {"en": "to strive", "de": "sich anstrengen", "pt": "esforçar-se"}},
-     {"c": "女", "py": "nǚ", "t": 3, "m": {"en": "woman; female", "de": "Frau; weiblich", "pt": "mulher; feminino"}},
-     {"c": "五", "py": "wǔ", "t": 3, "m": {"en": "five", "de": "fünf", "pt": "cinco"}},
-     {"c": "雨", "py": "yǔ", "t": 3, "m": {"en": "rain", "de": "Regen", "pt": "chuva"}}]},
-    {"label": {"zh": "e 和 i", "en": "e and i", "de": "e und i", "pt": "e e i"}, "items": [
-     {"c": "喝", "py": "hē", "t": 1, "m": {"en": "to drink", "de": "trinken", "pt": "beber"}},
-     {"c": "课", "py": "kè", "t": 4, "m": {"en": "class; lesson", "de": "Unterricht", "pt": "aula"}},
-     {"c": "椅", "py": "yǐ", "t": 3, "m": {"en": "chair", "de": "Stuhl", "pt": "cadeira"}},
-     {"c": "去", "py": "qù", "t": 4, "m": {"en": "to go", "de": "gehen", "pt": "ir"}}]}
+    {
+     "label": {
+      "zh": "六个单韵母",
+      "en": "Six vowels",
+      "de": "Sechs Vokale",
+      "pt": "Seis vogais"
+     },
+     "items": [
+      {
+       "c": "八",
+       "py": "bā",
+       "t": 1,
+       "v": "a",
+       "m": {
+        "en": "eight",
+        "de": "acht",
+        "pt": "oito"
+       }
+      },
+      {
+       "c": "波",
+       "py": "bō",
+       "t": 1,
+       "v": "o",
+       "m": {
+        "en": "wave",
+        "de": "Welle",
+        "pt": "onda"
+       }
+      },
+      {
+       "c": "饿",
+       "py": "è",
+       "t": 4,
+       "v": "e",
+       "m": {
+        "en": "hungry",
+        "de": "hungrig",
+        "pt": "com fome"
+       }
+      },
+      {
+       "c": "一",
+       "py": "yī",
+       "t": 1,
+       "v": "i",
+       "m": {
+        "en": "one",
+        "de": "eins",
+        "pt": "um"
+       }
+      },
+      {
+       "c": "五",
+       "py": "wǔ",
+       "t": 3,
+       "v": "u",
+       "m": {
+        "en": "five",
+        "de": "fünf",
+        "pt": "cinco"
+       }
+      },
+      {
+       "c": "鱼",
+       "py": "yú",
+       "t": 2,
+       "v": "ü",
+       "m": {
+        "en": "fish",
+        "de": "Fisch",
+        "pt": "peixe"
+       }
+      }
+     ]
+    },
+    {
+     "label": {
+      "zh": "u 还是 ü？",
+      "en": "u or ü?",
+      "de": "u oder ü?",
+      "pt": "u ou ü?"
+     },
+     "items": [
+      {
+       "c": "路",
+       "py": "lù",
+       "t": 4,
+       "m": {
+        "en": "road",
+        "de": "Straße",
+        "pt": "rua; caminho"
+       }
+      },
+      {
+       "c": "绿",
+       "py": "lǜ",
+       "t": 4,
+       "m": {
+        "en": "green",
+        "de": "grün",
+        "pt": "verde"
+       }
+      },
+      {
+       "c": "努",
+       "py": "nǔ",
+       "t": 3,
+       "m": {
+        "en": "to strive",
+        "de": "sich anstrengen",
+        "pt": "esforçar-se"
+       }
+      },
+      {
+       "c": "女",
+       "py": "nǚ",
+       "t": 3,
+       "m": {
+        "en": "woman; female",
+        "de": "Frau; weiblich",
+        "pt": "mulher; feminino"
+       }
+      },
+      {
+       "c": "五",
+       "py": "wǔ",
+       "t": 3,
+       "m": {
+        "en": "five",
+        "de": "fünf",
+        "pt": "cinco"
+       }
+      },
+      {
+       "c": "雨",
+       "py": "yǔ",
+       "t": 3,
+       "m": {
+        "en": "rain",
+        "de": "Regen",
+        "pt": "chuva"
+       }
+      }
+     ]
+    },
+    {
+     "label": {
+      "zh": "e 和 i",
+      "en": "e and i",
+      "de": "e und i",
+      "pt": "e e i"
+     },
+     "items": [
+      {
+       "c": "喝",
+       "py": "hē",
+       "t": 1,
+       "m": {
+        "en": "to drink",
+        "de": "trinken",
+        "pt": "beber"
+       }
+      },
+      {
+       "c": "课",
+       "py": "kè",
+       "t": 4,
+       "m": {
+        "en": "class; lesson",
+        "de": "Unterricht",
+        "pt": "aula"
+       }
+      },
+      {
+       "c": "椅",
+       "py": "yǐ",
+       "t": 3,
+       "m": {
+        "en": "chair",
+        "de": "Stuhl",
+        "pt": "cadeira"
+       }
+      },
+      {
+       "c": "去",
+       "py": "qù",
+       "t": 4,
+       "m": {
+        "en": "to go",
+        "de": "gehen",
+        "pt": "ir"
+       }
+      }
+     ]
+    }
    ],
-   "pairs": [["路", "lù", "绿", "lǜ"], ["努", "nǔ", "女", "nǚ"], ["五", "wǔ", "雨", "yǔ"], ["哥", "gē", "锅", "guō"], ["一", "yī", "鱼", "yú"]],
+   "pairs": [
+    [
+     "路",
+     "lù",
+     "绿",
+     "lǜ"
+    ],
+    [
+     "努",
+     "nǔ",
+     "女",
+     "nǚ"
+    ],
+    [
+     "五",
+     "wǔ",
+     "雨",
+     "yǔ"
+    ],
+    [
+     "哥",
+     "gē",
+     "锅",
+     "guō"
+    ],
+    [
+     "一",
+     "yī",
+     "鱼",
+     "yú"
+    ]
+   ],
    "rules": [
-    {"q": {"zh": "q + ü 写成？", "en": "q + ü is written…", "de": "q + ü schreibt man…", "pt": "q + ü se escreve…"}, "a": "qu", "o": ["qu", "qü", "qiu"]},
-    {"q": {"zh": "y + ü 写成？", "en": "y + ü is written…", "de": "y + ü schreibt man…", "pt": "y + ü se escreve…"}, "a": "yu", "o": ["yu", "yü", "you"]},
-    {"q": {"zh": "n + ü 写成？", "en": "n + ü is written…", "de": "n + ü schreibt man…", "pt": "n + ü se escreve…"}, "a": "nü", "o": ["nü", "nu", "niu"]}
+    {
+     "q": {
+      "zh": "q + ü 写成？",
+      "en": "q + ü is written…",
+      "de": "q + ü schreibt man…",
+      "pt": "q + ü se escreve…"
+     },
+     "a": "qu",
+     "o": [
+      "qu",
+      "qü",
+      "qiu"
+     ]
+    },
+    {
+     "q": {
+      "zh": "y + ü 写成？",
+      "en": "y + ü is written…",
+      "de": "y + ü schreibt man…",
+      "pt": "y + ü se escreve…"
+     },
+     "a": "yu",
+     "o": [
+      "yu",
+      "yü",
+      "you"
+     ]
+    },
+    {
+     "q": {
+      "zh": "n + ü 写成？",
+      "en": "n + ü is written…",
+      "de": "n + ü schreibt man…",
+      "pt": "n + ü se escreve…"
+     },
+     "a": "nü",
+     "o": [
+      "nü",
+      "nu",
+      "niu"
+     ]
+    }
    ],
-   "practice": [{"type": "mpair", "n": 5}, {"type": "rule", "n": 2}, {"type": "pick", "n": 1}]},
-
-  {"id": 4, "title": {"zh": "b p m f · d t n l", "en": "b p m f · d t n l", "de": "b p m f · d t n l", "pt": "b p m f · d t n l"}, "sub": {"zh": "送气和不送气", "en": "With and without a puff of air", "de": "Mit und ohne Hauch", "pt": "Com e sem sopro de ar"}},
-  {"id": 5, "title": {"zh": "g k h", "en": "g k h", "de": "g k h", "pt": "g k h"}, "sub": {"zh": "舌根音", "en": "Sounds at the back of the mouth", "de": "Laute hinten im Mund", "pt": "Sons do fundo da boca"}},
-  {"id": 6, "title": {"zh": "j q x", "en": "j q x", "de": "j q x", "pt": "j q x"}, "sub": {"zh": "舌面音", "en": "Flat-tongue sounds", "de": "Laute mit flacher Zunge", "pt": "Sons com a língua plana"}},
-  {"id": 7, "title": {"zh": "z c s", "en": "z c s", "de": "z c s", "pt": "z c s"}, "sub": {"zh": "平舌音", "en": "Tongue behind the teeth", "de": "Zunge hinter den Zähnen", "pt": "Língua atrás dos dentes"}},
-  {"id": 8, "title": {"zh": "zh ch sh r", "en": "zh ch sh r", "de": "zh ch sh r", "pt": "zh ch sh r"}, "sub": {"zh": "翘舌音", "en": "Curled-tongue sounds", "de": "Laute mit gebogener Zunge", "pt": "Sons com a língua curvada"}},
-  {"id": 9, "title": {"zh": "复韵母", "en": "Vowel combinations", "de": "Vokalverbindungen", "pt": "Combinações de vogais"}, "sub": {"zh": "ai ei ao ou ……", "en": "ai ei ao ou …", "de": "ai ei ao ou …", "pt": "ai ei ao ou …"}},
-  {"id": 10, "title": {"zh": "前鼻音和后鼻音", "en": "-n and -ng", "de": "-n und -ng", "pt": "-n e -ng"}, "sub": {"zh": "an/ang · en/eng · in/ing", "en": "an/ang · en/eng · in/ing", "de": "an/ang · en/eng · in/ing", "pt": "an/ang · en/eng · in/ing"}},
-  {"id": 11, "title": {"zh": "拼写规则", "en": "Spelling rules", "de": "Schreibregeln", "pt": "Regras de escrita"}, "sub": {"zh": "y w · iu ui un · 标调", "en": "y w · iu ui un · tone marks", "de": "y w · iu ui un · Tonzeichen", "pt": "y w · iu ui un · acentos"}},
-  {"id": 12, "title": {"zh": "变调", "en": "Tone changes", "de": "Tonveränderungen", "pt": "Mudanças de tom"}, "sub": {"zh": "你好 · 一 · 不", "en": "nǐ hǎo · yī · bù", "de": "nǐ hǎo · yī · bù", "pt": "nǐ hǎo · yī · bù"}}
+   "practice": [
+    {
+     "type": "mpair",
+     "n": 5
+    },
+    {
+     "type": "rule",
+     "n": 2
+    },
+    {
+     "type": "pick",
+     "n": 1
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "key": "bpmf",
+   "title": {
+    "zh": "b p m f · d t n l",
+    "en": "b p m f · d t n l",
+    "de": "b p m f · d t n l",
+    "pt": "b p m f · d t n l"
+   },
+   "sub": {
+    "zh": "送气和不送气",
+    "en": "With and without a puff of air",
+    "de": "Mit und ohne Hauch",
+    "pt": "Com e sem sopro de ar"
+   },
+   "video": "",
+   "intro": {
+    "zh": "b 和 p、d 和 t 的区别不在“清”和“浊”，而在有没有一股气。b、d 不送气，声音干净利落；p、t 要送出一股明显的气。拿一张纸放在嘴前：说 p、t 时纸会动，说 b、d 时几乎不动。m 双唇闭上，从鼻子出声；f 上牙轻碰下唇；n 从鼻子出声，l 从舌头两边出气。",
+    "en": "The difference between b and p, d and t is not voicing but a puff of air. b and d have no puff – short and clean, like the p in “spin” or the t in “stop”. p and t come with a strong puff, like the p in “pin” and the t in “top”. Hold a sheet of paper in front of your mouth: it moves for p and t, and hardly at all for b and d. m: lips closed, sound through the nose; f: upper teeth on the lower lip; n: through the nose; l: air along the sides of the tongue.",
+    "de": "Der Unterschied zwischen b und p, d und t liegt nicht im Stimmton, sondern im Hauch. b und d sind stimmlos und ohne Hauch – kurz und sauber, wie das p in „Spaß“ oder das t in „Stein“. p und t haben einen kräftigen Hauch, noch stärker als ein deutsches p in „Post“. Halte ein Blatt Papier vor den Mund: Bei p und t bewegt es sich, bei b und d kaum. m: Lippen zu, Klang durch die Nase; f: obere Zähne auf der Unterlippe; n: durch die Nase; l: Luft an den Zungenseiten.",
+    "pt": "A diferença entre b e p, d e t não está na vibração da voz, e sim num sopro de ar. O b e o d do chinês não têm sopro – soam quase como o p e o t do português em “pato” e “tatu”. Já o p e o t chineses saem com um sopro forte, como no inglês “pin” e “top”. Segure uma folha de papel na frente da boca: com p e t ela se mexe, com b e d quase nada. m: lábios fechados, som pelo nariz; f: dentes de cima no lábio de baixo; n: pelo nariz; l: o ar sai pelos lados da língua."
+   },
+   "tip": {
+    "zh": "拼音的 b、d 听起来不像英语或德语的 b、d 那么“浊”：别振动声带，只是不送气。",
+    "en": "Pinyin b and d are not voiced like English b and d: no buzz in the throat – they just have no puff.",
+    "de": "Pinyin-b und -d sind nicht stimmhaft wie im Deutschen: kein Summen im Hals – sie haben nur keinen Hauch.",
+    "pt": "Para quem fala português: o seu p já soa como o b chinês, e o seu t como o d chinês. Para o p e o t chineses, acrescente um sopro."
+   },
+   "groups": [
+    {
+     "label": {
+      "zh": "b 和 p",
+      "en": "b and p",
+      "de": "b und p",
+      "pt": "b e p"
+     },
+     "items": [
+      {
+       "c": "爸",
+       "py": "bà",
+       "t": 4,
+       "m": {
+        "en": "dad",
+        "de": "Papa",
+        "pt": "pai"
+       },
+       "v": "b"
+      },
+      {
+       "c": "怕",
+       "py": "pà",
+       "t": 4,
+       "m": {
+        "en": "to be afraid",
+        "de": "Angst haben",
+        "pt": "ter medo"
+       },
+       "v": "p"
+      },
+      {
+       "c": "白",
+       "py": "bái",
+       "t": 2,
+       "m": {
+        "en": "white",
+        "de": "weiß",
+        "pt": "branco"
+       },
+       "v": "b"
+      },
+      {
+       "c": "牌",
+       "py": "pái",
+       "t": 2,
+       "m": {
+        "en": "card; sign",
+        "de": "Karte; Schild",
+        "pt": "carta; placa"
+       },
+       "v": "p"
+      },
+      {
+       "c": "饱",
+       "py": "bǎo",
+       "t": 3,
+       "m": {
+        "en": "full (after eating)",
+        "de": "satt",
+        "pt": "satisfeito (de comida)"
+       },
+       "v": "b"
+      },
+      {
+       "c": "跑",
+       "py": "pǎo",
+       "t": 3,
+       "m": {
+        "en": "to run",
+        "de": "laufen",
+        "pt": "correr"
+       },
+       "v": "p"
+      },
+      {
+       "c": "拔",
+       "py": "bá",
+       "t": 2,
+       "m": {
+        "en": "to pull out",
+        "de": "herausziehen",
+        "pt": "arrancar"
+       },
+       "v": "b"
+      },
+      {
+       "c": "爬",
+       "py": "pá",
+       "t": 2,
+       "m": {
+        "en": "to climb",
+        "de": "klettern",
+        "pt": "subir; escalar"
+       },
+       "v": "p"
+      }
+     ]
+    },
+    {
+     "label": {
+      "zh": "d 和 t",
+      "en": "d and t",
+      "de": "d und t",
+      "pt": "d e t"
+     },
+     "items": [
+      {
+       "c": "弟",
+       "py": "dì",
+       "t": 4,
+       "m": {
+        "en": "younger brother",
+        "de": "jüngerer Bruder",
+        "pt": "irmão mais novo"
+       },
+       "v": "d"
+      },
+      {
+       "c": "替",
+       "py": "tì",
+       "t": 4,
+       "m": {
+        "en": "to replace",
+        "de": "ersetzen",
+        "pt": "substituir"
+       },
+       "v": "t"
+      },
+      {
+       "c": "读",
+       "py": "dú",
+       "t": 2,
+       "m": {
+        "en": "to read",
+        "de": "lesen",
+        "pt": "ler"
+       },
+       "v": "d"
+      },
+      {
+       "c": "图",
+       "py": "tú",
+       "t": 2,
+       "m": {
+        "en": "picture",
+        "de": "Bild",
+        "pt": "imagem"
+       },
+       "v": "t"
+      },
+      {
+       "c": "多",
+       "py": "duō",
+       "t": 1,
+       "m": {
+        "en": "many",
+        "de": "viel",
+        "pt": "muito"
+       },
+       "v": "d"
+      },
+      {
+       "c": "拖",
+       "py": "tuō",
+       "t": 1,
+       "m": {
+        "en": "to drag",
+        "de": "ziehen",
+        "pt": "arrastar"
+       },
+       "v": "t"
+      },
+      {
+       "c": "东",
+       "py": "dōng",
+       "t": 1,
+       "m": {
+        "en": "east",
+        "de": "Osten",
+        "pt": "leste"
+       },
+       "v": "d"
+      },
+      {
+       "c": "通",
+       "py": "tōng",
+       "t": 1,
+       "m": {
+        "en": "to go through",
+        "de": "durchgehen",
+        "pt": "passar; ligar"
+       },
+       "v": "t"
+      }
+     ]
+    },
+    {
+     "label": {
+      "zh": "m 和 f",
+      "en": "m and f",
+      "de": "m und f",
+      "pt": "m e f"
+     },
+     "items": [
+      {
+       "c": "妈",
+       "py": "mā",
+       "t": 1,
+       "m": {
+        "en": "mum",
+        "de": "Mama",
+        "pt": "mãe"
+       },
+       "v": "m"
+      },
+      {
+       "c": "米",
+       "py": "mǐ",
+       "t": 3,
+       "m": {
+        "en": "rice (uncooked)",
+        "de": "Reis",
+        "pt": "arroz (cru)"
+       },
+       "v": "m"
+      },
+      {
+       "c": "门",
+       "py": "mén",
+       "t": 2,
+       "m": {
+        "en": "door",
+        "de": "Tür",
+        "pt": "porta"
+       },
+       "v": "m"
+      },
+      {
+       "c": "飞",
+       "py": "fēi",
+       "t": 1,
+       "m": {
+        "en": "to fly",
+        "de": "fliegen",
+        "pt": "voar"
+       },
+       "v": "f"
+      },
+      {
+       "c": "饭",
+       "py": "fàn",
+       "t": 4,
+       "m": {
+        "en": "meal; rice",
+        "de": "Essen; Reis",
+        "pt": "refeição; arroz"
+       },
+       "v": "f"
+      },
+      {
+       "c": "风",
+       "py": "fēng",
+       "t": 1,
+       "m": {
+        "en": "wind",
+        "de": "Wind",
+        "pt": "vento"
+       },
+       "v": "f"
+      }
+     ]
+    },
+    {
+     "label": {
+      "zh": "n 和 l",
+      "en": "n and l",
+      "de": "n und l",
+      "pt": "n e l"
+     },
+     "items": [
+      {
+       "c": "你",
+       "py": "nǐ",
+       "t": 3,
+       "m": {
+        "en": "you",
+        "de": "du",
+        "pt": "você"
+       },
+       "v": "n"
+      },
+      {
+       "c": "里",
+       "py": "lǐ",
+       "t": 3,
+       "m": {
+        "en": "inside",
+        "de": "innen",
+        "pt": "dentro"
+       },
+       "v": "l"
+      },
+      {
+       "c": "男",
+       "py": "nán",
+       "t": 2,
+       "m": {
+        "en": "male",
+        "de": "männlich",
+        "pt": "masculino"
+       },
+       "v": "n"
+      },
+      {
+       "c": "蓝",
+       "py": "lán",
+       "t": 2,
+       "m": {
+        "en": "blue",
+        "de": "blau",
+        "pt": "azul"
+       },
+       "v": "l"
+      },
+      {
+       "c": "脑",
+       "py": "nǎo",
+       "t": 3,
+       "m": {
+        "en": "brain",
+        "de": "Gehirn",
+        "pt": "cérebro"
+       },
+       "v": "n"
+      },
+      {
+       "c": "老",
+       "py": "lǎo",
+       "t": 3,
+       "m": {
+        "en": "old",
+        "de": "alt",
+        "pt": "velho"
+       },
+       "v": "l"
+      },
+      {
+       "c": "牛",
+       "py": "niú",
+       "t": 2,
+       "m": {
+        "en": "cow",
+        "de": "Rind",
+        "pt": "vaca; boi"
+       },
+       "v": "n"
+      },
+      {
+       "c": "流",
+       "py": "liú",
+       "t": 2,
+       "m": {
+        "en": "to flow",
+        "de": "fließen",
+        "pt": "correr (água)"
+       },
+       "v": "l"
+      }
+     ]
+    }
+   ],
+   "pairs": [
+    [
+     "爸",
+     "bà",
+     "怕",
+     "pà"
+    ],
+    [
+     "白",
+     "bái",
+     "牌",
+     "pái"
+    ],
+    [
+     "饱",
+     "bǎo",
+     "跑",
+     "pǎo"
+    ],
+    [
+     "拔",
+     "bá",
+     "爬",
+     "pá"
+    ],
+    [
+     "弟",
+     "dì",
+     "替",
+     "tì"
+    ],
+    [
+     "读",
+     "dú",
+     "图",
+     "tú"
+    ],
+    [
+     "多",
+     "duō",
+     "拖",
+     "tuō"
+    ],
+    [
+     "东",
+     "dōng",
+     "通",
+     "tōng"
+    ],
+    [
+     "男",
+     "nán",
+     "蓝",
+     "lán"
+    ],
+    [
+     "脑",
+     "nǎo",
+     "老",
+     "lǎo"
+    ],
+    [
+     "牛",
+     "niú",
+     "流",
+     "liú"
+    ],
+    [
+     "你",
+     "nǐ",
+     "里",
+     "lǐ"
+    ]
+   ],
+   "practice": [
+    {
+     "type": "mpair",
+     "n": 7
+    },
+    {
+     "type": "tone",
+     "n": 1
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "title": {
+    "zh": "g k h",
+    "en": "g k h",
+    "de": "g k h",
+    "pt": "g k h"
+   },
+   "sub": {
+    "zh": "舌根音",
+    "en": "Sounds at the back of the mouth",
+    "de": "Laute hinten im Mund",
+    "pt": "Sons do fundo da boca"
+   }
+  },
+  {
+   "id": 6,
+   "title": {
+    "zh": "j q x",
+    "en": "j q x",
+    "de": "j q x",
+    "pt": "j q x"
+   },
+   "sub": {
+    "zh": "舌面音",
+    "en": "Flat-tongue sounds",
+    "de": "Laute mit flacher Zunge",
+    "pt": "Sons com a língua plana"
+   }
+  },
+  {
+   "id": 7,
+   "title": {
+    "zh": "z c s",
+    "en": "z c s",
+    "de": "z c s",
+    "pt": "z c s"
+   },
+   "sub": {
+    "zh": "平舌音",
+    "en": "Tongue behind the teeth",
+    "de": "Zunge hinter den Zähnen",
+    "pt": "Língua atrás dos dentes"
+   }
+  },
+  {
+   "id": 8,
+   "title": {
+    "zh": "zh ch sh r",
+    "en": "zh ch sh r",
+    "de": "zh ch sh r",
+    "pt": "zh ch sh r"
+   },
+   "sub": {
+    "zh": "翘舌音",
+    "en": "Curled-tongue sounds",
+    "de": "Laute mit gebogener Zunge",
+    "pt": "Sons com a língua curvada"
+   }
+  },
+  {
+   "id": 9,
+   "title": {
+    "zh": "复韵母",
+    "en": "Vowel combinations",
+    "de": "Vokalverbindungen",
+    "pt": "Combinações de vogais"
+   },
+   "sub": {
+    "zh": "ai ei ao ou ……",
+    "en": "ai ei ao ou …",
+    "de": "ai ei ao ou …",
+    "pt": "ai ei ao ou …"
+   }
+  },
+  {
+   "id": 10,
+   "title": {
+    "zh": "前鼻音和后鼻音",
+    "en": "-n and -ng",
+    "de": "-n und -ng",
+    "pt": "-n e -ng"
+   },
+   "sub": {
+    "zh": "an/ang · en/eng · in/ing",
+    "en": "an/ang · en/eng · in/ing",
+    "de": "an/ang · en/eng · in/ing",
+    "pt": "an/ang · en/eng · in/ing"
+   }
+  },
+  {
+   "id": 11,
+   "title": {
+    "zh": "拼写规则",
+    "en": "Spelling rules",
+    "de": "Schreibregeln",
+    "pt": "Regras de escrita"
+   },
+   "sub": {
+    "zh": "y w · iu ui un · 标调",
+    "en": "y w · iu ui un · tone marks",
+    "de": "y w · iu ui un · Tonzeichen",
+    "pt": "y w · iu ui un · acentos"
+   }
+  },
+  {
+   "id": 12,
+   "title": {
+    "zh": "变调",
+    "en": "Tone changes",
+    "de": "Tonveränderungen",
+    "pt": "Mudanças de tom"
+   },
+   "sub": {
+    "zh": "你好 · 一 · 不",
+    "en": "nǐ hǎo · yī · bù",
+    "de": "nǐ hǎo · yī · bù",
+    "pt": "nǐ hǎo · yī · bù"
+   }
+  }
  ]
 }
