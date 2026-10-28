@@ -1,0 +1,633 @@
+{
+ "date": "2026-10-28",
+ "createdBy": "claude",
+ "items": [
+  {
+   "lang": "zh",
+   "level": "HSK1",
+   "kind": "dialogue",
+   "section": "网络用语",
+   "title": "666和88",
+   "title_en": "666 and 88",
+   "title_de": "666 und 88",
+   "title_pt": "666 e 88",
+   "paragraphs": [
+    "卢卡斯：小月，你好！我在巴西，现在是上午九点。",
+    "小月：我在北京，现在是晚上八点。你今天做什么了？",
+    "卢卡斯：我和妈妈做了一个大蛋糕。",
+    "小月：哇，666！",
+    "卢卡斯：666？这是什么意思？",
+    "小月：666就是“很好，很厉害”。",
+    "卢卡斯：那“88”呢？",
+    "小月：88就是“拜拜”，再见！",
+    "卢卡斯：好，我明天还做蛋糕。小月，88！"
+   ],
+   "paragraphs_en": [
+    "Lucas: Hi, Xiaoyue! I'm in Brazil, and it's nine in the morning here.",
+    "Xiaoyue: I'm in Beijing, and it's eight in the evening here. What did you do today?",
+    "Lucas: My mum and I made a big cake.",
+    "Xiaoyue: Wow, 666!",
+    "Lucas: 666? What does that mean?",
+    "Xiaoyue: 666 means \"great, awesome\".",
+    "Lucas: And what about \"88\"?",
+    "Xiaoyue: 88 means \"bye-bye\" – goodbye!",
+    "Lucas: OK, I'll make a cake again tomorrow. Xiaoyue, 88!"
+   ],
+   "paragraphs_de": [
+    "Lucas: Hallo, Xiaoyue! Ich bin in Brasilien, hier ist es neun Uhr morgens.",
+    "Xiaoyue: Ich bin in Peking, hier ist es acht Uhr abends. Was hast du heute gemacht?",
+    "Lucas: Ich habe mit meiner Mama einen großen Kuchen gebacken.",
+    "Xiaoyue: Wow, 666!",
+    "Lucas: 666? Was bedeutet das?",
+    "Xiaoyue: 666 heißt „super, echt stark“.",
+    "Lucas: Und „88“?",
+    "Xiaoyue: 88 heißt „Bye-bye“ – tschüss!",
+    "Lucas: Okay, morgen backe ich wieder einen Kuchen. Xiaoyue, 88!"
+   ],
+   "paragraphs_pt": [
+    "Lucas: Oi, Xiaoyue! Eu estou no Brasil, aqui são nove da manhã.",
+    "Xiaoyue: Eu estou em Pequim, aqui são oito da noite. O que você fez hoje?",
+    "Lucas: Eu e minha mãe fizemos um bolo grande.",
+    "Xiaoyue: Uau, 666!",
+    "Lucas: 666? O que isso quer dizer?",
+    "Xiaoyue: 666 quer dizer \"muito bom, demais\".",
+    "Lucas: E \"88\"?",
+    "Xiaoyue: 88 quer dizer \"bye-bye\" – tchau!",
+    "Lucas: Tá bom, amanhã eu faço bolo de novo. Xiaoyue, 88!"
+   ],
+   "glossary": [
+    {
+     "w": "巴西",
+     "p": "bā xī",
+     "en": "Brazil",
+     "de": "Brasilien",
+     "pt": "o Brasil"
+    },
+    {
+     "w": "上午",
+     "p": "shàng wǔ",
+     "en": "morning (before noon)",
+     "de": "der Vormittag",
+     "pt": "a manhã"
+    },
+    {
+     "w": "蛋糕",
+     "p": "dàn gāo",
+     "en": "cake",
+     "de": "der Kuchen",
+     "pt": "o bolo"
+    },
+    {
+     "w": "意思",
+     "p": "yì si",
+     "en": "meaning",
+     "de": "die Bedeutung",
+     "pt": "o significado"
+    },
+    {
+     "w": "厉害",
+     "p": "lì hai",
+     "en": "awesome; impressive",
+     "de": "toll; stark",
+     "pt": "incrível; demais"
+    },
+    {
+     "w": "拜拜",
+     "p": "bái bái",
+     "en": "bye-bye",
+     "de": "tschüss; bye-bye",
+     "pt": "tchau"
+    },
+    {
+     "w": "再见",
+     "p": "zài jiàn",
+     "en": "goodbye",
+     "de": "auf Wiedersehen",
+     "pt": "até logo; tchau"
+    }
+   ],
+   "grammar": "Chinese uses numbers as slang because of their sound: 6 (liù) is linked with 溜 \"smooth, skilful\", so 666 means \"awesome\"; 88 (bā bā) sounds like \"bye-bye\". To ask what something means, say: ……是什么意思？",
+   "grammar_de": "Im Chinesischen dienen Zahlen wegen ihres Klangs als Slang: 6 (liù) wird mit 溜 „geschickt, flüssig“ verbunden, daher heißt 666 „super“; 88 (bā bā) klingt wie „bye-bye“. Nach einer Bedeutung fragt man so: ……是什么意思？",
+   "grammar_pt": "Em chinês, números viram gíria por causa do som: 6 (liù) lembra 溜 \"hábil, fluente\", então 666 quer dizer \"demais\"; 88 (bā bā) soa como \"bye-bye\". Para perguntar o que algo significa, diga: ……是什么意思？",
+   "questions": [
+    "卢卡斯在哪儿？小月在哪儿？",
+    "卢卡斯今天做什么了？",
+    "“88”是什么意思？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "feature",
+   "section": "网络用语",
+   "title": "网上怎么笑？",
+   "title_en": "How do you laugh online?",
+   "title_de": "Wie lacht man im Netz?",
+   "title_pt": "Como se ri na internet?",
+   "paragraphs": [
+    "在网上聊天的时候，我们怎么“笑”？中国人常常写“哈哈哈”。如果觉得特别好笑，就写很多个“哈”，比如“哈哈哈哈哈哈”。",
+    "我的朋友朱莉亚是巴西人。她和巴西朋友聊天的时候，不写“哈哈”，而是写“kkkk”。因为在葡萄牙语里，字母k的读音有点儿像“卡”，所以“kkkk”听起来就像笑声。",
+    "美国和英国的朋友常常写“lol”，意思是“大声地笑”。泰国人还会写“555”，因为在泰语里，“五”的读音和“哈”差不多。",
+    "每个地方的笑声写出来都不一样，但是大家都很开心。你在网上怎么笑呢？"
+   ],
+   "paragraphs_en": [
+    "When we chat online, how do we \"laugh\"? Chinese people often write \"哈哈哈\" (hahaha). If something is really funny, they write lots of \"哈\", like \"哈哈哈哈哈哈\".",
+    "My friend Júlia is Brazilian. When she chats with Brazilian friends, she doesn't write \"haha\" but \"kkkk\". In Portuguese the letter k is pronounced a bit like \"ka\", so \"kkkk\" sounds just like laughter.",
+    "Friends from the US and the UK often write \"lol\", which means \"laughing out loud\". People in Thailand also write \"555\", because in Thai the word for \"five\" sounds almost like \"ha\".",
+    "Laughter is written differently everywhere, but everyone is having fun. How do you laugh online?"
+   ],
+   "paragraphs_de": [
+    "Wie „lachen“ wir, wenn wir im Netz chatten? Chinesen schreiben oft „哈哈哈“ (hahaha). Wenn sie etwas besonders lustig finden, schreiben sie ganz viele „哈“, zum Beispiel „哈哈哈哈哈哈“.",
+    "Meine Freundin Júlia ist Brasilianerin. Wenn sie mit brasilianischen Freunden chattet, schreibt sie nicht „haha“, sondern „kkkk“. Im Portugiesischen klingt der Buchstabe k ungefähr wie „ka“, deshalb hört sich „kkkk“ wie Lachen an.",
+    "Freunde aus den USA und aus Großbritannien schreiben oft „lol“, das bedeutet „laut lachen“. Menschen in Thailand schreiben auch „555“, weil das Wort für „fünf“ auf Thai fast wie „ha“ klingt.",
+    "Überall wird das Lachen anders geschrieben, aber alle haben Spaß. Wie lachst du im Netz?"
+   ],
+   "paragraphs_pt": [
+    "Quando conversamos na internet, como a gente \"ri\"? Os chineses costumam escrever \"哈哈哈\" (hahaha). Se acham algo muito engraçado, escrevem um monte de \"哈\", tipo \"哈哈哈哈哈哈\".",
+    "Minha amiga Júlia é brasileira. Quando conversa com amigos brasileiros, ela não escreve \"haha\", e sim \"kkkk\". Em português, a letra k se pronuncia mais ou menos como \"cá\", então \"kkkk\" soa igualzinho a uma risada.",
+    "Amigos dos Estados Unidos e do Reino Unido costumam escrever \"lol\", que quer dizer \"rindo alto\". Na Tailândia, as pessoas também escrevem \"555\", porque em tailandês a palavra \"cinco\" soa quase como \"ha\".",
+    "Em cada lugar a risada se escreve de um jeito, mas todo mundo está se divertindo. E você, como ri na internet?"
+   ],
+   "glossary": [
+    {
+     "w": "聊天",
+     "p": "liáo tiān",
+     "en": "to chat",
+     "de": "chatten; plaudern",
+     "pt": "conversar; bater papo"
+    },
+    {
+     "w": "好笑",
+     "p": "hǎo xiào",
+     "en": "funny",
+     "de": "lustig; witzig",
+     "pt": "engraçado"
+    },
+    {
+     "w": "葡萄牙语",
+     "p": "pú táo yá yǔ",
+     "en": "Portuguese (language)",
+     "de": "das Portugiesisch",
+     "pt": "o português"
+    },
+    {
+     "w": "字母",
+     "p": "zì mǔ",
+     "en": "letter (of an alphabet)",
+     "de": "der Buchstabe",
+     "pt": "a letra"
+    },
+    {
+     "w": "读音",
+     "p": "dú yīn",
+     "en": "pronunciation",
+     "de": "die Aussprache",
+     "pt": "a pronúncia"
+    },
+    {
+     "w": "笑声",
+     "p": "xiào shēng",
+     "en": "laughter",
+     "de": "das Lachen; das Gelächter",
+     "pt": "a risada"
+    },
+    {
+     "w": "泰国",
+     "p": "tài guó",
+     "en": "Thailand",
+     "de": "Thailand",
+     "pt": "a Tailândia"
+    },
+    {
+     "w": "差不多",
+     "p": "chà bu duō",
+     "en": "almost the same; about",
+     "de": "fast gleich; ungefähr",
+     "pt": "quase igual; mais ou menos"
+    }
+   ],
+   "grammar": "不是A，而是B / 不A，而是B means \"not A, but B\": 她不写“哈哈”，而是写“kkkk” – she doesn't write \"haha\" but \"kkkk\". 而是 introduces the correct alternative.",
+   "grammar_de": "不是A，而是B / 不A，而是B bedeutet „nicht A, sondern B“: 她不写“哈哈”，而是写“kkkk” – sie schreibt nicht „haha“, sondern „kkkk“. 而是 leitet die richtige Alternative ein.",
+   "grammar_pt": "不是A，而是B / 不A，而是B quer dizer \"não A, e sim B\": 她不写“哈哈”，而是写“kkkk” – ela não escreve \"haha\", e sim \"kkkk\". 而是 apresenta a alternativa certa.",
+   "questions": [
+    "朱莉亚和巴西朋友聊天的时候写什么？",
+    "为什么泰国人写“555”？",
+    "“lol”是什么意思？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK3",
+   "kind": "dialogue",
+   "section": "网络用语",
+   "title": "已读不回",
+   "title_en": "Read, no reply",
+   "title_de": "Gelesen, keine Antwort",
+   "title_pt": "Visualizou e não respondeu",
+   "dek": "消息下面写着“已读”，可是对方一直不回，这时候你会怎么想？",
+   "paragraphs": [
+    "艾米丽：小雨，你看起来不太高兴，怎么了？",
+    "小雨：我昨天晚上给阿杰发了一条消息，问他周末要不要一起去逛夜市。他看过了，可是到现在都没回我。",
+    "艾米丽：你怎么知道他看过了？",
+    "小雨：你看，消息下面写着“已读”两个字。在台湾，大家把这种情况叫作“已读不回”。",
+    "艾米丽：哈哈，英语里也有差不多的说法，叫“left on read”。看来不管在哪儿，大家都怕这个。",
+    "小雨：我是不是说错了什么？他是不是不想跟我去？",
+    "艾米丽：别想太多。也许他正在上课，看了一眼就忘了。上次我妈妈从美国给我发消息，我也是看完就把手机放下了，过了半天才想起来回。",
+    "小雨：嗯，你说得对。那我再等等吧。",
+    "艾米丽：哎，你的手机响了！",
+    "小雨：是阿杰！他说：“对不起，昨天看完消息手机就没电了！周末去夜市，好啊！”",
+    "艾米丽：你看，我没说错吧？"
+   ],
+   "paragraphs_en": [
+    "Emily: Xiaoyu, you don't look very happy. What's up?",
+    "Xiaoyu: Last night I sent Ajie a message asking if he wanted to go to the night market with me at the weekend. He's seen it, but he still hasn't replied.",
+    "Emily: How do you know he's seen it?",
+    "Xiaoyu: Look, under the message it says \"read\". In Taiwan, people call this \"已读不回\" – read, but no reply.",
+    "Emily: Haha, English has almost the same expression: \"left on read\". It seems that wherever you are, everybody's afraid of it.",
+    "Xiaoyu: Did I say something wrong? Doesn't he want to go with me?",
+    "Emily: Don't overthink it. Maybe he was in class, glanced at it and forgot. Last time my mum messaged me from the US, I also put my phone down right after reading it and only remembered to reply hours later.",
+    "Xiaoyu: Hmm, you're right. I'll wait a bit longer, then.",
+    "Emily: Hey, your phone's ringing!",
+    "Xiaoyu: It's Ajie! He says: \"Sorry, my phone died right after I read your message yesterday! The night market at the weekend – sure!\"",
+    "Emily: See? Wasn't I right?"
+   ],
+   "paragraphs_de": [
+    "Emily: Xiaoyu, du siehst nicht besonders froh aus. Was ist los?",
+    "Xiaoyu: Ich habe Ajie gestern Abend eine Nachricht geschickt und gefragt, ob er am Wochenende mit mir auf den Nachtmarkt gehen will. Er hat sie gelesen, aber bis jetzt nicht geantwortet.",
+    "Emily: Woher weißt du, dass er sie gelesen hat?",
+    "Xiaoyu: Schau, unter der Nachricht steht „gelesen“. In Taiwan nennt man das „已读不回“ – gelesen, aber keine Antwort.",
+    "Emily: Haha, im Englischen gibt es fast denselben Ausdruck: „left on read“. Offenbar hat jeder davor Angst, egal wo.",
+    "Xiaoyu: Habe ich etwas Falsches gesagt? Will er nicht mit mir hingehen?",
+    "Emily: Mach dir nicht so viele Gedanken. Vielleicht war er gerade in der Vorlesung, hat kurz draufgeschaut und es dann vergessen. Als meine Mama mir letztes Mal aus den USA geschrieben hat, habe ich das Handy nach dem Lesen auch gleich weggelegt und erst Stunden später ans Antworten gedacht.",
+    "Xiaoyu: Hm, du hast recht. Dann warte ich noch ein bisschen.",
+    "Emily: Hey, dein Handy klingelt!",
+    "Xiaoyu: Es ist Ajie! Er schreibt: „Sorry, gestern war mein Akku gleich nach dem Lesen leer! Nachtmarkt am Wochenende – gern!“",
+    "Emily: Siehst du, ich hatte doch recht, oder?"
+   ],
+   "paragraphs_pt": [
+    "Emily: Xiaoyu, você não parece muito feliz. O que foi?",
+    "Xiaoyu: Ontem à noite mandei uma mensagem pro Ajie perguntando se ele queria ir à feira noturna comigo no fim de semana. Ele visualizou, mas até agora não me respondeu.",
+    "Emily: Como você sabe que ele visualizou?",
+    "Xiaoyu: Olha, embaixo da mensagem está escrito \"lida\". Em Taiwan, a gente chama isso de \"已读不回\" – visualizou e não respondeu.",
+    "Emily: Haha, em inglês tem uma expressão quase igual: \"left on read\". Pelo jeito, em qualquer lugar todo mundo tem medo disso.",
+    "Xiaoyu: Será que eu falei alguma coisa errada? Será que ele não quer ir comigo?",
+    "Emily: Não pensa demais. Talvez ele estivesse em aula, deu uma olhada e esqueceu. Da última vez que minha mãe me mandou mensagem dos Estados Unidos, eu também larguei o celular logo depois de ler e só lembrei de responder horas depois.",
+    "Xiaoyu: Hum, você tem razão. Então vou esperar mais um pouco.",
+    "Emily: Ei, seu celular está tocando!",
+    "Xiaoyu: É o Ajie! Ele disse: \"Desculpa, ontem meu celular descarregou logo depois que li a mensagem! Feira noturna no fim de semana? Bora!\"",
+    "Emily: Viu? Eu não falei?"
+   ],
+   "glossary": [
+    {
+     "w": "消息",
+     "p": "xiāo xi",
+     "en": "message; news",
+     "de": "die Nachricht",
+     "pt": "a mensagem"
+    },
+    {
+     "w": "逛",
+     "p": "guàng",
+     "en": "to stroll around; to browse",
+     "de": "bummeln; schlendern",
+     "pt": "passear; dar uma volta"
+    },
+    {
+     "w": "夜市",
+     "p": "yè shì",
+     "en": "night market",
+     "de": "der Nachtmarkt",
+     "pt": "a feira noturna"
+    },
+    {
+     "w": "已读",
+     "p": "yǐ dú",
+     "en": "read (message status)",
+     "de": "gelesen (Status)",
+     "pt": "lida (status da mensagem)"
+    },
+    {
+     "w": "情况",
+     "p": "qíng kuàng",
+     "en": "situation",
+     "de": "die Situation; die Lage",
+     "pt": "a situação"
+    },
+    {
+     "w": "说法",
+     "p": "shuō fa",
+     "en": "way of saying; expression",
+     "de": "der Ausdruck; die Redewendung",
+     "pt": "a expressão; o jeito de dizer"
+    },
+    {
+     "w": "不管",
+     "p": "bù guǎn",
+     "en": "no matter (where/what)",
+     "de": "egal (wo/was)",
+     "pt": "não importa (onde/o quê)"
+    },
+    {
+     "w": "也许",
+     "p": "yě xǔ",
+     "en": "perhaps; maybe",
+     "de": "vielleicht",
+     "pt": "talvez"
+    },
+    {
+     "w": "半天",
+     "p": "bàn tiān",
+     "en": "a long time; half a day",
+     "de": "eine ganze Weile; ein halber Tag",
+     "pt": "um tempão; meio dia"
+    },
+    {
+     "w": "没电",
+     "p": "méi diàn",
+     "en": "(battery) dead; out of power",
+     "de": "Akku leer",
+     "pt": "sem bateria; descarregado"
+    }
+   ],
+   "grammar": "V + 着 describes a state that continues: 消息下面写着“已读” – \"read\" is written (and stays written) under the message. Common with 写, 放, 挂, 坐: 桌子上放着一本书.",
+   "grammar_de": "V + 着 beschreibt einen andauernden Zustand: 消息下面写着“已读” – unter der Nachricht steht „gelesen“. Häufig mit 写, 放, 挂, 坐: 桌子上放着一本书 (Auf dem Tisch liegt ein Buch).",
+   "grammar_pt": "V + 着 descreve um estado que continua: 消息下面写着“已读” – embaixo da mensagem está escrito \"lida\". É comum com 写, 放, 挂, 坐: 桌子上放着一本书 (Tem um livro em cima da mesa).",
+   "questions": [
+    "小雨为什么不高兴？",
+    "“已读不回”是什么意思？",
+    "阿杰为什么昨天没回消息？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK4",
+   "kind": "feature",
+   "section": "网络用语",
+   "title": "你又“凡尔赛”了！",
+   "title_en": "There you go \"Versailles-ing\" again!",
+   "title_de": "Schon wieder „Versailles“!",
+   "title_pt": "Lá vem você com \"Versalhes\" de novo!",
+   "dek": "假装抱怨，其实在炫耀——这种说话方式在网上有个名字。",
+   "paragraphs": [
+    "2020年前后，中文网络上流行起一个词——“凡尔赛”。凡尔赛本来是法国的一座宫殿，可是在网上，它的意思完全不同：用一种看起来很低调、甚至像是在抱怨的方式，悄悄地炫耀自己。这种说话方式被大家叫作“凡尔赛文学”。一般认为，这个说法和日本漫画《凡尔赛玫瑰》有关，因为漫画里的贵族生活总是那么华丽。",
+    "举个例子。有人在网上写：“唉，又被老师表扬了，说我的论文写得太好，让我给全班同学讲一讲，压力好大啊。”表面上他是在抱怨，其实谁都看得出来，他是想让大家知道自己有多优秀。再比如：“这次去巴黎只待了三天，埃菲尔铁塔都看腻了。”",
+    "为什么这个词这么受欢迎？一方面，很多人觉得这种说话方式特别好笑，于是故意模仿，写出各种夸张的“凡尔赛句子”，比一比谁写得更有意思。另一方面，这个词也说出了很多人心里的感觉：直接炫耀已经让人不太舒服了，假装抱怨的炫耀更让人受不了。",
+    "其实，这种现象不只是中文网络才有。英语里有一个意思差不多的词，叫“humblebrag”，就是“谦虚的炫耀”。可见，不管在哪个国家，人们都既希望被别人羡慕，又不想显得太骄傲。",
+    "现在，“凡尔赛”已经成了朋友之间常用的玩笑。如果有人说了一句好像在炫耀的话，别人就会笑着回一句：“你又凡尔赛了！”所以，下次你有好消息想分享的时候，不如大大方方地说出来。真诚的快乐，往往比绕弯子的炫耀更让人喜欢。"
+   ],
+   "paragraphs_en": [
+    "Around 2020, a word took off on the Chinese internet: \"Versailles\" (凡尔赛). Versailles is of course a palace in France, but online the word means something completely different: quietly showing off while sounding modest, or even as if you were complaining. People call this way of talking \"Versailles literature\". It is generally thought that the expression is linked to the Japanese manga The Rose of Versailles, because the aristocratic life in it is always so glamorous.",
+    "Here's an example. Someone writes online: \"Sigh, the teacher praised me again – said my paper was so good that I should present it to the whole class. So much pressure!\" On the surface he's complaining, but anyone can see that he wants everybody to know how brilliant he is. Or another one: \"I was only in Paris for three days this time, and I'm already sick of looking at the Eiffel Tower.\"",
+    "Why is the word so popular? On the one hand, many people find this way of talking hilarious, so they imitate it on purpose and write all kinds of exaggerated \"Versailles sentences\" to see whose is funniest. On the other hand, the word puts into words something many people feel: open bragging is already a bit uncomfortable, but bragging dressed up as complaining is even harder to bear.",
+    "In fact, this isn't something you only find on the Chinese internet. English has a word that means almost the same thing: \"humblebrag\". So it seems that in every country people want to be envied by others, but they don't want to look too proud.",
+    "Today, \"Versailles\" has become a common joke among friends. If someone says something that sounds like showing off, others will laugh and reply: \"There you go Versailles-ing again!\" So next time you have good news to share, why not just say it openly? Honest joy is usually much more likeable than roundabout bragging."
+   ],
+   "paragraphs_de": [
+    "Um 2020 kam im chinesischen Internet ein Wort in Mode: „Versailles“ (凡尔赛). Versailles ist eigentlich ein Schloss in Frankreich, aber online bedeutet das Wort etwas ganz anderes: still und leise anzugeben, während man bescheiden klingt oder sich sogar scheinbar beschwert. Diese Art zu reden nennt man „Versailles-Literatur“. Man nimmt allgemein an, dass der Ausdruck mit dem japanischen Manga Die Rosen von Versailles zusammenhängt, weil das Adelsleben darin immer so prunkvoll ist.",
+    "Ein Beispiel: Jemand schreibt im Netz: „Ach, schon wieder hat mich der Lehrer gelobt – meine Arbeit sei so gut, ich solle sie vor der ganzen Klasse vorstellen. So ein Druck!“ Oberflächlich beschwert er sich, aber jeder merkt, dass er allen zeigen will, wie hervorragend er ist. Oder: „Diesmal war ich nur drei Tage in Paris, und den Eiffelturm kann ich schon nicht mehr sehen.“",
+    "Warum ist das Wort so beliebt? Einerseits finden viele diese Art zu reden sehr lustig, deshalb machen sie sie absichtlich nach und schreiben alle möglichen übertriebenen „Versailles-Sätze“, um zu sehen, wessen Satz am witzigsten ist. Andererseits bringt das Wort ein Gefühl auf den Punkt, das viele haben: Offenes Angeben ist schon unangenehm, aber Angeben, das sich als Beschwerde tarnt, ist noch schwerer zu ertragen.",
+    "Eigentlich gibt es das nicht nur im chinesischen Internet. Im Englischen gibt es ein Wort mit fast derselben Bedeutung: „humblebrag“, also „bescheidenes Angeben“. Offenbar wollen Menschen in jedem Land von anderen beneidet werden, aber nicht zu stolz wirken.",
+    "Heute ist „Versailles“ ein gängiger Scherz unter Freunden. Wenn jemand etwas sagt, das nach Angeben klingt, antworten die anderen lachend: „Schon wieder Versailles!“ Wenn du also das nächste Mal eine gute Nachricht teilen willst, sag sie doch einfach offen. Ehrliche Freude ist meistens viel sympathischer als Angeben über Umwege."
+   ],
+   "paragraphs_pt": [
+    "Por volta de 2020, uma palavra virou moda na internet chinesa: \"Versalhes\" (凡尔赛). Versalhes é, na verdade, um palácio na França, mas na internet a palavra quer dizer algo bem diferente: se exibir de mansinho, parecendo modesto ou até como se estivesse reclamando. Esse jeito de falar ganhou o nome de \"literatura de Versalhes\". Em geral, acredita-se que a expressão tenha a ver com o mangá japonês A Rosa de Versalhes, porque a vida da nobreza nele é sempre luxuosa.",
+    "Um exemplo: alguém escreve na internet: \"Ai, o professor me elogiou de novo – disse que meu trabalho ficou tão bom que eu tenho que apresentar pra turma toda. Que pressão!\" Na aparência ele está reclamando, mas todo mundo percebe que ele quer mostrar como é ótimo. Ou então: \"Dessa vez fiquei só três dias em Paris e já enjoei de ver a Torre Eiffel.\"",
+    "Por que a palavra faz tanto sucesso? Por um lado, muita gente acha esse jeito de falar muito engraçado, então imita de propósito e escreve todo tipo de \"frase de Versalhes\" exagerada, para ver quem escreve a mais divertida. Por outro lado, a palavra expressa algo que muita gente sente: se gabar abertamente já incomoda um pouco, mas se gabar fingindo reclamar é ainda mais difícil de aguentar.",
+    "Na verdade, isso não existe só na internet chinesa. Em inglês há uma palavra quase com o mesmo sentido: \"humblebrag\", ou seja, \"exibir-se com falsa modéstia\". Pelo visto, em qualquer país as pessoas querem ser invejadas, mas não querem parecer orgulhosas demais.",
+    "Hoje, \"Versalhes\" virou uma brincadeira comum entre amigos. Se alguém diz algo que parece exibição, os outros respondem rindo: \"Lá vem você com Versalhes de novo!\" Então, da próxima vez que tiver uma boa notícia para contar, que tal falar abertamente? A alegria sincera costuma agradar muito mais do que a exibição disfarçada."
+   ],
+   "glossary": [
+    {
+     "w": "宫殿",
+     "p": "gōng diàn",
+     "en": "palace",
+     "de": "der Palast; das Schloss",
+     "pt": "o palácio"
+    },
+    {
+     "w": "低调",
+     "p": "dī diào",
+     "en": "low-key; modest",
+     "de": "zurückhaltend; bescheiden",
+     "pt": "discreto; modesto"
+    },
+    {
+     "w": "抱怨",
+     "p": "bào yuàn",
+     "en": "to complain",
+     "de": "sich beschweren; klagen",
+     "pt": "reclamar"
+    },
+    {
+     "w": "炫耀",
+     "p": "xuàn yào",
+     "en": "to show off; to brag",
+     "de": "angeben; prahlen",
+     "pt": "exibir-se; se gabar"
+    },
+    {
+     "w": "贵族",
+     "p": "guì zú",
+     "en": "aristocrat; nobility",
+     "de": "der Adel; der Adlige",
+     "pt": "a nobreza; o nobre"
+    },
+    {
+     "w": "表扬",
+     "p": "biǎo yáng",
+     "en": "to praise",
+     "de": "loben",
+     "pt": "elogiar"
+    },
+    {
+     "w": "看腻",
+     "p": "kàn nì",
+     "en": "to be sick of seeing sth.",
+     "de": "sich sattgesehen haben",
+     "pt": "enjoar de ver"
+    },
+    {
+     "w": "模仿",
+     "p": "mó fǎng",
+     "en": "to imitate",
+     "de": "nachahmen",
+     "pt": "imitar"
+    },
+    {
+     "w": "夸张",
+     "p": "kuā zhāng",
+     "en": "exaggerated",
+     "de": "übertrieben",
+     "pt": "exagerado"
+    },
+    {
+     "w": "羡慕",
+     "p": "xiàn mù",
+     "en": "to envy; to admire",
+     "de": "beneiden",
+     "pt": "invejar; admirar"
+    },
+    {
+     "w": "骄傲",
+     "p": "jiāo ào",
+     "en": "proud; arrogant",
+     "de": "stolz; hochmütig",
+     "pt": "orgulhoso; convencido"
+    },
+    {
+     "w": "绕弯子",
+     "p": "rào wān zi",
+     "en": "to beat around the bush",
+     "de": "um den heißen Brei herumreden",
+     "pt": "fazer rodeios"
+    }
+   ],
+   "grammar": "一方面……，另一方面…… (\"on the one hand …, on the other hand …\") lists two reasons or sides of one topic. It is typical when you explain why something happens: 一方面很多人觉得好笑，另一方面这个词说出了大家的感觉.",
+   "grammar_de": "一方面……，另一方面…… („einerseits …, andererseits …“) nennt zwei Gründe oder Seiten eines Themas. Typisch, wenn man erklärt, warum etwas so ist: 一方面很多人觉得好笑，另一方面这个词说出了大家的感觉.",
+   "grammar_pt": "一方面……，另一方面…… (\"por um lado …, por outro lado …\") apresenta dois motivos ou dois lados de um assunto. É típico quando se explica por que algo acontece: 一方面很多人觉得好笑，另一方面这个词说出了大家的感觉.",
+   "questions": [
+    "在网上，“凡尔赛”是什么意思？",
+    "为什么很多人喜欢模仿“凡尔赛文学”？",
+    "英语里哪个词和“凡尔赛”意思差不多？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK5",
+   "kind": "feature",
+   "section": "网络用语",
+   "title": "一条六十秒的语音",
+   "title_en": "A sixty-second voice message",
+   "title_de": "Eine Sprachnachricht von sechzig Sekunden",
+   "title_pt": "Um áudio de sessenta segundos",
+   "dek": "打字还是发语音？在柏林合租的那一年，我对这个问题有了新的看法。",
+   "paragraphs": [
+    "在柏林读书的第一年，我和一位德国同学合租一套公寓。有一天，她看着我的手机，一脸疑惑地问：“你妈妈怎么一次发这么多条语音？每条都这么长！”我低头一看，屏幕上果然整整齐齐地排着七八条语音消息，每一条都是六十秒——这正是微信单条语音的最长时间。我早就习惯了这样的“语音轰炸”，这才意识到，在别人眼里，这竟然是一件挺新鲜的事。",
+    "在中文网络上，关于语音消息的争论由来已久。支持的人认为，打字太慢，尤其是对长辈来说，按住按钮说几句话，既方便又亲切，还能听出对方的语气。反对的人则抱怨，语音没办法快速浏览，必须从头听到尾；在地铁上、开会时更是不方便播放。不少人开玩笑说，最怕收到的，就是一连串六十秒的语音。",
+    "有意思的是，我的德国室友对这件事也有自己的看法。她说，她身边发语音的人也越来越多，可她自己更习惯打字，因为文字一目了然，想什么时候看都行，还能随时回头查找。而她的一位巴西朋友却恰恰相反，几乎只发语音，说这样聊天才有感觉。",
+    "后来我发现，这两种方式其实各有千秋。文字言简意赅，适合传递信息，比如约时间、发地址；语音则带着温度，适合表达感情。妈妈那几条长长的语音，内容无非是“天冷了，多穿点儿衣服”“别老吃面包，要吃点儿热的”，写成文字也许只有两三行。可是听着她熟悉的声音，我觉得家好像也没那么远了。",
+    "如今，我给自己定了一个小规矩：工作上的事情用文字，跟家人聊天用语音；如果非发语音不可，就尽量控制在三十秒以内，先说重点。毕竟，沟通方式本身没有绝对的好坏，关键在于设身处地地为对方着想，让对方听得舒服、看得方便，做到恰到好处。"
+   ],
+   "paragraphs_en": [
+    "In my first year as a student in Berlin, I shared a flat with a German classmate. One day she looked at my phone and asked, puzzled: \"Why does your mum send so many voice messages in one go? And every one is so long!\" I looked down, and sure enough, there were seven or eight voice messages neatly lined up on the screen, each one sixty seconds long – exactly the maximum length of a single voice message on WeChat. I had long been used to this kind of \"voice-message bombardment\", and only then did I realise that to other people it was actually something quite new.",
+    "On the Chinese internet, people have argued about voice messages for a long time. Supporters say typing is too slow, especially for older relatives: holding down a button and saying a few words is convenient and warm, and you can hear the other person's tone of voice. Opponents complain that you can't skim a voice message – you have to listen from start to finish – and that it's even more awkward to play one on the underground or in a meeting. Many people joke that the message they dread most is a whole string of sixty-second voice messages.",
+    "Interestingly, my German flatmate had her own view on this. She said more and more people around her were sending voice messages too, but she herself preferred typing, because text can be taken in at a glance, read whenever you like, and searched again at any time. One of her Brazilian friends, on the other hand, was the exact opposite: she sent almost nothing but voice messages, saying that was the only way chatting felt real.",
+    "Later I realised that each of the two has its own merits. Text is short and to the point, good for passing on information, like arranging a time or sending an address; voice carries warmth and is good for expressing feelings. My mum's long voice messages were really nothing more than \"It's getting cold, wear more layers\" and \"Don't keep eating bread, have something hot\" – written down, they might have been just two or three lines. But listening to her familiar voice, home didn't seem quite so far away.",
+    "These days I have a little rule for myself: text for work, voice for chatting with family; and if I really have to send a voice message, I try to keep it under thirty seconds and say the main point first. After all, no way of communicating is absolutely good or bad in itself. What matters is putting yourself in the other person's shoes, making it pleasant for them to listen and easy for them to read – getting it just right."
+   ],
+   "paragraphs_de": [
+    "In meinem ersten Studienjahr in Berlin wohnte ich mit einer deutschen Kommilitonin in einer WG. Eines Tages sah sie auf mein Handy und fragte verwundert: „Warum schickt deine Mutter so viele Sprachnachrichten auf einmal? Und jede ist so lang!“ Ich schaute hin, und tatsächlich standen sieben oder acht Sprachnachrichten ordentlich untereinander auf dem Bildschirm, jede genau sechzig Sekunden lang – genau die Höchstdauer einer einzelnen Sprachnachricht bei WeChat. Ich war an dieses „Sprachnachrichten-Bombardement“ längst gewöhnt und merkte erst da, dass es für andere etwas ziemlich Neues war.",
+    "Im chinesischen Internet wird schon lange über Sprachnachrichten gestritten. Die Befürworter finden, Tippen sei zu langsam, besonders für Ältere: Einen Knopf gedrückt halten und ein paar Sätze sagen sei bequem und herzlich, und man höre auch den Tonfall des anderen. Die Gegner beklagen, dass man Sprachnachrichten nicht schnell überfliegen kann, sondern sie von Anfang bis Ende anhören muss; in der U-Bahn oder in einer Besprechung lassen sie sich noch schlechter abspielen. Viele scherzen, am meisten fürchte man eine ganze Reihe von Sechzig-Sekunden-Nachrichten.",
+    "Interessanterweise hatte meine deutsche Mitbewohnerin dazu ihre eigene Meinung. Sie erzählte, dass auch in ihrem Umfeld immer mehr Leute Sprachnachrichten schicken, sie selbst aber lieber tippt, weil man Text auf einen Blick erfasst, ihn lesen kann, wann man will, und jederzeit wiederfindet. Eine brasilianische Freundin von ihr dagegen machte es genau umgekehrt: Sie schickte fast nur Sprachnachrichten und meinte, nur so fühle sich Chatten richtig an.",
+    "Später merkte ich, dass beide Formen ihre Vorzüge haben. Text ist knapp und präzise und eignet sich, um Informationen weiterzugeben, etwa einen Termin auszumachen oder eine Adresse zu schicken; Sprache transportiert Wärme und eignet sich, um Gefühle auszudrücken. Die langen Sprachnachrichten meiner Mutter enthielten eigentlich nur „Es wird kalt, zieh dich warm an“ und „Iss nicht immer nur Brot, iss mal etwas Warmes“ – aufgeschrieben wären es vielleicht zwei, drei Zeilen gewesen. Aber wenn ich ihre vertraute Stimme hörte, kam mir mein Zuhause nicht mehr ganz so weit weg vor.",
+    "Heute habe ich mir eine kleine Regel gesetzt: Berufliches per Text, Gespräche mit der Familie per Sprachnachricht; und wenn es unbedingt eine Sprachnachricht sein muss, versuche ich, unter dreißig Sekunden zu bleiben und das Wichtigste zuerst zu sagen. Schließlich ist keine Art der Kommunikation an sich absolut gut oder schlecht. Entscheidend ist, sich in den anderen hineinzuversetzen, damit er angenehm zuhören und bequem lesen kann – also genau das richtige Maß zu finden."
+   ],
+   "paragraphs_pt": [
+    "No meu primeiro ano de estudos em Berlim, eu dividia um apartamento com uma colega alemã. Um dia, ela olhou para o meu celular e perguntou, intrigada: \"Por que a sua mãe manda tantos áudios de uma vez? E cada um é tão comprido!\" Olhei para baixo e, de fato, lá estavam sete ou oito áudios enfileirados na tela, cada um com sessenta segundos – justamente a duração máxima de um único áudio no WeChat. Eu já tinha me acostumado com esse \"bombardeio de áudios\" e só então percebi que, para os outros, aquilo era uma novidade e tanto.",
+    "Na internet chinesa, a discussão sobre mensagens de voz é antiga. Quem defende diz que digitar é lento demais, principalmente para os mais velhos: apertar um botão e falar umas frases é prático e caloroso, e ainda dá para ouvir o tom de voz da pessoa. Quem é contra reclama que não dá para passar o olho num áudio – é preciso ouvir do começo ao fim – e que no metrô ou numa reunião é ainda mais complicado tocar um. Muita gente brinca que a mensagem mais temida é uma sequência de áudios de sessenta segundos.",
+    "O curioso é que minha colega alemã também tinha sua opinião sobre isso. Ela contou que cada vez mais gente ao seu redor manda áudios, mas que ela prefere digitar, porque o texto se entende de uma olhada, dá para ler quando quiser e encontrar de novo a qualquer momento. Já uma amiga brasileira dela era exatamente o contrário: mandava quase só áudios e dizia que só assim a conversa tinha graça.",
+    "Depois percebi que as duas formas têm cada uma suas vantagens. O texto é curto e direto, bom para passar informações, como marcar um horário ou mandar um endereço; o áudio tem calor humano, bom para expressar sentimentos. Os áudios compridos da minha mãe não diziam nada além de \"Esfriou, se agasalhe\" e \"Não fique só comendo pão, coma alguma coisa quente\" – por escrito, talvez dessem duas ou três linhas. Mas, ouvindo aquela voz tão conhecida, eu sentia que a minha casa não estava tão longe assim.",
+    "Hoje tenho uma pequena regra: assuntos de trabalho por texto, conversa com a família por áudio; e, se for preciso mesmo mandar áudio, tento ficar abaixo dos trinta segundos e dizer o principal primeiro. Afinal, nenhuma forma de comunicação é absolutamente boa ou ruim em si. O que importa é se colocar no lugar do outro, para que seja agradável ouvir e fácil ler – na medida certa."
+   ],
+   "glossary": [
+    {
+     "w": "合租",
+     "p": "hé zū",
+     "en": "to rent together; to share a flat",
+     "de": "sich eine Wohnung teilen",
+     "pt": "dividir o aluguel"
+    },
+    {
+     "w": "疑惑",
+     "p": "yí huò",
+     "en": "puzzled; doubtful",
+     "de": "verwundert; zweifelnd",
+     "pt": "intrigado; em dúvida"
+    },
+    {
+     "w": "由来已久",
+     "p": "yóu lái yǐ jiǔ",
+     "en": "idiom: to have existed for a long time",
+     "de": "Redewendung: schon lange bestehen",
+     "pt": "expressão: existir há muito tempo"
+    },
+    {
+     "w": "长辈",
+     "p": "zhǎng bèi",
+     "en": "elders; older relatives",
+     "de": "die Älteren; die ältere Generation",
+     "pt": "os mais velhos; os parentes mais velhos"
+    },
+    {
+     "w": "浏览",
+     "p": "liú lǎn",
+     "en": "to skim; to browse",
+     "de": "überfliegen; durchsehen",
+     "pt": "passar os olhos; navegar"
+    },
+    {
+     "w": "一目了然",
+     "p": "yí mù liǎo rán",
+     "en": "idiom: clear at a glance",
+     "de": "Redewendung: auf einen Blick klar",
+     "pt": "expressão: claro à primeira vista"
+    },
+    {
+     "w": "恰恰相反",
+     "p": "qià qià xiāng fǎn",
+     "en": "just the opposite",
+     "de": "genau das Gegenteil",
+     "pt": "exatamente o contrário"
+    },
+    {
+     "w": "各有千秋",
+     "p": "gè yǒu qiān qiū",
+     "en": "idiom: each has its own merits",
+     "de": "Redewendung: jedes hat seine Vorzüge",
+     "pt": "expressão: cada um tem seus méritos"
+    },
+    {
+     "w": "言简意赅",
+     "p": "yán jiǎn yì gāi",
+     "en": "idiom: concise and to the point",
+     "de": "Redewendung: knapp und treffend",
+     "pt": "expressão: conciso e direto"
+    },
+    {
+     "w": "无非",
+     "p": "wú fēi",
+     "en": "nothing but; merely",
+     "de": "nichts anderes als; bloß",
+     "pt": "nada mais que; apenas"
+    },
+    {
+     "w": "设身处地",
+     "p": "shè shēn chǔ dì",
+     "en": "idiom: to put oneself in another's shoes",
+     "de": "Redewendung: sich in jemanden hineinversetzen",
+     "pt": "expressão: colocar-se no lugar do outro"
+    },
+    {
+     "w": "恰到好处",
+     "p": "qià dào hǎo chù",
+     "en": "idiom: just right; to a T",
+     "de": "Redewendung: genau richtig; im rechten Maß",
+     "pt": "expressão: na medida certa"
+    }
+   ],
+   "grammar": "非……不可 means \"must, have no choice but to\": 如果非发语音不可 – if I absolutely have to send a voice message. Put the verb phrase between 非 and 不可; it sounds stronger than 必须.",
+   "grammar_de": "非……不可 bedeutet „unbedingt müssen, keine andere Wahl haben“: 如果非发语音不可 – wenn ich unbedingt eine Sprachnachricht schicken muss. Die Verbgruppe steht zwischen 非 und 不可; es klingt stärker als 必须.",
+   "grammar_pt": "非……不可 quer dizer \"ter de qualquer jeito, não ter outra opção\": 如果非发语音不可 – se eu tiver mesmo que mandar um áudio. O verbo fica entre 非 e 不可; soa mais forte que 必须.",
+   "questions": [
+    "作者的德国室友为什么觉得奇怪？",
+    "支持和反对语音消息的人分别有什么理由？",
+    "作者现在给自己定了什么规矩？"
+   ],
+   "sources": []
+  }
+ ]
+}
