@@ -1,0 +1,639 @@
+{
+ "date": "2026-10-29",
+ "createdBy": "claude",
+ "items": [
+  {
+   "lang": "zh",
+   "level": "HSK1",
+   "kind": "story",
+   "section": "学习",
+   "title": "我会写我的名字",
+   "title_en": "I can write my name",
+   "title_de": "Ich kann meinen Namen schreiben",
+   "title_pt": "Eu sei escrever meu nome",
+   "paragraphs": [
+    "我叫艾米丽，我七岁。我家在美国纽约。",
+    "星期一到星期五，我去学校。星期六上午，我去中文学校。",
+    "中文课九点开始，十一点半下课。我们班有十二个同学。",
+    "今天王老师说：“你们写一写自己的中文名字。”",
+    "我的中文名字是李美美。我写了十分钟，都写对了！",
+    "妈妈看了，说：“很好！”我很高兴。"
+   ],
+   "paragraphs_en": [
+    "My name is Emily. I am seven years old. My family lives in New York, in the US.",
+    "From Monday to Friday, I go to school. On Saturday morning, I go to Chinese school.",
+    "Chinese class starts at nine and ends at half past eleven. There are twelve children in our class.",
+    "Today Ms Wang said: “Have a go at writing your own Chinese names.”",
+    "My Chinese name is Li Meimei. I wrote for ten minutes, and I got it all right!",
+    "Mum looked at it and said: “Very good!” I was very happy."
+   ],
+   "paragraphs_de": [
+    "Ich heiße Emily und bin sieben Jahre alt. Meine Familie wohnt in New York, in den USA.",
+    "Von Montag bis Freitag gehe ich in die Schule. Am Samstagvormittag gehe ich in die Chinesischschule.",
+    "Der Chinesischunterricht fängt um neun Uhr an und ist um halb zwölf zu Ende. In unserer Klasse sind zwölf Kinder.",
+    "Heute hat Frau Wang gesagt: „Versucht mal, euren eigenen chinesischen Namen zu schreiben.“",
+    "Mein chinesischer Name ist Li Meimei. Ich habe zehn Minuten geschrieben, und alles war richtig!",
+    "Mama hat es angeschaut und gesagt: „Sehr gut!“ Ich habe mich sehr gefreut."
+   ],
+   "paragraphs_pt": [
+    "Meu nome é Emily e eu tenho sete anos. Minha família mora em Nova York, nos Estados Unidos.",
+    "De segunda a sexta, eu vou à escola. No sábado de manhã, eu vou à escola de chinês.",
+    "A aula de chinês começa às nove e termina às onze e meia. Na nossa turma há doze alunos.",
+    "Hoje a professora Wang disse: “Tentem escrever o seu nome em chinês.”",
+    "Meu nome em chinês é Li Meimei. Eu escrevi durante dez minutos e acertei tudo!",
+    "A mamãe olhou e disse: “Muito bem!” Eu fiquei muito feliz."
+   ],
+   "glossary": [
+    {
+     "w": "纽约",
+     "p": "niǔ yuē",
+     "en": "New York",
+     "de": "New York",
+     "pt": "Nova York"
+    },
+    {
+     "w": "星期六",
+     "p": "xīng qī liù",
+     "en": "Saturday",
+     "de": "der Samstag",
+     "pt": "o sábado"
+    },
+    {
+     "w": "开始",
+     "p": "kāi shǐ",
+     "en": "to start",
+     "de": "anfangen; beginnen",
+     "pt": "começar"
+    },
+    {
+     "w": "下课",
+     "p": "xià kè",
+     "en": "class ends; to finish class",
+     "de": "der Unterricht ist aus",
+     "pt": "terminar a aula"
+    },
+    {
+     "w": "同学",
+     "p": "tóng xué",
+     "en": "classmate",
+     "de": "der Mitschüler / die Mitschülerin",
+     "pt": "o colega de turma"
+    },
+    {
+     "w": "自己",
+     "p": "zì jǐ",
+     "en": "oneself; own",
+     "de": "selbst; eigen",
+     "pt": "próprio; si mesmo"
+    },
+    {
+     "w": "名字",
+     "p": "míng zi",
+     "en": "name",
+     "de": "der Name",
+     "pt": "o nome"
+    },
+    {
+     "w": "高兴",
+     "p": "gāo xìng",
+     "en": "happy; glad",
+     "de": "froh; glücklich",
+     "pt": "feliz; contente"
+    }
+   ],
+   "grammar": "写一写 repeats the verb with 一 in the middle (V一V). It makes a request softer and lighter: “have a go at writing”, “write it for a bit”. You can say 看一看 or 听一听 in the same way.",
+   "grammar_de": "写一写 wiederholt das Verb mit 一 in der Mitte (V一V). So klingt eine Bitte weicher und leichter: „schreib mal kurz“, „versuch mal zu schreiben“. Genauso sagt man 看一看 oder 听一听.",
+   "grammar_pt": "写一写 repete o verbo com 一 no meio (V一V). Isso deixa o pedido mais leve e gentil: “tente escrever”, “escreva um pouquinho”. Do mesmo jeito se diz 看一看 ou 听一听.",
+   "questions": [
+    "艾米丽星期几去中文学校？",
+    "中文课几点下课？",
+    "艾米丽的中文名字是什么？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "feature",
+   "section": "学习",
+   "title": "先写哪一笔？",
+   "title_en": "Which stroke comes first?",
+   "title_de": "Welcher Strich kommt zuerst?",
+   "title_pt": "Qual traço vem primeiro?",
+   "paragraphs": [
+    "学中文的时候，很多人觉得汉字很难。一个字常常有好几笔，先写哪一笔，后写哪一笔呢？",
+    "其实，写汉字有几个简单的规则。比如“十”，要先写横，再写竖。“三”要从上往下写。“八”要先写左边，再写右边。",
+    "为什么要按顺序写呢？因为顺序对了，字就写得又快又好看，所以老师常常让学生多练习。",
+    "刚开始的时候，你可以每天写五个字。写的时候小声数一数：一、二、三……慢慢地，你的手就记住了。"
+   ],
+   "paragraphs_en": [
+    "When people learn Chinese, many find characters difficult. A character often has quite a few strokes – which stroke do you write first, and which one later?",
+    "In fact, there are a few simple rules for writing characters. For example, for “十” (ten) you write the horizontal stroke first, then the vertical one. “三” (three) is written from top to bottom. For “八” (eight) you write the left side first, then the right.",
+    "Why should you write in order? Because when the order is right, your characters come out both quick and neat, so teachers often have students practise a lot.",
+    "When you're just starting, you can write five characters a day. As you write, count quietly: one, two, three … Little by little, your hand will remember."
+   ],
+   "paragraphs_de": [
+    "Wer Chinesisch lernt, findet die Schriftzeichen oft schwer. Ein Zeichen hat häufig ziemlich viele Striche – welchen schreibt man zuerst, welchen danach?",
+    "Dabei gibt es ein paar einfache Regeln für das Schreiben der Zeichen. Bei „十“ (zehn) zum Beispiel schreibt man zuerst den waagerechten, dann den senkrechten Strich. „三“ (drei) schreibt man von oben nach unten. Bei „八“ (acht) schreibt man zuerst die linke, dann die rechte Seite.",
+    "Warum sollte man in der richtigen Reihenfolge schreiben? Weil die Zeichen dann schnell und schön werden. Deshalb lassen Lehrer ihre Schüler oft viel üben.",
+    "Am Anfang kannst du jeden Tag fünf Zeichen schreiben. Zähl beim Schreiben leise mit: eins, zwei, drei … Nach und nach merkt sich deine Hand die Striche."
+   ],
+   "paragraphs_pt": [
+    "Quando estudam chinês, muitas pessoas acham os caracteres difíceis. Um caractere muitas vezes tem vários traços – qual se escreve primeiro e qual depois?",
+    "Na verdade, existem algumas regras simples para escrever os caracteres. Por exemplo, em “十” (dez) primeiro se escreve o traço horizontal e depois o vertical. “三” (três) se escreve de cima para baixo. Em “八” (oito) primeiro se escreve o lado esquerdo e depois o direito.",
+    "Por que escrever na ordem certa? Porque, com a ordem certa, os caracteres saem rápidos e bonitos; por isso os professores muitas vezes pedem que os alunos pratiquem bastante.",
+    "No começo, você pode escrever cinco caracteres por dia. Enquanto escreve, conte baixinho: um, dois, três… Pouco a pouco, sua mão vai memorizar."
+   ],
+   "glossary": [
+    {
+     "w": "笔",
+     "p": "bǐ",
+     "en": "stroke (of a character); pen",
+     "de": "der Strich; der Stift",
+     "pt": "o traço; a caneta"
+    },
+    {
+     "w": "其实",
+     "p": "qí shí",
+     "en": "actually; in fact",
+     "de": "eigentlich; tatsächlich",
+     "pt": "na verdade"
+    },
+    {
+     "w": "规则",
+     "p": "guī zé",
+     "en": "rule",
+     "de": "die Regel",
+     "pt": "a regra"
+    },
+    {
+     "w": "横",
+     "p": "héng",
+     "en": "horizontal stroke",
+     "de": "der waagerechte Strich",
+     "pt": "o traço horizontal"
+    },
+    {
+     "w": "竖",
+     "p": "shù",
+     "en": "vertical stroke",
+     "de": "der senkrechte Strich",
+     "pt": "o traço vertical"
+    },
+    {
+     "w": "顺序",
+     "p": "shùn xù",
+     "en": "order; sequence",
+     "de": "die Reihenfolge",
+     "pt": "a ordem; a sequência"
+    },
+    {
+     "w": "练习",
+     "p": "liàn xí",
+     "en": "to practise",
+     "de": "üben",
+     "pt": "praticar"
+    },
+    {
+     "w": "记住",
+     "p": "jì zhu",
+     "en": "to remember; to memorise",
+     "de": "sich merken",
+     "pt": "memorizar; lembrar"
+    }
+   ],
+   "grammar": "先……再…… means “first …, then …”: 先写横，再写竖 “first write the horizontal stroke, then the vertical one”. 先 and 再 both go before the verb.",
+   "grammar_de": "先……再…… bedeutet „zuerst …, dann …“: 先写横，再写竖 „zuerst den waagerechten, dann den senkrechten Strich schreiben“. 先 und 再 stehen beide vor dem Verb.",
+   "grammar_pt": "先……再…… quer dizer “primeiro…, depois…”: 先写横，再写竖 “primeiro escreva o traço horizontal, depois o vertical”. 先 e 再 vêm antes do verbo.",
+   "questions": [
+    "写“十”的时候，先写哪一笔？",
+    "为什么要按顺序写汉字？",
+    "刚开始的时候，每天可以写几个字？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK3",
+   "kind": "dialogue",
+   "section": "学习与工作",
+   "title": "叫我索菲就行",
+   "title_en": "Just call me Sophie",
+   "title_de": "Sag einfach Sophie zu mir",
+   "title_pt": "Pode me chamar de Sophie",
+   "dek": "在德国的公司里，同事之间应该说“你”还是“您”？",
+   "paragraphs": [
+    "索菲：你好！你是新来的同事吧？我叫索菲，欢迎你！",
+    "王明：您好！我叫王明。我以前没在德国工作过，今天第一天上班，有点儿紧张。",
+    "索菲：别紧张。还有，你不用说“您”。在我们公司，大家都说“你”，也直接叫名字。",
+    "王明：直接叫名字？连老板也叫名字吗？",
+    "索菲：对啊。我们老板叫托马斯，大家都叫他托马斯。",
+    "王明：我在中国的时候，同事们叫老板“张总”或者“王经理”，很少直接叫名字。",
+    "索菲：其实德国也不是每个公司都这样。在比较传统的大公司，大家还是说“您”，叫姓，比如“米勒先生”。我们是一家年轻的小公司，所以比较随便。",
+    "王明：明白了。那我也不用穿西服了吧？我今天穿得比你们正式多了。",
+    "索菲：哈哈，没关系！走，我先带你去喝杯咖啡，再给你介绍别的同事。"
+   ],
+   "paragraphs_en": [
+    "Sophie: Hi! You must be our new colleague? I'm Sophie – welcome!",
+    "Wang Ming: Hello (polite)! I'm Wang Ming. I've never worked in Germany before, and today is my first day, so I'm a bit nervous.",
+    "Sophie: Don't be nervous. And you don't need to use the polite “you”. In our company everyone uses the informal “you” and goes by first names.",
+    "Wang Ming: First names? Even for the boss?",
+    "Sophie: Yes. Our boss is called Thomas, and everyone calls him Thomas.",
+    "Wang Ming: When I was in China, my colleagues called the boss “Director Zhang” or “Manager Wang”. They hardly ever used first names.",
+    "Sophie: Actually, not every company in Germany is like this. In more traditional big companies, people still use the polite “you” and surnames, like “Mr Müller”. We're a young, small company, so we're quite relaxed.",
+    "Wang Ming: I see. So I don't need to wear a suit either, right? I'm dressed much more formally than all of you today.",
+    "Sophie: Haha, never mind! Come on, first I'll take you for a coffee, then I'll introduce you to the other colleagues."
+   ],
+   "paragraphs_de": [
+    "Sophie: Hallo! Du bist bestimmt der neue Kollege? Ich bin Sophie – willkommen!",
+    "Wang Ming: Guten Tag! Ich heiße Wang Ming. Ich habe noch nie in Deutschland gearbeitet, heute ist mein erster Tag, und ich bin ein bisschen nervös.",
+    "Sophie: Keine Sorge. Und du musst nicht „Sie“ sagen. In unserer Firma duzen sich alle und sprechen sich mit Vornamen an.",
+    "Wang Ming: Mit Vornamen? Sogar den Chef?",
+    "Sophie: Ja. Unser Chef heißt Thomas, und alle nennen ihn Thomas.",
+    "Wang Ming: Als ich in China war, haben die Kollegen den Chef „Direktor Zhang“ oder „Manager Wang“ genannt. Mit Vornamen hat man ihn fast nie angesprochen.",
+    "Sophie: Eigentlich ist es auch in Deutschland nicht in jeder Firma so. In eher traditionellen großen Firmen siezt man sich noch und benutzt den Nachnamen, zum Beispiel „Herr Müller“. Wir sind eine junge, kleine Firma, deshalb ist es bei uns ziemlich locker.",
+    "Wang Ming: Verstehe. Dann brauche ich wohl auch keinen Anzug? Ich bin heute viel förmlicher angezogen als ihr.",
+    "Sophie: Haha, macht nichts! Komm, ich nehme dich erst mal auf einen Kaffee mit und stelle dir dann die anderen Kollegen vor."
+   ],
+   "paragraphs_pt": [
+    "Sophie: Oi! Você é o colega novo, né? Eu sou a Sophie – seja bem-vindo!",
+    "Wang Ming: Olá (formal)! Meu nome é Wang Ming. Eu nunca trabalhei na Alemanha antes, hoje é o meu primeiro dia e estou um pouco nervoso.",
+    "Sophie: Fica tranquilo. E você não precisa usar o tratamento formal. Na nossa empresa todo mundo se trata de “você” e se chama pelo primeiro nome.",
+    "Wang Ming: Pelo primeiro nome? Até o chefe?",
+    "Sophie: Sim. Nosso chefe se chama Thomas, e todo mundo o chama de Thomas.",
+    "Wang Ming: Quando eu estava na China, os colegas chamavam o chefe de “diretor Zhang” ou “gerente Wang”. Quase nunca usavam o primeiro nome.",
+    "Sophie: Na verdade, nem toda empresa na Alemanha é assim. Em empresas grandes mais tradicionais, as pessoas ainda usam o tratamento formal e o sobrenome, por exemplo “senhor Müller”. Nós somos uma empresa pequena e jovem, por isso somos bem descontraídos.",
+    "Wang Ming: Entendi. Então também não preciso usar terno, né? Hoje estou vestido de um jeito muito mais formal que vocês.",
+    "Sophie: Haha, não tem problema! Vem, primeiro vou te levar para tomar um café e depois te apresento aos outros colegas."
+   ],
+   "glossary": [
+    {
+     "w": "同事",
+     "p": "tóng shì",
+     "en": "colleague",
+     "de": "der Kollege / die Kollegin",
+     "pt": "o colega de trabalho"
+    },
+    {
+     "w": "欢迎",
+     "p": "huān yíng",
+     "en": "to welcome",
+     "de": "willkommen heißen",
+     "pt": "dar as boas-vindas"
+    },
+    {
+     "w": "紧张",
+     "p": "jǐn zhāng",
+     "en": "nervous",
+     "de": "nervös",
+     "pt": "nervoso"
+    },
+    {
+     "w": "直接",
+     "p": "zhí jiē",
+     "en": "directly",
+     "de": "direkt",
+     "pt": "diretamente"
+    },
+    {
+     "w": "老板",
+     "p": "lǎo bǎn",
+     "en": "boss",
+     "de": "der Chef / die Chefin",
+     "pt": "o chefe"
+    },
+    {
+     "w": "经理",
+     "p": "jīng lǐ",
+     "en": "manager",
+     "de": "der Manager; der Geschäftsführer",
+     "pt": "o gerente"
+    },
+    {
+     "w": "传统",
+     "p": "chuán tǒng",
+     "en": "traditional",
+     "de": "traditionell",
+     "pt": "tradicional"
+    },
+    {
+     "w": "随便",
+     "p": "suí biàn",
+     "en": "casual; relaxed",
+     "de": "locker; zwanglos",
+     "pt": "descontraído; informal"
+    },
+    {
+     "w": "西服",
+     "p": "xī fú",
+     "en": "suit (Western-style)",
+     "de": "der Anzug",
+     "pt": "o terno"
+    },
+    {
+     "w": "正式",
+     "p": "zhèng shì",
+     "en": "formal",
+     "de": "förmlich; formell",
+     "pt": "formal"
+    },
+    {
+     "w": "介绍",
+     "p": "jiè shào",
+     "en": "to introduce",
+     "de": "vorstellen",
+     "pt": "apresentar"
+    }
+   ],
+   "grammar": "连……也…… means “even …”: 连老板也叫名字吗？ “Do you call even the boss by his first name?” Put the surprising person or thing after 连, and 也 (or 都) before the verb.",
+   "grammar_de": "连……也…… bedeutet „sogar …“: 连老板也叫名字吗？ „Nennt man sogar den Chef beim Vornamen?“ Die überraschende Person oder Sache steht nach 连, und 也 (oder 都) steht vor dem Verb.",
+   "grammar_pt": "连……也…… quer dizer “até…”: 连老板也叫名字吗？ “Até o chefe vocês chamam pelo primeiro nome?” A pessoa ou coisa surpreendente vem depois de 连, e 也 (ou 都) vem antes do verbo.",
+   "questions": [
+    "在索菲的公司里，大家怎么叫老板？",
+    "在比较传统的大公司，大家怎么说话？",
+    "王明今天为什么觉得自己穿得太正式了？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK4",
+   "kind": "feature",
+   "section": "学习与工作",
+   "title": "上大学前，先停一年？",
+   "title_en": "Take a year off before university?",
+   "title_de": "Vor dem Studium ein Jahr Pause?",
+   "title_pt": "Um ano de pausa antes da faculdade?",
+   "dek": "在英国，有些年轻人高中毕业以后，会先给自己一个“间隔年”。",
+   "paragraphs": [
+    "在英国，有一个说法叫“gap year”，中文一般翻译成“间隔年”。意思是：年轻人高中毕业以后，不马上去上大学，而是先用一年左右的时间做别的事情，比如工作、旅行或者当志愿者。",
+    "不少英国大学允许学生推迟一年入学：学生先拿到大学的录取，第二年再去上课。所以，选择间隔年并不意味着放弃上大学。",
+    "那么，间隔年里大家都做些什么呢？有的人在超市或者咖啡馆打工，为以后的学习存点儿钱；有的人去别的国家旅行，顺便学一门外语；还有的人去当志愿者，帮助需要帮助的人。也有人去上一些短期课程，学做饭、学开车，或者学一门手艺。",
+    "支持的人认为，间隔年能让年轻人更了解自己：自己到底喜欢什么，以后想学什么专业。经过一年的工作和生活，很多人回到学校以后，学习的目标更清楚了。",
+    "不过，也有人担心：休息了一年，再回去学习会不会不习惯？另外，出国旅行要花不少钱，并不是每个家庭都负担得起。所以，间隔年也不一定要走很远，在家附近工作一年，同样能学到很多东西。",
+    "在中文世界里，大部分学生高中毕业以后就直接上大学，间隔年还比较少见。如果是你，你会给自己一个间隔年吗？你会用这一年做什么？"
+   ],
+   "paragraphs_en": [
+    "In the UK there's an expression, “gap year”, which is usually translated into Chinese as 间隔年. It means that after finishing secondary school, young people don't go straight to university but first spend about a year doing something else – working, travelling or volunteering, for example.",
+    "Quite a few British universities allow students to defer their start by a year: students get their university place first and begin classes the following year. So choosing a gap year doesn't mean giving up on university.",
+    "So what do people do during a gap year? Some work in a supermarket or a café to save a bit of money for their studies; some travel to other countries and pick up a foreign language along the way; others volunteer and help people who need it. Others take short courses to learn to cook, to drive, or to learn a craft.",
+    "Supporters believe that a gap year helps young people understand themselves better: what they really like and what subject they want to study. After a year of working and living, many people come back to their studies with clearer goals.",
+    "However, some people worry: after a year's break, will it be hard to get used to studying again? Besides, travelling abroad costs quite a lot, and not every family can afford it. So a gap year doesn't have to take you far – working near home for a year can teach you just as much.",
+    "In the Chinese-speaking world, most students go straight to university after secondary school, and gap years are still fairly rare. What about you – would you give yourself a gap year? What would you do with it?"
+   ],
+   "paragraphs_de": [
+    "In Großbritannien gibt es den Ausdruck „gap year“, auf Chinesisch meist mit 间隔年 übersetzt. Gemeint ist: Junge Leute gehen nach dem Schulabschluss nicht sofort an die Uni, sondern verbringen zuerst etwa ein Jahr mit etwas anderem – zum Beispiel arbeiten, reisen oder ehrenamtlich helfen.",
+    "Nicht wenige britische Universitäten erlauben es, den Studienbeginn um ein Jahr zu verschieben: Man bekommt zuerst den Studienplatz und fängt im Jahr darauf an. Ein Gap Year heißt also nicht, dass man auf das Studium verzichtet.",
+    "Und was macht man in einem Gap Year? Manche jobben im Supermarkt oder im Café, um etwas Geld fürs Studium zu sparen; manche reisen in andere Länder und lernen nebenbei eine Fremdsprache; andere arbeiten ehrenamtlich und helfen Menschen, die Hilfe brauchen. Wieder andere besuchen kurze Kurse, lernen kochen, Auto fahren oder ein Handwerk.",
+    "Befürworter meinen, dass junge Leute sich in einem Gap Year besser kennenlernen: was sie wirklich mögen und welches Fach sie studieren wollen. Nach einem Jahr Arbeit und Leben haben viele, wenn sie zurück an die Uni gehen, klarere Ziele.",
+    "Manche machen sich aber auch Sorgen: Gewöhnt man sich nach einem Jahr Pause wieder ans Lernen? Außerdem kosten Reisen ins Ausland ziemlich viel, und nicht jede Familie kann sich das leisten. Ein Gap Year muss deshalb nicht weit weg führen – auch ein Jahr Arbeit in der Nähe von zu Hause kann einem viel beibringen.",
+    "In der chinesischsprachigen Welt gehen die meisten nach der Schule direkt an die Uni, ein Gap Year ist noch ziemlich selten. Und du – würdest du dir ein Gap Year nehmen? Was würdest du in diesem Jahr machen?"
+   ],
+   "paragraphs_pt": [
+    "No Reino Unido existe a expressão “gap year”, que em chinês costuma ser traduzida como 间隔年. Significa que, depois de terminar o ensino médio, os jovens não vão direto para a universidade, mas passam primeiro mais ou menos um ano fazendo outra coisa – por exemplo, trabalhando, viajando ou fazendo trabalho voluntário.",
+    "Várias universidades britânicas permitem adiar o início do curso em um ano: o estudante primeiro garante a vaga e começa as aulas no ano seguinte. Por isso, escolher um gap year não significa desistir da faculdade.",
+    "E o que as pessoas fazem durante um gap year? Algumas trabalham num supermercado ou num café para juntar um dinheirinho para os estudos; outras viajam para outros países e aproveitam para aprender uma língua estrangeira; outras ainda fazem trabalho voluntário e ajudam quem precisa. Há ainda quem faça cursos curtos para aprender a cozinhar, a dirigir ou um ofício.",
+    "Quem apoia acha que o gap year ajuda os jovens a se conhecerem melhor: do que eles realmente gostam e que curso querem fazer. Depois de um ano trabalhando e vivendo, muitos voltam a estudar com objetivos mais claros.",
+    "Mas também há quem se preocupe: depois de um ano parado, será difícil se acostumar a estudar de novo? Além disso, viajar para o exterior custa bastante, e nem toda família pode arcar com isso. Então o gap year não precisa levar ninguém para longe – trabalhar um ano perto de casa também ensina muita coisa.",
+    "No mundo de língua chinesa, a maioria dos estudantes vai direto para a universidade depois do ensino médio, e o gap year ainda é bem raro. E você – tiraria um gap year? O que faria com esse ano?"
+   ],
+   "glossary": [
+    {
+     "w": "间隔年",
+     "p": "jiàn gé nián",
+     "en": "gap year",
+     "de": "das Gap Year; das Auszeitjahr",
+     "pt": "o gap year; o ano sabático"
+    },
+    {
+     "w": "毕业",
+     "p": "bì yè",
+     "en": "to graduate; to finish school",
+     "de": "den Abschluss machen",
+     "pt": "formar-se; concluir os estudos"
+    },
+    {
+     "w": "志愿者",
+     "p": "zhì yuàn zhě",
+     "en": "volunteer",
+     "de": "der/die Freiwillige",
+     "pt": "o voluntário"
+    },
+    {
+     "w": "推迟",
+     "p": "tuī chí",
+     "en": "to postpone; to defer",
+     "de": "verschieben",
+     "pt": "adiar"
+    },
+    {
+     "w": "入学",
+     "p": "rù xué",
+     "en": "to start school/university",
+     "de": "das Studium beginnen; die Einschulung",
+     "pt": "ingressar (na escola/faculdade)"
+    },
+    {
+     "w": "录取",
+     "p": "lù qǔ",
+     "en": "to admit; admission",
+     "de": "zulassen; die Zulassung",
+     "pt": "admitir; a aprovação"
+    },
+    {
+     "w": "意味着",
+     "p": "yì wèi zhe",
+     "en": "to mean; to imply",
+     "de": "bedeuten",
+     "pt": "significar"
+    },
+    {
+     "w": "放弃",
+     "p": "fàng qì",
+     "en": "to give up",
+     "de": "aufgeben; verzichten",
+     "pt": "desistir; abrir mão"
+    },
+    {
+     "w": "顺便",
+     "p": "shùn biàn",
+     "en": "in passing; along the way",
+     "de": "nebenbei",
+     "pt": "de quebra; aproveitando"
+    },
+    {
+     "w": "专业",
+     "p": "zhuān yè",
+     "en": "major; subject of study",
+     "de": "das Studienfach",
+     "pt": "o curso; a área de estudo"
+    },
+    {
+     "w": "负担",
+     "p": "fù dān",
+     "en": "to bear (a cost); burden",
+     "de": "tragen; sich leisten; die Last",
+     "pt": "arcar com; o peso"
+    },
+    {
+     "w": "少见",
+     "p": "shǎo jiàn",
+     "en": "rare; uncommon",
+     "de": "selten",
+     "pt": "raro"
+    }
+   ],
+   "grammar": "不……而是…… means “not …, but rather …”: 不马上去上大学，而是先……做别的事情 “don't go to university straight away, but first do something else”. The second part, after 而是, is what really happens.",
+   "grammar_de": "不……而是…… bedeutet „nicht …, sondern …“: 不马上去上大学，而是先……做别的事情 „nicht sofort an die Uni gehen, sondern zuerst etwas anderes machen“. Der Teil nach 而是 ist das, was tatsächlich passiert.",
+   "grammar_pt": "不……而是…… quer dizer “não…, mas sim…”: 不马上去上大学，而是先……做别的事情 “não ir logo para a faculdade, mas sim fazer outra coisa primeiro”. A parte depois de 而是 é o que realmente acontece.",
+   "questions": [
+    "“间隔年”是什么意思？",
+    "间隔年里，年轻人可以做哪些事情？",
+    "有些人为什么担心间隔年？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK5",
+   "kind": "feature",
+   "section": "学习与工作",
+   "title": "一半在车间，一半在课堂",
+   "title_en": "Half in the workshop, half in the classroom",
+   "title_de": "Halb in der Werkstatt, halb im Klassenzimmer",
+   "title_pt": "Metade na oficina, metade na sala de aula",
+   "dek": "在德国，不上大学的年轻人，也有一条学到一技之长的路。",
+   "paragraphs": [
+    "我刚搬到德国的时候，认识了邻居家的儿子本。他十九岁，没有上大学，而是在一家汽车修理厂当学徒。我原本以为，学徒不过是给人打杂的，后来才发现，事情远没有那么简单。",
+    "德国有一种很有名的职业教育制度，叫“双元制”。学徒一边在企业里工作，一边去职业学校上课，一般需要两到三年半才能完成。在企业里，他们跟着师傅动手干活；在学校里，他们学习专业理论，也上德语这样的普通课程。培训期间，学徒每个月还能从企业拿到一笔报酬。",
+    "本告诉我，他每周大概三天在修理厂，两天在学校。刚开始的时候，他连换个轮胎都手忙脚乱，师傅却从不着急，只是常说一句德国俗语：“练习造就大师。”这句话和中文的成语“熟能生巧”意思差不多。半年以后，他已经能独立做一些简单的保养了。",
+    "有一次，我问本后不后悔没有上大学。他想了想，说：“我的不少同学还在教室里准备考试，我已经知道自己适合做什么了。以后如果想学更多理论，我随时可以再去读书。”他说这话的时候不慌不忙，让我想起一个成语——胸有成竹。",
+    "培训结束时，学徒要参加考试，通过以后就有了正式的职业资格。在德国，木匠、电工、厨师、银行职员……很多职业都可以这样入行。有的人工作几年以后，还会去考“师傅”证书，自己开店，或者再去大学深造。",
+    "在很多地方，人们常常觉得“只有上大学才有出路”。这种想法可以理解，但本的经历让我看到，路并不只有一条。只要脚踏实地，掌握一技之长，同样可以走得很远。",
+    "上个月，我的旧自行车坏了。本拿着工具过来，十几分钟就修好了，还不肯收我的谢礼。他笑着说：“就当是练习吧！”看着他满手的油，我忽然觉得，这个年轻人心里一定很踏实。"
+   ],
+   "paragraphs_en": [
+    "When I had just moved to Germany, I got to know Ben, my neighbours' son. He was nineteen and hadn't gone to university; instead he was an apprentice at a car repair garage. At first I assumed an apprentice was just someone who did odd jobs for others. Only later did I realise it was far from that simple.",
+    "Germany has a well-known system of vocational training called the “dual system”. Apprentices work in a company and attend vocational school at the same time, and it usually takes two to three and a half years to finish. In the company they learn hands-on work alongside a master; at school they study the theory of their trade and also take general subjects such as German. During the training, apprentices also receive a monthly allowance from the company.",
+    "Ben told me he spends about three days a week at the garage and two at school. At the beginning, even changing a tyre threw him into a fluster, but his master never got impatient; he would just repeat a German saying: “Practice makes the master.” It means much the same as the Chinese idiom 熟能生巧, “skill comes from practice”. Six months later, Ben could already do some simple servicing on his own.",
+    "Once I asked Ben whether he regretted not going to university. He thought for a moment and said: “Lots of my classmates are still sitting in lecture halls preparing for exams, and I already know what I'm good at. If I want to learn more theory later, I can always go back and study.” He said it calmly, without any hurry, and it reminded me of an idiom: 胸有成竹, “to have the whole bamboo in your mind before you paint it” – to know exactly what you're doing.",
+    "At the end of the training, apprentices take an exam, and once they pass, they have a recognised professional qualification. In Germany, many occupations – carpenter, electrician, cook, bank clerk … – can be entered this way. Some people, after working for a few years, go on to take the master craftsman's certificate and open their own business, or go to university for further study.",
+    "In many places, people often think that “going to university is the only way to get ahead”. That's understandable, but Ben's experience showed me that there isn't just one road. As long as you keep your feet on the ground and master a useful skill, you can go just as far.",
+    "Last month my old bike broke down. Ben came over with his tools and fixed it in a little over ten minutes, and he wouldn't accept anything as thanks. He laughed and said: “Just count it as practice!” Looking at his oil-covered hands, it suddenly struck me that this young man must feel very sure of his footing."
+   ],
+   "paragraphs_de": [
+    "Als ich gerade nach Deutschland gezogen war, lernte ich Ben kennen, den Sohn meiner Nachbarn. Er war neunzehn, hatte nicht studiert, sondern machte eine Ausbildung in einer Autowerkstatt. Ich dachte zuerst, ein Azubi sei nur jemand, der für andere Hilfsarbeiten erledigt. Erst später merkte ich, dass es längst nicht so einfach ist.",
+    "In Deutschland gibt es ein bekanntes System der Berufsausbildung, das „duale System“. Die Azubis arbeiten in einem Betrieb und besuchen gleichzeitig die Berufsschule; meist dauert das zwei bis dreieinhalb Jahre. Im Betrieb packen sie unter Anleitung eines Meisters selbst mit an; in der Schule lernen sie die Fachtheorie und haben auch allgemeine Fächer wie Deutsch. Während der Ausbildung bekommen sie vom Betrieb außerdem jeden Monat eine Vergütung.",
+    "Ben erzählte mir, dass er ungefähr drei Tage pro Woche in der Werkstatt und zwei in der Schule ist. Am Anfang kam er schon beim Reifenwechseln ins Schwimmen, aber sein Meister wurde nie ungeduldig, sondern sagte nur oft: „Übung macht den Meister.“ Das bedeutet fast dasselbe wie das chinesische Chengyu 熟能生巧. Nach einem halben Jahr konnte Ben schon einige einfache Wartungen allein machen.",
+    "Einmal fragte ich Ben, ob er es bereue, nicht studiert zu haben. Er überlegte kurz und sagte: „Viele meiner früheren Mitschüler sitzen noch im Hörsaal und bereiten sich auf Prüfungen vor, und ich weiß schon, was mir liegt. Wenn ich später mehr Theorie lernen will, kann ich jederzeit noch studieren.“ Er sagte das ganz gelassen, und ich musste an das Chengyu 胸有成竹 denken: „den ganzen Bambus schon im Kopf haben, bevor man ihn malt“ – also genau wissen, was man tut.",
+    "Am Ende der Ausbildung legen die Azubis eine Prüfung ab; wer besteht, hat einen anerkannten Berufsabschluss. In Deutschland kommt man so in viele Berufe – Tischler, Elektriker, Koch, Bankkaufmann … Manche machen nach ein paar Jahren im Beruf noch den Meisterbrief und eröffnen einen eigenen Betrieb oder studieren später noch.",
+    "An vielen Orten glauben die Leute oft: „Nur mit Studium kommt man weiter.“ Das ist verständlich, aber Bens Weg hat mir gezeigt, dass es nicht nur eine Straße gibt. Wer bodenständig bleibt und ein solides Handwerk beherrscht, kann genauso weit kommen.",
+    "Letzten Monat ging mein altes Fahrrad kaputt. Ben kam mit seinem Werkzeug vorbei, hatte es in gut zehn Minuten repariert und wollte nichts als Dankeschön annehmen. Er lachte: „Sieh es einfach als Übung!“ Als ich seine öligen Hände sah, dachte ich plötzlich: Dieser junge Mann steht sicher mit beiden Beinen im Leben."
+   ],
+   "paragraphs_pt": [
+    "Quando eu tinha acabado de me mudar para a Alemanha, conheci o Ben, filho dos meus vizinhos. Ele tinha dezenove anos e não tinha entrado na faculdade; em vez disso, era aprendiz numa oficina mecânica. No começo eu achava que aprendiz era só alguém que fazia serviços gerais para os outros. Só depois percebi que a coisa era bem menos simples.",
+    "A Alemanha tem um sistema de formação profissional muito conhecido, chamado “sistema dual”. Os aprendizes trabalham numa empresa e, ao mesmo tempo, frequentam uma escola profissional; normalmente leva de dois a três anos e meio para concluir. Na empresa, eles colocam a mão na massa ao lado de um mestre; na escola, estudam a teoria da profissão e também têm matérias gerais, como alemão. Durante a formação, os aprendizes ainda recebem da empresa uma remuneração mensal.",
+    "O Ben me contou que passa mais ou menos três dias por semana na oficina e dois na escola. No começo, até para trocar um pneu ele ficava todo atrapalhado, mas o mestre nunca perdia a paciência; só repetia um ditado alemão: “A prática faz o mestre.” Quer dizer quase o mesmo que o chengyu chinês 熟能生巧, “a prática leva à perfeição”. Seis meses depois, ele já conseguia fazer sozinho algumas revisões simples.",
+    "Uma vez perguntei ao Ben se ele se arrependia de não ter feito faculdade. Ele pensou um pouco e disse: “Muitos dos meus colegas ainda estão em sala de aula se preparando para provas, e eu já sei para o que eu levo jeito. Se depois eu quiser aprender mais teoria, posso voltar a estudar a qualquer hora.” Ele disse isso com toda a calma, e eu me lembrei de um chengyu: 胸有成竹, “ter o bambu inteiro na cabeça antes de pintá-lo” – saber muito bem o que está fazendo.",
+    "No fim da formação, os aprendizes fazem uma prova e, se passam, ganham uma qualificação profissional reconhecida. Na Alemanha, muitas profissões – marceneiro, eletricista, cozinheiro, bancário… – começam assim. Algumas pessoas, depois de trabalhar alguns anos, ainda tiram o certificado de mestre e abrem o próprio negócio, ou vão para a universidade se aprofundar.",
+    "Em muitos lugares, as pessoas acham que “só a faculdade abre caminho na vida”. Dá para entender esse pensamento, mas a experiência do Ben me mostrou que não existe um caminho só. Com os pés no chão e um bom ofício nas mãos, dá para ir igualmente longe.",
+    "No mês passado, minha bicicleta velha quebrou. O Ben veio com as ferramentas, consertou tudo em pouco mais de dez minutos e não quis aceitar nada como agradecimento. Ele riu e disse: “Considera como treino!” Olhando para as mãos dele cheias de graxa, de repente pensei que esse rapaz deve ter muita segurança no caminho que escolheu."
+   ],
+   "glossary": [
+    {
+     "w": "学徒",
+     "p": "xué tú",
+     "en": "apprentice",
+     "de": "der/die Auszubildende (Azubi)",
+     "pt": "o aprendiz"
+    },
+    {
+     "w": "打杂",
+     "p": "dǎ zá",
+     "en": "to do odd jobs",
+     "de": "Hilfsarbeiten machen",
+     "pt": "fazer serviços gerais"
+    },
+    {
+     "w": "职业教育",
+     "p": "zhí yè jiào yù",
+     "en": "vocational education",
+     "de": "die Berufsausbildung",
+     "pt": "a formação profissional"
+    },
+    {
+     "w": "师傅",
+     "p": "shī fu",
+     "en": "master (of a trade)",
+     "de": "der Meister",
+     "pt": "o mestre (de ofício)"
+    },
+    {
+     "w": "报酬",
+     "p": "bào chou",
+     "en": "pay; remuneration",
+     "de": "die Vergütung",
+     "pt": "a remuneração"
+    },
+    {
+     "w": "手忙脚乱",
+     "p": "shǒu máng jiǎo luàn",
+     "en": "in a frantic rush; all fingers and thumbs (idiom)",
+     "de": "hektisch und ungeschickt; ins Schwimmen geraten (Chengyu)",
+     "pt": "atrapalhado; todo enrolado (chengyu)"
+    },
+    {
+     "w": "熟能生巧",
+     "p": "shú néng shēng qiǎo",
+     "en": "practice makes perfect (idiom)",
+     "de": "Übung macht den Meister (Chengyu)",
+     "pt": "a prática leva à perfeição (chengyu)"
+    },
+    {
+     "w": "保养",
+     "p": "bǎo yǎng",
+     "en": "maintenance; servicing",
+     "de": "die Wartung",
+     "pt": "a manutenção; a revisão"
+    },
+    {
+     "w": "深造",
+     "p": "shēn zào",
+     "en": "to pursue further study",
+     "de": "sich weiterbilden; weiterstudieren",
+     "pt": "aprofundar os estudos"
+    },
+    {
+     "w": "胸有成竹",
+     "p": "xiōng yǒu chéng zhú",
+     "en": "to have a well-thought-out plan; to know exactly what one is doing (idiom)",
+     "de": "einen klaren Plan haben; genau wissen, was man tut (Chengyu)",
+     "pt": "ter tudo bem planejado; saber bem o que faz (chengyu)"
+    },
+    {
+     "w": "脚踏实地",
+     "p": "jiǎo tà shí dì",
+     "en": "down-to-earth; with feet on the ground (idiom)",
+     "de": "bodenständig; mit beiden Beinen auf dem Boden (Chengyu)",
+     "pt": "com os pés no chão (chengyu)"
+    },
+    {
+     "w": "一技之长",
+     "p": "yī jì zhī cháng",
+     "en": "a useful skill; a speciality (idiom)",
+     "de": "eine besondere Fertigkeit (Chengyu)",
+     "pt": "uma habilidade útil; um ofício (chengyu)"
+    }
+   ],
+   "grammar": "原本以为……，后来才发现…… sets an earlier belief against what you later learned: 我原本以为……，后来才发现，事情远没有那么简单 “I had assumed …, only later did I realise it was far from that simple”. 才 stresses that the discovery came late.",
+   "grammar_de": "原本以为……，后来才发现…… stellt eine frühere Annahme dem gegenüber, was man später erfahren hat: 我原本以为……，后来才发现，事情远没有那么简单 „Ich hatte gedacht …, erst später merkte ich, dass es längst nicht so einfach ist“. 才 betont, dass die Erkenntnis erst spät kam.",
+   "grammar_pt": "原本以为……，后来才发现…… contrapõe uma ideia antiga ao que se descobriu depois: 我原本以为……，后来才发现，事情远没有那么简单 “eu achava que…, só depois percebi que a coisa era bem menos simples”. 才 reforça que a descoberta veio tarde.",
+   "questions": [
+    "“双元制”的学徒每个星期怎么安排时间？",
+    "本的师傅常说的德国俗语是什么意思？",
+    "作者从本的经历中明白了什么？"
+   ],
+   "sources": []
+  }
+ ]
+}

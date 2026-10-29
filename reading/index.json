@@ -1,6 +1,46 @@
 {
- "updated": "2026-10-28T04:47:46Z",
+ "updated": "2026-10-29T04:47:45Z",
  "days": [
+  {
+   "date": "2026-10-29",
+   "items": [
+    {
+     "i": 0,
+     "lang": "zh",
+     "title": "我会写我的名字",
+     "kind": "story",
+     "level": "HSK1"
+    },
+    {
+     "i": 1,
+     "lang": "zh",
+     "title": "先写哪一笔？",
+     "kind": "feature",
+     "level": "HSK2"
+    },
+    {
+     "i": 2,
+     "lang": "zh",
+     "title": "叫我索菲就行",
+     "kind": "dialogue",
+     "level": "HSK3"
+    },
+    {
+     "i": 3,
+     "lang": "zh",
+     "title": "上大学前，先停一年？",
+     "kind": "feature",
+     "level": "HSK4"
+    },
+    {
+     "i": 4,
+     "lang": "zh",
+     "title": "一半在车间，一半在课堂",
+     "kind": "feature",
+     "level": "HSK5"
+    }
+   ]
+  },
   {
    "date": "2026-10-28",
    "items": [
