@@ -5450,6 +5450,8 @@ function pyPlay(it){ if(!it) return; try{ if(pyAud) pyAud.pause(); }catch(e){}
   const au=it.au||pyAuOf(it.c); if(au){ pyStopSeq(); try{ speechSynthesis.cancel(); }catch(e){} pyClip(au); return; }
   pyStopSeq(); pySpeakNow(it.c,3); }
 // speak right inside the tap (iOS only lets a page start speech from a user gesture); repeats are sentences of one utterance: "马。马。马。"
+// iOS: speech must first be started inside a tap; an empty utterance on the first tap unlocks it for later (timed) speech
+let PYUL=false; function pyUnlock(){ if(PYUL||!hasTTS) return; PYUL=true; try{ const u=new SpeechSynthesisUtterance(" "); u.volume=0; speechSynthesis.speak(u); }catch(e){} }
 function pySpeakNow(t,n){ if(!t) return; if(!hasTTS){ speak(t); return; }
   // one utterance per repeat, plain character only: joining repeats ("八。八。八。") made some voices read them as other words
   const tok=++PYSEQ, txt=String(t).replace(/[。.]$/,""), v=pickVoice(); let k=0;
@@ -5595,7 +5597,7 @@ function pyVLesson(){ const L=pyLessons().find(x=>x.id===PY.lid)||pyReady()[0]; 
   h+=`<div class="pyact"><button class="btn primary" type="button" data-py="practice">开始练习</button></div>`;
   return h; }
 function pyStart(daily){ const L=daily?null:pyLessons().find(x=>x.id===PY.lid); const list=daily?pyGenDaily():pyGen(L);
-  PY.q={daily:!!daily,lid:L&&L.id,list,i:0,right:0,miss:[],ans:null}; PY.sel=null; PY.view="quiz"; pyRender(); setTimeout(()=>pyPlayQ(),350); }
+  PY.q={daily:!!daily,lid:L&&L.id,list,i:0,right:0,miss:[],ans:null}; PY.sel=null; PY.view="quiz"; pyRender(); pyPlayQ(); }
 function pyPlayQ(){ const Q=PY.q, q=Q&&Q.list[Q.i]; if(q&&q.it&&q.type!=="pick") pyPlay(q.it); }
 function pyVQuiz(){ const Q=PY.q; if(!Q) return pyVMap();
   const back=Q.daily?"map":"lesson";
@@ -5658,7 +5660,7 @@ function pyAct(a){ const [k,v]=a.split(":");
   else if(k==="practice") pyStart(false);
   else if(k==="daily"){ if(!PY.course){ pyLoad().then(()=>pyAct(a)); return; } if(cur!=="pinyin") showTab("pinyin"); pyStart(true); }
   else if(k==="replay") pyPlayQ();
-  else if(k==="next"){ const Q=PY.q; Q.i++; Q.ans=null; PY.sel=null; pyRender(); setTimeout(pyPlayQ,300); }
+  else if(k==="next"){ const Q=PY.q; Q.i++; Q.ans=null; PY.sel=null; pyRender(); pyPlayQ(); }
   else if(k==="check"){ if(PY.sel) pyAnswer(PY.sel); }
   else if(k==="contrast"){ const Q=PY.q, q=Q.list[Q.i], wo=q.opts.find(o=>o.k===Q.ans); if(!wo) return;
     if(q.type==="tone") pySeq([{hum:+wo.k},{say:wo.it?wo.it.c:""},{wait:500},{hum:+q.ans},{say:q.it.c}]); else if(wo.it) pySeq([{say:wo.it.c},{wait:500},{say:q.it.c}]); }
@@ -5677,6 +5679,7 @@ document.addEventListener("change",e=>{ const s=e.target.closest&&e.target.close
 document.addEventListener("click",e=>{
   const o=e.target.closest("[data-pyopen]"); if(o){ const a=o.dataset.pyopen; if(a==="hide"||a==="daily"||a.startsWith("lesson")) pyAct(a); else pyOpen(a); return; }
   if(!e.target.closest("#py-host")) return;
+  pyUnlock();
   const ex=e.target.closest(".pyex [data-pyplay]"); if(ex){ const it=pyByChar(ex.dataset.pyplay); pyPadSet(it); pyPlay(it); return; }
   const b=e.target.closest("[data-py]"); if(b){ pyAct(b.dataset.py); return; }
   const p=e.target.closest("[data-pyplay]"); if(p){ const it=pyByChar(p.dataset.pyplay)||{c:p.dataset.pyplay,py:p.dataset.pypy||"",t:+p.dataset.pyt||0}; if(p.dataset.pyplay!=="妈"||!p.classList.contains("ib")) pyPadSet(it); pyPlay(it); return; }
