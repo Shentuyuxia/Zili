@@ -5410,12 +5410,20 @@ function pyHum(t){ try{ const AC=window.AudioContext||window.webkitAudioContext;
     o.start(t0); o.stop(t0+D+.05); return D; }catch(e){ return 0; } }
 // the user's own recording of each tone on "a" (ā á ǎ à); falls back to the synthesized hum if missing
 const PYHUM_AU={1:"audio/tones/tone1.mp3",2:"audio/tones/tone2.mp3",3:"audio/tones/tone3.mp3",4:"audio/tones/tone4.mp3"};
+// the recordings are decoded once and played through Web Audio: iOS blocks new <audio> elements started from a timer, which made
+// every tone after the first fall back to the synthesized hum
+const PYHB={}; let PYHBp=null;
+function pyHumLoad(){ if(PYHBp) return PYHBp; const AC=window.AudioContext||window.webkitAudioContext; if(!AC) return Promise.resolve(); PYAC=PYAC||new AC();
+  PYHBp=Promise.all([1,2,3,4].map(t=>fetch(PYHUM_AU[t]).then(r=>r.arrayBuffer()).then(ab=>new Promise((res,rej)=>{ const pr=PYAC.decodeAudioData(ab,res,rej); if(pr&&pr.then) pr.then(res,rej); })).then(b=>{ PYHB[t]=b; }).catch(()=>{})));
+  return PYHBp; }
+document.addEventListener("pointerdown",()=>{ if(cur==="pinyin"||$("#py-entry")) { try{ pyHumLoad(); if(PYAC&&PYAC.state==="suspended") PYAC.resume(); }catch(e){} } },{passive:true});
 // play steps one after another: {hum:t} or {say:"字"}
 let PYSEQ=0;
 function pyStopSeq(){ PYSEQ++; }
-function pySeq(steps){ const tok=++PYSEQ; try{ speechSynthesis.cancel(); }catch(e){}
+function pySeq(steps){ if(steps.some(x=>x.hum)&&!pySeq.tried){ pySeq.tried=1; const t0=Date.now(); pyHumLoad().then(()=>{ if(Date.now()-t0<2000) pySeq(steps); }); return; } const tok=++PYSEQ; try{ speechSynthesis.cancel(); }catch(e){}
   const run=i=>{ if(tok!==PYSEQ||i>=steps.length) return; const s=steps[i];
-    if(s.hum){ const t=s.hum, path=PYHUM_AU[t];
+    if(s.hum){ const t=s.hum, path=PYHUM_AU[t], buf=PYHB[t];
+      if(buf&&PYAC){ try{ if(PYAC.state==="suspended") PYAC.resume(); const src=PYAC.createBufferSource(); src.buffer=buf; src.connect(PYAC.destination); src.start(); setTimeout(()=>run(i+1),(buf.duration+.25)*1000); return; }catch(e){} }
       if(path){ const a=new Audio(path); pyAud=a; let d=false;
         const nx=()=>{ if(d) return; d=true; run(i+1); };
         const fb=()=>{ if(d) return; d=true; const dd=pyHum(t); setTimeout(()=>run(i+1),(dd+.3)*1000); };
