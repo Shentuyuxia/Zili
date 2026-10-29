@@ -2237,8 +2237,13 @@ function voiceNote(){
   renderVoiceSel();
 }
 if(hasTTS){ loadVoices(); speechSynthesis.onvoiceschanged=loadVoices; }
+// dialogue labels ("安娜：", "Anna:") are shown but not read aloud
+const SPK_STOP=/^(意思|内容|注意|比如|例如|提示|时间|地点|答案|问题|原因|结果|方法|总之|重点|作者|题目|标题|日期|材料|要求|规则|步骤|天气|地址|电话|价格|菜单|备注|小提示|生词|词语)$/;
+function noSpk(t){ t=String(t==null?"":t);
+  return t.replace(/(^|[\n。！？!?”」]\s*)([\u4e00-\u9fff·]{1,5})\s*[：:]\s*/g,(m,a,n)=>SPK_STOP.test(n)||/[说问道讲喊想写是们话法为告诉到着了的在]$/.test(n)?m:a)
+    .replace(/(^|\n)\s*([A-ZÀ-Ý][\p{L}'’-]{0,14}(?: [A-ZÀ-Ý][\p{L}'’-]{0,14})?)\s*:\s+/gu,(m,a,n)=>/^(Note|Tip|Hint|Example|Hinweis|Tipp|Beispiel|Nota|Dica|Exemplo|Q|A)$/i.test(n)?m:a); }
 function speak(t){
-  if(!t) return; t=String(t).replace(/\.\s/g,"。");
+  if(!t) return; t=noSpk(String(t)).replace(/\.\s/g,"。"); if(!t.trim()) return;
   if(ntOn()){ try{ if(player) player.pause(); if(typeof RD!=="undefined"&&RD.on) rdPause(); if(hasTTS) speechSynthesis.cancel(); }catch(e){} ntSpeak(t.replace(/\s*\/\s*/g,", ").replace(/…/g,", "),S.settings.rate,()=>sysSpeak(t)); return; }
   sysSpeak(t);
 }
@@ -3036,12 +3041,12 @@ function rdSay(){
   try{ speechSynthesis.cancel(); }catch(e){}
   if(!n){ RD.on=false; RD.i=Math.max(0,ns.length-1); rdPaint(); return; }
   RD.on=true; rdPaint();
-  const txt=zPlain(n).replace(/\s*\/\s*/g,", ").replace(/^[—–-]\s*/,"").trim();
+  const txt=noSpk(zPlain(n)).replace(/\s*\/\s*/g,", ").replace(/^[—–-]\s*/,"").trim();
   if(!txt){ RD.i++; return rdSay(); }
   if(ntOn()){ const v=ntVoice(), rate=RD.rate; ntUnlock(); ntStop();
     const next=()=>{ if(tok!==RD.tok||!RD.on) return; if(!RD.loop) RD.i++; setTimeout(()=>{ if(tok===RD.tok&&RD.on) rdSay(); },RD.loop?450:60); };
     ntSynth(v,txt,rate).then(r=>{ if(tok!==RD.tok||!RD.on) return; ntPlay(r,next);
-      const n2=ns[RD.i+1]; if(n2){ const t2=zPlain(n2).replace(/\s*\/\s*/g,", ").replace(/^[—–-]\s*/,"").trim(); if(t2) ntSynth(v,t2,rate).catch(()=>{}); } })
+      const n2=ns[RD.i+1]; if(n2){ const t2=noSpk(zPlain(n2)).replace(/\s*\/\s*/g,", ").replace(/^[—–-]\s*/,"").trim(); if(t2) ntSynth(v,t2,rate).catch(()=>{}); } })
     .catch(e=>{ if(tok===RD.tok){ RD.on=false; rdPaint(); toast(trOne("神经语音出错了，已切回系统语音。")+" ("+(e&&e.message||e)+")"); S.settings.ntOn[lang()]=false; save(); renderNT(); } });
     return; }
   const u=new SpeechSynthesisUtterance(txt); RD.u=u;
@@ -3233,7 +3238,7 @@ function shReset(){ if(SHD.rec) cancelRec(); SHD.rec=false; SHD.busy=""; if(SHD.
 function shSay(t,done){ // system voice, with a callback when it has finished
   if(!hasTTS){ done&&done(); return; }
   try{ ntStop(); if(player) player.pause(); if(typeof RD!=="undefined"&&RD.on) rdPause(); speechSynthesis.cancel();
-    const u=new SpeechSynthesisUtterance(t), v=pickVoice(); u.lang=v?v.lang:"zh-CN"; if(v) u.voice=v; u.rate=Math.min(1,S.settings.rate||1)*0.92;
+    const u=new SpeechSynthesisUtterance(noSpk(t)), v=pickVoice(); u.lang=v?v.lang:"zh-CN"; if(v) u.voice=v; u.rate=Math.min(1,S.settings.rate||1)*0.92;
     let fired=false; const fin=()=>{ if(fired) return; fired=true; done&&done(); };
     u.onend=fin; u.onerror=fin; setTimeout(()=>{ if(!speechSynthesis.speaking) fin(); },Math.max(4000,t.length*450)); speechSynthesis.speak(u); }catch(e){ done&&done(); }
 }
@@ -4376,6 +4381,7 @@ function s2t(str){ // Simplified → Traditional (Taiwan), phrase-aware for comm
   return o;
 }
 const UI_DICT=[
+["想要更自然的声音：在手机的系统设置里下载中文“增强”或“高级”语音，字里会自动使用。", "For a more natural voice, download an “Enhanced” or “Premium” Chinese voice in your phone's settings – Zili uses it automatically.", "Für eine natürlichere Stimme lade in den Einstellungen deines Handys eine chinesische Stimme in „erweiterter“ oder „Premium“-Qualität – Zili nutzt sie automatisch.", "Para uma voz mais natural, baixe uma voz chinesa “Aprimorada” ou “Premium” nos ajustes do celular – o Zili usa automaticamente.", "想要更自然的聲音：在手機的系統設定裡下載中文「增強」或「高級」語音，字裡會自動使用。"],
 ["发音速度", "Voice speed", "Sprechtempo", "Velocidade da voz", "發音速度"],
 ["正常", "Normal", "Normal", "Normal", "正常"],
 ["慢", "Slow", "Langsam", "Devagar", "慢"],
@@ -5383,7 +5389,7 @@ function pyVMap(){ const d=PYC().done, nx=pyNext();
   ${pySpeedRow()}<p class="muted small">12 节课，已上线 ${pyReady().length} 课，其他陆续补上。</p><ol class="pymap">`;
   for(const L of pyLessons()){ const r=d[L.id], ready=!!L.groups;
     h+=`<li><button type="button" class="pyli${r?" pydone":""}${nx&&nx.id===L.id?" next":""}" ${ready?`data-py="lesson:${L.id}"`:"disabled"}><span class="pyno">${r?I.check:L.id}</span><span class="pyt"><b ${pyLA()}>${esc(pyT(L.title))}</b><small data-noi18n>${esc(pyT(L.sub))}</small></span><span class="pyst2">${r?`${Math.round(r.best*100)}%`:ready?(nx&&nx.id===L.id?"继续学习":""):"即将上线"}</span></button></li>`; }
-  h+=`</ol><p class="muted small pyfoot">发音来自设备的系统语音，以后会换成真人录音。</p>`;
+  h+=`</ol><p class="muted small pyfoot">发音来自设备的系统语音，以后会换成真人录音。</p><p class="muted small">想要更自然的声音：在手机的系统设置里下载中文“增强”或“高级”语音，字里会自动使用。</p>`;
   if(PYC().hide) h+=`<button class="btn ghost sm" type="button" data-py="show">在今日页显示</button>`;
   return h; }
 function pyCard(it){ const t=String(it.t), say=it.say?String(it.say):t;
