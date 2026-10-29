@@ -1087,6 +1087,10 @@ body .py .tn1,body.tones .py .tn1{color:var(--py1)} body .py .tn2,body.tones .py
 .pytt{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 8px}
 .pytb{border-top:1px solid var(--line);padding:8px 0}.pytbh{display:flex;gap:10px;align-items:baseline;margin-bottom:6px}.pytbh b{font-size:18px;color:var(--acc);min-width:34px}.pytbh span{font-size:13px;color:var(--muted);line-height:1.45}
 .pysyl button small{margin-left:4px;color:var(--muted);font-size:13px}.pysyl button.dim{opacity:.4}
+.pynew{position:fixed;inset:0;z-index:90;background:var(--scrim,rgba(0,0,0,.45));display:grid;place-items:center;padding:16px}
+.pynew-c{background:var(--surface);border-radius:18px;padding:22px 20px 16px;max-width:380px;width:100%;box-shadow:0 20px 50px rgba(0,0,0,.3)}
+.pynew-c h3{margin:6px 0 8px;font-size:22px}.pynew-c p{margin:0 0 8px;line-height:1.6}.pynew-c .row{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+.pynew-k{display:inline-block;background:var(--acc);color:var(--on-acc);border-radius:99px;padding:2px 10px;font-size:12px;font-weight:700}
 .pyfoot{margin-top:14px}
 .pyspd{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin:8px 0;font-size:13px;color:var(--muted)}.pyspd>span{margin-right:2px}
 .pyintro{font-size:15.5px;line-height:1.65;margin:8px 0 12px}
@@ -1237,6 +1241,7 @@ body .py .tn1,body.tones .py .tn1{color:var(--py1)} body .py .tn2,body.tones .py
   <div class="banner" id="backup-banner" hidden><span id="backup-banner-t"></span><span class="spacer"></span><button class="btn sm" id="backup-banner-go" type="button">现在备份</button></div>
 
   <nav class="tabs" role="tablist" id="tabs">
+    <button role="tab" data-tab="pinyin" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4.5h7"/><circle cx="9.5" cy="14" r="4.5"/><path d="M14 9.5v9"/><path d="M17.5 6.5l3-2M17.5 12.5c1 .2 2-.6 3-1.8"/></svg><span class="tl">拼音</span></button>
     <button role="tab" data-tab="today" aria-selected="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/><path d="m9 14.5 2 2 4-4"/></svg><span class="tl">今日学习</span></button>
     <button role="tab" data-tab="read" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5c3-1.2 6-1.2 9 .8 3-2 6-2 9-.8v13c-3-1.2-6-1.2-9 .8-3-2-6-2-9-.8z"/><path d="M12 6.3v13"/></svg><span class="tl">阅读</span></button>
     <button role="tab" data-tab="dict" id="dict-open" class="dict-tab" aria-selected="false" aria-label="字典"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg><span class="tl">字典</span></button>
@@ -4394,6 +4399,12 @@ function s2t(str){ // Simplified → Traditional (Taiwan), phrase-aware for comm
   return o;
 }
 const UI_DICT=[
+["12 节课，从四个声调到变调。每个音都能听、能录音对比。", "12 lessons, from the four tones to tone changes. Hear every sound, record yourself and compare.", "12 Lektionen, von den vier Tönen bis zu Tonveränderungen. Jeden Laut hören, dich aufnehmen und vergleichen.", "12 lições, dos quatro tons às mudanças de tom. Ouça cada som, grave sua voz e compare.", "12 節課，從四個聲調到變調。每個音都能聽、能錄音對比。"],
+["新功能", "New", "Neu", "Novo", "新功能"],
+["12 节课，从四个声调到变调：每个音都能听、能录音对比，还有组合表、拼音表和每日练声调。", "12 lessons, from the four tones to tone changes: hear every sound, record yourself and compare, plus combination tables, a pinyin chart and daily tone practice.", "12 Lektionen, von den vier Tönen bis zu Tonveränderungen: jeden Laut hören, dich aufnehmen und vergleichen – dazu Kombinationstabellen, eine Pinyin-Tabelle und tägliches Tontraining.", "12 lições, dos quatro tons às mudanças de tom: ouça cada som, grave sua voz e compare, com tabelas de combinações, tabela de pinyin e treino diário de tons.", "12 節課，從四個聲調到變調：每個音都能聽、能錄音對比，還有組合表、拼音表和每日練聲調。"],
+["在底部的「拼音」里，随时可以自学。", "Find it under “Pinyin” in the bottom bar – learn at your own pace.", "Du findest ihn unten unter „Pinyin“ – lerne in deinem Tempo.", "Fica em “Pinyin”, na barra de baixo – estude no seu ritmo.", "在底部的「拼音」裡，隨時可以自學。"],
+["知道了", "Got it", "Verstanden", "Entendi", "知道了"],
+["去看看", "Take a look", "Ansehen", "Ver agora", "去看看"],
 ["点卡片：听发音，还可以录音对比。", "Tap a card to hear it – and to record yourself and compare.", "Tippe auf eine Karte zum Anhören – und um dich aufzunehmen und zu vergleichen.", "Toque num cartão para ouvir – e para gravar sua voz e comparar.", "點卡片：聽發音，還可以錄音對比。"],
 ["组合表", "Combinations", "Kombinationen", "Combinações", "組合表"],
 ["点不同的声母，听同一个韵母怎么搭配。", "Tap different initials to hear how this final combines.", "Tippe auf verschiedene Anlaute, um zu hören, wie sich dieses Finale verbindet.", "Toque em iniciais diferentes para ouvir como esta final se combina.", "點不同的聲母，聽同一個韻母怎麼搭配。"],
@@ -5282,7 +5293,7 @@ function addOpen(w){ // the old 录入新词 tab now lives in 字匣 → 自己�
 function showTab(t){
   if(t==="new"){ addOpen(); return; }
   if(!TABS.includes(t)) t="today";
-  cur=t; const grp={pile:"browse",settings:"stats",pinyin:"today"}[t]||t;
+  cur=t; const grp={pile:"browse",settings:"stats"}[t]||t;
   $$("#tabs button").forEach(b=>{ b.setAttribute("aria-selected",b.dataset.tab===t); b.classList.toggle("grp-on",b.dataset.tab===grp); });
   $$(".subsw button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.sub===t));
   TABS.forEach(k=>document.getElementById("tab-"+k).hidden=k!==t);
@@ -5503,7 +5514,7 @@ function pyRender(){ const h=$("#py-host"); if(!h) return;
 function pyHead(back,title){ return `<div class="pyhead">${back?`<button class="btn ghost sm" type="button" data-py="${back}"><span aria-hidden="true">←</span><span>${back==="map"?"全部课程":"回到课程"}</span></button>`:""}<h2>${title}</h2></div>`; }
 function pyVMap(){ const d=PYC().done, nx=pyNext();
   let h=`<div class="pyhead"><h2>拼音课</h2><span class="spacer"></span><button class="btn sm" type="button" data-py="daily">每日练声调</button><button class="btn sm" type="button" data-py="chart">拼音表</button></div>
-  ${pySpeedRow()}<p class="muted small">12 节课，已上线 ${pyReady().length} 课，其他陆续补上。</p><ol class="pymap">`;
+  ${pySpeedRow()}<p class="muted small">${pyReady().length<pyLessons().length?`12 节课，已上线 ${pyReady().length} 课，其他陆续补上。`:"12 节课，从四个声调到变调。每个音都能听、能录音对比。"}</p><ol class="pymap">`;
   for(const L of pyLessons()){ const r=d[L.id], ready=!!L.groups;
     h+=`<li><button type="button" class="pyli${r?" pydone":""}${nx&&nx.id===L.id?" next":""}" ${ready?`data-py="lesson:${L.id}"`:"disabled"}><span class="pyno">${r?I.check:L.id}</span><span class="pyt"><b ${pyLA()}>${esc(pyT(L.title))}</b><small data-noi18n>${esc(pyT(L.sub))}</small></span><span class="pyst2">${r?`${Math.round(r.best*100)}%`:ready?(nx&&nx.id===L.id?"继续学习":""):"即将上线"}</span></button></li>`; }
   h+=`</ol><p class="muted small pyfoot">发音来自设备的系统语音，以后会换成真人录音。</p><p class="muted small">想要更自然的声音：在手机的系统设置里下载中文“增强”或“高级”语音，字里会自动使用。</p>`;
@@ -5615,6 +5626,14 @@ document.addEventListener("click",e=>{
     if(qq.type==="pick"){ const it=qq.opts.find(x=>x.k===k).it; pyPlay(it); if(Q.ans==null){ PY.sel=k; pyRender(); } return; }
     pyAnswer(k); } });
 pyLoad().then(()=>{ pyEntry(); if(cur==="pinyin") pyRender(); }).catch(()=>{});
+/* one-time notice: the pinyin course is new */
+function pyAnnounce(){ if(lsGet("zl-new-py","")==="1") return; if(detailOpen||document.querySelector(".pynew")) return;
+  const el=document.createElement("div"); el.className="pynew"; el.setAttribute("role","dialog"); el.setAttribute("aria-modal","true");
+  el.innerHTML=`<div class="pynew-c"><span class="pynew-k">新功能</span><h3>拼音课</h3><p>12 节课，从四个声调到变调：每个音都能听、能录音对比，还有组合表、拼音表和每日练声调。</p><p class="muted small">在底部的「拼音」里，随时可以自学。</p><div class="row"><button class="btn ghost" type="button" data-pynew="0">知道了</button><button class="btn primary" type="button" data-pynew="1">去看看</button></div></div>`;
+  document.body.appendChild(el);
+  el.addEventListener("click",e=>{ const b=e.target.closest("[data-pynew]"); if(!b&&e.target!==el) return; lsSet("zl-new-py","1"); el.remove(); if(b&&b.dataset.pynew==="1") pyOpen("map"); }); }
+setTimeout(()=>{ try{ pyAnnounce(); }catch(e){} },1800);
+
 
 /* ---------- boot ---------- */
 applyUILang();
