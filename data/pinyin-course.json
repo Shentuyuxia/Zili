@@ -21,31 +21,31 @@
    "tones": [
     {
      "t": 1,
-     "zh": "第一声：高而平，像唱一个长音。",
-     "en": "1st tone: high and level, like singing one long note.",
-     "de": "1. Ton: hoch und gleichbleibend, wie ein lang gesungener Ton.",
-     "pt": "1º tom: alto e reto, como cantar uma nota longa."
+     "zh": "高而平，像电话里的嘟嘟声，不起也不落。",
+     "en": "High and flat, like the dial tone of a phone. No rise, no fall.",
+     "de": "Hoch und gleichmäßig, wie der Freiton am Telefon. Kein Steigen, kein Fallen.",
+     "pt": "Alto e reto, como o sinal de linha do telefone. Não sobe nem desce."
     },
     {
      "t": 2,
-     "zh": "第二声：从中间往上升，像问“啊？”",
-     "en": "2nd tone: rises from the middle, like asking “huh?”",
-     "de": "2. Ton: steigt von der Mitte nach oben, wie ein fragendes „Hm?“",
-     "pt": "2º tom: sobe do meio para cima, como perguntar “hã?”"
+     "zh": "从中间往上升，像英文里表示疑问的语气，“Really?”",
+     "en": "Rises from the middle to high, like the lift in an English question: “Really?”",
+     "de": "Steigt von der Mitte nach oben, wie die Frage-Betonung im Englischen: „Wirklich?“",
+     "pt": "Sobe do meio para o alto, como a entonação de pergunta em inglês: “Really?”"
     },
     {
      "t": 3,
-     "zh": "第三声：很低，往下压。单独念时最后会再升上来一点。",
-     "en": "3rd tone: low, pressed down. Said on its own it rises a little at the end.",
-     "de": "3. Ton: tief, nach unten gedrückt. Allein gesprochen steigt er am Ende etwas an.",
-     "pt": "3º tom: baixo, como se apertasse para baixo. Dito sozinho, sobe um pouco no final."
+     "zh": "先低低地往下压，最后稍微升上来一点，像表示同意时的“嗯哼”。",
+     "en": "Dips low, then lifts a little at the end, like an “uh-huh” of agreement.",
+     "de": "Sinkt tief ab und hebt sich zum Schluss ein wenig, wie ein zustimmendes „Mhm“.",
+     "pt": "Desce bem baixo e sobe um pouco no fim, como um “uhum” de concordância."
     },
     {
      "t": 4,
-     "zh": "第四声：从高快速降下来，像说“不！”",
-     "en": "4th tone: falls fast from high to low, like a firm “No!”",
-     "de": "4. Ton: fällt schnell von hoch nach tief, wie ein entschiedenes „Nein!“",
-     "pt": "4º tom: cai rápido do alto para baixo, como um “Não!” firme."
+     "zh": "从高处一下子落下去，短促干脆，像路上遇到人时说的“Hey!”",
+     "en": "Starts high and drops quickly. Short and sharp, like a “Hey!” to someone on the street.",
+     "de": "Hoch ansetzen und schnell fallen. Kurz und knapp, wie ein „Hey!“ auf der Straße.",
+     "pt": "Começa alto e cai rápido. Curto e seco, como um “Ei!” dito a alguém na rua."
     }
    ],
    "tip": {
