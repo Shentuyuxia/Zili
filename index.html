@@ -1092,7 +1092,7 @@ body .py .tn1,body.tones .py .tn1{color:var(--py1)} body .py .tn2,body.tones .py
 .pynew-c h3{margin:6px 0 8px;font-size:22px}.pynew-c p{margin:0 0 8px;line-height:1.6}.pynew-c .row{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
 .pynew-k{display:inline-block;background:var(--acc);color:var(--on-acc);border-radius:99px;padding:2px 10px;font-size:12px;font-weight:700}
 .pyfoot{margin-top:14px}
-.pyspd{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin:8px 0;font-size:13px;color:var(--muted)}.pyspd>span{margin-right:2px}
+.pyspd{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin:8px 0;font-size:13px;color:var(--muted)}.pyspd>span{margin-right:2px}.pyrange{width:160px;accent-color:#2e6b5e}.pypct{min-width:3em;text-align:right;font-variant-numeric:tabular-nums}
 .pyintro{font-size:15.5px;line-height:1.65;margin:8px 0 12px}
 .pytones{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:0 0 10px}
 .pytone{display:flex;gap:10px;align-items:center;text-align:left;border:1px solid var(--line);background:var(--sunk);border-radius:12px;padding:10px;cursor:pointer;color:var(--ink);font:inherit}
@@ -5365,9 +5365,12 @@ function pyCurve(ts,cls){ ts=String(ts).split(""); const W=34,H=30,p=4, y=lv=>H-
 const PYTN=["轻声","第一声","第二声","第三声","第四声"];
 // course voice: slower than reading speed, so a single syllable lasts about a second
 const PYR={slow:.5,slower:.38,normal:.75};
+// the speed ruler: 0.19 is half of the old slowest (0.38); 0.75 is normal speed
+const PYR_MIN=.19, PYR_MAX=.75;
+function pyRate(){ const v=PYC().rate; if(typeof v==="number"&&v>=PYR_MIN&&v<=PYR_MAX) return v; return PYR[PYC().speed]||PYR.slow; }
 function pySay(t,done,keep){ if(!t){ done&&done(); return; } if(!hasTTS){ speak(t); done&&setTimeout(done,800); return; }
   try{ if(!keep) pyStopSeq(); if(typeof ntStop==="function") ntStop(); if(player) player.pause(); speechSynthesis.cancel();
-    const u=new SpeechSynthesisUtterance(t), v=pickVoice(), r=PYR[PYC().speed]||PYR.slow;
+    const u=new SpeechSynthesisUtterance(t), v=pickVoice(), r=pyRate();
     u.lang=v?v.lang:"zh-CN"; if(v) u.voice=v; u.rate=t.length>1&&!/[，,]/.test(t)?Math.min(1,r+.1):r;
     if(done){ let f=false; const fin=()=>{ if(f) return; f=true; done(); }; u.onend=fin; u.onerror=fin; setTimeout(fin,Math.max(2500,t.length*1600)); }
     setTimeout(()=>speechSynthesis.speak(u),40); }catch(e){ done&&done(); } }
@@ -5398,7 +5401,7 @@ function pySeq(steps){ const tok=++PYSEQ; try{ speechSynthesis.cancel(); }catch(
     else if(s.audio){ const a=new Audio(s.audio); pyAud=a; let d=false; const nx=()=>{ if(d) return; d=true; run(i+1); }; a.onended=nx; a.onerror=nx; a.play().catch(nx); } };
   run(0); }
 function pyToneEx(t,n){ const L=pyLessons().find(x=>x.id===1); return shuffle(pyItems(L).filter(x=>x.t===t)).slice(0,n||4); }
-function pySpeedRow(){ const cur=PYC().speed||"slow"; return `<div class="pyspd"><span>发音速度</span>${[["normal","正常"],["slow","慢"],["slower","更慢"]].map(([k,l])=>`<button type="button" class="btn sm${cur===k?" primary":""}" data-py="speed:${k}" aria-pressed="${cur===k}">${l}</button>`).join("")}<button type="button" class="ib sm" data-pyplay="妈" aria-label="试听" title="试听">${I.play}</button></div>`; }
+function pySpeedRow(){ const r=pyRate(), pct=Math.round(r/PYR.normal*100); return `<div class="pyspd"><span>发音速度</span><input type="range" class="pyrange" min="${PYR_MIN}" max="${PYR_MAX}" step="0.01" value="${r}" data-pyspeed aria-label="发音速度" aria-valuetext="${pct}%"><span class="pypct" data-pypct>${pct}%</span><button type="button" class="ib sm" data-pyplay="妈" aria-label="试听" title="试听">${I.play}</button></div>`; }
 let pyAud=null;
 function pyPlay(it){ if(!it) return; try{ if(pyAud) pyAud.pause(); }catch(e){}
   if(it.au){ pyAud=new Audio(it.au); pyAud.play().catch(()=>pySay(it.c)); return; } pySay(it.c); }
@@ -5614,6 +5617,10 @@ function pyAct(a){ const [k,v]=a.split(":");
   else if(k==="speed"){ PYC().speed=v; save(); pyRender(); pySay("妈"); }
   else if(k==="hide"){ PYC().hide=true; save(); pyEntry(); }
   else if(k==="show"){ PYC().hide=false; save(); pyEntry(); pyRender(); } }
+document.addEventListener("input",e=>{ const s=e.target.closest&&e.target.closest("[data-pyspeed]"); if(!s) return;
+  const v=+s.value; PYC().rate=v; const l=s.parentElement.querySelector("[data-pypct]"); if(l) l.textContent=Math.round(v/PYR.normal*100)+"%"; });
+document.addEventListener("change",e=>{ const s=e.target.closest&&e.target.closest("[data-pyspeed]"); if(!s) return;
+  PYC().rate=+s.value; save(); pySay("妈"); });
 document.addEventListener("click",e=>{
   const o=e.target.closest("[data-pyopen]"); if(o){ const a=o.dataset.pyopen; if(a==="hide"||a==="daily"||a.startsWith("lesson")) pyAct(a); else pyOpen(a); return; }
   if(!e.target.closest("#py-host")) return;
