@@ -5439,7 +5439,7 @@ function pySpeedRow(){ return ""; }
 let pyAud=null;
 // recorded model syllables (item.au): decoded once, played through Web Audio (reliable on iOS, also inside sequences)
 const PYCB={};
-function pyAuOf(c){ const it=pyByChar(c); return it&&it.au||""; }
+function pyAuOf(c){ const it=pyByChar(c); return it&&it.au||(PY.course&&PY.course.cardAu||{})[c]||""; }
 function pyClip(path,done){ const AC=window.AudioContext||window.webkitAudioContext; let fin=false; const end=()=>{ if(fin) return; fin=true; done&&done(); };
   const viaEl=()=>{ const a=new Audio(path); pyAud=a; a.onended=end; a.onerror=end; a.play().catch(end); };
   if(!AC){ viaEl(); return; } PYAC=PYAC||new AC(); if(PYAC.state==="suspended") PYAC.resume();

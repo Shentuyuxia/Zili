@@ -545,7 +545,8 @@
         "en": "today",
         "de": "heute",
         "pt": "hoje"
-       }
+       },
+       "au": "audio/words/4eca-5929.mp3"
       },
       {
        "c": "中国",
@@ -555,7 +556,8 @@
         "en": "China",
         "de": "China",
         "pt": "China"
-       }
+       },
+       "au": "audio/words/4e2d-56fd.mp3"
       },
       {
        "c": "喝水",
@@ -565,7 +567,8 @@
         "en": "drink water",
         "de": "Wasser trinken",
         "pt": "beber água"
-       }
+       },
+       "au": "audio/words/559d-6c34.mp3"
       },
       {
        "c": "面包",
@@ -575,7 +578,8 @@
         "en": "bread",
         "de": "Brot",
         "pt": "pão"
-       }
+       },
+       "au": "audio/words/9762-5305.mp3"
       },
       {
        "c": "熊猫",
@@ -585,7 +589,8 @@
         "en": "panda",
         "de": "Panda",
         "pt": "panda"
-       }
+       },
+       "au": "audio/words/718a-732b.mp3"
       },
       {
        "c": "学校",
@@ -595,7 +600,8 @@
         "en": "school",
         "de": "Schule",
         "pt": "escola"
-       }
+       },
+       "au": "audio/words/5b66-6821.mp3"
       },
       {
        "c": "苹果",
@@ -605,7 +611,8 @@
         "en": "apple",
         "de": "Apfel",
         "pt": "maçã"
-       }
+       },
+       "au": "audio/words/82f9-679c.mp3"
       },
       {
        "c": "老师",
@@ -615,7 +622,8 @@
         "en": "teacher",
         "de": "Lehrer/in",
         "pt": "professor(a)"
-       }
+       },
+       "au": "audio/words/8001-5e08.mp3"
       },
       {
        "c": "米饭",
@@ -625,7 +633,8 @@
         "en": "cooked rice",
         "de": "gekochter Reis",
         "pt": "arroz (cozido)"
-       }
+       },
+       "au": "audio/words/7c73-996d.mp3"
       },
       {
        "c": "电脑",
@@ -635,7 +644,8 @@
         "en": "computer",
         "de": "Computer",
         "pt": "computador"
-       }
+       },
+       "au": "audio/words/7535-8111.mp3"
       },
       {
        "c": "再见",
@@ -645,7 +655,8 @@
         "en": "goodbye",
         "de": "auf Wiedersehen",
         "pt": "tchau"
-       }
+       },
+       "au": "audio/words/518d-89c1.mp3"
       },
       {
        "c": "咖啡",
@@ -655,7 +666,8 @@
         "en": "coffee",
         "de": "Kaffee",
         "pt": "café"
-       }
+       },
+       "au": "audio/words/5496-5561.mp3"
       }
      ]
     },
@@ -675,7 +687,8 @@
         "en": "thank you",
         "de": "danke",
         "pt": "obrigado"
-       }
+       },
+       "au": "audio/words/8c22-8c22.mp3"
       },
       {
        "c": "朋友",
@@ -685,7 +698,8 @@
         "en": "friend",
         "de": "Freund/in",
         "pt": "amigo(a)"
-       }
+       },
+       "au": "audio/words/670b-53cb.mp3"
       },
       {
        "c": "妈妈",
@@ -695,7 +709,8 @@
         "en": "mum",
         "de": "Mama",
         "pt": "mãe"
-       }
+       },
+       "au": "audio/words/5988-5988.mp3"
       },
       {
        "c": "你们",
@@ -705,7 +720,8 @@
         "en": "you (plural)",
         "de": "ihr",
         "pt": "vocês"
-       }
+       },
+       "au": "audio/words/4f60-4eec.mp3"
       }
      ]
     },
@@ -726,7 +742,8 @@
         "en": "hello",
         "de": "hallo",
         "pt": "olá"
-       }
+       },
+       "au": "audio/words/4f60-597d.mp3"
       },
       {
        "c": "水果",
@@ -737,7 +754,8 @@
         "en": "fruit",
         "de": "Obst",
         "pt": "fruta"
-       }
+       },
+       "au": "audio/words/6c34-679c.mp3"
       }
      ]
     }
@@ -4097,7 +4115,8 @@
         "de": "hallo",
         "pt": "olá"
        },
-       "say": "23"
+       "say": "23",
+       "au": "audio/words/4f60-597d.mp3"
       },
       {
        "c": "很好",
@@ -4108,7 +4127,8 @@
         "de": "sehr gut",
         "pt": "muito bom"
        },
-       "say": "23"
+       "say": "23",
+       "au": "audio/words/5f88-597d.mp3"
       },
       {
        "c": "可以",
@@ -4119,7 +4139,8 @@
         "de": "dürfen; können",
         "pt": "poder"
        },
-       "say": "23"
+       "say": "23",
+       "au": "audio/words/53ef-4ee5.mp3"
       },
       {
        "c": "雨伞",
@@ -4130,7 +4151,8 @@
         "de": "Regenschirm",
         "pt": "guarda-chuva"
        },
-       "say": "23"
+       "say": "23",
+       "au": "audio/words/96e8-4f1e.mp3"
       }
      ]
     },
@@ -4151,7 +4173,8 @@
         "de": "ein Tag",
         "pt": "um dia"
        },
-       "say": "41"
+       "say": "41",
+       "au": "audio/words/4e00-5929.mp3"
       },
       {
        "c": "一年",
@@ -4162,7 +4185,8 @@
         "de": "ein Jahr",
         "pt": "um ano"
        },
-       "say": "42"
+       "say": "42",
+       "au": "audio/words/4e00-5e74.mp3"
       },
       {
        "c": "一起",
@@ -4173,7 +4197,8 @@
         "de": "zusammen",
         "pt": "juntos"
        },
-       "say": "43"
+       "say": "43",
+       "au": "audio/words/4e00-8d77.mp3"
       },
       {
        "c": "一样",
@@ -4184,7 +4209,8 @@
         "de": "gleich",
         "pt": "igual"
        },
-       "say": "24"
+       "say": "24",
+       "au": "audio/words/4e00-6837.mp3"
       },
       {
        "c": "一次",
@@ -4195,7 +4221,8 @@
         "de": "einmal",
         "pt": "uma vez"
        },
-       "say": "24"
+       "say": "24",
+       "au": "audio/words/4e00-6b21.mp3"
       },
       {
        "c": "十一",
@@ -4205,7 +4232,8 @@
         "en": "eleven",
         "de": "elf",
         "pt": "onze"
-       }
+       },
+       "au": "audio/words/5341-4e00.mp3"
       }
      ]
     },
@@ -4226,7 +4254,8 @@
         "de": "ist nicht",
         "pt": "não é"
        },
-       "say": "24"
+       "say": "24",
+       "au": "audio/words/4e0d-662f.mp3"
       },
       {
        "c": "不对",
@@ -4237,7 +4266,8 @@
         "de": "nicht richtig",
         "pt": "não está certo"
        },
-       "say": "24"
+       "say": "24",
+       "au": "audio/words/4e0d-5bf9.mp3"
       },
       {
        "c": "不要",
@@ -4248,7 +4278,8 @@
         "de": "nicht wollen",
         "pt": "não quero"
        },
-       "say": "24"
+       "say": "24",
+       "au": "audio/words/4e0d-8981.mp3"
       },
       {
        "c": "不好",
@@ -4258,7 +4289,8 @@
         "en": "not good",
         "de": "nicht gut",
         "pt": "não é bom"
-       }
+       },
+       "au": "audio/words/4e0d-597d.mp3"
       },
       {
        "c": "不来",
@@ -4268,7 +4300,8 @@
         "en": "not come",
         "de": "nicht kommen",
         "pt": "não vir"
-       }
+       },
+       "au": "audio/words/4e0d-6765.mp3"
       }
      ]
     }
@@ -4568,5 +4601,178 @@
    "de": "Wie „ung“ in „Lunge“.",
    "pt": "Como “ung”, lábios redondos."
   }
+ },
+ "cardAu": {
+  "一": "audio/cards/4e00.mp3",
+  "七": "audio/cards/4e03.mp3",
+  "三": "audio/cards/4e09.mp3",
+  "东": "audio/cards/4e1c.mp3",
+  "个": "audio/cards/4e2a.mp3",
+  "中": "audio/cards/4e2d.mp3",
+  "九": "audio/cards/4e5d.mp3",
+  "书": "audio/cards/4e66.mp3",
+  "买": "audio/cards/4e70.mp3",
+  "争": "audio/cards/4e89.mp3",
+  "五": "audio/cards/4e94.mp3",
+  "京": "audio/cards/4eac.mp3",
+  "你": "audio/cards/4f60.mp3",
+  "使": "audio/cards/4f7f.mp3",
+  "做": "audio/cards/505a.mp3",
+  "八": "audio/cards/516b.mp3",
+  "六": "audio/cards/516d.mp3",
+  "关": "audio/cards/5173.mp3",
+  "写": "audio/cards/5199.mp3",
+  "分": "audio/cards/5206.mp3",
+  "到": "audio/cards/5230.mp3",
+  "努": "audio/cards/52aa.mp3",
+  "十": "audio/cards/5341.mp3",
+  "卖": "audio/cards/5356.mp3",
+  "去": "audio/cards/53bb.mp3",
+  "古": "audio/cards/53e4.mp3",
+  "句": "audio/cards/53e5.mp3",
+  "吃": "audio/cards/5403.mp3",
+  "同": "audio/cards/540c.mp3",
+  "名": "audio/cards/540d.mp3",
+  "吼": "audio/cards/543c.mp3",
+  "哥": "audio/cards/54e5.mp3",
+  "喝": "audio/cards/559d.mp3",
+  "四": "audio/cards/56db.mp3",
+  "图": "audio/cards/56fe.mp3",
+  "在": "audio/cards/5728.mp3",
+  "多": "audio/cards/591a.mp3",
+  "女": "audio/cards/5973.mp3",
+  "好": "audio/cards/597d.mp3",
+  "如": "audio/cards/5982.mp3",
+  "妈": "audio/cards/5988.mp3",
+  "妹": "audio/cards/59b9.mp3",
+  "姐": "audio/cards/59d0.mp3",
+  "姨": "audio/cards/59e8.mp3",
+  "字": "audio/cards/5b57.mp3",
+  "学": "audio/cards/5b66.mp3",
+  "家": "audio/cards/5bb6.mp3",
+  "宽": "audio/cards/5bbd.mp3",
+  "对": "audio/cards/5bf9.mp3",
+  "小": "audio/cards/5c0f.mp3",
+  "少": "audio/cards/5c11.mp3",
+  "屋": "audio/cards/5c4b.mp3",
+  "山": "audio/cards/5c71.mp3",
+  "床": "audio/cards/5e8a.mp3",
+  "弟": "audio/cards/5f1f.mp3",
+  "心": "audio/cards/5fc3.mp3",
+  "志": "audio/cards/5fd7.mp3",
+  "快": "audio/cards/5feb.mp3",
+  "怕": "audio/cards/6015.mp3",
+  "意": "audio/cards/610f.mp3",
+  "我": "audio/cards/6211.mp3",
+  "扫": "audio/cards/626b.mp3",
+  "找": "audio/cards/627e.mp3",
+  "把": "audio/cards/628a.mp3",
+  "拔": "audio/cards/62d4.mp3",
+  "拖": "audio/cards/62d6.mp3",
+  "放": "audio/cards/653e.mp3",
+  "文": "audio/cards/6587.mp3",
+  "无": "audio/cards/65e0.mp3",
+  "日": "audio/cards/65e5.mp3",
+  "早": "audio/cards/65e9.mp3",
+  "星": "audio/cards/661f.mp3",
+  "春": "audio/cards/6625.mp3",
+  "是": "audio/cards/662f.mp3",
+  "晚": "audio/cards/665a.mp3",
+  "替": "audio/cards/66ff.mp3",
+  "月": "audio/cards/6708.mp3",
+  "朋": "audio/cards/670b.mp3",
+  "来": "audio/cards/6765.mp3",
+  "桶": "audio/cards/6876.mp3",
+  "椅": "audio/cards/6905.mp3",
+  "欠": "audio/cards/6b20.mp3",
+  "次": "audio/cards/6b21.mp3",
+  "民": "audio/cards/6c11.mp3",
+  "气": "audio/cards/6c14.mp3",
+  "水": "audio/cards/6c34.mp3",
+  "汉": "audio/cards/6c49.mp3",
+  "汤": "audio/cards/6c64.mp3",
+  "沟": "audio/cards/6c9f.mp3",
+  "波": "audio/cards/6ce2.mp3",
+  "流": "audio/cards/6d41.mp3",
+  "温": "audio/cards/6e29.mp3",
+  "漏": "audio/cards/6f0f.mp3",
+  "火": "audio/cards/706b.mp3",
+  "炉": "audio/cards/7089.mp3",
+  "炒": "audio/cards/7092.mp3",
+  "烫": "audio/cards/70eb.mp3",
+  "热": "audio/cards/70ed.mp3",
+  "爬": "audio/cards/722c.mp3",
+  "爱": "audio/cards/7231.mp3",
+  "爸": "audio/cards/7238.mp3",
+  "牌": "audio/cards/724c.mp3",
+  "牛": "audio/cards/725b.mp3",
+  "狗": "audio/cards/72d7.mp3",
+  "猫": "audio/cards/732b.mp3",
+  "球": "audio/cards/7403.mp3",
+  "男": "audio/cards/7537.mp3",
+  "痛": "audio/cards/75db.mp3",
+  "白": "audio/cards/767d.mp3",
+  "看": "audio/cards/770b.mp3",
+  "真": "audio/cards/771f.mp3",
+  "知": "audio/cards/77e5.mp3",
+  "科": "audio/cards/79d1.mp3",
+  "稳": "audio/cards/7a33.mp3",
+  "米": "audio/cards/7c73.mp3",
+  "糖": "audio/cards/7cd6.mp3",
+  "红": "audio/cards/7ea2.mp3",
+  "绿": "audio/cards/7eff.mp3",
+  "网": "audio/cards/7f51.mp3",
+  "美": "audio/cards/7f8e.mp3",
+  "老": "audio/cards/8001.mp3",
+  "肉": "audio/cards/8089.mp3",
+  "脑": "audio/cards/8111.mp3",
+  "船": "audio/cards/8239.mp3",
+  "花": "audio/cards/82b1.mp3",
+  "苦": "audio/cards/82e6.mp3",
+  "草": "audio/cards/8349.mp3",
+  "菜": "audio/cards/83dc.mp3",
+  "蓝": "audio/cards/84dd.mp3",
+  "虎": "audio/cards/864e.mp3",
+  "虾": "audio/cards/867e.mp3",
+  "衣": "audio/cards/8863.mp3",
+  "西": "audio/cards/897f.mp3",
+  "要": "audio/cards/8981.mp3",
+  "见": "audio/cards/89c1.mp3",
+  "诗": "audio/cards/8bd7.mp3",
+  "读": "audio/cards/8bfb.mp3",
+  "课": "audio/cards/8bfe.mp3",
+  "谢": "audio/cards/8c22.mp3",
+  "豆": "audio/cards/8c46.mp3",
+  "贵": "audio/cards/8d35.mp3",
+  "赛": "audio/cards/8d5b.mp3",
+  "走": "audio/cards/8d70.mp3",
+  "起": "audio/cards/8d77.mp3",
+  "跑": "audio/cards/8dd1.mp3",
+  "路": "audio/cards/8def.mp3",
+  "躺": "audio/cards/8eba.mp3",
+  "车": "audio/cards/8f66.mp3",
+  "通": "audio/cards/901a.mp3",
+  "里": "audio/cards/91cc.mp3",
+  "金": "audio/cards/91d1.mp3",
+  "钱": "audio/cards/94b1.mp3",
+  "锅": "audio/cards/9505.mp3",
+  "错": "audio/cards/9519.mp3",
+  "门": "audio/cards/95e8.mp3",
+  "问": "audio/cards/95ee.mp3",
+  "雨": "audio/cards/96e8.mp3",
+  "雷": "audio/cards/96f7.mp3",
+  "雾": "audio/cards/96fe.mp3",
+  "风": "audio/cards/98ce.mp3",
+  "飞": "audio/cards/98de.mp3",
+  "饭": "audio/cards/996d.mp3",
+  "饱": "audio/cards/9971.mp3",
+  "饿": "audio/cards/997f.mp3",
+  "马": "audio/cards/9a6c.mp3",
+  "骂": "audio/cards/9a82.mp3",
+  "骑": "audio/cards/9a91.mp3",
+  "高": "audio/cards/9ad8.mp3",
+  "鱼": "audio/cards/9c7c.mp3",
+  "鸡": "audio/cards/9e21.mp3",
+  "麻": "audio/cards/9ebb.mp3"
  }
 }
