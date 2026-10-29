@@ -1080,6 +1080,8 @@ body .py .tn1,body.tones .py .tn1{color:var(--py1)} body .py .tn2,body.tones .py
 @media (max-width:640px){ .pypad{bottom:calc(76px + env(safe-area-inset-bottom,0px))} }
 .py.padon{padding-bottom:230px}
 .pymic{position:absolute;top:6px;right:7px;color:var(--muted);opacity:.55}.pymic svg{width:13px;height:13px}
+.mg-gram p{margin:0 0 6px}.mg-gram p:last-child{margin:0}
+.glk{font-size:10px;font-weight:700;color:var(--muted);letter-spacing:.04em;font-family:var(--f-ui)}
 .pyml{font-size:10px;font-weight:700;color:var(--muted);letter-spacing:.03em}
 .pypc{display:flex;flex-direction:column;align-items:center;min-width:56px}.pypc .zc{font-family:var(--f-cn);font-size:30px;line-height:1.1}.pypc b{font-size:14px}
 .pypitch{flex:1;min-width:150px;max-width:280px;height:62px}.pytg{fill:none;stroke-width:7;stroke-linecap:round;opacity:.45}.pyme{fill:none;stroke:var(--ink);stroke-width:2.6;stroke-linejoin:round;stroke-linecap:round}
@@ -1694,6 +1696,11 @@ function lg(){ const k=today(), lo=L().log; return lo[k]||(lo[k]={n:0,r:0,c:fals
 const goal=()=>planActive()?planQuota():S.settings.goal[lang()];
 const lvSel=()=>S.settings.levels[lang()].filter(v=>LV().includes(v));
 function auxL(){ const g=glSel(); return g.includes(UIL)?UIL:(g[0]||"en"); } // language for notes (grammar, poem explanations)
+// every helper-language block in an article shows exactly the chosen helper languages, in the same order (interface language first)
+function glOrd(){ const g=glSel(), a=auxL(); return [a,...g.filter(k=>k!==a)]; }
+function auxAll(o,base,enKey){ const key=k=>k==="en"?(enKey||base+"_en"):base+"_"+k; let r=glOrd().filter(k=>o[key(k)]).map(k=>({k,t:o[key(k)]}));
+  if(!r.length){ const f=["en","de","pt"].find(k=>o[key(k)]); if(f) r=[{k:f,t:o[key(f)],fb:true}]; } return r; }
+function auxHTML(list,cls){ const tag=list.length>1||list.some(x=>x.fb); return list.map(x=>`<p class="${cls||""}" lang="${x.k==="pt"?"pt-BR":x.k}" data-noi18n>${tag?`<b class="glk">${GLS[x.k]}</b> `:""}${esc(x.t)}</p>`).join(""); }
 function auxGet(o,base,enKey){ const l=auxL(), k=l==="en"?(enKey||base+"_en"):base+"_"+l; return o[k]||o[enKey||base+"_en"]||o[base+"_de"]||o[base+"_pt"]||""; }
 // Portuguese (Brazil) meanings: data/zh-pt.json {word:[gloss, example translation]}
 let PTMAP=null; function ptOf(w){ const x=PTMAP&&PTMAP[w]; return x?x[0]:""; }
@@ -2944,18 +2951,18 @@ async function mgRender0(){
   const own=new Set(S[l].custom.map(c=>String(c.w||"").trim()));
   h+=`<article class="mg-art${MG_MINOR.includes(it.kind)?" minor":""}${it.kind==="picks"?" picks":""}">
     <div class="mg-kick">${it.series&&it.series.episode&&it.series.name===it.section?"":`<span>${esc(it.section||MG_KIND[it.kind]||"")}</span>`}${it.series&&it.series.episode?`<span>${esc(it.series.name||"")} · ${esc(it.series.episode)}</span>`:""}${mgOutlet(it)?`<span>${esc(mgOutlet(it))}</span>`:""}${it.level?`<span class="lv lv-${esc(it.level)}">${esc(it.level)}</span>`:""}${it.kind!=="picks"&&(it.paragraphs||[]).length?`<span>${mgMinutes(it)} 分钟</span>`:""}${pick.older?`<span class="g">${mgFmt(pick.date)} · 今天的 ${MG_ETA[l]} 送到</span>`:""}${pick.date==="lib"?`<span>课文库</span>`:""}${it.term?`<span>${esc(it.term)}</span>`:""}</div>
-    <h2 data-noi18n lang="zh-CN" class="zh2 zc">${zWrap(it.title,own,gx)}</h2>${(()=>{ const t=glSel().map(k=>it["title_"+k]).filter(Boolean); return t.length?`<p class="mg-tt" data-noi18n>${t.map(esc).join(" · ")}</p>`:""; })()}
+    <h2 data-noi18n lang="zh-CN" class="zh2 zc">${zWrap(it.title,own,gx)}</h2>${(()=>{ const t=glOrd().map(k=>it["title_"+k]).filter(Boolean); return t.length?`<p class="mg-tt" data-noi18n>${t.map(esc).join(" · ")}</p>`:""; })()}
     ${it.dek?`<p class="mg-dek zc" data-noi18n lang="zh-CN">${esc(zs(it.dek))}</p>`:""}
     <div class="mg-tools"><button class="tb" id="mg-say" aria-label="朗读全文">${I.spk}<span>朗读</span></button>${(()=>{ const on=mgFavOn(pick.date+"|"+pick.i); return `<button class="tb mg-favb" data-favb="1" type="button" aria-pressed="${on}"><span class="st" aria-hidden="true">${on?"★":"☆"}</span><span>${on?"已收藏":"收藏"}</span></button>`; })()}${mgTrBtns(it)}<span class="spacer"></span><button class="tb" id="mg-py" aria-pressed="${pyOn()}">拼音</button><button class="tb" id="mg-tone" aria-pressed="${tonesOn()}">声调</button><button class="tb" id="mg-scr" aria-pressed="${scr()==="t"}" data-noi18n>${scr()==="t"?"繁體":"简体"}</button></div>
     ${onbActive()&&!(onb().t||{}).read?`<p class="onb-tip">💡 <span>点任何一个词，看读音、意思和笔顺，还可以收进生词。</span></p>`:""}
     <div class="mg-body zhb zc${easy?" easy":""}${it.kind==="dialogue"?" dlg":""}" id="mg-body" data-noi18n lang="zh-CN">${(it.paragraphs||[]).map((p,k)=>`<p>${zWrap(p,own,gx)}</p>${MG.tr&&it["paragraphs_"+MG.tr]&&it["paragraphs_"+MG.tr][k]?`<span class="mg-zh mg-tr-${MG.tr}" lang="${MG.tr}">${esc(it["paragraphs_"+MG.tr][k])}</span>`:""}`).join("")}</div>
     ${it.kind==="picks"?mgPicks(it):""}
-    ${it.poem&&it.poem.lines?(()=>{ const pm=it.poem, tr=auxGet(pm,"explain");
+    ${it.poem&&it.poem.lines?(()=>{ const pm=it.poem, tr=auxAll(pm,"explain");
       return `<div class="mg-blk"><h3>古诗</h3><div class="mg-poem"><p class="pt zc" lang="zh-CN" data-noi18n>${zWrap(pm.title,own,gx)}</p><p class="pa zc" lang="zh-CN" data-noi18n>${esc(zs([pm.dynasty,pm.author].filter(Boolean).join(" · ")))}</p>
         <div class="pl zc${easy?" easy":""}" lang="zh-CN" data-noi18n>${pm.lines.map(x=>`<p>${zWrap(x,own,gx)}</p>`).join("")}</div>
-        ${pm.explain_zh?`<p class="px zc" lang="zh-CN" data-noi18n>${zWrap(pm.explain_zh,own,gx)}</p>`:""}${tr?`<p class="px tr" data-noi18n>${esc(tr)}</p>`:""}</div></div>`; })():""}
-    ${it.grammar||it.grammar_de||it.grammar_pt?`<div class="mg-blk"><h3>语法</h3><div class="mg-gram" data-noi18n>${esc(auxGet(it,"grammar","grammar"))}</div></div>`:""}
-    ${it.glossary&&it.glossary.length?`<div class="mg-blk mg-glb"><dl class="mg-gl zgl" data-noi18n>${it.glossary.map(g=>`<dt><span class="zc" lang="zh-CN">${esc(zs(g.w))}</span><span class="py">${esc(g.p||zPy(g.w))}</span></dt><dd>${glSel().filter(k=>g[k]).map(k=>`<span lang="${k}">${esc(g[k])}</span>`).join("")||esc(g.en||g.de||g.pt||ptOf(g.w)||"")}</dd>`).join("")}</dl></div>`:""}
+        ${pm.explain_zh?`<p class="px zc" lang="zh-CN" data-noi18n>${zWrap(pm.explain_zh,own,gx)}</p>`:""}${tr.length?auxHTML(tr,"px tr"):""}</div></div>`; })():""}
+    ${it.grammar||it.grammar_de||it.grammar_pt?`<div class="mg-blk"><h3>语法</h3><div class="mg-gram" data-noi18n>${auxHTML(auxAll(it,"grammar","grammar"))}</div></div>`:""}
+    ${it.glossary&&it.glossary.length?`<div class="mg-blk mg-glb"><dl class="mg-gl zgl" data-noi18n>${it.glossary.map(g=>`<dt><span class="zc" lang="zh-CN">${esc(zs(g.w))}</span><span class="py">${esc(g.p||zPy(g.w))}</span></dt><dd>${(()=>{ const ks=glOrd().filter(k=>g[k]), tag=ks.length>1; return ks.map(k=>`<span lang="${k}">${tag?`<b class="glk">${GLS[k]}</b> `:""}${esc(g[k])}</span>`).join("")||esc(g.en||g.de||g.pt||ptOf(g.w)||""); })()}</dd>`).join("")}</dl></div>`:""}
     ${qs.length?`<div class="mg-blk"><h3>想一想</h3><ol class="mg-q zc" data-noi18n lang="zh-CN">${qs.map(q=>`<li>${esc(zs(q))}</li>`).join("")}</ol></div>`:""}
     ${it.sources&&it.sources.length?`<div class="mg-blk mg-src"><h3>来源</h3><ul>${it.sources.map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>${s.license?`<span class="lic">${esc(s.license)}</span>`:""}</li>`).join("")}</ul></div>`:""}
     <div class="mg-fin">${(()=>{ const on=mgFavOn(pick.date+"|"+pick.i); return `<button class="btn mg-favb" data-favb="1" type="button" aria-pressed="${on}"><span class="st" aria-hidden="true">${on?"★":"☆"}</span> <span>${on?"已收藏":"收藏"}</span></button>`; })()}<button class="btn" id="mg-exp" type="button" aria-haspopup="menu">${I.exp}<span>导出</span></button>${mgRead(pick.date,pick.i)?'<span class="small muted">✓ 读完了</span>':`<button class="btn primary" id="mg-done" type="button">读完了</button>`}
@@ -3006,8 +3013,8 @@ function mgLibList(pick){
 const RB={open:-1}, CU={open:-1};
 function rbHue(t){ let h=0; for(const c of String(t)) h=(h*31+c.charCodeAt(0))%360; return h; }
 function rbText(o){ // the Chinese text (simplified/traditional, optional pinyin, read aloud) + the learner's chosen helper languages
-  const zh=zs(o.zh||""), tr=glSel().filter(k=>o[k]);
-  return `<p class="rb-zh zc" lang="${scr()==="t"?"zh-TW":"zh-CN"}" data-noi18n>${esc(zh)} <button type="button" class="ib cu-say" data-rbsay="1" aria-label="朗读">${I.spk}</button></p>${pyOn()?`<p class="rb-py" data-noi18n>${esc(zPy(o.zh||""))}</p>`:""}${tr.map(k=>`<p class="rb-tr" lang="${k}" data-noi18n>${esc(o[k])}</p>`).join("")}`;
+  const zh=zs(o.zh||""), tr=glOrd().filter(k=>o[k]);
+  return `<p class="rb-zh zc" lang="${scr()==="t"?"zh-TW":"zh-CN"}" data-noi18n>${esc(zh)} <button type="button" class="ib cu-say" data-rbsay="1" aria-label="朗读">${I.spk}</button></p>${pyOn()?`<p class="rb-py" data-noi18n>${esc(zPy(o.zh||""))}</p>`:""}${tr.map(k=>`<p class="rb-tr" lang="${k}" data-noi18n>${tr.length>1?`<b class="glk">${GLS[k]}</b> `:""}${esc(o[k])}</p>`).join("")}`;
 }
 function rbRender(){
   const box=$("#rbox"); if(!box) return; const list=(MG.rec&&MG.rec.songs)||[];
