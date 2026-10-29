@@ -1081,6 +1081,7 @@ body .py .tn1,body.tones .py .tn1{color:var(--py1)} body .py .tn2,body.tones .py
 .py.padon{padding-bottom:230px}
 .pymic{position:absolute;top:6px;right:7px;color:var(--muted);opacity:.55}.pymic svg{width:13px;height:13px}
 .mg-gram p{margin:0 0 6px}.mg-gram p:last-child{margin:0}
+.mg-glsw{display:flex;align-items:center;gap:6px;margin:0 0 10px;font-size:12.5px;color:var(--muted)}.mg-glsw .tb{border:1px solid var(--line);background:var(--surface);border-radius:99px;padding:2px 10px;font-size:12px;font-weight:700;color:var(--muted);cursor:pointer}.mg-glsw .tb[aria-pressed="true"]{background:var(--acc);border-color:var(--acc);color:var(--on-acc)}
 .glk{font-size:10px;font-weight:700;color:var(--muted);letter-spacing:.04em;font-family:var(--f-ui)}
 .pyml{font-size:10px;font-weight:700;color:var(--muted);letter-spacing:.03em}
 .pypc{display:flex;flex-direction:column;align-items:center;min-width:56px}.pypc .zc{font-family:var(--f-cn);font-size:30px;line-height:1.1}.pypc b{font-size:14px}
@@ -1652,15 +1653,16 @@ function merge(x){
   for(const k in s){ if(k==="gloss"||k==="goal"||k==="levels") Object.assign(o.settings[k],s[k]||{}); else o.settings[k]=s[k]; }
   for(const l of Object.keys(LANG)) if(x[l]) o[l]=Object.assign(blank(),x[l]);
   if(!LANG[o.settings.lang]) o.settings.lang="zh";
-  o.updated=x.updated||0; o.lastBackup=x.lastBackup||0; o.setAt=x.setAt||0; return o;
+  o.updated=x.updated||0; o.lastBackup=x.lastBackup||0; o.setAt=x.setAt||0; o.setK=x.setK&&typeof x.setK==="object"?x.setK:{}; return o;
 }
 let S=clone(DEF);
 try{ const r=localStorage.getItem(LS); if(r) S=merge(JSON.parse(r)); }catch(e){}
 let FRESH=false; try{ FRESH=!localStorage.getItem(LS); }catch(e){}
 if(FRESH){ const n=(navigator.language||"").toLowerCase(); if(/^de/.test(n)) S.settings.gloss.zh=["de"]; else if(/^pt/.test(n)) S.settings.gloss.zh=["pt"]; }
-let saveWarned=false, SH=JSON.stringify(S.settings);
+let saveWarned=false, SH=JSON.stringify(S.settings), SHK=Object.fromEntries(Object.entries(S.settings).map(([k,v])=>[k,JSON.stringify(v)]));
 function save(){
-  S.updated=Date.now(); { const h=JSON.stringify(S.settings); if(h!==SH){ SH=h; S.setAt=Date.now(); } }
+  S.updated=Date.now(); { const h=JSON.stringify(S.settings); if(h!==SH){ SH=h; const now=Date.now(); S.setAt=now; S.setK=S.setK||{}; // per-setting times, so a change on one device does not undo another setting changed elsewhere
+    for(const [k,v] of Object.entries(S.settings)){ const j=JSON.stringify(v); if(SHK[k]!==j){ SHK[k]=j; S.setK[k]=now; } } } }
   try{ localStorage.setItem(LS,JSON.stringify(S)); }
   catch(e){ if(!saveWarned){ saveWarned=true; toast("这台设备的存储空间不够，最近的改动没能保存。请先导出备份。"); } }
   renderBackupHint(); if(typeof syLater==="function") syLater();
@@ -2962,7 +2964,7 @@ async function mgRender0(){
         <div class="pl zc${easy?" easy":""}" lang="zh-CN" data-noi18n>${pm.lines.map(x=>`<p>${zWrap(x,own,gx)}</p>`).join("")}</div>
         ${pm.explain_zh?`<p class="px zc" lang="zh-CN" data-noi18n>${zWrap(pm.explain_zh,own,gx)}</p>`:""}${tr.length?auxHTML(tr,"px tr"):""}</div></div>`; })():""}
     ${it.grammar||it.grammar_de||it.grammar_pt?`<div class="mg-blk"><h3>语法</h3><div class="mg-gram" data-noi18n>${auxHTML(auxAll(it,"grammar","grammar"))}</div></div>`:""}
-    ${it.glossary&&it.glossary.length?`<div class="mg-blk mg-glb"><dl class="mg-gl zgl" data-noi18n>${it.glossary.map(g=>`<dt><span class="zc" lang="zh-CN">${esc(zs(g.w))}</span><span class="py">${esc(g.p||zPy(g.w))}</span></dt><dd>${(()=>{ const ks=glOrd().filter(k=>g[k]), tag=ks.length>1; return ks.map(k=>`<span lang="${k}">${tag?`<b class="glk">${GLS[k]}</b> `:""}${esc(g[k])}</span>`).join("")||esc(g.en||g.de||g.pt||ptOf(g.w)||""); })()}</dd>`).join("")}</dl></div>`:""}
+    ${it.glossary&&it.glossary.length?`<div class="mg-blk mg-glb"><div class="mg-glsw"><span>释义语言</span>${["en","de","pt"].map(k=>`<button class="tb" type="button" data-glsw="${k}" aria-pressed="${glSel().includes(k)}" data-noi18n>${GLS[k]}</button>`).join("")}</div><dl class="mg-gl zgl" data-noi18n>${it.glossary.map(g=>`<dt><span class="zc" lang="zh-CN">${esc(zs(g.w))}</span><span class="py">${esc(g.p||zPy(g.w))}</span></dt><dd>${(()=>{ const ks=glOrd().filter(k=>g[k]), tag=ks.length>1; return ks.map(k=>`<span lang="${k}">${tag?`<b class="glk">${GLS[k]}</b> `:""}${esc(g[k])}</span>`).join("")||esc(g.en||g.de||g.pt||ptOf(g.w)||""); })()}</dd>`).join("")}</dl></div>`:""}
     ${qs.length?`<div class="mg-blk"><h3>想一想</h3><ol class="mg-q zc" data-noi18n lang="zh-CN">${qs.map(q=>`<li>${esc(zs(q))}</li>`).join("")}</ol></div>`:""}
     ${it.sources&&it.sources.length?`<div class="mg-blk mg-src"><h3>来源</h3><ul>${it.sources.map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>${s.license?`<span class="lic">${esc(s.license)}</span>`:""}</li>`).join("")}</ul></div>`:""}
     <div class="mg-fin">${(()=>{ const on=mgFavOn(pick.date+"|"+pick.i); return `<button class="btn mg-favb" data-favb="1" type="button" aria-pressed="${on}"><span class="st" aria-hidden="true">${on?"★":"☆"}</span> <span>${on?"已收藏":"收藏"}</span></button>`; })()}<button class="btn" id="mg-exp" type="button" aria-haspopup="menu">${I.exp}<span>导出</span></button>${mgRead(pick.date,pick.i)?'<span class="small muted">✓ 读完了</span>':`<button class="btn primary" id="mg-done" type="button">读完了</button>`}
@@ -4051,7 +4053,13 @@ function syPack(){ return {v:1,state:S,mine:SY.mine===false?null:mineAll(),mineD
 const tsMax=(a,b)=>{ const o=Object.assign({},a||{}); for(const k in (b||{})) o[k]=Math.max(o[k]||0,b[k]||0); return o; };
 function syMergeState(A,B){
   const o=clone(A);
-  if((B.setAt||0)>(A.setAt||0)){ o.settings=clone(B.settings); o.settings.voice=A.settings.voice; o.settings.lang=A.settings.lang; o.setAt=B.setAt; }
+  { // settings: newest value per setting wins (older data without per-setting times falls back to the whole-settings time)
+    const ka=A.setK||{}, kb=B.setK||{}, as=A.settings||{}, bs=B.settings||{}; o.setK=Object.assign({},ka);
+    for(const k of new Set([...Object.keys(as),...Object.keys(bs)])){ if(k==="voice"||k==="lang") continue;
+      const ta=ka[k]||(A.setK?0:A.setAt||0), tb=kb[k]||(B.setK?0:B.setAt||0);
+      if(k==="pyc"&&as.pyc&&bs.pyc){ const m=clone(tb>ta?bs.pyc:as.pyc), da=as.pyc.done||{}, db=bs.pyc.done||{}; m.done={}; for(const id of new Set([...Object.keys(da),...Object.keys(db)])){ const x=da[id], y=db[id]; m.done[id]=!x?y:!y?x:((y.best||0)>(x.best||0)?y:x); } o.settings.pyc=m; o.setK.pyc=Math.max(ta,tb); continue; }
+      if(tb>ta&&k in bs){ o.settings[k]=clone(bs[k]); o.setK[k]=tb; } }
+    o.setAt=Math.max(A.setAt||0,B.setAt||0); }
   for(const l of Object.keys(LANG)){
     const a=A[l]||blank(), b=B[l]||blank(), m=o[l];
     const del=m.del=tsMax(a.del,b.del), pdel=m.pileDel=tsMax(a.pileDel,b.pileDel);
@@ -4084,7 +4092,7 @@ function syMerge(L0,R){
 }
 function syApply(P){
   const before=JSON.stringify(S);
-  S=merge(P.state); SH=JSON.stringify(S.settings);
+  S=merge(P.state); SH=JSON.stringify(S.settings); SHK=Object.fromEntries(Object.entries(S.settings).map(([k,v])=>[k,JSON.stringify(v)]));
   try{ localStorage.setItem(LS,JSON.stringify(S)); }catch(e){}
   if(SY.mine!==false&&Array.isArray(P.mine)) mineSave(P.mine);
   try{ localStorage.setItem(MINEDK,JSON.stringify(P.mineDel||{})); }catch(e){}
@@ -5649,6 +5657,10 @@ document.addEventListener("click",e=>{
     if(qq.type==="pick"){ const it=qq.opts.find(x=>x.k===k).it; pyPlay(it); if(Q.ans==null){ PY.sel=k; pyRender(); } return; }
     pyAnswer(k); } });
 pyLoad().then(()=>{ pyEntry(); if(cur==="pinyin") pyRender(); }).catch(()=>{});
+// quick switch for the meaning languages, on the article itself
+document.addEventListener("click",e=>{ const b=e.target.closest("[data-glsw]"); if(!b) return; const k=b.dataset.glsw, l=lang();
+  let v=glSel().slice(); v=v.includes(k)?v.filter(x=>x!==k):v.concat(k); if(!v.length){ toast("至少保留一种释义语言"); return; }
+  S.settings.gloss[l]=LANG[l].gl.filter(x=>v.includes(x)); save(); try{ renderSettings(); }catch(err){} mgRender(); });
 /* one-time notice: the pinyin course is new */
 function pyAnnounce(){ if(lsGet("zl-new-py","")==="1") return; if(detailOpen||document.querySelector(".pynew")) return;
   const el=document.createElement("div"); el.className="pynew"; el.setAttribute("role","dialog"); el.setAttribute("aria-modal","true");
