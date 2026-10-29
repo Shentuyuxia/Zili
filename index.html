@@ -1074,7 +1074,12 @@ body:not(.tones) .tone-opts{opacity:.55}
 .pyli.pydone .pyno{background:var(--acc);color:var(--on-acc)}.pyno svg{width:15px;height:15px}
 .pyt{display:flex;flex-direction:column;min-width:0;flex:1}.pyt small{color:var(--muted);font-size:12.5px}
 .pyst2{font-size:12.5px;color:var(--muted);white-space:nowrap}.pyli.next .pyst2{color:var(--acc);font-weight:600}
-.pypad{position:sticky;top:6px;z-index:4;display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 12px;margin:10px 0 12px;box-shadow:0 6px 18px rgba(0,0,0,.08)}
+.pypad{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(16px + env(safe-area-inset-bottom,0px));width:min(560px,calc(100% - 20px));z-index:57;display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:12px 14px;box-shadow:0 10px 30px rgba(0,0,0,.22)}
+.pypad[hidden]{display:none}.pyx{position:absolute;top:4px;right:4px}
+@media (max-width:640px){ .pypad{bottom:calc(76px + env(safe-area-inset-bottom,0px))} }
+.py.padon{padding-bottom:230px}
+.pymic{position:absolute;top:6px;right:7px;color:var(--muted);opacity:.55}.pymic svg{width:13px;height:13px}
+.pyml{font-size:10px;font-weight:700;color:var(--muted);letter-spacing:.03em}
 .pypc{display:flex;flex-direction:column;align-items:center;min-width:56px}.pypc .zc{font-family:var(--f-cn);font-size:30px;line-height:1.1}.pypc b{font-size:14px}
 .pypitch{flex:1;min-width:150px;max-width:280px;height:62px}.pytg{fill:none;stroke-width:7;stroke-linecap:round;opacity:.45}.pyme{fill:none;stroke:var(--ink);stroke-width:2.6;stroke-linejoin:round;stroke-linecap:round}
 .pypb{display:flex;gap:6px;flex-wrap:wrap}.pypb svg{width:14px;height:14px}.pypn{flex-basis:100%;margin:0}
@@ -3577,7 +3582,7 @@ document.addEventListener("click",e=>{ const b=e.target.closest("#onb-hide,[data
   showTab(b.dataset.onbgo); });
 const ONB={step:0,who:"",goal:10,tone:0,gl:""};
 function onbStart(){
-  ONB.step=0; ONB.who=""; ONB.goal=10; ONB.tone=0; ONB.gl=(n=>n.startsWith("de")?"de":n.startsWith("pt")?"pt":"en")((navigator.language||"").toLowerCase());
+  ONB.step=0; ONB.who=""; ONB.goal=10; ONB.tone=0; ONB.gl=["en","de","pt"].includes(UIL)?UIL:(n=>n.startsWith("de")?"de":n.startsWith("pt")?"pt":"en")((navigator.language||"").toLowerCase());
   detailOpen="__onb"; document.body.classList.add("modal-open"); onbRender();
 }
 function onbRender(){
@@ -4388,6 +4393,7 @@ function s2t(str){ // Simplified → Traditional (Taiwan), phrase-aware for comm
   return o;
 }
 const UI_DICT=[
+["点卡片：听发音，还可以录音对比。", "Tap a card to hear it – and to record yourself and compare.", "Tippe auf eine Karte zum Anhören – und um dich aufzunehmen und zu vergleichen.", "Toque num cartão para ouvir – e para gravar sua voz e comparar.", "點卡片：聽發音，還可以錄音對比。"],
 ["组合表", "Combinations", "Kombinationen", "Combinações", "組合表"],
 ["点不同的声母，听同一个韵母怎么搭配。", "Tap different initials to hear how this final combines.", "Tippe auf verschiedene Anlaute, um zu hören, wie sich dieses Finale verbindet.", "Toque em iniciais diferentes para ouvir como esta final se combina.", "點不同的聲母，聽同一個韻母怎麼搭配。"],
 ["点不同的韵母，听这个声母怎么搭配。", "Tap different finals to hear how this initial combines.", "Tippe auf verschiedene Finale, um zu hören, wie sich dieser Anlaut verbindet.", "Toque em finais diferentes para ouvir como esta inicial se combina.", "點不同的韻母，聽這個聲母怎麼搭配。"],
@@ -5322,10 +5328,11 @@ function pyLoad(){ if(PY.loading) return PY.loading;
   PY.loading=Promise.all([fetch("data/pinyin-course.json").then(r=>{ if(!r.ok) throw new Error(r.status); return r.json(); }),fetch("data/pinyin-chart.json").then(r=>r.ok?r.json():{}).catch(()=>({}))])
     .then(([c,h])=>{ PY.course=c; PY.chart=h; return c; }).catch(e=>{ PY.loading=null; throw e; });
   return PY.loading; }
-const pyL=()=>UIL==="zh"||UIL==="zht"?"zh":["en","de","pt"].includes(UIL)?UIL:auxL();
+// explanations: Chinese when the interface is Chinese, otherwise the helper language (the interface language if it is one of the chosen helpers)
+const pyL=()=>UIL==="zh"||UIL==="zht"?"zh":auxL();
 function pyT(o){ if(!o) return ""; if(typeof o==="string") return o; const l=pyL(); let t=o[l]||o.en||o.zh||""; if(l==="zh"&&UIL==="zht") t=s2t(t); return t; }
 const pyLA=()=>{ const l=pyL(); return l==="zh"?"data-noi18n":`lang="${l==="pt"?"pt-BR":l}"`; };
-function pyM(it){ const m=it.m||{}, l=pyL()==="zh"?(glSel()[0]||"en"):pyL(); const t=m[l]||m.en||""; return t?`<span class="pym" lang="${l==="pt"?"pt-BR":l}">${esc(t)}</span>`:""; }
+function pyM(it){ const m=it.m||{}, ks=glSel().filter(k=>m[k]); const use=ks.length?ks:["en"].filter(k=>m[k]); return use.map(l=>`<span class="pym" lang="${l==="pt"?"pt-BR":l}">${use.length>1?`<b class="pyml">${GLS[l]}</b> `:""}${esc(m[l])}</span>`).join(""); }
 const pyH=c=>`<span class="zc" lang="zh-CN">${esc(zs(c))}</span>`;
 const PYV={a:"āáǎà",e:"ēéěè",i:"īíǐì",o:"ōóǒò",u:"ūúǔù","ü":"ǖǘǚǜ"};
 function pyMark(s,t){ if(!t||t>4) return s; let i=s.indexOf("a"); if(i<0) i=s.indexOf("e"); if(i<0) i=s.indexOf("ou");
@@ -5345,11 +5352,11 @@ function pyCurve(ts,cls){ ts=String(ts).split(""); const W=34,H=30,p=4, y=lv=>H-
   return g+"</svg>"; }
 const PYTN=["轻声","第一声","第二声","第三声","第四声"];
 // course voice: slower than reading speed, so a single syllable lasts about a second
-const PYR={slow:.36,slower:.24,normal:.7};
+const PYR={slow:.24,slower:.16,normal:.5};
 function pySay(t,done,keep){ if(!t){ done&&done(); return; } if(!hasTTS){ speak(t); done&&setTimeout(done,800); return; }
   try{ if(!keep) pyStopSeq(); if(typeof ntStop==="function") ntStop(); if(player) player.pause(); speechSynthesis.cancel();
     const u=new SpeechSynthesisUtterance(t), v=pickVoice(), r=PYR[PYC().speed]||PYR.slow;
-    u.lang=v?v.lang:"zh-CN"; if(v) u.voice=v; u.rate=t.length>1&&!/[，,]/.test(t)?Math.min(1,r+.1):r;
+    u.lang=v?v.lang:"zh-CN"; if(v) u.voice=v; u.rate=t.length>1&&!/[，,]/.test(t)?Math.min(1,r+.08):r;
     if(done){ let f=false; const fin=()=>{ if(f) return; f=true; done(); }; u.onend=fin; u.onerror=fin; setTimeout(fin,Math.max(2500,t.length*1600)); }
     setTimeout(()=>speechSynthesis.speak(u),40); }catch(e){ done&&done(); } }
 // a hummed vowel that follows the tone contour – the pitch movement on its own, clearly and about a second long
@@ -5458,8 +5465,8 @@ function pyPitchSvg(p){ const ts=(p.t||"").split("").filter(x=>/[0-4]/.test(x));
     g+=`<polyline points="${pts.join(" ")}" class="pyme"/>`; }
   return g+"</svg>"; }
 function pyPadPaint(){ const el=$("#py-pad"); if(!el) return; const p=PY.pad, rec=REC.target==="py";
-  if(!p){ el.innerHTML=`<span class="muted small">点任何一张卡片或组合，就可以在这里录音对比。</span>`; return; }
-  el.innerHTML=`<div class="pypc">${pyH(p.c)}<b data-noi18n>${esc(p.py)}</b></div>${pyPitchSvg(p)}
+  const host=$("#py-host"); el.hidden=!p; if(host) host.classList.toggle("padon",!!p); if(!p){ el.innerHTML=""; return; }
+  el.innerHTML=`<button class="ib sm pyx" type="button" data-py="pad:close" aria-label="关闭">${I.x}</button><div class="pypc">${pyH(p.c)}<b data-noi18n>${esc(p.py)}</b></div>${pyPitchSvg(p)}
   <div class="pypb"><button class="btn sm" type="button" data-py="pad:say">${I.play}<span>范读</span></button>${canRecord?`<button class="btn sm${rec?" primary":""}" type="button" data-py="pad:rec">${rec?"■ 停止":"● 录音"}</button>`:""}${p.url?`<button class="btn sm" type="button" data-py="pad:mine">${I.play}<span>我的录音</span></button><button class="btn sm" type="button" data-py="pad:cmp">⇄ 对比</button>`:""}</div>
   <p class="muted small pypn">${rec?"正在录音…":p.url?(p.f0&&p.f0.length>4?"彩色线是标准声调，深色线是你的音高。形状像就对了，高低不必一样。":"没有听清音高：靠近麦克风，声音大一点再录一次。"):canRecord?"先听范读，再按“录音”说一遍，两三秒后自动停止。":"这个浏览器不能录音。"}</p>`; }
 async function pyF0(blob){ const AC=window.AudioContext||window.webkitAudioContext; PYAC=PYAC||new AC();
@@ -5479,6 +5486,7 @@ async function pyRecToggle(){ if(REC.target==="py"){ stopRec(); setTimeout(pyPad
     try{ pp.f0=await pyF0(blob); }catch(e){ pp.f0=[]; } pyPadPaint(); });
   if(ok){ pyPadPaint(); const t0=REC.start; setTimeout(()=>{ if(REC.target==="py"&&REC.start===t0){ stopRec(); setTimeout(pyPadPaint,300); } },p.t.length>1?3200:2400); } }
 function pyPadAct(v){ const p=PY.pad; if(!p) return;
+  if(v==="close"){ if(REC.target==="py") cancelRec(); if(p.url) URL.revokeObjectURL(p.url); PY.pad=null; pyPadPaint(); return; }
   if(v==="say") pySay(p.c); else if(v==="rec") pyRecToggle();
   else if(v==="mine"&&p.url) pySeq([{audio:p.url}]);
   else if(v==="cmp"&&p.url) pySeq([{say:p.c},{wait:400},{audio:p.url}]); }
@@ -5501,7 +5509,7 @@ function pyVMap(){ const d=PYC().done, nx=pyNext();
 function pyCard(it){ const t=String(it.t), say=it.say?String(it.say):t;
   const pyc=t.length===1?`<b class="pyp tn${t}" data-noi18n>${esc(it.py)}</b>`:`<b class="pyp" data-noi18n>${esc(it.py)}</b>`;
   const vl=it.v&&it.v.length>3;
-  return `<button type="button" class="pycard" data-pyplay="${esc(it.c)}">${it.v&&!vl?`<span class="pyv" data-noi18n>${esc(it.v)}</span>`:""}<span class="pyc">${pyH(it.c)}</span>${pyc}${pyCurve(say)}${it.say?`<small class="pysay" data-noi18n>${esc(t.split("").join("+"))} → ${esc(say.split("").join("+"))}</small>`:""}${pyM(it)}${vl?`<small class="pyvl" data-noi18n>${esc(it.v)}</small>`:""}</button>`; }
+  return `<button type="button" class="pycard" data-pyplay="${esc(it.c)}"><span class="pymic" aria-hidden="true">${I.mic}</span>${it.v&&!vl?`<span class="pyv" data-noi18n>${esc(it.v)}</span>`:""}<span class="pyc">${pyH(it.c)}</span>${pyc}${pyCurve(say)}${it.say?`<small class="pysay" data-noi18n>${esc(t.split("").join("+"))} → ${esc(say.split("").join("+"))}</small>`:""}${pyM(it)}${vl?`<small class="pyvl" data-noi18n>${esc(it.v)}</small>`:""}</button>`; }
 function pyVLesson(){ const L=pyLessons().find(x=>x.id===PY.lid)||pyReady()[0]; PY.lid=L.id; const la=pyLA();
   let h=pyHead("map",`<span class="pyk">第 ${L.id} 课</span> <span ${la}>${esc(pyT(L.title))}</span>`);
   if(L.video) h+=/\.(mp4|webm|m4v)(\?|$)/i.test(L.video)?`<video class="pyvid" src="${esc(L.video)}" controls playsinline preload="metadata"></video>`:`<a class="btn sm" href="${esc(L.video)}" target="_blank" rel="noopener">▶ 视频</a>`;
@@ -5510,7 +5518,7 @@ function pyVLesson(){ const L=pyLessons().find(x=>x.id===PY.lid)||pyReady()[0]; 
     for(const tn of L.tones){ const ex=[...new Map(all.filter(x=>x.t===tn.t).map(x=>[x.c,x])).values()];
       h+=`<button type="button" class="pytone" data-py="tone:${tn.t}">${pyCurve(tn.t,"big")}<span><b class="tn${tn.t}">${PYTN[tn.t]}</b><small ${la}>${esc(pyT(tn).replace(/^[^：:]+[：:]\s*/,""))}</small><em class="pyex">${ex.map(x=>`<i class="tn${tn.t}">${pyH(x.c)}</i>`).join("")}</em></span></button>`; }
     h+=`</div><p class="muted small">点声调卡：先听声调走向，再随机听这个声调的四个字。</p>`; }
-  h+=`<p class="muted small">点卡片听发音。</p>${pySpeedRow()}<div class="pypad" id="py-pad"></div>`;
+  h+=`<p class="muted small">点卡片：听发音，还可以录音对比。</p>${pySpeedRow()}<div class="pypad" id="py-pad" hidden></div>`;
   for(const g of L.groups){ if(g.label) h+=`<h3 class="pygl" ${la}>${esc(pyT(g.label))}</h3>`; h+=`<div class="pygrid${g.items.length%2===0&&g.items.length>=4?" g4":""}">${g.items.map(pyCard).join("")}</div>`; }
   h+=pyVTable(L);
   if(L.tip) h+=`<div class="pytip"><b>小提示</b><p ${la}>${esc(pyT(L.tip))}</p></div>`;
@@ -5562,7 +5570,7 @@ const PYFIN=["a","o","e","i","u","ü","er","ai","ei","ao","ou","an","en","ang","
 function pyVChart(){ const ch=PY.chart||{}, grp={};
   for(const s of Object.keys(ch)){ const m=s.match(/^(zh|ch|sh|[bpmfdtnlgkhjqxrzcsyw])/); const ini=m?m[1]:""; (grp[ini]=grp[ini]||[]).push(s); }
   const fo=s=>{ const m=s.match(/^(zh|ch|sh|[bpmfdtnlgkhjqxrzcsyw])?(.*)$/); const i=PYFIN.indexOf(m[2]); return i<0?99:i; };
-  let h=pyHead("map","拼音表")+`<p class="muted small">点音节听四个声调。</p>${pySpeedRow()}<div id="py-cd" class="pycd" hidden></div><div class="pypad" id="py-pad"></div>`;
+  let h=pyHead("map","拼音表")+`<p class="muted small">点音节听四个声调。</p>${pySpeedRow()}<div id="py-cd" class="pycd" hidden></div><div class="pypad" id="py-pad" hidden></div>`;
   for(const ini of PYINI){ const ss=grp[ini]; if(!ss) continue; ss.sort((a,b)=>fo(a)-fo(b)||a.localeCompare(b));
     h+=`<div class="pyrow"><span class="pyini" data-noi18n>${ini||"·"}</span><div class="pysyl">${ss.map(s=>`<button type="button" data-pysyl="${esc(s)}" data-noi18n>${esc(s)}</button>`).join("")}</div></div>`; }
   return h; }
