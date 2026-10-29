@@ -5374,12 +5374,13 @@ function pySay(t,done,keep){ if(!t){ done&&done(); return; } if(!hasTTS){ speak(
     u.lang=v?v.lang:"zh-CN"; if(v) u.voice=v; u.rate=t.length>1&&!/[，,]/.test(t)?Math.min(1,r+.1):r;
     if(done){ let f=false; const fin=()=>{ if(f) return; f=true; done(); }; u.onend=fin; u.onerror=fin; setTimeout(fin,Math.max(2500,t.length*1600)); }
     setTimeout(()=>speechSynthesis.speak(u),40); }catch(e){ done&&done(); } }
-// a hummed vowel that follows the tone contour – the pitch movement on its own, clearly and about a second long
+// a vowel "a" that follows the tone contour: a sawtooth voice shaped by formant filters (like a sung "a"), about a second long
 let PYAC=null;
 function pyHum(t){ try{ const AC=window.AudioContext||window.webkitAudioContext; if(!AC) return 0; PYAC=PYAC||new AC(); const ac=PYAC; if(ac.state==="suspended") ac.resume();
-    const pts=PYCT[t]; if(!pts) return 0; const D=t===4?.42:t===3?.9:.6, t0=ac.currentTime+.03, f=l=>175*Math.pow(2,(l-1)/4);
-    const o=ac.createOscillator(); o.type="triangle"; const g=ac.createGain(), out=ac.createGain(); out.gain.value=.9;
-    const lp=ac.createBiquadFilter(); lp.type="lowpass"; lp.frequency.value=900; lp.Q.value=.5; o.connect(lp); lp.connect(g);
+    const pts=PYCT[t]; if(!pts) return 0; const D=t===4?.42:t===3?.9:.6, t0=ac.currentTime+.03, f=l=>220*Math.pow(2,(l-1)/4);
+    const o=ac.createOscillator(); o.type="sawtooth"; const g=ac.createGain(), out=ac.createGain(); out.gain.value=1;
+    // formants of "a": F1 ~800 Hz, F2 ~1200 Hz, F3 ~2500 Hz, so the vowel stays clear
+    for(const [fq,q,gn] of [[800,5,1],[1200,7,.6],[2500,10,.25]]){ const bp=ac.createBiquadFilter(), bg=ac.createGain(); bp.type="bandpass"; bp.frequency.value=fq; bp.Q.value=q; bg.gain.value=gn; o.connect(bp); bp.connect(bg); bg.connect(g); }
     g.connect(out); out.connect(ac.destination);
     const F=o.frequency; F.setValueAtTime(f(pts[0]),t0);
     if(t===1) F.setValueAtTime(f(5),t0);
@@ -5387,8 +5388,8 @@ function pyHum(t){ try{ const AC=window.AudioContext||window.webkitAudioContext;
     else if(t===3){ F.exponentialRampToValueAtTime(f(.55),t0+.45*D); F.setValueAtTime(f(.55),t0+.7*D); F.exponentialRampToValueAtTime(f(4.2),t0+D); }
     else if(t===4){ F.setValueAtTime(f(5.3),t0); F.setValueAtTime(f(5.3),t0+.04*D); F.exponentialRampToValueAtTime(f(.8),t0+D); }
     const A=g.gain; A.setValueAtTime(0,t0);
-    if(t===4){ A.linearRampToValueAtTime(.75,t0+.02); A.exponentialRampToValueAtTime(.3,t0+D-.06); A.linearRampToValueAtTime(0,t0+D); }
-    else { A.linearRampToValueAtTime(.45,t0+.04); A.setValueAtTime(.45,t0+D-.1); A.linearRampToValueAtTime(0,t0+D); }
+    if(t===4){ A.linearRampToValueAtTime(.9,t0+.02); A.exponentialRampToValueAtTime(.4,t0+D-.06); A.linearRampToValueAtTime(0,t0+D); }
+    else { A.linearRampToValueAtTime(.6,t0+.04); A.setValueAtTime(.6,t0+D-.1); A.linearRampToValueAtTime(0,t0+D); }
     o.start(t0); o.stop(t0+D+.05); return D; }catch(e){ return 0; } }
 // play steps one after another: {hum:t} or {say:"字"}
 let PYSEQ=0;
