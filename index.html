@@ -5341,7 +5341,7 @@ function pyLoad(){ if(PY.loading) return PY.loading;
     .then(([c,h])=>{ PY.course=c; PY.chart=h; return c; }).catch(e=>{ PY.loading=null; throw e; });
   return PY.loading; }
 // explanations: Chinese when the interface is Chinese, otherwise the helper language (the interface language if it is one of the chosen helpers)
-const pyL=()=>UIL==="zh"||UIL==="zht"?"zh":auxL();
+const pyL=()=>UIL==="zh"||UIL==="zht"?"zh":(["en","de","pt"].includes(UIL)?UIL:auxL()); // explanations follow the interface language
 function pyT(o){ if(!o) return ""; if(typeof o==="string") return o; const l=pyL(); let t=o[l]||o.en||o.zh||""; if(l==="zh"&&UIL==="zht") t=s2t(t); return t; }
 const pyLA=()=>{ const l=pyL(); return l==="zh"?"data-noi18n":`lang="${l==="pt"?"pt-BR":l}"`; };
 function pyM(it){ const m=it.m||{}, ks=glSel().filter(k=>m[k]); const use=ks.length?ks:["en"].filter(k=>m[k]); return use.map(l=>`<span class="pym" lang="${l==="pt"?"pt-BR":l}">${use.length>1?`<b class="pyml">${GLS[l]}</b> `:""}${esc(m[l])}</span>`).join(""); }
