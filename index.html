@@ -1075,6 +1075,7 @@ body:not(.tones) .tone-opts{opacity:.55}
 .pyt{display:flex;flex-direction:column;min-width:0;flex:1}.pyt small{color:var(--muted);font-size:12.5px}
 .pyst2{font-size:12.5px;color:var(--muted);white-space:nowrap}.pyli.next .pyst2{color:var(--acc);font-weight:600}
 .pyfoot{margin-top:14px}
+.pyspd{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin:8px 0;font-size:13px;color:var(--muted)}.pyspd>span{margin-right:2px}
 .pyintro{font-size:15.5px;line-height:1.65;margin:8px 0 12px}
 .pytones{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:0 0 10px}
 .pytone{display:flex;gap:10px;align-items:center;text-align:left;border:1px solid var(--line);background:var(--sunk);border-radius:12px;padding:10px;cursor:pointer;color:var(--ink);font:inherit}
@@ -4375,6 +4376,10 @@ function s2t(str){ // Simplified → Traditional (Taiwan), phrase-aware for comm
   return o;
 }
 const UI_DICT=[
+["发音速度", "Voice speed", "Sprechtempo", "Velocidade da voz", "發音速度"],
+["正常", "Normal", "Normal", "Normal", "正常"],
+["慢", "Slow", "Langsam", "Devagar", "慢"],
+["更慢", "Slower", "Langsamer", "Mais devagar", "更慢"],
 ["拼音课", "Pinyin course", "Pinyin-Kurs", "Curso de pinyin", "拼音課"],
 ["第 {0} 课", "Lesson {0}", "Lektion {0}", "Lição {0}", "第 {0} 課"],
 ["继续学习", "Continue", "Weiterlernen", "Continuar", "繼續學習"],
@@ -5310,9 +5315,16 @@ function pyCurve(ts,cls){ ts=String(ts).split(""); const W=34,H=30,p=4, y=lv=>H-
     g+=`<path d="${d}" class="pyc${t}"/>`; });
   return g+"</svg>"; }
 const PYTN=["轻声","第一声","第二声","第三声","第四声"];
+// course voice: slower than reading speed, so a single syllable lasts about a second
+const PYR={slow:.55,slower:.4,normal:.9};
+function pySay(t){ if(!t) return; if(!hasTTS){ speak(t); return; }
+  try{ if(typeof ntStop==="function") ntStop(); if(player) player.pause(); speechSynthesis.cancel();
+    const u=new SpeechSynthesisUtterance(t), v=pickVoice(), r=PYR[PYC().speed]||PYR.slow;
+    u.lang=v?v.lang:"zh-CN"; if(v) u.voice=v; u.rate=t.length>1&&!/[，,]/.test(t)?Math.min(1,r+.12):r; speechSynthesis.speak(u); }catch(e){} }
+function pySpeedRow(){ const cur=PYC().speed||"slow"; return `<div class="pyspd"><span>发音速度</span>${[["normal","正常"],["slow","慢"],["slower","更慢"]].map(([k,l])=>`<button type="button" class="btn sm${cur===k?" primary":""}" data-py="speed:${k}" aria-pressed="${cur===k}">${l}</button>`).join("")}<button type="button" class="ib sm" data-pyplay="妈" aria-label="试听" title="试听">${I.play}</button></div>`; }
 let pyAud=null;
 function pyPlay(it){ if(!it) return; try{ if(pyAud) pyAud.pause(); }catch(e){}
-  if(it.au){ pyAud=new Audio(it.au); pyAud.play().catch(()=>speak(it.c)); return; } speak(it.c); }
+  if(it.au){ pyAud=new Audio(it.au); pyAud.play().catch(()=>pySay(it.c)); return; } pySay(it.c); }
 const pyItems=L=>(L.groups||[]).flatMap(g=>g.items);
 const pyLessons=()=>PY.course?PY.course.lessons:[];
 const pyReady=()=>pyLessons().filter(L=>L.groups);
@@ -5368,7 +5380,7 @@ function pyRender(){ const h=$("#py-host"); if(!h) return;
 function pyHead(back,title){ return `<div class="pyhead">${back?`<button class="btn ghost sm" type="button" data-py="${back}"><span aria-hidden="true">←</span><span>${back==="map"?"全部课程":"回到课程"}</span></button>`:""}<h2>${title}</h2></div>`; }
 function pyVMap(){ const d=PYC().done, nx=pyNext();
   let h=`<div class="pyhead"><h2>拼音课</h2><span class="spacer"></span><button class="btn sm" type="button" data-py="daily">每日练声调</button><button class="btn sm" type="button" data-py="chart">拼音表</button></div>
-  <p class="muted small">12 节课，已上线 ${pyReady().length} 课，其他陆续补上。</p><ol class="pymap">`;
+  ${pySpeedRow()}<p class="muted small">12 节课，已上线 ${pyReady().length} 课，其他陆续补上。</p><ol class="pymap">`;
   for(const L of pyLessons()){ const r=d[L.id], ready=!!L.groups;
     h+=`<li><button type="button" class="pyli${r?" pydone":""}${nx&&nx.id===L.id?" next":""}" ${ready?`data-py="lesson:${L.id}"`:"disabled"}><span class="pyno">${r?I.check:L.id}</span><span class="pyt"><b ${pyLA()}>${esc(pyT(L.title))}</b><small data-noi18n>${esc(pyT(L.sub))}</small></span><span class="pyst2">${r?`${Math.round(r.best*100)}%`:ready?(nx&&nx.id===L.id?"继续学习":""):"即将上线"}</span></button></li>`; }
   h+=`</ol><p class="muted small pyfoot">发音来自设备的系统语音，以后会换成真人录音。</p>`;
@@ -5385,7 +5397,7 @@ function pyVLesson(){ const L=pyLessons().find(x=>x.id===PY.lid)||pyReady()[0]; 
   if(L.tones){ h+=`<div class="pytones">`; const g=L.groups[0].items;
     for(const tn of L.tones){ const it=g.find(x=>x.t===tn.t); h+=`<button type="button" class="pytone" data-pyplay="${esc(it.c)}">${pyCurve(tn.t,"big")}<span><b class="tn${tn.t}">${PYTN[tn.t]}</b><small ${la}>${esc(pyT(tn).replace(/^[^：:]+[：:]\s*/,""))}</small></span></button>`; }
     h+=`</div>`; }
-  h+=`<p class="muted small">点卡片听发音。</p>`;
+  h+=`<p class="muted small">点卡片听发音。</p>${pySpeedRow()}`;
   for(const g of L.groups){ if(g.label) h+=`<h3 class="pygl" ${la}>${esc(pyT(g.label))}</h3>`; h+=`<div class="pygrid${g.items.length%2===0&&g.items.length>=4?" g4":""}">${g.items.map(pyCard).join("")}</div>`; }
   if(L.tip) h+=`<div class="pytip"><b>小提示</b><p ${la}>${esc(pyT(L.tip))}</p></div>`;
   h+=`<div class="pyact"><button class="btn primary" type="button" data-py="practice">开始练习</button></div>`;
@@ -5443,7 +5455,7 @@ function pyVChart(){ const ch=PY.chart||{}, grp={};
 function pyChartCell(s){ const cs=(PY.chart||{})[s]||[], el=$("#py-cd"); if(!el) return;
   $$("[data-pysyl]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.pysyl===s));
   el.hidden=false; el.innerHTML=`<div class="pycdh"><b data-noi18n>${esc(s)}</b><button class="btn sm" type="button" data-pyseq="${esc(cs.filter(Boolean).join(","))}">${I.play}<span data-noi18n>${[1,2,3,4].filter(t=>cs[t-1]).map(t=>esc(pyMark(s,t))).join(" ")}</span></button></div><div class="pycd4">${[1,2,3,4].map(t=>{ const c=cs[t-1]; return c?`<button type="button" class="pycard" data-pyplay="${esc(c)}"><b class="pyp tn${t}" data-noi18n>${esc(pyMark(s,t))}</b><span class="pyc">${pyH(c)}</span>${pyCurve(t)}</button>`:`<div class="pycard none"><b class="pyp" data-noi18n>${esc(pyMark(s,t))}</b><span class="muted">–</span></div>`; }).join("")}</div>`;
-  const seq=cs.filter(Boolean); if(seq.length) speak(seq.join("，")); }
+  const seq=cs.filter(Boolean); if(seq.length) pySay(seq.join("，")); }
 function pyEntry(){ const el=$("#py-entry"); if(!el) return; if(!PY.course||PYC().hide){ el.innerHTML=""; return; }
   const nx=pyNext(), all=pyLessons().length, dn=Object.keys(PYC().done).length, dd=PYC().daily&&PYC().daily.at===today();
   el.innerHTML=`<div class="py-entry"><div class="pe-a">${nx?`<b><span>拼音课</span> · <span>第 ${nx.id} 课</span></b><span class="pe-t" ${pyLA()}>${esc(pyT(nx.title))}</span>`:`<b>拼音课</b><span class="pe-t">${dn} 课已学完</span>`}<div class="bar"><i style="width:${Math.round(dn/all*100)}%"></i></div></div>
@@ -5456,8 +5468,9 @@ function pyAct(a){ const [k,v]=a.split(":");
   else if(k==="replay") pyPlayQ();
   else if(k==="next"){ const Q=PY.q; Q.i++; Q.ans=null; PY.sel=null; pyRender(); setTimeout(pyPlayQ,300); }
   else if(k==="check"){ if(PY.sel) pyAnswer(PY.sel); }
-  else if(k==="contrast"){ const Q=PY.q, q=Q.list[Q.i], wo=q.opts.find(o=>o.k===Q.ans); if(wo&&wo.it) speak(wo.it.c+"，"+q.it.c); }
+  else if(k==="contrast"){ const Q=PY.q, q=Q.list[Q.i], wo=q.opts.find(o=>o.k===Q.ans); if(wo&&wo.it) pySay(wo.it.c+"，"+q.it.c); }
   else if(k==="color"){ const t=+v; S.settings.tones=true; S.settings.toneSel=[...new Set(toneSel().concat(t))].sort(); save(); applyTones(); pyRender(); }
+  else if(k==="speed"){ PYC().speed=v; save(); pyRender(); pySay("妈"); }
   else if(k==="hide"){ PYC().hide=true; save(); pyEntry(); }
   else if(k==="show"){ PYC().hide=false; save(); pyEntry(); pyRender(); } }
 document.addEventListener("click",e=>{
@@ -5466,7 +5479,7 @@ document.addEventListener("click",e=>{
   const b=e.target.closest("[data-py]"); if(b){ pyAct(b.dataset.py); return; }
   const p=e.target.closest("[data-pyplay]"); if(p){ pyPlay(pyByChar(p.dataset.pyplay)||{c:p.dataset.pyplay}); return; }
   const s=e.target.closest("[data-pysyl]"); if(s){ pyChartCell(s.dataset.pysyl); return; }
-  const q=e.target.closest("[data-pyseq]"); if(q){ speak(q.dataset.pyseq.split(",").join("，")); return; }
+  const q=e.target.closest("[data-pyseq]"); if(q){ pySay(q.dataset.pyseq.split(",").join("，")); return; }
   const op=e.target.closest("[data-pyopt]"); if(op&&PY.q){ const Q=PY.q, qq=Q.list[Q.i], k=op.dataset.pyopt;
     if(qq.type==="pick"){ const it=qq.opts.find(x=>x.k===k).it; pyPlay(it); if(Q.ans==null){ PY.sel=k; pyRender(); } return; }
     pyAnswer(k); } });
