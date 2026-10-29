@@ -1060,7 +1060,8 @@ body:not(.tones) .tone-opts{opacity:.55}
 .py{--py1:#d8402f;--py2:#17905f;--py3:#3270dc;--py4:#a43fb8;max-width:720px;margin:0 auto;width:100%}
 .py.pyown{--py1:var(--t1);--py2:var(--t2);--py3:var(--t3);--py4:var(--t4)}
 @media (prefers-color-scheme: dark){ .py:not(.pyown){--py1:#f0705e;--py2:#3fcf8e;--py3:#6f9cf2;--py4:#d27ee6} }
-.py .tn1{color:var(--py1)} .py .tn2{color:var(--py2)} .py .tn3{color:var(--py3)} .py .tn4{color:var(--py4)}
+/* the course always colours all four tones, whatever the reading colours are */
+body .py .tn1,body.tones .py .tn1{color:var(--py1)} body .py .tn2,body.tones .py .tn2{color:var(--py2)} body .py .tn3,body.tones .py .tn3{color:var(--py3)} body .py .tn4,body.tones .py .tn4{color:var(--py4)}
 .pyhead{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 6px}.pyhead h2{margin:0;font-size:20px}.pyhead .spacer{flex:1}
 .pyk{color:var(--muted);font-weight:500;font-size:.8em;margin-right:4px}
 .pycv{width:34px;height:30px;flex:none;overflow:visible}.pycv.big{width:52px;height:44px}
