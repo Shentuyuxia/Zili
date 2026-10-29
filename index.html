@@ -5387,8 +5387,7 @@ const PYR_MIN=.19, PYR_MAX=.75;
 function pyRate(){ return PYR.normal; }
 function pySay(t,done,keep){ if(!t){ done&&done(); return; } if(!hasTTS){ speak(t); done&&setTimeout(done,800); return; }
   try{ if(!keep) pyStopSeq(); if(typeof ntStop==="function") ntStop(); if(player) player.pause(); speechSynthesis.cancel();
-    // a lone character is read as a short sentence ("字。"): engines otherwise clip it or give it list intonation
-    const u=new SpeechSynthesisUtterance(/^[\u4e00-\u9fff]{1,2}$/.test(t)?t+"。":t), v=pickVoice(), r=pyRate();
+    const u=new SpeechSynthesisUtterance(t), v=pickVoice(), r=pyRate();
     u.lang=v?v.lang:"zh-CN"; if(v) u.voice=v; u.rate=t.length>1&&!/[，,]/.test(t)?Math.min(1,r+.1):r;
     if(done){ let f=false; const fin=()=>{ if(f) return; f=true; done(); }; u.onend=fin; u.onerror=fin; setTimeout(fin,Math.max(2500,t.length*1600)); }
     setTimeout(()=>speechSynthesis.speak(u),40); }catch(e){ done&&done(); } }
@@ -5452,9 +5451,12 @@ function pyPlay(it){ if(!it) return; try{ if(pyAud) pyAud.pause(); }catch(e){}
   pyStopSeq(); pySpeakNow(it.c,3); }
 // speak right inside the tap (iOS only lets a page start speech from a user gesture); repeats are sentences of one utterance: "马。马。马。"
 function pySpeakNow(t,n){ if(!t) return; if(!hasTTS){ speak(t); return; }
+  // one utterance per repeat, plain character only: joining repeats ("八。八。八。") made some voices read them as other words
+  const tok=++PYSEQ, txt=String(t).replace(/[。.]$/,""), v=pickVoice(); let k=0;
+  const one=()=>{ if(tok!==PYSEQ) return; const u=new SpeechSynthesisUtterance(txt); u.lang=v?v.lang:"zh-CN"; if(v) u.voice=v; u.rate=pyRate();
+    let f=false; const nx=()=>{ if(f) return; f=true; if(++k<(n||1)) setTimeout(one,450); }; u.onend=nx; u.onerror=nx; setTimeout(nx,2600); speechSynthesis.speak(u); };
   try{ if(typeof ntStop==="function") ntStop(); if(player) player.pause();
-    const u=new SpeechSynthesisUtterance((String(t).replace(/[。.]$/,"")+"。").repeat(n||1)), v=pickVoice(); u.lang=v?v.lang:"zh-CN"; if(v) u.voice=v; u.rate=pyRate();
-    if(speechSynthesis.speaking||speechSynthesis.pending){ speechSynthesis.cancel(); setTimeout(()=>speechSynthesis.speak(u),80); } else speechSynthesis.speak(u); }catch(e){} }
+    if(speechSynthesis.speaking||speechSynthesis.pending){ speechSynthesis.cancel(); setTimeout(one,80); } else one(); }catch(e){} }
 const pyItems=L=>(L.groups||[]).flatMap(g=>g.items);
 const pyLessons=()=>PY.course?PY.course.lessons:[];
 const pyReady=()=>pyLessons().filter(L=>L.groups);
