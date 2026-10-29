@@ -5430,15 +5430,24 @@ function pySeq(steps){ if(steps.some(x=>x.hum)&&!pySeq.tried){ pySeq.tried=1; co
         const fb=()=>{ if(d) return; d=true; const dd=pyHum(t); setTimeout(()=>run(i+1),(dd+.3)*1000); };
         a.onended=nx; a.onerror=fb; a.play().catch(fb);
       } else { const d=pyHum(t); setTimeout(()=>run(i+1),(d+.3)*1000); } }
-    else if(s.say) pySay(s.say,()=>setTimeout(()=>run(i+1),250),true);
+    else if(s.say){ const au=pyAuOf(s.say); if(au) pyClip(au,()=>setTimeout(()=>run(i+1),250)); else pySay(s.say,()=>setTimeout(()=>run(i+1),250),true); }
     else if(s.wait) setTimeout(()=>run(i+1),s.wait);
     else if(s.audio){ const a=new Audio(s.audio); pyAud=a; let d=false; const nx=()=>{ if(d) return; d=true; run(i+1); }; a.onended=nx; a.onerror=nx; a.play().catch(nx); } };
   run(0); }
 function pyToneSet(t,n){ const L=pyLessons().find(x=>x.id===1); return [...new Map(pyItems(L).filter(x=>x.t===t).map(x=>[x.c,x])).values()].slice(0,n||3); }
 function pySpeedRow(){ return ""; }
 let pyAud=null;
+// recorded model syllables (item.au): decoded once, played through Web Audio (reliable on iOS, also inside sequences)
+const PYCB={};
+function pyAuOf(c){ const it=pyByChar(c); return it&&it.au||""; }
+function pyClip(path,done){ const AC=window.AudioContext||window.webkitAudioContext; let fin=false; const end=()=>{ if(fin) return; fin=true; done&&done(); };
+  const viaEl=()=>{ const a=new Audio(path); pyAud=a; a.onended=end; a.onerror=end; a.play().catch(end); };
+  if(!AC){ viaEl(); return; } PYAC=PYAC||new AC(); if(PYAC.state==="suspended") PYAC.resume();
+  const go=b=>{ try{ const src=PYAC.createBufferSource(); src.buffer=b; src.connect(PYAC.destination); src.start(); pyAud={pause(){ try{ src.stop(); }catch(e){} }}; setTimeout(end,b.duration*1000+60); }catch(e){ viaEl(); } };
+  if(PYCB[path]){ go(PYCB[path]); return; }
+  fetch(path).then(r=>{ if(!r.ok) throw 0; return r.arrayBuffer(); }).then(ab=>new Promise((res,rej)=>{ const pr=PYAC.decodeAudioData(ab,res,rej); if(pr&&pr.then) pr.then(res,rej); })).then(b=>{ PYCB[path]=b; go(b); }).catch(viaEl); }
 function pyPlay(it){ if(!it) return; try{ if(pyAud) pyAud.pause(); }catch(e){}
-  if(it.au){ pyAud=new Audio(it.au); pyAud.play().catch(()=>pySay(it.c)); return; } pySay(it.c); }
+  const au=it.au||pyAuOf(it.c); if(au){ pyStopSeq(); try{ speechSynthesis.cancel(); }catch(e){} pyClip(au); return; } pySay(it.c); }
 const pyItems=L=>(L.groups||[]).flatMap(g=>g.items);
 const pyLessons=()=>PY.course?PY.course.lessons:[];
 const pyReady=()=>pyLessons().filter(L=>L.groups);
@@ -5538,7 +5547,7 @@ async function pyRecToggle(){ if(REC.target==="py"){ stopRec(); setTimeout(pyPad
   if(ok){ pyPadPaint(); const t0=REC.start; setTimeout(()=>{ if(REC.target==="py"&&REC.start===t0){ stopRec(); setTimeout(pyPadPaint,300); } },p.t.length>1?3200:2400); } }
 function pyPadAct(v){ const p=PY.pad; if(!p) return;
   if(v==="close"){ if(REC.target==="py") cancelRec(); if(p.url) URL.revokeObjectURL(p.url); PY.pad=null; pyPadPaint(); return; }
-  if(v==="say") pySay(p.c); else if(v==="rec") pyRecToggle();
+  if(v==="say") pyPlay(pyByChar(p.c)||{c:p.c}); else if(v==="rec") pyRecToggle();
   else if(v==="mine"&&p.url) pySeq([{audio:p.url}]);
   else if(v==="cmp"&&p.url) pySeq([{say:p.c},{wait:400},{audio:p.url}]); }
 /* --- views --- */

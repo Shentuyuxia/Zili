@@ -39,8 +39,13 @@
      "en": "Dips low, then lifts a little at the end, like an “uh-huh” of agreement.*",
      "de": "Sinkt tief ab und hebt sich zum Schluss ein wenig, wie ein zustimmendes „Mhm“.*",
      "pt": "Desce bem baixo e sobe um pouco no fim, como um “uhum” de concordância.*",
-          "note": {"zh": "单念时才是完整的低降升，在词语里常变成二声。", "en": "Said alone it is the full dip-and-rise; in words it often becomes a 2nd tone.", "de": "Allein gesprochen ist es der volle Tief-Hoch-Bogen; in Wörtern wird er oft zum 2. Ton.", "pt": "Sozinho é o tom completo (desce e sobe); em palavras, muitas vezes vira o 2º tom."}
-        },
+     "note": {
+      "zh": "单念时才是完整的低降升，在词语里常变成二声。",
+      "en": "Said alone it is the full dip-and-rise; in words it often becomes a 2nd tone.",
+      "de": "Allein gesprochen ist es der volle Tief-Hoch-Bogen; in Wörtern wird er oft zum 2. Ton.",
+      "pt": "Sozinho é o tom completo (desce e sobe); em palavras, muitas vezes vira o 2º tom."
+     }
+    },
     {
      "t": 4,
      "zh": "从高处一下子落下去，短促干脆，像路上遇到人时说的“Hey!”",
@@ -66,7 +71,8 @@
         "en": "mum",
         "de": "Mama",
         "pt": "mãe"
-       }
+       },
+       "au": "audio/cards/5988.mp3"
       },
       {
        "c": "麻",
@@ -76,7 +82,8 @@
         "en": "hemp; numb",
         "de": "Hanf; taub",
         "pt": "cânhamo; dormente"
-       }
+       },
+       "au": "audio/cards/9ebb.mp3"
       },
       {
        "c": "马",
@@ -86,7 +93,8 @@
         "en": "horse",
         "de": "Pferd",
         "pt": "cavalo"
-       }
+       },
+       "au": "audio/cards/9a6c.mp3"
       },
       {
        "c": "骂",
@@ -96,7 +104,8 @@
         "en": "to scold",
         "de": "schimpfen",
         "pt": "xingar"
-       }
+       },
+       "au": "audio/cards/9a82.mp3"
       }
      ]
     },
@@ -110,7 +119,8 @@
         "en": "eight",
         "de": "acht",
         "pt": "oito"
-       }
+       },
+       "au": "audio/cards/516b.mp3"
       },
       {
        "c": "拔",
@@ -120,7 +130,8 @@
         "en": "to pull out",
         "de": "herausziehen",
         "pt": "arrancar"
-       }
+       },
+       "au": "audio/cards/62d4.mp3"
       },
       {
        "c": "把",
@@ -130,7 +141,8 @@
         "en": "to hold; (measure word)",
         "de": "halten; (Zählwort)",
         "pt": "segurar; (classificador)"
-       }
+       },
+       "au": "audio/cards/628a.mp3"
       },
       {
        "c": "爸",
@@ -140,7 +152,8 @@
         "en": "dad",
         "de": "Papa",
         "pt": "pai"
-       }
+       },
+       "au": "audio/cards/7238.mp3"
       }
      ]
     },
@@ -154,7 +167,8 @@
         "en": "clothes",
         "de": "Kleidung",
         "pt": "roupa"
-       }
+       },
+       "au": "audio/cards/8863.mp3"
       },
       {
        "c": "姨",
@@ -164,7 +178,8 @@
         "en": "aunt (mother's sister)",
         "de": "Tante (Schwester der Mutter)",
         "pt": "tia (irmã da mãe)"
-       }
+       },
+       "au": "audio/cards/59e8.mp3"
       },
       {
        "c": "椅",
@@ -174,7 +189,8 @@
         "en": "chair",
         "de": "Stuhl",
         "pt": "cadeira"
-       }
+       },
+       "au": "audio/cards/6905.mp3"
       },
       {
        "c": "意",
@@ -184,7 +200,8 @@
         "en": "meaning; idea",
         "de": "Bedeutung; Idee",
         "pt": "sentido; ideia"
-       }
+       },
+       "au": "audio/cards/610f.mp3"
       }
      ]
     },
@@ -198,7 +215,8 @@
         "en": "soup",
         "de": "Suppe",
         "pt": "sopa"
-       }
+       },
+       "au": "audio/cards/6c64.mp3"
       },
       {
        "c": "糖",
@@ -208,7 +226,8 @@
         "en": "sugar; sweets",
         "de": "Zucker; Bonbon",
         "pt": "açúcar; bala"
-       }
+       },
+       "au": "audio/cards/7cd6.mp3"
       },
       {
        "c": "躺",
@@ -218,7 +237,8 @@
         "en": "to lie down",
         "de": "liegen",
         "pt": "deitar-se"
-       }
+       },
+       "au": "audio/cards/8eba.mp3"
       },
       {
        "c": "烫",
@@ -228,7 +248,8 @@
         "en": "scalding hot",
         "de": "sehr heiß",
         "pt": "muito quente"
-       }
+       },
+       "au": "audio/cards/70eb.mp3"
       }
      ]
     },
@@ -242,7 +263,8 @@
         "en": "poem",
         "de": "Gedicht",
         "pt": "poema"
-       }
+       },
+       "au": "audio/cards/8bd7.mp3"
       },
       {
        "c": "十",
@@ -252,7 +274,8 @@
         "en": "ten",
         "de": "zehn",
         "pt": "dez"
-       }
+       },
+       "au": "audio/cards/5341.mp3"
       },
       {
        "c": "使",
@@ -262,7 +285,8 @@
         "en": "to make; to use",
         "de": "veranlassen; benutzen",
         "pt": "fazer; usar"
-       }
+       },
+       "au": "audio/cards/4f7f.mp3"
       },
       {
        "c": "是",
@@ -272,7 +296,8 @@
         "en": "to be",
         "de": "sein",
         "pt": "ser"
-       }
+       },
+       "au": "audio/cards/662f.mp3"
       }
      ]
     },
@@ -286,7 +311,8 @@
         "en": "seven",
         "de": "sieben",
         "pt": "sete"
-       }
+       },
+       "au": "audio/cards/4e03.mp3"
       },
       {
        "c": "骑",
@@ -296,7 +322,8 @@
         "en": "to ride",
         "de": "reiten; fahren",
         "pt": "andar (de bicicleta, a cavalo)"
-       }
+       },
+       "au": "audio/cards/9a91.mp3"
       },
       {
        "c": "起",
@@ -306,7 +333,8 @@
         "en": "to get up",
         "de": "aufstehen",
         "pt": "levantar-se"
-       }
+       },
+       "au": "audio/cards/8d77.mp3"
       },
       {
        "c": "气",
@@ -316,7 +344,8 @@
         "en": "air; anger",
         "de": "Luft; Ärger",
         "pt": "ar; raiva"
-       }
+       },
+       "au": "audio/cards/6c14.mp3"
       }
      ]
     },
@@ -330,7 +359,8 @@
         "en": "warm",
         "de": "warm",
         "pt": "morno"
-       }
+       },
+       "au": "audio/cards/6e29.mp3"
       },
       {
        "c": "文",
@@ -340,7 +370,8 @@
         "en": "writing; language",
         "de": "Schrift; Sprache",
         "pt": "escrita; língua"
-       }
+       },
+       "au": "audio/cards/6587.mp3"
       },
       {
        "c": "稳",
@@ -350,7 +381,8 @@
         "en": "steady",
         "de": "stabil",
         "pt": "firme"
-       }
+       },
+       "au": "audio/cards/7a33.mp3"
       },
       {
        "c": "问",
@@ -360,7 +392,8 @@
         "en": "to ask",
         "de": "fragen",
         "pt": "perguntar"
-       }
+       },
+       "au": "audio/cards/95ee.mp3"
       }
      ]
     },
@@ -374,7 +407,8 @@
         "en": "room; house",
         "de": "Zimmer; Haus",
         "pt": "quarto; casa"
-       }
+       },
+       "au": "audio/cards/5c4b.mp3"
       },
       {
        "c": "无",
@@ -384,7 +418,8 @@
         "en": "without",
         "de": "ohne",
         "pt": "sem"
-       }
+       },
+       "au": "audio/cards/65e0.mp3"
       },
       {
        "c": "五",
@@ -394,7 +429,8 @@
         "en": "five",
         "de": "fünf",
         "pt": "cinco"
-       }
+       },
+       "au": "audio/cards/4e94.mp3"
       },
       {
        "c": "雾",
@@ -404,7 +440,8 @@
         "en": "fog",
         "de": "Nebel",
         "pt": "neblina"
-       }
+       },
+       "au": "audio/cards/96fe.mp3"
       }
      ]
     },
@@ -418,7 +455,8 @@
         "en": "to go through",
         "de": "durchgehen",
         "pt": "passar; ligar"
-       }
+       },
+       "au": "audio/cards/901a.mp3"
       },
       {
        "c": "同",
@@ -428,7 +466,8 @@
         "en": "same",
         "de": "gleich",
         "pt": "igual"
-       }
+       },
+       "au": "audio/cards/540c.mp3"
       },
       {
        "c": "桶",
@@ -438,7 +477,8 @@
         "en": "bucket",
         "de": "Eimer",
         "pt": "balde"
-       }
+       },
+       "au": "audio/cards/6876.mp3"
       },
       {
        "c": "痛",
@@ -448,7 +488,8 @@
         "en": "pain",
         "de": "Schmerz",
         "pt": "dor"
-       }
+       },
+       "au": "audio/cards/75db.mp3"
       }
      ]
     }
@@ -753,7 +794,8 @@
         "en": "eight",
         "de": "acht",
         "pt": "oito"
-       }
+       },
+       "au": "audio/cards/516b.mp3"
       },
       {
        "c": "波",
@@ -764,7 +806,8 @@
         "en": "wave",
         "de": "Welle",
         "pt": "onda"
-       }
+       },
+       "au": "audio/cards/6ce2.mp3"
       },
       {
        "c": "饿",
@@ -775,7 +818,8 @@
         "en": "hungry",
         "de": "hungrig",
         "pt": "com fome"
-       }
+       },
+       "au": "audio/cards/997f.mp3"
       },
       {
        "c": "一",
@@ -786,7 +830,8 @@
         "en": "one",
         "de": "eins",
         "pt": "um"
-       }
+       },
+       "au": "audio/cards/4e00.mp3"
       },
       {
        "c": "五",
@@ -797,7 +842,8 @@
         "en": "five",
         "de": "fünf",
         "pt": "cinco"
-       }
+       },
+       "au": "audio/cards/4e94.mp3"
       },
       {
        "c": "鱼",
@@ -808,7 +854,8 @@
         "en": "fish",
         "de": "Fisch",
         "pt": "peixe"
-       }
+       },
+       "au": "audio/cards/9c7c.mp3"
       }
      ]
     },
@@ -828,7 +875,8 @@
         "en": "road",
         "de": "Straße",
         "pt": "rua; caminho"
-       }
+       },
+       "au": "audio/cards/8def.mp3"
       },
       {
        "c": "绿",
@@ -838,7 +886,8 @@
         "en": "green",
         "de": "grün",
         "pt": "verde"
-       }
+       },
+       "au": "audio/cards/7eff.mp3"
       },
       {
        "c": "努",
@@ -848,7 +897,8 @@
         "en": "to strive",
         "de": "sich anstrengen",
         "pt": "esforçar-se"
-       }
+       },
+       "au": "audio/cards/52aa.mp3"
       },
       {
        "c": "女",
@@ -858,7 +908,8 @@
         "en": "woman; female",
         "de": "Frau; weiblich",
         "pt": "mulher; feminino"
-       }
+       },
+       "au": "audio/cards/5973.mp3"
       },
       {
        "c": "五",
@@ -868,7 +919,8 @@
         "en": "five",
         "de": "fünf",
         "pt": "cinco"
-       }
+       },
+       "au": "audio/cards/4e94.mp3"
       },
       {
        "c": "雨",
@@ -878,7 +930,8 @@
         "en": "rain",
         "de": "Regen",
         "pt": "chuva"
-       }
+       },
+       "au": "audio/cards/96e8.mp3"
       }
      ]
     },
@@ -898,7 +951,8 @@
         "en": "to drink",
         "de": "trinken",
         "pt": "beber"
-       }
+       },
+       "au": "audio/cards/559d.mp3"
       },
       {
        "c": "课",
@@ -908,7 +962,8 @@
         "en": "class; lesson",
         "de": "Unterricht",
         "pt": "aula"
-       }
+       },
+       "au": "audio/cards/8bfe.mp3"
       },
       {
        "c": "椅",
@@ -918,7 +973,8 @@
         "en": "chair",
         "de": "Stuhl",
         "pt": "cadeira"
-       }
+       },
+       "au": "audio/cards/6905.mp3"
       },
       {
        "c": "去",
@@ -928,7 +984,8 @@
         "en": "to go",
         "de": "gehen",
         "pt": "ir"
-       }
+       },
+       "au": "audio/cards/53bb.mp3"
       }
      ]
     }
@@ -1081,7 +1138,8 @@
         "de": "Papa",
         "pt": "pai"
        },
-       "v": "b"
+       "v": "b",
+       "au": "audio/cards/7238.mp3"
       },
       {
        "c": "怕",
@@ -1092,7 +1150,8 @@
         "de": "Angst haben",
         "pt": "ter medo"
        },
-       "v": "p"
+       "v": "p",
+       "au": "audio/cards/6015.mp3"
       },
       {
        "c": "白",
@@ -1103,7 +1162,8 @@
         "de": "weiß",
         "pt": "branco"
        },
-       "v": "b"
+       "v": "b",
+       "au": "audio/cards/767d.mp3"
       },
       {
        "c": "牌",
@@ -1114,7 +1174,8 @@
         "de": "Karte; Schild",
         "pt": "carta; placa"
        },
-       "v": "p"
+       "v": "p",
+       "au": "audio/cards/724c.mp3"
       },
       {
        "c": "饱",
@@ -1125,7 +1186,8 @@
         "de": "satt",
         "pt": "satisfeito (de comida)"
        },
-       "v": "b"
+       "v": "b",
+       "au": "audio/cards/9971.mp3"
       },
       {
        "c": "跑",
@@ -1136,7 +1198,8 @@
         "de": "laufen",
         "pt": "correr"
        },
-       "v": "p"
+       "v": "p",
+       "au": "audio/cards/8dd1.mp3"
       },
       {
        "c": "拔",
@@ -1147,7 +1210,8 @@
         "de": "herausziehen",
         "pt": "arrancar"
        },
-       "v": "b"
+       "v": "b",
+       "au": "audio/cards/62d4.mp3"
       },
       {
        "c": "爬",
@@ -1158,7 +1222,8 @@
         "de": "klettern",
         "pt": "subir; escalar"
        },
-       "v": "p"
+       "v": "p",
+       "au": "audio/cards/722c.mp3"
       }
      ]
     },
@@ -1179,7 +1244,8 @@
         "de": "jüngerer Bruder",
         "pt": "irmão mais novo"
        },
-       "v": "d"
+       "v": "d",
+       "au": "audio/cards/5f1f.mp3"
       },
       {
        "c": "替",
@@ -1190,7 +1256,8 @@
         "de": "ersetzen",
         "pt": "substituir"
        },
-       "v": "t"
+       "v": "t",
+       "au": "audio/cards/66ff.mp3"
       },
       {
        "c": "读",
@@ -1201,7 +1268,8 @@
         "de": "lesen",
         "pt": "ler"
        },
-       "v": "d"
+       "v": "d",
+       "au": "audio/cards/8bfb.mp3"
       },
       {
        "c": "图",
@@ -1212,7 +1280,8 @@
         "de": "Bild",
         "pt": "imagem"
        },
-       "v": "t"
+       "v": "t",
+       "au": "audio/cards/56fe.mp3"
       },
       {
        "c": "多",
@@ -1223,7 +1292,8 @@
         "de": "viel",
         "pt": "muito"
        },
-       "v": "d"
+       "v": "d",
+       "au": "audio/cards/591a.mp3"
       },
       {
        "c": "拖",
@@ -1234,7 +1304,8 @@
         "de": "ziehen",
         "pt": "arrastar"
        },
-       "v": "t"
+       "v": "t",
+       "au": "audio/cards/62d6.mp3"
       },
       {
        "c": "东",
@@ -1245,7 +1316,8 @@
         "de": "Osten",
         "pt": "leste"
        },
-       "v": "d"
+       "v": "d",
+       "au": "audio/cards/4e1c.mp3"
       },
       {
        "c": "通",
@@ -1256,7 +1328,8 @@
         "de": "durchgehen",
         "pt": "passar; ligar"
        },
-       "v": "t"
+       "v": "t",
+       "au": "audio/cards/901a.mp3"
       }
      ]
     },
@@ -1277,7 +1350,8 @@
         "de": "Mama",
         "pt": "mãe"
        },
-       "v": "m"
+       "v": "m",
+       "au": "audio/cards/5988.mp3"
       },
       {
        "c": "米",
@@ -1288,7 +1362,8 @@
         "de": "Reis",
         "pt": "arroz (cru)"
        },
-       "v": "m"
+       "v": "m",
+       "au": "audio/cards/7c73.mp3"
       },
       {
        "c": "门",
@@ -1299,7 +1374,8 @@
         "de": "Tür",
         "pt": "porta"
        },
-       "v": "m"
+       "v": "m",
+       "au": "audio/cards/95e8.mp3"
       },
       {
        "c": "飞",
@@ -1310,7 +1386,8 @@
         "de": "fliegen",
         "pt": "voar"
        },
-       "v": "f"
+       "v": "f",
+       "au": "audio/cards/98de.mp3"
       },
       {
        "c": "饭",
@@ -1321,7 +1398,8 @@
         "de": "Essen; Reis",
         "pt": "refeição; arroz"
        },
-       "v": "f"
+       "v": "f",
+       "au": "audio/cards/996d.mp3"
       },
       {
        "c": "风",
@@ -1332,7 +1410,8 @@
         "de": "Wind",
         "pt": "vento"
        },
-       "v": "f"
+       "v": "f",
+       "au": "audio/cards/98ce.mp3"
       }
      ]
     },
@@ -1353,7 +1432,8 @@
         "de": "du",
         "pt": "você"
        },
-       "v": "n"
+       "v": "n",
+       "au": "audio/cards/4f60.mp3"
       },
       {
        "c": "里",
@@ -1364,7 +1444,8 @@
         "de": "innen",
         "pt": "dentro"
        },
-       "v": "l"
+       "v": "l",
+       "au": "audio/cards/91cc.mp3"
       },
       {
        "c": "男",
@@ -1375,7 +1456,8 @@
         "de": "männlich",
         "pt": "masculino"
        },
-       "v": "n"
+       "v": "n",
+       "au": "audio/cards/7537.mp3"
       },
       {
        "c": "蓝",
@@ -1386,7 +1468,8 @@
         "de": "blau",
         "pt": "azul"
        },
-       "v": "l"
+       "v": "l",
+       "au": "audio/cards/84dd.mp3"
       },
       {
        "c": "脑",
@@ -1397,7 +1480,8 @@
         "de": "Gehirn",
         "pt": "cérebro"
        },
-       "v": "n"
+       "v": "n",
+       "au": "audio/cards/8111.mp3"
       },
       {
        "c": "老",
@@ -1408,7 +1492,8 @@
         "de": "alt",
         "pt": "velho"
        },
-       "v": "l"
+       "v": "l",
+       "au": "audio/cards/8001.mp3"
       },
       {
        "c": "牛",
@@ -1419,7 +1504,8 @@
         "de": "Rind",
         "pt": "vaca; boi"
        },
-       "v": "n"
+       "v": "n",
+       "au": "audio/cards/725b.mp3"
       },
       {
        "c": "流",
@@ -1430,7 +1516,8 @@
         "de": "fließen",
         "pt": "correr (água)"
        },
-       "v": "l"
+       "v": "l",
+       "au": "audio/cards/6d41.mp3"
       }
      ]
     }
@@ -1579,7 +1666,8 @@
         "de": "älterer Bruder",
         "pt": "irmão mais velho"
        },
-       "v": "g"
+       "v": "g",
+       "au": "audio/cards/54e5.mp3"
       },
       {
        "c": "科",
@@ -1590,7 +1678,8 @@
         "de": "Fach; Abteilung",
         "pt": "matéria; departamento"
        },
-       "v": "k"
+       "v": "k",
+       "au": "audio/cards/79d1.mp3"
       },
       {
        "c": "古",
@@ -1601,7 +1690,8 @@
         "de": "alt (antik)",
         "pt": "antigo"
        },
-       "v": "g"
+       "v": "g",
+       "au": "audio/cards/53e4.mp3"
       },
       {
        "c": "苦",
@@ -1612,7 +1702,8 @@
         "de": "bitter",
         "pt": "amargo"
        },
-       "v": "k"
+       "v": "k",
+       "au": "audio/cards/82e6.mp3"
       },
       {
        "c": "个",
@@ -1623,7 +1714,8 @@
         "de": "(Zählwort)",
         "pt": "(classificador)"
        },
-       "v": "g"
+       "v": "g",
+       "au": "audio/cards/4e2a.mp3"
       },
       {
        "c": "课",
@@ -1634,7 +1726,8 @@
         "de": "Unterricht",
         "pt": "aula"
        },
-       "v": "k"
+       "v": "k",
+       "au": "audio/cards/8bfe.mp3"
       },
       {
        "c": "关",
@@ -1645,7 +1738,8 @@
         "de": "schließen",
         "pt": "fechar"
        },
-       "v": "g"
+       "v": "g",
+       "au": "audio/cards/5173.mp3"
       },
       {
        "c": "宽",
@@ -1656,7 +1750,8 @@
         "de": "breit",
         "pt": "largo"
        },
-       "v": "k"
+       "v": "k",
+       "au": "audio/cards/5bbd.mp3"
       }
      ]
     },
@@ -1677,7 +1772,8 @@
         "de": "trinken",
         "pt": "beber"
        },
-       "v": "h"
+       "v": "h",
+       "au": "audio/cards/559d.mp3"
       },
       {
        "c": "红",
@@ -1688,7 +1784,8 @@
         "de": "rot",
         "pt": "vermelho"
        },
-       "v": "h"
+       "v": "h",
+       "au": "audio/cards/7ea2.mp3"
       },
       {
        "c": "好",
@@ -1699,7 +1796,8 @@
         "de": "gut",
         "pt": "bom"
        },
-       "v": "h"
+       "v": "h",
+       "au": "audio/cards/597d.mp3"
       },
       {
        "c": "花",
@@ -1710,7 +1808,8 @@
         "de": "Blume",
         "pt": "flor"
        },
-       "v": "h"
+       "v": "h",
+       "au": "audio/cards/82b1.mp3"
       },
       {
        "c": "火",
@@ -1721,7 +1820,8 @@
         "de": "Feuer",
         "pt": "fogo"
        },
-       "v": "h"
+       "v": "h",
+       "au": "audio/cards/706b.mp3"
       },
       {
        "c": "汉",
@@ -1732,7 +1832,8 @@
         "de": "chinesisch (Han)",
         "pt": "chinês (Han)"
        },
-       "v": "h"
+       "v": "h",
+       "au": "audio/cards/6c49.mp3"
       }
      ]
     },
@@ -1753,7 +1854,8 @@
         "de": "bitter",
         "pt": "amargo"
        },
-       "v": "k"
+       "v": "k",
+       "au": "audio/cards/82e6.mp3"
       },
       {
        "c": "虎",
@@ -1764,7 +1866,8 @@
         "de": "Tiger",
         "pt": "tigre"
        },
-       "v": "h"
+       "v": "h",
+       "au": "audio/cards/864e.mp3"
       },
       {
        "c": "看",
@@ -1775,7 +1878,8 @@
         "de": "schauen",
         "pt": "olhar"
        },
-       "v": "k"
+       "v": "k",
+       "au": "audio/cards/770b.mp3"
       },
       {
        "c": "汉",
@@ -1786,7 +1890,8 @@
         "de": "chinesisch (Han)",
         "pt": "chinês (Han)"
        },
-       "v": "h"
+       "v": "h",
+       "au": "audio/cards/6c49.mp3"
       }
      ]
     }
@@ -1906,7 +2011,8 @@
         "de": "Huhn",
         "pt": "galinha"
        },
-       "v": "j"
+       "v": "j",
+       "au": "audio/cards/9e21.mp3"
       },
       {
        "c": "七",
@@ -1917,7 +2023,8 @@
         "de": "sieben",
         "pt": "sete"
        },
-       "v": "q"
+       "v": "q",
+       "au": "audio/cards/4e03.mp3"
       },
       {
        "c": "西",
@@ -1928,7 +2035,8 @@
         "de": "Westen",
         "pt": "oeste"
        },
-       "v": "x"
+       "v": "x",
+       "au": "audio/cards/897f.mp3"
       },
       {
        "c": "家",
@@ -1939,7 +2047,8 @@
         "de": "Zuhause; Familie",
         "pt": "casa; família"
        },
-       "v": "j"
+       "v": "j",
+       "au": "audio/cards/5bb6.mp3"
       },
       {
        "c": "钱",
@@ -1950,7 +2059,8 @@
         "de": "Geld",
         "pt": "dinheiro"
        },
-       "v": "q"
+       "v": "q",
+       "au": "audio/cards/94b1.mp3"
       },
       {
        "c": "谢",
@@ -1961,7 +2071,8 @@
         "de": "danken",
         "pt": "agradecer"
        },
-       "v": "x"
+       "v": "x",
+       "au": "audio/cards/8c22.mp3"
       },
       {
        "c": "九",
@@ -1972,7 +2083,8 @@
         "de": "neun",
         "pt": "nove"
        },
-       "v": "j"
+       "v": "j",
+       "au": "audio/cards/4e5d.mp3"
       },
       {
        "c": "球",
@@ -1983,7 +2095,8 @@
         "de": "Ball",
         "pt": "bola"
        },
-       "v": "q"
+       "v": "q",
+       "au": "audio/cards/7403.mp3"
       },
       {
        "c": "小",
@@ -1994,7 +2107,8 @@
         "de": "klein",
         "pt": "pequeno"
        },
-       "v": "x"
+       "v": "x",
+       "au": "audio/cards/5c0f.mp3"
       }
      ]
     },
@@ -2015,7 +2129,8 @@
         "de": "Satz",
         "pt": "frase"
        },
-       "v": "j"
+       "v": "j",
+       "au": "audio/cards/53e5.mp3"
       },
       {
        "c": "去",
@@ -2026,7 +2141,8 @@
         "de": "gehen",
         "pt": "ir"
        },
-       "v": "q"
+       "v": "q",
+       "au": "audio/cards/53bb.mp3"
       },
       {
        "c": "学",
@@ -2037,7 +2153,8 @@
         "de": "lernen",
         "pt": "estudar"
        },
-       "v": "x"
+       "v": "x",
+       "au": "audio/cards/5b66.mp3"
       }
      ]
     },
@@ -2058,7 +2175,8 @@
         "de": "Zuhause; Familie",
         "pt": "casa; família"
        },
-       "v": "j"
+       "v": "j",
+       "au": "audio/cards/5bb6.mp3"
       },
       {
        "c": "虾",
@@ -2069,7 +2187,8 @@
         "de": "Garnele",
         "pt": "camarão"
        },
-       "v": "x"
+       "v": "x",
+       "au": "audio/cards/867e.mp3"
       },
       {
        "c": "姐",
@@ -2080,7 +2199,8 @@
         "de": "ältere Schwester",
         "pt": "irmã mais velha"
        },
-       "v": "j"
+       "v": "j",
+       "au": "audio/cards/59d0.mp3"
       },
       {
        "c": "写",
@@ -2091,7 +2211,8 @@
         "de": "schreiben",
         "pt": "escrever"
        },
-       "v": "x"
+       "v": "x",
+       "au": "audio/cards/5199.mp3"
       },
       {
        "c": "句",
@@ -2102,7 +2223,8 @@
         "de": "Satz",
         "pt": "frase"
        },
-       "v": "j"
+       "v": "j",
+       "au": "audio/cards/53e5.mp3"
       },
       {
        "c": "去",
@@ -2113,7 +2235,8 @@
         "de": "gehen",
         "pt": "ir"
        },
-       "v": "q"
+       "v": "q",
+       "au": "audio/cards/53bb.mp3"
       },
       {
        "c": "见",
@@ -2124,7 +2247,8 @@
         "de": "sehen",
         "pt": "ver"
        },
-       "v": "j"
+       "v": "j",
+       "au": "audio/cards/89c1.mp3"
       },
       {
        "c": "欠",
@@ -2135,7 +2259,8 @@
         "de": "schulden",
         "pt": "dever (dinheiro)"
        },
-       "v": "q"
+       "v": "q",
+       "au": "audio/cards/6b20.mp3"
       }
      ]
     }
@@ -2279,7 +2404,8 @@
         "de": "Schriftzeichen",
         "pt": "caractere"
        },
-       "v": "z"
+       "v": "z",
+       "au": "audio/cards/5b57.mp3"
       },
       {
        "c": "次",
@@ -2290,7 +2416,8 @@
         "de": "Mal",
         "pt": "vez"
        },
-       "v": "c"
+       "v": "c",
+       "au": "audio/cards/6b21.mp3"
       },
       {
        "c": "四",
@@ -2301,7 +2428,8 @@
         "de": "vier",
         "pt": "quatro"
        },
-       "v": "s"
+       "v": "s",
+       "au": "audio/cards/56db.mp3"
       }
      ]
     },
@@ -2322,7 +2450,8 @@
         "de": "früh",
         "pt": "cedo"
        },
-       "v": "z"
+       "v": "z",
+       "au": "audio/cards/65e9.mp3"
       },
       {
        "c": "草",
@@ -2333,7 +2462,8 @@
         "de": "Gras",
         "pt": "grama"
        },
-       "v": "c"
+       "v": "c",
+       "au": "audio/cards/8349.mp3"
       },
       {
        "c": "扫",
@@ -2344,7 +2474,8 @@
         "de": "fegen",
         "pt": "varrer"
        },
-       "v": "s"
+       "v": "s",
+       "au": "audio/cards/626b.mp3"
       },
       {
        "c": "在",
@@ -2355,7 +2486,8 @@
         "de": "in; an",
         "pt": "em; estar"
        },
-       "v": "z"
+       "v": "z",
+       "au": "audio/cards/5728.mp3"
       },
       {
        "c": "菜",
@@ -2366,7 +2498,8 @@
         "de": "Gericht; Gemüse",
         "pt": "prato; verdura"
        },
-       "v": "c"
+       "v": "c",
+       "au": "audio/cards/83dc.mp3"
       },
       {
        "c": "赛",
@@ -2377,7 +2510,8 @@
         "de": "Wettkampf",
         "pt": "competição"
        },
-       "v": "s"
+       "v": "s",
+       "au": "audio/cards/8d5b.mp3"
       },
       {
        "c": "做",
@@ -2388,7 +2522,8 @@
         "de": "machen",
         "pt": "fazer"
        },
-       "v": "z"
+       "v": "z",
+       "au": "audio/cards/505a.mp3"
       },
       {
        "c": "错",
@@ -2399,7 +2534,8 @@
         "de": "falsch",
         "pt": "errado"
        },
-       "v": "c"
+       "v": "c",
+       "au": "audio/cards/9519.mp3"
       },
       {
        "c": "三",
@@ -2410,7 +2546,8 @@
         "de": "drei",
         "pt": "três"
        },
-       "v": "s"
+       "v": "s",
+       "au": "audio/cards/4e09.mp3"
       }
      ]
     }
@@ -2524,7 +2661,8 @@
         "de": "wissen",
         "pt": "saber"
        },
-       "v": "zh"
+       "v": "zh",
+       "au": "audio/cards/77e5.mp3"
       },
       {
        "c": "吃",
@@ -2535,7 +2673,8 @@
         "de": "essen",
         "pt": "comer"
        },
-       "v": "ch"
+       "v": "ch",
+       "au": "audio/cards/5403.mp3"
       },
       {
        "c": "是",
@@ -2546,7 +2685,8 @@
         "de": "sein",
         "pt": "ser"
        },
-       "v": "sh"
+       "v": "sh",
+       "au": "audio/cards/662f.mp3"
       },
       {
        "c": "日",
@@ -2557,7 +2697,8 @@
         "de": "Sonne; Tag",
         "pt": "sol; dia"
        },
-       "v": "r"
+       "v": "r",
+       "au": "audio/cards/65e5.mp3"
       },
       {
        "c": "中",
@@ -2568,7 +2709,8 @@
         "de": "Mitte",
         "pt": "meio"
        },
-       "v": "zh"
+       "v": "zh",
+       "au": "audio/cards/4e2d.mp3"
       },
       {
        "c": "车",
@@ -2579,7 +2721,8 @@
         "de": "Auto",
         "pt": "carro"
        },
-       "v": "ch"
+       "v": "ch",
+       "au": "audio/cards/8f66.mp3"
       },
       {
        "c": "书",
@@ -2590,7 +2733,8 @@
         "de": "Buch",
         "pt": "livro"
        },
-       "v": "sh"
+       "v": "sh",
+       "au": "audio/cards/4e66.mp3"
       },
       {
        "c": "热",
@@ -2601,7 +2745,8 @@
         "de": "heiß",
         "pt": "quente"
        },
-       "v": "r"
+       "v": "r",
+       "au": "audio/cards/70ed.mp3"
       },
       {
        "c": "找",
@@ -2612,7 +2757,8 @@
         "de": "suchen",
         "pt": "procurar"
        },
-       "v": "zh"
+       "v": "zh",
+       "au": "audio/cards/627e.mp3"
       },
       {
        "c": "炒",
@@ -2623,7 +2769,8 @@
         "de": "pfannenrühren",
         "pt": "refogar"
        },
-       "v": "ch"
+       "v": "ch",
+       "au": "audio/cards/7092.mp3"
       },
       {
        "c": "少",
@@ -2634,7 +2781,8 @@
         "de": "wenig",
         "pt": "pouco"
        },
-       "v": "sh"
+       "v": "sh",
+       "au": "audio/cards/5c11.mp3"
       },
       {
        "c": "肉",
@@ -2645,7 +2793,8 @@
         "de": "Fleisch",
         "pt": "carne"
        },
-       "v": "r"
+       "v": "r",
+       "au": "audio/cards/8089.mp3"
       }
      ]
     },
@@ -2666,7 +2815,8 @@
         "de": "vier",
         "pt": "quatro"
        },
-       "v": "s"
+       "v": "s",
+       "au": "audio/cards/56db.mp3"
       },
       {
        "c": "是",
@@ -2677,7 +2827,8 @@
         "de": "sein",
         "pt": "ser"
        },
-       "v": "sh"
+       "v": "sh",
+       "au": "audio/cards/662f.mp3"
       },
       {
        "c": "三",
@@ -2688,7 +2839,8 @@
         "de": "drei",
         "pt": "três"
        },
-       "v": "s"
+       "v": "s",
+       "au": "audio/cards/4e09.mp3"
       },
       {
        "c": "山",
@@ -2699,7 +2851,8 @@
         "de": "Berg",
         "pt": "montanha"
        },
-       "v": "sh"
+       "v": "sh",
+       "au": "audio/cards/5c71.mp3"
       },
       {
        "c": "早",
@@ -2710,7 +2863,8 @@
         "de": "früh",
         "pt": "cedo"
        },
-       "v": "z"
+       "v": "z",
+       "au": "audio/cards/65e9.mp3"
       },
       {
        "c": "找",
@@ -2721,7 +2875,8 @@
         "de": "suchen",
         "pt": "procurar"
        },
-       "v": "zh"
+       "v": "zh",
+       "au": "audio/cards/627e.mp3"
       },
       {
        "c": "草",
@@ -2732,7 +2887,8 @@
         "de": "Gras",
         "pt": "grama"
        },
-       "v": "c"
+       "v": "c",
+       "au": "audio/cards/8349.mp3"
       },
       {
        "c": "炒",
@@ -2743,7 +2899,8 @@
         "de": "pfannenrühren",
         "pt": "refogar"
        },
-       "v": "ch"
+       "v": "ch",
+       "au": "audio/cards/7092.mp3"
       }
      ]
     }
@@ -2860,7 +3017,8 @@
         "de": "Liebe",
         "pt": "amor"
        },
-       "v": "ai"
+       "v": "ai",
+       "au": "audio/cards/7231.mp3"
       },
       {
        "c": "飞",
@@ -2871,7 +3029,8 @@
         "de": "fliegen",
         "pt": "voar"
        },
-       "v": "ei"
+       "v": "ei",
+       "au": "audio/cards/98de.mp3"
       },
       {
        "c": "猫",
@@ -2882,7 +3041,8 @@
         "de": "Katze",
         "pt": "gato"
        },
-       "v": "ao"
+       "v": "ao",
+       "au": "audio/cards/732b.mp3"
       },
       {
        "c": "狗",
@@ -2893,7 +3053,8 @@
         "de": "Hund",
         "pt": "cachorro"
        },
-       "v": "ou"
+       "v": "ou",
+       "au": "audio/cards/72d7.mp3"
       },
       {
        "c": "买",
@@ -2904,7 +3065,8 @@
         "de": "kaufen",
         "pt": "comprar"
        },
-       "v": "ai"
+       "v": "ai",
+       "au": "audio/cards/4e70.mp3"
       },
       {
        "c": "美",
@@ -2915,7 +3077,8 @@
         "de": "schön",
         "pt": "bonito"
        },
-       "v": "ei"
+       "v": "ei",
+       "au": "audio/cards/7f8e.mp3"
       },
       {
        "c": "好",
@@ -2926,7 +3089,8 @@
         "de": "gut",
         "pt": "bom"
        },
-       "v": "ao"
+       "v": "ao",
+       "au": "audio/cards/597d.mp3"
       },
       {
        "c": "走",
@@ -2937,7 +3101,8 @@
         "de": "gehen",
         "pt": "andar"
        },
-       "v": "ou"
+       "v": "ou",
+       "au": "audio/cards/8d70.mp3"
       }
      ]
     },
@@ -2958,7 +3123,8 @@
         "de": "Zuhause",
         "pt": "casa"
        },
-       "v": "ia"
+       "v": "ia",
+       "au": "audio/cards/5bb6.mp3"
       },
       {
        "c": "谢",
@@ -2969,7 +3135,8 @@
         "de": "danken",
         "pt": "agradecer"
        },
-       "v": "ie"
+       "v": "ie",
+       "au": "audio/cards/8c22.mp3"
       },
       {
        "c": "花",
@@ -2980,7 +3147,8 @@
         "de": "Blume",
         "pt": "flor"
        },
-       "v": "ua"
+       "v": "ua",
+       "au": "audio/cards/82b1.mp3"
       },
       {
        "c": "我",
@@ -2991,7 +3159,8 @@
         "de": "ich",
         "pt": "eu"
        },
-       "v": "uo"
+       "v": "uo",
+       "au": "audio/cards/6211.mp3"
       },
       {
        "c": "月",
@@ -3002,7 +3171,8 @@
         "de": "Mond; Monat",
         "pt": "lua; mês"
        },
-       "v": "üe"
+       "v": "üe",
+       "au": "audio/cards/6708.mp3"
       },
       {
        "c": "学",
@@ -3013,7 +3183,8 @@
         "de": "lernen",
         "pt": "estudar"
        },
-       "v": "üe"
+       "v": "üe",
+       "au": "audio/cards/5b66.mp3"
       }
      ]
     },
@@ -3034,7 +3205,8 @@
         "de": "klein",
         "pt": "pequeno"
        },
-       "v": "iao"
+       "v": "iao",
+       "au": "audio/cards/5c0f.mp3"
       },
       {
        "c": "六",
@@ -3045,7 +3217,8 @@
         "de": "sechs",
         "pt": "seis"
        },
-       "v": "iou"
+       "v": "iou",
+       "au": "audio/cards/516d.mp3"
       },
       {
        "c": "快",
@@ -3056,7 +3229,8 @@
         "de": "schnell",
         "pt": "rápido"
        },
-       "v": "uai"
+       "v": "uai",
+       "au": "audio/cards/5feb.mp3"
       },
       {
        "c": "对",
@@ -3067,7 +3241,8 @@
         "de": "richtig",
         "pt": "certo"
        },
-       "v": "uei"
+       "v": "uei",
+       "au": "audio/cards/5bf9.mp3"
       }
      ]
     }
@@ -3191,7 +3366,8 @@
         "de": "Essen",
         "pt": "refeição"
        },
-       "v": "an"
+       "v": "an",
+       "au": "audio/cards/996d.mp3"
       },
       {
        "c": "放",
@@ -3202,7 +3378,8 @@
         "de": "legen",
         "pt": "colocar"
        },
-       "v": "ang"
+       "v": "ang",
+       "au": "audio/cards/653e.mp3"
       },
       {
        "c": "晚",
@@ -3213,7 +3390,8 @@
         "de": "spät; Abend",
         "pt": "tarde; noite"
        },
-       "v": "an"
+       "v": "an",
+       "au": "audio/cards/665a.mp3"
       },
       {
        "c": "网",
@@ -3224,7 +3402,8 @@
         "de": "Netz; Internet",
         "pt": "rede; internet"
        },
-       "v": "ang"
+       "v": "ang",
+       "au": "audio/cards/7f51.mp3"
       },
       {
        "c": "船",
@@ -3235,7 +3414,8 @@
         "de": "Schiff",
         "pt": "barco"
        },
-       "v": "an"
+       "v": "an",
+       "au": "audio/cards/8239.mp3"
       },
       {
        "c": "床",
@@ -3246,7 +3426,8 @@
         "de": "Bett",
         "pt": "cama"
        },
-       "v": "ang"
+       "v": "ang",
+       "au": "audio/cards/5e8a.mp3"
       }
      ]
     },
@@ -3267,7 +3448,8 @@
         "de": "Minute; teilen",
         "pt": "minuto; dividir"
        },
-       "v": "en"
+       "v": "en",
+       "au": "audio/cards/5206.mp3"
       },
       {
        "c": "风",
@@ -3278,7 +3460,8 @@
         "de": "Wind",
         "pt": "vento"
        },
-       "v": "eng"
+       "v": "eng",
+       "au": "audio/cards/98ce.mp3"
       },
       {
        "c": "真",
@@ -3289,7 +3472,8 @@
         "de": "echt; wirklich",
         "pt": "verdadeiro"
        },
-       "v": "en"
+       "v": "en",
+       "au": "audio/cards/771f.mp3"
       },
       {
        "c": "争",
@@ -3300,7 +3484,8 @@
         "de": "streiten",
         "pt": "disputar"
        },
-       "v": "eng"
+       "v": "eng",
+       "au": "audio/cards/4e89.mp3"
       },
       {
        "c": "门",
@@ -3311,7 +3496,8 @@
         "de": "Tür",
         "pt": "porta"
        },
-       "v": "en"
+       "v": "en",
+       "au": "audio/cards/95e8.mp3"
       },
       {
        "c": "朋",
@@ -3322,7 +3508,8 @@
         "de": "Freund (in 朋友)",
         "pt": "amigo (em 朋友)"
        },
-       "v": "eng"
+       "v": "eng",
+       "au": "audio/cards/670b.mp3"
       }
      ]
     },
@@ -3343,7 +3530,8 @@
         "de": "Gold",
         "pt": "ouro"
        },
-       "v": "in"
+       "v": "in",
+       "au": "audio/cards/91d1.mp3"
       },
       {
        "c": "京",
@@ -3354,7 +3542,8 @@
         "de": "Hauptstadt",
         "pt": "capital"
        },
-       "v": "ing"
+       "v": "ing",
+       "au": "audio/cards/4eac.mp3"
       },
       {
        "c": "心",
@@ -3365,7 +3554,8 @@
         "de": "Herz",
         "pt": "coração"
        },
-       "v": "in"
+       "v": "in",
+       "au": "audio/cards/5fc3.mp3"
       },
       {
        "c": "星",
@@ -3376,7 +3566,8 @@
         "de": "Stern",
         "pt": "estrela"
        },
-       "v": "ing"
+       "v": "ing",
+       "au": "audio/cards/661f.mp3"
       },
       {
        "c": "民",
@@ -3387,7 +3578,8 @@
         "de": "Volk",
         "pt": "povo"
        },
-       "v": "in"
+       "v": "in",
+       "au": "audio/cards/6c11.mp3"
       },
       {
        "c": "名",
@@ -3398,7 +3590,8 @@
         "de": "Name",
         "pt": "nome"
        },
-       "v": "ing"
+       "v": "ing",
+       "au": "audio/cards/540d.mp3"
       }
      ]
     }
@@ -3518,7 +3711,8 @@
         "de": "eins",
         "pt": "um"
        },
-       "v": "i → yi"
+       "v": "i → yi",
+       "au": "audio/cards/4e00.mp3"
       },
       {
        "c": "五",
@@ -3529,7 +3723,8 @@
         "de": "fünf",
         "pt": "cinco"
        },
-       "v": "u → wu"
+       "v": "u → wu",
+       "au": "audio/cards/4e94.mp3"
       },
       {
        "c": "鱼",
@@ -3540,7 +3735,8 @@
         "de": "Fisch",
         "pt": "peixe"
        },
-       "v": "ü → yu"
+       "v": "ü → yu",
+       "au": "audio/cards/9c7c.mp3"
       },
       {
        "c": "要",
@@ -3551,7 +3747,8 @@
         "de": "wollen",
         "pt": "querer"
        },
-       "v": "iao → yao"
+       "v": "iao → yao",
+       "au": "audio/cards/8981.mp3"
       },
       {
        "c": "我",
@@ -3562,7 +3759,8 @@
         "de": "ich",
         "pt": "eu"
        },
-       "v": "uo → wo"
+       "v": "uo → wo",
+       "au": "audio/cards/6211.mp3"
       },
       {
        "c": "月",
@@ -3573,7 +3771,8 @@
         "de": "Mond; Monat",
         "pt": "lua; mês"
        },
-       "v": "üe → yue"
+       "v": "üe → yue",
+       "au": "audio/cards/6708.mp3"
       }
      ]
     },
@@ -3594,7 +3793,8 @@
         "de": "sechs",
         "pt": "seis"
        },
-       "v": "iou → iu"
+       "v": "iou → iu",
+       "au": "audio/cards/516d.mp3"
       },
       {
        "c": "对",
@@ -3605,7 +3805,8 @@
         "de": "richtig",
         "pt": "certo"
        },
-       "v": "uei → ui"
+       "v": "uei → ui",
+       "au": "audio/cards/5bf9.mp3"
       },
       {
        "c": "春",
@@ -3616,7 +3817,8 @@
         "de": "Frühling",
         "pt": "primavera"
        },
-       "v": "uen → un"
+       "v": "uen → un",
+       "au": "audio/cards/6625.mp3"
       }
      ]
     },
@@ -3637,7 +3839,8 @@
         "de": "gut",
         "pt": "bom"
        },
-       "v": "a"
+       "v": "a",
+       "au": "audio/cards/597d.mp3"
       },
       {
        "c": "走",
@@ -3648,7 +3851,8 @@
         "de": "gehen",
         "pt": "andar"
        },
-       "v": "o"
+       "v": "o",
+       "au": "audio/cards/8d70.mp3"
       },
       {
        "c": "谢",
@@ -3659,7 +3863,8 @@
         "de": "danken",
         "pt": "agradecer"
        },
-       "v": "e"
+       "v": "e",
+       "au": "audio/cards/8c22.mp3"
       },
       {
        "c": "水",
@@ -3670,7 +3875,8 @@
         "de": "Wasser",
         "pt": "água"
        },
-       "v": "i"
+       "v": "i",
+       "au": "audio/cards/6c34.mp3"
       },
       {
        "c": "球",
@@ -3681,7 +3887,8 @@
         "de": "Ball",
         "pt": "bola"
        },
-       "v": "u"
+       "v": "u",
+       "au": "audio/cards/7403.mp3"
       },
       {
        "c": "贵",
@@ -3692,7 +3899,8 @@
         "de": "teuer",
         "pt": "caro"
        },
-       "v": "i"
+       "v": "i",
+       "au": "audio/cards/8d35.mp3"
       }
      ]
     }
