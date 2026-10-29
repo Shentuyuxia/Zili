@@ -1074,6 +1074,13 @@ body:not(.tones) .tone-opts{opacity:.55}
 .pyli.pydone .pyno{background:var(--acc);color:var(--on-acc)}.pyno svg{width:15px;height:15px}
 .pyt{display:flex;flex-direction:column;min-width:0;flex:1}.pyt small{color:var(--muted);font-size:12.5px}
 .pyst2{font-size:12.5px;color:var(--muted);white-space:nowrap}.pyli.next .pyst2{color:var(--acc);font-weight:600}
+.pypad{position:sticky;top:6px;z-index:4;display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 12px;margin:10px 0 12px;box-shadow:0 6px 18px rgba(0,0,0,.08)}
+.pypc{display:flex;flex-direction:column;align-items:center;min-width:56px}.pypc .zc{font-family:var(--f-cn);font-size:30px;line-height:1.1}.pypc b{font-size:14px}
+.pypitch{flex:1;min-width:150px;max-width:280px;height:62px}.pytg{fill:none;stroke-width:7;stroke-linecap:round;opacity:.45}.pyme{fill:none;stroke:var(--ink);stroke-width:2.6;stroke-linejoin:round;stroke-linecap:round}
+.pypb{display:flex;gap:6px;flex-wrap:wrap}.pypb svg{width:14px;height:14px}.pypn{flex-basis:100%;margin:0}
+.pytt{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 8px}
+.pytb{border-top:1px solid var(--line);padding:8px 0}.pytbh{display:flex;gap:10px;align-items:baseline;margin-bottom:6px}.pytbh b{font-size:18px;color:var(--acc);min-width:34px}.pytbh span{font-size:13px;color:var(--muted);line-height:1.45}
+.pysyl button small{margin-left:4px;color:var(--muted);font-size:13px}.pysyl button.dim{opacity:.4}
 .pyfoot{margin-top:14px}
 .pyspd{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin:8px 0;font-size:13px;color:var(--muted)}.pyspd>span{margin-right:2px}
 .pyintro{font-size:15.5px;line-height:1.65;margin:8px 0 12px}
@@ -4381,6 +4388,20 @@ function s2t(str){ // Simplified → Traditional (Taiwan), phrase-aware for comm
   return o;
 }
 const UI_DICT=[
+["组合表", "Combinations", "Kombinationen", "Combinações", "組合表"],
+["点不同的声母，听同一个韵母怎么搭配。", "Tap different initials to hear how this final combines.", "Tippe auf verschiedene Anlaute, um zu hören, wie sich dieses Finale verbindet.", "Toque em iniciais diferentes para ouvir como esta final se combina.", "點不同的聲母，聽同一個韻母怎麼搭配。"],
+["点不同的韵母，听这个声母怎么搭配。", "Tap different finals to hear how this initial combines.", "Tippe auf verschiedene Finale, um zu hören, wie sich dieser Anlaut verbindet.", "Toque em finais diferentes para ouvir como esta inicial se combina.", "點不同的韻母，聽這個聲母怎麼搭配。"],
+["点任何一张卡片或组合，就可以在这里录音对比。", "Tap any card or combination to record yourself and compare here.", "Tippe auf eine Karte oder Kombination, um dich hier aufzunehmen und zu vergleichen.", "Toque num cartão ou combinação para gravar sua voz e comparar aqui.", "點任何一張卡片或組合，就可以在這裡錄音對比。"],
+["范读", "Model", "Vorbild", "Modelo", "範讀"],
+["● 录音", "● Record", "● Aufnehmen", "● Gravar", "● 錄音"],
+["■ 停止", "■ Stop", "■ Stopp", "■ Parar", "■ 停止"],
+["我的录音", "Mine", "Meine Aufnahme", "Minha gravação", "我的錄音"],
+["⇄ 对比", "⇄ Compare", "⇄ Vergleichen", "⇄ Comparar", "⇄ 對比"],
+["正在录音…", "Recording…", "Aufnahme läuft…", "Gravando…", "正在錄音…"],
+["彩色线是标准声调，深色线是你的音高。形状像就对了，高低不必一样。", "The coloured line is the target tone, the dark line is your pitch. Matching the shape is what counts, not the height.", "Die farbige Linie ist der Zielton, die dunkle deine Tonhöhe. Es zählt die Form, nicht die Höhe.", "A linha colorida é o tom-alvo, a escura é a sua altura. O que importa é o formato, não a altura.", "彩色線是標準聲調，深色線是你的音高。形狀像就對了，高低不必一樣。"],
+["没有听清音高：靠近麦克风，声音大一点再录一次。", "Couldn't hear your pitch clearly: move closer to the microphone and speak up.", "Tonhöhe nicht klar erkannt: näher ans Mikrofon und etwas lauter sprechen.", "Não deu para ouvir sua altura: chegue mais perto do microfone e fale mais alto.", "沒有聽清音高：靠近麥克風，聲音大一點再錄一次。"],
+["先听范读，再按“录音”说一遍，两三秒后自动停止。", "Listen to the model, then tap “Record” and say it – it stops by itself after 2–3 seconds.", "Hör dir das Vorbild an, tippe dann auf „Aufnehmen“ und sprich nach – nach 2–3 Sekunden stoppt es von selbst.", "Ouça o modelo, toque em “Gravar” e repita – para sozinho depois de 2–3 segundos.", "先聽範讀，再按「錄音」說一遍，兩三秒後自動停止。"],
+["这个浏览器不能录音。", "This browser can't record.", "Dieser Browser kann nicht aufnehmen.", "Este navegador não grava.", "這個瀏覽器不能錄音。"],
 ["♪ 四个声调连起来听", "♪ Hear all four tones", "♪ Alle vier Töne hören", "♪ Ouvir os quatro tons", "♪ 四個聲調連起來聽"],
 ["点声调卡：先听声调走向，再随机听这个声调的四个字。", "Tap a tone card: first the pitch movement on its own, then four random syllables in that tone.", "Tippe auf eine Tonkarte: erst der Tonverlauf allein, dann vier zufällige Silben in diesem Ton.", "Toque num cartão de tom: primeiro só o movimento da altura, depois quatro sílabas aleatórias nesse tom.", "點聲調卡：先聽聲調走向，再隨機聽這個聲調的四個字。"],
 ["想要更自然的声音：在手机的系统设置里下载中文“增强”或“高级”语音，字里会自动使用。", "For a more natural voice, download an “Enhanced” or “Premium” Chinese voice in your phone's settings – Zili uses it automatically.", "Für eine natürlichere Stimme lade in den Einstellungen deines Handys eine chinesische Stimme in „erweiterter“ oder „Premium“-Qualität – Zili nutzt sie automatisch.", "Para uma voz mais natural, baixe uma voz chinesa “Aprimorada” ou “Premium” nos ajustes do celular – o Zili usa automaticamente.", "想要更自然的聲音：在手機的系統設定裡下載中文「增強」或「高級」語音，字裡會自動使用。"],
@@ -5352,7 +5373,8 @@ function pySeq(steps){ const tok=++PYSEQ; try{ speechSynthesis.cancel(); }catch(
   const run=i=>{ if(tok!==PYSEQ||i>=steps.length) return; const s=steps[i];
     if(s.hum){ const d=pyHum(s.hum); setTimeout(()=>run(i+1),(d+.3)*1000); }
     else if(s.say) pySay(s.say,()=>setTimeout(()=>run(i+1),250),true);
-    else if(s.wait) setTimeout(()=>run(i+1),s.wait); };
+    else if(s.wait) setTimeout(()=>run(i+1),s.wait);
+    else if(s.audio){ const a=new Audio(s.audio); pyAud=a; let d=false; const nx=()=>{ if(d) return; d=true; run(i+1); }; a.onended=nx; a.onerror=nx; a.play().catch(nx); } };
   run(0); }
 function pyToneEx(t,n){ const L=pyLessons().find(x=>x.id===1); return shuffle(pyItems(L).filter(x=>x.t===t)).slice(0,n||4); }
 function pySpeedRow(){ const cur=PYC().speed||"slow"; return `<div class="pyspd"><span>发音速度</span>${[["normal","正常"],["slow","慢"],["slower","更慢"]].map(([k,l])=>`<button type="button" class="btn sm${cur===k?" primary":""}" data-py="speed:${k}" aria-pressed="${cur===k}">${l}</button>`).join("")}<button type="button" class="ib sm" data-pyplay="妈" aria-label="试听" title="试听">${I.play}</button></div>`; }
@@ -5404,13 +5426,69 @@ function pyGenDaily(){ const d=PYC().done, err=PYC().err, L1=pyLessons().find(L=
   if(nMp) shuffle(mps.slice()).slice(0,nMp).forEach(p=>qs.push(pyQMp(p)));
   return shuffle(qs); }
 
+/* --- combination tables: one initial with its finals, or one final with its initials --- */
+const PYY={yi:"i",ya:"ia",ye:"ie",yao:"iao",you:"iou",yan:"ian",yin:"in",yang:"iang",ying:"ing",yong:"iong",yu:"ü",yue:"üe",yuan:"üan",yun:"ün",yo:"io",wu:"u",wa:"ua",wo:"uo",wai:"uai",wei:"uei",wan:"uan",wen:"uen",wang:"uang",weng:"ueng"};
+function pyParse(s){ if(PYY[s]) return {ini:"",fin:PYY[s]}; const m=s.match(/^(zh|ch|sh|[bpmfdtnlgkhjqxrzcs])(.*)$/); if(!m) return {ini:"",fin:s};
+  let ini=m[1], f=m[2]; if(/^[jqx]$/.test(ini)) f=f.replace(/^u/,"ü");
+  if(f==="iu") f="iou"; else if(f==="ui") f="uei"; else if(f==="un") f="uen";
+  if(/^(z|c|s|zh|ch|sh|r)$/.test(ini)&&f==="i") f="-i"; return {ini,fin:f}; }
+const PYFO=["a","o","e","-i","i","u","ü","er","ai","ei","ao","ou","an","en","ang","eng","ong","ia","ie","iao","iou","ian","in","iang","ing","iong","ua","uo","uai","uei","uan","uen","uang","ueng","üe","üan","ün"];
+function pyVTable(L){ const T=L.table, ch=PY.chart; if(!T||!ch) return ""; const tone=PY.tt||1, keys=Object.keys(ch);
+  const by=s=>T.kind==="fin"?PYINI.indexOf(pyParse(s).ini):PYFO.indexOf(pyParse(s).fin);
+  let h=`<h3 class="pygl">组合表</h3><p class="muted small">${T.kind==="fin"?"点不同的声母，听同一个韵母怎么搭配。":"点不同的韵母，听这个声母怎么搭配。"}</p>
+  <div class="pytt">${[1,2,3,4].map(t=>`<button class="btn sm${tone===t?" primary":""}" type="button" data-py="tt:${t}">${PYTN[t]}</button>`).join("")}</div>`;
+  for(const r of T.rows){ const ss=keys.filter(s=>{ const p=pyParse(s); return T.kind==="fin"?p.fin===r:p.ini===r; }).sort((a,b)=>by(a)-by(b)||a.localeCompare(b));
+    const note=(PY.course.sounds||{})[r];
+    h+=`<div class="pytb"><div class="pytbh"><b data-noi18n>${esc(r==="iou"?"iou (iu)":r==="uei"?"uei (ui)":r)}</b>${note?`<span ${pyLA()}>${esc(pyT(note))}</span>`:""}</div><div class="pysyl">${ss.map(s=>{ const c=ch[s][tone-1];
+      return `<button type="button" data-pytb="${esc(s)}"${c?"":` class="dim"`} data-noi18n>${esc(pyMark(s,tone))}${c?`<small class="zc" lang="zh-CN">${esc(zs(c))}</small>`:""}</button>`; }).join("")}</div></div>`; }
+  return h; }
+function pyTbPlay(s){ const cs=(PY.chart||{})[s]||[]; let t=PY.tt||1; if(!cs[t-1]){ t=[1,2,3,4].find(k=>cs[k-1]); if(!t) return; }
+  const it={c:cs[t-1],py:pyMark(s,t),t}; pyPadSet(it); pyPlay(it); }
+
+/* --- practice pad: model voice, your recording, and both pitch lines --- */
+function pyLv(t,x){ t=+t; if(t===1) return 5; if(t===2) return x<.12?3:3+2*(x-.12)/.88; if(t===3) return x<.55?2-x/.55:x<.68?1:1+3*(x-.68)/.32; if(t===4) return 5-4*Math.min(1,x/.95); return 2.6; }
+function pyPadSet(it){ if(!it||!it.c) return; const p=PY.pad; if(!p||p.c!==it.c){ if(p&&p.url) URL.revokeObjectURL(p.url); PY.pad={c:it.c,py:it.py||"",t:String(it.say||it.t||""),url:null,f0:null}; } pyPadPaint(); }
+function pyPitchSvg(p){ const ts=(p.t||"").split("").filter(x=>/[0-4]/.test(x)); if(!ts.length) return ""; const W=240,H=70,pd=7, y=l=>H-pd-(l-1)/4*(H-2*pd), sw=W/ts.length;
+  let g=`<svg class="pypitch" viewBox="0 0 ${W} ${H}" aria-hidden="true">`; for(const l of [1,3,5]) g+=`<line x1="0" x2="${W}" y1="${y(l)}" y2="${y(l)}" class="pyst"/>`;
+  const tl=[]; ts.forEach((t,n)=>{ if(t==="0"){ g+=`<circle cx="${n*sw+sw*.25}" cy="${y(2.6)}" r="5" class="pyc0" opacity=".55"/>`; return; } let d="";
+    for(let k=0;k<=24;k++){ const x=k/24; d+=(k?"L":"M")+(n*sw+8+x*(sw-16)).toFixed(1)+" "+y(pyLv(t,x)).toFixed(1); }
+    g+=`<path d="${d}" class="pyc${t} pytg"/>`; for(let k=0;k<=24;k++) tl.push(pyLv(t,k/24)); });
+  if(p.f0&&p.f0.length>4){ const st=p.f0, mean=st.reduce((a,b)=>a+b.s,0)/st.length, tm=tl.reduce((a,b)=>a+b,0)/tl.length;
+    const pts=st.map(o=>{ const l=Math.max(.6,Math.min(5.4,tm+(o.s-mean)/3)); return (8+o.x*(W-16)).toFixed(1)+","+y(l).toFixed(1); });
+    g+=`<polyline points="${pts.join(" ")}" class="pyme"/>`; }
+  return g+"</svg>"; }
+function pyPadPaint(){ const el=$("#py-pad"); if(!el) return; const p=PY.pad, rec=REC.target==="py";
+  if(!p){ el.innerHTML=`<span class="muted small">点任何一张卡片或组合，就可以在这里录音对比。</span>`; return; }
+  el.innerHTML=`<div class="pypc">${pyH(p.c)}<b data-noi18n>${esc(p.py)}</b></div>${pyPitchSvg(p)}
+  <div class="pypb"><button class="btn sm" type="button" data-py="pad:say">${I.play}<span>范读</span></button>${canRecord?`<button class="btn sm${rec?" primary":""}" type="button" data-py="pad:rec">${rec?"■ 停止":"● 录音"}</button>`:""}${p.url?`<button class="btn sm" type="button" data-py="pad:mine">${I.play}<span>我的录音</span></button><button class="btn sm" type="button" data-py="pad:cmp">⇄ 对比</button>`:""}</div>
+  <p class="muted small pypn">${rec?"正在录音…":p.url?(p.f0&&p.f0.length>4?"彩色线是标准声调，深色线是你的音高。形状像就对了，高低不必一样。":"没有听清音高：靠近麦克风，声音大一点再录一次。"):canRecord?"先听范读，再按“录音”说一遍，两三秒后自动停止。":"这个浏览器不能录音。"}</p>`; }
+async function pyF0(blob){ const AC=window.AudioContext||window.webkitAudioContext; PYAC=PYAC||new AC();
+  const buf=await new Promise((res,rej)=>{ blob.arrayBuffer().then(ab=>{ const p=PYAC.decodeAudioData(ab,res,rej); if(p&&p.then) p.then(res,rej); },rej); });
+  const raw=buf.getChannelData(0), q=Math.max(1,Math.round(buf.sampleRate/11025)), sr=buf.sampleRate/q, x=new Float32Array(Math.floor(raw.length/q));
+  for(let i=0;i<x.length;i++){ let s=0; for(let j=0;j<q;j++) s+=raw[i*q+j]; x[i]=s/q; }
+  const W=Math.round(sr*.04), Hs=Math.round(sr*.01), lo=Math.floor(sr/480), hi=Math.ceil(sr/70), fr=[]; let mx=0;
+  for(let i=0;i+W+hi<x.length;i+=Hs){ let e=0; for(let j=0;j<W;j++) e+=x[i+j]*x[i+j]; fr.push([i,e]); if(e>mx) mx=e; }
+  const f=fr.map(([i,e])=>{ if(e<mx*.04) return null; let best=0,bk=0;
+    for(let k=lo;k<=hi;k++){ let c=0,e1=0; for(let j=0;j<W;j++){ const b=x[i+j+k]; c+=x[i+j]*b; e1+=b*b; } const r=c/Math.sqrt(e*e1+1e-12); if(r>best){ best=r; bk=k; } }
+    return best>.55?12*Math.log2(sr/bk/100):null; });
+  const med=f.map((v,i)=>{ if(v==null) return null; const w=f.slice(Math.max(0,i-2),i+3).filter(z=>z!=null).sort((a,b)=>a-b); return w[w.length>>1]; });
+  let a=med.findIndex(v=>v!=null), b=med.length-1; while(b>a&&med[b]==null) b--; if(a<0||b-a<4) return [];
+  const out=[]; for(let i=a;i<=b;i++) if(med[i]!=null) out.push({x:(i-a)/(b-a),s:med[i]}); return out; }
+async function pyRecToggle(){ if(REC.target==="py"){ stopRec(); setTimeout(pyPadPaint,300); return; } const p=PY.pad; if(!p) return;
+  const ok=await startRec("py",async blob=>{ const pp=PY.pad; if(!pp) return; if(pp.url) URL.revokeObjectURL(pp.url); pp.url=URL.createObjectURL(blob); pp.f0=null; pyPadPaint();
+    try{ pp.f0=await pyF0(blob); }catch(e){ pp.f0=[]; } pyPadPaint(); });
+  if(ok){ pyPadPaint(); const t0=REC.start; setTimeout(()=>{ if(REC.target==="py"&&REC.start===t0){ stopRec(); setTimeout(pyPadPaint,300); } },p.t.length>1?3200:2400); } }
+function pyPadAct(v){ const p=PY.pad; if(!p) return;
+  if(v==="say") pySay(p.c); else if(v==="rec") pyRecToggle();
+  else if(v==="mine"&&p.url) pySeq([{audio:p.url}]);
+  else if(v==="cmp"&&p.url) pySeq([{say:p.c},{wait:400},{audio:p.url}]); }
 /* --- views --- */
 function pyOpen(view,id){ PY.view=view||"map"; if(id) PY.lid=+id; if(cur!=="pinyin") showTab("pinyin"); else pyRender(); window.scrollTo({top:0}); }
 function pyRender(){ const h=$("#py-host"); if(!h) return;
   const own=new Set([1,2,3,4].map(toneCol)).size===4; h.classList.toggle("pyown",own);
   if(!PY.course){ h.innerHTML=`<div class="empty"><b>正在载入拼音课…</b></div>`;
     pyLoad().then(()=>{ if(cur==="pinyin") pyRender(); pyEntry(); }).catch(e=>{ h.innerHTML=`<div class="empty"><b>拼音课没有载入</b>请检查网络后刷新页面。（${esc(e.message)}）</div>`; }); return; }
-  const v=PY.view; h.innerHTML=v==="lesson"?pyVLesson():v==="quiz"?pyVQuiz():v==="chart"?pyVChart():pyVMap(); }
+  const v=PY.view; h.innerHTML=v==="lesson"?pyVLesson():v==="quiz"?pyVQuiz():v==="chart"?pyVChart():pyVMap(); pyPadPaint(); }
 function pyHead(back,title){ return `<div class="pyhead">${back?`<button class="btn ghost sm" type="button" data-py="${back}"><span aria-hidden="true">←</span><span>${back==="map"?"全部课程":"回到课程"}</span></button>`:""}<h2>${title}</h2></div>`; }
 function pyVMap(){ const d=PYC().done, nx=pyNext();
   let h=`<div class="pyhead"><h2>拼音课</h2><span class="spacer"></span><button class="btn sm" type="button" data-py="daily">每日练声调</button><button class="btn sm" type="button" data-py="chart">拼音表</button></div>
@@ -5432,8 +5510,9 @@ function pyVLesson(){ const L=pyLessons().find(x=>x.id===PY.lid)||pyReady()[0]; 
     for(const tn of L.tones){ const ex=[...new Map(all.filter(x=>x.t===tn.t).map(x=>[x.c,x])).values()];
       h+=`<button type="button" class="pytone" data-py="tone:${tn.t}">${pyCurve(tn.t,"big")}<span><b class="tn${tn.t}">${PYTN[tn.t]}</b><small ${la}>${esc(pyT(tn).replace(/^[^：:]+[：:]\s*/,""))}</small><em class="pyex">${ex.map(x=>`<i class="tn${tn.t}">${pyH(x.c)}</i>`).join("")}</em></span></button>`; }
     h+=`</div><p class="muted small">点声调卡：先听声调走向，再随机听这个声调的四个字。</p>`; }
-  h+=`<p class="muted small">点卡片听发音。</p>${pySpeedRow()}`;
+  h+=`<p class="muted small">点卡片听发音。</p>${pySpeedRow()}<div class="pypad" id="py-pad"></div>`;
   for(const g of L.groups){ if(g.label) h+=`<h3 class="pygl" ${la}>${esc(pyT(g.label))}</h3>`; h+=`<div class="pygrid${g.items.length%2===0&&g.items.length>=4?" g4":""}">${g.items.map(pyCard).join("")}</div>`; }
+  h+=pyVTable(L);
   if(L.tip) h+=`<div class="pytip"><b>小提示</b><p ${la}>${esc(pyT(L.tip))}</p></div>`;
   h+=`<div class="pyact"><button class="btn primary" type="button" data-py="practice">开始练习</button></div>`;
   return h; }
@@ -5483,13 +5562,13 @@ const PYFIN=["a","o","e","i","u","ü","er","ai","ei","ao","ou","an","en","ang","
 function pyVChart(){ const ch=PY.chart||{}, grp={};
   for(const s of Object.keys(ch)){ const m=s.match(/^(zh|ch|sh|[bpmfdtnlgkhjqxrzcsyw])/); const ini=m?m[1]:""; (grp[ini]=grp[ini]||[]).push(s); }
   const fo=s=>{ const m=s.match(/^(zh|ch|sh|[bpmfdtnlgkhjqxrzcsyw])?(.*)$/); const i=PYFIN.indexOf(m[2]); return i<0?99:i; };
-  let h=pyHead("map","拼音表")+`<p class="muted small">点音节听四个声调。</p><div id="py-cd" class="pycd" hidden></div>`;
+  let h=pyHead("map","拼音表")+`<p class="muted small">点音节听四个声调。</p>${pySpeedRow()}<div id="py-cd" class="pycd" hidden></div><div class="pypad" id="py-pad"></div>`;
   for(const ini of PYINI){ const ss=grp[ini]; if(!ss) continue; ss.sort((a,b)=>fo(a)-fo(b)||a.localeCompare(b));
     h+=`<div class="pyrow"><span class="pyini" data-noi18n>${ini||"·"}</span><div class="pysyl">${ss.map(s=>`<button type="button" data-pysyl="${esc(s)}" data-noi18n>${esc(s)}</button>`).join("")}</div></div>`; }
   return h; }
 function pyChartCell(s){ const cs=(PY.chart||{})[s]||[], el=$("#py-cd"); if(!el) return;
   $$("[data-pysyl]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.pysyl===s));
-  el.hidden=false; el.innerHTML=`<div class="pycdh"><b data-noi18n>${esc(s)}</b><button class="btn sm" type="button" data-pyseq="${esc(cs.filter(Boolean).join(","))}">${I.play}<span data-noi18n>${[1,2,3,4].filter(t=>cs[t-1]).map(t=>esc(pyMark(s,t))).join(" ")}</span></button></div><div class="pycd4">${[1,2,3,4].map(t=>{ const c=cs[t-1]; return c?`<button type="button" class="pycard" data-pyplay="${esc(c)}"><b class="pyp tn${t}" data-noi18n>${esc(pyMark(s,t))}</b><span class="pyc">${pyH(c)}</span>${pyCurve(t)}</button>`:`<div class="pycard none"><b class="pyp" data-noi18n>${esc(pyMark(s,t))}</b><span class="muted">–</span></div>`; }).join("")}</div>`;
+  el.hidden=false; el.innerHTML=`<div class="pycdh"><b data-noi18n>${esc(s)}</b><button class="btn sm" type="button" data-pyseq="${esc(cs.filter(Boolean).join(","))}">${I.play}<span data-noi18n>${[1,2,3,4].filter(t=>cs[t-1]).map(t=>esc(pyMark(s,t))).join(" ")}</span></button></div><div class="pycd4">${[1,2,3,4].map(t=>{ const c=cs[t-1]; return c?`<button type="button" class="pycard" data-pyplay="${esc(c)}" data-pypy="${esc(pyMark(s,t))}" data-pyt="${t}"><b class="pyp tn${t}" data-noi18n>${esc(pyMark(s,t))}</b><span class="pyc">${pyH(c)}</span>${pyCurve(t)}</button>`:`<div class="pycard none"><b class="pyp" data-noi18n>${esc(pyMark(s,t))}</b><span class="muted">–</span></div>`; }).join("")}</div>`;
   const seq=cs.filter(Boolean); if(seq.length) pySay(seq.join("，")); }
 function pyEntry(){ const el=$("#py-entry"); if(!el) return; if(!PY.course||PYC().hide){ el.innerHTML=""; return; }
   const nx=pyNext(), all=pyLessons().length, dn=Object.keys(PYC().done).length, dd=PYC().daily&&PYC().daily.at===today();
@@ -5508,6 +5587,8 @@ function pyAct(a){ const [k,v]=a.split(":");
   else if(k==="color"){ const t=+v; S.settings.tones=true; S.settings.toneSel=[...new Set(toneSel().concat(t))].sort(); save(); applyTones(); pyRender(); }
   else if(k==="hum4") pySeq([1,2,3,4].flatMap(t=>[{hum:t},{wait:200}]).concat([{wait:300},{say:(()=>{ const L=pyLessons().find(x=>x.id===1), gs=L.groups.filter(g=>g.items.length===4); return shuffle(gs.slice())[0].items.map(x=>x.c).join("，"); })()}]));
   else if(k==="tone"){ const t=+v; pySeq([{hum:t},{wait:150}].concat(pyToneEx(t,4).flatMap(x=>[{say:x.c},{wait:250}]))); }
+  else if(k==="tt"){ PY.tt=+v; pyRender(); }
+  else if(k==="pad") pyPadAct(v);
   else if(k==="speed"){ PYC().speed=v; save(); pyRender(); pySay("妈"); }
   else if(k==="hide"){ PYC().hide=true; save(); pyEntry(); }
   else if(k==="show"){ PYC().hide=false; save(); pyEntry(); pyRender(); } }
@@ -5515,7 +5596,8 @@ document.addEventListener("click",e=>{
   const o=e.target.closest("[data-pyopen]"); if(o){ const a=o.dataset.pyopen; if(a==="hide"||a==="daily"||a.startsWith("lesson")) pyAct(a); else pyOpen(a); return; }
   if(!e.target.closest("#py-host")) return;
   const b=e.target.closest("[data-py]"); if(b){ pyAct(b.dataset.py); return; }
-  const p=e.target.closest("[data-pyplay]"); if(p){ pyPlay(pyByChar(p.dataset.pyplay)||{c:p.dataset.pyplay}); return; }
+  const p=e.target.closest("[data-pyplay]"); if(p){ const it=pyByChar(p.dataset.pyplay)||{c:p.dataset.pyplay,py:p.dataset.pypy||"",t:+p.dataset.pyt||0}; if(p.dataset.pyplay!=="妈"||!p.classList.contains("ib")) pyPadSet(it); pyPlay(it); return; }
+  const tb=e.target.closest("[data-pytb]"); if(tb){ pyTbPlay(tb.dataset.pytb); return; }
   const s=e.target.closest("[data-pysyl]"); if(s){ pyChartCell(s.dataset.pysyl); return; }
   const q=e.target.closest("[data-pyseq]"); if(q){ pySay(q.dataset.pyseq.split(",").join("，")); return; }
   const op=e.target.closest("[data-pyopt]"); if(op&&PY.q){ const Q=PY.q, qq=Q.list[Q.i], k=op.dataset.pyopt;

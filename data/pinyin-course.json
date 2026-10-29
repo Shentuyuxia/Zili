@@ -1021,7 +1021,18 @@
      "type": "pick",
      "n": 1
     }
-   ]
+   ],
+   "table": {
+    "kind": "fin",
+    "rows": [
+     "a",
+     "o",
+     "e",
+     "i",
+     "u",
+     "ü"
+    ]
+   }
   },
   {
    "id": 4,
@@ -1506,7 +1517,20 @@
      "type": "tone",
      "n": 1
     }
-   ]
+   ],
+   "table": {
+    "kind": "ini",
+    "rows": [
+     "b",
+     "p",
+     "m",
+     "f",
+     "d",
+     "t",
+     "n",
+     "l"
+    ]
+   }
   },
   {
    "id": 5,
@@ -1825,7 +1849,15 @@
      "type": "pick",
      "n": 1
     }
-   ]
+   ],
+   "table": {
+    "kind": "ini",
+    "rows": [
+     "g",
+     "k",
+     "h"
+    ]
+   }
   },
   {
    "id": 6,
@@ -2190,7 +2222,15 @@
      "type": "rule",
      "n": 2
     }
-   ]
+   ],
+   "table": {
+    "kind": "ini",
+    "rows": [
+     "j",
+     "q",
+     "x"
+    ]
+   }
   },
   {
    "id": 7,
@@ -2427,7 +2467,15 @@
      "type": "pick",
      "n": 1
     }
-   ]
+   ],
+   "table": {
+    "kind": "ini",
+    "rows": [
+     "z",
+     "c",
+     "s"
+    ]
+   }
   },
   {
    "id": 8,
@@ -2754,7 +2802,16 @@
      "type": "mpair",
      "n": 8
     }
-   ]
+   ],
+   "table": {
+    "kind": "ini",
+    "rows": [
+     "zh",
+     "ch",
+     "sh",
+     "r"
+    ]
+   }
   },
   {
    "id": 9,
@@ -3067,7 +3124,25 @@
      "type": "pick",
      "n": 2
     }
-   ]
+   ],
+   "table": {
+    "kind": "fin",
+    "rows": [
+     "ai",
+     "ei",
+     "ao",
+     "ou",
+     "ia",
+     "ie",
+     "ua",
+     "uo",
+     "üe",
+     "iao",
+     "iou",
+     "uai",
+     "uei"
+    ]
+   }
   },
   {
    "id": 10,
@@ -3382,7 +3457,19 @@
      "type": "mpair",
      "n": 8
     }
-   ]
+   ],
+   "table": {
+    "kind": "fin",
+    "rows": [
+     "an",
+     "ang",
+     "en",
+     "eng",
+     "in",
+     "ing",
+     "ong"
+    ]
+   }
   },
   {
    "id": 11,
@@ -3988,5 +4075,289 @@
     }
    ]
   }
- ]
+ ],
+ "sounds": {
+  "b": {
+   "zh": "双唇闭紧再放开，不送气，声带不振动。",
+   "en": "Like the p in “spin”: lips closed, no puff, no voicing.",
+   "de": "Wie das p in „Spaß“: Lippen zu, kein Hauch, nicht stimmhaft.",
+   "pt": "Como o p de “pato”: lábios fechados, sem sopro."
+  },
+  "p": {
+   "zh": "和 b 一样，但送出一股强气。",
+   "en": "Like the p in “pin”, with a strong puff.",
+   "de": "Wie p in „Post“, mit noch kräftigerem Hauch.",
+   "pt": "Um p com sopro forte, como no inglês “pin”."
+  },
+  "m": {
+   "zh": "双唇闭合，气从鼻子出来。",
+   "en": "Like English m.",
+   "de": "Wie deutsches m.",
+   "pt": "Como o m do português."
+  },
+  "f": {
+   "zh": "上齿轻碰下唇，气从缝里出来。",
+   "en": "Like English f.",
+   "de": "Wie deutsches f.",
+   "pt": "Como o f do português."
+  },
+  "d": {
+   "zh": "舌尖抵住上齿龈，不送气。",
+   "en": "Like the t in “stop”: no puff, not voiced.",
+   "de": "Wie das t in „Stein“: kein Hauch, nicht stimmhaft.",
+   "pt": "Como o t de “tatu”. Atenção: di não vira “dji” como em “dia”."
+  },
+  "t": {
+   "zh": "和 d 一样，但送出一股强气。",
+   "en": "Like the t in “top”, with a strong puff.",
+   "de": "Wie t in „Tag“, kräftig gehaucht.",
+   "pt": "Um t com sopro forte; ti não vira “tchi”."
+  },
+  "n": {
+   "zh": "舌尖抵上齿龈，气从鼻子出来。",
+   "en": "Like English n.",
+   "de": "Wie deutsches n.",
+   "pt": "Como o n do português."
+  },
+  "l": {
+   "zh": "舌尖抵上齿龈，气从舌头两边出来。",
+   "en": "A light l, as in “leaf”.",
+   "de": "Wie deutsches l.",
+   "pt": "Como o l de “lua”."
+  },
+  "g": {
+   "zh": "舌根抵住软腭，不送气。",
+   "en": "Like the k in “skin”: no puff.",
+   "de": "Wie das k in „Skat“ – nicht stimmhaft wie in „Gast“.",
+   "pt": "Como o c de “casa”, sem sopro."
+  },
+  "k": {
+   "zh": "和 g 一样，但送出一股强气。",
+   "en": "Like the k in “kit”, with a strong puff.",
+   "de": "Wie k in „Kuh“, kräftig gehaucht.",
+   "pt": "Um k com sopro forte."
+  },
+  "h": {
+   "zh": "舌根靠近软腭，摩擦出声。",
+   "en": "Rougher than English h – like ch in Scottish “loch”.",
+   "de": "Wie ch in „Bach“, nur etwas weicher.",
+   "pt": "Como o “r” carioca de “rato”."
+  },
+  "j": {
+   "zh": "舌面贴硬腭，舌尖在下齿后，不送气。",
+   "en": "Like j in “jeep”, but unvoiced, tongue flat, lips spread.",
+   "de": "Wie „dj“ ohne Stimmton, flache Zunge – nie wie in „Jacke“.",
+   "pt": "Entre “dj” e “tch”, sem sopro; não é o j de “janela”."
+  },
+  "q": {
+   "zh": "和 j 一样，但送出一股强气。",
+   "en": "Like ch in “cheese”, with a strong puff and a flat tongue.",
+   "de": "Wie „tch“ mit kräftigem Hauch – nie „kw“.",
+   "pt": "Como o “tch” de “tchau” com sopro, língua plana; não é “qu”."
+  },
+  "x": {
+   "zh": "舌面靠近硬腭，摩擦出声，嘴角像微笑。",
+   "en": "Between s and sh, tongue flat, lips in a smile.",
+   "de": "Fast genau der ich-Laut in „ich“.",
+   "pt": "Entre “s” e o “x” de “xícara”, sorrindo."
+  },
+  "z": {
+   "zh": "舌尖平抵上齿背，不送气。",
+   "en": "Like ds in “beds”, no puff.",
+   "de": "„ds“ ohne Hauch – weicher als das deutsche z.",
+   "pt": "Um “ts” leve, sem sopro."
+  },
+  "c": {
+   "zh": "和 z 一样，但送出一股强气。",
+   "en": "Like ts in “cats”, with a strong puff.",
+   "de": "Wie das deutsche z in „Zeit“, kräftig gehaucht.",
+   "pt": "Um “ts” com sopro forte – nunca “k” nem “s”."
+  },
+  "s": {
+   "zh": "舌尖靠近上齿背，摩擦出声。",
+   "en": "Always the s in “sun”.",
+   "de": "Immer stimmloses s wie in „Bus“.",
+   "pt": "Sempre o s de “sapo”, nunca “z”."
+  },
+  "zh": {
+   "zh": "舌尖翘起，抵住硬腭前部，不送气。",
+   "en": "Like j in “judge”, without voice, tongue curled back.",
+   "de": "Wie „dsch“ ohne Stimmton, Zungenspitze zurückgebogen.",
+   "pt": "Como “dj” sem vibração, com a língua curvada."
+  },
+  "ch": {
+   "zh": "和 zh 一样，但送出一股强气。",
+   "en": "Like ch in “church”, with a puff, tongue curled.",
+   "de": "Wie „tsch“ in „Tschüss“, gehaucht, Zunge zurückgebogen.",
+   "pt": "Como o “tch” de “tchau” com sopro e língua curvada."
+  },
+  "sh": {
+   "zh": "舌尖翘起，靠近硬腭，摩擦出声。",
+   "en": "Like sh, tongue curled back, lips not rounded.",
+   "de": "Wie „sch“, aber ohne runde Lippen, Zunge zurückgebogen.",
+   "pt": "Como o “ch” de “chá”, com a língua curvada para trás."
+  },
+  "r": {
+   "zh": "和 sh 的位置一样，但声带振动。",
+   "en": "Like r in “red” with the tongue curled, a slight buzz.",
+   "de": "Ein summendes sch – nie ein Zäpfchen-r.",
+   "pt": "Parecido com o “r” caipira de “porta”."
+  },
+  "a": {
+   "zh": "嘴张大，舌头放低。",
+   "en": "Like a in “father”.",
+   "de": "Wie a in „Vater“.",
+   "pt": "Como o a de “casa”."
+  },
+  "o": {
+   "zh": "嘴唇圆，舌头往后。b p m f 后面听起来像 uo。",
+   "en": "Round lips, like “aw”; after b p m f almost “wo”.",
+   "de": "Rundes o; nach b p m f fast wie „uo“.",
+   "pt": "o arredondado; depois de b p m f soa quase “uo”."
+  },
+  "e": {
+   "zh": "嘴唇不圆，舌头往后，声音在喉咙里。",
+   "en": "Not English e: like the u in “duh”, further back, lips not rounded.",
+   "de": "Kein deutsches e: ein dunkler Laut hinten im Hals, Lippen nicht gerundet.",
+   "pt": "Não é o e do português: um som abafado no fundo da garganta, lábios sem arredondar."
+  },
+  "i": {
+   "zh": "嘴角展开，像微笑。",
+   "en": "Like ee in “see”.",
+   "de": "Wie i in „Igel“.",
+   "pt": "Como o i de “vida”."
+  },
+  "u": {
+   "zh": "嘴唇往前撅圆。",
+   "en": "Like oo in “food”, lips forward.",
+   "de": "Wie u in „Hut“.",
+   "pt": "Como o u de “uva”."
+  },
+  "ü": {
+   "zh": "说 i 的时候把嘴唇撅圆。",
+   "en": "Say ee and round your lips (French u).",
+   "de": "Genau wie das deutsche ü in „über“.",
+   "pt": "Diga “i” com os lábios redondos (o “u” francês)."
+  },
+  "ai": {
+   "zh": "从 a 滑到 i。",
+   "en": "Like “eye”.",
+   "de": "Wie das deutsche ei in „Ei“.",
+   "pt": "Como o “ai” de “pai”."
+  },
+  "ei": {
+   "zh": "从 e 滑到 i。",
+   "en": "Like ay in “say”.",
+   "de": "Wie „äi“ – nicht das deutsche ei!",
+   "pt": "Como o “ei” de “lei”."
+  },
+  "ao": {
+   "zh": "从 a 滑到 o，嘴越来越圆。",
+   "en": "Like ow in “how”.",
+   "de": "Wie au in „Haus“.",
+   "pt": "Como o “au” de “mau”."
+  },
+  "ou": {
+   "zh": "从 o 滑到 u。",
+   "en": "Like o in “go”.",
+   "de": "Wie „ou“ im englischen „go“.",
+   "pt": "Como “ou” falado devagar: o → u."
+  },
+  "ia": {
+   "zh": "i 很短，马上到 a。",
+   "en": "A quick “ya”.",
+   "de": "Ein kurzes „ja“.",
+   "pt": "Um “iá” rápido."
+  },
+  "ie": {
+   "zh": "i 很短，e 读得像 “诶”。",
+   "en": "Like ye in “yes”.",
+   "de": "Wie „je“ in „jetzt“.",
+   "pt": "Como “ié”."
+  },
+  "ua": {
+   "zh": "u 很短，马上到 a。",
+   "en": "Like “wa”.",
+   "de": "Wie „wa“.",
+   "pt": "Como “uá”."
+  },
+  "uo": {
+   "zh": "u 很短，马上到 o。",
+   "en": "Like “wo” in “woah”.",
+   "de": "Kurzes u, dann o: „wo“.",
+   "pt": "Como “uó”."
+  },
+  "üe": {
+   "zh": "ü 很短，e 读得像 “诶”。",
+   "en": "ü plus the e in “yet”.",
+   "de": "ü plus e wie in „jetzt“.",
+   "pt": "ü seguido de “é”."
+  },
+  "iao": {
+   "zh": "i → a → o 一口气滑过去。",
+   "en": "Like “yow”.",
+   "de": "Wie „jau“.",
+   "pt": "Como “iau”."
+  },
+  "iou": {
+   "zh": "写成 iu，读的时候中间的 o 还在。",
+   "en": "Like “yo”; written iu.",
+   "de": "Wie „jou“; geschrieben iu.",
+   "pt": "Como “iou”; escreve-se iu."
+  },
+  "uai": {
+   "zh": "u → a → i 一口气滑过去。",
+   "en": "Like “why”.",
+   "de": "Wie „wai“.",
+   "pt": "Como o “uai” mineiro."
+  },
+  "uei": {
+   "zh": "写成 ui，读的时候中间的 e 还在。",
+   "en": "Like “way”; written ui.",
+   "de": "Wie „uej“; geschrieben ui.",
+   "pt": "Como “uei”; escreve-se ui."
+  },
+  "an": {
+   "zh": "收尾时舌尖抵住上齿龈。",
+   "en": "a + n, tongue tip ends behind the teeth.",
+   "de": "Wie „an“ in „Bahn“.",
+   "pt": "a + n com a língua fechando no fim; não é “ã”."
+  },
+  "ang": {
+   "zh": "收尾时舌根抬起，嘴还张着。",
+   "en": "Like “ahng”, back of the tongue up as in “song”.",
+   "de": "Wie „ang“ in „lang“.",
+   "pt": "Como no inglês “song”; a vogal não fica nasal."
+  },
+  "en": {
+   "zh": "e 读得短，收尾舌尖抵上齿龈。",
+   "en": "Like “un” in “under”, ending in n.",
+   "de": "Wie „en“ in „haben“ (gesprochen „ən“).",
+   "pt": "“ən” com a língua fechando no fim; não é “ẽ”."
+  },
+  "eng": {
+   "zh": "e 读得短，收尾舌根抬起。",
+   "en": "Like “ung” in “lung”.",
+   "de": "Ein dumpfes „əng“, wie im englischen „lung“.",
+   "pt": "Como “âng” no inglês “lung”."
+  },
+  "in": {
+   "zh": "i 后面舌尖抵上齿龈。",
+   "en": "Like “een” in “seen”.",
+   "de": "Wie „in“ in „Kinn“.",
+   "pt": "“in” com a língua fechando; não é “ĩ”."
+  },
+  "ing": {
+   "zh": "i 后面舌根抬起。",
+   "en": "Like “ing” in “sing”.",
+   "de": "Wie „ing“ in „Ring“.",
+   "pt": "Como o inglês “sing”."
+  },
+  "ong": {
+   "zh": "嘴唇圆，收尾舌根抬起。",
+   "en": "Like “oong”, lips round.",
+   "de": "Wie „ung“ in „Lunge“.",
+   "pt": "Como “ung”, lábios redondos."
+  }
+ }
 }
