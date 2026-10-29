@@ -5362,16 +5362,18 @@ function pySay(t,done,keep){ if(!t){ done&&done(); return; } if(!hasTTS){ speak(
 // a hummed vowel that follows the tone contour – the pitch movement on its own, clearly and about a second long
 let PYAC=null;
 function pyHum(t){ try{ const AC=window.AudioContext||window.webkitAudioContext; if(!AC) return 0; PYAC=PYAC||new AC(); const ac=PYAC; if(ac.state==="suspended") ac.resume();
-    const pts=PYCT[t]; if(!pts) return 0; const D=t===4?.45:t===3?.75:.6, t0=ac.currentTime+.03, f=l=>175*Math.pow(2,(l-1)/4);
+    const pts=PYCT[t]; if(!pts) return 0; const D=t===4?.42:t===3?.9:.6, t0=ac.currentTime+.03, f=l=>175*Math.pow(2,(l-1)/4);
     const o=ac.createOscillator(); o.type="triangle"; const g=ac.createGain(), out=ac.createGain(); out.gain.value=.9;
     const lp=ac.createBiquadFilter(); lp.type="lowpass"; lp.frequency.value=900; lp.Q.value=.5; o.connect(lp); lp.connect(g);
     g.connect(out); out.connect(ac.destination);
     const F=o.frequency; F.setValueAtTime(f(pts[0]),t0);
     if(t===1) F.setValueAtTime(f(5),t0);
     else if(t===2){ F.setValueAtTime(f(3),t0+.12*D); F.exponentialRampToValueAtTime(f(5),t0+D); }
-    else if(t===3){ F.exponentialRampToValueAtTime(f(1),t0+.55*D); F.setValueAtTime(f(1),t0+.68*D); F.exponentialRampToValueAtTime(f(4),t0+D); }
-    else if(t===4){ F.setValueAtTime(f(5),t0+.06*D); F.exponentialRampToValueAtTime(f(1),t0+D); }
-    const A=g.gain; A.setValueAtTime(0,t0); A.linearRampToValueAtTime(.45,t0+.04); A.setValueAtTime(.45,t0+D-.1); A.linearRampToValueAtTime(0,t0+D);
+    else if(t===3){ F.exponentialRampToValueAtTime(f(.55),t0+.45*D); F.setValueAtTime(f(.55),t0+.7*D); F.exponentialRampToValueAtTime(f(4.2),t0+D); }
+    else if(t===4){ F.setValueAtTime(f(5.3),t0); F.setValueAtTime(f(5.3),t0+.04*D); F.exponentialRampToValueAtTime(f(.8),t0+D); }
+    const A=g.gain; A.setValueAtTime(0,t0);
+    if(t===4){ A.linearRampToValueAtTime(.75,t0+.02); A.exponentialRampToValueAtTime(.3,t0+D-.06); A.linearRampToValueAtTime(0,t0+D); }
+    else { A.linearRampToValueAtTime(.45,t0+.04); A.setValueAtTime(.45,t0+D-.1); A.linearRampToValueAtTime(0,t0+D); }
     o.start(t0); o.stop(t0+D+.05); return D; }catch(e){ return 0; } }
 // play steps one after another: {hum:t} or {say:"字"}
 let PYSEQ=0;
