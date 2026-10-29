@@ -35,11 +35,12 @@
     },
     {
      "t": 3,
-     "zh": "先低低地往下压，最后稍微升上来一点，像表示同意时的“嗯哼”。",
-     "en": "Dips low, then lifts a little at the end, like an “uh-huh” of agreement.",
-     "de": "Sinkt tief ab und hebt sich zum Schluss ein wenig, wie ein zustimmendes „Mhm“.",
-     "pt": "Desce bem baixo e sobe um pouco no fim, como um “uhum” de concordância."
-    },
+     "zh": "先低低地往下压，最后稍微升上来一点，像表示同意时的“嗯哼”。＊",
+     "en": "Dips low, then lifts a little at the end, like an “uh-huh” of agreement.*",
+     "de": "Sinkt tief ab und hebt sich zum Schluss ein wenig, wie ein zustimmendes „Mhm“.*",
+     "pt": "Desce bem baixo e sobe um pouco no fim, como um “uhum” de concordância.*",
+          "note": {"zh": "单念时才是完整的低降升，在词语里常变成二声。", "en": "Said alone it is the full dip-and-rise; in words it often becomes a 2nd tone.", "de": "Allein gesprochen ist es der volle Tief-Hoch-Bogen; in Wörtern wird er oft zum 2. Ton.", "pt": "Sozinho é o tom completo (desce e sobe); em palavras, muitas vezes vira o 2º tom."}
+        },
     {
      "t": 4,
      "zh": "从高处一下子落下去，短促干脆，像路上遇到人时说的“Hey!”",

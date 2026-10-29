@@ -5532,9 +5532,10 @@ function pyVLesson(){ const L=pyLessons().find(x=>x.id===PY.lid)||pyReady()[0]; 
   if(L.video) h+=/\.(mp4|webm|m4v)(\?|$)/i.test(L.video)?`<video class="pyvid" src="${esc(L.video)}" controls playsinline preload="metadata"></video>`:`<a class="btn sm" href="${esc(L.video)}" target="_blank" rel="noopener">▶ 视频</a>`;
   h+=`<p class="pyintro" ${la}>${esc(pyT(L.intro))}</p>`;
   if(L.tones){ h+=`<div class="pyact" style="justify-content:flex-start;margin:4px 0 10px"><button class="btn primary sm" type="button" data-py="hum4">♪ 四个声调连起来听</button></div><div class="pytones">`; const all=pyItems(L);
-    for(const tn of L.tones){ const ex=[...new Map(all.filter(x=>x.t===tn.t).map(x=>[x.c,x])).values()];
-      h+=`<button type="button" class="pytone" data-py="tone:${tn.t}">${pyCurve(tn.t,"big")}<span><b class="tn${tn.t}">${PYTN[tn.t]}</b><small ${la}>${esc(pyT(tn).replace(/^[^：:]+[：:]\s*/,""))}</small><em class="pyex">${ex.map(x=>`<i class="tn${tn.t}">${pyH(x.c)}</i>`).join("")}</em></span></button>`; }
-    h+=`</div><p class="muted small">点声调卡：先听声调走向，再随机听这个声调的四个字。</p>`; }
+    for(const tn of L.tones){
+      h+=`<button type="button" class="pytone" data-py="tone:${tn.t}">${pyCurve(tn.t,"big")}<span><b class="tn${tn.t}">${PYTN[tn.t]}</b><small ${la}>${esc(pyT(tn).replace(/^[^：:]+[：:]\s*/,""))}</small></span></button>`; }
+    h+=`</div><p class="muted small">点声调卡：先听声调走向，再随机听这个声调的四个字。</p>`;
+    for(const tn of L.tones) if(tn.note) h+=`<p class="muted small pynote">* ${esc(pyT(tn.note))}</p>`; }
   h+=`<p class="muted small">点卡片：听发音，还可以录音对比。</p>${pySpeedRow()}<div class="pypad" id="py-pad" hidden></div>`;
   for(const g of L.groups){ if(g.label) h+=`<h3 class="pygl" ${la}>${esc(pyT(g.label))}</h3>`; h+=`<div class="pygrid${g.items.length%2===0&&g.items.length>=4?" g4":""}">${g.items.map(pyCard).join("")}</div>`; }
   h+=pyVTable(L);
