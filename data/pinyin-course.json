@@ -13,10 +13,10 @@
    "sub": "mā má mǎ mà",
    "video": "",
    "intro": {
-    "zh": "普通话有四个声调。同一个音节，声调不一样，意思就不一样：妈、麻、马、骂。先听，再跟着说，手也可以跟着比画。",
-    "en": "Mandarin has four tones. The same syllable with a different tone is a different word: mā (mum), má (hemp), mǎ (horse), mà (scold). Listen first, then say it – you can draw the tone in the air with your hand.",
-    "de": "Hochchinesisch hat vier Töne. Dieselbe Silbe mit einem anderen Ton ist ein anderes Wort: mā (Mama), má (Hanf), mǎ (Pferd), mà (schimpfen). Erst hören, dann nachsprechen – und den Ton ruhig mit der Hand in die Luft malen.",
-    "pt": "O mandarim tem quatro tons. A mesma sílaba com outro tom vira outra palavra: mā (mãe), má (cânhamo), mǎ (cavalo), mà (xingar). Primeiro ouça, depois repita — dá para desenhar o tom no ar com a mão."
+    "zh": "普通话有四个声调。同一个音节，声调不一样，意思就不一样：妈、麻、马、骂。先听，再跟着说，手也可以跟着比画。先点“四个声调连起来听”，听清楚音高的走向；再点每张卡片，换不同的字感受同一个声调。",
+    "en": "Mandarin has four tones. The same syllable with a different tone is a different word: mā (mum), má (hemp), mǎ (horse), mà (scold). Listen first, then say it – you can draw the tone in the air with your hand. First tap “Hear all four tones” to hear the pitch movement on its own; then tap each tone card to hear the same tone on different syllables.",
+    "de": "Hochchinesisch hat vier Töne. Dieselbe Silbe mit einem anderen Ton ist ein anderes Wort: mā (Mama), má (Hanf), mǎ (Pferd), mà (schimpfen). Erst hören, dann nachsprechen – und den Ton ruhig mit der Hand in die Luft malen. Tippe zuerst auf „Alle vier Töne hören“, um nur den Tonverlauf zu hören; dann auf jede Tonkarte, um denselben Ton auf verschiedenen Silben zu hören.",
+    "pt": "O mandarim tem quatro tons. A mesma sílaba com outro tom vira outra palavra: mā (mãe), má (cânhamo), mǎ (cavalo), mà (xingar). Primeiro ouça, depois repita — dá para desenhar o tom no ar com a mão. Primeiro toque em “Ouvir os quatro tons” para ouvir só o movimento da altura; depois toque em cada cartão para ouvir o mesmo tom em sílabas diferentes."
    },
    "tones": [
     {
@@ -230,12 +230,232 @@
        }
       }
      ]
+    },
+    {
+     "items": [
+      {
+       "c": "诗",
+       "py": "shī",
+       "t": 1,
+       "m": {
+        "en": "poem",
+        "de": "Gedicht",
+        "pt": "poema"
+       }
+      },
+      {
+       "c": "十",
+       "py": "shí",
+       "t": 2,
+       "m": {
+        "en": "ten",
+        "de": "zehn",
+        "pt": "dez"
+       }
+      },
+      {
+       "c": "使",
+       "py": "shǐ",
+       "t": 3,
+       "m": {
+        "en": "to make; to use",
+        "de": "veranlassen; benutzen",
+        "pt": "fazer; usar"
+       }
+      },
+      {
+       "c": "是",
+       "py": "shì",
+       "t": 4,
+       "m": {
+        "en": "to be",
+        "de": "sein",
+        "pt": "ser"
+       }
+      }
+     ]
+    },
+    {
+     "items": [
+      {
+       "c": "七",
+       "py": "qī",
+       "t": 1,
+       "m": {
+        "en": "seven",
+        "de": "sieben",
+        "pt": "sete"
+       }
+      },
+      {
+       "c": "骑",
+       "py": "qí",
+       "t": 2,
+       "m": {
+        "en": "to ride",
+        "de": "reiten; fahren",
+        "pt": "andar (de bicicleta, a cavalo)"
+       }
+      },
+      {
+       "c": "起",
+       "py": "qǐ",
+       "t": 3,
+       "m": {
+        "en": "to get up",
+        "de": "aufstehen",
+        "pt": "levantar-se"
+       }
+      },
+      {
+       "c": "气",
+       "py": "qì",
+       "t": 4,
+       "m": {
+        "en": "air; anger",
+        "de": "Luft; Ärger",
+        "pt": "ar; raiva"
+       }
+      }
+     ]
+    },
+    {
+     "items": [
+      {
+       "c": "温",
+       "py": "wēn",
+       "t": 1,
+       "m": {
+        "en": "warm",
+        "de": "warm",
+        "pt": "morno"
+       }
+      },
+      {
+       "c": "文",
+       "py": "wén",
+       "t": 2,
+       "m": {
+        "en": "writing; language",
+        "de": "Schrift; Sprache",
+        "pt": "escrita; língua"
+       }
+      },
+      {
+       "c": "稳",
+       "py": "wěn",
+       "t": 3,
+       "m": {
+        "en": "steady",
+        "de": "stabil",
+        "pt": "firme"
+       }
+      },
+      {
+       "c": "问",
+       "py": "wèn",
+       "t": 4,
+       "m": {
+        "en": "to ask",
+        "de": "fragen",
+        "pt": "perguntar"
+       }
+      }
+     ]
+    },
+    {
+     "items": [
+      {
+       "c": "屋",
+       "py": "wū",
+       "t": 1,
+       "m": {
+        "en": "room; house",
+        "de": "Zimmer; Haus",
+        "pt": "quarto; casa"
+       }
+      },
+      {
+       "c": "无",
+       "py": "wú",
+       "t": 2,
+       "m": {
+        "en": "without",
+        "de": "ohne",
+        "pt": "sem"
+       }
+      },
+      {
+       "c": "五",
+       "py": "wǔ",
+       "t": 3,
+       "m": {
+        "en": "five",
+        "de": "fünf",
+        "pt": "cinco"
+       }
+      },
+      {
+       "c": "雾",
+       "py": "wù",
+       "t": 4,
+       "m": {
+        "en": "fog",
+        "de": "Nebel",
+        "pt": "neblina"
+       }
+      }
+     ]
+    },
+    {
+     "items": [
+      {
+       "c": "通",
+       "py": "tōng",
+       "t": 1,
+       "m": {
+        "en": "to go through",
+        "de": "durchgehen",
+        "pt": "passar; ligar"
+       }
+      },
+      {
+       "c": "同",
+       "py": "tóng",
+       "t": 2,
+       "m": {
+        "en": "same",
+        "de": "gleich",
+        "pt": "igual"
+       }
+      },
+      {
+       "c": "统",
+       "py": "tǒng",
+       "t": 3,
+       "m": {
+        "en": "to unite",
+        "de": "vereinen",
+        "pt": "unir"
+       }
+      },
+      {
+       "c": "痛",
+       "py": "tòng",
+       "t": 4,
+       "m": {
+        "en": "pain",
+        "de": "Schmerz",
+        "pt": "dor"
+       }
+      }
+     ]
     }
    ],
    "practice": [
     {
      "type": "tone",
-     "n": 5
+     "n": 7
     },
     {
      "type": "pick",

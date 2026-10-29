@@ -1079,7 +1079,7 @@ body:not(.tones) .tone-opts{opacity:.55}
 .pyintro{font-size:15.5px;line-height:1.65;margin:8px 0 12px}
 .pytones{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:0 0 10px}
 .pytone{display:flex;gap:10px;align-items:center;text-align:left;border:1px solid var(--line);background:var(--sunk);border-radius:12px;padding:10px;cursor:pointer;color:var(--ink);font:inherit}
-.pytone span{display:flex;flex-direction:column}.pytone small{font-size:12.5px;color:var(--muted);line-height:1.4}
+.pytone span{display:flex;flex-direction:column}.pytone small{font-size:12.5px;color:var(--muted);line-height:1.4}.pyex{font-style:normal;display:flex;flex-wrap:wrap;gap:2px 6px;margin-top:4px}.pyex i{font-style:normal;font-family:var(--f-cn);font-size:17px}
 .pygl{font-size:14px;margin:16px 0 8px;color:var(--muted);font-weight:600}
 .pygrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:8px}
 .pycard{display:flex;flex-direction:column;align-items:center;gap:2px;border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:10px 6px 8px;cursor:pointer;color:var(--ink);font:inherit;position:relative;min-width:0}
@@ -4381,6 +4381,8 @@ function s2t(str){ // Simplified → Traditional (Taiwan), phrase-aware for comm
   return o;
 }
 const UI_DICT=[
+["♪ 四个声调连起来听", "♪ Hear all four tones", "♪ Alle vier Töne hören", "♪ Ouvir os quatro tons", "♪ 四個聲調連起來聽"],
+["点声调卡：先听声调走向，再随机听这个声调的四个字。", "Tap a tone card: first the pitch movement on its own, then four random syllables in that tone.", "Tippe auf eine Tonkarte: erst der Tonverlauf allein, dann vier zufällige Silben in diesem Ton.", "Toque num cartão de tom: primeiro só o movimento da altura, depois quatro sílabas aleatórias nesse tom.", "點聲調卡：先聽聲調走向，再隨機聽這個聲調的四個字。"],
 ["想要更自然的声音：在手机的系统设置里下载中文“增强”或“高级”语音，字里会自动使用。", "For a more natural voice, download an “Enhanced” or “Premium” Chinese voice in your phone's settings – Zili uses it automatically.", "Für eine natürlichere Stimme lade in den Einstellungen deines Handys eine chinesische Stimme in „erweiterter“ oder „Premium“-Qualität – Zili nutzt sie automatisch.", "Para uma voz mais natural, baixe uma voz chinesa “Aprimorada” ou “Premium” nos ajustes do celular – o Zili usa automaticamente.", "想要更自然的聲音：在手機的系統設定裡下載中文「增強」或「高級」語音，字裡會自動使用。"],
 ["发音速度", "Voice speed", "Sprechtempo", "Velocidade da voz", "發音速度"],
 ["正常", "Normal", "Normal", "Normal", "正常"],
@@ -5322,11 +5324,37 @@ function pyCurve(ts,cls){ ts=String(ts).split(""); const W=34,H=30,p=4, y=lv=>H-
   return g+"</svg>"; }
 const PYTN=["轻声","第一声","第二声","第三声","第四声"];
 // course voice: slower than reading speed, so a single syllable lasts about a second
-const PYR={slow:.55,slower:.4,normal:.9};
-function pySay(t){ if(!t) return; if(!hasTTS){ speak(t); return; }
-  try{ if(typeof ntStop==="function") ntStop(); if(player) player.pause(); speechSynthesis.cancel();
+const PYR={slow:.36,slower:.24,normal:.7};
+function pySay(t,done,keep){ if(!t){ done&&done(); return; } if(!hasTTS){ speak(t); done&&setTimeout(done,800); return; }
+  try{ if(!keep) pyStopSeq(); if(typeof ntStop==="function") ntStop(); if(player) player.pause(); speechSynthesis.cancel();
     const u=new SpeechSynthesisUtterance(t), v=pickVoice(), r=PYR[PYC().speed]||PYR.slow;
-    u.lang=v?v.lang:"zh-CN"; if(v) u.voice=v; u.rate=t.length>1&&!/[，,]/.test(t)?Math.min(1,r+.12):r; speechSynthesis.speak(u); }catch(e){} }
+    u.lang=v?v.lang:"zh-CN"; if(v) u.voice=v; u.rate=t.length>1&&!/[，,]/.test(t)?Math.min(1,r+.1):r;
+    if(done){ let f=false; const fin=()=>{ if(f) return; f=true; done(); }; u.onend=fin; u.onerror=fin; setTimeout(fin,Math.max(2500,t.length*1600)); }
+    setTimeout(()=>speechSynthesis.speak(u),40); }catch(e){ done&&done(); } }
+// a hummed vowel that follows the tone contour – the pitch movement on its own, clearly and about a second long
+let PYAC=null;
+function pyHum(t){ try{ const AC=window.AudioContext||window.webkitAudioContext; if(!AC) return 0; PYAC=PYAC||new AC(); const ac=PYAC; if(ac.state==="suspended") ac.resume();
+    const pts=PYCT[t]; if(!pts) return 0; const D=t===4?.8:t===3?1.25:1.05, t0=ac.currentTime+.03, f=l=>175*Math.pow(2,(l-1)/4);
+    const o=ac.createOscillator(); o.type="sawtooth"; const g=ac.createGain(), out=ac.createGain(); out.gain.value=.9;
+    for(const [fr,q,gv] of [[820,5,1],[1180,7,.55],[2700,9,.18]]){ const bp=ac.createBiquadFilter(); bp.type="bandpass"; bp.frequency.value=fr; bp.Q.value=q; const gg=ac.createGain(); gg.gain.value=gv; o.connect(bp); bp.connect(gg); gg.connect(g); }
+    g.connect(out); out.connect(ac.destination);
+    const F=o.frequency; F.setValueAtTime(f(pts[0]),t0);
+    if(t===1) F.setValueAtTime(f(5),t0);
+    else if(t===2){ F.setValueAtTime(f(3),t0+.12*D); F.exponentialRampToValueAtTime(f(5),t0+D); }
+    else if(t===3){ F.exponentialRampToValueAtTime(f(1),t0+.55*D); F.setValueAtTime(f(1),t0+.68*D); F.exponentialRampToValueAtTime(f(4),t0+D); }
+    else if(t===4){ F.setValueAtTime(f(5),t0+.06*D); F.exponentialRampToValueAtTime(f(1),t0+D); }
+    const A=g.gain; A.setValueAtTime(0,t0); A.linearRampToValueAtTime(.5,t0+.05); A.setValueAtTime(.5,t0+D-.14); A.linearRampToValueAtTime(0,t0+D);
+    o.start(t0); o.stop(t0+D+.05); return D; }catch(e){ return 0; } }
+// play steps one after another: {hum:t} or {say:"字"}
+let PYSEQ=0;
+function pyStopSeq(){ PYSEQ++; }
+function pySeq(steps){ const tok=++PYSEQ; try{ speechSynthesis.cancel(); }catch(e){}
+  const run=i=>{ if(tok!==PYSEQ||i>=steps.length) return; const s=steps[i];
+    if(s.hum){ const d=pyHum(s.hum); setTimeout(()=>run(i+1),(d+.3)*1000); }
+    else if(s.say) pySay(s.say,()=>setTimeout(()=>run(i+1),250),true);
+    else if(s.wait) setTimeout(()=>run(i+1),s.wait); };
+  run(0); }
+function pyToneEx(t,n){ const L=pyLessons().find(x=>x.id===1); return shuffle(pyItems(L).filter(x=>x.t===t)).slice(0,n||4); }
 function pySpeedRow(){ const cur=PYC().speed||"slow"; return `<div class="pyspd"><span>发音速度</span>${[["normal","正常"],["slow","慢"],["slower","更慢"]].map(([k,l])=>`<button type="button" class="btn sm${cur===k?" primary":""}" data-py="speed:${k}" aria-pressed="${cur===k}">${l}</button>`).join("")}<button type="button" class="ib sm" data-pyplay="妈" aria-label="试听" title="试听">${I.play}</button></div>`; }
 let pyAud=null;
 function pyPlay(it){ if(!it) return; try{ if(pyAud) pyAud.pause(); }catch(e){}
@@ -5400,9 +5428,10 @@ function pyVLesson(){ const L=pyLessons().find(x=>x.id===PY.lid)||pyReady()[0]; 
   let h=pyHead("map",`<span class="pyk">第 ${L.id} 课</span> <span ${la}>${esc(pyT(L.title))}</span>`);
   if(L.video) h+=/\.(mp4|webm|m4v)(\?|$)/i.test(L.video)?`<video class="pyvid" src="${esc(L.video)}" controls playsinline preload="metadata"></video>`:`<a class="btn sm" href="${esc(L.video)}" target="_blank" rel="noopener">▶ 视频</a>`;
   h+=`<p class="pyintro" ${la}>${esc(pyT(L.intro))}</p>`;
-  if(L.tones){ h+=`<div class="pytones">`; const g=L.groups[0].items;
-    for(const tn of L.tones){ const it=g.find(x=>x.t===tn.t); h+=`<button type="button" class="pytone" data-pyplay="${esc(it.c)}">${pyCurve(tn.t,"big")}<span><b class="tn${tn.t}">${PYTN[tn.t]}</b><small ${la}>${esc(pyT(tn).replace(/^[^：:]+[：:]\s*/,""))}</small></span></button>`; }
-    h+=`</div>`; }
+  if(L.tones){ h+=`<div class="pyact" style="justify-content:flex-start;margin:4px 0 10px"><button class="btn primary sm" type="button" data-py="hum4">♪ 四个声调连起来听</button></div><div class="pytones">`; const all=pyItems(L);
+    for(const tn of L.tones){ const ex=[...new Map(all.filter(x=>x.t===tn.t).map(x=>[x.c,x])).values()];
+      h+=`<button type="button" class="pytone" data-py="tone:${tn.t}">${pyCurve(tn.t,"big")}<span><b class="tn${tn.t}">${PYTN[tn.t]}</b><small ${la}>${esc(pyT(tn).replace(/^[^：:]+[：:]\s*/,""))}</small><em class="pyex">${ex.map(x=>`<i class="tn${tn.t}">${pyH(x.c)}</i>`).join("")}</em></span></button>`; }
+    h+=`</div><p class="muted small">点声调卡：先听声调走向，再随机听这个声调的四个字。</p>`; }
   h+=`<p class="muted small">点卡片听发音。</p>${pySpeedRow()}`;
   for(const g of L.groups){ if(g.label) h+=`<h3 class="pygl" ${la}>${esc(pyT(g.label))}</h3>`; h+=`<div class="pygrid${g.items.length%2===0&&g.items.length>=4?" g4":""}">${g.items.map(pyCard).join("")}</div>`; }
   if(L.tip) h+=`<div class="pytip"><b>小提示</b><p ${la}>${esc(pyT(L.tip))}</p></div>`;
@@ -5427,7 +5456,7 @@ function pyVQuiz(){ const Q=PY.q; if(!Q) return pyVMap();
   if(A){ const it=q.it; h+=`<div class="pyfb ${ok?"ok":"no"}"><b>${ok?"对了！":"不对，正确答案是："}</b>`;
     if(it) h+=` <span class="pyans">${pyH(it.c)} <b data-noi18n>${esc(it.py)}</b> ${pyM(it)}</span>`; else h+=` <b data-noi18n>${esc(q.ans)}</b>`;
     h+=`<div class="row">`; if(it) h+=`<button class="btn sm" type="button" data-py="replay">再听一次</button>`;
-    const wo=!ok&&q.opts.find(o=>o.k===Q.ans); if(wo&&wo.it&&it) h+=`<button class="btn sm" type="button" data-py="contrast">对比听</button>`;
+    const wo=!ok&&q.opts.find(o=>o.k===Q.ans); if(wo&&(wo.it||q.type==="tone")&&it) h+=`<button class="btn sm" type="button" data-py="contrast">对比听</button>`;
     h+=`<span class="spacer"></span><button class="btn primary sm" type="button" data-py="next">${Q.i+1<Q.list.length?"下一题":"看结果"}</button></div></div>`; }
   return h+`</div>`; }
 function pyAnswer(k){ const Q=PY.q, q=Q.list[Q.i]; if(Q.ans!=null) return; Q.ans=k; q.ok=k===q.ans; const err=PYC().err;
@@ -5474,8 +5503,11 @@ function pyAct(a){ const [k,v]=a.split(":");
   else if(k==="replay") pyPlayQ();
   else if(k==="next"){ const Q=PY.q; Q.i++; Q.ans=null; PY.sel=null; pyRender(); setTimeout(pyPlayQ,300); }
   else if(k==="check"){ if(PY.sel) pyAnswer(PY.sel); }
-  else if(k==="contrast"){ const Q=PY.q, q=Q.list[Q.i], wo=q.opts.find(o=>o.k===Q.ans); if(wo&&wo.it) pySay(wo.it.c+"，"+q.it.c); }
+  else if(k==="contrast"){ const Q=PY.q, q=Q.list[Q.i], wo=q.opts.find(o=>o.k===Q.ans); if(!wo) return;
+    if(q.type==="tone") pySeq([{hum:+wo.k},{say:wo.it?wo.it.c:""},{wait:500},{hum:+q.ans},{say:q.it.c}]); else if(wo.it) pySeq([{say:wo.it.c},{wait:500},{say:q.it.c}]); }
   else if(k==="color"){ const t=+v; S.settings.tones=true; S.settings.toneSel=[...new Set(toneSel().concat(t))].sort(); save(); applyTones(); pyRender(); }
+  else if(k==="hum4") pySeq([1,2,3,4].flatMap(t=>[{hum:t},{wait:200}]).concat([{wait:300},{say:(()=>{ const L=pyLessons().find(x=>x.id===1), gs=L.groups.filter(g=>g.items.length===4); return shuffle(gs.slice())[0].items.map(x=>x.c).join("，"); })()}]));
+  else if(k==="tone"){ const t=+v; pySeq([{hum:t},{wait:150}].concat(pyToneEx(t,4).flatMap(x=>[{say:x.c},{wait:250}]))); }
   else if(k==="speed"){ PYC().speed=v; save(); pyRender(); pySay("妈"); }
   else if(k==="hide"){ PYC().hide=true; save(); pyEntry(); }
   else if(k==="show"){ PYC().hide=false; save(); pyEntry(); pyRender(); } }
