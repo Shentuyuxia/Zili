@@ -5383,7 +5383,8 @@ const PYTN=["轻声","第一声","第二声","第三声","第四声"];
 const PYR={slow:.5,slower:.38,normal:.75};
 // the speed ruler: 0.19 is half of the old slowest (0.38); 0.75 is normal speed
 const PYR_MIN=.19, PYR_MAX=.75;
-function pyRate(){ const v=PYC().rate; if(typeof v==="number"&&v>=PYR_MIN&&v<=PYR_MAX) return v; return PYR[PYC().speed]||PYR.slow; }
+// one fixed, natural speed: slowing the device voice down bends its pitch, so the course no longer offers a speed control
+function pyRate(){ return PYR.normal; }
 function pySay(t,done,keep){ if(!t){ done&&done(); return; } if(!hasTTS){ speak(t); done&&setTimeout(done,800); return; }
   try{ if(!keep) pyStopSeq(); if(typeof ntStop==="function") ntStop(); if(player) player.pause(); speechSynthesis.cancel();
     // a lone character is read as a short sentence ("字。"): engines otherwise clip it or give it list intonation
@@ -5434,7 +5435,7 @@ function pySeq(steps){ if(steps.some(x=>x.hum)&&!pySeq.tried){ pySeq.tried=1; co
     else if(s.audio){ const a=new Audio(s.audio); pyAud=a; let d=false; const nx=()=>{ if(d) return; d=true; run(i+1); }; a.onended=nx; a.onerror=nx; a.play().catch(nx); } };
   run(0); }
 function pyToneSet(t,n){ const L=pyLessons().find(x=>x.id===1); return [...new Map(pyItems(L).filter(x=>x.t===t).map(x=>[x.c,x])).values()].slice(0,n||3); }
-function pySpeedRow(){ const r=pyRate(), pct=Math.round(r/PYR.normal*100); return `<div class="pyspd"><span>发音速度</span><input type="range" class="pyrange" min="${PYR_MIN}" max="${PYR_MAX}" step="0.01" value="${r}" data-pyspeed aria-label="发音速度" aria-valuetext="${pct}%"><span class="pypct" data-pypct>${pct}%</span><button type="button" class="ib sm" data-pyplay="妈" aria-label="试听" title="试听">${I.play}</button></div>`; }
+function pySpeedRow(){ return ""; }
 let pyAud=null;
 function pyPlay(it){ if(!it) return; try{ if(pyAud) pyAud.pause(); }catch(e){}
   if(it.au){ pyAud=new Audio(it.au); pyAud.play().catch(()=>pySay(it.c)); return; } pySay(it.c); }
