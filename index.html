@@ -5391,12 +5391,19 @@ function pyHum(t){ try{ const AC=window.AudioContext||window.webkitAudioContext;
     if(t===4){ A.linearRampToValueAtTime(.9,t0+.02); A.exponentialRampToValueAtTime(.4,t0+D-.06); A.linearRampToValueAtTime(0,t0+D); }
     else { A.linearRampToValueAtTime(.6,t0+.04); A.setValueAtTime(.6,t0+D-.1); A.linearRampToValueAtTime(0,t0+D); }
     o.start(t0); o.stop(t0+D+.05); return D; }catch(e){ return 0; } }
+// the user's own recording of each tone on "a" (ā á ǎ à); falls back to the synthesized hum if missing
+const PYHUM_AU={1:"audio/tones/tone1.mp3",2:"audio/tones/tone2.mp3",3:"audio/tones/tone3.mp3",4:"audio/tones/tone4.mp3"};
 // play steps one after another: {hum:t} or {say:"字"}
 let PYSEQ=0;
 function pyStopSeq(){ PYSEQ++; }
 function pySeq(steps){ const tok=++PYSEQ; try{ speechSynthesis.cancel(); }catch(e){}
   const run=i=>{ if(tok!==PYSEQ||i>=steps.length) return; const s=steps[i];
-    if(s.hum){ const d=pyHum(s.hum); setTimeout(()=>run(i+1),(d+.3)*1000); }
+    if(s.hum){ const t=s.hum, path=PYHUM_AU[t];
+      if(path){ const a=new Audio(path); pyAud=a; let d=false;
+        const nx=()=>{ if(d) return; d=true; run(i+1); };
+        const fb=()=>{ if(d) return; d=true; const dd=pyHum(t); setTimeout(()=>run(i+1),(dd+.3)*1000); };
+        a.onended=nx; a.onerror=fb; a.play().catch(fb);
+      } else { const d=pyHum(t); setTimeout(()=>run(i+1),(d+.3)*1000); } }
     else if(s.say) pySay(s.say,()=>setTimeout(()=>run(i+1),250),true);
     else if(s.wait) setTimeout(()=>run(i+1),s.wait);
     else if(s.audio){ const a=new Audio(s.audio); pyAud=a; let d=false; const nx=()=>{ if(d) return; d=true; run(i+1); }; a.onended=nx; a.onerror=nx; a.play().catch(nx); } };
