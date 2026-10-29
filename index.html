@@ -5439,15 +5439,17 @@ function pySpeedRow(){ return ""; }
 let pyAud=null;
 // recorded model syllables (item.au): decoded once, played through Web Audio (reliable on iOS, also inside sequences)
 const PYCB={};
-function pyAuOf(c){ const it=pyByChar(c); return it&&it.au||(PY.course&&PY.course.cardAu||{})[c]||""; }
+function pyAuOf(c){ const it=pyByChar(c); return it&&it.au||""; }
 function pyClip(path,done){ const AC=window.AudioContext||window.webkitAudioContext; let fin=false; const end=()=>{ if(fin) return; fin=true; done&&done(); };
   const viaEl=()=>{ const a=new Audio(path); pyAud=a; a.onended=end; a.onerror=end; a.play().catch(end); };
   if(!AC){ viaEl(); return; } PYAC=PYAC||new AC(); if(PYAC.state==="suspended") PYAC.resume();
   const go=b=>{ try{ const src=PYAC.createBufferSource(); src.buffer=b; src.connect(PYAC.destination); src.start(); pyAud={pause(){ try{ src.stop(); }catch(e){} }}; setTimeout(end,b.duration*1000+60); }catch(e){ viaEl(); } };
   if(PYCB[path]){ go(PYCB[path]); return; }
   fetch(path).then(r=>{ if(!r.ok) throw 0; return r.arrayBuffer(); }).then(ab=>new Promise((res,rej)=>{ const pr=PYAC.decodeAudioData(ab,res,rej); if(pr&&pr.then) pr.then(res,rej); })).then(b=>{ PYCB[path]=b; go(b); }).catch(viaEl); }
+// every model syllable or word is read three times in a row
 function pyPlay(it){ if(!it) return; try{ if(pyAud) pyAud.pause(); }catch(e){}
-  const au=it.au||pyAuOf(it.c); if(au){ pyStopSeq(); try{ speechSynthesis.cancel(); }catch(e){} pyClip(au); return; } pySay(it.c); }
+  const au=it.au||pyAuOf(it.c); if(au){ pyStopSeq(); try{ speechSynthesis.cancel(); }catch(e){} pyClip(au); return; }
+  pySeq([{say:it.c},{wait:450},{say:it.c},{wait:450},{say:it.c}]); }
 const pyItems=L=>(L.groups||[]).flatMap(g=>g.items);
 const pyLessons=()=>PY.course?PY.course.lessons:[];
 const pyReady=()=>pyLessons().filter(L=>L.groups);
