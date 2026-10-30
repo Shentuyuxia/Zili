@@ -1,0 +1,627 @@
+{
+ "date": "2026-10-30",
+ "createdBy": "claude",
+ "items": [
+  {
+   "lang": "zh",
+   "level": "HSK1",
+   "kind": "story",
+   "section": "休闲",
+   "title": "星期六去看电影",
+   "title_en": "To the cinema on Saturday",
+   "title_de": "Am Samstag ins Kino",
+   "title_pt": "Cinema no sábado",
+   "paragraphs": [
+    "今天是星期六。王明住在北京。他和爸爸去看电影。",
+    "电影下午三点开始。现在两点半，他们坐出租车去。",
+    "电影票一张四十块，爸爸买了两张。王明还买了一杯水。",
+    "电影很好看，里面有一只小狗。王明很喜欢它。",
+    "回家的时候，王明说：“爸爸，下个星期六我们还来，好吗？”"
+   ],
+   "paragraphs_en": [
+    "Today is Saturday. Wang Ming lives in Beijing. He and his dad are going to see a film.",
+    "The film starts at three in the afternoon. It is half past two now, so they take a taxi there.",
+    "A ticket costs forty yuan, and Dad buys two. Wang Ming also buys a cup of water.",
+    "The film is very good. There is a little dog in it. Wang Ming really likes it.",
+    "On the way home, Wang Ming says: “Dad, shall we come again next Saturday?”"
+   ],
+   "paragraphs_de": [
+    "Heute ist Samstag. Wang Ming wohnt in Peking. Er geht mit seinem Papa ins Kino.",
+    "Der Film fängt um drei Uhr nachmittags an. Jetzt ist es halb drei, sie fahren mit dem Taxi hin.",
+    "Eine Kinokarte kostet vierzig Yuan, Papa kauft zwei. Wang Ming kauft auch noch einen Becher Wasser.",
+    "Der Film ist sehr schön, darin gibt es einen kleinen Hund. Wang Ming mag ihn sehr.",
+    "Auf dem Heimweg sagt Wang Ming: „Papa, kommen wir nächsten Samstag wieder, ja?“"
+   ],
+   "paragraphs_pt": [
+    "Hoje é sábado. Wang Ming mora em Pequim. Ele e o pai vão ao cinema.",
+    "O filme começa às três da tarde. Agora são duas e meia, e eles vão de táxi.",
+    "Cada ingresso custa quarenta iuanes, e o pai compra dois. Wang Ming também compra um copo de água.",
+    "O filme é muito bom e tem um cachorrinho. Wang Ming gosta muito dele.",
+    "Na volta para casa, Wang Ming diz: “Pai, a gente volta no sábado que vem, tá?”"
+   ],
+   "glossary": [
+    {
+     "w": "电影",
+     "p": "diàn yǐng",
+     "en": "film; movie",
+     "de": "der Film",
+     "pt": "o filme"
+    },
+    {
+     "w": "开始",
+     "p": "kāi shǐ",
+     "en": "to start",
+     "de": "anfangen; beginnen",
+     "pt": "começar"
+    },
+    {
+     "w": "出租车",
+     "p": "chū zū chē",
+     "en": "taxi",
+     "de": "das Taxi",
+     "pt": "o táxi"
+    },
+    {
+     "w": "票",
+     "p": "piào",
+     "en": "ticket",
+     "de": "die Karte; das Ticket",
+     "pt": "o ingresso; o bilhete"
+    },
+    {
+     "w": "块",
+     "p": "kuài",
+     "en": "yuan (spoken)",
+     "de": "der Yuan (umgangssprachlich)",
+     "pt": "o iuane (coloquial)"
+    },
+    {
+     "w": "好看",
+     "p": "hǎo kàn",
+     "en": "good to watch; nice-looking",
+     "de": "schön; sehenswert",
+     "pt": "bonito; bom de ver"
+    },
+    {
+     "w": "回家",
+     "p": "huí jiā",
+     "en": "to go home",
+     "de": "nach Hause gehen",
+     "pt": "voltar para casa"
+    }
+   ],
+   "grammar": "Clock time: number + 点 (diǎn) = o'clock: 三点 'three o'clock'. Add 半 for half past: 两点半 'half past two'. Time words come before the verb: 电影下午三点开始.",
+   "grammar_de": "Uhrzeit: Zahl + 点 (diǎn) = Uhr: 三点 „drei Uhr“. Mit 半 heißt es „halb“ nach der Stunde: 两点半 „halb drei“ (2:30). Zeitangaben stehen vor dem Verb: 电影下午三点开始.",
+   "grammar_pt": "Horas: número + 点 (diǎn) = horas: 三点 “três horas”. Com 半 se diz “e meia”: 两点半 “duas e meia”. A hora vem antes do verbo: 电影下午三点开始.",
+   "questions": [
+    "电影几点开始？",
+    "电影票一张多少钱？",
+    "电影里有什么？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "feature",
+   "section": "休闲",
+   "title": "沙滩上的足球",
+   "title_en": "Football on the beach",
+   "title_de": "Fußball am Strand",
+   "title_pt": "Futebol na praia",
+   "paragraphs": [
+    "我叫卢卡斯，住在巴西的里约热内卢。在巴西，很多人都喜欢足球。小孩子在学校踢，大人下班以后也踢。",
+    "我家离海边很近。周末的早上，我常常和朋友去沙滩上踢球。沙子很软，跑起来比较累，但是摔倒了也不疼。",
+    "在里约，还有一种很有意思的运动，叫“足排球”。人们用脚和头把球踢过网，但是不能用手。因为这个运动很难，所以我现在还踢得不太好。",
+    "踢完球，我们会喝一个冰冰的椰子。我觉得，这就是最好的周末！"
+   ],
+   "paragraphs_en": [
+    "My name is Lucas and I live in Rio de Janeiro, in Brazil. In Brazil, lots of people love football. Children play it at school, and adults play it after work too.",
+    "My home is very close to the sea. On weekend mornings I often go to the beach with my friends to play football. The sand is very soft, so running is quite tiring, but falling over doesn't hurt.",
+    "In Rio there is also a really fun sport called footvolley. People use their feet and heads to get the ball over a net, but they can't use their hands. Because it is very hard, I'm still not very good at it.",
+    "After playing, we drink from an ice-cold coconut. I think that's the best kind of weekend!"
+   ],
+   "paragraphs_de": [
+    "Ich heiße Lucas und wohne in Rio de Janeiro in Brasilien. In Brasilien lieben viele Menschen Fußball. Kinder spielen in der Schule, und Erwachsene spielen auch nach der Arbeit.",
+    "Ich wohne ganz nah am Meer. Am Wochenende gehe ich morgens oft mit Freunden an den Strand und spiele Fußball. Der Sand ist sehr weich, deshalb ist Laufen ziemlich anstrengend, aber wenn man hinfällt, tut es nicht weh.",
+    "In Rio gibt es noch einen sehr interessanten Sport: Fußballtennis am Strand, auf Portugiesisch „Futevôlei“. Man spielt den Ball mit Füßen und Kopf über ein Netz, aber man darf die Hände nicht benutzen. Weil das sehr schwer ist, spiele ich es noch nicht so gut.",
+    "Nach dem Spielen trinken wir eine eiskalte Kokosnuss. Ich finde, das ist das beste Wochenende!"
+   ],
+   "paragraphs_pt": [
+    "Meu nome é Lucas e eu moro no Rio de Janeiro, no Brasil. No Brasil, muita gente adora futebol. As crianças jogam na escola, e os adultos também jogam depois do trabalho.",
+    "Minha casa fica bem perto do mar. Nos fins de semana, de manhã, eu costumo ir à praia com os amigos para jogar bola. A areia é muito fofa, então correr cansa bastante, mas cair não dói.",
+    "No Rio também tem um esporte muito interessante, o futevôlei. A gente passa a bola por cima da rede com os pés e a cabeça, mas não pode usar as mãos. Como esse esporte é muito difícil, eu ainda não jogo muito bem.",
+    "Depois do jogo, a gente toma um coco bem gelado. Eu acho que esse é o melhor fim de semana!"
+   ],
+   "glossary": [
+    {
+     "w": "沙滩",
+     "p": "shā tān",
+     "en": "beach; sandy beach",
+     "de": "der Sandstrand",
+     "pt": "a praia (de areia)"
+    },
+    {
+     "w": "踢",
+     "p": "tī",
+     "en": "to kick; to play (football)",
+     "de": "treten; (Fußball) spielen",
+     "pt": "chutar; jogar (futebol)"
+    },
+    {
+     "w": "软",
+     "p": "ruǎn",
+     "en": "soft",
+     "de": "weich",
+     "pt": "macio; fofo"
+    },
+    {
+     "w": "摔倒",
+     "p": "shuāi dǎo",
+     "en": "to fall over",
+     "de": "hinfallen",
+     "pt": "cair; levar um tombo"
+    },
+    {
+     "w": "疼",
+     "p": "téng",
+     "en": "to hurt; painful",
+     "de": "wehtun; schmerzen",
+     "pt": "doer"
+    },
+    {
+     "w": "网",
+     "p": "wǎng",
+     "en": "net",
+     "de": "das Netz",
+     "pt": "a rede"
+    },
+    {
+     "w": "椰子",
+     "p": "yē zi",
+     "en": "coconut",
+     "de": "die Kokosnuss",
+     "pt": "o coco"
+    },
+    {
+     "w": "足排球",
+     "p": "zú pái qiú",
+     "en": "footvolley",
+     "de": "das Footvolley; das Fußballtennis am Strand",
+     "pt": "o futevôlei"
+    }
+   ],
+   "grammar": "A 离 B 很近 / 很远 means 'A is close to / far from B': 我家离海边很近 'My home is close to the sea'. The place you measure from comes after 离.",
+   "grammar_de": "A 离 B 很近 / 很远 heißt „A ist nah an / weit weg von B“: 我家离海边很近 „Mein Zuhause ist nah am Meer“. Der Bezugsort steht direkt nach 离.",
+   "grammar_pt": "A 离 B 很近 / 很远 quer dizer “A fica perto de / longe de B”: 我家离海边很近 “Minha casa fica perto do mar”. O lugar de referência vem logo depois de 离.",
+   "questions": [
+    "卢卡斯周末常常做什么？",
+    "在沙滩上跑步为什么比较累？",
+    "踢足排球的时候能用手吗？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK3",
+   "kind": "dialogue",
+   "section": "休闲",
+   "title": "这个周末有点儿忙",
+   "title_en": "A busy weekend ahead",
+   "title_de": "Ein volles Wochenende",
+   "title_pt": "Um fim de semana cheio",
+   "dek": "在伦敦读书的小林，第一次过英国的秋天。",
+   "paragraphs": [
+    "汤姆：小林，明天晚上你有空吗？我朋友家有一个万圣节晚会，你想去吗？",
+    "小林：万圣节？我在电视上看过，可是从来没参加过。要穿特别的衣服吗？",
+    "汤姆：对，大家都会打扮一下。去年我打扮成了一个吸血鬼，脸上画得白白的。",
+    "小林：听起来很好玩！可是我没有这样的衣服，现在去买还来得及吗？",
+    "汤姆：来得及。超市里就有很多面具和帽子，不太贵。你也可以自己做，比买的更有意思。",
+    "小林：好，那我把旧床单拿出来，做一个小幽灵！对了，晚会上大家做什么？",
+    "汤姆：吃东西、聊天、听音乐，还会玩一些小游戏。门口放着一个南瓜灯，很好找。",
+    "小林：太好了。那下个星期呢？我听说十一月五号晚上，英国有很多烟花。",
+    "汤姆：是的，那天叫“篝火之夜”。很多公园会放烟花，人们穿着厚衣服，一边喝热饮，一边看。",
+    "小林：英国的秋天比我想的热闹多了！"
+   ],
+   "paragraphs_en": [
+    "Tom: Xiaolin, are you free tomorrow evening? There's a Halloween party at my friend's place. Do you want to come?",
+    "Xiaolin: Halloween? I've seen it on TV, but I've never been to one. Do I have to wear special clothes?",
+    "Tom: Yes, everyone dresses up a bit. Last year I went as a vampire and painted my face all white.",
+    "Xiaolin: Sounds like fun! But I don't have anything like that. Is there still time to buy something?",
+    "Tom: There's time. The supermarket has lots of masks and hats, and they're not too expensive. You could also make your own — that's even more fun than buying one.",
+    "Xiaolin: OK, then I'll get out my old bedsheet and make a little ghost! By the way, what do people do at the party?",
+    "Tom: Eat, chat, listen to music, and play a few little games. There's a pumpkin lantern by the door, so it's easy to find.",
+    "Xiaolin: Great. And what about next week? I heard there are lots of fireworks in Britain on the evening of 5 November.",
+    "Tom: Yes, that's called Bonfire Night. Lots of parks have fireworks, and people wrap up in warm clothes, have a hot drink and watch.",
+    "Xiaolin: Autumn in Britain is much livelier than I thought!"
+   ],
+   "paragraphs_de": [
+    "Tom: Xiaolin, hast du morgen Abend Zeit? Bei einem Freund gibt es eine Halloween-Party. Willst du mitkommen?",
+    "Xiaolin: Halloween? Das habe ich im Fernsehen gesehen, aber ich war noch nie auf so einer Party. Muss man besondere Kleidung tragen?",
+    "Tom: Ja, alle verkleiden sich ein bisschen. Letztes Jahr war ich ein Vampir und hatte ein ganz weiß geschminktes Gesicht.",
+    "Xiaolin: Klingt lustig! Aber ich habe so etwas nicht. Schaffe ich es noch, etwas zu kaufen?",
+    "Tom: Das schaffst du. Im Supermarkt gibt es viele Masken und Hüte, gar nicht so teuer. Du kannst auch selbst etwas basteln – das macht noch mehr Spaß als etwas Gekauftes.",
+    "Xiaolin: Gut, dann hole ich mein altes Bettlaken raus und mache ein kleines Gespenst! Ach ja, was macht man auf der Party?",
+    "Tom: Essen, quatschen, Musik hören und ein paar kleine Spiele spielen. Vor der Tür steht ein Kürbislicht, man findet es leicht.",
+    "Xiaolin: Super. Und nächste Woche? Ich habe gehört, am Abend des 5. November gibt es in England viel Feuerwerk.",
+    "Tom: Ja, der Abend heißt „Bonfire Night“. In vielen Parks gibt es Feuerwerk. Die Leute ziehen sich warm an, trinken etwas Heißes und schauen zu.",
+    "Xiaolin: Der Herbst in England ist viel lebhafter, als ich gedacht habe!"
+   ],
+   "paragraphs_pt": [
+    "Tom: Xiaolin, você está livre amanhã à noite? Vai ter uma festa de Halloween na casa de um amigo. Quer ir?",
+    "Xiaolin: Halloween? Já vi na TV, mas nunca fui a uma festa assim. Precisa usar uma roupa especial?",
+    "Tom: Sim, todo mundo se fantasia um pouco. No ano passado eu fui de vampiro, com o rosto todo pintado de branco.",
+    "Xiaolin: Parece divertido! Mas eu não tenho uma roupa assim. Ainda dá tempo de comprar?",
+    "Tom: Dá tempo. No supermercado tem muitas máscaras e chapéus, e não são caros. Você também pode fazer a sua — é ainda mais legal do que comprar.",
+    "Xiaolin: Tá bom, então vou pegar meu lençol velho e fazer um fantasminha! Aliás, o que o pessoal faz na festa?",
+    "Tom: Come, conversa, ouve música e faz umas brincadeiras. Tem uma lanterna de abóbora na porta, é fácil de achar.",
+    "Xiaolin: Ótimo. E na semana que vem? Ouvi dizer que na noite de 5 de novembro tem muitos fogos de artifício na Inglaterra.",
+    "Tom: É, essa noite se chama Bonfire Night, a “noite da fogueira”. Muitos parques soltam fogos, e as pessoas vestem roupa quente, tomam uma bebida quente e ficam assistindo.",
+    "Xiaolin: O outono na Inglaterra é bem mais animado do que eu pensava!"
+   ],
+   "glossary": [
+    {
+     "w": "万圣节",
+     "p": "wàn shèng jié",
+     "en": "Halloween",
+     "de": "das Halloween",
+     "pt": "o Halloween; o Dia das Bruxas"
+    },
+    {
+     "w": "晚会",
+     "p": "wǎn huì",
+     "en": "evening party",
+     "de": "die Abendparty; die Feier",
+     "pt": "a festa (à noite)"
+    },
+    {
+     "w": "打扮",
+     "p": "dǎ ban",
+     "en": "to dress up",
+     "de": "sich verkleiden; sich zurechtmachen",
+     "pt": "fantasiar-se; arrumar-se"
+    },
+    {
+     "w": "吸血鬼",
+     "p": "xī xuè guǐ",
+     "en": "vampire",
+     "de": "der Vampir",
+     "pt": "o vampiro"
+    },
+    {
+     "w": "来得及",
+     "p": "lái de jí",
+     "en": "there's still time",
+     "de": "es noch schaffen; rechtzeitig sein",
+     "pt": "dar tempo"
+    },
+    {
+     "w": "面具",
+     "p": "miàn jù",
+     "en": "mask",
+     "de": "die Maske",
+     "pt": "a máscara"
+    },
+    {
+     "w": "床单",
+     "p": "chuáng dān",
+     "en": "bedsheet",
+     "de": "das Bettlaken",
+     "pt": "o lençol"
+    },
+    {
+     "w": "幽灵",
+     "p": "yōu líng",
+     "en": "ghost",
+     "de": "das Gespenst",
+     "pt": "o fantasma"
+    },
+    {
+     "w": "南瓜灯",
+     "p": "nán guā dēng",
+     "en": "pumpkin lantern; jack-o'-lantern",
+     "de": "die Kürbislaterne",
+     "pt": "a lanterna de abóbora"
+    },
+    {
+     "w": "烟花",
+     "p": "yān huā",
+     "en": "fireworks",
+     "de": "das Feuerwerk",
+     "pt": "os fogos de artifício"
+    },
+    {
+     "w": "篝火",
+     "p": "gōu huǒ",
+     "en": "bonfire",
+     "de": "das Lagerfeuer; das Freudenfeuer",
+     "pt": "a fogueira"
+    },
+    {
+     "w": "热饮",
+     "p": "rè yǐn",
+     "en": "hot drink",
+     "de": "das Heißgetränk",
+     "pt": "a bebida quente"
+    }
+   ],
+   "grammar": "A 比 B + adjective + 多了 means 'A is much more … than B': 英国的秋天比我想的热闹多了 'Autumn in Britain is much livelier than I thought'. Use 更 before the adjective for 'even more': 比买的更有意思. Don't put 很 in a 比 sentence.",
+   "grammar_de": "A 比 B + Adjektiv + 多了 heißt „A ist viel … als B“: 英国的秋天比我想的热闹多了 „Der Herbst in England ist viel lebhafter, als ich dachte“. Mit 更 vor dem Adjektiv heißt es „noch …“: 比买的更有意思. In einem 比-Satz steht kein 很.",
+   "grammar_pt": "A 比 B + adjetivo + 多了 quer dizer “A é bem mais … do que B”: 英国的秋天比我想的热闹多了 “O outono na Inglaterra é bem mais animado do que eu pensava”. Com 更 antes do adjetivo fica “ainda mais”: 比买的更有意思. Numa frase com 比 não se usa 很.",
+   "questions": [
+    "去年汤姆打扮成了什么？",
+    "小林想用什么做衣服？",
+    "“篝火之夜”的时候，人们做什么？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK4",
+   "kind": "feature",
+   "section": "休闲",
+   "title": "下班后，去俱乐部",
+   "title_en": "After work, off to the club",
+   "title_de": "Nach der Arbeit in den Verein",
+   "title_pt": "Depois do trabalho, para o clube",
+   "dek": "在德国，很多人的业余生活是在俱乐部里度过的。",
+   "paragraphs": [
+    "刚到德国的时候，我下班以后常常不知道该做什么。有一次，一位德国同事问我：“你为什么不去参加一个俱乐部呢？”后来我才知道，在德国，俱乐部（德语叫Verein）是很多人业余生活中非常重要的一部分。",
+    "德国的俱乐部种类特别多。最常见的是体育俱乐部，比如足球、网球、游泳和划船；除此之外，还有合唱团、园艺俱乐部、象棋俱乐部，甚至还有专门养鸽子的俱乐部。几乎不管你有什么爱好，都能在附近找到志同道合的人。",
+    "加入的方法也很简单。一般来说，只要填一张表，每年交一点儿会费，就能成为会员。很多俱乐部不是为了赚钱，而是由会员自己管理：有人负责记账，有人负责组织活动，大部分工作都是志愿的。",
+    "我最后加入了一个合唱团。说实话，一开始我很紧张，因为我的德语还不太好，有些歌词也看不懂。可是每个星期三晚上练习的时候，大家都很耐心，休息时还会请我尝他们自己烤的蛋糕。慢慢地，我不但学会了几首德国民歌，德语也进步了不少。",
+    "现在回头看，俱乐部给我带来的最大收获，不是学会了唱歌，而是让我在一个新的国家有了归属感。如果你也刚搬到一个新城市，不妨找一个和自己爱好有关的俱乐部试一试。"
+   ],
+   "paragraphs_en": [
+    "When I first arrived in Germany, I often didn't know what to do after work. One day a German colleague asked me, “Why don't you join a club?” Only later did I learn that in Germany, clubs (called Verein in German) are a very important part of many people's free time.",
+    "There are all sorts of clubs in Germany. The most common are sports clubs, such as football, tennis, swimming and rowing. Besides those, there are choirs, gardening clubs, chess clubs, and even clubs just for keeping pigeons. Whatever your hobby, you can almost always find like-minded people nearby.",
+    "Joining is easy too. Usually you just fill in a form and pay a small membership fee each year, and you become a member. Many clubs aren't there to make money; the members run them themselves. Someone keeps the accounts, someone organises events, and most of the work is voluntary.",
+    "In the end I joined a choir. To be honest, I was very nervous at first, because my German still wasn't very good and I couldn't understand some of the lyrics. But at practice every Wednesday evening everyone was very patient, and during the break they would offer me cake they had baked themselves. Little by little, I not only learned a few German folk songs, but my German also improved quite a lot.",
+    "Looking back now, the biggest thing the club gave me wasn't learning to sing, but a sense of belonging in a new country. If you've just moved to a new city too, why not try a club that has to do with your hobby?"
+   ],
+   "paragraphs_de": [
+    "Als ich neu in Deutschland war, wusste ich nach der Arbeit oft nicht, was ich machen sollte. Einmal fragte mich ein deutscher Kollege: „Warum gehst du nicht in einen Verein?“ Erst später habe ich verstanden, dass Vereine in Deutschland für viele Menschen ein sehr wichtiger Teil der Freizeit sind.",
+    "In Deutschland gibt es unglaublich viele Arten von Vereinen. Am häufigsten sind Sportvereine, zum Beispiel für Fußball, Tennis, Schwimmen und Rudern. Daneben gibt es Chöre, Gartenvereine, Schachvereine und sogar Vereine nur für Taubenzüchter. Egal, welches Hobby man hat – fast immer findet man in der Nähe Gleichgesinnte.",
+    "Auch das Mitmachen ist einfach. Meistens füllt man nur ein Formular aus, zahlt jedes Jahr einen kleinen Mitgliedsbeitrag und ist dann Mitglied. Viele Vereine wollen kein Geld verdienen, sondern werden von den Mitgliedern selbst geführt: Einer kümmert sich um die Kasse, ein anderer organisiert Veranstaltungen, und die meiste Arbeit ist ehrenamtlich.",
+    "Am Ende bin ich in einen Chor gegangen. Ehrlich gesagt war ich am Anfang sehr nervös, weil mein Deutsch noch nicht so gut war und ich manche Liedtexte nicht verstand. Aber bei der Probe jeden Mittwochabend waren alle sehr geduldig, und in der Pause boten sie mir selbstgebackenen Kuchen an. Nach und nach habe ich nicht nur ein paar deutsche Volkslieder gelernt, auch mein Deutsch ist deutlich besser geworden.",
+    "Wenn ich heute zurückblicke, war das Wichtigste, was mir der Verein gebracht hat, nicht das Singen, sondern das Gefühl, in einem neuen Land dazuzugehören. Wenn du auch gerade in eine neue Stadt gezogen bist, probier doch einfach einen Verein aus, der zu deinem Hobby passt."
+   ],
+   "paragraphs_pt": [
+    "Quando cheguei à Alemanha, muitas vezes eu não sabia o que fazer depois do trabalho. Um dia, um colega alemão me perguntou: “Por que você não entra num clube?” Só depois eu entendi que, na Alemanha, os clubes e associações (em alemão, Verein) são uma parte muito importante do tempo livre de muita gente.",
+    "Há clubes de todo tipo na Alemanha. Os mais comuns são os clubes esportivos, como de futebol, tênis, natação e remo; além disso, há corais, clubes de jardinagem, clubes de xadrez e até clubes só de criadores de pombos. Seja qual for o seu hobby, quase sempre dá para encontrar perto de casa pessoas com os mesmos interesses.",
+    "Entrar também é simples. Em geral, basta preencher um formulário e pagar uma pequena anuidade para virar sócio. Muitos clubes não existem para dar lucro; são administrados pelos próprios sócios: alguém cuida das contas, alguém organiza as atividades, e a maior parte do trabalho é voluntária.",
+    "No fim, eu entrei num coral. Para falar a verdade, no começo fiquei muito nervoso, porque meu alemão ainda não era muito bom e eu não entendia algumas letras. Mas nos ensaios de toda quarta-feira à noite todo mundo era muito paciente, e no intervalo ainda me ofereciam bolos que eles mesmos tinham feito. Aos poucos, não só aprendi algumas canções folclóricas alemãs, como meu alemão também melhorou bastante.",
+    "Olhando para trás, o maior ganho que o clube me trouxe não foi aprender a cantar, e sim me sentir parte de um país novo. Se você também acabou de se mudar para uma cidade nova, por que não experimentar um clube ligado ao seu hobby?"
+   ],
+   "glossary": [
+    {
+     "w": "俱乐部",
+     "p": "jù lè bù",
+     "en": "club",
+     "de": "der Verein; der Klub",
+     "pt": "o clube"
+    },
+    {
+     "w": "业余",
+     "p": "yè yú",
+     "en": "spare-time; amateur",
+     "de": "Freizeit-; Amateur-",
+     "pt": "amador; de tempo livre"
+    },
+    {
+     "w": "种类",
+     "p": "zhǒng lèi",
+     "en": "kind; type",
+     "de": "die Art; die Sorte",
+     "pt": "o tipo; a espécie"
+    },
+    {
+     "w": "合唱团",
+     "p": "hé chàng tuán",
+     "en": "choir",
+     "de": "der Chor",
+     "pt": "o coral"
+    },
+    {
+     "w": "志同道合",
+     "p": "zhì tóng dào hé",
+     "en": "like-minded (idiom)",
+     "de": "gleichgesinnt (Redewendung)",
+     "pt": "com os mesmos interesses (expressão)"
+    },
+    {
+     "w": "会员",
+     "p": "huì yuán",
+     "en": "member",
+     "de": "das Mitglied",
+     "pt": "o sócio; o membro"
+    },
+    {
+     "w": "会费",
+     "p": "huì fèi",
+     "en": "membership fee",
+     "de": "der Mitgliedsbeitrag",
+     "pt": "a mensalidade; a anuidade"
+    },
+    {
+     "w": "志愿",
+     "p": "zhì yuàn",
+     "en": "voluntary",
+     "de": "freiwillig; ehrenamtlich",
+     "pt": "voluntário"
+    },
+    {
+     "w": "耐心",
+     "p": "nài xīn",
+     "en": "patient; patience",
+     "de": "geduldig; die Geduld",
+     "pt": "paciente; a paciência"
+    },
+    {
+     "w": "民歌",
+     "p": "mín gē",
+     "en": "folk song",
+     "de": "das Volkslied",
+     "pt": "a canção folclórica"
+    },
+    {
+     "w": "归属感",
+     "p": "guī shǔ gǎn",
+     "en": "sense of belonging",
+     "de": "das Zugehörigkeitsgefühl",
+     "pt": "o sentimento de pertencimento"
+    },
+    {
+     "w": "不妨",
+     "p": "bù fáng",
+     "en": "might as well; why not",
+     "de": "ruhig; warum nicht",
+     "pt": "não custa; por que não"
+    }
+   ],
+   "grammar": "不是 A，而是 B means 'not A, but (rather) B'. It corrects an expected idea: 最大收获不是学会了唱歌，而是让我有了归属感. 而是 is more formal than 是, and is common in written Chinese.",
+   "grammar_de": "不是 A，而是 B heißt „nicht A, sondern B“. Damit korrigiert man eine Erwartung: 最大收获不是学会了唱歌，而是让我有了归属感. 而是 klingt etwas schriftlicher als einfaches 是.",
+   "grammar_pt": "不是 A，而是 B quer dizer “não A, e sim B”. Serve para corrigir uma ideia esperada: 最大收获不是学会了唱歌，而是让我有了归属感. 而是 soa mais formal e é comum na língua escrita.",
+   "questions": [
+    "德国有哪些种类的俱乐部？",
+    "作者为什么一开始很紧张？",
+    "作者觉得俱乐部给他带来的最大收获是什么？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK5",
+   "kind": "feature",
+   "section": "休闲",
+   "title": "推开城市的后门：在香港行山",
+   "title_en": "The city's back door: hiking in Hong Kong",
+   "title_de": "Die Hintertür der Stadt: Wandern in Hongkong",
+   "title_pt": "A porta dos fundos da cidade: trilhas em Hong Kong",
+   "dek": "高楼的背后，是一座山，一片海。",
+   "paragraphs": [
+    "提起香港，很多人脑海里浮现的是密密麻麻的高楼、灯火通明的夜景和川流不息的人群。可是，在香港生活过的人都知道，这座城市还有另一副面孔：只要坐一段地铁或巴士，就能从热闹的街头走进安静的山林。香港人把爬山叫作“行山”，这是一个粤语说法，如今已经成了不少年轻人周末最常见的消遣之一。",
+    "香港的面积不大，却山多、海也多。市区之外有大片的郊野公园，里面修好了步道，路标也很清楚。初学者可以选择一两个小时就能走完的短线，比如沿着水塘慢慢散步；有经验的人则会挑战更长的路线。其中最有名的是麦理浩径，全长大约一百公里，从东边的西贡一直通到西边的屯门，被分成十段，很少有人能一天走完。",
+    "行山之所以这么受欢迎，是因为它的门槛很低：不需要昂贵的装备，一双好走的鞋、足够的水，再加上一顶帽子，就可以出发了。而且，香港的山路常常能同时看到山和海。站在山顶，一边是蓝色的海湾，一边是远处的高楼，让人心旷神怡。还有人把行山当成社交活动，约上几个朋友边走边聊，既活动了筋骨，又联络了感情，可谓一举两得。",
+    "当然，行山也有需要注意的地方。香港的夏天又热又湿，中午出发很容易让人吃不消，所以不少人认为秋冬才是最适合行山的季节。另外，郊野公园鼓励游客把自己的垃圾带下山，让山林保持干净。",
+    "对住在城市里的人来说，行山就像推开了城市的一扇后门。门的这一边是忙碌的工作和拥挤的车厢，另一边却别有洞天。也许这正是香港的魅力所在：高楼和山林之间，往往只隔着一段路。"
+   ],
+   "paragraphs_en": [
+    "Mention Hong Kong, and many people picture densely packed skyscrapers, a brilliantly lit skyline at night and endless streams of people. But anyone who has lived in Hong Kong knows the city has another face: a short ride on the MTR or a bus can take you from busy streets into quiet hills and woods. People in Hong Kong call hiking hang saan (行山), a Cantonese expression, and it has become one of the most popular weekend pastimes for many young people.",
+    "Hong Kong isn't large, but it has plenty of hills and plenty of sea. Beyond the urban areas lie large country parks with well-built trails and clear signposts. Beginners can choose short routes that take only an hour or two, such as a gentle walk around a reservoir; experienced hikers take on longer ones. The best known is the MacLehose Trail, about 100 kilometres long, running from Sai Kung in the east all the way to Tuen Mun in the west. It is divided into ten stages, and very few people manage it in a single day.",
+    "Hiking is so popular because it is easy to get into: you don't need expensive gear — a pair of comfortable shoes, enough water and a hat, and you're ready to go. What's more, Hong Kong's trails often give you views of both mountains and sea. Standing on a summit, with a blue bay on one side and distant towers on the other, you feel refreshed and at ease. Some people also treat hiking as a social activity, inviting a few friends to chat as they walk — stretching their legs and strengthening friendships at the same time, killing two birds with one stone.",
+    "Of course, there are things to keep in mind. Hong Kong summers are hot and humid, and setting out at midday can be more than you can handle, so many people think autumn and winter are the best hiking seasons. Also, the country parks encourage visitors to carry their own rubbish back down, so the hills stay clean.",
+    "For city dwellers, hiking is like opening a back door of the city. On one side of the door are busy jobs and crowded train carriages; on the other, a whole different world. Perhaps this is exactly Hong Kong's charm: between the towers and the hills there is often just a short way to go."
+   ],
+   "paragraphs_de": [
+    "Bei Hongkong denken viele an dicht gedrängte Hochhäuser, ein hell erleuchtetes Nachtpanorama und nie endende Menschenströme. Doch wer in Hongkong gelebt hat, weiß: Die Stadt hat noch ein anderes Gesicht. Schon nach einer kurzen Fahrt mit der U-Bahn oder dem Bus kommt man von belebten Straßen in stille Berge und Wälder. In Hongkong nennt man das Wandern „hang saan“ (行山), ein kantonesischer Ausdruck. Heute gehört es für viele junge Leute zu den beliebtesten Beschäftigungen am Wochenende.",
+    "Hongkong ist nicht groß, hat aber viele Berge und viel Meer. Außerhalb der Stadtgebiete liegen große Landschaftsparks (Country Parks) mit gut ausgebauten Wegen und klaren Wegweisern. Anfänger können kurze Strecken wählen, die man in ein, zwei Stunden schafft, etwa einen gemütlichen Spaziergang um einen Stausee; Erfahrene wagen sich an längere Routen. Am bekanntesten ist der MacLehose Trail: Er ist etwa 100 Kilometer lang, führt von Sai Kung im Osten bis nach Tuen Mun im Westen und ist in zehn Etappen geteilt. Kaum jemand schafft ihn an einem Tag.",
+    "Das Wandern ist so beliebt, weil der Einstieg leicht ist: Man braucht keine teure Ausrüstung – gute Schuhe, genug Wasser und ein Hut, schon kann es losgehen. Außerdem sieht man auf Hongkongs Wegen oft Berge und Meer zugleich. Auf dem Gipfel liegt auf der einen Seite eine blaue Bucht, auf der anderen stehen in der Ferne die Hochhäuser – da fühlt man sich frei und gelöst. Manche sehen das Wandern auch als geselliges Treffen: Man verabredet sich mit ein paar Freunden und redet beim Gehen. So bewegt man sich und pflegt zugleich Freundschaften – zwei Fliegen mit einer Klappe.",
+    "Natürlich gibt es auch einiges zu beachten. Die Sommer in Hongkong sind heiß und schwül; wer mittags losgeht, kommt schnell an seine Grenzen. Deshalb halten viele Herbst und Winter für die beste Wanderzeit. Außerdem bitten die Parks die Besucher, ihren eigenen Müll wieder mit hinunterzunehmen, damit die Berge sauber bleiben.",
+    "Für Stadtmenschen ist Wandern wie das Öffnen einer Hintertür der Stadt. Auf der einen Seite liegen die hektische Arbeit und die vollen Bahnwagen, auf der anderen Seite eine ganz eigene Welt. Vielleicht liegt genau darin der Reiz Hongkongs: Zwischen Hochhäusern und Bergwald liegt oft nur ein kurzes Stück Weg."
+   ],
+   "paragraphs_pt": [
+    "Quando se fala de Hong Kong, muita gente imagina prédios altíssimos amontoados, a cidade toda iluminada à noite e um fluxo sem fim de pessoas. Mas quem já morou em Hong Kong sabe que a cidade tem outra cara: basta pegar o metrô ou um ônibus por um trecho para sair das ruas movimentadas e entrar em morros e matas silenciosos. Em Hong Kong, fazer trilha se chama hang saan (行山), uma expressão do cantonês, e hoje é um dos passatempos de fim de semana mais comuns entre muitos jovens.",
+    "Hong Kong não é grande, mas tem muitos morros e muito mar. Fora das áreas urbanas há grandes parques naturais (country parks), com trilhas bem construídas e placas claras. Quem está começando pode escolher percursos curtos, de uma ou duas horas, como uma caminhada tranquila em volta de um reservatório; os mais experientes encaram rotas mais longas. A mais famosa é a MacLehose Trail, com cerca de 100 quilômetros, que vai de Sai Kung, no leste, até Tuen Mun, no oeste. Ela é dividida em dez etapas, e pouquíssima gente consegue fazer tudo num dia só.",
+    "As trilhas são tão populares porque é fácil começar: não é preciso equipamento caro — um bom par de tênis, água suficiente e um chapéu, e pronto. Além disso, nas trilhas de Hong Kong muitas vezes se vê ao mesmo tempo montanha e mar. No topo, de um lado fica uma baía azul, do outro os prédios ao longe, e a gente se sente leve e revigorado. Há também quem veja a trilha como programa social: chamam alguns amigos e vão conversando pelo caminho — mexem o corpo e fortalecem as amizades ao mesmo tempo, matando dois coelhos com uma cajadada só.",
+    "Claro que também há cuidados a tomar. O verão de Hong Kong é quente e úmido, e sair ao meio-dia pode ser puxado demais; por isso, muita gente acha que o outono e o inverno são as melhores épocas para trilhas. Além disso, os parques incentivam os visitantes a levar o próprio lixo de volta, para manter as matas limpas.",
+    "Para quem mora na cidade, fazer trilha é como abrir uma porta dos fundos da cidade. De um lado dessa porta estão o trabalho corrido e os vagões lotados; do outro, um mundo completamente diferente. Talvez esteja aí o charme de Hong Kong: entre os arranha-céus e as matas, muitas vezes há só um pequeno trecho de caminho."
+   ],
+   "glossary": [
+    {
+     "w": "行山",
+     "p": "xíng shān",
+     "en": "to go hiking (Cantonese usage)",
+     "de": "wandern (kantonesischer Ausdruck)",
+     "pt": "fazer trilha (expressão cantonesa)"
+    },
+    {
+     "w": "密密麻麻",
+     "p": "mì mi má má",
+     "en": "densely packed",
+     "de": "dicht gedrängt",
+     "pt": "amontoado; muito denso"
+    },
+    {
+     "w": "川流不息",
+     "p": "chuān liú bù xī",
+     "en": "flowing without end (idiom: of crowds, traffic)",
+     "de": "ununterbrochen strömend (Redewendung)",
+     "pt": "um fluxo sem fim (expressão)"
+    },
+    {
+     "w": "面孔",
+     "p": "miàn kǒng",
+     "en": "face; appearance",
+     "de": "das Gesicht",
+     "pt": "a cara; o rosto"
+    },
+    {
+     "w": "消遣",
+     "p": "xiāo qiǎn",
+     "en": "pastime",
+     "de": "der Zeitvertreib",
+     "pt": "o passatempo"
+    },
+    {
+     "w": "郊野公园",
+     "p": "jiāo yě gōng yuán",
+     "en": "country park",
+     "de": "der Landschaftspark",
+     "pt": "o parque natural"
+    },
+    {
+     "w": "门槛",
+     "p": "mén kǎn",
+     "en": "threshold; barrier to entry",
+     "de": "die Schwelle; die Einstiegshürde",
+     "pt": "a barreira de entrada"
+    },
+    {
+     "w": "装备",
+     "p": "zhuāng bèi",
+     "en": "gear; equipment",
+     "de": "die Ausrüstung",
+     "pt": "o equipamento"
+    },
+    {
+     "w": "心旷神怡",
+     "p": "xīn kuàng shén yí",
+     "en": "relaxed and happy (idiom: 'open heart, joyful spirit')",
+     "de": "frei und heiter (Redewendung)",
+     "pt": "leve e revigorado (expressão)"
+    },
+    {
+     "w": "一举两得",
+     "p": "yī jǔ liǎng dé",
+     "en": "two gains with one action (idiom)",
+     "de": "zwei Fliegen mit einer Klappe (Redewendung)",
+     "pt": "matar dois coelhos com uma cajadada só (expressão)"
+    },
+    {
+     "w": "吃不消",
+     "p": "chī bu xiāo",
+     "en": "to be unable to stand; too much for someone",
+     "de": "nicht aushalten können",
+     "pt": "não aguentar; ser puxado demais"
+    },
+    {
+     "w": "别有洞天",
+     "p": "bié yǒu dòng tiān",
+     "en": "a whole different world (idiom: 'another cave-heaven')",
+     "de": "eine ganz eigene Welt (Redewendung)",
+     "pt": "um mundo à parte (expressão)"
+    }
+   ],
+   "grammar": "之所以 A，是因为 B: 'the reason why A is that B'. It puts the result first and the reason second, and is typical of written Chinese: 行山之所以这么受欢迎，是因为它的门槛很低. Compare the everyday order 因为 B，所以 A.",
+   "grammar_de": "之所以 A，是因为 B: „Dass A so ist, liegt daran, dass B“. Zuerst kommt das Ergebnis, dann der Grund; typisch für geschriebenes Chinesisch: 行山之所以这么受欢迎，是因为它的门槛很低. Vergleiche die alltägliche Reihenfolge 因为 B，所以 A.",
+   "grammar_pt": "之所以 A，是因为 B: “o motivo de A é que B”. Primeiro vem o resultado, depois a causa; é típico do chinês escrito: 行山之所以这么受欢迎，是因为它的门槛很低. Compare com a ordem do dia a dia 因为 B，所以 A.",
+   "questions": [
+    "香港人说的“行山”是什么意思？",
+    "麦理浩径有多长？从哪里到哪里？",
+    "作者为什么说行山“一举两得”？"
+   ],
+   "sources": []
+  }
+ ]
+}

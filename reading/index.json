@@ -1,6 +1,46 @@
 {
- "updated": "2026-10-29T04:47:45Z",
+ "updated": "2026-10-30T04:47:13Z",
  "days": [
+  {
+   "date": "2026-10-30",
+   "items": [
+    {
+     "i": 0,
+     "lang": "zh",
+     "title": "星期六去看电影",
+     "kind": "story",
+     "level": "HSK1"
+    },
+    {
+     "i": 1,
+     "lang": "zh",
+     "title": "沙滩上的足球",
+     "kind": "feature",
+     "level": "HSK2"
+    },
+    {
+     "i": 2,
+     "lang": "zh",
+     "title": "这个周末有点儿忙",
+     "kind": "dialogue",
+     "level": "HSK3"
+    },
+    {
+     "i": 3,
+     "lang": "zh",
+     "title": "下班后，去俱乐部",
+     "kind": "feature",
+     "level": "HSK4"
+    },
+    {
+     "i": 4,
+     "lang": "zh",
+     "title": "推开城市的后门：在香港行山",
+     "kind": "feature",
+     "level": "HSK5"
+    }
+   ]
+  },
   {
    "date": "2026-10-29",
    "items": [
