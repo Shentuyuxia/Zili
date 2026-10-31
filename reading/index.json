@@ -1,6 +1,25 @@
 {
- "updated": "2026-10-30T04:47:13Z",
+ "updated": "2026-10-31T04:44:53Z",
  "days": [
+  {
+   "date": "2026-10-31",
+   "items": [
+    {
+     "i": 0,
+     "lang": "zh",
+     "title": "叫阿姨好",
+     "kind": "dialogue",
+     "level": "HSK1"
+    },
+    {
+     "i": 1,
+     "lang": "zh",
+     "title": "第一块蛋糕",
+     "kind": "story",
+     "level": "HSK1"
+    }
+   ]
+  },
   {
    "date": "2026-10-30",
    "items": [

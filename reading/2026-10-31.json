@@ -1,0 +1,217 @@
+{
+ "date": "2026-10-31",
+ "createdBy": "claude",
+ "items": [
+  {
+   "lang": "zh",
+   "level": "HSK1",
+   "kind": "dialogue",
+   "section": "文化与节日",
+   "title": "叫阿姨好",
+   "title_en": "Say hello to Auntie",
+   "title_de": "Sag „Tante“!",
+   "title_pt": "Diga oi para a tia",
+   "paragraphs": [
+    "小月：马克，这是我妈妈的朋友，王阿姨。",
+    "马克：你好，王……王小姐？",
+    "小月：不对，不对！你叫她“阿姨”。",
+    "马克：阿姨好！我叫马克，我是英国人。",
+    "王阿姨：你好，马克！你的中文很好！",
+    "马克：谢谢阿姨！小月，那个先生也是你家的朋友吗？",
+    "小月：是，他是我爷爷的朋友。你叫他“李爷爷”。"
+   ],
+   "paragraphs_en": [
+    "Xiaoyue: Mark, this is my mum's friend, Auntie Wang.",
+    "Mark: Hello, Miss… Miss Wang?",
+    "Xiaoyue: No, no! You call her “Auntie”.",
+    "Mark: Hello, Auntie! My name is Mark. I'm from the UK.",
+    "Auntie Wang: Hello, Mark! Your Chinese is very good!",
+    "Mark: Thank you, Auntie! Xiaoyue, is that gentleman a friend of your family too?",
+    "Xiaoyue: Yes, he's my grandpa's friend. You call him “Grandpa Li”."
+   ],
+   "paragraphs_de": [
+    "Xiaoyue: Mark, das ist eine Freundin von meiner Mama, Tante Wang.",
+    "Mark: Guten Tag, Frau … Frau Wang?",
+    "Xiaoyue: Nein, nein! Du sagst „Tante“ zu ihr.",
+    "Mark: Hallo, Tante! Ich heiße Mark, ich komme aus Großbritannien.",
+    "Tante Wang: Hallo, Mark! Dein Chinesisch ist sehr gut!",
+    "Mark: Danke, Tante! Xiaoyue, ist der Herr dort auch ein Freund eurer Familie?",
+    "Xiaoyue: Ja, er ist ein Freund von meinem Opa. Du sagst „Opa Li“ zu ihm."
+   ],
+   "paragraphs_pt": [
+    "Xiaoyue: Mark, esta é uma amiga da minha mãe, a tia Wang.",
+    "Mark: Olá, senhorita… senhorita Wang?",
+    "Xiaoyue: Não, não! Você chama ela de “tia”.",
+    "Mark: Oi, tia! Meu nome é Mark, eu sou do Reino Unido.",
+    "Tia Wang: Oi, Mark! Seu chinês é muito bom!",
+    "Mark: Obrigado, tia! Xiaoyue, aquele senhor também é amigo da sua família?",
+    "Xiaoyue: É, ele é amigo do meu avô. Você chama ele de “vovô Li”."
+   ],
+   "glossary": [
+    {
+     "w": "阿姨",
+     "p": "ā yí",
+     "en": "auntie (polite way to address a woman of your parents' age)",
+     "de": "die Tante (höfliche Anrede für eine Frau im Alter der Eltern)",
+     "pt": "a tia (forma educada de chamar uma mulher da idade dos pais)"
+    },
+    {
+     "w": "小姐",
+     "p": "xiǎo jie",
+     "en": "Miss",
+     "de": "Frau; Fräulein (Anrede)",
+     "pt": "a senhorita"
+    },
+    {
+     "w": "不对",
+     "p": "bú duì",
+     "en": "not right; wrong",
+     "de": "nicht richtig; falsch",
+     "pt": "errado; não é assim"
+    },
+    {
+     "w": "英国",
+     "p": "Yīng guó",
+     "en": "the UK; Britain",
+     "de": "Großbritannien; England",
+     "pt": "o Reino Unido; a Inglaterra"
+    },
+    {
+     "w": "先生",
+     "p": "xiān sheng",
+     "en": "Mr; gentleman",
+     "de": "der Herr",
+     "pt": "o senhor"
+    },
+    {
+     "w": "爷爷",
+     "p": "yé ye",
+     "en": "grandpa (father's father); polite word for an old man",
+     "de": "der Opa (Vater des Vaters); höfliche Anrede für einen älteren Mann",
+     "pt": "o avô, o vovô (pai do pai); forma educada de chamar um senhor idoso"
+    },
+    {
+     "w": "也",
+     "p": "yě",
+     "en": "also; too",
+     "de": "auch",
+     "pt": "também"
+    }
+   ],
+   "grammar": "叫 (jiào) has two uses here. 我叫马克 means 'my name is Mark'. 你叫她“阿姨” means 'you call her Auntie': 叫 + person + what you call them. In Chinese-speaking families, children call their parents' friends 阿姨 (auntie) or 叔叔 (uncle), and older people 爷爷 or 奶奶.",
+   "grammar_de": "叫 (jiào) hat hier zwei Bedeutungen. 我叫马克 heißt „ich heiße Mark“. 你叫她“阿姨” heißt „du nennst sie Tante“: 叫 + Person + Anrede. In chinesischsprachigen Familien sagen Kinder zu Freunden der Eltern 阿姨 (Tante) oder 叔叔 (Onkel), zu älteren Menschen 爷爷 oder 奶奶.",
+   "grammar_pt": "叫 (jiào) tem dois usos aqui. 我叫马克 quer dizer “meu nome é Mark”. 你叫她“阿姨” quer dizer “você chama ela de tia”: 叫 + pessoa + como chamar. Em famílias de língua chinesa, as crianças chamam os amigos dos pais de 阿姨 (tia) ou 叔叔 (tio), e as pessoas mais velhas de 爷爷 ou 奶奶.",
+   "questions": [
+    "王阿姨是谁的朋友？",
+    "马克是哪国人？",
+    "小月说，马克叫李先生什么？"
+   ],
+   "sources": []
+  },
+  {
+   "lang": "zh",
+   "level": "HSK1",
+   "kind": "story",
+   "section": "文化与节日",
+   "title": "第一块蛋糕",
+   "title_en": "The first slice of cake",
+   "title_de": "Das erste Stück Kuchen",
+   "title_pt": "O primeiro pedaço de bolo",
+   "paragraphs": [
+    "今天是卢卡斯的生日，他七岁了。他家在巴西。",
+    "下午，朋友们来他家。桌子上有一个大蛋糕。大家唱歌：“生日快乐！”",
+    "在巴西，第一块蛋糕很重要。卢卡斯给谁呢？他给了妈妈。妈妈很高兴。",
+    "卢卡斯的同学小月说：“我生日的时候，奶奶给我做很长的面条。”",
+    "卢卡斯说：“明年我也吃面条！”"
+   ],
+   "paragraphs_en": [
+    "Today is Lucas's birthday. He is seven now. His family lives in Brazil.",
+    "In the afternoon his friends come to his house. There is a big cake on the table. Everyone sings: “Happy birthday!”",
+    "In Brazil, the first slice of cake is important. Who does Lucas give it to? He gives it to his mum. Mum is very happy.",
+    "Lucas's classmate Xiaoyue says: “On my birthday, my grandma makes me very long noodles.”",
+    "Lucas says: “Next year I'll eat noodles too!”"
+   ],
+   "paragraphs_de": [
+    "Heute hat Lucas Geburtstag, er ist jetzt sieben. Seine Familie wohnt in Brasilien.",
+    "Am Nachmittag kommen seine Freunde zu ihm nach Hause. Auf dem Tisch steht ein großer Kuchen. Alle singen: „Zum Geburtstag viel Glück!“",
+    "In Brasilien ist das erste Stück Kuchen wichtig. Wem gibt Lucas es? Er gibt es seiner Mama. Mama freut sich sehr.",
+    "Lucas' Mitschülerin Xiaoyue sagt: „An meinem Geburtstag kocht mir meine Oma ganz lange Nudeln.“",
+    "Lucas sagt: „Nächstes Jahr esse ich auch Nudeln!“"
+   ],
+   "paragraphs_pt": [
+    "Hoje é o aniversário do Lucas. Ele fez sete anos. A família dele mora no Brasil.",
+    "À tarde, os amigos vêm à casa dele. Na mesa tem um bolo grande. Todo mundo canta: “Parabéns pra você!”",
+    "No Brasil, o primeiro pedaço de bolo é importante. Para quem o Lucas dá? Ele dá para a mãe. A mãe fica muito feliz.",
+    "A colega de classe do Lucas, Xiaoyue, diz: “No meu aniversário, minha avó faz um macarrão bem comprido para mim.”",
+    "O Lucas diz: “No ano que vem eu também vou comer macarrão!”"
+   ],
+   "glossary": [
+    {
+     "w": "生日",
+     "p": "shēng rì",
+     "en": "birthday",
+     "de": "der Geburtstag",
+     "pt": "o aniversário"
+    },
+    {
+     "w": "蛋糕",
+     "p": "dàn gāo",
+     "en": "cake",
+     "de": "der Kuchen; die Torte",
+     "pt": "o bolo"
+    },
+    {
+     "w": "唱歌",
+     "p": "chàng gē",
+     "en": "to sing (a song)",
+     "de": "singen",
+     "pt": "cantar"
+    },
+    {
+     "w": "第一",
+     "p": "dì yī",
+     "en": "first",
+     "de": "erste(r, s)",
+     "pt": "primeiro"
+    },
+    {
+     "w": "重要",
+     "p": "zhòng yào",
+     "en": "important",
+     "de": "wichtig",
+     "pt": "importante"
+    },
+    {
+     "w": "同学",
+     "p": "tóng xué",
+     "en": "classmate",
+     "de": "der Mitschüler; die Mitschülerin",
+     "pt": "o colega de classe; a colega de classe"
+    },
+    {
+     "w": "面条",
+     "p": "miàn tiáo",
+     "en": "noodles",
+     "de": "die Nudeln",
+     "pt": "o macarrão; o talharim"
+    },
+    {
+     "w": "明年",
+     "p": "míng nián",
+     "en": "next year",
+     "de": "nächstes Jahr",
+     "pt": "o ano que vem"
+    }
+   ],
+   "grammar": "第 (dì) + number makes an ordinal: 第一 'first', 第二 'second'. Put a measure word before the noun: 第一块蛋糕 'the first slice of cake'. Long noodles on a birthday are a Chinese custom: they stand for a long life (长寿面, 'long-life noodles').",
+   "grammar_de": "第 (dì) + Zahl ergibt eine Ordnungszahl: 第一 „erste“, 第二 „zweite“. Vor dem Nomen steht ein Zählwort: 第一块蛋糕 „das erste Stück Kuchen“. Lange Nudeln zum Geburtstag sind ein chinesischer Brauch: Sie stehen für ein langes Leben (长寿面, „Langlebigkeitsnudeln“).",
+   "grammar_pt": "第 (dì) + número forma um ordinal: 第一 “primeiro”, 第二 “segundo”. Antes do substantivo vem um classificador: 第一块蛋糕 “o primeiro pedaço de bolo”. Comer macarrão comprido no aniversário é um costume chinês: ele simboliza vida longa (长寿面, “macarrão da longevidade”).",
+   "questions": [
+    "卢卡斯几岁了？",
+    "第一块蛋糕，卢卡斯给了谁？",
+    "小月生日的时候吃什么？"
+   ],
+   "sources": []
+  }
+ ]
+}
