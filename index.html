@@ -1258,9 +1258,9 @@ body .py .tn1,body.tones .py .tn1{color:var(--py1)} body .py .tn2,body.tones .py
 
   <nav class="tabs" role="tablist" id="tabs">
     <button role="tab" data-tab="today" aria-selected="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/><path d="m9 14.5 2 2 4-4"/></svg><span class="tl">今日学习</span></button>
-    <button role="tab" data-tab="pinyin" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4.5h7"/><circle cx="9.5" cy="14" r="4.5"/><path d="M14 9.5v9"/><path d="M17.5 6.5l3-2M17.5 12.5c1 .2 2-.6 3-1.8"/></svg><span class="tl">拼音</span></button>
     <button role="tab" data-tab="read" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5c3-1.2 6-1.2 9 .8 3-2 6-2 9-.8v13c-3-1.2-6-1.2-9 .8-3-2-6-2-9-.8z"/><path d="M12 6.3v13"/></svg><span class="tl">阅读</span></button>
     <button role="tab" data-tab="dict" id="dict-open" class="dict-tab" aria-selected="false" aria-label="字典"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg><span class="tl">字典</span></button>
+    <button role="tab" data-tab="pinyin" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4.5h7"/><circle cx="9.5" cy="14" r="4.5"/><path d="M14 9.5v9"/><path d="M17.5 6.5l3-2M17.5 12.5c1 .2 2-.6 3-1.8"/></svg><span class="tl">拼音</span></button>
     <button role="tab" data-tab="settings" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20c1.2-3.7 4-5.6 7.5-5.6s6.3 1.9 7.5 5.6"/></svg><span class="tl">我的</span></button>
   </nav>
 
@@ -5241,7 +5241,7 @@ $("#ui-lang").addEventListener("change",e=>{ UIL=e.target.value; try{ localStora
 
 /* ---------- tabs & language ---------- */
 let cur="today";
-const TABS=["today","pinyin","read","dict","settings"];
+const TABS=["today","read","dict","pinyin","settings"];
 const dkOn=k=>cur==="dict"&&!!(document.getElementById("dk-"+k)||{}).open;
 $("#dk-browse").addEventListener("toggle",e=>{ if(e.target.open) renderBrowse(); });
 $("#dk-pile").addEventListener("toggle",e=>{ if(e.target.open) renderPile(); });
