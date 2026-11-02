@@ -8,7 +8,7 @@ Chinesisch lesen und Vokabeln lernen · Read Chinese and learn words · 中文�
 Built on the same structure as 字里行间 · Entrelinhas, with Chinese as the language you learn:
 
 - **Today**: spaced-repetition flashcards from the HSK 1–6 word bank (`data/zh-HSK*.json`) and your own words; daily goal and streak.
-- **Read**: a new graded text every morning per HSK level (`reading/`), plus a **书架** (Bookshelf) page with **二十四节气** — fixed texts for the 24 solar terms in two levels, each with a classical poem, opening on the term's date (`reading/jieqi.json`), and the library. Tap any word for pinyin and meaning, save it to your words. Pinyin on/off, Simplified/Traditional, English, German and Portuguese (Brazil) translations, read-aloud; a record box (唱片盒) and small stories (茶余饭后). "My articles": paste or import your own Chinese texts.
+- **Read**: a new graded text every morning, the HSK level rotating day by day (`reading/`); under each text, **写一写** (Write): write a few lines and check them on the device — common learner mistakes (punctuation, measure words, 的/地/得, 在/再, 不/没, 二/两 …) and which HSK levels your words come from; nothing is uploaded, drafts sync; plus a **书架** (Bookshelf) page with **二十四节气** — fixed texts for the 24 solar terms in two levels, each with a classical poem, opening on the term's date (`reading/jieqi.json`), and the library. Tap any word for pinyin and meaning, save it to your words. Pinyin on/off, Simplified/Traditional, English, German and Portuguese (Brazil) translations, read-aloud; a record box (唱片盒) and small stories (茶余饭后). "My articles": paste or import your own Chinese texts.
 - **Dictionary**: every word in a text can be tapped — about 217,000 entries with English (CC-CEDICT) and German (HanDeDict), offline once loaded. Texts are split into words by frequency (jieba's method), so 研究生命 reads 研究/生命, not 研究生/命.
 - **Tones, shadowing, strokes**: optional tone colours (1 red · 2 green · 3 blue · 4 purple · neutral grey); in the word sheet you can hear the sentence, record yourself and play original → yours (the recording stays in memory, nothing is uploaded); stroke-order animation and tracing for 5,091 common characters (Simplified and Traditional), radical highlighted.
 - **Dictionary** (🔍 in the bottom bar / tab row): search by characters, pinyin (with or without tones, e.g. `lv`, `zhong1guo2`, `zhōngguó`), English or German (word bank); offline handwriting recognition on a 米字格 pad (own matcher on Make Me a Hanzi stroke medians, `dict/hw.txt`); speech input via the browser's speech recognition; photo → text offline with PaddleOCR PP-OCRv4 detection + recognition models (Apache-2.0) on onnxruntime-web (MIT), glue code in `vendor/ocr/zocr.js` (horizontal lines and single vertical columns) — drag a box around the characters to read. Word view: readings, EN/DE, HSK, read aloud, stroke order, add to words.
@@ -54,8 +54,8 @@ Scheduled Claude tasks write new content and push it to `main` (times in Europe/
 
 | When | Task | Writes |
 |---|---|---|
-| daily 02:47 | Word-bank examples | example sentences for the next 200 words in `data/` (and fixes to pinyin / meanings) |
-| daily 05:43 and 06:13 | Daily reading | one text per level in `reading/config.json` → `reading/YYYY-MM-DD.json` |
+| Mon, Wed, Sat 02:47 | Word-bank examples | example sentences for the next 200 words in `data/` (and fixes to pinyin / meanings) |
+| daily 04:37 | Daily reading | one text a day, the HSK level rotating (`reading/config.json` → `slow`) → `reading/YYYY-MM-DD.json`; the task checks `tools/reading_recent.py` instead of opening old files |
 
 The app always fetches `reading/` and `data/` from the network first, so new texts appear as soon as they are pushed.
 To change levels, lengths or themes, edit `reading/config.json`; the next run follows it.

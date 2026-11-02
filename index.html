@@ -407,6 +407,21 @@ ol.steps li{margin:3px 0}
 .mg-poem .px{font-size:14.5px;margin:6px 0 0}
 .mg-poem .px.zc{font-size:16px;line-height:2.4;margin:4px 0 10px}
 .mg-poem .px.tr{color:var(--muted)}
+.wr summary{cursor:pointer;list-style:none}.wr summary::-webkit-details-marker{display:none}
+.wr summary h3{display:inline}.wr summary .ar{color:var(--muted);font-size:12px;margin-left:6px}
+.wr textarea{font-family:var(--f-cn,var(--f-word));font-size:18px;line-height:1.7;min-height:140px;margin:8px 0;width:100%}
+.wr .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.wr-txt{font-family:var(--f-cn,var(--f-word));font-size:18px;line-height:1.9;white-space:pre-wrap;margin:12px 0 6px;padding:10px 12px;background:var(--surface);border:1px solid var(--line);border-radius:8px}
+.wr-txt mark{background:none;color:inherit;border-bottom:2px solid #d0663b;cursor:pointer;padding:0 1px}
+.wr-txt mark.st{border-bottom-color:#b88a1d;border-bottom-style:dotted}.wr-txt mark.on{background:var(--acc-soft)}
+.wr-list{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:8px}
+.wr-list li{border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:15px}.wr-list li.on{border-color:var(--acc)}
+.wr-list .bad{font-family:var(--f-cn,var(--f-word));text-decoration:line-through;color:var(--muted);margin-right:6px}
+.wr-list .msg{display:block;margin:2px 0 6px}.wr-list .fx{display:flex;gap:6px;flex-wrap:wrap}
+.wr-list .fx button{border:1px solid var(--acc);color:var(--acc);background:none;border-radius:999px;padding:2px 12px;font-family:var(--f-cn,var(--f-word));font-size:16px;cursor:pointer}
+.wr-ok{color:var(--acc);margin:10px 0 0}
+.wr-lv{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 0}.wr-lv span{font-size:13px;border:1px solid var(--line);border-radius:999px;padding:1px 9px}
+.wr-hi{margin:6px 0 0;font-family:var(--f-cn,var(--f-word));font-size:16px}
 .mg-q{margin:0;padding-left:1.3em;font-family:var(--f-word);font-size:16.5px;display:grid;gap:6px}
 .mg-src ul{margin:0;padding-left:1.1em}
 .mg-src a{color:var(--acc);word-break:break-word}
@@ -2909,6 +2924,7 @@ async function mgRender0(){
     ${it.grammar||it.grammar_de||it.grammar_pt?`<div class="mg-blk"><h3>语法</h3><div class="mg-gram" data-noi18n>${auxHTML(auxAll(it,"grammar","grammar"))}</div></div>`:""}
     ${it.glossary&&it.glossary.length?`<div class="mg-blk mg-glb"><div class="mg-glsw"><span>释义语言</span>${["en","de","pt"].map(k=>`<button class="tb" type="button" data-glsw="${k}" aria-pressed="${glSel().includes(k)}" data-noi18n>${GLS[k]}</button>`).join("")}</div><dl class="mg-gl zgl" data-noi18n>${it.glossary.map(g=>`<dt><span class="zc" lang="zh-CN">${esc(zs(g.w))}</span><span class="py">${esc(g.p||zPy(g.w))}</span></dt><dd>${(()=>{ const ks=glOrd().filter(k=>g[k]), tag=ks.length>1; return ks.map(k=>`<span lang="${k}">${tag?`<b class="glk">${GLS[k]}</b> `:""}${esc(g[k])}</span>`).join("")||esc(g.en||g.de||g.pt||ptOf(g.w)||""); })()}</dd>`).join("")}</dl></div>`:""}
     ${qs.length?`<div class="mg-blk"><h3>想一想</h3><ol class="mg-q zc" data-noi18n lang="zh-CN">${qs.map(q=>`<li>${esc(zs(q))}</li>`).join("")}</ol></div>`:""}
+    ${lang()==="zh"&&(it.paragraphs||[]).length?wrBlock(pick.date+"|"+pick.i):""}
     ${it.sources&&it.sources.length?`<div class="mg-blk mg-src"><h3>来源</h3><ul>${it.sources.map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>${s.license?`<span class="lic">${esc(s.license)}</span>`:""}</li>`).join("")}</ul></div>`:""}
     <div class="mg-fin">${(()=>{ const on=mgFavOn(pick.date+"|"+pick.i); return `<button class="btn mg-favb" data-favb="1" type="button" aria-pressed="${on}"><span class="st" aria-hidden="true">${on?"★":"☆"}</span> <span>${on?"已收藏":"收藏"}</span></button>`; })()}<button class="btn" id="mg-exp" type="button" aria-haspopup="menu">${I.exp}<span>导出</span></button>${mgRead(pick.date,pick.i)?'<span class="small muted">✓ 读完了</span>':`<button class="btn primary" id="mg-done" type="button">读完了</button>`}
     ${(()=>{ const k=es.findIndex(e=>e.date===pick.date&&e.i===pick.i); const nx=!pick.older&&k>=0?es[k+1]:null; return nx?`<button class="btn" data-mg="${nx.date}|${nx.i}" type="button">下一篇 →</button>`:""; })()}</div>
@@ -4023,6 +4039,7 @@ function syMergeState(A,B){
       const seen=new Set(), arr=[]; for(const s of [...((a.mine||{})[id]||[]),...((b.mine||{})[id]||[])]){ const k=s.t+"|"+(s.ts||""); if(!seen.has(k)){ seen.add(k); arr.push(s); } }
       arr.sort((p,q)=>(q.ts||0)-(p.ts||0)); m.mine[id]=arr; }
     m.plan=a.plan||b.plan||null;
+    m.essays={}; for(const k of new Set([...Object.keys(a.essays||{}),...Object.keys(b.essays||{})])){ const x=(a.essays||{})[k], y=(b.essays||{})[k]; m.essays[k]=!x?y:!y?x:((y.at||0)>(x.at||0)?y:x); }
   }
   o.updated=Math.max(A.updated||0,B.updated||0); o.lastBackup=Math.max(A.lastBackup||0,B.lastBackup||0);
   return o;
@@ -4342,6 +4359,18 @@ function s2t(str){ // Simplified → Traditional (Taiwan), phrase-aware for comm
   return o;
 }
 const UI_DICT=[
+["写一写", "Write", "Schreiben", "Escrever", "寫一寫"],
+["已存草稿", "draft saved", "Entwurf gespeichert", "rascunho salvo", "已存草稿"],
+["用今天的词写几句", "a few lines with today's words", "ein paar Sätze mit den Wörtern von heute", "algumas frases com as palavras de hoje", "用今天的詞寫幾句"],
+["回答上面的问题，或用今天的新词写几句。写的内容会自动保存。", "Answer the questions above, or write a few lines with today's new words. Your text is saved automatically.", "Beantworte die Fragen oben oder schreib ein paar Sätze mit den neuen Wörtern von heute. Dein Text wird automatisch gespeichert.", "Responda às perguntas acima ou escreva algumas frases com as palavras novas de hoje. O texto é salvo automaticamente.", "回答上面的問題，或用今天的新詞寫幾句。寫的內容會自動儲存。"],
+["检查", "Check", "Prüfen", "Verificar", "檢查"],
+["在你的设备上检查，文字不会上传。规则只抓常见错误（标点、量词、的/地/得、在/再、不/没、二/两……），不代替老师。", "Checked on your device — nothing is uploaded. The rules only catch common mistakes (punctuation, measure words, 的/地/得, 在/再, 不/没, 二/两 …); they don't replace a teacher.", "Die Prüfung läuft auf deinem Gerät, nichts wird hochgeladen. Die Regeln finden nur häufige Fehler (Satzzeichen, Zählwörter, 的/地/得, 在/再, 不/没, 二/两 …) und ersetzen keine Lehrkraft.", "A verificação acontece no seu aparelho; nada é enviado. As regras só pegam erros comuns (pontuação, classificadores, 的/地/得, 在/再, 不/没, 二/两…) e não substituem um professor.", "在你的裝置上檢查，文字不會上傳。規則只抓常見錯誤（標點、量詞、的/地/得、在/再、不/沒、二/兩……），不代替老師。"],
+["✓ 没有发现常见错误。", "✓ No common mistakes found.", "✓ Keine häufigen Fehler gefunden.", "✓ Nenhum erro comum encontrado.", "✓ 沒有發現常見錯誤。"],
+["发现 {0} 处可能的问题，点划线的地方或下面的建议。", "{0} possible problems — tap an underlined spot or a suggestion below.", "{0} mögliche Fehler – tippe auf eine unterstrichene Stelle oder einen Vorschlag unten.", "{0} possíveis problemas — toque num trecho sublinhado ou numa sugestão abaixo.", "發現 {0} 處可能的問題，點劃線的地方或下面的建議。"],
+["用词：共 {0} 个", "Words used: {0}", "Verwendete Wörter: {0}", "Palavras usadas: {0}", "用詞：共 {0} 個"],
+["超过你所选级别的词", "Words above your chosen level", "Wörter über deinem gewählten Niveau", "Palavras acima do seu nível escolhido", "超過你所選級別的詞"],
+["先写几句吧。", "Write a few lines first.", "Schreib zuerst ein paar Sätze.", "Escreva algumas frases primeiro.", "先寫幾句吧。"],
+["正在检查…", "Checking…", "Wird geprüft …", "Verificando…", "正在檢查…"],
 ["学习总览", "Overview", "Überblick", "Visão geral", "學習總覽"],
 ["已学 {0} 词", "{0} words learned", "{0} Wörter gelernt", "{0} palavras aprendidas", "已學 {0} 詞"],
 ["精通 {0}", "{0} mastered", "{0} sicher", "{0} dominadas", "精通 {0}"],
@@ -5659,6 +5688,95 @@ applyLang();
 let lastDay=today();
 setInterval(()=>{ if(today()!==lastDay){ lastDay=today(); if(DATA[lang()]){ buildDaily(); renderStrip(); } } },60000);
 document.addEventListener("visibilitychange",()=>{ if(document.visibilityState==="visible"&&today()!==lastDay){ lastDay=today(); if(DATA[lang()]){ buildDaily(); renderStrip(); } } });
+
+/* ---------- 写一写: offline Chinese writing check (own rules + word levels; nothing leaves the device) ---------- */
+const WR={key:null,text:null,res:null,sel:-1};
+let wrT=null;
+function wrEss(){ const L=S[lang()]; return L.essays||(L.essays={}); }
+function wrML(){ return ["en","de","pt"].includes(UIL)?UIL:(UIL==="zh"||UIL==="zht")?"zh":auxL(); }
+const WR_MW={"书":"本","车":"辆","自行车":"辆","纸":"张","狗":"只","猫":"只","鱼":"条","衣服":"件","裤子":"条","裙子":"条","票":"张","电影":"部","桌子":"张","椅子":"把","床":"张","河":"条","路":"条","照片":"张","地图":"张","鞋":"双"};
+const WR_RULES=[
+ {re:/([一-鿿])([,.?!:;])/g, fix:m=>({",":"，",".":"。","?":"？","!":"！",":":"：",";":"；"})[m], t:"st",
+  m:{zh:"中文要用全角标点。",en:"Use Chinese (full-width) punctuation.",de:"Im Chinesischen stehen chinesische (breite) Satzzeichen.",pt:"Em chinês, use pontuação chinesa (de largura cheia)."}},
+ {re:/([一-鿿])( +)(?=[一-鿿])/g, fix:()=>"", t:"st",
+  m:{zh:"汉字之间不空格。",en:"No spaces between Chinese words.",de:"Zwischen chinesischen Wörtern stehen keine Leerzeichen.",pt:"Não há espaços entre palavras chinesas."}},
+ {re:/(^|[^第十一二三四五六七八九零百千万])(二)(?=(个|本|只|张|次|天|年|岁|点|位|件|杯|口|条|辆|种|双|块|分钟|小时|个月|星期))/g, fix:()=>"两",
+  m:{zh:"量词前用「两」，不用「二」。",en:"Before a measure word, say 两 (liǎng), not 二.",de:"Vor einem Zählwort sagt man 两 (liǎng), nicht 二.",pt:"Antes de um classificador, use 两 (liǎng), não 二."}},
+ {re:/(一|两|三|四|五|六|七|八|九|十|几|这|那|每|哪)(个)(?=(自行车|书|车|纸|狗|猫|鱼|衣服|裤子|裙子|票|电影|桌子|椅子|床|河|路|照片|地图|鞋))/g, fix:(m,x)=>WR_MW[x[3]]||m, t:"st",
+  m:{zh:"这个名词常用别的量词。",en:"This noun usually takes a different measure word.",de:"Dieses Nomen hat meist ein anderes Zählwort.",pt:"Este substantivo costuma usar outro classificador."}},
+ {re:/((?:跑|说|写|做|唱|吃|睡|来|学|讲|走|跳|玩|考|洗|画|开|长|住|游|笑|听|起|穿))(的)(?=(很|非常|真|太|特别|比较|不太|不错))/g, fix:()=>"得", t:"st",
+  m:{zh:"说「怎么做」（程度、结果）时，动词后用「得」：跑得很快。如果意思是「…的东西」，「的」也可以。",en:"To say HOW someone does something, use 得 after the verb: 跑得很快. (If you mean “what someone did”, 的 can be right.)",de:"Für das WIE einer Handlung steht 得 nach dem Verb: 跑得很快. (Meinst du „das, was jemand gemacht hat“, kann 的 stimmen.)",pt:"Para dizer COMO alguém faz algo, use 得 depois do verbo: 跑得很快. (Se for “o que alguém fez”, 的 pode estar certo.)"}},
+ {re:/((?:([一-鿿])\2|高兴|认真|慢慢|快快|安静|努力|仔细|大声|小声|开心|热情|轻轻|偷偷|好好))(的)(?=(走|跑|说|看|吃|写|做|笑|哭|回|开|关|睡|喝|唱|跳|读|学|想|等|工作|学习|离开|告诉))/g, g:3, fix:()=>"地",
+  m:{zh:"修饰动词（怎样做）时用「地」：慢慢地走。",en:"Before a verb (describing how), use 地: 慢慢地走.",de:"Vor einem Verb (wie etwas getan wird) steht 地: 慢慢地走.",pt:"Antes de um verbo (como algo é feito), use 地: 慢慢地走."}},
+ {re:/()(在)(?=见)/g, fix:()=>"再",
+  m:{zh:"「再见」的「再」是「再一次」的「再」。",en:"Goodbye is 再见 (再 = again).",de:"„Tschüss“ heißt 再见 (再 = wieder).",pt:"“Tchau” é 再见 (再 = de novo)."}},
+ {re:/()(在)(?=(说一遍|读一遍|写一遍|看一遍|试一次|来一次|试试))/g, fix:()=>"再",
+  m:{zh:"「再」= 又一次；「在」= 在哪里、正在。",en:"再 = again; 在 = at / in / -ing.",de:"再 = noch einmal; 在 = in/an, gerade (Verlauf).",pt:"再 = de novo; 在 = em / estar fazendo."}},
+ {re:/()(再)(?=(家|学校|公司|这里|那里|哪里|这儿|那儿|哪儿|中国|德国|北京|上海|柏林|图书馆|医院|超市|商店|饭馆|餐厅|办公室|门口|外面|里面))/g, fix:()=>"在",
+  m:{zh:"说地点用「在」：在家、在学校。",en:"For a place, use 在: 在家, 在学校.",de:"Für einen Ort steht 在: 在家, 在学校.",pt:"Para lugar, use 在: 在家, 在学校."}},
+ {re:/((?:什么|谁|哪|怎么|几|多少|为什么)[^。！？!?，,]*?)(吗)(?=\s*[？?])/g, fix:()=>"", t:"st",
+  m:{zh:"有疑问词（什么、谁、哪…）的问题，一般不加「吗」。",en:"A question with a question word (什么, 谁, 哪…) usually has no 吗.",de:"Fragen mit Fragewort (什么, 谁, 哪 …) haben normalerweise kein 吗.",pt:"Perguntas com palavra interrogativa (什么, 谁, 哪…) normalmente não levam 吗."}},
+ {re:/()(不)(?=有(?!趣))/g, fix:()=>"没",
+  m:{zh:"「有」的否定是「没有」，不说「不有」。",en:"The negative of 有 is 没有, never 不有.",de:"Die Verneinung von 有 ist 没有, nie 不有.",pt:"A negação de 有 é 没有, nunca 不有."}},
+ {re:/()(没)(?=是)/g, fix:()=>"不",
+  m:{zh:"「是」的否定是「不是」。",en:"The negative of 是 is 不是.",de:"Die Verneinung von 是 ist 不是.",pt:"A negação de 是 é 不是."}},
+ {re:/((?:昨天|前天|上周|上星期|上个月|去年|刚才|昨晚)[^。！？!?，,]{0,6}?)(不)(?=(去|来|吃|看|做|买|写|喝|说|学|玩|回))/g, fix:()=>"没", t:"st",
+  m:{zh:"说过去没发生的事，用「没」：昨天我没去。",en:"For something that didn't happen in the past, use 没: 昨天我没去.",de:"Für etwas, das in der Vergangenheit nicht passiert ist, steht 没: 昨天我没去.",pt:"Para algo que não aconteceu no passado, use 没: 昨天我没去."}},
+ {re:/((?:我|你|他|她|我们|你们|他们|她们|天气|今天))(是)(?=很(高|累|忙|好|大|小|漂亮|冷|热|开心|高兴|贵|便宜|远|近|难|容易|快|慢)(?![的人]))/g, fix:()=>"",
+  m:{zh:"形容词前不用「是」：我很忙。",en:"No 是 before an adjective: 我很忙.",de:"Vor einem Adjektiv steht kein 是: 我很忙.",pt:"Não se usa 是 antes de adjetivo: 我很忙."}}
+];
+function wrRun(t){
+  const out=[];
+  for(const r of WR_RULES){ r.re.lastIndex=0; let x; while((x=r.re.exec(t))){ const pre=x[1]||"", bad=x[r.g||2];
+    out.push({offset:x.index+pre.length,length:bad.length,bad,rep:r.fix(bad,x),t:r.t||"",msg:r.m[wrML()]||r.m.en});
+    if(x[0].length===0) r.re.lastIndex++; } }
+  out.sort((a,b)=>a.offset-b.offset); const keep=[]; let end=-1; for(const m of out){ if(m.offset>=end){ keep.push(m); end=m.offset+m.length; } } return keep;
+}
+function wrLevels(t){
+  if(!ZD) return "";
+  const lv=new Map(); for(const c of ALL){ const w=String(c.w||""); if(w&&c.lvl&&!c.custom){ const o=lv.get(w); if(!o||o>c.lvl) lv.set(w,c.lvl); } }
+  const cnt={}, hi=new Set(), my=lvSel(), top=my.length?my[my.length-1]:"HSK1"; let n=0;
+  for(const tk of zSeg(t)){ if(tk.punct||!/[一-鿿]/.test(tk.w)) continue; n++; const v=lv.get(tk.w)||"—"; cnt[v]=(cnt[v]||0)+1; if(v!=="—"&&v>top) hi.add(tk.w); }
+  if(!n) return "";
+  const ks=Object.keys(cnt).sort((a,b)=>a==="—"?1:b==="—"?-1:a.localeCompare(b));
+  return `<div class="small muted" style="margin-top:14px">用词：共 ${n} 个</div><div class="wr-lv" data-noi18n>${ks.map(k=>`<span>${k==="—"?({zh:"其他",en:"other",de:"andere",pt:"outras"})[wrML()]:esc(k)} · ${cnt[k]}</span>`).join("")}</div>${hi.size?`<div class="small muted" style="margin-top:8px">超过你所选级别的词</div><p class="wr-hi" data-noi18n>${[...hi].slice(0,24).map(w=>esc(zs(w))).join("　")}</p>`:""}`;
+}
+function wrBlock(key){
+  const e=wrEss()[key]||{}, t=e.t||"", same=WR.key===key&&WR.text===t&&WR.res;
+  return `<details class="mg-blk wr" id="wr" data-key="${esc(key)}"${t?" open":""}><summary><h3>写一写</h3><span class="ar">${t?"已存草稿":"用今天的词写几句"}</span></summary>
+    <p class="small muted" style="margin:6px 0 0">回答上面的问题，或用今天的新词写几句。写的内容会自动保存。</p>
+    <textarea id="wr-t" lang="zh-CN" spellcheck="false" data-noi18n placeholder="今天我……">${esc(t)}</textarea>
+    <div class="row"><button class="btn primary" id="wr-go" type="button">检查</button><span class="small muted" id="wr-msg"></span></div>
+    <div id="wr-out">${same?wrResult(t,WR.res):""}</div>
+    <p class="small muted" style="margin:10px 0 0">在你的设备上检查，文字不会上传。规则只抓常见错误（标点、量词、的/地/得、在/再、不/没、二/两……），不代替老师。</p>
+  </details>`;
+}
+function wrResult(t,ms){
+  let h="";
+  if(!ms.length) h=`<p class="wr-ok">✓ 没有发现常见错误。</p>`;
+  else { let x="", at=0; ms.forEach((m,i)=>{ x+=esc(t.slice(at,m.offset))+`<mark class="${m.t}${WR.sel===i?" on":""}" data-wri="${i}">${esc(m.bad.replace(/ /g,"␣"))}</mark>`; at=m.offset+m.length; }); x+=esc(t.slice(at));
+    h=`<div class="small muted" style="margin-top:12px">发现 ${ms.length} 处可能的问题，点划线的地方或下面的建议。</div><div class="wr-txt" lang="zh-CN" data-noi18n>${x}</div>
+    <ol class="wr-list" data-noi18n>${ms.map((m,i)=>`<li class="${WR.sel===i?"on":""}" data-wrli="${i}"><span class="bad" lang="zh-CN">${esc(m.bad.replace(/ /g,"␣"))}</span><span class="msg">${esc(m.msg)}</span><span class="fx"><button type="button" data-wrfix="${i}" lang="zh-CN">${m.rep?esc(m.rep):"⌫"}</button></span></li>`).join("")}</ol>`; }
+  return h+wrLevels(t);
+}
+function wrStore(key,t){ const E=wrEss(); if(t.trim()) E[key]={t,at:Date.now()}; else delete E[key]; save(); }
+async function wrCheck(){
+  const box=$("#wr"), ta=$("#wr-t"), msg=$("#wr-msg"); if(!box||!ta) return; const t=ta.value;
+  if(!t.trim()){ msg.textContent="先写几句吧。"; return; }
+  wrStore(box.dataset.key,t); msg.textContent="正在检查…"; await zdLoad(); msg.textContent="";
+  const ms=wrRun(t); Object.assign(WR,{key:box.dataset.key,text:t,res:ms,sel:-1});
+  const out=$("#wr-out"); if(out) out.innerHTML=wrResult(t,ms);
+}
+function wrSel(i){ WR.sel=WR.sel===i?-1:i; $$("#wr-out [data-wri],#wr-out [data-wrli]").forEach(el=>el.classList.toggle("on",+(el.dataset.wri??el.dataset.wrli)===WR.sel));
+  const li=document.querySelector(`#wr-out [data-wrli="${i}"]`); if(li&&WR.sel===i) li.scrollIntoView({block:"nearest",behavior:"smooth"}); }
+function wrFix(i){ const ta=$("#wr-t"), box=$("#wr"); if(!ta||!WR.res||!WR.res[i]||ta.value!==WR.text) return;
+  const m=WR.res[i], t=ta.value, nt=t.slice(0,m.offset)+m.rep+t.slice(m.offset+m.length); ta.value=nt; wrStore(box.dataset.key,nt);
+  const ms=wrRun(nt); Object.assign(WR,{text:nt,res:ms,sel:-1}); const out=$("#wr-out"); if(out) out.innerHTML=wrResult(nt,ms); }
+document.addEventListener("input",e=>{ if(e.target&&e.target.id==="wr-t"){ const box=$("#wr"), key=box&&box.dataset.key, t=e.target.value;
+  clearTimeout(wrT); wrT=setTimeout(()=>{ if(key) wrStore(key,t); },600);
+  if(WR.res&&t!==WR.text){ WR.res=null; WR.text=null; const out=$("#wr-out"); if(out) out.innerHTML=""; } } });
+document.addEventListener("click",e=>{ const b=e.target.closest&&e.target.closest("#wr-go,[data-wri],[data-wrli],[data-wrfix]"); if(!b) return;
+  if(b.id==="wr-go") wrCheck(); else if(b.dataset.wrfix!=null){ e.stopPropagation(); wrFix(+b.dataset.wrfix); } else wrSel(+(b.dataset.wri??b.dataset.wrli)); });
 if("serviceWorker" in navigator&&location.protocol==="https:") navigator.serviceWorker.register("sw.js").catch(()=>{});
 applyPy(); applyTones(); applyScr();
 // the dictionary loads in the background; once it is there, the open text is split again with it

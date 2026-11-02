@@ -6,11 +6,11 @@
   "HSK4",
   "HSK5"
  ],
- "note": "Growth phase: one text per level in 'levels' every morning, until there are 'slow.after' daily texts in total (all reading/YYYY-MM-DD.json files together; the library and the solar terms don't count). After that, 'slow' applies.",
+ "note": "Growth phase: one text per level in 'levels' every morning, until there are 'slow.after' daily texts in total (all reading/YYYY-MM-DD.json files together; the library and the solar terms don't count). After that, 'slow' applies (now active: one text a day).",
  "slow": {
   "after": 50,
-  "perDay": 2,
-  "rule": "From then on: 2 texts a day, both at ONE level. The level rotates through 'levels': take the level whose most recent daily text is the oldest (if tied, the lower level). The two texts take different angles on today's theme and different kinds (e.g. one story or dialogue, one feature)."
+  "perDay": 1,
+  "rule": "From then on: ONE text a day. The level rotates through 'levels': take the level whose most recent daily text is the oldest (if tied, the lower level). Vary the kind (story, dialogue, feature) from day to day."
  },
  "settings": "Readers live in many countries (Germany, Brazil, the UK, the US and elsewhere) and choose English, German or Portuguese as their helper language. Over a week, about half the texts may be set in Germany or involve life in Germany; the rest are set in Chinese-speaking places (mainland China, Taiwan, Hong Kong, Singapore), in other countries readers come from (Brazil, the UK, the US …), or are universal. Never assume the reader lives in Germany; when a text compares with 'home', keep it open or vary the country.",
  "length": {
