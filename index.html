@@ -3904,7 +3904,7 @@ function renderStats(){
     cells+=`<div class="d ${cls} ${k===t?"today":""}" title="${k}${v?` · 新 ${v.n} · 复习 ${v.r}${v.c?" · 已打卡":""}`:""}">${dd.getDate()}</div>`; }
   const lvRows=LV().map(v=>{ const cs=ALL.filter(c=>c.lvl===v), k=[0,0,0,0,0]; cs.forEach(c=>k[stage(srs[c.id])]++);
     return `<div class="lvrow"><span class="lv lv-${v}" style="text-align:center">${v}</span><span class="stack">${[1,2,3,4].map(s=>cs.length&&k[s]?`<i class="k${s}" style="width:${100*k[s]/cs.length}%"></i>`:"").join("")}</span><span class="n">${cs.length-k[0]} / ${cs.length}</span></div>`; }).join("");
-  { const o=$("#ov-sum"); if(o) o.textContent=`已学 ${learned} 词 · 精通 ${mastered} · 累计打卡 ${chk} 天`; }
+  { const o=$("#ov-sum"); if(o){ o.setAttribute("data-noi18n",""); const T=x=>trOne(x)||x; o.textContent=[T("已学 {0} 词").replace("{0}",learned),T("精通 {0}").replace("{0}",mastered),T("累计打卡 {0} 天").replace("{0}",chk)].join(" · "); } }
   $("#stats-main").innerHTML=`
     <h3 class="sec">${d.name} · 总览</h3>
     <div class="kpis">
