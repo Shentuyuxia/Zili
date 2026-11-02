@@ -717,7 +717,6 @@ body.lean .hint, body.lean .help{display:none!important}
   .bar{margin-bottom:10px}
   /* bottom bar: every visible tab gets an equal share, always labelled */
   nav.tabs{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr)}
-  nav.tabs button[data-tab="pile"],nav.tabs button[data-tab="settings"]{display:none}
   nav.tabs button .tl{display:block;font-size:10.5px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:0 2px;color:var(--muted)}
   nav.tabs button[data-tab="stats"] .tl{display:none}
   nav.tabs button[data-tab="stats"] .tl-m{display:block;font-size:10.5px;color:var(--muted)}
@@ -1141,6 +1140,20 @@ body .py .tn1,body.tones .py .tn1{color:var(--py1)} body .py .tn2,body.tones .py
 .pe-a{flex:1;min-width:180px;display:flex;flex-direction:column;gap:3px}.pe-a .pe-t{font-size:13.5px;color:var(--muted)}
 .pe-a .bar{height:5px;margin-top:4px}.pe-b{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
 .dict-hrow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 12px}.dict-hrow .dict-h{margin:0;flex:1}
+/* dictionary page: 字匣 and 生词堆 fold out under the dictionary; today: 学习总览 under the cards */
+.dk-box{padding:0;max-width:680px;margin:0 auto;width:100%;background:var(--surface)!important;border:1px solid var(--line)!important;border-radius:14px!important}
+.dk-box>summary,.ov-box>summary{list-style:none;cursor:pointer;display:flex;flex-direction:column;gap:2px;padding:14px 44px 14px 18px;position:relative}
+.dk-box>summary::-webkit-details-marker,.ov-box>summary::-webkit-details-marker{display:none}
+.dk-box>summary::after,.ov-box>summary::after{content:"";position:absolute;right:20px;top:50%;width:9px;height:9px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:translateY(-70%) rotate(45deg);transition:transform .15s}
+.dk-box[open]>summary::after,.ov-box[open]>summary::after{transform:translateY(-30%) rotate(-135deg)}
+.dk-t,.ov-t{font-weight:700;font-size:16px}.dk-t .ct{font-size:13px;color:var(--acc);font-weight:600;margin-left:4px}
+.dk-n{font-size:13px;color:var(--muted);line-height:1.45}
+.dk-box[open]>summary{border-bottom:1px solid var(--line)}
+.dk-box>.adbox,.dk-box>.panel,.dk-box>.dk-in,.dk-box>.dk-legend{margin:12px 14px}
+.dk-box>.panel{border:0;padding:0;background:none}
+.dk-legend h3{font-size:14px;margin:0 0 6px;color:var(--muted)}
+.ov-box{margin-top:18px;border-top:1px solid var(--line)}.ov-box>summary{padding:14px 40px 10px 0}.ov-box>summary::after{right:6px}
+#tab-dict{gap:14px}
 .dict-page{max-width:680px;margin:0 auto;width:100%}.dict-h{font-size:20px;margin:0 0 12px}
 .dic-in{display:flex;gap:6px;align-items:center}
 .dic-in input{flex:1;min-width:0;font-size:18px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:inherit;font-family:var(--f-word)}
@@ -1244,19 +1257,85 @@ body .py .tn1,body.tones .py .tn1{color:var(--py1)} body .py .tn2,body.tones .py
   <div class="banner" id="backup-banner" hidden><span id="backup-banner-t"></span><span class="spacer"></span><button class="btn sm" id="backup-banner-go" type="button">现在备份</button></div>
 
   <nav class="tabs" role="tablist" id="tabs">
-    <button role="tab" data-tab="pinyin" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4.5h7"/><circle cx="9.5" cy="14" r="4.5"/><path d="M14 9.5v9"/><path d="M17.5 6.5l3-2M17.5 12.5c1 .2 2-.6 3-1.8"/></svg><span class="tl">拼音</span></button>
     <button role="tab" data-tab="today" aria-selected="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/><path d="m9 14.5 2 2 4-4"/></svg><span class="tl">今日学习</span></button>
-    <button role="tab" data-tab="read" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5c3-1.2 6-1.2 9 .8 3-2 6-2 9-.8v13c-3-1.2-6-1.2-9 .8-3-2-6-2-9-.8z"/><path d="M12 6.3v13"/></svg><span class="tl">阅读</span></button>
+    <button role="tab" data-tab="pinyin" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4.5h7"/><circle cx="9.5" cy="14" r="4.5"/><path d="M14 9.5v9"/><path d="M17.5 6.5l3-2M17.5 12.5c1 .2 2-.6 3-1.8"/></svg><span class="tl">拼音</span></button>
     <button role="tab" data-tab="dict" id="dict-open" class="dict-tab" aria-selected="false" aria-label="字典"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg><span class="tl">字典</span></button>
-    <button role="tab" data-tab="pile" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z"/></svg><span class="tl">生词堆</span><span id="t-pile">0</span></button>
-    <button role="tab" data-tab="browse" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h12M8 12h12M8 18h12"/><circle cx="4" cy="6" r=".6" fill="currentColor"/><circle cx="4" cy="12" r=".6" fill="currentColor"/><circle cx="4" cy="18" r=".6" fill="currentColor"/></svg><span class="tl">字匣</span></button>
-    <button role="tab" data-tab="stats" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M21 20H3"/></svg><span class="tl">进度</span><span class="tl-m">我的</span></button>
-    <button role="tab" data-tab="settings" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg><span class="tl">设置与备份</span></button>
+    <button role="tab" data-tab="read" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5c3-1.2 6-1.2 9 .8 3-2 6-2 9-.8v13c-3-1.2-6-1.2-9 .8-3-2-6-2-9-.8z"/><path d="M12 6.3v13"/></svg><span class="tl">阅读</span></button>
+    <button role="tab" data-tab="settings" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8.5" r="3.8"/><path d="M4.5 20c1.2-3.7 4-5.6 7.5-5.6s6.3 1.9 7.5 5.6"/></svg><span class="tl">我的</span></button>
   </nav>
 
   <!-- DICTIONARY -->
   <section id="tab-dict" class="grid one" hidden>
     <div class="panel dict-page"><div class="dict-hrow"><h2 class="dict-h">字典</h2><button class="btn sm" type="button" data-pyopen="chart">拼音表</button><button class="btn sm" type="button" data-pyopen="map">拼音课</button></div><div id="dict-host"></div></div>
+    <details class="panel dk-box" id="dk-browse"><summary><span class="dk-t">字匣</span><span class="dk-n">所有学过和收进来的词，可以按级别和掌握程度查找，也可以自己录入新词。</span></summary>
+    <details class="adbox" id="add-box">
+      <summary><span class="adt">自己录入</span><span class="small muted ads">字典里没有的词 · 批量导入</span></summary>
+      <div class="adgrid">
+    <div class="panel">
+      <div class="sesshead"><h2 id="new-title">自己录入</h2><button class="btn ghost sm" id="n-clear" type="button">清空</button></div>
+      <form id="n-form" autocomplete="off">
+        <div class="newhead">
+          <input type="text" id="n-w" aria-label="汉字" required autocapitalize="off" spellcheck="false">
+        </div>
+        <div class="status" id="n-status"></div>
+        <div class="newsimple">
+          <div class="field"><label for="n-x">拼音</label><input type="text" id="n-x" autocapitalize="off" spellcheck="false"></div>
+          <div class="field"><label for="n-mean">释义</label><input type="text" id="n-mean" placeholder="用你习惯的语言写"></div>
+          <details class="admore" id="n-more"><summary>例句、记忆提示（可选）</summary>
+          <div class="field"><label for="n-ex">例句（可选）</label><input type="text" id="n-ex"></div>
+          <div class="field"><label for="n-memo">记忆提示（可选）</label><input type="text" id="n-memo" placeholder="谐音、画面、部首……"></div>
+          </details>
+          <p class="small muted" id="n-lvinfo" style="margin:2px 0 0"></p>
+        </div>
+        <div class="row" style="margin-top:8px"><button class="btn primary" type="submit" id="n-save">保存到字匣</button><span class="small muted" id="n-msg"></span></div>
+      </form>
+    </div>
+    <div class="adside">
+      <div class="panel help">
+        <h3>怎么录入</h3>
+        <p class="note">输入汉字，拼音、释义和级别会从字典里自动填好。都可以改，满意了再保存。</p>
+        <p class="note">保存后，还可以在词卡里上传图片、录下自己的发音、写自己的例句。</p>
+      </div>
+      <div class="panel">
+        <h3>批量导入</h3>
+        <p class="note" id="bulk-hint" style="margin-bottom:8px"></p>
+        <textarea id="bulk" class="mono" aria-label="批量导入内容"></textarea>
+        <div class="row" style="margin-top:8px">
+          <select id="bulk-lv" aria-label="导入到哪个级别" style="width:auto" hidden></select>
+          <button class="btn" id="bulk-btn" type="button">导入</button>
+        </div>
+        <p class="small muted" id="bulk-msg" style="margin:8px 0 0"></p>
+      </div>
+    </div>
+      </div>
+    </details>
+    <div class="panel">
+      <div class="levels" id="lv-cells"></div>
+      <div class="filters">
+        <input type="text" id="b-search" placeholder="在字匣里找：汉字、拼音或释义…" aria-label="搜索">
+        <select id="b-stage" aria-label="掌握程度"></select>
+        <select id="b-src" aria-label="来源"><option value="">全部词</option><option value="mine">我录入的</option><option value="net">网络用语</option><option value="young">年轻人话题</option><option value="img">有图片的</option><option value="sent">有我的例句的</option><option value="aud">有我的录音的</option><option value="plan">学习计划里的</option></select>
+        <button class="btn" id="b-cram">复习筛选出的已学词</button>
+      </div>
+      <div class="tbl scroll" id="b-table"></div>
+      <p class="small muted" id="b-count" style="margin:8px 0 0"></p>
+    </div>
+    </details>
+    <details class="panel dk-box" id="dk-pile"><summary><span class="dk-t">生词堆 <span class="ct" id="sub-pile-ct"></span></span><span class="dk-n">总记不住的词：点卡片上的星标放进来，在这里集中复习。评为「简单」的词会自动移出。</span></summary>
+    <div class="dk-in">
+      <div class="sesshead">
+        <h2 id="pile-title" hidden>生词堆</h2>
+        <div class="row">
+          <select id="pile-lv" aria-label="按级别筛选" style="width:auto"></select>
+          <button class="btn primary" id="pile-go">复习生词堆</button>
+        </div>
+      </div>
+      <div id="pile-list"></div>
+    </div>
+      <div class="dk-legend"><h3>掌握程度分级</h3>
+        <div class="lvrows small" id="stage-legend"></div>
+      </div>
+    </details>
   </section>
 
   <!-- READ (Marginalia) -->
@@ -1269,7 +1348,6 @@ body .py .tn1,body.tones .py .tn1{color:var(--py1)} body .py .tn2,body.tones .py
       <details class="panel rd-paste" id="mine-box"><summary><h3>我的文章</h3><button class="mine-imp" id="mine-imp" type="button" title="导入 PDF / Word / 文本文件" aria-label="导入文件"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M12 11v6M9 14l3 3 3-3"/></svg><span>导入</span></button></summary>
         <div class="row" style="margin-top:10px"><label class="btn sm filebtn">拍照<input type="file" id="mine-cam" accept="image/*" capture="environment" multiple></label><label class="btn sm filebtn">选择图片<input type="file" id="mine-pick" accept="image/*" multiple></label><button class="btn sm" type="button" onclick="document.getElementById('mine-file').click()">导入文件</button></div>
         <p class="note hint" style="margin:6px 0 0">可导入 PDF、Word (.docx)、TXT、Markdown、网页 (.html) 和字幕 (.srt)。</p>
-        <label class="tog" id="mine-trrow" style="margin-top:8px"><input type="checkbox" id="mine-tr" checked> 生成英德对照和词汇表</label>
         <p class="small muted" id="mine-msg" style="margin:6px 0 0"></p>
         <input type="text" id="mine-title" placeholder="标题（可选）" autocomplete="off" style="margin-top:10px">
         <textarea id="mine-text" rows="6" placeholder="粘贴一篇中文文章"></textarea>
@@ -1289,11 +1367,14 @@ body .py .tn1,body.tones .py .tn1{color:var(--py1)} body .py .tn2,body.tones .py
   <!-- TODAY -->
   <section id="tab-today" class="grid">
     <div class="panel">
-      <div id="py-entry"></div>
       <div id="onb-day"></div>
       <div class="sesshead"><h2 id="sess-title">今日学习</h2><div class="row" id="sess-actions"></div></div>
       <div class="bar"><i id="sess-bar"></i></div>
       <div id="card-area"><div class="empty"><b>正在载入字匣…</b></div></div>
+      <details class="ov-box" id="ov-box"><summary><span class="ov-t">学习总览</span><span class="small muted" id="ov-sum"></span></summary>
+        <div id="stats-main"></div>
+        <p class="note hint" style="margin-top:12px">复习间隔：「忘了」当天重来；「模糊」间隔略增；「记得」按 1 → 3 → 约 7 → 约 18 天递增；「简单」跳得更远。间隔达到 30 天以上的词算「精通」。</p>
+      </details>
     </div>
     <aside class="side">
       <div class="panel" id="plan-panel"></div>
@@ -1352,122 +1433,17 @@ body .py .tn1,body.tones .py .tn1{color:var(--py1)} body .py .tn2,body.tones .py
   <!-- NEW WORD -->
 
   <!-- PILE -->
-  <section id="tab-pile" class="grid" hidden>
-    <div class="subsw" role="tablist"><button type="button" data-sub="browse">字匣</button><button type="button" data-sub="pile">生词堆 <span class="ct" id="sub-pile-ct"></span></button></div>
-    <div class="panel">
-      <div class="sesshead">
-        <h2 id="pile-title">生词堆</h2>
-        <div class="row">
-          <select id="pile-lv" aria-label="按级别筛选" style="width:auto"></select>
-          <button class="btn primary" id="pile-go">复习生词堆</button>
-        </div>
-      </div>
-      <div id="pile-list"></div>
-    </div>
-    <aside class="side">
-      <div class="panel help">
-        <h3>生词堆怎么用</h3>
-        <p class="note">不熟的词点卡片右上角的星标，就会放进生词堆；在字匣里也可以直接加。</p>
-        <p class="note">「复习生词堆」不管有没有到期，会把堆里的词全部过一遍。评为「简单」的词会自动移出生词堆，其余的留着下次再练。</p>
-        <p class="note">点单词可以打开详情，写例句、录发音。</p>
-      </div>
-      <div class="panel help">
-        <h3>掌握程度分级</h3>
-        <div class="lvrows small" id="stage-legend"></div>
-      </div>
-    </aside>
-  </section>
 
   <!-- BROWSE -->
-  <section id="tab-browse" class="grid one" hidden>
-    <div class="subsw" role="tablist"><button type="button" data-sub="browse">字匣</button><button type="button" data-sub="pile">生词堆 <span class="ct" id="sub-pile-ct"></span></button></div>
-    <details class="adbox" id="add-box">
-      <summary><span class="adt">自己录入</span><span class="small muted ads">字典里没有的词 · 拍照识词 · 批量导入</span></summary>
-      <div class="adgrid">
-    <div class="panel">
-      <div class="sesshead"><h2 id="new-title">自己录入</h2><button class="btn ghost sm" id="n-clear" type="button">清空</button></div>
-      <form id="n-form" autocomplete="off">
-        <div class="newhead">
-          <input type="text" id="n-w" aria-label="汉字" required autocapitalize="off" spellcheck="false">
-          <button class="btn primary" type="button" id="n-ai"></button>
-        </div>
-        <div class="status" id="n-status"></div>
-        <div class="newsimple">
-          <div class="field"><label for="n-x">拼音</label><input type="text" id="n-x" autocapitalize="off" spellcheck="false"></div>
-          <div class="field"><label for="n-mean">释义</label><input type="text" id="n-mean" placeholder="用你习惯的语言写"></div>
-          <details class="admore" id="n-more"><summary>例句、记忆提示（可选）</summary>
-          <div class="field"><label for="n-ex">例句（可选）</label><input type="text" id="n-ex"></div>
-          <div class="field"><label for="n-memo">记忆提示（可选）</label><input type="text" id="n-memo" placeholder="谐音、画面、部首……"></div>
-          </details>
-          <p class="small muted" id="n-lvinfo" style="margin:2px 0 0"></p>
-        </div>
-        <div class="row" style="margin-top:8px"><button class="btn primary" type="submit" id="n-save">保存到字匣</button><span class="small muted" id="n-msg"></span></div>
-      </form>
-    </div>
-    <div class="adside">
-      <div class="panel">
-        <h3>拍照识词</h3>
-        <p class="note hint">拍下课本、笔记、菜单、路牌或手写词表，AI 把里面值得学的词挑出来，配好释义和例句，你勾选后加入字匣。</p>
-        <div class="row" style="margin-top:10px">
-          <label class="btn primary sm filebtn" id="scan-cam-btn">拍照<input type="file" id="scan-cam" accept="image/*" capture="environment"></label>
-          <label class="btn sm filebtn">选择图片<input type="file" id="scan-pick" accept="image/*" multiple></label>
-        </div>
-        <p class="small muted" id="scan-msg" style="margin:8px 0 0"></p>
-      </div>
-      <div class="panel help">
-        <h3>怎么录入</h3>
-        <p class="note">输入单词，点「AI 补全」。AI 会填好释义、例句和记忆提示。所有内容都可以改，满意了再保存。</p>
-        <p class="note">也可以不用 AI，自己填写、上传图片，再用麦克风录下自己的发音。</p>
-        <p class="note" id="ai-off" hidden></p>
-      </div>
-      <div class="panel">
-        <h3>批量导入</h3>
-        <p class="note" id="bulk-hint" style="margin-bottom:8px"></p>
-        <textarea id="bulk" class="mono" aria-label="批量导入内容"></textarea>
-        <div class="row" style="margin-top:8px">
-          <select id="bulk-lv" aria-label="导入到哪个级别" style="width:auto" hidden></select>
-          <button class="btn" id="bulk-btn" type="button">导入</button>
-        </div>
-        <p class="small muted" id="bulk-msg" style="margin:8px 0 0"></p>
-      </div>
-    </div>
-      </div>
-    </details>
-    <div class="panel">
-      <div class="levels" id="lv-cells"></div>
-      <div class="filters">
-        <input type="text" id="b-search" placeholder="在字匣里找：汉字、拼音或释义…" aria-label="搜索">
-        <select id="b-stage" aria-label="掌握程度"></select>
-        <select id="b-src" aria-label="来源"><option value="">全部词</option><option value="mine">我录入的</option><option value="net">网络用语</option><option value="young">年轻人话题</option><option value="img">有图片的</option><option value="sent">有我的例句的</option><option value="aud">有我的录音的</option><option value="plan">学习计划里的</option></select>
-        <button class="btn" id="b-cram">复习筛选出的已学词</button>
-      </div>
-      <div class="tbl scroll" id="b-table"></div>
-      <p class="small muted" id="b-count" style="margin:8px 0 0"></p>
-    </div>
-  </section>
 
   <!-- PINYIN COURSE -->
   <section id="tab-pinyin" class="grid one" hidden><div class="panel py" id="py-host"></div></section>
 
   <!-- STATS -->
-  <section id="tab-stats" class="grid" hidden>
-    <div class="acct" data-acct></div>
-    <div class="subsw" role="tablist"><button type="button" data-sub="stats">进度</button><button type="button" data-sub="settings">设置与备份</button></div>
-    <div class="panel py-link"><div class="dict-hrow"><b class="dict-h" style="font-size:16px">拼音课</b><button class="btn sm" type="button" data-pyopen="map">全部课程</button><button class="btn sm" type="button" data-pyopen="chart">拼音表</button></div></div>
-    <div class="panel" id="stats-main"></div>
-    <aside class="side">
-      <div class="panel help">
-        <h3>复习间隔怎么算</h3>
-        <p class="note">每次评分决定下次出现的时间：「忘了」当天重来；「模糊」间隔略增；「记得」按 1 → 3 → 约 7 → 约 18 天递增；「简单」跳得更远。</p>
-        <p class="note">间隔达到 30 天以上的词算「精通」。</p>
-      </div>
-    </aside>
-  </section>
 
   <!-- SETTINGS -->
   <section id="tab-settings" class="grid" hidden>
     <div class="acct" data-acct></div>
-    <div class="subsw" role="tablist"><button type="button" data-sub="stats">进度</button><button type="button" data-sub="settings">设置与备份</button></div>
     <div class="side" style="gap:22px">
       <div class="panel">
         <h3 class="ph3">界面</h3>
@@ -1560,21 +1536,6 @@ body .py .tn1,body.tones .py .tn1{color:var(--py1)} body .py .tn2,body.tones .py
         </div>
         <p class="small muted" id="sy-msg" style="margin:8px 0 0" aria-live="polite"></p>
       </div>
-      <div class="panel">
-        <h3 class="ph3">AI 补全、检查例句</h3>
-        <p class="note hint">这个独立版直接调用 Claude API，需要你自己的 API key。API 按用量单独计费，和 Claude 订阅不是同一个账户。</p>
-        <p class="note"><span>创建 key：</span> <a href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener">console.anthropic.com</a></p>
-        <p class="note hint">key 只保存在这台设备的浏览器里，只发给 api.anthropic.com，不会放进备份文件。</p>
-        <div class="field" style="margin-top:12px"><label for="ai-key">API key</label><input type="password" id="ai-key" placeholder="sk-ant-…" autocomplete="off" spellcheck="false"></div>
-        <div class="field"><label for="ai-model">模型</label>
-          <select id="ai-model">
-            <option value="claude-sonnet-5-5">Claude Sonnet 5.5（推荐：质量和价格均衡）</option>
-            <option value="claude-haiku-4-5-20251001">Claude Haiku 4.5（最快、最便宜）</option>
-            <option value="claude-opus-5-5">Claude Opus 5.5（效果最好、最贵）</option>
-          </select></div>
-        <div class="row"><button class="btn primary" id="ai-save" type="button">保存</button><button class="btn" id="ai-test" type="button">测试连接</button><button class="btn ghost" id="ai-del" type="button">删除 key</button></div>
-        <p class="small" id="ai-msg" style="margin:8px 0 0"></p>
-      </div>
     </div>
     <aside class="side">
       <div class="panel help">
@@ -1584,7 +1545,7 @@ body .py .tn1,body.tones .py .tn1{color:var(--py1)} body .py .tn2,body.tones .py
         <p class="note" style="margin-top:8px"><b>安卓（Chrome）：</b></p>
         <ol class="steps"><li>点右上角菜单 ⋮</li><li>选「安装应用」或「添加到主屏幕」</li></ol>
         <button class="btn sm" id="install-btn" type="button" style="margin-top:10px" hidden>安装到这台设备</button>
-        <p class="note" style="margin-top:8px">装好以后像 App 一样打开，没网也能复习（AI 功能需要联网）。</p>
+        <p class="note" style="margin-top:8px">装好以后像 App 一样打开，没网也能复习。</p>
       </div>
       <div class="panel">
         <h3>存储</h3>
@@ -1838,7 +1799,7 @@ function applyPy(){ document.body.classList.toggle("nopy",!pyOn()); }
 const AIK="palavra-wort-ai";
 function aiCfg(){ try{ return JSON.parse(localStorage.getItem(AIK))||{}; }catch(e){ return {}; } }
 function aiSetCfg(c){ try{ if(c) localStorage.setItem(AIK,JSON.stringify(c)); else localStorage.removeItem(AIK); }catch(e){} }
-let aiState=aiCfg().key?"ready":"off";
+let aiState="off"; // AI features were removed; the Claude API code below is no longer reachable from the interface
 async function claudeCall(prompt,maxTokens,images,signal){
   const c=aiCfg(); if(!c.key) throw {code:"no_key"};
   const content=images&&images.length?[...images.map(im=>({type:"image",source:{type:"base64",media_type:im.type,data:im.data}})),{type:"text",text:prompt}]:prompt;
@@ -1877,11 +1838,7 @@ function aiErr(e){
   if(c==="invalid_json") return "AI 返回的格式不对，再点一次试试。";
   return "AI 暂时没有响应，再试一次。"+(e&&e.message?"（"+e.message+"）":"");
 }
-function refreshAI(){
-  aiState=aiCfg().key?"ready":"off";
-  const n=$("#ai-off"); n.hidden=aiState==="ready"; n.innerHTML='要用 AI 补全，先到「设置与备份」里填上你的 Claude API key。';
-  renderNewButtons(); if(sess&&cur==="today") renderCard();
-}
+function refreshAI(){ aiState="off"; }
 
 /* ---------- data ---------- */
 const DATA={pt:null,de:null,en:null,fr:null}, LOADING={};
@@ -1972,7 +1929,7 @@ function renderPlan(){
   const gm=$("#goal-manual"), gp=$("#goal-plan");
   if(!p||!p.on){
     gm.hidden=false; gp.hidden=true;
-    el.innerHTML=`<h3>学习计划</h3><p class="note hint">选一个目标级别和完成日期，AI 帮你准备整套词表和例句，每天自动分配要学的新词，按天打卡。</p>
+    el.innerHTML=`<h3>学习计划</h3><p class="note hint">选一个目标级别和完成日期，每天自动分配要学的新词，按天打卡。</p>
       <button class="btn primary sm" id="plan-new" type="button" style="margin-top:10px">制定${d.zh}学习计划</button>`;
     $("#plan-new").onclick=()=>openPlanForm();
     return;
@@ -1980,7 +1937,8 @@ function renderPlan(){
   const learned=planLearned(p), left=planDaysLeft(p), total=Math.max(1,dayDiff(p.start,p.deadline)+1), elapsed=Math.min(total,Math.max(0,dayDiff(p.start,today())));
   const expected=Math.round(p.target*elapsed/total), diff=learned-expected, q=planQuota(), over=today()>p.deadline;
   const pace= over? `<span style="color:var(--bad)">已过截止日期，可以点「调整」延后</span>` : diff>=0? `<span style="color:var(--ok)">进度正常${diff>0?`，超前 ${diff} 个`:""}</span>` : `<span style="color:var(--warn)">落后 ${-diff} 个，每天的新词数已经自动调高</span>`;
-  const ready=p.ids.length, gen=ready<p.target;
+  if(p.ids.length&&p.target>p.ids.length) p.target=p.ids.length; // without AI generation a plan can only cover the built-in word list
+  const ready=p.ids.length, gen=false;
   gm.hidden=true; gp.hidden=false; gp.innerHTML=`每天新词数由学习计划自动计算：<b>今天 ${q} 个</b>。`;
   el.innerHTML=`<h3>学习计划 · ${esc(p.level)} · ${p.target} 词</h3>
     <div class="stack" style="height:10px;margin:2px 0 6px"><i class="k4" style="width:${Math.min(100,100*learned/p.target)}%"></i></div>
@@ -2023,8 +1981,7 @@ function openPlanForm(edit){
     const per=Math.ceil(Math.max(0,n-learnedNow)/days);
     $("#pf-sum").innerHTML=`共 ${days} 天，每天约 <b>${per}</b> 个新词。${per>40?"每天量比较大，可以把日期往后放一些。":""}`;
     const have=edit&&p?p.ids.length:builtin, gen=Math.max(0,n-have);
-    $("#pf-src").innerHTML= gen<=0?`内置词库已经够用，不需要 AI 生成。`
-      : `其中 ${Math.min(have,n)} 个${edit?"已经准备好":"来自内置词库"}，另外 <b>${gen}</b> 个由 AI 按主题分批生成（约 ${Math.ceil(gen/40)} 批，每批几十秒，可以随时暂停、下次继续）。`+(aiState==="ready"?"":`<br><span style="color:var(--warn)">还没有设置 API key：没有 key 只能用内置的 ${have} 个词，可以先去「设置与备份」填上。</span>`);
+    $("#pf-src").innerHTML= gen<=0?"":`内置词库里 ${esc(lv)} 有 <b>${have}</b> 个词，计划最多 ${have} 个。`;
   };
   $("#pf-lv").onchange=()=>{ $("#pf-n").value=LEVEL_TARGET[$("#pf-lv").value]; upd(); };
   $("#pf-n").oninput=upd; $("#pf-dl").oninput=upd; $("#pf-dl").onchange=upd;
@@ -2033,7 +1990,7 @@ function openPlanForm(edit){
   $("#d-close").onclick=close; $("#pf-cancel").onclick=close;
   $("#d-scrim").addEventListener("mousedown",e=>{ if(e.target.id==="d-scrim") close(); });
   $("#pf-go").onclick=()=>{
-    const lv=$("#pf-lv").value, n=Math.max(10,parseInt($("#pf-n").value,10)||0), dl=$("#pf-dl").value;
+    const lv=$("#pf-lv").value, dl=$("#pf-dl").value, cap=edit&&p?p.ids.length:(DATA[l]||[]).filter(c=>c.lvl===lv).length+L().custom.filter(c=>c.plan&&c.lvl===lv).length, n=Math.min(cap||10,Math.max(10,parseInt($("#pf-n").value,10)||0));
     if(!dl||dl<=today()){ toast("完成日期要在今天之后"); return; }
     if(edit&&p){ p.target=n; p.deadline=dl; p.created=Date.now(); p.on=true; }
     else{
@@ -2116,8 +2073,6 @@ function openScanResult(items,preview){
     $("#scan-msg").textContent=`已加入 ${n} 个词，会作为新词优先出现。`; toast(`已加入 ${n} 个词`);
   };
 }
-$("#scan-cam").addEventListener("change",e=>{ doScan(e.target.files); e.target.value=""; });
-$("#scan-pick").addEventListener("change",e=>{ doScan(e.target.files); e.target.value=""; });
 const memoOf=c=>L().memo[c.id]||"";
 const mineOf=c=>L().mine[c.id]||[];
 const audsOf=id=>L().auds[id]||{};
@@ -2547,7 +2502,7 @@ function recRowsHTML(prefix,has){
 let detailOpen=null;
 function openDetail(id){ const c=BYID.get(id); if(!c) return; detailOpen=id; document.body.classList.add("modal-open"); renderDetail(); }
 function closeDetail(){ cancelRec(); dicStop(); detailOpen=null; document.body.classList.remove("modal-open"); $("#detail-root").innerHTML="";
-  if(cur==="today") renderCard(); else if(cur==="browse") renderBrowse(); else if(cur==="pile") renderPile(); }
+  if(cur==="today") renderCard(); else if(dkOn("browse")) renderBrowse(); else if(dkOn("pile")) renderPile(); }
 function renderDetail(note){
   const id=detailOpen, c=BYID.get(id); if(!c) return;
   const LL=L(), hasImg=!!LL.imgs[id], mine=mineOf(c), ai=aiState==="ready", au=audsOf(id);
@@ -2660,10 +2615,7 @@ function renderNewForm(){
   $("#bulk-lv").innerHTML=LV().map(v=>`<option>${v}</option>`).join("");
   clearDraft(true); renderNewButtons();
 }
-function renderNewButtons(){
-  const ai=aiState==="ready", a=$("#n-ai");
-  a.innerHTML=busy?`<span class="spin"></span> 生成中…`:`${I.spark} AI 补全`; a.disabled=!ai||busy; a.hidden=!ai;
-}
+function renderNewButtons(){}
 function renderNewRecs(){}
 function setStatus(t,err,spin){ const s=$("#n-status"); s.className="status"+(err?" err":""); s.innerHTML=(spin?'<span class="spin"></span>':"")+esc(t||""); }
 function clearDraft(keepWord){
@@ -2691,15 +2643,6 @@ function fillForm(r){
   if(!$("#n-mean").value.trim()){ const k=glSel()[0]; set("n-mean",r[k]||r.en||r.de); }
   if(r.level&&LV().includes(r.level)&&NLV.how!=="hsk"){ NLV.lv=r.level; $("#n-lvinfo").textContent=trOne("级别：")+r.level; }
 }
-$("#n-ai").addEventListener("click",async()=>{
-  const w=$("#n-w").value.trim(); if(!w){ setStatus("先输入汉字。",true); $("#n-w").focus(); return; }
-  if(aiState!=="ready") return;
-  if(ALL.some(c=>c.w===w)){ setStatus("这个词已经在字匣里了。",true); return; }
-  busy=true; renderNewButtons(); setStatus("AI 正在补全释义和例句…",false,true);
-  try{ const r=await aiEntry(lang(),w); if(!r||typeof r!=="object") throw {code:"invalid_json"}; fillForm(r); setStatus(""); }
-  catch(e){ setStatus(aiErr(e),true); }
-  busy=false; renderNewButtons();
-});
 $("#n-clear").addEventListener("click",()=>clearDraft(false));
 { let tm=null; $("#n-w").addEventListener("input",()=>{ clearTimeout(tm); $("#n-x").value=""; $("#n-mean").value=""; $("#n-lvinfo").textContent=""; tm=setTimeout(nPrefill,350); }); }
 $("#n-w").addEventListener("change",nPrefill);
@@ -3153,21 +3096,24 @@ Reply with ONLY JSON:
  "glossary": [8–15 key words from the text: {"w": the word in Simplified characters, "p": tone-marked pinyin with spaces between syllables, "en": concise English meaning, "de": concise German meaning}],
  "grammar": "one short note in English on the main grammar point of this text"`:""}}`;
 }
+// photos of a page → text, recognised on this device (PaddleOCR, the same engine as the dictionary's camera)
+function blobCanvas(b,max){ return new Promise((res,rej)=>{ const url=URL.createObjectURL(b), im=new Image();
+  im.onload=()=>{ const sc=Math.min(1,(max||1600)/Math.max(im.width,im.height)), c=document.createElement("canvas"); c.width=Math.round(im.width*sc); c.height=Math.round(im.height*sc);
+    const g=c.getContext("2d"); g.fillStyle="#fff"; g.fillRect(0,0,c.width,c.height); g.drawImage(im,0,0,c.width,c.height); URL.revokeObjectURL(url); res(c); };
+  im.onerror=()=>{ URL.revokeObjectURL(url); rej(new Error("bad image")); }; im.src=url; }); }
+function ocrParas(t){ // OCR gives one line per printed line: join lines into paragraphs, break after sentence ends
+  const ls=String(t||"").split(/\n+/).map(x=>x.replace(/[ \t　]+/g,"").trim()).filter(Boolean), out=[]; let cur="";
+  for(const x of ls){ cur+=x; if(/[。！？!?”」』…]$/.test(x)){ out.push(cur); cur=""; } } if(cur) out.push(cur); return out; }
 async function mineScan(files){
   const msg=$("#mine-msg"); if(!files||!files.length) return;
-  if(aiState!=="ready"){ msg.textContent="没有设置 API key：可以用 iPhone 的「实况文本」——在照片里长按文字，全选、拷贝，再粘贴到下面。"; return; }
-  const l=lang(), tr=$("#mine-tr").checked; let imgs;
-  try{ imgs=await Promise.all([...files].slice(0,6).map(f=>fileToB64(f,1800))); }catch(e){ msg.textContent="图片读不出来，换一张试试。"; return; }
-  msg.innerHTML=`<span class="spin"></span> AI 正在识别文字…（通常 20–60 秒）`;
-  mineCtl=new AbortController(); let r;
-  try{ r=parseJSON(await claudeCall(minePrompt(l,tr),tr?12000:6000,imgs.map(i=>({type:i.type,data:i.data})),mineCtl.signal)); }
-  catch(e){ msg.textContent=aiErr(e); return; } finally{ mineCtl=null; }
-  if(lang()!==l||!r||!Array.isArray(r.paragraphs)||!r.paragraphs.length){ msg.textContent="图片里没认出文字。"; return; }
-  const paras=r.paragraphs.map(x=>String(x).replace(/\s+/g,"").trim()).filter(Boolean);
-  $("#mine-title").value=String(r.title||"").trim();
-  $("#mine-text").value=paras.join("\n\n");
-  MINE_X={lang:l,paragraphs_en:Array.isArray(r.paragraphs_en)?r.paragraphs_en.map(String):[],paragraphs_de:Array.isArray(r.paragraphs_de)?r.paragraphs_de.map(String):[],glossary:Array.isArray(r.glossary)?r.glossary.filter(g=>g&&g.w).map(g=>({w:String(g.w),p:String(g.p||zPy(String(g.w))),en:String(g.en||""),de:String(g.de||"")})):[],grammar:String(r.grammar||"")};
-  msg.textContent=`识别完成：${paras.length} 段。检查一下再保存。`;
+  msg.innerHTML=`<span class="spin"></span> ${esc(trOne(OCR.ok?"正在识别…":"第一次要载入识别模型（约 18 MB，只需一次）…")||"")}`;
+  try{ const z=await ocrEngine(), paras=[]; const fs=[...files].slice(0,6);
+    for(let k=0;k<fs.length;k++){ msg.innerHTML=`<span class="spin"></span> ${esc(trOne("正在识别…")||"")} ${fs.length>1?(k+1)+" / "+fs.length:""}`;
+      paras.push(...ocrParas(await z.read(await blobCanvas(fs[k],1600)))); }
+    const ok=paras.filter(x=>HAN.test(x)); if(!ok.length){ msg.textContent="图片里没认出文字。"; return; }
+    const ta=$("#mine-text"); ta.value=(ta.value.trim()?ta.value.trim()+"\n\n":"")+ok.join("\n\n");
+    msg.textContent=`识别完成：${ok.length} 段。检查一下再保存。`; }
+  catch(e){ msg.textContent=(trOne("识别没成功：")||"")+(e&&e.message||e); }
 }
 $("#mine-cam").addEventListener("change",e=>{ mineScan(e.target.files); e.target.value=""; });
 $("#mine-pick").addEventListener("change",e=>{ mineScan(e.target.files); e.target.value=""; });
@@ -3205,11 +3151,11 @@ async function minePdfRead(a,b){
   const paras=[]; let chars=0;
   for(let p=a;p<=b;p++){ const ls=await pdfLines(doc,p); chars+=ls.reduce((s,l)=>s+l.t.length,0); paras.push(...pdfParas(ls)); }
   if(chars<(b-a+1)*25){
-    if(aiState==="ready"){ msg.innerHTML=`<span class="spin"></span> 这是扫描版 PDF，转成图片交给 AI 识别…`;
+    { msg.innerHTML=`<span class="spin"></span> 这是扫描版 PDF，正在识别图片里的文字…`;
       const files=[]; for(let p=a;p<=Math.min(b,a+5);p++){ const pg=await doc.getPage(p), vp=pg.getViewport({scale:1.8}), cv=document.createElement("canvas"); cv.width=vp.width; cv.height=vp.height;
         await pg.render({canvasContext:cv.getContext("2d"),viewport:vp}).promise; files.push(await new Promise(r=>cv.toBlob(r,"image/jpeg",0.85))); }
       return mineScan(files); }
-    msg.textContent="这是扫描版 PDF，里面没有文字层。可以把这几页截图，再用「选择图片」；或者在设置里填 API key，让 AI 识别。"; return; }
+    }
   let text=paras.join("\n\n"), cut=false; if(text.length>MINE_MAX){ text=text.slice(0,MINE_MAX).replace(/\s+\S*$/,""); cut=true; }
   const meta=await doc.getMetadata().catch(()=>null); const t=meta&&meta.info&&meta.info.Title;
   if(t&&t.length<140&&!/^(untitled|microsoft word|document)/i.test(t)) $("#mine-title").value=t;
@@ -3251,7 +3197,6 @@ $("#mine-imp").addEventListener("click",e=>{ e.preventDefault(); e.stopPropagati
 
 function mineList(){
   const el=$("#mine-list"); if(!el) return; const l=lang(), rows=mineAll().filter(a=>a.lang===l); mineLvOpts();
-  const trrow=$("#mine-trrow"); if(trrow) trrow.hidden=aiState!=="ready";
   el.innerHTML=rows.length?rows.map(a=>`<button data-mine="${a.id}" aria-current="${MG.mine===a.id}"><span class="k">${esc(a.added.slice(5))}</span><span class="t zc" lang="zh-CN">${esc(zs(a.title))}</span><span class="m">${mgRead("mine",a.id)?"✓":""}</span></button>`).join(""):`<p class="note">${esc(trOne("还没有保存的文章。")||"还没有保存的文章。")}</p>`;
   if(rows.length&&!$("#mine-box").open&&MG.mine) $("#mine-box").open=true;
 }
@@ -3859,9 +3804,9 @@ function renderStrip(){
   $("#s-new").textContent=log.n+" / "+g;
   $("#s-due").textContent=DATA[lang()]?dueList().length:"–";
   $("#s-streak").textContent=streak();
-  const pc=Object.keys(L().pile).length; $("#s-pile").textContent=pc; $("#t-pile").textContent=pc; $("#t-pile").hidden=!pc; $$(".subsw .ct").forEach(x=>x.textContent=pc||"");
+  const pc=Object.keys(L().pile).length; $("#s-pile").textContent=pc; { const tp=$("#t-pile"); if(tp){ tp.textContent=pc; tp.hidden=!pc; } } $$("#sub-pile-ct").forEach(x=>x.textContent=pc||"");
   const b=$("#s-badge"); b.className="badge"+(log.c?" on":""); b.innerHTML=log.c?I.check+"今日已打卡":""; b.hidden=!log.c;
-  if(DATA[lang()]) renderPlan();
+  if(DATA[lang()]){ renderPlan(); if(cur==="today") renderStats(); }
 }
 function ownCount(){ return Object.keys(LANG).reduce((a,l)=>a+S[l].custom.length+Object.keys(S[l].imgs).length+Object.keys(S[l].auds).length+Object.keys(S[l].mine).length,0); }
 function renderBackupHint(){
@@ -3959,6 +3904,7 @@ function renderStats(){
     cells+=`<div class="d ${cls} ${k===t?"today":""}" title="${k}${v?` · 新 ${v.n} · 复习 ${v.r}${v.c?" · 已打卡":""}`:""}">${dd.getDate()}</div>`; }
   const lvRows=LV().map(v=>{ const cs=ALL.filter(c=>c.lvl===v), k=[0,0,0,0,0]; cs.forEach(c=>k[stage(srs[c.id])]++);
     return `<div class="lvrow"><span class="lv lv-${v}" style="text-align:center">${v}</span><span class="stack">${[1,2,3,4].map(s=>cs.length&&k[s]?`<i class="k${s}" style="width:${100*k[s]/cs.length}%"></i>`:"").join("")}</span><span class="n">${cs.length-k[0]} / ${cs.length}</span></div>`; }).join("");
+  { const o=$("#ov-sum"); if(o) o.textContent=`已学 ${learned} 词 · 精通 ${mastered} · 累计打卡 ${chk} 天`; }
   $("#stats-main").innerHTML=`
     <h3 class="sec">${d.name} · 总览</h3>
     <div class="kpis">
@@ -4330,25 +4276,7 @@ async function sbFromHash(){
 }
 setTimeout(async()=>{ const viaLink=await sbFromHash(); renderSync(); if(!viaLink&&syOn()) setTimeout(()=>syncNow(),1200); },0); // after the UI-language code below has initialised
 
-/* ---------- settings: AI ---------- */
-function renderAISettings(){
-  const c=aiCfg(); $("#ai-key").value=c.key?c.key:""; $("#ai-model").value=c.model||"claude-sonnet-5-5";
-  if(!$("#ai-model").value) $("#ai-model").value="claude-sonnet-5-5";
-}
-$("#ai-save").addEventListener("click",()=>{
-  const key=$("#ai-key").value.trim(); const m=$("#ai-msg");
-  if(!key){ m.className="small"; m.textContent="请先粘贴 API key。"; return; }
-  aiSetCfg({key,model:$("#ai-model").value}); refreshAI(); m.className="small"; m.style.color="var(--ok)"; m.textContent="已保存在这台设备上。";
-});
-$("#ai-model").addEventListener("change",()=>{ const c=aiCfg(); if(c.key){ c.model=$("#ai-model").value; aiSetCfg(c); } });
-$("#ai-del").addEventListener("click",()=>{ aiSetCfg(null); $("#ai-key").value=""; refreshAI(); const m=$("#ai-msg"); m.style.color=""; m.textContent="key 已从这台设备删除。"; });
-$("#ai-test").addEventListener("click",async()=>{
-  const m=$("#ai-msg"); const key=$("#ai-key").value.trim();
-  if(key&&key!==aiCfg().key) aiSetCfg({key,model:$("#ai-model").value});
-  refreshAI(); m.style.color=""; m.innerHTML='<span class="spin"></span> 正在连接…';
-  try{ const t=await claudeCall('Reply with exactly: OK',10); m.style.color="var(--ok)"; m.textContent="连接成功（"+(aiCfg().model||"")+"）。"+(t?"":""); }
-  catch(e){ m.style.color="var(--bad)"; m.textContent=aiErr(e); }
-});
+function renderAISettings(){}
 
 /* ---------- settings: install & storage ---------- */
 let installEvt=null;
@@ -4384,7 +4312,7 @@ $("#lv-checks").addEventListener("change",()=>{ const v=$$("#lv-checks input:che
 $("#gl-checks").addEventListener("change",()=>{ const v=$$("#gl-checks input:checked").map(i=>i.value); if(!v.length){ toast("至少保留一种释义语言"); renderSettings(); return; } S.settings.gloss[lang()]=v; save(); renderCard(); });
 $$('input[name="dir"]').forEach(r=>r.addEventListener("change",e=>{ S.settings.dir=e.target.value; save(); if(sess) sess.flipped=false; renderCard(); }));
 $("#opt-autopile").addEventListener("change",e=>{ S.settings.autoPile=e.target.checked; save(); });
-$$('input[name="zscr"]').forEach(r=>r.addEventListener("change",e=>{ S.settings.script=e.target.value; save(); applyScr(); renderCard(); if(cur==="read") mgRender(); if(cur==="browse") renderBrowse(); if(cur==="pile") renderPile(); }));
+$$('input[name="zscr"]').forEach(r=>r.addEventListener("change",e=>{ S.settings.script=e.target.value; save(); applyScr(); renderCard(); if(cur==="read") mgRender(); if(dkOn("browse")) renderBrowse(); if(dkOn("pile")) renderPile(); }));
 $("#opt-py").addEventListener("change",e=>{ S.settings.py=e.target.checked; save(); applyPy(); renderCard(); });
 $$("[data-tc]").forEach(x=>x.addEventListener("change",()=>{ S.settings.toneSel=$$("[data-tc]").filter(y=>y.checked).map(y=>+y.dataset.tc); if(!tonesOn()&&S.settings.toneSel.length){ S.settings.tones=true; const o=$("#opt-tone"); if(o) o.checked=true; const b=$("#mg-tone"); if(b) b.setAttribute("aria-pressed","true"); } save(); applyTones(); }));
 $("#opt-cardstk").addEventListener("change",e=>{ S.settings.cardStk=e.target.checked; save(); renderCard(); });
@@ -4414,6 +4342,19 @@ function s2t(str){ // Simplified → Traditional (Taiwan), phrase-aware for comm
   return o;
 }
 const UI_DICT=[
+["学习总览", "Overview", "Überblick", "Visão geral", "學習總覽"],
+["已学 {0} 词", "{0} words learned", "{0} Wörter gelernt", "{0} palavras aprendidas", "已學 {0} 詞"],
+["精通 {0}", "{0} mastered", "{0} sicher", "{0} dominadas", "精通 {0}"],
+["累计打卡 {0} 天", "{0} days checked in", "{0} Tage abgehakt", "{0} dias concluídos", "累計打卡 {0} 天"],
+["所有学过和收进来的词，可以按级别和掌握程度查找，也可以自己录入新词。", "Every word you've learned or saved – search by level and progress, or add your own.", "Alle gelernten und gesammelten Wörter – nach Niveau und Lernstand suchen oder eigene eintragen.", "Todas as palavras aprendidas e guardadas – busque por nível e progresso ou adicione as suas.", "所有學過和收進來的詞，可以按級別和掌握程度查找，也可以自己錄入新詞。"],
+["总记不住的词：点卡片上的星标放进来，在这里集中复习。评为「简单」的词会自动移出。", "Words that won't stick: star them on a card and review them together here. Words rated “Easy” leave the pile by themselves.", "Wörter, die nicht hängen bleiben: auf der Karte mit dem Stern markieren und hier gesammelt wiederholen. Mit „Leicht“ bewertete Wörter verlassen den Stapel von selbst.", "Palavras que não fixam: marque com a estrela no cartão e revise todas aqui. As avaliadas como “Fácil” saem sozinhas.", "總記不住的詞：點卡片上的星標放進來，在這裡集中複習。評為「簡單」的詞會自動移出。"],
+["复习间隔：「忘了」当天重来；「模糊」间隔略增；「记得」按 1 → 3 → 约 7 → 约 18 天递增；「简单」跳得更远。间隔达到 30 天以上的词算「精通」。", "Review intervals: “Forgot” comes back the same day; “Hazy” grows a little; “Got it” goes 1 → 3 → ~7 → ~18 days; “Easy” jumps further. Words at 30+ days count as mastered.", "Wiederholungsabstände: „Vergessen“ kommt am selben Tag wieder; „Unsicher“ wächst etwas; „Gewusst“ geht 1 → 3 → ~7 → ~18 Tage; „Leicht“ springt weiter. Ab 30 Tagen gilt ein Wort als sicher.", "Intervalos: “Esqueci” volta no mesmo dia; “Mais ou menos” cresce um pouco; “Lembrei” vai 1 → 3 → ~7 → ~18 dias; “Fácil” pula mais. Com 30+ dias a palavra está dominada.", "複習間隔：「忘了」當天重來；「模糊」間隔略增；「記得」按 1 → 3 → 約 7 → 約 18 天遞增；「簡單」跳得更遠。間隔達到 30 天以上的詞算「精通」。"],
+["输入汉字，拼音、释义和级别会从字典里自动填好。都可以改，满意了再保存。", "Type the characters – pinyin, meaning and level are filled in from the dictionary. Change anything, then save.", "Zeichen eingeben – Pinyin, Bedeutung und Niveau kommen aus dem Wörterbuch. Alles lässt sich ändern, dann speichern.", "Digite os caracteres – pinyin, significado e nível vêm do dicionário. Ajuste o que quiser e salve.", "輸入漢字，拼音、釋義和級別會從字典裡自動填好。都可以改，滿意了再儲存。"],
+["保存后，还可以在词卡里上传图片、录下自己的发音、写自己的例句。", "After saving you can add a picture, record your pronunciation and write your own sentences on the word card.", "Nach dem Speichern kannst du auf der Wortkarte ein Bild hinzufügen, deine Aussprache aufnehmen und eigene Sätze schreiben.", "Depois de salvar, dá para pôr uma imagem, gravar sua pronúncia e escrever suas frases no cartão.", "儲存後，還可以在詞卡裡上傳圖片、錄下自己的發音、寫自己的例句。"],
+["字典里没有的词 · 批量导入", "Words not in the dictionary · bulk import", "Wörter, die nicht im Wörterbuch stehen · Massenimport", "Palavras fora do dicionário · importar em lote", "字典裡沒有的詞 · 批次匯入"],
+["选一个目标级别和完成日期，每天自动分配要学的新词，按天打卡。", "Pick a target level and an end date – new words are shared out over the days, and you check in daily.", "Wähle ein Zielniveau und ein Enddatum – die neuen Wörter werden auf die Tage verteilt, du hakst täglich ab.", "Escolha um nível e uma data final – as palavras novas são distribuídas pelos dias, e você marca cada dia.", "選一個目標級別和完成日期，每天自動分配要學的新詞，按天打卡。"],
+["内置词库里 {0} 有 {1} 个词，计划最多 {1} 个。", "The built-in list has {1} {0} words, so a plan can have at most {1}.", "Die eingebaute Liste hat {1} Wörter für {0}, ein Plan kann also höchstens {1} umfassen.", "A lista embutida tem {1} palavras de {0}, então o plano vai até {1}.", "內建詞庫裡 {0} 有 {1} 個詞，計畫最多 {1} 個。"],
+["这是扫描版 PDF，正在识别图片里的文字…", "This is a scanned PDF – reading the text in the images…", "Das ist ein gescanntes PDF – der Text in den Bildern wird erkannt…", "É um PDF escaneado – lendo o texto das imagens…", "這是掃描版 PDF，正在識別圖片裡的文字…"],
 ["点声调卡听这个声调；点卡片上的字，单独听例字。", "Tap a tone card to hear the tone; tap a character on it to hear that example.", "Tippe auf eine Tonkarte, um den Ton zu hören; tippe auf ein Zeichen darauf, um das Beispiel zu hören.", "Toque num cartão para ouvir o tom; toque num caractere para ouvir o exemplo.", "點聲調卡聽這個聲調；點卡片上的字，單獨聽例字。"],
 ["12 节课，从四个声调到变调。每个音都能听、能录音对比。", "12 lessons, from the four tones to tone changes. Hear every sound, record yourself and compare.", "12 Lektionen, von den vier Tönen bis zu Tonveränderungen. Jeden Laut hören, dich aufnehmen und vergleichen.", "12 lições, dos quatro tons às mudanças de tom. Ouça cada som, grave sua voz e compare.", "12 節課，從四個聲調到變調。每個音都能聽、能錄音對比。"],
 ["新功能", "New", "Neu", "Novo", "新功能"],
@@ -4906,7 +4847,7 @@ const UI_DICT=[
 ["点右上角菜单 ⋮", "Tap the ⋮ menu in the top right", "Oben rechts auf ⋮ tippen", "Toque no menu ⋮ no canto superior", "點右上角選單 ⋮"],
 ["选「安装应用」或「添加到主屏幕」", "Choose “Install app” or “Add to Home screen”", "„App installieren“ oder „Zum Startbildschirm“ wählen", "Escolha “Instalar app” ou “Adicionar à tela inicial”", "選「安裝應用」或「新增到主螢幕」"],
 ["安装到这台设备", "Install on this device", "Auf diesem Gerät installieren", "Instalar neste aparelho", "安裝到這臺裝置"],
-["装好以后像 App 一样打开，没网也能复习（AI 功能需要联网）。", "Once installed it opens like an app and works offline for reviews (AI needs a connection).", "Danach öffnet es sich wie eine App und funktioniert offline zum Wiederholen (KI braucht Internet).", "Depois de instalado abre como app e funciona offline para revisar (a IA precisa de internet).", "裝好以後像 App 一樣開啟，沒網也能複習（AI 功能需要聯網）。"],
+["装好以后像 App 一样打开，没网也能复习。", "Once installed it opens like an app and works offline for reviews (AI needs a connection).", "Danach öffnet es sich wie eine App und funktioniert offline zum Wiederholen (KI braucht Internet).", "Depois de instalado abre como app e funciona offline para revisar (a IA precisa de internet).", "裝好以後像 App 一樣開啟，沒網也能複習（AI 功能需要聯網）。"],
 ["存储", "Storage", "Speicher", "Armazenamento", "儲存"],
 ["正在计算…", "Calculating…", "Wird berechnet …", "Calculando…", "正在計算…"],
 ["请求长期保存", "Ask to keep data", "Dauerhaft speichern", "Pedir armazenamento permanente", "請求長期儲存"],
@@ -5296,30 +5237,38 @@ function applyUILang(){
   const sel=$("#ui-lang"); if(sel) sel.value=UIL;
   const code=$("#ui-code"); if(code) code.textContent={zh:"简中",zht:"繁中",en:"EN",de:"DE",pt:"PT"}[UIL]||"EN";
 }
-$("#ui-lang").addEventListener("change",e=>{ UIL=e.target.value; try{ localStorage.setItem("zl-ui",UIL); }catch(x){} applyUILang(); if(cur==="read") mgRender(); if(cur==="stats") renderStats(); renderBackupHint(); });
+$("#ui-lang").addEventListener("change",e=>{ UIL=e.target.value; try{ localStorage.setItem("zl-ui",UIL); }catch(x){} applyUILang(); if(cur==="read") mgRender(); if(cur==="today") renderStats(); renderBackupHint(); });
 
 /* ---------- tabs & language ---------- */
 let cur="today";
-const TABS=["today","read","dict","pile","browse","stats","settings","pinyin"];
+const TABS=["today","pinyin","dict","read","settings"];
+const dkOn=k=>cur==="dict"&&!!(document.getElementById("dk-"+k)||{}).open;
+$("#dk-browse").addEventListener("toggle",e=>{ if(e.target.open) renderBrowse(); });
+$("#dk-pile").addEventListener("toggle",e=>{ if(e.target.open) renderPile(); });
+{ const ov=$("#ov-box"); try{ ov.open=localStorage.getItem("zl-ov")==="1"; }catch(e){} ov.addEventListener("toggle",()=>{ try{ localStorage.setItem("zl-ov",ov.open?"1":"0"); }catch(e){} if(ov.open) renderStats(); }); }
 function addOpen(w){ // the old 录入新词 tab now lives in 字匣 → 自己录入
-  showTab("browse"); const d=$("#add-box"); if(!d) return; d.open=true;
+  showTab("browse"); const d=$("#add-box"); if(!d) return; d.open=true; $("#dk-browse").open=true;
   if(w){ const i=$("#n-w"); i.value=w; i.dispatchEvent(new Event("input")); }
   setTimeout(()=>{ d.scrollIntoView({behavior:"smooth",block:"start"}); $("#n-w").focus({preventScroll:true}); },60);
 }
 function showTab(t){
   if(t==="new"){ addOpen(); return; }
+  // former tabs now live inside other pages: 进度 → 今日学习 (学习总览), 字匣 / 生词堆 → 字典
+  const sub={stats:["today","ov-box"],browse:["dict","dk-browse"],pile:["dict","dk-pile"]}[t];
+  if(sub){ showTab(sub[0]); const d=document.getElementById(sub[1]); if(d){ d.open=true; setTimeout(()=>d.scrollIntoView({behavior:"smooth",block:"start"}),60); } return; }
   if(!TABS.includes(t)) t="today";
-  cur=t; const grp={pile:"browse",settings:"stats"}[t]||t;
+  cur=t; const grp=t;
   $$("#tabs button").forEach(b=>{ b.setAttribute("aria-selected",b.dataset.tab===t); b.classList.toggle("grp-on",b.dataset.tab===grp); });
   $$(".subsw button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.sub===t));
   TABS.forEach(k=>document.getElementById("tab-"+k).hidden=k!==t);
-  if(t==="pile") renderPile(); if(t==="browse") renderBrowse(); if(t==="stats") renderStats(); if(t==="dict") dicMount(); else if(typeof dicStop==="function") dicStop();
+  if(t==="dict"){ dicMount(); if($("#dk-browse").open) renderBrowse(); if($("#dk-pile").open) renderPile(); } else if(typeof dicStop==="function") dicStop();
+  if(t==="today") renderStats();
   if(t==="settings"){ renderAISettings(); renderStorage(); renderBackupHint(); }
   if(t==="today"&&sess) renderCard(); if(t==="today") pyEntry(); if(t==="pinyin") pyRender();
   if(t==="read") mgRender(); else { if(typeof mgClose==="function"&&MG.sheet) mgClose(); if(typeof rdStop==="function") rdStop(); }
   try{ localStorage.setItem("zl-tab",t); }catch(e){}
 }
-$("#tabs").addEventListener("click",e=>{ const b=e.target.closest("[data-tab]"); if(b) showTab(b.dataset.tab); });
+$("#tabs").addEventListener("click",e=>{ const b=e.target.closest("[data-tab]"); if(!b) return; if(b.dataset.tab==="pinyin"&&cur==="pinyin"&&typeof pyOpen==="function"){ pyOpen("map"); return; } showTab(b.dataset.tab); });
 document.addEventListener("click",e=>{ const b=e.target.closest(".subsw [data-sub]"); if(b) showTab(b.dataset.sub); });
 $("#langsw").addEventListener("click",e=>{ const b=e.target.closest("[data-l]"); if(!b||b.dataset.l===lang()) return; S.settings.lang=b.dataset.l; save(); applyLang(); });
 async function applyLang(){
@@ -5575,7 +5524,6 @@ function pyVMap(){ const d=PYC().done, nx=pyNext();
   for(const L of pyLessons()){ const r=d[L.id], ready=!!L.groups;
     h+=`<li><button type="button" class="pyli${r?" pydone":""}${nx&&nx.id===L.id?" next":""}" ${ready?`data-py="lesson:${L.id}"`:"disabled"}><span class="pyno">${r?I.check:L.id}</span><span class="pyt"><b ${pyLA()}>${esc(pyT(L.title))}</b><small data-noi18n>${esc(pyT(L.sub))}</small></span><span class="pyst2">${r?`${Math.round(r.best*100)}%`:ready?(nx&&nx.id===L.id?"继续学习":""):"即将上线"}</span></button></li>`; }
   h+=`</ol><p class="muted small pyfoot">发音来自设备的系统语音，以后会换成真人录音。</p><p class="muted small">想要更自然的声音：在手机的系统设置里下载中文“增强”或“高级”语音，字里会自动使用。</p>`;
-  if(PYC().hide) h+=`<button class="btn ghost sm" type="button" data-py="show">在今日页显示</button>`;
   return h; }
 function pyCard(it){ const t=String(it.t), say=it.say?String(it.say):t;
   const pyc=t.length===1?`<b class="pyp tn${t}" data-noi18n>${esc(it.py)}</b>`:`<b class="pyp" data-noi18n>${esc(it.py)}</b>`;
