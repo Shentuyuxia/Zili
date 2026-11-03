@@ -1,0 +1,107 @@
+{
+ "date": "2026-11-03",
+ "createdBy": "claude",
+ "items": [
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "story",
+   "section": "饮食",
+   "title": "Kopi 是什么？",
+   "title_en": "What is kopi?",
+   "title_de": "Was ist Kopi?",
+   "title_pt": "O que é kopi?",
+   "paragraphs": [
+    "放假了，小月和爸爸去新加坡看姑姑。第二天早上，姑姑带他们去家旁边的咖啡店吃早饭。店里人很多，很热闹。",
+    "墙上写着 Kopi、Kopi O 和 Kopi C。爸爸看了很久，还是看不懂。姑姑笑着说：“Kopi 就是咖啡，里面有很甜的炼乳。Kopi O 是黑咖啡，不放奶，可是放糖。Kopi C 里面放淡奶。”",
+    "爸爸不喜欢太甜的咖啡，所以要了一杯 Kopi O，还说要“少糖”。小月不喝咖啡，她喝橙汁。",
+    "早饭来了！有烤面包，还有两个半熟的鸡蛋。面包里有咖椰酱，是用椰子、鸡蛋和糖做的，又香又甜。姑姑在鸡蛋里放了一点儿酱油。小月吃了一口，笑着说：“明天我们还来吧！”"
+   ],
+   "paragraphs_en": [
+    "The holidays have begun, and Xiaoyue and her dad go to Singapore to visit her aunt. The next morning, her aunt takes them to the coffee shop near her home for breakfast. The shop is full of people and very lively.",
+    "On the wall it says Kopi, Kopi O and Kopi C. Dad looks at it for a long time, but he still can't make sense of it. Her aunt smiles and says, \"Kopi just means coffee, with very sweet condensed milk in it. Kopi O is black coffee: no milk, but with sugar. Kopi C has evaporated milk in it.\"",
+    "Dad doesn't like his coffee too sweet, so he orders a Kopi O and also asks for \"less sugar\". Xiaoyue doesn't drink coffee, so she has orange juice.",
+    "Breakfast is here! There is toast and two soft-boiled eggs. Inside the toast is kaya, a spread made from coconut, eggs and sugar, fragrant and sweet. Her aunt adds a little soy sauce to the eggs. Xiaoyue takes a bite, smiles and says, \"Let's come back tomorrow!\""
+   ],
+   "paragraphs_de": [
+    "Die Ferien haben begonnen, und Xiaoyue und ihr Papa fliegen nach Singapur, um ihre Tante zu besuchen. Am nächsten Morgen nimmt die Tante die beiden zum Frühstück mit ins Café neben ihrem Haus. Dort sind viele Leute, und es ist sehr lebhaft.",
+    "An der Wand steht Kopi, Kopi O und Kopi C. Papa schaut lange hin, versteht es aber immer noch nicht. Die Tante lacht und sagt: „Kopi heißt einfach Kaffee, mit sehr süßer Kondensmilch darin. Kopi O ist schwarzer Kaffee, ohne Milch, aber mit Zucker. In Kopi C kommt ungesüßte Kondensmilch.“",
+    "Papa mag seinen Kaffee nicht zu süß, also bestellt er einen Kopi O und sagt noch dazu: „Wenig Zucker.“ Xiaoyue trinkt keinen Kaffee, sie nimmt Orangensaft.",
+    "Das Frühstück kommt! Es gibt Toast und zwei weich gekochte Eier. Im Toast ist Kaya, ein Aufstrich aus Kokosnuss, Eiern und Zucker, duftend und süß. Die Tante gibt ein wenig Sojasoße zu den Eiern. Xiaoyue beißt einmal ab, lacht und sagt: „Morgen kommen wir wieder, ja?“"
+   ],
+   "paragraphs_pt": [
+    "Começaram as férias, e Xiaoyue e o pai vão a Singapura visitar a tia dela. Na manhã seguinte, a tia os leva para tomar café da manhã na cafeteria perto de casa. O lugar está cheio de gente e muito animado.",
+    "Na parede está escrito Kopi, Kopi O e Kopi C. O pai olha por muito tempo, mas continua sem entender. A tia sorri e diz: “Kopi quer dizer simplesmente café, com leite condensado bem doce. Kopi O é café preto: sem leite, mas com açúcar. Kopi C leva leite evaporado.”",
+    "O pai não gosta de café muito doce, então pede um Kopi O e ainda diz “pouco açúcar”. Xiaoyue não toma café, ela bebe suco de laranja.",
+    "O café da manhã chegou! Tem torradas e dois ovos meio cozidos. Dentro da torrada há kaya, um creme feito de coco, ovos e açúcar, cheiroso e doce. A tia coloca um pouco de molho de soja nos ovos. Xiaoyue dá uma mordida, sorri e diz: “Vamos voltar amanhã!”"
+   ],
+   "glossary": [
+    {
+     "w": "姑姑",
+     "p": "gū gu",
+     "en": "aunt (father's sister)",
+     "de": "die Tante (Schwester des Vaters)",
+     "pt": "a tia (irmã do pai)"
+    },
+    {
+     "w": "热闹",
+     "p": "rè nao",
+     "en": "lively; bustling",
+     "de": "lebhaft; belebt",
+     "pt": "animado; movimentado"
+    },
+    {
+     "w": "炼乳",
+     "p": "liàn rǔ",
+     "en": "sweetened condensed milk",
+     "de": "die gesüßte Kondensmilch",
+     "pt": "o leite condensado"
+    },
+    {
+     "w": "淡奶",
+     "p": "dàn nǎi",
+     "en": "evaporated milk",
+     "de": "die ungesüßte Kondensmilch",
+     "pt": "o leite evaporado"
+    },
+    {
+     "w": "半熟",
+     "p": "bàn shú",
+     "en": "soft-boiled; half-cooked",
+     "de": "weich gekocht; halb gar",
+     "pt": "meio cozido"
+    },
+    {
+     "w": "咖椰酱",
+     "p": "kā yē jiàng",
+     "en": "kaya (sweet coconut and egg spread)",
+     "de": "die Kaya (süßer Aufstrich aus Kokos und Ei)",
+     "pt": "a kaya (creme doce de coco e ovo)"
+    },
+    {
+     "w": "椰子",
+     "p": "yē zi",
+     "en": "coconut",
+     "de": "die Kokosnuss",
+     "pt": "o coco"
+    },
+    {
+     "w": "酱油",
+     "p": "jiàng yóu",
+     "en": "soy sauce",
+     "de": "die Sojasoße",
+     "pt": "o molho de soja"
+    }
+   ],
+   "grammar": "又 A 又 B means 'both A and B', linking two qualities of the same thing: 又香又甜 'fragrant and sweet'. A and B are usually adjectives, and both are positive or both negative.",
+   "grammar_de": "又 A 又 B bedeutet „sowohl A als auch B“ und verbindet zwei Eigenschaften derselben Sache: 又香又甜 „duftend und süß“. A und B sind meist Adjektive, und beide sind positiv oder beide negativ.",
+   "grammar_pt": "又 A 又 B significa “tanto A quanto B” e liga duas qualidades da mesma coisa: 又香又甜 “cheiroso e doce”. A e B costumam ser adjetivos, e os dois são positivos ou os dois são negativos.",
+   "questions": [
+    "小月和爸爸去新加坡看谁？",
+    "Kopi O 里面有奶吗？",
+    "咖椰酱是用什么做的？"
+   ],
+   "sources": []
+  }
+ ]
+}

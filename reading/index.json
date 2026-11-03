@@ -1,6 +1,18 @@
 {
- "updated": "2026-10-31T04:44:53Z",
+ "updated": "2026-11-03T03:39:26Z",
  "days": [
+  {
+   "date": "2026-11-03",
+   "items": [
+    {
+     "i": 0,
+     "lang": "zh",
+     "title": "Kopi 是什么？",
+     "kind": "story",
+     "level": "HSK2"
+    }
+   ]
+  },
   {
    "date": "2026-10-31",
    "items": [
