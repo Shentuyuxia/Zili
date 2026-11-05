@@ -1,0 +1,172 @@
+{
+ "date": "2026-11-05",
+ "createdBy": "claude",
+ "items": [
+  {
+   "lang": "zh",
+   "level": "HSK4",
+   "kind": "dialogue",
+   "section": "学习与工作",
+   "title": "我要一盘“睡觉”",
+   "title_en": "One plate of “sleep”, please",
+   "title_de": "Einmal „Schlafen“, bitte",
+   "title_pt": "Um prato de “dormir”, por favor",
+   "dek": "隔着十一个小时，两个语言伙伴商量怎么改错。",
+   "paragraphs": [
+    "小月：晚上好，卢卡斯！台北现在是早上八点，圣保罗应该还是昨天晚上九点吧？",
+    "卢卡斯：对，我们差十一个小时，我还活在昨天呢！今天我有件事想跟你商量。",
+    "小月：什么事？你说吧。",
+    "卢卡斯：我们做语言交换已经三个月了，可是你从来不纠正我的中文。上个星期我去一家中餐馆，想说“我要一盘水饺”，结果服务员笑了。朋友告诉我，我的声调不对，听起来像“我要一盘睡觉”！",
+    "小月：哈哈！其实我早就发现了，这两个词你经常说混。可是你说得那么流利，我不好意思打断你，怕你以后不敢开口了。",
+    "卢卡斯：我明白你的意思。不过，既然我们是语言伙伴，你就不用这么客气。在你面前丢脸，总比在饭馆里丢脸好吧？",
+    "小月：有道理。可是如果每句话都纠正，我们就聊不下去了。上次你连着纠正了我五次，我紧张得什么都不敢说了。",
+    "卢卡斯：那我们定个规矩怎么样？聊天的时候谁都不打断谁，只把对方的错误写下来。最后十分钟，我们再一起看。",
+    "小月：这个办法好！这样既不影响聊天，又能知道自己错在哪儿。不过我有一个条件：你也要帮我记下来。我老是把 avô（爷爷）说成 avó（奶奶），你可千万别放过我。",
+    "卢卡斯：没问题！对了，要是错误太多，十分钟够吗？",
+    "小月：既然你这么问，那就二十分钟吧。现在开始！你先说说，昨天吃了什么？",
+    "卢卡斯：我吃了一盘……水饺。",
+    "小月：嗯，说对了！这句话我不用写了。"
+   ],
+   "paragraphs_en": [
+    "Xiaoyue: Good evening, Lucas! It's eight in the morning here in Taipei, so in São Paulo it must still be nine o'clock last night, right?",
+    "Lucas: Right, we're eleven hours apart. I'm still living in yesterday! There's something I'd like to talk over with you today.",
+    "Xiaoyue: What is it? Go ahead.",
+    "Lucas: We've been doing our language exchange for three months now, but you never correct my Chinese. Last week I went to a Chinese restaurant and wanted to say “I'd like a plate of dumplings”, and the waiter laughed. A friend told me my tones were wrong and it sounded like “I'd like a plate of sleep”!",
+    "Xiaoyue: Haha! Actually, I noticed long ago that you often mix up those two words. But you speak so fluently that I felt bad interrupting you. I was afraid you wouldn't dare open your mouth any more.",
+    "Lucas: I see what you mean. But since we're language partners, you don't need to be so polite. Losing face in front of you has to be better than losing face in a restaurant, doesn't it?",
+    "Xiaoyue: Good point. But if we correct every sentence, we won't be able to keep chatting. Last time you corrected me five times in a row, and I got so nervous that I didn't dare say anything.",
+    "Lucas: So how about we set a rule? While we're chatting, nobody interrupts anybody; we just write down the other person's mistakes. Then we go through them together in the last ten minutes.",
+    "Xiaoyue: That's a good idea! That way it won't get in the way of our chat, and we'll still find out where we went wrong. But I have one condition: you have to note mine down too. I keep saying avó (grandmother) when I mean avô (grandfather), so don't you dare let me get away with it.",
+    "Lucas: No problem! Oh, and if there are too many mistakes, will ten minutes be enough?",
+    "Xiaoyue: Since you ask, let's make it twenty. Starting now! You go first: what did you eat yesterday?",
+    "Lucas: I ate a plate of … dumplings.",
+    "Xiaoyue: Mm, you got it right! I don't need to write that one down."
+   ],
+   "paragraphs_de": [
+    "Xiaoyue: Guten Abend, Lucas! In Taipeh ist es jetzt acht Uhr morgens, in São Paulo müsste es also noch gestern Abend neun Uhr sein, oder?",
+    "Lucas: Genau, zwischen uns liegen elf Stunden. Ich lebe noch im Gestern! Ich möchte heute etwas mit dir besprechen.",
+    "Xiaoyue: Was denn? Erzähl.",
+    "Lucas: Wir machen jetzt schon seit drei Monaten Sprachaustausch, aber du korrigierst mein Chinesisch nie. Letzte Woche war ich in einem chinesischen Restaurant und wollte sagen: „Ich hätte gern einen Teller Teigtaschen.“ Da hat der Kellner gelacht. Ein Freund hat mir erklärt, dass meine Töne falsch waren und es wie „Ich hätte gern einen Teller Schlafen“ klang!",
+    "Xiaoyue: Haha! Ehrlich gesagt ist mir längst aufgefallen, dass du diese beiden Wörter oft durcheinanderbringst. Aber du sprichst so flüssig, dass ich dich nicht unterbrechen wollte. Ich hatte Angst, dass du dich dann nicht mehr traust, den Mund aufzumachen.",
+    "Lucas: Ich verstehe, was du meinst. Aber da wir Sprachpartner sind, musst du nicht so höflich sein. Sich vor dir zu blamieren ist doch immer noch besser, als sich im Restaurant zu blamieren, oder?",
+    "Xiaoyue: Da hast du recht. Aber wenn wir jeden Satz korrigieren, kommen wir mit dem Gespräch nicht weiter. Letztes Mal hast du mich fünfmal hintereinander korrigiert, und ich war so nervös, dass ich gar nichts mehr zu sagen wagte.",
+    "Lucas: Wollen wir dann eine Regel aufstellen? Beim Reden unterbricht keiner den anderen, wir schreiben uns nur die Fehler des anderen auf. In den letzten zehn Minuten schauen wir sie uns gemeinsam an.",
+    "Xiaoyue: Gute Idee! So stört es unser Gespräch nicht, und wir erfahren trotzdem, was wir falsch gemacht haben. Aber ich habe eine Bedingung: Du musst meine Fehler auch aufschreiben. Ich sage ständig avó (Großmutter), wenn ich avô (Großvater) meine, das darfst du mir auf keinen Fall durchgehen lassen.",
+    "Lucas: Kein Problem! Ach ja, und wenn es zu viele Fehler sind, reichen dann zehn Minuten?",
+    "Xiaoyue: Wenn du schon so fragst, nehmen wir zwanzig. Los geht's! Fang du an: Was hast du gestern gegessen?",
+    "Lucas: Ich habe einen Teller … Teigtaschen gegessen.",
+    "Xiaoyue: Hm, das war richtig! Diesen Satz muss ich nicht aufschreiben."
+   ],
+   "paragraphs_pt": [
+    "Xiaoyue: Boa noite, Lucas! Aqui em Taipei são oito da manhã, então em São Paulo ainda devem ser nove da noite de ontem, né?",
+    "Lucas: Isso, são onze horas de diferença entre a gente. Eu ainda estou vivendo no ontem! Hoje queria conversar com você sobre uma coisa.",
+    "Xiaoyue: O que foi? Pode falar.",
+    "Lucas: Já faz três meses que a gente faz intercâmbio de idiomas, mas você nunca corrige o meu chinês. Na semana passada fui a um restaurante chinês e quis dizer “quero um prato de jiaozi”, e o garçom riu. Um amigo me explicou que os meus tons estavam errados e que soou como “quero um prato de dormir”!",
+    "Xiaoyue: Haha! Na verdade, faz tempo que percebi que você vive confundindo essas duas palavras. Mas você fala com tanta fluência que fiquei sem graça de te interromper. Fiquei com medo de você não ter mais coragem de abrir a boca.",
+    "Lucas: Entendo o que você quer dizer. Mas, já que somos parceiros de idioma, você não precisa ser tão educada. Passar vergonha na sua frente é melhor do que passar vergonha no restaurante, né?",
+    "Xiaoyue: Faz sentido. Só que, se a gente corrigir cada frase, a conversa não anda. Da última vez você me corrigiu cinco vezes seguidas, e fiquei tão nervosa que não tive coragem de dizer mais nada.",
+    "Lucas: Então que tal a gente criar uma regra? Durante a conversa ninguém interrompe ninguém, a gente só anota os erros do outro. Nos últimos dez minutos, olhamos tudo juntos.",
+    "Xiaoyue: Boa ideia! Assim a conversa não fica atrapalhada e ainda dá para saber onde a gente errou. Mas tenho uma condição: você também tem que anotar os meus. Vivo dizendo avó quando quero dizer avô, então não me deixe escapar de jeito nenhum.",
+    "Lucas: Sem problema! Ah, e se forem erros demais, dez minutos bastam?",
+    "Xiaoyue: Já que você perguntou, vamos fazer vinte. Começando agora! Fala você primeiro: o que você comeu ontem?",
+    "Lucas: Comi um prato de… jiaozi.",
+    "Xiaoyue: Hum, falou certo! Essa frase eu não preciso anotar."
+   ],
+   "glossary": [
+    {
+     "w": "纠正",
+     "p": "jiū zhèng",
+     "en": "to correct",
+     "de": "korrigieren",
+     "pt": "corrigir"
+    },
+    {
+     "w": "语言交换",
+     "p": "yǔ yán jiāo huàn",
+     "en": "language exchange",
+     "de": "der Sprachaustausch",
+     "pt": "o intercâmbio de idiomas"
+    },
+    {
+     "w": "伙伴",
+     "p": "huǒ bàn",
+     "en": "partner; companion",
+     "de": "der Partner; der Gefährte",
+     "pt": "o parceiro; o companheiro"
+    },
+    {
+     "w": "声调",
+     "p": "shēng diào",
+     "en": "tone (of a syllable)",
+     "de": "der Ton (einer Silbe)",
+     "pt": "o tom (de uma sílaba)"
+    },
+    {
+     "w": "水饺",
+     "p": "shuǐ jiǎo",
+     "en": "boiled dumplings",
+     "de": "die gekochte Teigtasche",
+     "pt": "o jiaozi cozido (bolinho chinês)"
+    },
+    {
+     "w": "说混",
+     "p": "shuō hùn",
+     "en": "to mix up (when speaking)",
+     "de": "(beim Sprechen) verwechseln",
+     "pt": "confundir (ao falar)"
+    },
+    {
+     "w": "流利",
+     "p": "liú lì",
+     "en": "fluent",
+     "de": "flüssig; fließend",
+     "pt": "fluente"
+    },
+    {
+     "w": "打断",
+     "p": "dǎ duàn",
+     "en": "to interrupt",
+     "de": "unterbrechen",
+     "pt": "interromper"
+    },
+    {
+     "w": "丢脸",
+     "p": "diū liǎn",
+     "en": "to lose face; to be embarrassed",
+     "de": "sich blamieren",
+     "pt": "passar vergonha"
+    },
+    {
+     "w": "规矩",
+     "p": "guī ju",
+     "en": "rule; custom",
+     "de": "die Regel; die Gepflogenheit",
+     "pt": "a regra; o costume"
+    },
+    {
+     "w": "条件",
+     "p": "tiáo jiàn",
+     "en": "condition",
+     "de": "die Bedingung",
+     "pt": "a condição"
+    },
+    {
+     "w": "放过",
+     "p": "fàng guò",
+     "en": "to let off; to let slip by",
+     "de": "durchgehen lassen; verschonen",
+     "pt": "deixar passar; poupar"
+    }
+   ],
+   "grammar": "既然……就…… means 'since (it is a fact that) …, then …'. The first part states something both speakers accept, and the second draws the conclusion: 既然我们是语言伙伴，你就不用这么客气 'since we're language partners, you don't need to be so polite'. Unlike 因为, it often leads to a suggestion or decision, and 那就 works in the second part too: 既然你这么问，那就二十分钟吧.",
+   "grammar_de": "既然……就…… bedeutet „da …, (dann) …“. Der erste Teil nennt etwas, das beide Sprecher als Tatsache akzeptieren, der zweite zieht die Schlussfolgerung: 既然我们是语言伙伴，你就不用这么客气 „da wir Sprachpartner sind, musst du nicht so höflich sein“. Anders als bei 因为 folgt oft ein Vorschlag oder eine Entscheidung. Im zweiten Teil geht auch 那就: 既然你这么问，那就二十分钟吧.",
+   "grammar_pt": "既然……就…… significa “já que …, então …”. A primeira parte traz algo que os dois falantes aceitam como fato, e a segunda tira a conclusão: 既然我们是语言伙伴，你就不用这么客气 “já que somos parceiros de idioma, você não precisa ser tão educada”. Diferente de 因为, costuma levar a uma sugestão ou decisão. Na segunda parte também se usa 那就: 既然你这么问，那就二十分钟吧.",
+   "questions": [
+    "卢卡斯在中餐馆里想说什么？服务员为什么笑了？",
+    "小月为什么一直没有纠正卢卡斯的中文？",
+    "他们定了什么规矩？你觉得这个办法好不好？为什么？"
+   ],
+   "sources": []
+  }
+ ]
+}
