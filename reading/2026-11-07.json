@@ -1,0 +1,107 @@
+{
+ "date": "2026-11-07",
+ "createdBy": "claude",
+ "items": [
+  {
+   "lang": "zh",
+   "level": "HSK1",
+   "kind": "feature",
+   "section": "文化与节日",
+   "title": "十一月的灯笼",
+   "title_en": "Lanterns in November",
+   "title_de": "Laternen im November",
+   "title_pt": "Lanternas em novembro",
+   "paragraphs": [
+    "十一月，德国很冷。下午五点，天就黑了。",
+    "十一月十一日是一个小朋友很喜欢的节日。晚上，很多小朋友和爸爸妈妈一起出去，手里有灯笼。大家还一起唱歌。",
+    "灯笼是小朋友自己做的，有红的，有黄的，很漂亮。",
+    "小月八岁，她做了一个月亮灯笼。她说：“在中国，元宵节也有很多灯笼。我喜欢灯笼！”"
+   ],
+   "paragraphs_en": [
+    "In November it is very cold in Germany. At five in the afternoon it is already dark.",
+    "The 11th of November is a festival that children love. In the evening, lots of children go out with their mums and dads, with lanterns in their hands. Everyone sings together, too.",
+    "The children make the lanterns themselves. There are red ones and yellow ones, and they are very pretty.",
+    "Xiaoyue is eight. She has made a moon lantern. She says: “In China there are lots of lanterns at the Lantern Festival too. I love lanterns!”"
+   ],
+   "paragraphs_de": [
+    "Im November ist es in Deutschland sehr kalt. Um fünf Uhr nachmittags ist es schon dunkel.",
+    "Der 11. November ist ein Fest, das Kinder sehr mögen. Am Abend gehen viele Kinder mit Mama und Papa nach draußen, mit Laternen in der Hand. Alle singen auch zusammen.",
+    "Die Laternen haben die Kinder selbst gebastelt. Es gibt rote und gelbe, sie sind sehr schön.",
+    "Xiaoyue ist acht. Sie hat eine Mond-Laterne gebastelt. Sie sagt: „In China gibt es beim Laternenfest auch viele Laternen. Ich mag Laternen!“"
+   ],
+   "paragraphs_pt": [
+    "Em novembro, faz muito frio na Alemanha. Às cinco da tarde já está escuro.",
+    "O dia 11 de novembro é uma festa de que as crianças gostam muito. À noite, muitas crianças saem com o pai e a mãe, com lanternas na mão. Todo mundo também canta junto.",
+    "As próprias crianças fazem as lanternas. Tem vermelhas, tem amarelas, e são muito bonitas.",
+    "A Xiaoyue tem oito anos. Ela fez uma lanterna de lua. Ela diz: “Na China, na Festa das Lanternas também tem muitas lanternas. Eu gosto de lanternas!”"
+   ],
+   "glossary": [
+    {
+     "w": "灯笼",
+     "p": "dēng long",
+     "en": "lantern",
+     "de": "die Laterne",
+     "pt": "a lanterna"
+    },
+    {
+     "w": "天黑",
+     "p": "tiān hēi",
+     "en": "to get dark (in the evening)",
+     "de": "dunkel werden",
+     "pt": "escurecer"
+    },
+    {
+     "w": "节日",
+     "p": "jié rì",
+     "en": "festival; holiday",
+     "de": "das Fest; der Feiertag",
+     "pt": "a festa; o feriado"
+    },
+    {
+     "w": "唱歌",
+     "p": "chàng gē",
+     "en": "to sing (a song)",
+     "de": "singen",
+     "pt": "cantar"
+    },
+    {
+     "w": "自己",
+     "p": "zì jǐ",
+     "en": "oneself; by oneself",
+     "de": "selbst",
+     "pt": "si mesmo; sozinho"
+    },
+    {
+     "w": "漂亮",
+     "p": "piào liang",
+     "en": "pretty; beautiful",
+     "de": "schön; hübsch",
+     "pt": "bonito"
+    },
+    {
+     "w": "月亮",
+     "p": "yuè liang",
+     "en": "the moon",
+     "de": "der Mond",
+     "pt": "a lua"
+    },
+    {
+     "w": "元宵节",
+     "p": "yuán xiāo jié",
+     "en": "Lantern Festival (15th day of the first lunar month)",
+     "de": "das Laternenfest (15. Tag des ersten Mondmonats)",
+     "pt": "a Festa das Lanternas (15º dia do primeiro mês lunar)"
+    }
+   ],
+   "grammar": "有 A 的，有 B 的 means 'there are A ones and B ones'. The 的 after an adjective stands for the noun, so you don't repeat it: 有红的，有黄的 'there are red ones and yellow ones' (= red lanterns and yellow lanterns).",
+   "grammar_de": "有 A 的，有 B 的 bedeutet „es gibt A-e und B-e“. Das 的 nach einem Adjektiv ersetzt das Nomen, man muss es nicht wiederholen: 有红的，有黄的 „es gibt rote und gelbe“ (= rote Laternen und gelbe Laternen).",
+   "grammar_pt": "有 A 的，有 B 的 quer dizer “tem uns A e uns B”. O 的 depois de um adjetivo substitui o substantivo, então não é preciso repeti-lo: 有红的，有黄的 “tem vermelhas e tem amarelas” (= lanternas vermelhas e lanternas amarelas).",
+   "questions": [
+    "十一月，德国下午几点天黑？",
+    "灯笼是谁做的？",
+    "小月做了一个什么灯笼？"
+   ],
+   "sources": []
+  }
+ ]
+}

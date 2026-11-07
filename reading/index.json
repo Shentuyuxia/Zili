@@ -1,6 +1,18 @@
 {
- "updated": "2026-11-06T03:39:42Z",
+ "updated": "2026-11-07T03:39:16Z",
  "days": [
+  {
+   "date": "2026-11-07",
+   "items": [
+    {
+     "i": 0,
+     "lang": "zh",
+     "title": "十一月的灯笼",
+     "kind": "feature",
+     "level": "HSK1"
+    }
+   ]
+  },
   {
    "date": "2026-11-06",
    "items": [
