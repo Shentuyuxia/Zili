@@ -1,6 +1,18 @@
 {
- "updated": "2026-11-07T03:39:16Z",
+ "updated": "2026-11-08T03:38:47Z",
  "days": [
+  {
+   "date": "2026-11-08",
+   "items": [
+    {
+     "i": 0,
+     "lang": "zh",
+     "title": "十一月的春天",
+     "kind": "dialogue",
+     "level": "HSK2"
+    }
+   ]
+  },
   {
    "date": "2026-11-07",
    "items": [

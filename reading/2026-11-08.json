@@ -1,0 +1,135 @@
+{
+ "date": "2026-11-08",
+ "createdBy": "claude",
+ "items": [
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "dialogue",
+   "section": "自然与生活",
+   "title": "十一月的春天",
+   "title_en": "Spring in November",
+   "title_de": "Frühling im November",
+   "title_pt": "Primavera em novembro",
+   "paragraphs": [
+    "小月：卢卡斯，你好！你那里现在几点？",
+    "卢卡斯：下午三点。你那里呢？",
+    "小月：柏林已经晚上七点了。现在天黑得很早，下午四点多天就黑了。",
+    "卢卡斯：这么早！圣保罗现在是春天，今天很热，有三十度。",
+    "小月：十一月是春天？",
+    "卢卡斯：对啊。因为巴西在南边，所以我们的季节和德国不一样。十二月我们过夏天。",
+    "小月：真有意思！这里只有八度，我在家里还穿着毛衣呢。",
+    "卢卡斯：我刚和朋友在公园里吃了冰淇淋。",
+    "小月：我好羡慕你啊！",
+    "卢卡斯：明年七月你来巴西玩吧。那时候这里是冬天，但是不太冷。",
+    "小月：好啊！那我们一起过一个“不冷的冬天”！"
+   ],
+   "paragraphs_en": [
+    "Xiaoyue: Hi, Lucas! What time is it there now?",
+    "Lucas: Three in the afternoon. What about where you are?",
+    "Xiaoyue: In Berlin it's already seven in the evening. It gets dark very early now – by a little after four in the afternoon it's already dark.",
+    "Lucas: That early! In São Paulo it's spring now. It's really hot today – thirty degrees.",
+    "Xiaoyue: November is spring?",
+    "Lucas: Yes! Because Brazil is in the south, our seasons are different from Germany's. In December we have summer.",
+    "Xiaoyue: How interesting! It's only eight degrees here, and I'm wearing a sweater even at home.",
+    "Lucas: I just had ice cream in the park with friends.",
+    "Xiaoyue: I'm so jealous!",
+    "Lucas: Come and visit Brazil next July. It will be winter here then, but not very cold.",
+    "Xiaoyue: Great! Then let's spend a \"winter that isn't cold\" together!"
+   ],
+   "paragraphs_de": [
+    "Xiaoyue: Hallo, Lucas! Wie spät ist es jetzt bei dir?",
+    "Lucas: Drei Uhr nachmittags. Und bei dir?",
+    "Xiaoyue: In Berlin ist es schon sieben Uhr abends. Es wird jetzt sehr früh dunkel – kurz nach vier Uhr nachmittags ist es schon dunkel.",
+    "Lucas: So früh! In São Paulo ist jetzt Frühling. Heute ist es richtig heiß, dreißig Grad.",
+    "Xiaoyue: Im November ist Frühling?",
+    "Lucas: Ja! Weil Brasilien im Süden liegt, sind unsere Jahreszeiten anders als in Deutschland. Im Dezember haben wir Sommer.",
+    "Xiaoyue: Wie spannend! Hier sind es nur acht Grad, und ich trage sogar zu Hause einen Pullover.",
+    "Lucas: Ich habe gerade mit Freunden im Park ein Eis gegessen.",
+    "Xiaoyue: Da bin ich echt neidisch!",
+    "Lucas: Komm doch nächsten Juli nach Brasilien. Dann ist hier Winter, aber es ist nicht sehr kalt.",
+    "Xiaoyue: Gern! Dann verbringen wir zusammen einen „Winter, der nicht kalt ist“!"
+   ],
+   "paragraphs_pt": [
+    "Xiaoyue: Oi, Lucas! Que horas são aí agora?",
+    "Lucas: Três da tarde. E aí?",
+    "Xiaoyue: Em Berlim já são sete da noite. Agora escurece muito cedo: pouco depois das quatro da tarde já está escuro.",
+    "Lucas: Tão cedo! Em São Paulo agora é primavera. Hoje está muito quente, faz trinta graus.",
+    "Xiaoyue: Novembro é primavera?",
+    "Lucas: É! Como o Brasil fica no sul, as nossas estações são diferentes das da Alemanha. Em dezembro a gente tem verão.",
+    "Xiaoyue: Que interessante! Aqui está fazendo só oito graus, e estou de suéter até dentro de casa.",
+    "Lucas: Acabei de tomar sorvete no parque com uns amigos.",
+    "Xiaoyue: Que inveja!",
+    "Lucas: Vem passear no Brasil em julho do ano que vem. Nessa época aqui é inverno, mas não faz muito frio.",
+    "Xiaoyue: Combinado! Então a gente passa junto um \"inverno que não é frio\"!"
+   ],
+   "glossary": [
+    {
+     "w": "季节",
+     "p": "jì jié",
+     "en": "season",
+     "de": "die Jahreszeit",
+     "pt": "a estação (do ano)"
+    },
+    {
+     "w": "春天",
+     "p": "chūn tiān",
+     "en": "spring",
+     "de": "der Frühling",
+     "pt": "a primavera"
+    },
+    {
+     "w": "南边",
+     "p": "nán bian",
+     "en": "the south; south side",
+     "de": "der Süden",
+     "pt": "o sul"
+    },
+    {
+     "w": "度",
+     "p": "dù",
+     "en": "degree (temperature)",
+     "de": "das Grad",
+     "pt": "o grau"
+    },
+    {
+     "w": "毛衣",
+     "p": "máo yī",
+     "en": "sweater, jumper",
+     "de": "der Pullover",
+     "pt": "o suéter, a blusa de lã"
+    },
+    {
+     "w": "冰淇淋",
+     "p": "bīng qí lín",
+     "en": "ice cream",
+     "de": "das Eis",
+     "pt": "o sorvete"
+    },
+    {
+     "w": "羡慕",
+     "p": "xiàn mù",
+     "en": "to envy, be jealous (in a friendly way)",
+     "de": "beneiden; neidisch sein",
+     "pt": "invejar; ter inveja (no bom sentido)"
+    },
+    {
+     "w": "那时候",
+     "p": "nà shí hou",
+     "en": "at that time, then",
+     "de": "damals; dann (zu der Zeit)",
+     "pt": "nessa época, naquela hora"
+    }
+   ],
+   "grammar": "就 after a time word means 'already, as early as': 下午四点多天就黑了 'it is already dark by a little after four'. It shows that something happens earlier than you would expect. Compare 才, which means 'not until, only then'.",
+   "grammar_de": "就 nach einer Zeitangabe bedeutet „schon, bereits“: 下午四点多天就黑了 „kurz nach vier ist es schon dunkel“. Es zeigt, dass etwas früher passiert, als man erwartet. Das Gegenteil ist 才 „erst“.",
+   "grammar_pt": "就 depois de uma expressão de tempo quer dizer \"já, logo\": 下午四点多天就黑了 \"pouco depois das quatro já está escuro\". Mostra que algo acontece mais cedo do que se espera. O contrário é 才 \"só, apenas (mais tarde)\".",
+   "questions": [
+    "卢卡斯那里现在几点？",
+    "为什么十一月巴西是春天？",
+    "卢卡斯请小月什么时候去巴西？"
+   ],
+   "sources": []
+  }
+ ]
+}
