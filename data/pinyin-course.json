@@ -3494,10 +3494,10 @@
    },
    "video": "",
    "intro": {
-    "zh": "拼音有几条拼写规则，读音没变，只是写法不同。① i、u、ü 自己成音节时写成 yi、wu、yu；i、u、ü 开头的韵母写成 y、w 开头：ia → ya，uo → wo，üe → yue。② 前面有声母时，iou、uei、uen 省略中间的字母：iu、ui、un。③ 声调符号标在主要元音上：有 a 标 a，没有 a 标 o 或 e；iu、ui 标在后一个字母上。",
-    "en": "A few spelling rules change how pinyin is written, not how it sounds. ① On their own, i, u, ü are written yi, wu, yu, and finals starting with them use y or w: ia → ya, uo → wo, üe → yue. ② After an initial, iou, uei, uen drop the middle letter: iu, ui, un. ③ The tone mark goes on a if there is one, otherwise on o or e; in iu and ui it goes on the second letter.",
-    "de": "Einige Schreibregeln ändern nur die Schreibung, nicht die Aussprache. ① Allein stehend schreibt man i, u, ü als yi, wu, yu; Finale, die mit ihnen beginnen, schreibt man mit y oder w: ia → ya, uo → wo, üe → yue. ② Nach einem Anlaut fällt in iou, uei, uen der mittlere Buchstabe weg: iu, ui, un. ③ Das Tonzeichen steht auf dem a, wenn es eins gibt, sonst auf o oder e; bei iu und ui auf dem zweiten Buchstaben.",
-    "pt": "Algumas regras mudam só a escrita do pinyin, não o som. ① Sozinhos, i, u, ü se escrevem yi, wu, yu, e as finais que começam com eles usam y ou w: ia → ya, uo → wo, üe → yue. ② Depois de uma consoante, iou, uei, uen perdem a letra do meio: iu, ui, un. ③ O acento vai no a, se houver; senão no o ou no e; em iu e ui, vai na segunda letra."
+    "zh": "拼音有几条拼写规则，读音没变，只是写法不同。① i、u、ü 自己成音节时写成 yi、wu、yu；i、u、ü 开头的韵母写成 y、w 开头：ia → ya，uo → wo，üe → yue。② 前面有声母时，iou、uei、uen 省略中间的字母：iu、ui、un。③ 声调符号标在主要元音上：有 a 标 a，没有 a 标 o 或 e；iu、ui 标在后一个字母上。 ④ a、o、e 开头的音节接在别的音节后面时，用隔音符号隔开：xī’ān（西安）和 xiān（先）不一样。",
+    "en": "A few spelling rules change how pinyin is written, not how it sounds. ① On their own, i, u, ü are written yi, wu, yu, and finals starting with them use y or w: ia → ya, uo → wo, üe → yue. ② After an initial, iou, uei, uen drop the middle letter: iu, ui, un. ③ The tone mark goes on a if there is one, otherwise on o or e; in iu and ui it goes on the second letter. ④ When a syllable starting with a, o or e follows another syllable, an apostrophe separates them: xī’ān (the city Xi’an) is not xiān (first).",
+    "de": "Einige Schreibregeln ändern nur die Schreibung, nicht die Aussprache. ① Allein stehend schreibt man i, u, ü als yi, wu, yu; Finale, die mit ihnen beginnen, schreibt man mit y oder w: ia → ya, uo → wo, üe → yue. ② Nach einem Anlaut fällt in iou, uei, uen der mittlere Buchstabe weg: iu, ui, un. ③ Das Tonzeichen steht auf dem a, wenn es eins gibt, sonst auf o oder e; bei iu und ui auf dem zweiten Buchstaben. ④ Beginnt eine Silbe mit a, o oder e und folgt auf eine andere Silbe, trennt ein Apostroph sie: xī’ān (die Stadt Xi’an) ist nicht xiān („zuerst“).",
+    "pt": "Algumas regras mudam só a escrita do pinyin, não o som. ① Sozinhos, i, u, ü se escrevem yi, wu, yu, e as finais que começam com eles usam y ou w: ia → ya, uo → wo, üe → yue. ② Depois de uma consoante, iou, uei, uen perdem a letra do meio: iu, ui, un. ③ O acento vai no a, se houver; senão no o ou no e; em iu e ui, vai na segunda letra. ④ Quando uma sílaba começa com a, o ou e e vem depois de outra, um apóstrofo as separa: xī’ān (a cidade de Xi’an) não é xiān (“primeiro”)."
    },
    "tip": {
     "zh": "看到 yu、ju、qu、xu，里面都是 ü。",
@@ -3839,12 +3839,40 @@
       "xiè",
       "xìe"
      ]
+    },
+    {
+     "q": {
+      "zh": "西安 怎么写？",
+      "en": "How do you write 西安 (the city Xi’an)?",
+      "de": "Wie schreibt man 西安 (die Stadt Xi’an)?",
+      "pt": "Como se escreve 西安 (a cidade de Xi’an)?"
+     },
+     "a": "xī’ān",
+     "o": [
+      "xī’ān",
+      "xiān",
+      "xīān"
+     ]
+    },
+    {
+     "q": {
+      "zh": "ü + n 在 j 后面写成？",
+      "en": "j + ün is written…",
+      "de": "j + ün schreibt man…",
+      "pt": "j + ün se escreve…"
+     },
+     "a": "jun",
+     "o": [
+      "jun",
+      "jün",
+      "jiun"
+     ]
     }
    ],
    "practice": [
     {
      "type": "rule",
-     "n": 8
+     "n": 10
     }
    ]
   },
@@ -4080,6 +4108,496 @@
      "n": 2
     }
    ]
+  },
+  {
+   "id": 13,
+   "key": "nasal2",
+   "title": {
+    "zh": "带 i、u、ü 的鼻韵母",
+    "en": "Nasal finals with i, u, ü",
+    "de": "Nasalauslaute mit i, u, ü",
+    "pt": "Finais nasais com i, u, ü"
+   },
+   "sub": {
+    "zh": "ian/iang · uan/uang · üan/ün/iong",
+    "en": "ian/iang · uan/uang · üan/ün/iong",
+    "de": "ian/iang · uan/uang · üan/ün/iong",
+    "pt": "ian/iang · uan/uang · üan/ün/iong"
+   },
+   "video": "",
+   "intro": {
+    "zh": "第 10 课学了 a、e、i 后面的 -n 和 -ng。这两个韵尾也可以接在 i、u、ü 后面：ian / iang，uan / uang，üan / ün / iong。听韵尾：-n 舌尖顶上牙后面，-ng 舌根抬起来。注意：ian 里的 a 读得像 e（“yen”），iang 里的 a 才是完整的 a。j、q、x、y 后面的 ü 写成 u：yuan、xuan、jun、yun。",
+    "en": "In lesson 10 you met -n and -ng after a, e and i. The same two endings also follow i, u and ü: ian / iang, uan / uang, üan / ün / iong. Listen to the ending: for -n the tongue tip touches behind the upper teeth, for -ng the back of the tongue rises. Careful: the a in ian sounds like e (“yen”), but the a in iang is a full a. After j, q, x and y the ü is written u: yuan, xuan, jun, yun.",
+    "de": "In Lektion 10 kamen -n und -ng nach a, e und i vor. Dieselben Endungen stehen auch nach i, u und ü: ian / iang, uan / uang, üan / ün / iong. Hör auf die Endung: bei -n berührt die Zungenspitze die oberen Zähne von hinten, bei -ng hebt sich der hintere Zungenrücken. Achtung: Das a in ian klingt wie e („jen“), das a in iang ist ein volles a. Nach j, q, x und y schreibt man das ü als u: yuan, xuan, jun, yun.",
+    "pt": "Na lição 10 você viu -n e -ng depois de a, e e i. As mesmas terminações também vêm depois de i, u e ü: ian / iang, uan / uang, üan / ün / iong. Ouça a terminação: em -n a ponta da língua toca atrás dos dentes de cima; em -ng o fundo da língua sobe. Atenção: o a de ian soa como e (“yen”), mas o a de iang é um a completo. Depois de j, q, x e y o ü se escreve u: yuan, xuan, jun, yun."
+   },
+   "tip": {
+    "zh": "分两步慢慢说：先滑进 i、u 或 ü，再收到 -n 或 -ng。",
+    "en": "Say it slowly in two steps: first glide into i, u or ü, then close with -n or -ng.",
+    "de": "Sprich es langsam in zwei Schritten: erst in i, u oder ü gleiten, dann mit -n oder -ng abschließen.",
+    "pt": "Fale devagar em dois passos: primeiro deslize para i, u ou ü, depois feche com -n ou -ng."
+   },
+   "groups": [
+    {
+     "label": {
+      "zh": "ian 和 iang",
+      "en": "ian and iang",
+      "de": "ian und iang",
+      "pt": "ian e iang"
+     },
+     "items": [
+      {
+       "c": "先",
+       "py": "xiān",
+       "t": 1,
+       "m": {
+        "en": "first",
+        "de": "zuerst",
+        "pt": "primeiro"
+       },
+       "v": "ian"
+      },
+      {
+       "c": "香",
+       "py": "xiāng",
+       "t": 1,
+       "m": {
+        "en": "fragrant",
+        "de": "duftend",
+        "pt": "cheiroso"
+       },
+       "v": "iang"
+      },
+      {
+       "c": "钱",
+       "py": "qián",
+       "t": 2,
+       "m": {
+        "en": "money",
+        "de": "Geld",
+        "pt": "dinheiro"
+       },
+       "v": "ian"
+      },
+      {
+       "c": "墙",
+       "py": "qiáng",
+       "t": 2,
+       "m": {
+        "en": "wall",
+        "de": "Wand",
+        "pt": "parede"
+       },
+       "v": "iang"
+      },
+      {
+       "c": "年",
+       "py": "nián",
+       "t": 2,
+       "m": {
+        "en": "year",
+        "de": "Jahr",
+        "pt": "ano"
+       },
+       "v": "ian"
+      },
+      {
+       "c": "娘",
+       "py": "niáng",
+       "t": 2,
+       "m": {
+        "en": "mother",
+        "de": "Mutter",
+        "pt": "mãe"
+       },
+       "v": "iang"
+      },
+      {
+       "c": "间",
+       "py": "jiān",
+       "t": 1,
+       "m": {
+        "en": "between; room",
+        "de": "zwischen; Zimmer",
+        "pt": "entre; cômodo"
+       },
+       "v": "ian"
+      },
+      {
+       "c": "江",
+       "py": "jiāng",
+       "t": 1,
+       "m": {
+        "en": "river",
+        "de": "Fluss",
+        "pt": "rio"
+       },
+       "v": "iang"
+      }
+     ]
+    },
+    {
+     "label": {
+      "zh": "uan 和 uang",
+      "en": "uan and uang",
+      "de": "uan und uang",
+      "pt": "uan e uang"
+     },
+     "items": [
+      {
+       "c": "玩",
+       "py": "wán",
+       "t": 2,
+       "m": {
+        "en": "to play",
+        "de": "spielen",
+        "pt": "brincar"
+       },
+       "v": "uan"
+      },
+      {
+       "c": "王",
+       "py": "wáng",
+       "t": 2,
+       "m": {
+        "en": "king; surname Wang",
+        "de": "König; Familienname Wang",
+        "pt": "rei; sobrenome Wang"
+       },
+       "v": "uang"
+      },
+      {
+       "c": "关",
+       "py": "guān",
+       "t": 1,
+       "m": {
+        "en": "to close",
+        "de": "schließen",
+        "pt": "fechar"
+       },
+       "v": "uan"
+      },
+      {
+       "c": "光",
+       "py": "guāng",
+       "t": 1,
+       "m": {
+        "en": "light",
+        "de": "Licht",
+        "pt": "luz"
+       },
+       "v": "uang"
+      },
+      {
+       "c": "万",
+       "py": "wàn",
+       "t": 4,
+       "m": {
+        "en": "ten thousand",
+        "de": "zehntausend",
+        "pt": "dez mil"
+       },
+       "v": "uan"
+      },
+      {
+       "c": "忘",
+       "py": "wàng",
+       "t": 4,
+       "m": {
+        "en": "to forget",
+        "de": "vergessen",
+        "pt": "esquecer"
+       },
+       "v": "uang"
+      },
+      {
+       "c": "黄",
+       "py": "huáng",
+       "t": 2,
+       "m": {
+        "en": "yellow",
+        "de": "gelb",
+        "pt": "amarelo"
+       },
+       "v": "uang"
+      },
+      {
+       "c": "换",
+       "py": "huàn",
+       "t": 4,
+       "m": {
+        "en": "to change",
+        "de": "wechseln",
+        "pt": "trocar"
+       },
+       "v": "uan"
+      }
+     ]
+    },
+    {
+     "label": {
+      "zh": "üan、ün、iong",
+      "en": "üan, ün, iong",
+      "de": "üan, ün, iong",
+      "pt": "üan, ün, iong"
+     },
+     "items": [
+      {
+       "c": "远",
+       "py": "yuǎn",
+       "t": 3,
+       "m": {
+        "en": "far",
+        "de": "weit",
+        "pt": "longe"
+       }
+      },
+      {
+       "c": "圆",
+       "py": "yuán",
+       "t": 2,
+       "m": {
+        "en": "round",
+        "de": "rund",
+        "pt": "redondo"
+       }
+      },
+      {
+       "c": "选",
+       "py": "xuǎn",
+       "t": 3,
+       "m": {
+        "en": "to choose",
+        "de": "wählen",
+        "pt": "escolher"
+       }
+      },
+      {
+       "c": "云",
+       "py": "yún",
+       "t": 2,
+       "m": {
+        "en": "cloud",
+        "de": "Wolke",
+        "pt": "nuvem"
+       }
+      },
+      {
+       "c": "裙",
+       "py": "qún",
+       "t": 2,
+       "m": {
+        "en": "skirt",
+        "de": "Rock",
+        "pt": "saia"
+       }
+      },
+      {
+       "c": "春",
+       "py": "chūn",
+       "t": 1,
+       "m": {
+        "en": "spring",
+        "de": "Frühling",
+        "pt": "primavera"
+       }
+      },
+      {
+       "c": "孙",
+       "py": "sūn",
+       "t": 1,
+       "m": {
+        "en": "grandchild",
+        "de": "Enkel",
+        "pt": "neto"
+       }
+      },
+      {
+       "c": "熊",
+       "py": "xióng",
+       "t": 2,
+       "m": {
+        "en": "bear",
+        "de": "Bär",
+        "pt": "urso"
+       }
+      },
+      {
+       "c": "兄",
+       "py": "xiōng",
+       "t": 1,
+       "m": {
+        "en": "elder brother",
+        "de": "älterer Bruder",
+        "pt": "irmão mais velho"
+       }
+      },
+      {
+       "c": "用",
+       "py": "yòng",
+       "t": 4,
+       "m": {
+        "en": "to use",
+        "de": "benutzen",
+        "pt": "usar"
+       }
+      }
+     ]
+    }
+   ],
+   "pairs": [
+    [
+     "先",
+     "xiān",
+     "香",
+     "xiāng"
+    ],
+    [
+     "钱",
+     "qián",
+     "墙",
+     "qiáng"
+    ],
+    [
+     "玩",
+     "wán",
+     "王",
+     "wáng"
+    ],
+    [
+     "万",
+     "wàn",
+     "忘",
+     "wàng"
+    ],
+    [
+     "云",
+     "yún",
+     "银",
+     "yín"
+    ],
+    [
+     "裙",
+     "qún",
+     "琴",
+     "qín"
+    ],
+    [
+     "选",
+     "xuǎn",
+     "显",
+     "xiǎn"
+    ]
+   ],
+   "rules": [
+    {
+     "q": {
+      "zh": "x + üan 写成？",
+      "en": "x + üan is written…",
+      "de": "x + üan schreibt man…",
+      "pt": "x + üan se escreve…"
+     },
+     "a": "xuan",
+     "o": [
+      "xuan",
+      "xüan",
+      "xiuan"
+     ]
+    },
+    {
+     "q": {
+      "zh": "y + ün 写成？",
+      "en": "y + ün is written…",
+      "de": "y + ün schreibt man…",
+      "pt": "y + ün se escreve…"
+     },
+     "a": "yun",
+     "o": [
+      "yun",
+      "yün",
+      "yiun"
+     ]
+    },
+    {
+     "q": {
+      "zh": "ch + uen 写成？",
+      "en": "ch + uen is written…",
+      "de": "ch + uen schreibt man…",
+      "pt": "ch + uen se escreve…"
+     },
+     "a": "chun",
+     "o": [
+      "chun",
+      "chuen",
+      "chuan"
+     ]
+    },
+    {
+     "q": {
+      "zh": "ian 自己成音节，写成？",
+      "en": "ian on its own is written…",
+      "de": "ian allein schreibt man…",
+      "pt": "ian sozinho se escreve…"
+     },
+     "a": "yan",
+     "o": [
+      "yan",
+      "ian",
+      "yian"
+     ]
+    },
+    {
+     "q": {
+      "zh": "uang 自己成音节，写成？",
+      "en": "uang on its own is written…",
+      "de": "uang allein schreibt man…",
+      "pt": "uang sozinho se escreve…"
+     },
+     "a": "wang",
+     "o": [
+      "wang",
+      "uang",
+      "wuang"
+     ]
+    },
+    {
+     "q": {
+      "zh": "iong 自己成音节，写成？",
+      "en": "iong on its own is written…",
+      "de": "iong allein schreibt man…",
+      "pt": "iong sozinho se escreve…"
+     },
+     "a": "yong",
+     "o": [
+      "yong",
+      "iong",
+      "yiong"
+     ]
+    }
+   ],
+   "practice": [
+    {
+     "type": "mpair",
+     "n": 8
+    },
+    {
+     "type": "rule",
+     "n": 3
+    }
+   ],
+   "table": {
+    "kind": "fin",
+    "rows": [
+     "ian",
+     "iang",
+     "uan",
+     "uang",
+     "üan",
+     "ün",
+     "iong",
+     "uen"
+    ]
+   }
   }
  ],
  "sounds": {
@@ -4364,6 +4882,66 @@
    "en": "Like “oong”, lips round.",
    "de": "Wie „ung“ in „Lunge“.",
    "pt": "Como “ung”, lábios redondos."
+  },
+  "ian": {
+   "zh": "a 在这里读得像 e：ian 接近“yen”，要短，最后收在 n。",
+   "en": "The a sounds like the e in “bed” here: ian ≈ “yen”. Keep it short and finish with -n.",
+   "de": "Das a klingt hier wie das e in „Bett“: ian ≈ „jen“. Kurz halten und mit -n enden.",
+   "pt": "O a soa como o e de “pé”: ian ≈ “ién”. Curto, terminando em -n."
+  },
+  "iang": {
+   "zh": "这里的 a 是完整的 a：i + ang，像“呀 + ng”。",
+   "en": "Here the a is a full open a: i + ang, ≈ “yahng”.",
+   "de": "Hier ist das a ein volles, offenes a: i + ang, ≈ „jang“.",
+   "pt": "Aqui o a é aberto e completo: i + ang, ≈ “iáng”."
+  },
+  "uan": {
+   "zh": "u + an：先圆唇，再读 an，最后收在 n。",
+   "en": "u + an: round your lips first, then say an and finish with -n.",
+   "de": "u + an: erst die Lippen runden, dann an sprechen und mit -n enden.",
+   "pt": "u + an: arredonde os lábios primeiro, depois diga an, terminando em -n."
+  },
+  "uang": {
+   "zh": "u + ang：先圆唇，再读 ang，鼻音在后面。",
+   "en": "u + ang: round your lips first, then ang with the nasal sound at the back.",
+   "de": "u + ang: erst die Lippen runden, dann ang mit dem Nasal hinten.",
+   "pt": "u + ang: arredonde os lábios primeiro, depois ang com o som nasal lá atrás."
+  },
+  "üan": {
+   "zh": "ü + an，但 a 读得像 e：yuan 接近“yü-en”，嘴唇保持圆形。",
+   "en": "ü + an, but the a sounds like e: yuan ≈ “yü-en”, lips stay rounded.",
+   "de": "ü + an, aber das a klingt wie e: yuan ≈ „jü-en“, die Lippen bleiben gerundet.",
+   "pt": "ü + an, mas o a soa como e: yuan ≈ “iü-én”, lábios sempre arredondados."
+  },
+  "ün": {
+   "zh": "ü + n：念 yin，但嘴唇圆起来，收在 n。j、q、x、y 后写成 jun、qun、xun、yun。",
+   "en": "ü + n: say yin with rounded lips and finish with -n. After j, q, x, y it is written jun, qun, xun, yun.",
+   "de": "ü + n: wie „in“ mit gerundeten Lippen, am Ende -n. Nach j, q, x, y schreibt man jun, qun, xun, yun.",
+   "pt": "ü + n: diga yin com os lábios arredondados, terminando em -n. Depois de j, q, x, y escreve-se jun, qun, xun, yun."
+  },
+  "iong": {
+   "zh": "i + ong，嘴唇圆起来：xiōng、yòng。",
+   "en": "i + ong with rounded lips: xiōng, yòng.",
+   "de": "i + ong mit gerundeten Lippen: xiōng, yòng.",
+   "pt": "i + ong com os lábios arredondados: xiōng, yòng."
+  },
+  "uen": {
+   "zh": "u + en：有声母时写成 -un（chūn、kùn），但中间的 e 还在。",
+   "en": "u + en: after an initial it is written -un (chūn, kùn), but the e is still there.",
+   "de": "u + en: nach einem Anlaut schreibt man -un (chūn, kùn), das e ist aber noch da.",
+   "pt": "u + en: depois de uma consoante escreve-se -un (chūn, kùn), mas o e continua lá."
+  },
+  "ueng": {
+   "zh": "只出现在单独成音节的 weng：wēng（老翁）。",
+   "en": "Only appears on its own as weng: wēng (old man).",
+   "de": "Kommt nur allein als weng vor: wēng (alter Mann).",
+   "pt": "Aparece só sozinho, como weng: wēng (velho)."
+  },
+  "er": {
+   "zh": "发 e 的同时把舌尖卷起来：èr（二）、ér（儿）。",
+   "en": "Say e while curling the tongue tip back: èr (two), ér (son).",
+   "de": "e sprechen und dabei die Zungenspitze zurückrollen: èr (zwei), ér (Sohn).",
+   "pt": "Diga e enquanto curva a ponta da língua para trás: èr (dois), ér (filho)."
   }
  }
 }
