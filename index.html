@@ -3391,19 +3391,20 @@ setTimeout(()=>{ const go=()=>{ try{ dicPreload(); }catch(e){} }; if("requestIdl
 /* ---------- first day: three quick questions, then a checklist on Today ---------- */
 const onb=()=>S.settings.onb||null;
 const onbActive=()=>{ const o=onb(); if(!o||o.hide) return false; const days=Math.round((new Date(today())-new Date(o.start))/864e5); return days<=1; };
+const onbTasks=()=>{ const o=onb(); return o&&o.who==="zero"?[["py","先学拼音第 1 课（听、记、练）","pinyin"],...ONB_TASKS]:ONB_TASKS; };
 const ONB_TASKS=[["read","读一篇短文，点一个不认识的词","read"],["save","把一个词收进生词","read"],["cards","学完今天的新词卡","today"],["write","在米字格里跟着写一个字","today"]];
 function onbTick(k){ const o=onb(); if(!o||o.hide||(o.t&&o.t[k])) return; o.t=Object.assign({},o.t,{[k]:Date.now()}); save(); onbDay();
-  const left=ONB_TASKS.filter(([x])=>!o.t[x]).length; if(!left) toast(trOne("第一天完成了！明天回来复习今天的词。")||""); }
+  const left=onbTasks().filter(([x])=>!o.t[x]).length; if(!left) toast(trOne("第一天完成了！明天回来复习今天的词。")||""); }
 function onbDay(){ const el=$("#onb-day"); if(!el) return; const o=onb();
   if(!onbActive()){ el.innerHTML=""; return; }
-  const t=o.t||{}, done=ONB_TASKS.filter(([k])=>t[k]).length, all=done===ONB_TASKS.length;
+  const t=o.t||{}, TK=onbTasks(), done=TK.filter(([k])=>t[k]).length, all=done===TK.length;
   el.innerHTML=`<div class="onb-day"><button class="ib sm x" type="button" id="onb-hide" aria-label="关闭">${I.x}</button>
-    <h3>${all?"第一天完成了 🎉":"你的第一天"}</h3><p class="sub">${all?"明天打开字里，会先复习今天学过的词。":`<span data-noi18n>${done} / ${ONB_TASKS.length}</span>`}</p>
-    <ol>${ONB_TASKS.map(([k,txt,tab],i)=>`<li class="${t[k]?"done":""}"><span class="ck">${t[k]?"✓":i+1}</span><span class="tx">${txt}</span>${!t[k]&&tab==="read"&&cur!=="read"&&ONB_TASKS.find(([x,,tb])=>tb==="read"&&!t[x])[0]===k?`<button class="btn sm ghost" type="button" data-onbgo="read">去阅读</button>`:""}</li>`).join("")}</ol></div>`;
+    <h3>${all?"第一天完成了 🎉":"你的第一天"}</h3><p class="sub">${all?"明天打开字里，会先复习今天学过的词。":`<span data-noi18n>${done} / ${TK.length}</span>`}</p>
+    <ol>${TK.map(([k,txt,tab],i)=>`<li class="${t[k]?"done":""}"><span class="ck">${t[k]?"✓":i+1}</span><span class="tx">${txt}</span>${!t[k]&&(tab==="read"||tab==="pinyin")&&cur!==tab&&TK.find(([x,,tb])=>tb===tab&&!t[x])[0]===k?`<button class="btn sm ghost" type="button" data-onbgo="${tab}">${tab==="pinyin"?"去学拼音":"去阅读"}</button>`:""}</li>`).join("")}</ol></div>`;
 }
 document.addEventListener("click",e=>{ const b=e.target.closest("#onb-hide,[data-onbgo]"); if(!b) return;
   if(b.id==="onb-hide"){ const o=onb(); if(o){ o.hide=true; save(); } onbDay(); return; }
-  showTab(b.dataset.onbgo); });
+  if(b.dataset.onbgo==="pinyin") pyOpen("lesson",1); else showTab(b.dataset.onbgo); });
 const ONB={step:0,who:"",goal:10,tone:0,gl:""};
 function onbStart(){
   ONB.step=0; ONB.who=""; ONB.goal=10; ONB.tone=0; ONB.gl=["en","de","pt"].includes(UIL)?UIL:(n=>n.startsWith("de")?"de":n.startsWith("pt")?"pt":"en")((navigator.language||"").toLowerCase());
@@ -4916,6 +4917,8 @@ const UI_DICT=[
 ["把一个词收进生词", "Save a word to your list", "Speichere ein Wort", "Salve uma palavra", "把一個詞收進生詞"],
 ["学完今天的新词卡", "Finish today’s new cards", "Schließe die heutigen neuen Karten ab", "Termine os cartões de hoje", "學完今天的新詞卡"],
 ["在米字格里跟着写一个字", "Write one character in the grid", "Schreib ein Zeichen im Raster nach", "Escreva um caractere na grade", "在米字格裡跟著寫一個字"],
+["先学拼音第 1 课（听、记、练）", "First, pinyin lesson 1 (listen, remember, practise)", "Zuerst Pinyin-Lektion 1 (hören, merken, üben)", "Primeiro, a lição 1 de pinyin (ouvir, lembrar, praticar)", "先學拼音第 1 課（聽、記、練）"],
+["去学拼音", "Go to Pinyin", "Zum Pinyin", "Ir para o pinyin", "去學拼音"],
 ["去阅读", "Go to Read", "Zum Lesen", "Ir para leitura", "去閱讀"],
 ["第一天完成了！明天回来复习今天的词。", "Day one done! Come back tomorrow to review.", "Tag 1 geschafft! Morgen wird wiederholt.", "Primeiro dia concluído! Volte amanhã para revisar.", "第一天完成了！明天回來複習今天的詞。"],
 ["点任何一个词，看读音、意思和笔顺，还可以收进生词。", "Tap any word to see its pinyin, meaning and stroke order — and save it.", "Tippe auf ein Wort: Aussprache, Bedeutung und Strichfolge – und speichere es.", "Toque numa palavra para ver pinyin, significado e traços — e salvá-la.", "點任何一個詞，看讀音、意思和筆順，還可以收進生詞。"],
@@ -5508,7 +5511,7 @@ function pyVResult(back,title){ const Q=PY.q, n=Q.list.length, acc=n?Q.right/n:0
     if(Q.daily) p.daily={at:today(),acc};
     else { const o=p.done[Q.lid]||{best:0}; p.done[Q.lid]={best:Math.max(o.best||0,acc),last:acc,at:today()}; }
     save(); pyEntry(); }
-  const win=!Q.daily&&acc>=.8; let h=pyHead(back,title)+`<div class="pyres${win?" win":""}">${win?`<div class="pyconf" aria-hidden="true">${"<i></i>".repeat(14)}</div>`:""}<div class="pyscore">${Q.right}<small>/${n}</small></div><p>答对 ${Q.right} / ${n}</p>`;
+  const win=!Q.daily&&acc>=.8; if(win) onbTick("py"); let h=pyHead(back,title)+`<div class="pyres${win?" win":""}">${win?`<div class="pyconf" aria-hidden="true">${"<i></i>".repeat(14)}</div>`:""}<div class="pyscore">${Q.right}<small>/${n}</small></div><p>答对 ${Q.right} / ${n}</p>`;
   if(!Q.daily) h+=acc>=.8?`<p class="pypass"><b>通过了！</b> <span>这一课算掌握了。</span></p>`:`<p class="pytry">答对 80% 才算掌握。回到课程再听一遍卡片，然后再练一次。</p>`;
   if(!Q.daily&&pyPassed()>=pyLessons().length) h+=`<div class="pytip"><b>拼音课全部通过 🎉</b><p>四个声调、声母、韵母和变调你都练过了。现在可以去读第一篇文章，遇到不会的字点一下就能查。</p><button class="btn primary sm" type="button" data-py="goread">去读文章</button></div>`;
   const miss=Q.miss.filter(q=>q.it);
@@ -5580,6 +5583,7 @@ document.addEventListener("click",e=>{ const b=e.target.closest("[data-glsw]"); 
   S.settings.gloss[l]=LANG[l].gl.filter(x=>v.includes(x)); save(); try{ renderSettings(); }catch(err){} mgRender(); });
 /* one-time notice: the pinyin course is new */
 function pyAnnounce(){ if(lsGet("zl-new-py","")==="1") return; if(detailOpen||document.querySelector(".pynew")) return;
+  { const o=S.settings.onb; if(o&&!o.existing){ lsSet("zl-new-py","1"); return; } } /* "new feature" is only news for people who used the app before the pinyin course existed */
   const el=document.createElement("div"); el.className="pynew"; el.setAttribute("role","dialog"); el.setAttribute("aria-modal","true");
   el.innerHTML=`<div class="pynew-c"><span class="pynew-k">新功能</span><h3>拼音课</h3><p>14 节课，从四个声调到变调：每个音都能听、能录音对比，还有组合表、拼音表和每日练声调。</p><p class="muted small">在底部的「拼音」里，随时可以自学。</p><div class="row"><button class="btn ghost" type="button" data-pynew="0">知道了</button><button class="btn primary" type="button" data-pynew="1">去看看</button></div></div>`;
   document.body.appendChild(el);
