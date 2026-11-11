@@ -2441,7 +2441,7 @@ function renderCard(){
   const imgEl=hasImg?`<div class="cimg" data-img="${esc(c.id)}"></div>`:"";
   const imgFront=hasImg&&S.settings.imgFront;
   const extra=c.extra&&c.extra!=="—"&&!(c.lang==="zh"&&pyOn())?`<div class="extra">${esc(c.extra)}</div>`:"";
-  const backBits=()=>`${memo?`<div class="memo"><b>记忆</b><span data-noi18n>${esc(memo)}</span></div>`:""}${exHTML(c)}${mine.length?`<div class="mine"><span class="h">我的例句</span>${mine.slice(0,3).map(m=>`<div class="s">${esc(m.t)}${m.fix&&m.fix!==m.t?`<span class="fx">→ ${esc(m.fix)}</span>`:""}</div>`).join("")}</div>`:""}`;
+  const backBits=()=>`${memo?`<div class="memo"><b>记忆</b><span data-noi18n>${esc(memo)}</span></div>`:""}${c.from&&String(c.from).includes("|")?`<div class="src-row"><button class="btn ghost sm" id="c-src" type="button">回到这篇文章 →</button></div>`:""}${exHTML(c)}${mine.length?`<div class="mine"><span class="h">我的例句</span>${mine.slice(0,3).map(m=>`<div class="s">${esc(m.t)}${m.fix&&m.fix!==m.t?`<span class="fx">→ ${esc(m.fix)}</span>`:""}</div>`).join("")}</div>`:""}`;
   let body;
   if(dir==="t2g"){
     body=`${imgFront?imgEl:""}<div class="word">${wordHTML(c)}</div><div class="row" style="justify-content:center">${posChip(c)}</div>`;
@@ -2461,6 +2461,7 @@ function renderCard(){
     <div class="foot"><span>本轮剩余 ${sess.queue.length+1} 张</span>${sess.flipped&&!hasImg&&!mine.length&&!hasAud?`<button class="btn ghost sm" id="c-add">${I.pen} 例句 / 录音</button>`:`<span>${sess.mode==="pile"?"评「简单」会移出生词堆":""}</span>`}</div>`;
   fillImgs(area);
   $("#c-say").onclick=()=>speak(sess.flipped&&c.ex?c.w+"。"+c.ex:c.w);
+  const cs=$("#c-src"); if(cs) cs.onclick=()=>mgJump(c.from);
   const cm=$("#c-mine"); if(cm) cm.onclick=()=>playMine(c.id,sess.flipped&&au.s?"s":"w");
   $("#c-pile").onclick=()=>{ togglePile(c.id); renderCard(); };
   $("#c-edit").onclick=()=>openDetail(c.id);
@@ -2721,7 +2722,7 @@ function addFromReader0(v){
     const LL=S[l], ex=syFind(l,w);
     if(ex){ if(!LL.pile[ex.id]){ LL.pile[ex.id]=Date.now(); save(); renderStrip(); } return "dup"; }
     const id="u:"+Date.now().toString(36)+Math.random().toString(36).slice(2,8), py=v.py||zPy(w);
-    LL.custom.push({id,lvl:syLevel(l,v.level),w,pos:syPos(l,v),extra:py,py,en:String(v.en||""),de:String(v.de||""),pt:String(v.pt||""),ex:String(v.sentence||"").trim(),exzh:"",exen:"",exde:"",expt:"",src:"reading"});
+    LL.custom.push({id,lvl:syLevel(l,v.level),w,pos:syPos(l,v),extra:py,py,en:String(v.en||""),de:String(v.de||""),pt:String(v.pt||""),ex:String(v.sentence||"").trim(),exzh:"",exen:"",exde:"",expt:"",src:"reading",from:v.from||undefined});
     const memo=[v.note,v.source?("出自 "+v.source+(v.date&&v.date!=="lib"?" · "+v.date:"")):""].filter(Boolean).join("\n"); if(memo) LL.memo[id]=memo;
     LL.pile[id]=Date.now(); rebuildCards(); save(); renderStrip(); if(sess&&sess.mode==="daily"&&!sess.flipped) buildDaily();
     return "ok";
@@ -2731,7 +2732,7 @@ function addFromReader0(v){
   const LL=S[l], ex=syFind(l,w);
   if(ex){ if(!LL.pile[ex.id]){ LL.pile[ex.id]=Date.now(); save(); renderStrip(); } return "dup"; }
   const id="u:"+Date.now().toString(36)+Math.random().toString(36).slice(2,8);
-  const rec={id,lvl:syLevel(l,v.level),w,pos:syPos(l,v),extra:"",ex:String(v.sentence||v.example||"").trim(),exzh:v.sentence?"":String(v.example_zh||"").trim(),exen:"",src:"Marginalia"};
+  const rec={id,lvl:syLevel(l,v.level),w,pos:syPos(l,v),extra:"",ex:String(v.sentence||v.example||"").trim(),exzh:v.sentence?"":String(v.example_zh||"").trim(),exen:"",src:"Marginalia",from:v.from||undefined};
   LANG[l].gl.forEach(k=>rec[k]=""); rec.zh=zh;
   if(def){ if(LANG[l].gl.includes("def")) rec.def=def; else if(LANG[l].gl.includes("en")) rec.en=def; }
   LL.custom.push(rec);
@@ -3737,11 +3738,13 @@ async function claudeCallModel(prompt,maxTokens,model,signal){
   if(!r.ok){ let m=""; try{ const j=await r.json(); m=(j.error&&j.error.message)||""; }catch(e){} throw {code:r.status===404||(r.status===400&&/model/i.test(m))?"bad_model":r.status===401||r.status===403?"bad_key":r.status===429?"rate_limited":"upstream_error",message:m}; }
   const j=await r.json(); return (j.content||[]).filter(b=>b.type==="text").map(b=>b.text).join("");
 }
+/* 记下生词来自哪一篇（只记每日文章，「我的文章」「课文库」没有固定日期，不记） */
+function mgFromKey(){ const c=MG.cur; return c&&/^\d{4}-\d{2}-\d{2}$/.test(String(c.date))?c.date+"|"+c.i:undefined; }
 function mgSaveWord(){
   const s=MG.sheet, it=MG.cur&&MG.cur.it; if(!s||!it) return;
   if(s.zh){
     const mine=($("#mg-zh-in").value||"").trim(); s.mine=mine;
-    const v={lang:"zh",word:s.word,lemma:s.lemma,py:s.py,en:s.en||(!s.de&&!s.pt?wkShort(s):""),de:s.de,pt:s.pt,pos:s.pos,note:s.note,sentence:s.sentence,source:it.title,date:MG.cur.date,level:it.level};
+    const v={lang:"zh",word:s.word,lemma:s.lemma,py:s.py,en:s.en||(!s.de&&!s.pt?wkShort(s):""),de:s.de,pt:s.pt,pos:s.pos,note:s.note,sentence:s.sentence,source:it.title,date:MG.cur.date,level:it.level,from:mgFromKey()};
     if(mine) v[glSel()[0]]=mine;
     if(!v.en&&!v.de&&!v.pt){ $("#mg-smsg").textContent="先填一个释义。"; $("#mg-zh-in").focus(); return; }
     const r=addFromReader(v);
@@ -3751,12 +3754,22 @@ function mgSaveWord(){
   s.zh=($("#mg-zh-in").value||"").trim();
   const def=s.en||wkShort(s);
   if(!s.zh&&!def){ $("#mg-smsg").textContent="先填一个中文释义。"; $("#mg-zh-in").focus(); return; }
-  const r=addFromReader({lang:lang(),word:s.word,lemma:s.lemma,zh:s.zh,def,pos:s.pos,gender:s.gender,note:s.note,sentence:s.sentence,source:it.title,date:MG.cur.date,level:it.level});
+  const r=addFromReader({lang:lang(),word:s.word,lemma:s.lemma,zh:s.zh,def,pos:s.pos,gender:s.gender,note:s.note,sentence:s.sentence,source:it.title,date:MG.cur.date,level:it.level,from:mgFromKey()});
   toast(r==="ok"?"已收进「"+s.lemma+"」，在生词堆里":r==="dup"?"已经在字匣里，放进了生词堆":"没有保存");
   MG.sheet=null; mgPaint(); $$(".mg-w.on").forEach(x=>x.classList.remove("on"));
   if(r==="ok") mgRender();
 }
 function mgClose(){ shReset(); MG.ctl&&MG.ctl.abort(); MG.sheet=null; mgPaint(); $$(".mg-w.on").forEach(x=>x.classList.remove("on")); }
+/* 从复习卡跳回生词来源的那篇文章，定位到那一天的那一篇 */
+async function mgJump(key){
+  const [d,i]=String(key||"").split("|"); if(!d) return;
+  if(!MG.idx&&!MG.err) await mgLoad();
+  const k=MG.idx&&MG.idx.days?MG.idx.days.findIndex(x=>x.date===d):-1;
+  if(k<0){ toast("这篇文章已经不在最近的文章里了"); return; }
+  showTab("read"); MG.mine=null; MG.col=false; MG.key=d+"|"+(+i); MG.di=k; MG.tr=null;
+  mgClose(); rdStop(); mgRender();
+  window.scrollTo({top:0});
+}
 $("#tab-read").addEventListener("click",e=>{
   const t=e.target, b=t.closest("button");
   const w=t.closest(".mg-w");
