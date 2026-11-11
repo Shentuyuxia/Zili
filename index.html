@@ -1089,7 +1089,7 @@ body .py .tn1,body.tones .py .tn1{color:var(--py1)} body .py .tn2,body.tones .py
 .pyguide{margin:8px 0 12px;padding:10px 14px 10px 32px;border:1px dashed var(--line);border-radius:12px;font-size:14px;line-height:1.7;color:var(--ink)}.pyguide b{color:var(--acc);margin-right:6px}.pyhc{color:var(--muted);font-size:12.5px;margin-left:6px;white-space:nowrap}
 .pysteps{display:flex;gap:6px;margin:6px 0 14px}.pystep{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;border:1px solid var(--line);background:var(--surface);color:var(--muted);border-radius:999px;padding:8px 6px;font:inherit;font-size:14px;cursor:pointer}.pystep i{font-style:normal;font-weight:700;opacity:.7}.pystep b{font-weight:600}.pystep.on{background:var(--acc);color:var(--on-acc);border-color:var(--acc)}.pystep .pyhc{margin:0;font-size:11.5px;color:inherit;opacity:.85}
 .pymouth{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:8px 0}.pymouth figure{margin:0;border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:8px 10px}.pymouth figcaption{font-size:13px;line-height:1.5;color:var(--ink);margin-top:4px}
-.pymo{width:100%;height:auto;display:block}.mh-head{fill:none;stroke:var(--muted);stroke-width:2.5;stroke-linecap:round}.mh-tooth{fill:var(--surface);stroke:var(--muted);stroke-width:1.8}.mh-lip{fill:none;stroke:var(--muted);stroke-width:3;stroke-linecap:round}.mh-tongue{fill:var(--acc);fill-opacity:.22;stroke:var(--acc);stroke-width:2.6;stroke-linejoin:round}.mh-dot{fill:#c8553d}
+.pymo{width:100%;height:auto;display:block}.mh-head{fill:none;stroke:var(--muted);stroke-width:2.5;stroke-linecap:round}.mh-tooth{fill:var(--surface);stroke:var(--muted);stroke-width:1.8}.mh-lip{fill:none;stroke:var(--muted);stroke-width:3;stroke-linecap:round}.mh-tongue{fill:var(--acc);fill-opacity:.22;stroke:var(--acc);stroke-width:2.6;stroke-linejoin:round}.mh-dot{fill:#c8553d}.mh-air{fill:none;stroke:#c8553d;stroke-width:2;stroke-linecap:round;opacity:.9}.mh-air.big{stroke-width:3.2}
 .pyready p{margin:4px 0 0}.pyres{position:relative}.pyres.win .pyscore{animation:pypop .6s cubic-bezier(.2,1.4,.4,1)}@keyframes pypop{0%{transform:scale(.4);opacity:0}100%{transform:scale(1);opacity:1}}
 .pyconf{position:absolute;left:0;right:0;top:0;height:0;pointer-events:none;overflow:visible}.pyconf i{position:absolute;top:0;width:8px;height:12px;border-radius:2px;opacity:0;background:var(--acc);animation:pyfall 1.6s ease-out forwards}
 .pyconf i:nth-child(3n){background:#d9a441}.pyconf i:nth-child(3n+1){background:#c8553d}
@@ -4274,7 +4274,7 @@ const UI_DICT=[
 ["准备好了吗？", "Ready?", "Bereit?", "Pronto?", "準備好了嗎？"],
 ["{0} 道题，答对 80% 就算掌握这一课。", "{0} questions; 80% correct and the lesson counts as mastered.", "{0} Fragen; bei 80 % richtig gilt die Lektion als gelernt.", "{0} perguntas; com 80% de acertos a lição conta como dominada.", "{0} 道題，答對 80% 就算掌握這一課。"],
 ["口型示意图", "Mouth diagrams", "Mundstellung", "Posição da boca", "口型示意圖"],
-["示意图，脸朝左：粗线是舌头，红点是舌头碰到或靠近的地方。", "Schematic, face looking left: the thick line is the tongue; the red dot is where it touches or comes close.", "Schematisch, Gesicht nach links: Die dicke Linie ist die Zunge, der rote Punkt zeigt, wo sie berührt oder nah herankommt.", "Esquema, rosto virado para a esquerda: a linha grossa é a língua; o ponto vermelho mostra onde ela toca ou chega perto.", "示意圖，臉朝左：粗線是舌頭，紅點是舌頭碰到或靠近的地方。"],
+["示意图，脸朝左：粗线是舌头，红点是接触或靠近的地方，红线是气流。", "Schematic, face looking left: the thick line is the tongue, the red dot is where things touch or come close, red lines show airflow.", "Schematisch, Gesicht nach links: Die dicke Linie ist die Zunge, der rote Punkt zeigt Berührung oder Nähe, rote Linien zeigen die Luft.", "Esquema, rosto virado para a esquerda: a linha grossa é a língua, o ponto vermelho mostra onde toca ou chega perto, as linhas vermelhas mostram o ar.", "示意圖，臉朝左：粗線是舌頭，紅點是接觸或靠近的地方，紅線是氣流。"],
 ["继续学习", "Continue", "Weiterlernen", "Continuar", "繼續學習"],
 ["每日练声调", "Daily tone practice", "Tägliches Tontraining", "Treino diário de tons", "每日練聲調"],
 ["拼音表", "Pinyin chart", "Pinyin-Tabelle", "Tabela de pinyin", "拼音表"],
@@ -5362,14 +5362,19 @@ const PYMO={
   i:{t:"M162 116 C136 104 112 74 88 66 C70 60 54 68 48 84",lips:"spread"},
   u:{t:"M162 116 C168 92 156 62 138 62 C116 64 96 90 54 90",lips:"round"},
   "ü":{t:"M162 116 C136 104 112 74 88 66 C70 60 54 68 48 84",lips:"round"},
-  a:{t:"M162 116 C140 119 100 115 54 109",lips:"wide"}
+  a:{t:"M162 116 C140 119 100 115 54 109",lips:"wide"},
+  b:{t:"M162 116 C140 114 100 108 58 102",lips:"closed",air:"b",dot:[30,72]},
+  p:{t:"M162 116 C140 114 100 108 58 102",lips:"closed",air:"p",dot:[30,72]},
+  m:{t:"M162 116 C140 114 100 108 58 102",lips:"closed",air:"m",dot:[30,72]},
+  f:{t:"M162 116 C140 114 100 108 58 102",lips:"teeth",air:"f",dot:[42,69]}
 };
+const PYAIR={b:`<path class="mh-air" d="M20 72 H11"/>`,p:`<path class="mh-air big" d="M20 62 H3 M22 72 H1 M20 82 H3"/>`,f:`<path class="mh-air" d="M32 74 H10 M32 82 H12"/>`,m:`<path class="mh-air" d="M132 36 C132 20 104 12 62 14 M62 14 L70 8 M62 14 L70 20"/>`};
 function pyMouthSvg(k){ const m=PYMO[k]; if(!m) return "";
   const nums=m.t.match(/-?\d+(\.\d+)?/g).map(Number), tx=nums[nums.length-2], ty=nums[nums.length-1];
-  const lips=m.lips==="round"?`<path class="mh-lip" d="M18 50 Q14 60 26 63 M18 84 Q14 74 26 71"/>`:m.lips==="spread"?`<path class="mh-lip" d="M26 54 Q26 63 36 64 M26 80 Q26 72 36 71"/>`:m.lips==="wide"?`<path class="mh-lip" d="M28 44 Q28 56 36 58 M28 100 Q28 88 36 86"/>`:`<path class="mh-lip" d="M28 50 Q28 62 36 63 M28 90 Q28 76 36 75"/>`;
-  return `<svg class="pymo" viewBox="0 0 190 140" role="img" aria-hidden="true"><path class="mh-head" d="M47 53 L58 50 C72 44 100 30 130 36 C146 40 153 48 156 60 L158 74"/><path class="mh-head" d="M46 98 C90 114 130 124 162 126"/><path class="mh-head" d="M158 74 C176 88 178 112 164 130"/><rect class="mh-tooth" x="38" y="50" width="8" height="18" rx="2"/><rect class="mh-tooth" x="38" y="80" width="8" height="18" rx="2"/>${lips}<path class="mh-tongue" d="${m.t} L${tx} ${ty+11} Q110 134 162 130 Z"/>${m.dot?`<circle class="mh-dot" cx="${m.dot[0]}" cy="${m.dot[1]}" r="4.5"/>`:""}</svg>`; }
+  const lips=m.lips==="closed"?`<path class="mh-lip" d="M24 52 Q22 64 30 72 Q22 80 24 92"/>`:m.lips==="teeth"?`<path class="mh-lip" d="M28 50 Q28 62 36 64 M26 98 Q24 82 41 71"/>`:m.lips==="round"?`<path class="mh-lip" d="M18 50 Q14 60 26 63 M18 84 Q14 74 26 71"/>`:m.lips==="spread"?`<path class="mh-lip" d="M26 54 Q26 63 36 64 M26 80 Q26 72 36 71"/>`:m.lips==="wide"?`<path class="mh-lip" d="M28 44 Q28 56 36 58 M28 100 Q28 88 36 86"/>`:`<path class="mh-lip" d="M28 50 Q28 62 36 63 M28 90 Q28 76 36 75"/>`;
+  return `<svg class="pymo" viewBox="0 0 190 140" role="img" aria-hidden="true"><path class="mh-head" d="M47 53 L58 50 C72 44 100 30 130 36 C146 40 153 48 156 60 L158 74"/><path class="mh-head" d="M46 98 C90 114 130 124 162 126"/><path class="mh-head" d="M158 74 C176 88 178 112 164 130"/><rect class="mh-tooth" x="38" y="50" width="8" height="18" rx="2"/><rect class="mh-tooth" x="38" y="80" width="8" height="18" rx="2"/>${lips}<path class="mh-tongue" d="${m.t} L${tx} ${ty+11} Q110 134 162 130 Z"/>${PYAIR[m.air]||""}${m.dot?`<circle class="mh-dot" cx="${m.dot[0]}" cy="${m.dot[1]}" r="4.5"/>`:""}</svg>`; }
 function pyVMouth(L){ if(!L.mouth||!L.mouth.length) return ""; const la=pyLA();
-  return `<h3 class="pygl">口型示意图</h3><div class="pymouth">${L.mouth.map(x=>`<figure>${pyMouthSvg(x.k)}<figcaption ${la}>${esc(pyT(x.cap))}</figcaption></figure>`).join("")}</div><p class="muted small">示意图，脸朝左：粗线是舌头，红点是舌头碰到或靠近的地方。</p>`; }
+  return `<h3 class="pygl">口型示意图</h3><div class="pymouth">${L.mouth.map(x=>`<figure>${pyMouthSvg(x.k)}<figcaption ${la}>${esc(pyT(x.cap))}</figcaption></figure>`).join("")}</div><p class="muted small">示意图，脸朝左：粗线是舌头，红点是接触或靠近的地方，红线是气流。</p>`; }
 function pyVTable(L){ const T=L.table, ch=PY.chart; if(!T||!ch) return ""; const tone=PY.tt||1, keys=Object.keys(ch);
   const by=s=>T.kind==="fin"?PYINI.indexOf(pyParse(s).ini):PYFO.indexOf(pyParse(s).fin);
   let h=`<h3 class="pygl">组合表</h3><p class="muted small">${T.kind==="fin"?"点不同的声母，听同一个韵母怎么搭配。":"点不同的韵母，听这个声母怎么搭配。"}</p>

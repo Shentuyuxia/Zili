@@ -1577,6 +1577,42 @@
    },
    "mouth": [
     {
+     "k": "b",
+     "cap": {
+      "zh": "b：双唇闭紧再放开，只有一点点气。",
+      "en": "b: close both lips, then release with only a tiny bit of air.",
+      "de": "b: Beide Lippen schließen und lösen, nur ganz wenig Luft.",
+      "pt": "b: feche os dois lábios e solte com muito pouco ar."
+     }
+    },
+    {
+     "k": "p",
+     "cap": {
+      "zh": "p：同样的口型，但放开时送出一股强气，可以吹动一张纸。",
+      "en": "p: same lip shape, but release with a strong puff – enough to move a sheet of paper.",
+      "de": "p: gleiche Lippenstellung, aber mit kräftigem Luftstoß – genug, um ein Blatt Papier zu bewegen.",
+      "pt": "p: mesma posição, mas solte com um sopro forte, capaz de mover uma folha de papel."
+     }
+    },
+    {
+     "k": "m",
+     "cap": {
+      "zh": "m：双唇闭紧，气从鼻子出来。",
+      "en": "m: lips closed, air leaves through the nose.",
+      "de": "m: Lippen geschlossen, die Luft entweicht durch die Nase.",
+      "pt": "m: lábios fechados, o ar sai pelo nariz."
+     }
+    },
+    {
+     "k": "f",
+     "cap": {
+      "zh": "f：上齿轻碰下唇，气从缝隙里出来。",
+      "en": "f: upper teeth lightly on the lower lip, air slips through the gap.",
+      "de": "f: obere Zähne leicht auf der Unterlippe, die Luft strömt durch den Spalt.",
+      "pt": "f: dentes de cima tocam de leve o lábio de baixo, o ar passa pela fresta."
+     }
+    },
+    {
      "k": "d",
      "cap": {
       "zh": "d t n l：舌尖抵住上齿龈，就是牙齿后面凸起的地方。",
