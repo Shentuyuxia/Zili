@@ -1038,7 +1038,45 @@
      "u",
      "ü"
     ]
-   }
+   },
+   "mouth": [
+    {
+     "k": "a",
+     "cap": {
+      "zh": "a：嘴张大，舌头放低。",
+      "en": "a: mouth wide open, tongue low.",
+      "de": "a: Mund weit offen, Zunge tief.",
+      "pt": "a: boca bem aberta, língua baixa."
+     }
+    },
+    {
+     "k": "i",
+     "cap": {
+      "zh": "i：舌面前部抬高，嘴角向两边展开。",
+      "en": "i: front of the tongue high, lips spread.",
+      "de": "i: Zungenrücken vorn hoch, Lippen breit.",
+      "pt": "i: frente da língua alta, lábios esticados."
+     }
+    },
+    {
+     "k": "u",
+     "cap": {
+      "zh": "u：舌根抬高，嘴唇撅圆向前。",
+      "en": "u: back of the tongue high, lips rounded and pushed forward.",
+      "de": "u: Zungenrücken hinten hoch, Lippen gerundet und vorgestülpt.",
+      "pt": "u: fundo da língua alto, lábios arredondados e projetados."
+     }
+    },
+    {
+     "k": "ü",
+     "cap": {
+      "zh": "ü：舌头和 i 一样在前面，嘴唇撅圆。",
+      "en": "ü: tongue in the same front position as i, lips rounded.",
+      "de": "ü: Zunge wie bei i vorn, Lippen gerundet.",
+      "pt": "ü: língua na frente como no i, lábios arredondados."
+     }
+    }
+   ]
   },
   {
    "id": 4,
@@ -1536,7 +1574,18 @@
      "n",
      "l"
     ]
-   }
+   },
+   "mouth": [
+    {
+     "k": "d",
+     "cap": {
+      "zh": "d t n l：舌尖抵住上齿龈，就是牙齿后面凸起的地方。",
+      "en": "d t n l: tongue tip against the ridge just behind the upper teeth.",
+      "de": "d t n l: Zungenspitze am Zahndamm hinter den oberen Zähnen.",
+      "pt": "d t n l: ponta da língua nos alvéolos, logo atrás dos dentes de cima."
+     }
+    }
+   ]
   },
   {
    "id": 5,
@@ -1863,7 +1912,27 @@
      "k",
      "h"
     ]
-   }
+   },
+   "mouth": [
+    {
+     "k": "g",
+     "cap": {
+      "zh": "g k h：舌根抬起，靠近或抵住软腭。",
+      "en": "g k h: back of the tongue raised toward or against the soft palate.",
+      "de": "g k h: Zungenrücken hinten gegen den weichen Gaumen gehoben.",
+      "pt": "g k h: fundo da língua levantado em direção ao palato mole."
+     }
+    },
+    {
+     "k": "d",
+     "cap": {
+      "zh": "d t n l：舌尖抵住上齿龈，就是牙齿后面凸起的地方。",
+      "en": "d t n l: tongue tip against the ridge just behind the upper teeth.",
+      "de": "d t n l: Zungenspitze am Zahndamm hinter den oberen Zähnen.",
+      "pt": "d t n l: ponta da língua nos alvéolos, logo atrás dos dentes de cima."
+     }
+    }
+   ]
   },
   {
    "id": 6,
@@ -2236,7 +2305,27 @@
      "q",
      "x"
     ]
-   }
+   },
+   "mouth": [
+    {
+     "k": "j",
+     "cap": {
+      "zh": "j q x：舌面前部抬高，贴近硬腭，舌尖放在下齿后面。",
+      "en": "j q x: front of the tongue raised toward the hard palate, tip resting behind the lower teeth.",
+      "de": "j q x: Zungenrücken vorn zum harten Gaumen gehoben, Spitze hinter den unteren Zähnen.",
+      "pt": "j q x: frente da língua levantada em direção ao palato, ponta atrás dos dentes de baixo."
+     }
+    },
+    {
+     "k": "i",
+     "cap": {
+      "zh": "i：舌面前部抬高，嘴角向两边展开。",
+      "en": "i: front of the tongue high, lips spread.",
+      "de": "i: Zungenrücken vorn hoch, Lippen breit.",
+      "pt": "i: frente da língua alta, lábios esticados."
+     }
+    }
+   ]
   },
   {
    "id": 7,
@@ -2481,7 +2570,18 @@
      "c",
      "s"
     ]
-   }
+   },
+   "mouth": [
+    {
+     "k": "z",
+     "cap": {
+      "zh": "z c s：舌尖平放，抵住或靠近上齿背。",
+      "en": "z c s: tongue tip flat, touching or close to the back of the upper teeth.",
+      "de": "z c s: Zungenspitze flach an der Rückseite der oberen Zähne.",
+      "pt": "z c s: ponta da língua reta, tocando ou perto da parte de trás dos dentes de cima."
+     }
+    }
+   ]
   },
   {
    "id": 8,
@@ -2817,7 +2917,36 @@
      "sh",
      "r"
     ]
-   }
+   },
+   "mouth": [
+    {
+     "k": "zh",
+     "cap": {
+      "zh": "zh ch sh r：舌尖翘起，靠近硬腭前部，不碰牙齿。",
+      "en": "zh ch sh r: tongue tip curled up toward the front of the hard palate, away from the teeth.",
+      "de": "zh ch sh r: Zungenspitze nach oben gebogen, zum vorderen Gaumen, nicht an den Zähnen.",
+      "pt": "zh ch sh r: ponta da língua curvada para cima, perto do céu da boca, longe dos dentes."
+     }
+    },
+    {
+     "k": "z",
+     "cap": {
+      "zh": "z c s：舌尖平放，抵住或靠近上齿背。",
+      "en": "z c s: tongue tip flat, touching or close to the back of the upper teeth.",
+      "de": "z c s: Zungenspitze flach an der Rückseite der oberen Zähne.",
+      "pt": "z c s: ponta da língua reta, tocando ou perto da parte de trás dos dentes de cima."
+     }
+    },
+    {
+     "k": "j",
+     "cap": {
+      "zh": "j q x：舌面前部抬高，贴近硬腭，舌尖放在下齿后面。",
+      "en": "j q x: front of the tongue raised toward the hard palate, tip resting behind the lower teeth.",
+      "de": "j q x: Zungenrücken vorn zum harten Gaumen gehoben, Spitze hinter den unteren Zähnen.",
+      "pt": "j q x: frente da língua levantada em direção ao palato, ponta atrás dos dentes de baixo."
+     }
+    }
+   ]
   },
   {
    "id": 9,
