@@ -1,6 +1,18 @@
 {
- "updated": "2026-11-10T03:39:01Z",
+ "updated": "2026-11-11T03:39:27Z",
  "days": [
+  {
+   "date": "2026-11-11",
+   "items": [
+    {
+     "i": 0,
+     "lang": "zh",
+     "title": "种草和拔草",
+     "kind": "dialogue",
+     "level": "HSK5"
+    }
+   ]
+  },
   {
    "date": "2026-11-10",
    "items": [
