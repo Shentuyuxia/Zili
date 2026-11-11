@@ -1810,51 +1810,6 @@ function zWrap(text,own,extra){ // a paragraph → sentences → tappable words 
 const zPlain=n=>n?(n.dataset&&n.dataset.t)||[...n.childNodes].map(x=>x.nodeType===3?x.nodeValue:x.tagName==="RT"?"":zPlain(x)).join(""):"";
 function applyPy(){ document.body.classList.toggle("nopy",!pyOn()); }
 
-/* ---------- AI (Claude API with the user's own key) ---------- */
-const AIK="palavra-wort-ai";
-function aiCfg(){ try{ return JSON.parse(localStorage.getItem(AIK))||{}; }catch(e){ return {}; } }
-function aiSetCfg(c){ try{ if(c) localStorage.setItem(AIK,JSON.stringify(c)); else localStorage.removeItem(AIK); }catch(e){} }
-let aiState="off"; // AI features were removed; the Claude API code below is no longer reachable from the interface
-async function claudeCall(prompt,maxTokens,images,signal){
-  const c=aiCfg(); if(!c.key) throw {code:"no_key"};
-  const content=images&&images.length?[...images.map(im=>({type:"image",source:{type:"base64",media_type:im.type,data:im.data}})),{type:"text",text:prompt}]:prompt;
-  let r;
-  try{ r=await fetch("https://api.anthropic.com/v1/messages",{method:"POST",signal,headers:{"content-type":"application/json","x-api-key":c.key,"anthropic-version":"2023-06-01","anthropic-dangerous-direct-browser-access":"true"},
-    body:JSON.stringify({model:c.model||"claude-sonnet-5-5",max_tokens:maxTokens||2000,messages:[{role:"user",content}]})}); }
-  catch(e){ if(e&&e.name==="AbortError") throw {code:"cancelled"}; throw {code:"network"}; }
-  if(!r.ok){ let m=""; try{ const j=await r.json(); m=(j.error&&j.error.message)||""; }catch(e){}
-    const code= r.status===401||r.status===403?"bad_key": r.status===429?"rate_limited": r.status===404||/model/i.test(m)&&r.status===400?"bad_model": /credit|balance|billing/i.test(m)?"no_credit": r.status===529||r.status>=500?"overloaded":"upstream_error";
-    throw {code,message:m}; }
-  const j=await r.json();
-  return (j.content||[]).filter(b=>b.type==="text").map(b=>b.text).join("");
-}
-function parseJSON(t){
-  try{ return JSON.parse(t); }catch(e){}
-  const f=t.match(/```(?:json)?\s*([\s\S]*?)```/); if(f){ try{ return JSON.parse(f[1]); }catch(e){} }
-  const a=t.indexOf("{"), b=t.lastIndexOf("}"); if(a>=0&&b>a){ try{ return JSON.parse(t.slice(a,b+1)); }catch(e){} }
-  throw {code:"invalid_json"};
-}
-function parseJSONArray(t){
-  const pick=v=>{ if(Array.isArray(v)) return v; if(v&&typeof v==="object"){ for(const k in v) if(Array.isArray(v[k])) return v[k]; } return null; };
-  try{ const v=pick(JSON.parse(t)); if(v) return v; }catch(e){}
-  const f=t.match(/```(?:json)?\s*([\s\S]*?)```/); if(f){ try{ const v=pick(JSON.parse(f[1])); if(v) return v; }catch(e){} }
-  const a=t.indexOf("["), b=t.lastIndexOf("]"); if(a>=0&&b>a){ try{ return JSON.parse(t.slice(a,b+1)); }catch(e){} }
-  throw {code:"invalid_json"};
-}
-function aiErr(e){
-  const c=e&&e.code;
-  if(c==="no_key") return "还没有设置 API key，请到「设置与备份」里填写。";
-  if(c==="bad_key") return "API key 不对或已失效，请到「设置与备份」里检查。";
-  if(c==="no_credit") return "API 账户余额不足，请到 console.anthropic.com 充值。";
-  if(c==="bad_model") return "这个模型现在用不了，请到「设置与备份」里换一个。";
-  if(c==="rate_limited") return "请求太频繁，过一会儿再试。";
-  if(c==="overloaded") return "Claude 现在比较忙，过一会儿再试。";
-  if(c==="network") return "连不上 Claude API，检查一下网络。";
-  if(c==="invalid_json") return "AI 返回的格式不对，再点一次试试。";
-  return "AI 暂时没有响应，再试一次。"+(e&&e.message?"（"+e.message+"）":"");
-}
-function refreshAI(){ aiState="off"; }
-
 /* ---------- data ---------- */
 const DATA={pt:null,de:null,en:null,fr:null}, LOADING={};
 function toCard(l,lv,r){
@@ -1902,42 +1857,6 @@ function planQuota(){
   const q=Math.max(1,Math.ceil(Math.max(0,p.target-learnedBefore)/planDaysLeft(p)));
   log.pq=q; log.pqPlan=p.created; return q;
 }
-let genRun=null;
-function batchPrompt(l,level,theme,n,excl){
-  return `You are building a ${level} vocabulary course (HSK-style level) for a German- or English-speaking learner of ${LANG[l].ai}.
-Theme of this batch: ${theme}.
-List the ${n} most useful, high-frequency words or short fixed expressions for level ${level} in this theme. Do NOT include any of these (already in the course): ${excl.join(", ")}.
-Example sentences must be natural and only use vocabulary a ${level} learner can follow.
-Reply with ONLY a JSON array of ${n} objects, each with the keys: ${FIELDS[l]}.`;
-}
-async function generatePlan(){
-  const p=planOf(); if(!p||genRun) return;
-  if(aiState!=="ready"){ p.genErr="还没有设置 API key，所以只能用内置词库。"; renderPlan(); return; }
-  const l=lang(); genRun={ctl:new AbortController(),lang:l}; p.genErr=""; renderPlan();
-  let empty=0;
-  while(genRun&&!genRun.ctl.signal.aborted&&lang()===l&&p.ids.length<p.target){
-    const need=Math.min(40,p.target-p.ids.length), th=THEMES[p.themeIdx%THEMES.length];
-    const excl=ALL.filter(c=>c.lvl===p.level).map(c=>c.w.replace(/^(der|die|das|o|a)\s+/i,"")).slice(-600);
-    let arr;
-    try{ arr=parseJSONArray(await claudeCall(batchPrompt(l,p.level,th[1],need,excl),14000,null,genRun.ctl.signal)); }
-    catch(e){ if(e.code!=="cancelled") p.genErr=aiErr(e); break; }
-    let added=0;
-    for(const r of arr){
-      if(!r||!r.w||p.ids.length>=p.target) continue;
-      const w=String(r.w).trim(); if(!w||ALL.some(c=>c.w.toLowerCase()===w.toLowerCase())) continue;
-      const id="u:"+Date.now().toString(36)+Math.random().toString(36).slice(2,6);
-      const rec={id,lvl:p.level,w,pos:String(r.pos||""),extra:String(r.extra||zPy(w)),py:String(r.extra||zPy(w)),ex:String(r.ex||""),exzh:"",exen:String(r.exen||""),exde:String(r.exde||""),plan:true,theme:th[0]};
-      LANG[l].gl.forEach(k=>rec[k]=String(r[k]||""));
-      if(!LANG[l].gl.some(k=>rec[k])) continue;
-      S[l].custom.push(rec); p.ids.push(id); rebuildCards(); added++;
-    }
-    p.themeIdx++; save(); renderPlan(); renderStrip();
-    if(!added){ if(++empty>=3){ p.genErr="AI 找不到更多不重复的词了，可以把目标词数调低一些。"; break; } } else empty=0;
-  }
-  genRun=null; save(); renderPlan(); renderStrip();
-  if(cur==="today"&&sess&&sess.mode==="daily"&&!sess.flipped&&(!sess.cur||sess.done===0)) buildDaily();
-}
-function stopGen(){ if(genRun) genRun.ctl.abort(); }
 function renderPlan(){
   const el=$("#plan-panel"), p=planOf(), d=LANG[lang()];
   $("#lv-checks").closest(".panel").hidden=!!(p&&p.on);
@@ -1953,23 +1872,19 @@ function renderPlan(){
   const expected=Math.round(p.target*elapsed/total), diff=learned-expected, q=planQuota(), over=today()>p.deadline;
   const pace= over? `<span style="color:var(--bad)">已过截止日期，可以点「调整」延后</span>` : diff>=0? `<span style="color:var(--ok)">进度正常${diff>0?`，超前 ${diff} 个`:""}</span>` : `<span style="color:var(--warn)">落后 ${-diff} 个，每天的新词数已经自动调高</span>`;
   if(p.ids.length&&p.target>p.ids.length) p.target=p.ids.length; // without AI generation a plan can only cover the built-in word list
-  const ready=p.ids.length, gen=false;
   gm.hidden=true; gp.hidden=false; gp.innerHTML=`每天新词数由学习计划自动计算：<b>今天 ${q} 个</b>。`;
   el.innerHTML=`<h3>学习计划 · ${esc(p.level)} · ${p.target} 词</h3>
     <div class="stack" style="height:10px;margin:2px 0 6px"><i class="k4" style="width:${Math.min(100,100*learned/p.target)}%"></i></div>
     <p class="note"><b style="color:var(--ink)">已学 ${learned} / ${p.target}</b> · 截止 ${esc(p.deadline)} · 还剩 ${left} 天 · 今天 ${q} 个新词</p>
     <p class="note">${pace}</p>
-    ${gen?`<p class="note" style="margin-top:8px">${genRun?`<span class="spin"></span> `:""}词表已准备 ${ready} / ${p.target}${genRun?"，AI 正在生成（每批约 40 个，每批几十秒）":""}</p>`:""}
-    ${p.genErr?`<p class="small" style="color:var(--bad);margin:6px 0 0">${esc(p.genErr)}</p>`:""}
     <div class="row" style="margin-top:10px">
-      ${gen?(genRun?`<button class="btn sm" id="plan-stop" type="button">暂停生成</button>`:`<button class="btn primary sm" id="plan-gen" type="button" ${aiState==="ready"?"":"disabled"}>${ready>0?"继续生成词表":"生成词表"}</button>`):""}
       <button class="btn sm" id="plan-edit" type="button">调整</button>
       <button class="btn ghost sm" id="plan-end" type="button">结束计划</button>
     </div>`;
   const b=(id,fn)=>{ const e=document.getElementById(id); if(e) e.onclick=fn; };
-  b("plan-gen",generatePlan); b("plan-stop",stopGen); b("plan-edit",()=>openPlanForm(true));
+  b("plan-edit",()=>openPlanForm(true));
   b("plan-end",()=>{ const e=$("#plan-end"); if(e.dataset.sure!=="1"){ e.dataset.sure="1"; e.textContent="再点一次确认结束"; e.classList.add("danger"); return; }
-    stopGen(); p.on=false; save(); renderPlan(); renderStrip(); buildDaily(); toast("计划已结束，生成的词都留在字匣里"); });
+    p.on=false; save(); renderPlan(); renderStrip(); buildDaily(); toast("计划已结束，生成的词都留在字匣里"); });
 }
 function openPlanForm(edit){
   const p=planOf(), l=lang(), d=LANG[l];
@@ -2009,53 +1924,16 @@ function openPlanForm(edit){
     if(!dl||dl<=today()){ toast("完成日期要在今天之后"); return; }
     if(edit&&p){ p.target=n; p.deadline=dl; p.created=Date.now(); p.on=true; }
     else{
-      stopGen();
       const ids=(DATA[l]||[]).filter(c=>c.lvl===lv).map(c=>c.id).concat(L().custom.filter(c=>c.plan&&c.lvl===lv).map(c=>c.id));
       L().plan={on:true,level:lv,target:n,deadline:dl,start:today(),created:Date.now(),ids:ids.slice(0,Math.max(n,0)),themeIdx:0,genErr:""};
     }
     const log=lg(); delete log.pq; save(); closeDetail(); renderPlan(); renderStrip(); buildDaily();
     toast(edit?"计划已更新":"计划开始了！");
-    if(planOf().ids.length<planOf().target&&aiState==="ready") generatePlan();
   };
   upd();
 }
 
 /* ---------- scan (photo → words) ---------- */
-function fileToB64(file,max){
-  return new Promise((res,rej)=>{
-    const url=URL.createObjectURL(file); const im=new Image();
-    im.onload=()=>{ const sc=Math.min(1,(max||1568)/Math.max(im.width,im.height)); const w=Math.round(im.width*sc), h=Math.round(im.height*sc);
-      const cv=document.createElement("canvas"); cv.width=w; cv.height=h; cv.getContext("2d").drawImage(im,0,0,w,h); URL.revokeObjectURL(url);
-      res({type:"image/jpeg",data:cv.toDataURL("image/jpeg",0.85).split(",")[1],preview:cv.toDataURL("image/jpeg",0.6)}); };
-    im.onerror=()=>{ URL.revokeObjectURL(url); rej(new Error("bad image")); };
-    im.src=url;
-  });
-}
-function scanPrompt(l){
-  return `The image(s) show text containing ${LANG[l].ai} — for example a textbook page, notes, a handwritten word list, a menu or a sign.
-Pick out the ${LANG[l].ai} vocabulary worth learning for a German- or English-speaking learner (up to 30 items: words or short fixed expressions, in dictionary form). If the image is clearly a vocabulary list, take every item on it. Skip names, numbers and very basic words like articles and pronouns unless they are part of a list.
-For "ex": if the word appears in a complete, natural sentence in the image, use that sentence; otherwise write a natural everyday sentence.
-Reply with ONLY a JSON array; each object has the keys: ${FIELDS[l]}, "level" (HSK level estimate, one of ${LANG[l].levels.map(x=>'"'+x+'"').join(", ")}).
-If there is no ${LANG[l].ai} text in the image, reply with [].`;
-}
-let scanCtl=null;
-async function doScan(files){
-  const msg=$("#scan-msg"); if(!files||!files.length) return;
-  if(aiState!=="ready"){ msg.textContent="拍照识词需要 AI：先到「设置与备份」里填上 API key。"; return; }
-  const l=lang(); let imgs;
-  try{ imgs=await Promise.all([...files].slice(0,4).map(f=>fileToB64(f))); }catch(e){ msg.textContent="图片读不出来，换一张试试。"; return; }
-  msg.innerHTML=`<span class="spin"></span> AI 正在看图、挑词…（通常 20–60 秒）`;
-  scanCtl=new AbortController();
-  let arr;
-  try{ arr=parseJSONArray(await claudeCall(scanPrompt(l),14000,imgs.map(i=>({type:i.type,data:i.data})),scanCtl.signal)); }
-  catch(e){ msg.textContent=aiErr(e); return; }
-  finally{ scanCtl=null; }
-  if(lang()!==l) return;
-  const items=arr.filter(r=>r&&r.w).map(r=>{ const o={w:String(r.w).trim(),pos:String(r.pos||""),extra:String(r.extra||zPy(String(r.w).trim())),ex:String(r.ex||""),exzh:"",exen:String(r.exen||""),exde:String(r.exde||""),lvl:LV().includes(r.level)?r.level:LV()[0]};
-    LANG[l].gl.forEach(k=>o[k]=String(r[k]||"")); o.dup=ALL.some(c=>c.w.toLowerCase()===o.w.toLowerCase()); return o; });
-  msg.textContent= items.length? `找到 ${items.length} 个词。`:`图片里没找到${LANG[l].zh}的词。`;
-  if(items.length) openScanResult(items,imgs[0].preview);
-}
 function openScanResult(items,preview){
   const l=lang();
   detailOpen="__scan"; document.body.classList.add("modal-open");
@@ -2172,32 +2050,6 @@ async function playMedia(key){
   try{ if(hasTTS) speechSynthesis.cancel(); ntStop(); if(player){ player.pause(); } player=new Audio(src); await player.play(); return true; }catch(e){ return false; }
 }
 function playMine(id,prefer){ const a=audsOf(id); return playMedia(a[prefer||"w"]||a.w||a.s); }
-
-/* ---------- AI prompts ---------- */
-const FIELDS={
-  zh:'"w" (the word in Simplified Chinese characters), "pos" (one of n|v|adj|adv|mw|pron|num|prep|conj|part|interj|idiom|expr), "extra" (Hanyu Pinyin with tone marks, one syllable per character separated by spaces, e.g. "yǔ sǎn"), "en" (concise English gloss), "de" (concise German gloss; nouns with article), "ex" (one natural, everyday Simplified Chinese sentence using the word, at the learner\'s level), "exen" (English translation of ex), "exde" (German translation of ex), "pt" (concise Brazilian Portuguese gloss; nouns with article o/a), "expt" (Brazilian Portuguese translation of ex)',
-  pt:'"w" (canonical form; nouns WITH article o/a; Brazilian spelling), "pos" (one of m|f|v|adj|adv|prep|conj|expr), "extra" (""), "zh" (concise Simplified Chinese gloss), "en" (concise English gloss), "fr" (French equivalent; nouns with article), "ex" (one natural, everyday Brazilian Portuguese sentence using the word), "exzh" (Chinese translation of ex), "exen" (English translation of ex)',
-  de:'"w" (canonical form; nouns WITH article der/die/das), "pos" (one of m|f|n|pl|v|adj|adv|präp|konj|expr), "extra" (nouns: plural like "die Tische", or "—" if none; verbs: "3rd sg present · Präteritum · Perfekt" like "fährt ab · fuhr ab · ist abgefahren"; adjectives with irregular comparison: "besser · am besten"; else ""), "zh" (concise Simplified Chinese gloss), "en" (concise English gloss), "ex" (one natural, everyday German sentence using the word), "exzh" (Chinese translation of ex), "exen" (English translation of ex)',
-  en:'"w" (canonical form), "pos" (one of noun|v|adj|adv|phr|prep|conj), "extra" (British IPA between slashes), "zh" (concise Simplified Chinese gloss), "def" (short learner-dictionary definition in simple English), "de" (German equivalent; nouns with article), "ex" (one natural, everyday English sentence using the word), "exzh" (Chinese translation of ex)'
-};
-function entryPrompt(l,w){
-  return `You are making a vocabulary flashcard for a German- or English-speaking learner. Target language: ${LANG[l].ai}.
-The learner typed: "${w}". If it is misspelled or inflected, use the correct dictionary form.
-Reply with ONLY one JSON object with these keys: ${FIELDS[l]}, "level" (HSK level estimate, one of ${LANG[l].levels.map(x=>'"'+x+'"').join(", ")}; pick the closest), "memo" (one vivid memory hook in ${memoLang()}, at most 120 characters: the meaning of the character components, a mental image, or a sound-alike).`;
-}
-function memoLang(){ return UIL==="de"?"German":UIL==="pt"?"Brazilian Portuguese":UIL==="zh"||UIL==="zht"?"Simplified Chinese":"English"; }
-function imgPrompt(l,c,memo){
-  const mean=[c.zh,c.en||c.def].filter(Boolean).join(" / ");
-  return `Draw an illustration that helps a learner remember the ${LANG[l].ai} word "${c.w}" (meaning: ${mean}).${memo?` Memory hook to visualise if it helps: ${memo}.`:""}
-Rules: reply with ONLY one <svg> element and nothing else. Use xmlns="http://www.w3.org/2000/svg", viewBox="0 0 240 240", width="240", height="240". Start with a full-size background <rect>. Flat, friendly, colourful style with bold simple shapes and one clear focal subject or scene that shows the meaning concretely; for abstract words show a typical everyday situation with people or objects. No text, letters or numbers anywhere. No <image>, external links, fonts or scripts. Keep it under 7000 characters.`;
-}
-async function aiEntry(l,w){ return parseJSON(await claudeCall(entryPrompt(l,w),1500)); }
-async function aiImage(l,c,memo){ const s=cleanSvg(await claudeCall(imgPrompt(l,c,memo),8000)); if(!s) throw {code:"invalid_json"}; return s; }
-async function aiCheck(l,c,s){
-  return parseJSON(await claudeCall(`A learner of ${LANG[l].ai} wrote this example sentence to practise "${c.w}" (${c.en||""} / ${c.de||""}):
-"${s}"
-Check grammar, characters, word choice and naturalness (Mandarin, Simplified characters). Reply with ONLY JSON: {"ok": true if it is already correct and natural else false, "fixed": "the corrected natural version (identical to the input if ok)", "note": "a short explanation in ${memoLang()}, at most 160 characters"}.`,800));
-}
 
 /* ---------- speech ---------- */
 const hasTTS="speechSynthesis" in window; let VOICES=[];
@@ -2521,7 +2373,7 @@ function closeDetail(){ cancelRec(); dicStop(); detailOpen=null; document.body.c
   if(cur==="today") renderCard(); else if(dkOn("browse")) renderBrowse(); else if(dkOn("pile")) renderPile(); }
 function renderDetail(note){
   const id=detailOpen, c=BYID.get(id); if(!c) return;
-  const LL=L(), hasImg=!!LL.imgs[id], mine=mineOf(c), ai=aiState==="ready", au=audsOf(id);
+  const LL=L(), hasImg=!!LL.imgs[id], mine=mineOf(c), au=audsOf(id);
   $("#detail-root").innerHTML=`<div class="scrim" id="d-scrim"><div class="modal" role="dialog" aria-modal="true" aria-label="${esc(c.w)}">
     <div class="mhead"><div style="flex:1;min-width:0"><div class="row" style="margin-bottom:4px"><span class="lv lv-${esc(c.lvl)}">${esc(c.lvl)}</span>${posChip(c)}${stgHTML(LL.srs[id])}</div>
       <div class="word">${wordHTML(c)}</div>${c.extra&&c.extra!=="—"&&!(c.lang==="zh"&&pyOn())?`<div class="extra">${esc(c.extra)}</div>`:""}</div>
@@ -2534,16 +2386,15 @@ function renderDetail(note){
         <div class="field" style="margin-top:16px"><label for="d-memo">记忆提示</label><div class="row" style="flex-wrap:nowrap"><input type="text" id="d-memo" value="${esc(memoOf(c))}" placeholder="谐音、画面、词根……"><button class="btn sm" id="d-memo-save" type="button">保存</button></div></div>
         <div class="field" style="margin-top:6px"><span class="lab2">我的例句</span>
           <div class="sents">${mine.length?mine.map((m,i)=>`<div class="sent ${m.ok?"okk":""}"><div class="body"><div class="t">${esc(m.t)}</div>${m.fix&&m.fix!==m.t?`<div class="fx">→ ${esc(m.fix)}</div>`:""}${m.note?`<div class="nt">${esc(m.note)}</div>`:""}</div>
-            ${ai&&!m.note?`<button class="btn ghost sm" data-chk="${i}">AI 检查</button>`:""}${m.fix&&m.fix!==m.t?`<button class="btn ghost sm" data-use="${i}">用改后的</button>`:""}<button class="ib sm" data-say="${i}" aria-label="朗读">${I.spk}</button><button class="ib sm" data-del="${i}" aria-label="删除">${I.x}</button></div>`).join(""):`<p class="note">还没有。用这个词自己造个句子吧。</p>`}</div>
+            ${m.fix&&m.fix!==m.t?`<button class="btn ghost sm" data-use="${i}">用改后的</button>`:""}<button class="ib sm" data-say="${i}" aria-label="朗读">${I.spk}</button><button class="ib sm" data-del="${i}" aria-label="删除">${I.x}</button></div>`).join(""):`<p class="note">还没有。用这个词自己造个句子吧。</p>`}</div>
           <textarea id="d-sent" rows="2" placeholder="用「${esc(zs(c.w))}」造一个句子…"></textarea>
-          <div class="row" style="margin-top:6px"><button class="btn sm" id="d-add" type="button">保存例句</button>${ai?`<button class="btn primary sm" id="d-add-chk" type="button">${I.spark} 保存并让 AI 检查</button>`:""}<span class="small muted" id="d-msg">${note?esc(note):""}</span></div>
+          <div class="row" style="margin-top:6px"><button class="btn sm" id="d-add" type="button">保存例句</button><span class="small muted" id="d-msg">${note?esc(note):""}</span></div>
         </div>
       </div>
       <div>
         <span class="lab2" hidden>记忆图片</span>
-        <div class="imgbox" id="d-img" hidden style="margin-top:6px" ${hasImg?`data-img="${esc(id)}"`:""}><span class="ph">${hasImg?"载入中…":ai?"还没有图片。可以让 AI 画一张，或上传自己的照片。":"还没有图片。可以上传自己的照片。"}</span></div>
+        <div class="imgbox" id="d-img" hidden style="margin-top:6px" ${hasImg?`data-img="${esc(id)}"`:""}><span class="ph">${hasImg?"载入中…":"还没有图片。可以上传自己的照片。"}</span></div>
         <div class="imgacts" hidden>
-          ${ai?`<button class="btn sm" id="d-draw" type="button">${I.spark} ${hasImg?"AI 重画":"AI 配图"}</button>`:""}
           <label class="btn sm filebtn">上传<input type="file" id="d-file" accept="image/*"></label>
           ${hasImg?`<button class="btn ghost sm" id="d-noimg" type="button">删除图片</button>`:""}
         </div>
@@ -2562,14 +2413,11 @@ function renderDetail(note){
   { const ds=$("#d-src"); if(ds) ds.onclick=()=>{ closeDetail(); mgJump(c.from); }; }
   $("#d-std").onclick=()=>speak(c.ex?c.w+"。"+c.ex:c.w);
   $("#d-memo-save").onclick=()=>{ const v=$("#d-memo").value.trim(); if(v) L().memo[id]=v; else delete L().memo[id]; save(); renderDetail("记忆提示已保存"); };
-  const addSent=async check=>{
+  const addSent=async()=>{
     const t=$("#d-sent").value.trim(); if(!t) return;
-    const arr=L().mine[id]||(L().mine[id]=[]); arr.unshift({t,ts:Date.now()}); save(); renderDetail(check?"":"已保存");
-    if(check) await checkSent(c,0);
+    const arr=L().mine[id]||(L().mine[id]=[]); arr.unshift({t,ts:Date.now()}); save(); renderDetail("已保存");
   };
-  $("#d-add").onclick=()=>addSent(false);
-  const ac=$("#d-add-chk"); if(ac) ac.onclick=()=>addSent(true);
-  root.querySelectorAll("[data-chk]").forEach(b=>b.onclick=()=>checkSent(c,+b.dataset.chk));
+  $("#d-add").onclick=()=>addSent();
   root.querySelectorAll("[data-use]").forEach(b=>b.onclick=()=>{ const m=mineOf(c)[+b.dataset.use]; m.t=m.fix; m.ok=true; save(); renderDetail("已改用修改后的句子"); });
   root.querySelectorAll(".sent [data-del]").forEach(b=>b.onclick=()=>{ const arr=mineOf(c); arr.splice(+b.dataset.del,1); if(!arr.length) delete L().mine[id]; save(); renderDetail(); });
   root.querySelectorAll(".sent [data-say]").forEach(b=>b.onclick=()=>{ const m=mineOf(c)[+b.dataset.say]; speak(m.fix||m.t); });
@@ -2580,11 +2428,6 @@ function renderDetail(note){
     remove:slot=>{ removeAud(id,slot); renderDetail("录音已删除"); },
     rerender:()=>{ if(detailOpen===id) renderDetail(); }
   });
-  const dr=$("#d-draw"); if(dr) dr.onclick=async()=>{
-    dr.disabled=true; const box=$("#d-img"); box.innerHTML=`<span class="ph"><span class="spin"></span> 正在画…（通常 10–60 秒）</span>`;
-    try{ const svg=await aiImage(lang(),c,memoOf(c)); await storeImg(id,"svg",svg); if(detailOpen===id) renderDetail("图片已保存"); }
-    catch(e){ if(detailOpen===id) renderDetail(aiErr(e)); }
-  };
   $("#d-file").onchange=async e=>{ const f=e.target.files&&e.target.files[0]; if(!f) return;
     try{ const data=await fileToJpeg(f); await storeImg(id,"jpg",data); renderDetail("图片已保存"); }catch(err){ renderDetail("这张图片读不出来，换一张试试。"); } };
   const ni=$("#d-noimg"); if(ni) ni.onclick=()=>{ removeImg(id); renderDetail("图片已删除"); };
@@ -2608,16 +2451,6 @@ function bindRecs(box,prefix,h){
     if(f.size>3*1024*1024){ toast("音频太大了（超过 3 MB），请录短一点。"); return; }
     await h.save(inp.dataset.upaud,f); });
 }
-async function checkSent(c,i){
-  const m=mineOf(c)[i]; if(!m) return;
-  const msg=$("#d-msg"); if(msg) msg.innerHTML=`<span class="spin"></span> AI 正在检查…`;
-  try{
-    const r=await aiCheck(lang(),c,m.t);
-    m.ok=!!r.ok; m.fix=String(r.fixed||m.t); m.note=String(r.note||(r.ok?"没问题，很自然。":"")); save();
-    if(detailOpen===c.id) renderDetail(m.ok?"句子没问题":"AI 给了修改建议");
-  }catch(e){ if(detailOpen===c.id) renderDetail(aiErr(e)); }
-}
-
 /* ---------- new word tab ---------- */
 let draft={img:null,auds:{}}, busy=false, NLV={w:"",lv:"",auto:true};
 /* level: HSK level from the dictionary; otherwise estimated from how common the word is */
@@ -3622,7 +3455,7 @@ function mgOpen(word,sentence){
         if(!s.pt) s.pt=ptOf(s.lemma);
         mgPaint(); return; }
       s.dstate="none"; mgPaint();
-      if(!g&&!have){ if(aiState==="ready") mgAI(); wkLookup(s); }
+      if(!g&&!have) wkLookup(s);
     });
     return; }
   const lw=word.toLowerCase();
@@ -3630,7 +3463,6 @@ function mgOpen(word,sentence){
   const have=syFind(l,word);
   MG.sheet={word,sentence,lemma:g?g.w:(have?have.w:word),zh:g?(g.zh||""):(have?have.zh||"":""),en:g?(g.en||""):"",pos:"",gender:"",note:"",state:"",have:!!have};
   mgPaint();
-  if(!g&&aiState==="ready") mgAI();
   wkLookup(MG.sheet);
 }
 function zCtxPy(word,sentence){ // the reading pinyin-pro gives this word in its sentence (helps 行 háng/xíng, 长 cháng/zhǎng …)
@@ -3697,7 +3529,7 @@ function mgPaint(){
     ${s.sentence?`<p class="ex small zc" style="margin:0;font-style:normal" lang="zh-CN" data-noi18n>${esc(zs(s.sentence))}</p>`:""}
     ${s.sentence&&(hasTTS||canRecord)?shPaint():""}
     ${zStkHtml(s.lemma)}
-    <div class="row"><button class="btn primary" id="mg-ssave" type="button">${s.have?"放进生词堆":"收进生词"}</button>${aiState==="ready"?`<button class="btn sm" id="mg-sai" type="button" ${s.state==="ai"?"disabled":""}>${s.state==="ai"?"查询中…":"用 Claude 查"}</button>`:""}<span class="small muted" id="mg-smsg"></span></div>`;
+    <div class="row"><button class="btn primary" id="mg-ssave" type="button">${s.have?"放进生词堆":"收进生词"}</button><span class="small muted" id="mg-smsg"></span></div>`;
     zStkMount(s.lemma); return; }
   $("#mg-sheet-in").innerHTML=`<div class="row"><span class="w" lang="${lang()}">${esc(s.lemma)}</span><span class="small muted">${esc([s.gender,s.pos].filter(Boolean).join(" · "))}</span><span class="spacer"></span><button class="ib" id="mg-ssay" aria-label="朗读">${I.spk}</button>${hasTTS&&MG.sIdx>=0?`<button class="ib" id="mg-sfrom" aria-label="从这句读">${I.play}</button>`:""}<button class="ib" id="mg-sx" aria-label="关闭">${I.x}</button></div>
     ${s.have?'<p class="small muted" style="margin:0">这个词已经在字匣里了，点保存会放进生词堆。</p>':""}
@@ -3705,40 +3537,10 @@ function mgPaint(){
       :s.wk&&s.wk.state==="load"?`<p class="small muted wk-msg">正在查 Wiktionary…</p>`:s.wk&&s.wk.state==="none"?`<p class="small muted wk-msg">Wiktionary 没有收这个词</p>`:""}
     ${s.en?`<p class="wk-en" lang="en" data-noi18n>${esc(s.en)}</p>`:""}
     <label class="small muted" for="mg-zh-in">${(s.wk&&s.wk.state==="ok")||s.en?"中文释义（可选）":"中文释义"}</label>
-    <input type="text" id="mg-zh-in" value="${esc(s.zh)}" placeholder="${aiState==="ready"?"":"我的笔记"}" autocomplete="off">
+    <input type="text" id="mg-zh-in" value="${esc(s.zh)}" placeholder="我的笔记" autocomplete="off">
     ${s.note?`<p class="small muted" style="margin:0" lang="zh" data-noi18n>${esc(s.note)}</p>`:""}
     ${s.sentence?`<p class="ex small" style="margin:0" lang="${lang()}">${esc(s.sentence)}</p>`:""}
-    <div class="row"><button class="btn primary" id="mg-ssave" type="button">${s.have?"放进生词堆":"收进生词"}</button>${aiState==="ready"?`<button class="btn sm" id="mg-sai" type="button" ${s.state==="ai"?"disabled":""}>${s.state==="ai"?"查询中…":"用 Claude 查"}</button>`:""}<span class="small muted" id="mg-smsg"></span></div>`;
-}
-async function mgAI(){
-  const s=MG.sheet; if(!s||aiState!=="ready") return;
-  MG.ctl&&MG.ctl.abort(); const ctl=MG.ctl=new AbortController(); s.state="ai"; mgPaint();
-  if(s.zh){
-    const prompt=`You are a Chinese–English–German dictionary for a learner reading a Mandarin Chinese text.
-Look up "${s.word}" as used in: """${(s.sentence||"").slice(0,300)}"""
-If the tapped piece is not a complete word in this sentence, look up the word it belongs to.
-Reply with ONLY JSON: {"lemma": the word in Simplified characters, "pinyin": tone-marked pinyin with a space between syllables, "pos": part of speech in English (noun, verb, adjective, adverb, measure word, particle, …), "en": concise English meaning that fits this sentence, "de": concise German meaning that fits this sentence (nouns with article), "note": one short usage note in ${memoLang()}, or ""}`;
-    try{ let t; try{ t=await claudeCallModel(prompt,300,"claude-haiku-5-5",ctl.signal); }catch(e){ if(e&&e.code==="bad_model") t=await claudeCall(prompt,300,null,ctl.signal); else throw e; }
-      const r=parseJSON(t); if(MG.sheet!==s) return;
-      Object.assign(s,{lemma:r.lemma||s.lemma,py:r.pinyin||s.py,pos:r.pos||"",en:r.en||s.en,de:r.de||s.de,note:r.note||""}); s.state=""; mgPaint();
-    }catch(e){ if(e&&e.code==="cancelled") return; s.state=""; mgPaint(); const m=$("#mg-smsg"); if(m) m.textContent=aiErr(e); }
-    return; }
-  const prompt=`You are a bilingual dictionary for a native Chinese speaker reading a ${LANG[lang()].ai} text.
-Look up "${s.word}" as used in: """${(s.sentence||"").slice(0,500)}"""
-Reply with ONLY JSON: {"lemma": dictionary form (German/Portuguese nouns with article; verbs in infinitive), "pos": part of speech in Chinese (名词/动词/形容词…), "gender": "阳性"/"阴性"/"中性" for German/Portuguese nouns else "", "zh": concise Simplified Chinese meaning fitting this sentence (max 20 chars), "note": one short Chinese usage note or ""}`;
-  try{
-    let t; const c=aiCfg();
-    try{ t=await claudeCallModel(prompt,300,"claude-haiku-5-5",ctl.signal); }catch(e){ if(e&&e.code==="bad_model") t=await claudeCall(prompt,300,null,ctl.signal); else throw e; }
-    const r=parseJSON(t); if(MG.sheet!==s) return;
-    Object.assign(s,{lemma:r.lemma||s.lemma,zh:r.zh||s.zh,pos:r.pos||"",gender:r.gender||"",note:r.note||""}); s.state=""; mgPaint();
-  }catch(e){ if(e&&e.code==="cancelled") return; s.state=""; mgPaint(); const m=$("#mg-smsg"); if(m) m.textContent=aiErr(e); }
-}
-async function claudeCallModel(prompt,maxTokens,model,signal){
-  const c=aiCfg(); if(!c.key) throw {code:"no_key"};
-  let r; try{ r=await fetch("https://api.anthropic.com/v1/messages",{method:"POST",signal,headers:{"content-type":"application/json","x-api-key":c.key,"anthropic-version":"2023-06-01","anthropic-dangerous-direct-browser-access":"true"},body:JSON.stringify({model,max_tokens:maxTokens,messages:[{role:"user",content:prompt}]})}); }
-  catch(e){ if(e&&e.name==="AbortError") throw {code:"cancelled"}; throw {code:"network"}; }
-  if(!r.ok){ let m=""; try{ const j=await r.json(); m=(j.error&&j.error.message)||""; }catch(e){} throw {code:r.status===404||(r.status===400&&/model/i.test(m))?"bad_model":r.status===401||r.status===403?"bad_key":r.status===429?"rate_limited":"upstream_error",message:m}; }
-  const j=await r.json(); return (j.content||[]).filter(b=>b.type==="text").map(b=>b.text).join("");
+    <div class="row"><button class="btn primary" id="mg-ssave" type="button">${s.have?"放进生词堆":"收进生词"}</button><span class="small muted" id="mg-smsg"></span></div>`;
 }
 /* 记下生词来自哪一篇（只记每日文章，「我的文章」「课文库」没有固定日期，不记） */
 function mgFromKey(){ const c=MG.cur; return c&&/^\d{4}-\d{2}-\d{2}$/.test(String(c.date))?c.date+"|"+c.i:undefined; }
@@ -3811,7 +3613,7 @@ $("#tab-read").addEventListener("click",e=>{
 $("#mg-sheet").addEventListener("click",e=>{ const b=e.target.closest("button"); if(!b) return;
   if(b.id&&b.id.startsWith("sh-")){ shClick(b.id); return; }
   if(b.dataset.stk){ zStkAct(b.dataset.stk,+b.dataset.i); return; }
-  if(b.id==="mg-sx") mgClose(); else if(b.id==="mg-ssave") mgSaveWord(); else if(b.id==="mg-sai") mgAI(); else if(b.id==="mg-ssay"&&MG.sheet) speak(MG.sheet.lemma); else if(b.id==="mg-sfrom"){ const k=MG.sIdx; mgClose(); rdStart("art",k); } });
+  if(b.id==="mg-sx") mgClose(); else if(b.id==="mg-ssave") mgSaveWord(); else if(b.id==="mg-ssay"&&MG.sheet) speak(MG.sheet.lemma); else if(b.id==="mg-sfrom"){ const k=MG.sIdx; mgClose(); rdStart("art",k); } });
 $("#mg-sheet").addEventListener("keydown",e=>{ if(e.key==="Enter"&&e.target.id==="mg-zh-in"){ e.preventDefault(); mgSaveWord(); } });
 document.addEventListener("selectionchange",()=>{
   const btn=$("#mg-selbtn"); if(cur!=="read"){ btn.hidden=true; return; }
@@ -5699,7 +5501,6 @@ setTimeout(()=>{ try{ pyAnnounce(); }catch(e){} },1800);
 /* ---------- boot ---------- */
 applyUILang();
 try{ const t=localStorage.getItem("zl-tab"); if(t) showTab(t); }catch(e){}
-refreshAI();
 applyLang();
 let lastDay=today();
 setInterval(()=>{ if(today()!==lastDay){ lastDay=today(); if(DATA[lang()]){ buildDaily(); renderStrip(); } } },60000);
