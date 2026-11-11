@@ -1882,7 +1882,7 @@ function rebuildCards(){
 function stage(st){ if(!st) return 0; if(st.r===0||st.i<=2) return 1; if(st.i<10) return 2; if(st.i<30) return 3; return 4; }
 const dueList=()=>{ const t=today(), srs=L().srs; return ALL.filter(c=>srs[c.id]&&srs[c.id].d<=t); };
 function freshPool(){
-  const srs=L().srs, lv=lvSel(); const out=ALL.filter(c=>c.custom&&!c.plan&&!srs[c.id]);
+  const srs=L().srs, lv=lvSel(); const out=ALL.filter(c=>c.custom&&!c.plan&&!srs[c.id]).reverse(); /* 最近收的词排在前面，读到的词当天就能学 */
   if(planActive()){ for(const id of planOf().ids){ const c=BYID.get(id); if(c&&!srs[id]&&!out.includes(c)) out.push(c); } return out; }
   for(const v of LV()){ if(!lv.includes(v)) continue; out.push(...ALL.filter(c=>(!c.custom||c.plan)&&c.lvl===v&&!srs[c.id])); } return out; }
 
@@ -3799,7 +3799,8 @@ $("#tab-read").addEventListener("click",e=>{
   else if(b.dataset.favb){ mgFavToggle(); const on=mgFavOn(MG.cur.date+"|"+MG.cur.i); $$("[data-favb]").forEach(x=>{ x.setAttribute("aria-pressed",on); x.innerHTML=`<span class="st" aria-hidden="true">${on?"★":"☆"}</span>${x.classList.contains("btn")?" ":""}<span>${esc(trOne(on?"已收藏":"收藏")||(on?"已收藏":"收藏"))}</span>`; }); mgFavList(); syLater(); }
   else if(id==="mg-exp"){ const c=MG.cur; if(c&&c.it) pkMenu(b,async()=>[pkDoc(c.it,c.date)],zs(c.it.title||"Zili").slice(0,60)); }
   else if(id==="mg-favexp"){ pkMenu(b,pkFavDocs,pkL("我的收藏")+" "+today()); }
-  else if(id==="mg-done"){ MGS.read[MG.cur.date+"|"+MG.cur.i]=1; mgSave(); mgRender(); }
+  else if(id==="mg-done"){ const k=MG.cur.date+"|"+MG.cur.i; MGS.read[k]=1; mgSave(); mgRender();
+    const n=(S[lang()].custom||[]).filter(c=>c.from===k).length; if(n) toast("这篇收了 "+n+" 个生词，会出现在今日学习里"); }
   else if(id==="mg-mineback"){ MG.mine=null; mgRender(); mineList(); }
   else if(id==="mg-minedel"){ if(confirm(trOne("删除这篇文章？")||"删除这篇文章？")){ { const dl=(()=>{ try{ return JSON.parse(localStorage.getItem("zl-mine-del"))||{}; }catch(e){ return {}; } })(); dl[MG.mine]=Date.now(); try{ localStorage.setItem("zl-mine-del",JSON.stringify(dl)); }catch(e){} } mineSave(mineAll().filter(a=>a.id!==MG.mine)); MG.mine=null; if(typeof syLater==="function") syLater(); mgRender(); mineList(); } }
   else if(id==="mine-add") mineAdd();
