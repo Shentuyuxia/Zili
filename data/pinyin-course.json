@@ -4080,6 +4080,631 @@
      "n": 2
     }
    ]
+  },
+  {
+   "id": 13,
+   "key": "whole",
+   "title": {
+    "zh": "整体认读音节",
+    "en": "Whole syllables",
+    "de": "Ganze Silben",
+    "pt": "Sílabas inteiras"
+   },
+   "sub": {
+    "zh": "zhi chi shi ri · yi wu yu …",
+    "en": "zhi chi shi ri · yi wu yu …",
+    "de": "zhi chi shi ri · yi wu yu …",
+    "pt": "zhi chi shi ri · yi wu yu …"
+   },
+   "video": "",
+   "intro": {
+    "zh": "有一些音节要整个读，不拆成声母和韵母：zhi chi shi ri、zi ci si，还有 yi wu yu ye yue yuan yin yun ying，一共 16 个。前面 7 个里的 i 不读“衣”，只是把 zh ch sh r z c s 的声音延长；后面 9 个是 i、u、ü 自己成音节时的写法，读音和以 i、u、ü 开头的韵母一样。",
+    "en": "Some syllables are read as one whole, not split into initial and final: zhi chi shi ri, zi ci si, and yi wu yu ye yue yuan yin yun ying – 16 in all. In the first seven the i is not “ee”: you just hold the zh, ch, sh, r, z, c, s sound. The last nine are how i, u and ü are written when they stand alone; they sound like the finals that start with i, u or ü.",
+    "de": "Einige Silben liest man als Ganzes, nicht getrennt in Anlaut und Auslaut: zhi chi shi ri, zi ci si sowie yi wu yu ye yue yuan yin yun ying – insgesamt 16. In den ersten sieben ist das i kein „i“: Du hältst nur den Laut von zh, ch, sh, r, z, c, s etwas länger. Die letzten neun sind die Schreibung von i, u und ü, wenn sie allein stehen; sie klingen wie die Auslaute, die mit i, u oder ü beginnen.",
+    "pt": "Algumas sílabas são lidas inteiras, sem separar consoante e vogal: zhi chi shi ri, zi ci si e yi wu yu ye yue yuan yin yun ying – 16 no total. Nas sete primeiras o i não é “i”: só prolongue o som de zh, ch, sh, r, z, c, s. As nove últimas são a escrita de i, u e ü quando estão sozinhos; soam como as finais que começam por i, u ou ü."
+   },
+   "tip": {
+    "zh": "把这 16 个记住就够了：看到就整个读出来，不用拆开拼。想看所有音节，点上面的“拼音表”。",
+    "en": "Just remember these 16: when you see one, read it as a whole instead of spelling it out. To see every syllable, open the “Pinyin chart”.",
+    "de": "Merk dir einfach diese 16: Wenn du eine siehst, lies sie als Ganzes statt sie zu buchstabieren. Alle Silben findest du in der „Pinyin-Tabelle“.",
+    "pt": "Basta decorar estas 16: ao vê-las, leia inteiras em vez de soletrar. Para ver todas as sílabas, abra a “Tabela de pinyin”."
+   },
+   "groups": [
+    {
+     "label": {
+      "zh": "zhi chi shi ri",
+      "en": "zhi chi shi ri",
+      "de": "zhi chi shi ri",
+      "pt": "zhi chi shi ri"
+     },
+     "items": [
+      {
+       "c": "知",
+       "py": "zhī",
+       "t": 1,
+       "m": {
+        "en": "to know",
+        "de": "wissen",
+        "pt": "saber"
+       },
+       "v": "zhi"
+      },
+      {
+       "c": "吃",
+       "py": "chī",
+       "t": 1,
+       "m": {
+        "en": "to eat",
+        "de": "essen",
+        "pt": "comer"
+       },
+       "v": "chi"
+      },
+      {
+       "c": "是",
+       "py": "shì",
+       "t": 4,
+       "m": {
+        "en": "to be",
+        "de": "sein",
+        "pt": "ser"
+       },
+       "v": "shi"
+      },
+      {
+       "c": "日",
+       "py": "rì",
+       "t": 4,
+       "m": {
+        "en": "day, sun",
+        "de": "Tag, Sonne",
+        "pt": "dia, sol"
+       },
+       "v": "ri"
+      }
+     ]
+    },
+    {
+     "label": {
+      "zh": "zi ci si",
+      "en": "zi ci si",
+      "de": "zi ci si",
+      "pt": "zi ci si"
+     },
+     "items": [
+      {
+       "c": "子",
+       "py": "zǐ",
+       "t": 3,
+       "m": {
+        "en": "child, small thing",
+        "de": "Kind, Ding",
+        "pt": "filho, coisa pequena"
+       },
+       "v": "zi"
+      },
+      {
+       "c": "词",
+       "py": "cí",
+       "t": 2,
+       "m": {
+        "en": "word",
+        "de": "Wort",
+        "pt": "palavra"
+       },
+       "v": "ci"
+      },
+      {
+       "c": "丝",
+       "py": "sī",
+       "t": 1,
+       "m": {
+        "en": "silk, thread",
+        "de": "Seide, Faden",
+        "pt": "seda, fio"
+       },
+       "v": "si"
+      }
+     ]
+    },
+    {
+     "label": {
+      "zh": "yi wu yu",
+      "en": "yi wu yu",
+      "de": "yi wu yu",
+      "pt": "yi wu yu"
+     },
+     "items": [
+      {
+       "c": "衣",
+       "py": "yī",
+       "t": 1,
+       "m": {
+        "en": "clothes",
+        "de": "Kleidung",
+        "pt": "roupa"
+       },
+       "v": "yi"
+      },
+      {
+       "c": "午",
+       "py": "wǔ",
+       "t": 3,
+       "m": {
+        "en": "noon",
+        "de": "Mittag",
+        "pt": "meio-dia"
+       },
+       "v": "wu"
+      },
+      {
+       "c": "雨",
+       "py": "yǔ",
+       "t": 3,
+       "m": {
+        "en": "rain",
+        "de": "Regen",
+        "pt": "chuva"
+       },
+       "v": "yu"
+      }
+     ]
+    },
+    {
+     "label": {
+      "zh": "ye yue yuan yin yun ying",
+      "en": "ye yue yuan yin yun ying",
+      "de": "ye yue yuan yin yun ying",
+      "pt": "ye yue yuan yin yun ying"
+     },
+     "items": [
+      {
+       "c": "夜",
+       "py": "yè",
+       "t": 4,
+       "m": {
+        "en": "night",
+        "de": "Nacht",
+        "pt": "noite"
+       },
+       "v": "ye"
+      },
+      {
+       "c": "月",
+       "py": "yuè",
+       "t": 4,
+       "m": {
+        "en": "moon, month",
+        "de": "Mond, Monat",
+        "pt": "lua, mês"
+       },
+       "v": "yue"
+      },
+      {
+       "c": "远",
+       "py": "yuǎn",
+       "t": 3,
+       "m": {
+        "en": "far",
+        "de": "weit",
+        "pt": "longe"
+       },
+       "v": "yuan"
+      },
+      {
+       "c": "银",
+       "py": "yín",
+       "t": 2,
+       "m": {
+        "en": "silver",
+        "de": "Silber",
+        "pt": "prata"
+       },
+       "v": "yin"
+      },
+      {
+       "c": "云",
+       "py": "yún",
+       "t": 2,
+       "m": {
+        "en": "cloud",
+        "de": "Wolke",
+        "pt": "nuvem"
+       },
+       "v": "yun"
+      },
+      {
+       "c": "影",
+       "py": "yǐng",
+       "t": 3,
+       "m": {
+        "en": "shadow, film",
+        "de": "Schatten, Film",
+        "pt": "sombra, filme"
+       },
+       "v": "ying"
+      }
+     ]
+    }
+   ],
+   "pairs": [
+    [
+     "知",
+     "zhī",
+     "吃",
+     "chī"
+    ],
+    [
+     "吃",
+     "chī",
+     "是",
+     "shì"
+    ],
+    [
+     "是",
+     "shì",
+     "日",
+     "rì"
+    ],
+    [
+     "子",
+     "zǐ",
+     "词",
+     "cí"
+    ],
+    [
+     "词",
+     "cí",
+     "丝",
+     "sī"
+    ],
+    [
+     "衣",
+     "yī",
+     "午",
+     "wǔ"
+    ],
+    [
+     "午",
+     "wǔ",
+     "雨",
+     "yǔ"
+    ],
+    [
+     "夜",
+     "yè",
+     "月",
+     "yuè"
+    ],
+    [
+     "远",
+     "yuǎn",
+     "云",
+     "yún"
+    ],
+    [
+     "银",
+     "yín",
+     "影",
+     "yǐng"
+    ]
+   ],
+   "practice": [
+    {
+     "type": "mpair",
+     "n": 8
+    },
+    {
+     "type": "pick",
+     "n": 2
+    }
+   ]
+  },
+  {
+   "id": 14,
+   "key": "neutral",
+   "title": {
+    "zh": "轻声和儿化",
+    "en": "Neutral tone and -r",
+    "de": "Neutralton und -r",
+    "pt": "Tom neutro e -r"
+   },
+   "sub": {
+    "zh": "māma · zhuōzi · huār",
+    "en": "māma · zhuōzi · huār",
+    "de": "māma · zhuōzi · huār",
+    "pt": "māma · zhuōzi · huār"
+   },
+   "video": "",
+   "intro": {
+    "zh": "轻声又短又轻，没有固定的音高，跟在前一个字后面：妈妈 māma、桌子 zhuōzi、我们 wǒmen。轻声不标声调符号。前一个字的声调决定轻声的高低：第一、二声后偏低，第三声后偏高。儿化是在词尾加一个卷舌的 r：花儿 huār、哪儿 nǎr；写拼音时只在后面加 r，不写 er。",
+    "en": "The neutral tone is short and light, with no fixed pitch, and follows the previous syllable: māma, zhuōzi, wǒmen. It has no tone mark. Its pitch depends on the tone before it: lowish after 1st and 2nd tones, higher after a 3rd. The -r ending adds a curled r at the end of a word: huār, nǎr. In pinyin you only add r, not er.",
+    "de": "Der neutrale Ton ist kurz und leicht, ohne feste Tonhöhe, und folgt der vorigen Silbe: māma, zhuōzi, wǒmen. Er hat kein Tonzeichen. Seine Höhe hängt vom Ton davor ab: eher tief nach dem 1. und 2. Ton, höher nach dem 3. Die r-Endung hängt ein gerolltes r an das Wortende: huār, nǎr. In Pinyin schreibt man nur r, nicht er.",
+    "pt": "O tom neutro é curto e leve, sem altura fixa, e vem depois da sílaba anterior: māma, zhuōzi, wǒmen. Não leva acento. A altura depende do tom anterior: mais baixa depois do 1º e do 2º, mais alta depois do 3º. O sufixo -r acrescenta um r enrolado no fim da palavra: huār, nǎr. No pinyin só se escreve r, não er."
+   },
+   "tip": {
+    "zh": "设备的系统语音有时会把“儿”读成清楚的 er。真人说话里，它只是把前一个音节的结尾卷起来，所以听的时候要想着“卷舌”。",
+    "en": "The device voice sometimes reads 儿 as a clear “er”. In real speech it just curls the end of the syllable before it, so listen for the curl.",
+    "de": "Die Gerätestimme liest 儿 manchmal als deutliches „er“. In echter Sprache rollt es nur das Ende der vorigen Silbe ein – hör auf das Einrollen.",
+    "pt": "A voz do aparelho às vezes lê 儿 como um “er” claro. Na fala real ele só enrola o fim da sílaba anterior; ouça esse enrolar."
+   },
+   "groups": [
+    {
+     "label": {
+      "zh": "轻声：叠词和后缀",
+      "en": "Neutral tone: doubled words and suffixes",
+      "de": "Neutralton: Verdopplungen und Endungen",
+      "pt": "Tom neutro: palavras repetidas e sufixos"
+     },
+     "items": [
+      {
+       "c": "爸爸",
+       "py": "bàba",
+       "t": "40",
+       "m": {
+        "en": "dad",
+        "de": "Papa",
+        "pt": "pai"
+       }
+      },
+      {
+       "c": "桌子",
+       "py": "zhuōzi",
+       "t": "10",
+       "m": {
+        "en": "table",
+        "de": "Tisch",
+        "pt": "mesa"
+       }
+      },
+      {
+       "c": "椅子",
+       "py": "yǐzi",
+       "t": "30",
+       "m": {
+        "en": "chair",
+        "de": "Stuhl",
+        "pt": "cadeira"
+       }
+      },
+      {
+       "c": "我们",
+       "py": "wǒmen",
+       "t": "30",
+       "m": {
+        "en": "we",
+        "de": "wir",
+        "pt": "nós"
+       }
+      },
+      {
+       "c": "什么",
+       "py": "shénme",
+       "t": "20",
+       "m": {
+        "en": "what",
+        "de": "was",
+        "pt": "o quê"
+       }
+      },
+      {
+       "c": "先生",
+       "py": "xiānsheng",
+       "t": "10",
+       "m": {
+        "en": "Mr., sir",
+        "de": "Herr",
+        "pt": "senhor"
+       }
+      },
+      {
+       "c": "东西",
+       "py": "dōngxi",
+       "t": "10",
+       "m": {
+        "en": "thing",
+        "de": "Ding",
+        "pt": "coisa"
+       }
+      },
+      {
+       "c": "漂亮",
+       "py": "piàoliang",
+       "t": "40",
+       "m": {
+        "en": "pretty",
+        "de": "hübsch",
+        "pt": "bonito"
+       }
+      }
+     ]
+    },
+    {
+     "label": {
+      "zh": "儿化",
+      "en": "Words ending in -r",
+      "de": "Wörter mit r-Endung",
+      "pt": "Palavras com -r"
+     },
+     "items": [
+      {
+       "c": "花儿",
+       "py": "huār",
+       "t": 1,
+       "m": {
+        "en": "flower",
+        "de": "Blume",
+        "pt": "flor"
+       },
+       "v": "r"
+      },
+      {
+       "c": "玩儿",
+       "py": "wánr",
+       "t": 2,
+       "m": {
+        "en": "to play",
+        "de": "spielen",
+        "pt": "brincar"
+       },
+       "v": "r"
+      },
+      {
+       "c": "哪儿",
+       "py": "nǎr",
+       "t": 3,
+       "m": {
+        "en": "where",
+        "de": "wo",
+        "pt": "onde"
+       },
+       "v": "r"
+      },
+      {
+       "c": "这儿",
+       "py": "zhèr",
+       "t": 4,
+       "m": {
+        "en": "here",
+        "de": "hier",
+        "pt": "aqui"
+       },
+       "v": "r"
+      },
+      {
+       "c": "事儿",
+       "py": "shìr",
+       "t": 4,
+       "m": {
+        "en": "matter, affair",
+        "de": "Sache",
+        "pt": "assunto"
+       },
+       "v": "r"
+      },
+      {
+       "c": "一点儿",
+       "py": "yìdiǎnr",
+       "t": "43",
+       "m": {
+        "en": "a little",
+        "de": "ein bisschen",
+        "pt": "um pouco"
+       }
+      },
+      {
+       "c": "小孩儿",
+       "py": "xiǎoháir",
+       "t": "32",
+       "m": {
+        "en": "child",
+        "de": "Kind",
+        "pt": "criança"
+       }
+      }
+     ]
+    }
+   ],
+   "rules": [
+    {
+     "q": {
+      "zh": "“妈妈”的第二个字读轻声，拼音写作？",
+      "en": "In 妈妈 the second 妈 is neutral. In pinyin it is written:",
+      "de": "Bei 妈妈 ist das zweite 妈 neutral. In Pinyin schreibt man:",
+      "pt": "Em 妈妈 o segundo 妈 é neutro. Em pinyin escreve-se:"
+     },
+     "a": "māma",
+     "o": [
+      "māma",
+      "māmā",
+      "māmá"
+     ]
+    },
+    {
+     "q": {
+      "zh": "“桌子”的拼音是？",
+      "en": "The pinyin of 桌子 is:",
+      "de": "Das Pinyin von 桌子 ist:",
+      "pt": "O pinyin de 桌子 é:"
+     },
+     "a": "zhuōzi",
+     "o": [
+      "zhuōzi",
+      "zhuōzǐ",
+      "zhuózi"
+     ]
+    },
+    {
+     "q": {
+      "zh": "“我们”的拼音是？",
+      "en": "The pinyin of 我们 is:",
+      "de": "Das Pinyin von 我们 ist:",
+      "pt": "O pinyin de 我们 é:"
+     },
+     "a": "wǒmen",
+     "o": [
+      "wǒmen",
+      "wǒmén",
+      "wòmen"
+     ]
+    },
+    {
+     "q": {
+      "zh": "“哪儿”（哪里）的拼音是？",
+      "en": "The pinyin of 哪儿 (where) is:",
+      "de": "Das Pinyin von 哪儿 (wo) ist:",
+      "pt": "O pinyin de 哪儿 (onde) é:"
+     },
+     "a": "nǎr",
+     "o": [
+      "nǎr",
+      "nǎer",
+      "nàr"
+     ]
+    },
+    {
+     "q": {
+      "zh": "“花儿”的拼音是？",
+      "en": "The pinyin of 花儿 (flower) is:",
+      "de": "Das Pinyin von 花儿 (Blume) ist:",
+      "pt": "O pinyin de 花儿 (flor) é:"
+     },
+     "a": "huār",
+     "o": [
+      "huār",
+      "huāer",
+      "huàr"
+     ]
+    },
+    {
+     "q": {
+      "zh": "“一点儿”的拼音是？",
+      "en": "The pinyin of 一点儿 (a little) is:",
+      "de": "Das Pinyin von 一点儿 (ein bisschen) ist:",
+      "pt": "O pinyin de 一点儿 (um pouco) é:"
+     },
+     "a": "yìdiǎnr",
+     "o": [
+      "yìdiǎnr",
+      "yīdiǎnr",
+      "yìdiǎner"
+     ]
+    }
+   ],
+   "practice": [
+    {
+     "type": "pair",
+     "n": 5
+    },
+    {
+     "type": "rule",
+     "n": 4
+    },
+    {
+     "type": "pick",
+     "n": 1
+    }
+   ]
   }
  ],
  "sounds": {
