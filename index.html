@@ -1129,7 +1129,12 @@ body .py .tn1,body.tones .py .tn1{color:var(--py1)} body .py .tn2,body.tones .py
 .pygl{font-size:14px;margin:16px 0 8px;color:var(--muted);font-weight:600}
 .pygrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:8px}
 .pycard{display:flex;flex-direction:column;align-items:center;gap:2px;border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:10px 6px 8px;cursor:pointer;color:var(--ink);font:inherit;position:relative;min-width:0}
+.pygrid.g3{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.pymiss{display:flex;flex-direction:column;gap:3px;align-items:stretch}.pymiss .pymn{font-size:11px;color:var(--muted);text-align:center}
+.pyweak{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:10px 12px;margin:12px 0}
+.pyweak .row{display:flex;gap:6px}
 .pygrid.g4{grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.pygrid.g4 .pycard .pyc{font-size:26px}.pygrid.g4 .pym{font-size:11px}
+.pycard.long .pyc{font-size:20px;line-height:1.35;text-align:center}.pygrid:has(.pycard.long){grid-template-columns:repeat(2,minmax(0,1fr))}
 .pycard:hover{border-color:var(--muted)}.pycard:active{transform:scale(.97)}
 .pycard .pyc{font-family:var(--f-cn);font-size:30px;line-height:1.2}.pycard .pyp{font-size:16px}
 .pycard .pym{font-size:12px;color:var(--muted);text-align:center;line-height:1.3}.pycard.none{opacity:.45;cursor:default}
@@ -1395,6 +1400,7 @@ body .py .tn1,body.tones .py .tn1{color:var(--py1)} body .py .tn2,body.tones .py
   <section id="tab-today" class="grid">
     <div class="panel">
       <div id="onb-day"></div>
+      <div id="py-entry"></div>
       <div class="sesshead"><h2 id="sess-title">今日学习</h2><div class="row" id="sess-actions"></div></div>
       <div class="bar"><i id="sess-bar"></i></div>
       <div id="card-area"><div class="empty"><b>正在载入字匣…</b></div></div>
@@ -4216,9 +4222,9 @@ const UI_DICT=[
 ["内置词库里 {0} 有 {1} 个词，计划最多 {1} 个。", "The built-in list has {1} {0} words, so a plan can have at most {1}.", "Die eingebaute Liste hat {1} Wörter für {0}, ein Plan kann also höchstens {1} umfassen.", "A lista embutida tem {1} palavras de {0}, então o plano vai até {1}.", "內建詞庫裡 {0} 有 {1} 個詞，計畫最多 {1} 個。"],
 ["这是扫描版 PDF，正在识别图片里的文字…", "This is a scanned PDF – reading the text in the images…", "Das ist ein gescanntes PDF – der Text in den Bildern wird erkannt…", "É um PDF escaneado – lendo o texto das imagens…", "這是掃描版 PDF，正在識別圖片裡的文字…"],
 ["点声调卡听这个声调；点卡片上的字，单独听例字。", "Tap a tone card to hear the tone; tap a character on it to hear that example.", "Tippe auf eine Tonkarte, um den Ton zu hören; tippe auf ein Zeichen darauf, um das Beispiel zu hören.", "Toque num cartão para ouvir o tom; toque num caractere para ouvir o exemplo.", "點聲調卡聽這個聲調；點卡片上的字，單獨聽例字。"],
-["14 节课，从四个声调到变调。每个音都能听、能录音对比。", "14 lessons, from the four tones to tone changes. Hear every sound, record yourself and compare.", "14 Lektionen, von den vier Tönen bis zu Tonveränderungen. Jeden Laut hören, dich aufnehmen und vergleichen.", "14 lições, dos quatro tons às mudanças de tom. Ouça cada som, grave sua voz e compare.", "14 節課，從四個聲調到變調。每個音都能聽、能錄音對比。"],
+["15 节课，从四个声调到变调。每个音都能听、能录音对比。", "15 lessons, from the four tones to tone changes. Hear every sound, record yourself and compare.", "15 Lektionen, von den vier Tönen bis zu Tonveränderungen. Jeden Laut hören, dich aufnehmen und vergleichen.", "15 lições, dos quatro tons às mudanças de tom. Ouça cada som, grave sua voz e compare.", "15 節課，從四個聲調到變調。每個音都能聽、能錄音對比。"],
 ["新功能", "New", "Neu", "Novo", "新功能"],
-["14 节课，从四个声调到变调：每个音都能听、能录音对比，还有组合表、拼音表和每日练声调。", "14 lessons, from the four tones to tone changes: hear every sound, record yourself and compare, plus combination tables, a pinyin chart and daily tone practice.", "14 Lektionen, von den vier Tönen bis zu Tonveränderungen: jeden Laut hören, dich aufnehmen und vergleichen – dazu Kombinationstabellen, eine Pinyin-Tabelle und tägliches Tontraining.", "14 lições, dos quatro tons às mudanças de tom: ouça cada som, grave sua voz e compare, com tabelas de combinações, tabela de pinyin e treino diário de tons.", "14 節課，從四個聲調到變調：每個音都能聽、能錄音對比，還有組合表、拼音表和每日練聲調。"],
+["15 节课，从四个声调到变调：每个音都能听、能录音对比，还有组合表、拼音表和每日练声调。", "15 lessons, from the four tones to tone changes: hear every sound, record yourself and compare, plus combination tables, a pinyin chart and daily tone practice.", "15 Lektionen, von den vier Tönen bis zu Tonveränderungen: jeden Laut hören, dich aufnehmen und vergleichen – dazu Kombinationstabellen, eine Pinyin-Tabelle und tägliches Tontraining.", "15 lições, dos quatro tons às mudanças de tom: ouça cada som, grave sua voz e compare, com tabelas de combinações, tabela de pinyin e treino diário de tons.", "15 節課，從四個聲調到變調：每個音都能聽、能錄音對比，還有組合表、拼音表和每日練聲調。"],
 ["在底部的「拼音」里，随时可以自学。", "Find it under “Pinyin” in the bottom bar – learn at your own pace.", "Du findest ihn unten unter „Pinyin“ – lerne in deinem Tempo.", "Fica em “Pinyin”, na barra de baixo – estude no seu ritmo.", "在底部的「拼音」裡，隨時可以自學。"],
 ["知道了", "Got it", "Verstanden", "Entendi", "知道了"],
 ["去看看", "Take a look", "Ansehen", "Ver agora", "去看看"],
@@ -4277,6 +4283,16 @@ const UI_DICT=[
 ["口型示意图", "Mouth diagrams", "Mundstellung", "Posição da boca", "口型示意圖"],
 ["示意图，脸朝左：粗线是舌头，红点是接触或靠近的地方，红线是气流。", "Schematic, face looking left: the thick line is the tongue, the red dot is where things touch or come close, red lines show airflow.", "Schematisch, Gesicht nach links: Die dicke Linie ist die Zunge, der rote Punkt zeigt Berührung oder Nähe, rote Linien zeigen die Luft.", "Esquema, rosto virado para a esquerda: a linha grossa é a língua, o ponto vermelho mostra onde toca ou chega perto, as linhas vermelhas mostram o ar.", "示意圖，臉朝左：粗線是舌頭，紅點是接觸或靠近的地方，紅線是氣流。"],
 ["继续学习", "Continue", "Weiterlernen", "Continuar", "繼續學習"],
+["弱音复习", "Weak-sound review", "Wiederholung schwacher Laute", "Revisão dos sons fracos", "弱音複習"],
+["我的易错音", "Sounds I get wrong", "Meine Fehlerlaute", "Sons em que erro", "我的易錯音"],
+["还没有易错音", "No tricky sounds yet", "Noch keine Fehlerlaute", "Ainda não há sons difíceis", "還沒有易錯音"],
+["练习里答错的音会收在这里，答对两次就会移出。", "Sounds you get wrong in practice are collected here. Answer one correctly twice more and it leaves the list.", "Laute, die du im Training falsch hast, werden hier gesammelt. Zweimal richtig, und sie verschwinden wieder.", "Os sons em que erras no treino ficam aqui. Acertando duas vezes, saem da lista.", "練習裡答錯的音會收在這裡，答對兩次就會移出。"],
+["这些是练习里答错过的音。再答对两次，它就会从这里移出。点卡片可以听。", "These are sounds you got wrong in practice. Answer one correctly twice more and it leaves this list. Tap a card to listen.", "Das sind Laute, die du im Training falsch hattest. Zweimal richtig, und sie verschwinden von hier. Tippe auf eine Karte zum Hören.", "Estes são os sons em que erraste no treino. Acertando duas vezes, saem daqui. Toca num cartão para ouvir.", "這些是練習裡答錯過的音。再答對兩次，它就會從這裡移出。點卡片可以聽。"],
+["错 {0} 次", "Missed {0}×", "{0}× falsch", "Erro {0}×", "錯 {0} 次"],
+["有 {0} 个音容易错，花 2 分钟练一练。", "{0} sounds trip you up. Spend 2 minutes on them.", "{0} Laute fallen dir schwer. Übe sie 2 Minuten.", "{0} sons dão-te trabalho. Treina 2 minutos.", "有 {0} 個音容易錯，花 2 分鐘練一練。"],
+["第 {0} 声最容易错，花 2 分钟练一练。", "Tone {0} trips you up most. Spend 2 minutes on it.", "Der {0}. Ton fällt dir am schwersten. Übe ihn 2 Minuten.", "O {0}º tom é o que mais te custa. Treina 2 minutos.", "第 {0} 聲最容易錯，花 2 分鐘練一練。"],
+["看看是哪些", "See which ones", "Welche sind es?", "Ver quais são", "看看是哪些"],
+["开始", "Start", "Start", "Começar", "開始"],
 ["每日练声调", "Daily tone practice", "Tägliches Tontraining", "Treino diário de tons", "每日練聲調"],
 ["拼音表", "Pinyin chart", "Pinyin-Tabelle", "Tabela de pinyin", "拼音表"],
 ["全部课程", "All lessons", "Alle Lektionen", "Todas as lições", "全部課程"],
@@ -4309,7 +4325,7 @@ const UI_DICT=[
 ["小提示", "Tip", "Tipp", "Dica", "小提示"],
 ["▶ 视频", "▶ Video", "▶ Video", "▶ Vídeo", "▶ 影片"],
 ["发音来自设备的系统语音，以后会换成真人录音。", "For now the voice comes from your device; real recordings will replace it later.", "Die Stimme kommt vorerst von deinem Gerät; später ersetzen echte Aufnahmen sie.", "Por enquanto a voz vem do seu aparelho; depois virão gravações de verdade.", "發音來自裝置的系統語音，以後會換成真人錄音。"],
-["14 节课，已上线 {0} 课，其他陆续补上。", "14 lessons: {0} are ready, the rest are on the way.", "14 Lektionen: {0} sind fertig, der Rest folgt.", "14 lições: {0} já estão prontas, as outras vêm aí.", "14 節課，已上線 {0} 課，其他陸續補上。"],
+["15 节课，已上线 {0} 课，其他陆续补上。", "15 lessons: {0} are ready, the rest are on the way.", "15 Lektionen: {0} sind fertig, der Rest folgt.", "15 lições: {0} já estão prontas, as outras vêm aí.", "15 節課，已上線 {0} 課，其他陸續補上。"],
 ["点音节听四个声调。", "Tap a syllable to hear its four tones.", "Silbe antippen, um die vier Töne zu hören.", "Toque numa sílaba para ouvir os quatro tons.", "點音節聽四個聲調。"],
 ["最容易错的是第 {0} 声。", "Tone {0} trips you up most.", "Ton {0} verwechselst du am häufigsten.", "O tom {0} é o que mais te confunde.", "最容易錯的是第 {0} 聲。"],
 ["在文章里给第 {0} 声上色", "Colour tone {0} in texts", "Ton {0} in Texten einfärben", "Colorir o tom {0} nos textos", "在文章裡給第 {0} 聲上色"],
@@ -5292,7 +5308,7 @@ function pyClip(path,done){ const AC=window.AudioContext||window.webkitAudioCont
 function pyPlay(it){ if(!it) return; try{ if(pyAud) pyAud.pause(); }catch(e){}
   if(it.c&&PY.view==="lesson"){ (PY.heard||(PY.heard={}))[it.c]=1; const hc=$("#py-heard"), L=pyLessons().find(x=>x.id===PY.lid); if(hc&&L) hc.textContent=pyItems(L).filter(i=>PY.heard[i.c]).length; }
   const au=it.au||pyAuOf(it.c); if(au){ pyStopSeq(); try{ speechSynthesis.cancel(); }catch(e){} pyClip(au); return; }
-  pyStopSeq(); pySpeakNow(it.c,3); }
+  pyStopSeq(); pySpeakNow(it.c,it.c.length>3?1:3); }
 // speak right inside the tap (iOS only lets a page start speech from a user gesture); repeats are sentences of one utterance: "马。马。马。"
 // iOS: speech must first be started inside a tap; an empty utterance on the first tap unlocks it for later (timed) speech
 let PYUL=false; function pyUnlock(){ if(PYUL||!hasTTS) return; PYUL=true; try{ const u=new SpeechSynthesisUtterance(" "); u.volume=0; speechSynthesis.speak(u); }catch(e){} }
@@ -5350,6 +5366,27 @@ function pyGenDaily(){ const d=PYC().done, err=PYC().err, L1=pyLessons().find(L=
   if(nMp) shuffle(mps.slice()).slice(0,nMp).forEach(p=>qs.push(pyQMp(p)));
   return shuffle(qs); }
 
+/* --- weak sounds: what I keep getting wrong (pyc.miss) and the tone I mix up most (pyc.err) --- */
+const pyMissList=()=>{ const M=PYC().miss||{}; return Object.keys(M).filter(c=>pyByChar(c)).sort((a,b)=>M[b].n-M[a].n); };
+const pyWeakTone=()=>{ const e=PYC().err||{}, w=[1,2,3,4].sort((a,b)=>(e[b]||0)-(e[a]||0))[0]; return (e[w]||0)>=1?w:0; };
+const pyWeakOn=()=>pyMissList().length>0||pyWeakTone()>0;
+function pyGenWeak(){ const M=PYC().miss||{}, qs=[], used=new Set();
+  for(const c of shuffle(pyMissList().slice(0,10))){ if(qs.length>=5) break; const it=pyByChar(c), L=pyReady().find(L=>pyItems(L).includes(it)); if(!L) continue;
+    const grp=(L.groups.find(g=>g.items.includes(it))||{items:[]}).items, ty=(M[c]||{}).ty; let q=null;
+    if(ty==="mpair"&&L.pairs){ const pr=L.pairs.find(x=>x[0]===c||x[2]===c); if(pr) q=pyQMp(pr); }
+    if(!q&&ty==="pick"&&grp.length>=3) q=pyQPick(it,L);
+    if(!q){ if(typeof it.t==="number") q=pyQTone(it,L); else if(typeof it.t==="string"&&it.t.length===2) q=pyQPair(it,L,!!it.say); else if(grp.length>=3) q=pyQPick(it,L); }
+    if(q){ qs.push(q); used.add(c); } }
+  const L1=pyLessons().find(L=>L.id===1);
+  if(L1&&qs.length<5){ const err=PYC().err, tones=pyItems(L1).filter(x=>typeof x.t==="number"&&!used.has(x.c)), w=x=>1+3*(err[x.t]||0);
+    while(qs.length<5&&tones.length){ let s=tones.reduce((a,x)=>a+w(x),0)*Math.random(), k=0; for(;k<tones.length-1;k++){ s-=w(tones[k]); if(s<=0) break; } qs.push(pyQTone(tones.splice(k,1)[0],L1)); } }
+  return shuffle(qs); }
+function pyVMiss(){ const M=PYC().miss||{}, cs=pyMissList(); let h=pyHead("map","我的易错音");
+  if(!cs.length) return h+`<div class="empty"><b>还没有易错音</b>练习里答错的音会收在这里，答对两次就会移出。</div>`;
+  h+=`<p class="muted small">这些是练习里答错过的音。再答对两次，它就会从这里移出。点卡片可以听。</p><div class="pygrid g3">${cs.map(c=>`<div class="pymiss">${pyCard(pyByChar(c))}<span class="pymn">错 ${M[c].n} 次</span></div>`).join("")}</div>
+  <div class="pyact"><button class="btn primary" type="button" data-py="weak">弱音复习</button></div>`;
+  return h; }
+
 /* --- combination tables: one initial with its finals, or one final with its initials --- */
 const PYY={yi:"i",ya:"ia",ye:"ie",yao:"iao",you:"iou",yan:"ian",yin:"in",yang:"iang",ying:"ing",yong:"iong",yu:"ü",yue:"üe",yuan:"üan",yun:"ün",yo:"io",wu:"u",wa:"ua",wo:"uo",wai:"uai",wei:"uei",wan:"uan",wen:"uen",wang:"uang",weng:"ueng"};
 function pyParse(s){ if(PYY[s]) return {ini:"",fin:PYY[s]}; const m=s.match(/^(zh|ch|sh|[bpmfdtnlgkhjqxrzcs])(.*)$/); if(!m) return {ini:"",fin:s};
@@ -5373,6 +5410,11 @@ const PYMO={
   m:{t:"M162 116 C140 114 100 108 58 102",lips:"closed",air:"m",dot:[30,72]},
   f:{t:"M162 116 C140 114 100 108 58 102",lips:"teeth",air:"f",dot:[42,69]}
 };
+Object.assign(PYMO,{
+  t:Object.assign({},PYMO.d,{air:"p"}), n:Object.assign({},PYMO.d,{air:"m"}), k:Object.assign({},PYMO.g,{air:"p"}),
+  c:Object.assign({},PYMO.z,{air:"p"}), ch:Object.assign({},PYMO.zh,{air:"p"}), q:Object.assign({},PYMO.j,{air:"p"}), x:Object.assign({},PYMO.j),
+  e:{t:"M162 116 C160 98 148 78 130 78 C110 80 90 98 54 102"}, o:{t:"M162 116 C160 98 148 78 130 78 C110 80 90 98 54 102",lips:"round"}
+});
 const PYAIR={b:`<path class="mh-air" d="M20 72 H11"/>`,p:`<path class="mh-air big" d="M20 62 H3 M22 72 H1 M20 82 H3"/>`,f:`<path class="mh-air" d="M32 74 H10 M32 82 H12"/>`,m:`<path class="mh-air" d="M132 36 C132 20 104 12 62 14 M62 14 L70 8 M62 14 L70 20"/>`};
 function pyMouthSvg(k){ const m=PYMO[k]; if(!m) return "";
   const nums=m.t.match(/-?\d+(\.\d+)?/g).map(Number), tx=nums[nums.length-2], ty=nums[nums.length-1];
@@ -5436,15 +5478,17 @@ function pyRender(){ const h=$("#py-host"); if(!h) return;
   const own=new Set([1,2,3,4].map(toneCol)).size===4; h.classList.toggle("pyown",own);
   if(!PY.course){ h.innerHTML=`<div class="empty"><b>正在载入拼音课…</b></div>`;
     pyLoad().then(()=>{ if(cur==="pinyin") pyRender(); pyEntry(); }).catch(e=>{ h.innerHTML=`<div class="empty"><b>拼音课没有载入</b>请检查网络后刷新页面。（${esc(e.message)}）</div>`; }); return; }
-  const v=PY.view; h.innerHTML=v==="lesson"?pyVLesson():v==="quiz"?pyVQuiz():v==="chart"?pyVChart():pyVMap(); pyPadPaint(); }
+  const v=PY.view; h.innerHTML=v==="lesson"?pyVLesson():v==="quiz"?pyVQuiz():v==="chart"?pyVChart():v==="miss"?pyVMiss():pyVMap(); pyPadPaint(); }
 function pyHead(back,title){ return `<div class="pyhead">${back?`<button class="btn ghost sm" type="button" data-py="${back}"><span aria-hidden="true">←</span><span>${back==="map"?"全部课程":"回到课程"}</span></button>`:""}<h2>${title}</h2></div>`; }
+function pyWeakCard(){ const n=pyMissList().length, wt=pyWeakTone(), done=PYC().weakAt===today();
+  return `<div class="pyweak"><div><b>弱音复习</b>${n?`<p class="muted small" style="margin:2px 0 0">有 ${n} 个音容易错，花 2 分钟练一练。</p>`:`<p class="muted small" style="margin:2px 0 0">第 ${wt} 声最容易错，花 2 分钟练一练。</p>`}</div><div class="row"><button class="btn primary sm" type="button" data-py="weak">${done?"再练一次":"开始"}</button>${n?`<button class="btn sm" type="button" data-py="miss">看看是哪些</button>`:""}</div></div>`; }
 function pyVMap(){ const d=PYC().done, nx=pyNext(), tot=pyLessons().length, pn=pyPassed();
   const started=Object.keys(d).length>0;
   let h=`<div class="pyhead"><h2>拼音课</h2><span class="spacer"></span><button class="btn sm" type="button" data-py="daily">每日练声调</button><button class="btn sm" type="button" data-py="chart">拼音表</button></div>
   <div class="pyprog"><div class="pyprog-a"><b>${pn>=tot?"拼音课全部掌握":`已掌握 ${pn} / ${tot} 课`}</b><div class="bar"><i style="width:${Math.round(pn/tot*100)}%"></i></div></div>
     <p class="muted small" style="margin:8px 0 0">${nx?(started?`<span>下一步：第 ${nx.id} 课。</span>`:`<span>第一次来？从第 1 课开始，一课约 10 分钟。</span>`):`<span>可以去读第一篇文章了。</span>`}</p><p class="muted small" style="margin:4px 0 0">每课三步：听 → 记 → 练。答对 80% 就算掌握。</p>
     ${nx?`<div class="pyact" style="justify-content:flex-start;margin-top:10px"><button class="btn primary" type="button" data-py="lesson:${nx.id}"><span>${started?`继续第 ${nx.id} 课`:`开始第 ${nx.id} 课`}</span> · <span ${pyLA()}>${esc(pyT(nx.title))}</span></button></div>`:`<div class="pyact" style="justify-content:flex-start;margin-top:10px"><button class="btn primary" type="button" data-py="goread">去读第一篇文章</button></div>`}</div>
-  ${pySpeedRow()}${pyReady().length<pyLessons().length?`<p class="muted small">已上线 ${pyReady().length} 课，其他陆续补上。</p>`:""}<ol class="pymap">`;
+  ${pyWeakOn()?pyWeakCard():""}${pySpeedRow()}${pyReady().length<pyLessons().length?`<p class="muted small">已上线 ${pyReady().length} 课，其他陆续补上。</p>`:""}<ol class="pymap">`;
   for(const L of pyLessons()){ const r=d[L.id], ready=!!L.groups, ok=pyPass(r);
     h+=`<li><button type="button" class="pyli${ok?" pydone":""}${nx&&nx.id===L.id?" next":""}" ${ready?`data-py="lesson:${L.id}"`:"disabled"}><span class="pyno">${ok?I.check:L.id}</span><span class="pyt"><b ${pyLA()}>${esc(pyT(L.title))}</b><small data-noi18n>${esc(pyT(L.sub))}</small></span><span class="pyst2">${r?`${Math.round(r.best*100)}%${ok?"":` <span>再练练</span>`}`:ready?(nx&&nx.id===L.id?"下一课":""):"即将上线"}</span></button></li>`; }
   h+=`</ol><p class="muted small pyfoot">发音来自设备的系统语音，以后会换成真人录音。</p><p class="muted small">想要更自然的声音：在手机的系统设置里下载中文“增强”或“高级”语音，字里会自动使用。</p>`;
@@ -5452,7 +5496,7 @@ function pyVMap(){ const d=PYC().done, nx=pyNext(), tot=pyLessons().length, pn=p
 function pyCard(it){ const t=String(it.t), say=it.say?String(it.say):t;
   const pyc=t.length===1?`<b class="pyp tn${t}" data-noi18n>${esc(it.py)}</b>`:`<b class="pyp" data-noi18n>${esc(it.py)}</b>`;
   const vl=it.v&&it.v.length>3;
-  return `<button type="button" class="pycard" data-pyplay="${esc(it.c)}"><span class="pymic" aria-hidden="true">${I.mic}</span>${it.v&&!vl?`<span class="pyv" data-noi18n>${esc(it.v)}</span>`:""}<span class="pyc">${pyH(it.c)}</span>${pyc}${pyCurve(say)}${it.say?`<small class="pysay" data-noi18n>${esc(t.split("").join("+"))} → ${esc(say.split("").join("+"))}</small>`:""}${pyM(it)}${vl?`<small class="pyvl" data-noi18n>${esc(it.v)}</small>`:""}</button>`; }
+  return `<button type="button" class="pycard${it.c.length>3?" long":""}" data-pyplay="${esc(it.c)}"><span class="pymic" aria-hidden="true">${I.mic}</span>${it.v&&!vl?`<span class="pyv" data-noi18n>${esc(it.v)}</span>`:""}<span class="pyc">${pyH(it.c)}</span>${pyc}${pyCurve(say)}${it.say?`<small class="pysay" data-noi18n>${esc(t.split("").join("+"))} → ${esc(say.split("").join("+"))}</small>`:""}${pyM(it)}${vl?`<small class="pyvl" data-noi18n>${esc(it.v)}</small>`:""}</button>`; }
 function pyVLesson(){ const L=pyLessons().find(x=>x.id===PY.lid)||pyReady()[0]; PY.lid=L.id; const la=pyLA();
   const hasMem=!!(L.table||L.tip||L.mouth), steps=hasMem?["listen","remember","practice"]:["listen","practice"];
   if(!steps.includes(PY.step)) PY.step="listen"; const st=PY.step;
@@ -5468,7 +5512,7 @@ function pyVLesson(){ const L=pyLessons().find(x=>x.id===PY.lid)||pyReady()[0]; 
       h+=`</div><p class="muted small">点声调卡听这个声调；点卡片上的字，单独听例字。</p>`;
       for(const tn of L.tones) if(tn.note) h+=`<p class="muted small pynote">* ${esc(pyT(tn.note))}</p>`; }
     h+=`<p class="muted small">点卡片：听发音，还可以录音对比。</p>${pySpeedRow()}<div class="pypad" id="py-pad" hidden></div>`;
-    for(const g of L.groups){ if(g.label) h+=`<h3 class="pygl" ${la}>${esc(pyT(g.label))}</h3>`; h+=`<div class="pygrid${g.items.length%2===0&&g.items.length>=4?" g4":""}">${g.items.map(pyCard).join("")}</div>`; }
+    for(const g of L.groups){ if(g.label) h+=`<h3 class="pygl" ${la}>${esc(pyT(g.label))}</h3>`; h+=`<div class="pygrid${g.items.length%2===0&&g.items.length>=4&&!g.items.some(x=>x.c.length>2)?" g4":""}">${g.items.map(pyCard).join("")}</div>`; }
     h+=`<div class="pyact"><button class="btn primary" type="button" data-py="step:${steps[1]}">下一步</button></div>`;
   } else if(st==="remember"){
     h+=`<div class="pypad" id="py-pad" hidden></div>`+pyVMouth(L);
@@ -5481,12 +5525,13 @@ function pyVLesson(){ const L=pyLessons().find(x=>x.id===PY.lid)||pyReady()[0]; 
     <div class="pyact"><button class="btn ghost" type="button" data-py="step:listen">回去再听一遍</button><button class="btn primary" type="button" data-py="practice">开始练习</button></div>`;
   }
   return h; }
-function pyStart(daily){ const L=daily?null:pyLessons().find(x=>x.id===PY.lid); const list=daily?pyGenDaily():pyGen(L);
-  PY.q={daily:!!daily,lid:L&&L.id,list,i:0,right:0,miss:[],ans:null}; PY.sel=null; PY.view="quiz"; pyRender(); pyPlayQ(); }
+function pyStart(daily){ const L=daily?null:pyLessons().find(x=>x.id===PY.lid); const list=daily==='weak'?pyGenWeak():daily?pyGenDaily():pyGen(L);
+  if(!list.length){ toast('还没有易错音'); return; }
+  PY.q={daily:!!daily,weak:daily==='weak',lid:L&&L.id,list,i:0,right:0,miss:[],ans:null}; PY.sel=null; PY.view="quiz"; pyRender(); pyPlayQ(); }
 function pyPlayQ(){ const Q=PY.q, q=Q&&Q.list[Q.i]; if(q&&q.it&&q.type!=="pick") pyPlay(q.it); }
 function pyVQuiz(){ const Q=PY.q; if(!Q) return pyVMap();
   const back=Q.daily?"map":"lesson";
-  const title=Q.daily?"每日练声调":`<span class="pyk">第 ${Q.lid} 课</span> 练习`;
+  const title=Q.weak?"弱音复习":Q.daily?"每日练声调":`<span class="pyk">第 ${Q.lid} 课</span> 练习`;
   if(Q.i>=Q.list.length) return pyVResult(back,title);
   const q=Q.list[Q.i], A=Q.ans!=null, ok=A&&Q.ans===q.ans;
   let h=pyHead(back,title)+`<div class="pydots">${Q.list.map((x,n)=>`<i class="${n<Q.i?(x.ok?"ok":"no"):n===Q.i?"cur":""}"></i>`).join("")}</div>`;
@@ -5503,14 +5548,17 @@ function pyVQuiz(){ const Q=PY.q; if(!Q) return pyVMap();
     const wo=!ok&&q.opts.find(o=>o.k===Q.ans); if(wo&&(wo.it||q.type==="tone")&&it) h+=`<button class="btn sm" type="button" data-py="contrast">对比听</button>`;
     h+=`<span class="spacer"></span><button class="btn primary sm" type="button" data-py="next">${Q.i+1<Q.list.length?"下一题":"看结果"}</button></div></div>`; }
   return h+`</div>`; }
-function pyAnswer(k){ const Q=PY.q, q=Q.list[Q.i]; if(Q.ans!=null) return; Q.ans=k; q.ok=k===q.ans; const err=PYC().err;
+function pyAnswer(k){ const Q=PY.q, q=Q.list[Q.i]; if(Q.ans!=null) return; Q.ans=k; q.ok=k===q.ans; const p0=PYC(), err=p0.err;
   if(q.ok) Q.right++; else Q.miss.push(q);
   if(q.type==="tone"){ const t=+q.ans; err[t]=q.ok?Math.max(0,(err[t]||0)-.34):(err[t]||0)+1; if(!q.ok) err[+k]=(err[+k]||0)+.5; }
   if(q.type==="pair") q.ans.split("").forEach((d,n)=>{ if(+d<1||+d>4) return; err[d]=k[n]!==d?(err[d]||0)+1:Math.max(0,(err[d]||0)-.2); });
+  if(q.it&&q.it.c&&q.type!=="rule"&&pyByChar(q.it.c)){ const M=p0.miss||(p0.miss={}), c=q.it.c; /* the sounds I get wrong: kept until answered right twice more */
+    if(q.ok){ const m=M[c]; if(m){ m.ok=(m.ok||0)+1; if(m.ok>=2) delete M[c]; } } else M[c]={n:((M[c]||{}).n||0)+1,ok:0,ty:q.type,at:today()}; }
   save(); pyRender(); if(!q.ok&&q.it) setTimeout(()=>pyPlay(q.it),300); }
 function pyVResult(back,title){ const Q=PY.q, n=Q.list.length, acc=n?Q.right/n:0, p=PYC();
   if(!Q.saved){ Q.saved=true;
-    if(Q.daily) p.daily={at:today(),acc};
+    if(Q.weak) p.weakAt=today();
+    else if(Q.daily) p.daily={at:today(),acc};
     else { const o=p.done[Q.lid]||{best:0}; p.done[Q.lid]={best:Math.max(o.best||0,acc),last:acc,at:today()}; }
     save(); pyEntry(); }
   const win=!Q.daily&&acc>=.8; if(win) onbTick("py"); let h=pyHead(back,title)+`<div class="pyres${win?" win":""}">${win?`<div class="pyconf" aria-hidden="true">${"<i></i>".repeat(14)}</div>`:""}<div class="pyscore">${Q.right}<small>/${n}</small></div><p>答对 ${Q.right} / ${n}</p>`;
@@ -5519,10 +5567,10 @@ function pyVResult(back,title){ const Q=PY.q, n=Q.list.length, acc=n?Q.right/n:0
   const miss=Q.miss.filter(q=>q.it);
   if(miss.length) h+=`<h3 class="pygl">需要多练</h3><div class="pygrid">${[...new Map(miss.map(q=>[q.it.c,q.it])).values()].map(pyCard).join("")}</div>`;
   const e=p.err, worst=[1,2,3,4].sort((a,b)=>(e[b]||0)-(e[a]||0))[0];
-  if(Q.daily&&(e[worst]||0)>=1){ const on=tonesOn()&&toneSel().includes(worst);
+  if(Q.daily&&!Q.weak&&(e[worst]||0)>=1){ const on=tonesOn()&&toneSel().includes(worst);
     h+=`<div class="pytip"><p>最容易错的是第 ${worst} 声。</p>${on?`<span class="muted small">已上色</span>`:`<button class="btn sm" type="button" data-py="color:${worst}">在文章里给第 ${worst} 声上色</button>`}</div>`; }
   const nx=pyNext();
-  h+=`<div class="pyact"><button class="btn sm" type="button" data-py="${Q.daily?"daily":"practice"}">再练一次</button>${!Q.daily&&nx?`<button class="btn primary sm" type="button" data-py="lesson:${nx.id}">下一课</button>`:`<button class="btn primary sm" type="button" data-py="map">全部课程</button>`}</div></div>`;
+  h+=`<div class="pyact"><button class="btn sm" type="button" data-py="${Q.weak?"weak":Q.daily?"daily":"practice"}">再练一次</button>${!Q.daily&&nx?`<button class="btn primary sm" type="button" data-py="lesson:${nx.id}">下一课</button>`:`<button class="btn primary sm" type="button" data-py="map">全部课程</button>`}</div></div>`;
   return h; }
 const PYINI=["b","p","m","f","d","t","n","l","g","k","h","j","q","x","zh","ch","sh","r","z","c","s","y","w",""];
 const PYFIN=["a","o","e","i","u","ü","er","ai","ei","ao","ou","an","en","ang","eng","ong","ia","ie","iao","iu","ian","in","iang","ing","iong","ua","uo","uai","ui","uan","un","uang","ue","üe","uan","ün"];
@@ -5533,19 +5581,25 @@ function pyVChart(){ const ch=PY.chart||{}, grp={};
   for(const ini of PYINI){ const ss=grp[ini]; if(!ss) continue; ss.sort((a,b)=>fo(a)-fo(b)||a.localeCompare(b));
     h+=`<div class="pyrow"><span class="pyini" data-noi18n>${ini||"·"}</span><div class="pysyl">${ss.map(s=>`<button type="button" data-pysyl="${esc(s)}" data-noi18n>${esc(s)}</button>`).join("")}</div></div>`; }
   return h; }
+/* mouth figures under a chart syllable: its initial and its single-vowel final, when we have a diagram */
+function pyChartMouth(s){ const pr=pyParse(s), ks=[]; if(pr.ini&&PYMO[pr.ini]) ks.push(pr.ini); if(["a","o","e","i","u","ü"].includes(pr.fin)&&PYMO[pr.fin]) ks.push(pr.fin);
+  if(!ks.length) return ""; const so=(PY.course&&PY.course.sounds)||{}, la=pyLA();
+  return `<div class="pymouth">${ks.map(k=>`<figure>${pyMouthSvg(k)}<figcaption><b data-noi18n>${esc(k)}</b>${so[k]?` <span ${la}>${esc(pyT(so[k]))}</span>`:""}</figcaption></figure>`).join("")}</div><p class="muted small">示意图，脸朝左：粗线是舌头，红点是接触或靠近的地方，红线是气流。</p>`; }
 function pyChartCell(s){ const cs=(PY.chart||{})[s]||[], el=$("#py-cd"); if(!el) return;
   $$("[data-pysyl]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.pysyl===s));
-  el.hidden=false; el.innerHTML=`<div class="pycdh"><b data-noi18n>${esc(s)}</b><button class="btn sm" type="button" data-pyseq="${esc(cs.filter(Boolean).join(","))}">${I.play}<span data-noi18n>${[1,2,3,4].filter(t=>cs[t-1]).map(t=>esc(pyMark(s,t))).join(" ")}</span></button></div><div class="pycd4">${[1,2,3,4].map(t=>{ const c=cs[t-1]; return c?`<button type="button" class="pycard" data-pyplay="${esc(c)}" data-pypy="${esc(pyMark(s,t))}" data-pyt="${t}"><b class="pyp tn${t}" data-noi18n>${esc(pyMark(s,t))}</b><span class="pyc">${pyH(c)}</span>${pyCurve(t)}</button>`:`<div class="pycard none"><b class="pyp" data-noi18n>${esc(pyMark(s,t))}</b><span class="muted">–</span></div>`; }).join("")}</div>`;
+  el.hidden=false; el.innerHTML=`<div class="pycdh"><b data-noi18n>${esc(s)}</b><button class="btn sm" type="button" data-pyseq="${esc(cs.filter(Boolean).join(","))}">${I.play}<span data-noi18n>${[1,2,3,4].filter(t=>cs[t-1]).map(t=>esc(pyMark(s,t))).join(" ")}</span></button></div><div class="pycd4">${[1,2,3,4].map(t=>{ const c=cs[t-1]; return c?`<button type="button" class="pycard" data-pyplay="${esc(c)}" data-pypy="${esc(pyMark(s,t))}" data-pyt="${t}"><b class="pyp tn${t}" data-noi18n>${esc(pyMark(s,t))}</b><span class="pyc">${pyH(c)}</span>${pyCurve(t)}</button>`:`<div class="pycard none"><b class="pyp" data-noi18n>${esc(pyMark(s,t))}</b><span class="muted">–</span></div>`; }).join("")}</div>${pyChartMouth(s)}`;
   const seq=cs.filter(Boolean); if(seq.length) pySeq(seq.flatMap(c=>[{say:c},{wait:250}])); }
-function pyEntry(){ const el=$("#py-entry"); if(!el) return; if(!PY.course||PYC().hide){ el.innerHTML=""; return; }
-  const nx=pyNext(), all=pyLessons().length, dn=pyPassed(), dd=PYC().daily&&PYC().daily.at===today();
-  el.innerHTML=`<div class="py-entry"><div class="pe-a">${nx?`<b><span>拼音课</span> · <span>第 ${nx.id} 课</span></b><span class="pe-t" ${pyLA()}>${esc(pyT(nx.title))}</span>`:`<b>拼音课</b><span class="pe-t">${dn} 课已学完</span>`}<div class="bar"><i style="width:${Math.round(dn/all*100)}%"></i></div></div>
-  <div class="pe-b">${nx?`<button class="btn primary sm" type="button" data-pyopen="lesson:${nx.id}">继续学习</button>`:""}${dn?`<button class="btn sm" type="button" data-pyopen="daily">${dd?"今天已经练过了":"每日练声调"}</button>`:""}<button class="btn ghost sm" type="button" data-pyopen="map">全部课程</button><button class="ib sm" type="button" data-pyopen="hide" aria-label="从今日页收起" title="从今日页收起">${I.x}</button></div></div>`; }
+function pyEntry(){ const el=$("#py-entry"); if(!el) return; /* the Today page only carries one pinyin prompt: weak-sound review, when there is something to review */
+  if(!PY.course||PYC().hide||!pyWeakOn()||PYC().weakAt===today()){ el.innerHTML=""; return; }
+  const n=pyMissList().length, wt=pyWeakTone();
+  el.innerHTML=`<div class="pyweak"><div><b>弱音复习</b>${n?`<p class="muted small" style="margin:2px 0 0">有 ${n} 个音容易错，花 2 分钟练一练。</p>`:`<p class="muted small" style="margin:2px 0 0">第 ${wt} 声最容易错，花 2 分钟练一练。</p>`}</div><div class="row"><button class="btn primary sm" type="button" data-pyopen="weak">开始</button></div></div>`; }
 function pyAct(a){ const [k,v]=a.split(":");
   if(k==="map"||k==="chart") pyOpen(k);
   else if(k==="lesson") pyOpen("lesson",v);
   else if(k==="practice") pyStart(false);
   else if(k==="daily"){ if(!PY.course){ pyLoad().then(()=>pyAct(a)); return; } if(cur!=="pinyin") showTab("pinyin"); pyStart(true); }
+  else if(k==="weak"){ if(!PY.course){ pyLoad().then(()=>pyAct(a)); return; } if(cur!=="pinyin") showTab("pinyin"); pyStart("weak"); }
+  else if(k==="miss") pyOpen("miss");
   else if(k==="goread") showTab("read");
   else if(k==="step"){ PY.step=v; pyRender(); window.scrollTo({top:0,behavior:"smooth"}); }
   else if(k==="replay") pyPlayQ();
@@ -5566,7 +5620,7 @@ document.addEventListener("input",e=>{ const s=e.target.closest&&e.target.closes
 document.addEventListener("change",e=>{ const s=e.target.closest&&e.target.closest("[data-pyspeed]"); if(!s) return;
   PYC().rate=+s.value; save(); pySay("妈"); });
 document.addEventListener("click",e=>{
-  const o=e.target.closest("[data-pyopen]"); if(o){ const a=o.dataset.pyopen; if(a==="hide"||a==="daily"||a.startsWith("lesson")) pyAct(a); else pyOpen(a); return; }
+  const o=e.target.closest("[data-pyopen]"); if(o){ const a=o.dataset.pyopen; if(a==="hide"||a==="daily"||a==="weak"||a.startsWith("lesson")) pyAct(a); else pyOpen(a); return; }
   if(!e.target.closest("#py-host")) return;
   pyUnlock();
   const ex=e.target.closest(".pyex [data-pyplay]"); if(ex){ const it=pyByChar(ex.dataset.pyplay); pyPadSet(it); pyPlay(it); return; }
@@ -5587,7 +5641,7 @@ document.addEventListener("click",e=>{ const b=e.target.closest("[data-glsw]"); 
 function pyAnnounce(){ if(lsGet("zl-new-py","")==="1") return; if(detailOpen||document.querySelector(".pynew")) return;
   { const o=S.settings.onb; if(o&&!o.existing){ lsSet("zl-new-py","1"); return; } } /* "new feature" is only news for people who used the app before the pinyin course existed */
   const el=document.createElement("div"); el.className="pynew"; el.setAttribute("role","dialog"); el.setAttribute("aria-modal","true");
-  el.innerHTML=`<div class="pynew-c"><span class="pynew-k">新功能</span><h3>拼音课</h3><p>14 节课，从四个声调到变调：每个音都能听、能录音对比，还有组合表、拼音表和每日练声调。</p><p class="muted small">在底部的「拼音」里，随时可以自学。</p><div class="row"><button class="btn ghost" type="button" data-pynew="0">知道了</button><button class="btn primary" type="button" data-pynew="1">去看看</button></div></div>`;
+  el.innerHTML=`<div class="pynew-c"><span class="pynew-k">新功能</span><h3>拼音课</h3><p>15 节课，从四个声调到变调：每个音都能听、能录音对比，还有组合表、拼音表和每日练声调。</p><p class="muted small">在底部的「拼音」里，随时可以自学。</p><div class="row"><button class="btn ghost" type="button" data-pynew="0">知道了</button><button class="btn primary" type="button" data-pynew="1">去看看</button></div></div>`;
   document.body.appendChild(el);
   el.addEventListener("click",e=>{ const b=e.target.closest("[data-pynew]"); if(!b&&e.target!==el) return; lsSet("zl-new-py","1"); el.remove(); if(b&&b.dataset.pynew==="1") pyOpen("map"); }); }
 setTimeout(()=>{ try{ pyAnnounce(); }catch(e){} },1800);

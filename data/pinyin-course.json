@@ -4870,6 +4870,258 @@
      "n": 1
     }
    ]
+  },
+  {
+   "id": 15,
+   "key": "phrases",
+   "title": {
+    "zh": "日常短句",
+    "en": "Everyday phrases",
+    "de": "Alltagssätze",
+    "pt": "Frases do dia a dia"
+   },
+   "sub": {
+    "zh": "xièxie · nǐ hǎo ma · duōshao qián",
+    "en": "xièxie · nǐ hǎo ma · duōshao qián",
+    "de": "xièxie · nǐ hǎo ma · duōshao qián",
+    "pt": "xièxie · nǐ hǎo ma · duōshao qián"
+   },
+   "video": "",
+   "intro": {
+    "zh": "把前面学过的音连成一句话，就是马上能用的短句。一句话要连着读，不要一个字一个字地停。句子里常有变调和轻声：先点卡片听一遍，再跟着说，最后用“录音对比”看自己的音高线和示范有多像。",
+    "en": "Put the sounds you have learned together and you get phrases you can use right away. Say a phrase in one flow, not one syllable at a time. Phrases often contain tone changes and neutral tones: tap a card to listen first, then say it along, and finally use the recording comparison to see how close your pitch line is to the model.",
+    "de": "Setze die gelernten Laute zusammen, dann hast du Sätze, die du sofort benutzen kannst. Sprich einen Satz in einem Zug, nicht Silbe für Silbe. In Sätzen kommen oft Tonwechsel und Neutraltöne vor: Tippe zuerst auf die Karte und höre zu, sprich dann mit und vergleiche zum Schluss mit der Aufnahme deine Tonhöhenlinie mit dem Vorbild.",
+    "pt": "Junta os sons que aprendeste e tens frases que podes usar já. Diz a frase de uma vez, não sílaba a sílaba. As frases têm muitas vezes mudanças de tom e tons neutros: toca no cartão para ouvir, repete em voz alta e, por fim, usa a comparação da gravação para ver quão perto está a tua linha de altura da do modelo."
+   },
+   "tip": {
+    "zh": "两个三声连在一起，前一个读成二声：你好吗 nǐ hǎo ma 实际读成 ní hǎo ma。卡片上的箭头把“写出来的声调”和“实际读的声调”并排给你看，先看箭头，再听。",
+    "en": "When two 3rd tones meet, the first one is said as a 2nd tone: nǐ hǎo ma is actually said ní hǎo ma. The arrow on a card shows the written tones next to the tones actually spoken: read the arrow first, then listen.",
+    "de": "Treffen zwei dritte Töne aufeinander, wird der erste als zweiter Ton gesprochen: nǐ hǎo ma klingt in Wirklichkeit wie ní hǎo ma. Der Pfeil auf der Karte zeigt die geschriebenen Töne neben den tatsächlich gesprochenen: erst den Pfeil lesen, dann hören.",
+    "pt": "Quando dois terceiros tons se encontram, o primeiro diz-se como segundo tom: nǐ hǎo ma diz-se na verdade ní hǎo ma. A seta do cartão mostra os tons escritos ao lado dos tons realmente falados: lê primeiro a seta e depois ouve."
+   },
+   "groups": [
+    {
+     "label": {
+      "zh": "礼貌用语",
+      "en": "Polite phrases",
+      "de": "Höflichkeitsformeln",
+      "pt": "Fórmulas de cortesia"
+     },
+     "items": [
+      {
+       "c": "谢谢",
+       "py": "xièxie",
+       "t": "40",
+       "m": {
+        "en": "thank you",
+        "de": "danke",
+        "pt": "obrigado/a"
+       }
+      },
+      {
+       "c": "不客气",
+       "py": "bù kèqi",
+       "t": "440",
+       "say": "240",
+       "m": {
+        "en": "you're welcome",
+        "de": "gern geschehen",
+        "pt": "de nada"
+       }
+      },
+      {
+       "c": "对不起",
+       "py": "duìbuqǐ",
+       "t": "403",
+       "m": {
+        "en": "sorry",
+        "de": "Entschuldigung",
+        "pt": "desculpa"
+       }
+      },
+      {
+       "c": "没关系",
+       "py": "méi guānxi",
+       "t": "210",
+       "m": {
+        "en": "it doesn't matter",
+        "de": "macht nichts",
+        "pt": "não faz mal"
+       }
+      },
+      {
+       "c": "再见",
+       "py": "zàijiàn",
+       "t": "44",
+       "m": {
+        "en": "goodbye",
+        "de": "auf Wiedersehen",
+        "pt": "adeus"
+       }
+      },
+      {
+       "c": "晚安",
+       "py": "wǎn'ān",
+       "t": "31",
+       "m": {
+        "en": "good night",
+        "de": "gute Nacht",
+        "pt": "boa noite"
+       }
+      }
+     ]
+    },
+    {
+     "label": {
+      "zh": "问候和自我介绍",
+      "en": "Greetings and introductions",
+      "de": "Begrüßung und Vorstellung",
+      "pt": "Cumprimentos e apresentações"
+     },
+     "items": [
+      {
+       "c": "你好吗",
+       "py": "nǐ hǎo ma",
+       "t": "330",
+       "say": "230",
+       "m": {
+        "en": "how are you?",
+        "de": "wie geht's?",
+        "pt": "tudo bem?"
+       }
+      },
+      {
+       "c": "我很好",
+       "py": "wǒ hěn hǎo",
+       "t": "333",
+       "say": "223",
+       "m": {
+        "en": "I'm fine",
+        "de": "mir geht's gut",
+        "pt": "estou bem"
+       }
+      },
+      {
+       "c": "你叫什么名字",
+       "py": "nǐ jiào shénme míngzi",
+       "t": "342020",
+       "m": {
+        "en": "what's your name?",
+        "de": "wie heißt du?",
+        "pt": "como te chamas?"
+       }
+      },
+      {
+       "c": "我是中国人",
+       "py": "wǒ shì Zhōngguó rén",
+       "t": "34122",
+       "m": {
+        "en": "I am Chinese",
+        "de": "ich bin Chinese/Chinesin",
+        "pt": "sou chinês/chinesa"
+       }
+      }
+     ]
+    },
+    {
+     "label": {
+      "zh": "课堂和沟通",
+      "en": "Class and communication",
+      "de": "Unterricht und Verständigung",
+      "pt": "Aula e comunicação"
+     },
+     "items": [
+      {
+       "c": "请再说一遍",
+       "py": "qǐng zài shuō yī biàn",
+       "t": "34114",
+       "m": {
+        "en": "please say it again",
+        "de": "bitte noch einmal",
+        "pt": "diz outra vez, por favor"
+       },
+       "say": "34124"
+      },
+      {
+       "c": "我不知道",
+       "py": "wǒ bù zhīdào",
+       "t": "3410",
+       "m": {
+        "en": "I don't know",
+        "de": "ich weiß nicht",
+        "pt": "não sei"
+       }
+      },
+      {
+       "c": "你会说中文吗",
+       "py": "nǐ huì shuō Zhōngwén ma",
+       "t": "341120",
+       "m": {
+        "en": "do you speak Chinese?",
+        "de": "sprichst du Chinesisch?",
+        "pt": "falas chinês?"
+       }
+      },
+      {
+       "c": "我想喝茶",
+       "py": "wǒ xiǎng hē chá",
+       "t": "3312",
+       "say": "2312",
+       "m": {
+        "en": "I'd like to drink tea",
+        "de": "ich möchte Tee trinken",
+        "pt": "quero beber chá"
+       }
+      }
+     ]
+    },
+    {
+     "label": {
+      "zh": "买东西",
+      "en": "Shopping",
+      "de": "Einkaufen",
+      "pt": "Compras"
+     },
+     "items": [
+      {
+       "c": "多少钱",
+       "py": "duōshao qián",
+       "t": "102",
+       "m": {
+        "en": "how much?",
+        "de": "wie viel kostet das?",
+        "pt": "quanto custa?"
+       }
+      },
+      {
+       "c": "太贵了",
+       "py": "tài guì le",
+       "t": "440",
+       "m": {
+        "en": "too expensive",
+        "de": "zu teuer",
+        "pt": "é caro demais"
+       }
+      },
+      {
+       "c": "我要这个",
+       "py": "wǒ yào zhège",
+       "t": "3440",
+       "m": {
+        "en": "I'll take this one",
+        "de": "ich nehme das hier",
+        "pt": "quero este"
+       }
+      }
+     ]
+    }
+   ],
+   "practice": [
+    {
+     "type": "pick",
+     "n": 8
+    }
+   ]
   }
  ],
  "sounds": {
