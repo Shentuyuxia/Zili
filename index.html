@@ -2530,6 +2530,7 @@ function renderDetail(note){
       <div>
         ${glossHTML(c,false)}
         <div style="margin-top:12px">${exHTML(c)}</div>
+        ${c.from&&String(c.from).includes("|")?(()=>{ const st=LL.srs[id], t=today(); const rv=!st?"还没开始学":st.d<=t?"今天该复习":"下次复习 "+st.d; return `<div class="src-row" style="margin-top:10px"><span class="small muted">读文章时收的 · ${esc(rv)}</span><span class="spacer"></span><button class="btn ghost sm" id="d-src" type="button">回到这篇文章 →</button></div>`; })():""}
         <div class="field" style="margin-top:16px"><label for="d-memo">记忆提示</label><div class="row" style="flex-wrap:nowrap"><input type="text" id="d-memo" value="${esc(memoOf(c))}" placeholder="谐音、画面、词根……"><button class="btn sm" id="d-memo-save" type="button">保存</button></div></div>
         <div class="field" style="margin-top:6px"><span class="lab2">我的例句</span>
           <div class="sents">${mine.length?mine.map((m,i)=>`<div class="sent ${m.ok?"okk":""}"><div class="body"><div class="t">${esc(m.t)}</div>${m.fix&&m.fix!==m.t?`<div class="fx">→ ${esc(m.fix)}</div>`:""}${m.note?`<div class="nt">${esc(m.note)}</div>`:""}</div>
@@ -2558,6 +2559,7 @@ function renderDetail(note){
   $("#d-scrim").addEventListener("mousedown",e=>{ if(e.target.id==="d-scrim") closeDetail(); });
   $("#d-close").onclick=closeDetail;
   $("#d-say").onclick=()=>speak(c.w);
+  { const ds=$("#d-src"); if(ds) ds.onclick=()=>{ closeDetail(); mgJump(c.from); }; }
   $("#d-std").onclick=()=>speak(c.ex?c.w+"。"+c.ex:c.w);
   $("#d-memo-save").onclick=()=>{ const v=$("#d-memo").value.trim(); if(v) L().memo[id]=v; else delete L().memo[id]; save(); renderDetail("记忆提示已保存"); };
   const addSent=async check=>{
