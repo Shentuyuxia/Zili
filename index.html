@@ -1125,6 +1125,7 @@ body .py .tn1,body.tones .py .tn1{color:var(--py1)} body .py .tn2,body.tones .py
 .pynew{position:fixed;inset:0;z-index:90;background:var(--scrim,rgba(0,0,0,.45));display:grid;place-items:center;padding:16px}
 .pynew-c{background:var(--surface);border-radius:18px;padding:22px 20px 16px;max-width:380px;width:100%;box-shadow:0 20px 50px rgba(0,0,0,.3)}
 .pynew-c h3{margin:6px 0 8px;font-size:22px}.pynew-c p{margin:0 0 8px;line-height:1.6}.pynew-c .row{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+.wn-l{margin:6px 0 8px;padding:0;list-style:none;display:grid;gap:10px}.wn-l li{display:flex;gap:10px;align-items:flex-start;justify-content:space-between;line-height:1.6}.wn-l li .btn{flex:none}
 .pynew-k{display:inline-block;background:var(--acc);color:var(--on-acc);border-radius:99px;padding:2px 10px;font-size:12px;font-weight:700}
 .pyfoot{margin-top:14px}
 .pyspd{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin:8px 0;font-size:13px;color:var(--muted)}.pyspd>span{margin-right:2px}.pyrange{width:160px;accent-color:#2e6b5e}.pypct{min-width:3em;text-align:right;font-variant-numeric:tabular-nums}
@@ -1489,7 +1490,7 @@ body .py .tn1,body.tones .py .tn1{color:var(--py1)} body .py .tn2,body.tones .py
       <div class="panel">
         <h3 class="ph3">界面</h3>
         <label class="tog"><input type="checkbox" id="opt-hints"> 显示说明文字</label>
-        <button class="btn ghost sm" type="button" id="onb-again" style="margin-top:10px">重新看新手引导</button>
+        <button class="btn ghost sm" type="button" id="onb-again" style="margin-top:10px">重新看新手引导</button> <button class="btn ghost sm" type="button" id="wn-open" style="margin-top:10px">更新记录</button>
         <div class="field" id="voice-row" style="margin-top:14px" hidden><label for="opt-voice">朗读语音</label>
           <div class="row" style="flex-wrap:nowrap"><select id="opt-voice"></select><button class="btn sm" id="voice-test" type="button">试听</button></div>
           <p class="note hint">★ 是增强/高级语音，听起来更自然。iPhone 可在「设置 → 辅助功能 → 朗读内容 → 声音 → 中文」里下载，比如 Tingting 或 Lilian（增强版）。</p></div>
@@ -4298,6 +4299,12 @@ const UI_DICT=[
 ["口型示意图", "Mouth diagrams", "Mundstellung", "Posição da boca", "口型示意圖"],
 ["示意图，脸朝左：粗线是舌头，红点是接触或靠近的地方，红线是气流。", "Schematic, face looking left: the thick line is the tongue, the red dot is where things touch or come close, red lines show airflow.", "Schematisch, Gesicht nach links: Die dicke Linie ist die Zunge, der rote Punkt zeigt Berührung oder Nähe, rote Linien zeigen die Luft.", "Esquema, rosto virado para a esquerda: a linha grossa é a língua, o ponto vermelho mostra onde toca ou chega perto, as linhas vermelhas mostram o ar.", "示意圖，臉朝左：粗線是舌頭，紅點是接觸或靠近的地方，紅線是氣流。"],
 ["继续学习", "Continue", "Weiterlernen", "Continuar", "繼續學習"],
+["更新内容", "What's new", "Neuigkeiten", "Novidades", "更新內容"],
+["更新记录", "Update history", "Änderungsverlauf", "Histórico de atualizações", "更新記錄"],
+["字里有新变化", "Zili has changed", "Zili hat sich verändert", "O Zili mudou", "字裡有新變化"],
+["拼音课新增第 15 课「日常短句」，还有「弱音复习」：练习答错的音会收起来，每天 2 分钟练一练。", "The pinyin course has a new lesson 15, “Everyday phrases”, and a weak-sound review: sounds you get wrong in practice are collected so you can go over them for 2 minutes a day.", "Der Pinyin-Kurs hat eine neue Lektion 15, „Alltagssätze“, und eine Wiederholung schwacher Laute: Laute, die du im Training falsch hast, werden gesammelt, damit du sie täglich 2 Minuten übst.", "O curso de pinyin tem uma nova lição 15, «Frases do dia a dia», e uma revisão dos sons fracos: os sons em que erras no treino ficam guardados para treinares 2 minutos por dia.", "拼音課新增第 15 課「日常短句」，還有「弱音複習」：練習答錯的音會收起來，每天 2 分鐘練一練。"],
+["阅读页分成「今日 / 书架 / 我的文章」三个选项卡，课文库按级别挑。", "The reading page now has three tabs, Today / Bookshelf / My articles, and the text library is sorted by level.", "Die Leseseite hat jetzt drei Reiter: Heute / Bücherregal / Meine Artikel. Die Textsammlung ist nach Niveau sortiert.", "A página de leitura tem agora três separadores: Hoje / Estante / Meus artigos, e a biblioteca de textos está por nível.", "閱讀頁分成「今日 / 書架 / 我的文章」三個選項卡，課文庫按級別挑。"],
+["练拼音也算连续天数，备份提醒现在也会保护你的学习进度。", "Pinyin practice now counts towards your streak, and the backup reminder also protects your progress.", "Pinyin-Übung zählt jetzt für die Serie, und die Sicherungserinnerung schützt jetzt auch deinen Lernfortschritt.", "Treinar pinyin conta agora para a sequência, e o lembrete de backup também protege o teu progresso.", "練拼音也算連續天數，備份提醒現在也會保護你的學習進度。"],
 ["有新版本", "A new version is ready", "Eine neue Version ist da", "Há uma nova versão", "有新版本"],
 ["本周练了 {0} 天", "Practised {0} days this week", "Diese Woche {0} Tage geübt", "Treinaste {0} dias esta semana", "本週練了 {0} 天"],
 ["你的学习进度只存在这台设备上，还没有备份过。建议导出一份备份文件。", "Your progress is only stored on this device and has not been backed up yet. Export a backup file.", "Dein Lernfortschritt liegt nur auf diesem Gerät und wurde noch nicht gesichert. Exportiere eine Sicherungsdatei.", "O teu progresso está só neste aparelho e ainda não tem backup. Exporta um ficheiro de backup.", "你的學習進度只存在這台裝置上，還沒有備份過。建議匯出一份備份檔案。"],
@@ -5664,6 +5671,25 @@ function pyAnnounce(){ if(lsGet("zl-new-py","")==="1") return; if(detailOpen||do
   document.body.appendChild(el);
   el.addEventListener("click",e=>{ const b=e.target.closest("[data-pynew]"); if(!b&&e.target!==el) return; lsSet("zl-new-py","1"); el.remove(); if(b&&b.dataset.pynew==="1") pyOpen("map"); }); }
 setTimeout(()=>{ try{ pyAnnounce(); }catch(e){} },1800);
+/* ---------- what's new: newest release first; only releases worth telling people about get an entry ---------- */
+const WHATSNEW=[
+  {id:"2026-11-12",items:[
+    ["拼音课新增第 15 课「日常短句」，还有「弱音复习」：练习答错的音会收起来，每天 2 分钟练一练。","pinyin"],
+    ["阅读页分成「今日 / 书架 / 我的文章」三个选项卡，课文库按级别挑。","read"],
+    ["练拼音也算连续天数，备份提醒现在也会保护你的学习进度。",""]]}
+];
+function wnShow(all){ if(document.querySelector(".wnew")) return;
+  const rel=all?WHATSNEW:WHATSNEW.slice(0,1), el=document.createElement("div"); el.className="pynew wnew"; el.setAttribute("role","dialog"); el.setAttribute("aria-modal","true");
+  el.innerHTML=`<div class="pynew-c"><span class="pynew-k">${all?"更新记录":"更新内容"}</span><h3>字里有新变化</h3>${rel.map(r=>`${all?`<p class="muted small" data-noi18n style="margin:10px 0 2px">${esc(new Date(r.id+"T12:00").toLocaleDateString(uiLocale(),{year:"numeric",month:"short",day:"numeric"}))}</p>`:""}<ul class="wn-l">${r.items.map(([t,go])=>`<li><span>${t}</span>${go?`<button class="btn ghost sm" type="button" data-wngo="${go}">去看看</button>`:""}</li>`).join("")}</ul>`).join("")}<div class="row"><button class="btn primary" type="button" data-wnok="1">知道了</button></div></div>`;
+  document.body.appendChild(el);
+  el.addEventListener("click",e=>{ const g=e.target.closest("[data-wngo]"), ok=e.target.closest("[data-wnok]"); if(!g&&!ok&&e.target!==el) return;
+    lsSet("zl-wn",WHATSNEW[0].id); el.remove();
+    if(g){ if(g.dataset.wngo==="pinyin"){ showTab("pinyin"); pyOpen("map"); } else showTab(g.dataset.wngo); } }); }
+function wnAuto(){ if(lsGet("zl-wn","")===WHATSNEW[0].id) return;
+  const o=S.settings.onb; if(o&&!o.existing){ lsSet("zl-wn",WHATSNEW[0].id); return; } /* a new person has nothing to compare with */
+  if(lsGet("zl-new-py","")!=="1"||detailOpen||document.querySelector(".pynew,.wnew")) return; wnShow(false); }
+setTimeout(()=>{ try{ wnAuto(); }catch(e){} },3200);
+{ const b=$("#wn-open"); if(b) b.addEventListener("click",()=>wnShow(true)); }
 
 
 /* ---------- boot ---------- */
