@@ -1,0 +1,107 @@
+{
+ "date": "2026-11-12",
+ "createdBy": "claude",
+ "items": [
+  {
+   "lang": "zh",
+   "level": "HSK1",
+   "kind": "story",
+   "section": "学习与工作",
+   "title": "爸爸开出租车",
+   "title_en": "Dad drives a taxi",
+   "title_de": "Papa fährt Taxi",
+   "title_pt": "O papai dirige táxi",
+   "paragraphs": [
+    "我叫小月，今年七岁。我家在台北。",
+    "我爸爸是出租车司机。他每天早上七点去工作，晚上八点回家。",
+    "很多人坐爸爸的车。爸爸认识很多路，也会说一点儿英语。",
+    "星期天爸爸不工作。我们一起去吃饭。我说：“爸爸，谢谢你！”爸爸很高兴。"
+   ],
+   "paragraphs_en": [
+    "My name is Xiaoyue and I am seven this year. My home is in Taipei.",
+    "My dad is a taxi driver. Every day he goes to work at seven in the morning and comes home at eight in the evening.",
+    "Lots of people ride in Dad's car. Dad knows lots of streets, and he can also speak a little English.",
+    "On Sunday Dad doesn't work. We go out to eat together. I say: “Dad, thank you!” Dad is very happy."
+   ],
+   "paragraphs_de": [
+    "Ich heiße Xiaoyue und bin dieses Jahr sieben. Mein Zuhause ist in Taipeh.",
+    "Mein Papa ist Taxifahrer. Jeden Tag geht er um sieben Uhr morgens zur Arbeit und kommt um acht Uhr abends nach Hause.",
+    "Viele Leute fahren in Papas Auto. Papa kennt viele Straßen und kann auch ein bisschen Englisch.",
+    "Am Sonntag arbeitet Papa nicht. Wir gehen zusammen essen. Ich sage: „Papa, danke!“ Papa freut sich sehr."
+   ],
+   "paragraphs_pt": [
+    "Eu me chamo Xiaoyue e tenho sete anos. Minha casa fica em Taipé.",
+    "Meu pai é motorista de táxi. Todo dia ele vai trabalhar às sete da manhã e volta para casa às oito da noite.",
+    "Muita gente anda no carro do papai. O papai conhece muitas ruas e também fala um pouco de inglês.",
+    "No domingo o papai não trabalha. A gente sai para comer junto. Eu digo: “Papai, obrigada!” O papai fica muito feliz."
+   ],
+   "glossary": [
+    {
+     "w": "台北",
+     "p": "Tái běi",
+     "en": "Taipei",
+     "de": "Taipeh",
+     "pt": "Taipé"
+    },
+    {
+     "w": "出租车",
+     "p": "chū zū chē",
+     "en": "taxi",
+     "de": "das Taxi",
+     "pt": "o táxi"
+    },
+    {
+     "w": "司机",
+     "p": "sī jī",
+     "en": "driver",
+     "de": "der Fahrer / die Fahrerin",
+     "pt": "o motorista"
+    },
+    {
+     "w": "每天",
+     "p": "měi tiān",
+     "en": "every day",
+     "de": "jeden Tag",
+     "pt": "todo dia"
+    },
+    {
+     "w": "回家",
+     "p": "huí jiā",
+     "en": "to go/come home",
+     "de": "nach Hause gehen/kommen",
+     "pt": "voltar para casa"
+    },
+    {
+     "w": "认识",
+     "p": "rèn shi",
+     "en": "to know (a person, a place)",
+     "de": "kennen",
+     "pt": "conhecer"
+    },
+    {
+     "w": "路",
+     "p": "lù",
+     "en": "road; street",
+     "de": "die Straße; der Weg",
+     "pt": "a rua; o caminho"
+    },
+    {
+     "w": "一点儿",
+     "p": "yì diǎn r",
+     "en": "a little",
+     "de": "ein bisschen",
+     "pt": "um pouco"
+    }
+   ],
+   "grammar": "In Chinese the time comes BEFORE the verb: 他每天早上七点去工作 'he goes to work at seven every morning' — literally 'he every day morning seven o'clock go work'. Put the bigger time first: 每天 → 早上 → 七点.",
+   "grammar_de": "Im Chinesischen steht die Zeit VOR dem Verb: 他每天早上七点去工作 „er geht jeden Morgen um sieben zur Arbeit“ – wörtlich „er jeden Tag Morgen sieben Uhr gehen arbeiten“. Die größere Zeitangabe kommt zuerst: 每天 → 早上 → 七点.",
+   "grammar_pt": "Em chinês, o tempo vem ANTES do verbo: 他每天早上七点去工作 “ele vai trabalhar às sete toda manhã” – literalmente “ele todo dia manhã sete horas ir trabalhar”. O tempo maior vem primeiro: 每天 → 早上 → 七点.",
+   "questions": [
+    "小月的家在哪儿？",
+    "爸爸几点去工作？几点回家？",
+    "星期天爸爸工作吗？"
+   ],
+   "sources": []
+  }
+ ]
+}
