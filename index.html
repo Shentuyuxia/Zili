@@ -1129,6 +1129,7 @@ body .py .tn1,body.tones .py .tn1{color:var(--py1)} body .py .tn2,body.tones .py
 .pygl{font-size:14px;margin:16px 0 8px;color:var(--muted);font-weight:600}
 .pygrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:8px}
 .pycard{display:flex;flex-direction:column;align-items:center;gap:2px;border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:10px 6px 8px;cursor:pointer;color:var(--ink);font:inherit;position:relative;min-width:0}
+.updbar{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(84px + env(safe-area-inset-bottom,0px));z-index:60;display:flex;align-items:center;gap:12px;background:var(--ink);color:var(--bg);padding:8px 8px 8px 16px;border-radius:99px;font-size:13px;box-shadow:0 6px 24px rgba(0,0,0,.2)}
 .pygrid.g3{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
 .pymiss{display:flex;flex-direction:column;gap:3px;align-items:stretch}.pymiss .pymn{font-size:11px;color:var(--muted);text-align:center}
 .pyweak{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:10px 12px;margin:12px 0}
@@ -3644,10 +3645,13 @@ document.addEventListener("selectionchange",()=>{
 $("#mg-selbtn").addEventListener("click",()=>{ const t=MG.selText; if(!t) return; $("#mg-selbtn").hidden=true; mgOpen(t,MG.selSent||""); });
 
 /* ---------- strip ---------- */
+const pyDayOn=k=>!!(((S.settings||{}).pyc||{}).days||{})[k];
+function pyWeekDays(){ let n=0; const d=new Date(); d.setHours(12,0,0,0); for(let i=0;i<7;i++){ const k=dk(d); if(pyDayOn(k)) n++; d.setDate(d.getDate()-1); } return n; }
 function streak(l){
   l=l||lang(); const log=S[l].log; let n=0; const d=new Date(); d.setHours(12,0,0,0);
-  if(!(log[dk(d)]&&log[dk(d)].c)) d.setDate(d.getDate()-1);
-  while(log[dk(d)]&&log[dk(d)].c){ n++; d.setDate(d.getDate()-1); }
+  const act=k=>!!(log[k]&&log[k].c)||pyDayOn(k); /* a day also counts when I practised pinyin */
+  if(!act(dk(d))) d.setDate(d.getDate()-1);
+  while(act(dk(d))){ n++; d.setDate(d.getDate()-1); }
   return n;
 }
 function renderStrip(){
@@ -3667,10 +3671,10 @@ function renderBackupHint(){
   const sy=$("#sync"); sy.querySelector("span").textContent= S.lastBackup? `保存在本机 · ${days===0?"今天":days+" 天前"}备份过` : "保存在本机 · 还没备份";
   const synced=typeof syOn==="function"&&syOn()&&!SY.err;
   if(synced) sy.querySelector("span").textContent="已开启多设备同步";
-  const stale=!synced&&ownCount()>=5&&(days===null||days>=14);
+  const pyDone=Object.keys((S.settings.pyc||{}).done||{}).length>=1, stale=!synced&&(ownCount()>=5||pyDone)&&(days===null||days>=14);
   sy.className="sync"+(stale?" warn":"");
   $("#backup-banner").hidden=!stale;
-  $("#backup-banner-t").textContent= days===null?"你已经录入了一些自己的内容，但还没有备份过。数据只存在这台设备上，建议导出一份备份文件。":`上次备份是 ${days} 天前。建议再导出一份备份文件。`;
+  $("#backup-banner-t").textContent= days===null?(ownCount()>=5?"你已经录入了一些自己的内容，但还没有备份过。数据只存在这台设备上，建议导出一份备份文件。":"你的学习进度只存在这台设备上，还没有备份过。建议导出一份备份文件。"):`上次备份是 ${days} 天前。建议再导出一份备份文件。`;
   const bl=$("#bk-last"); if(bl) bl.textContent= S.lastBackup? "上次备份："+new Date(S.lastBackup).toLocaleString(uiLocale()) : "还没有备份过。";
 }
 
@@ -4283,6 +4287,9 @@ const UI_DICT=[
 ["口型示意图", "Mouth diagrams", "Mundstellung", "Posição da boca", "口型示意圖"],
 ["示意图，脸朝左：粗线是舌头，红点是接触或靠近的地方，红线是气流。", "Schematic, face looking left: the thick line is the tongue, the red dot is where things touch or come close, red lines show airflow.", "Schematisch, Gesicht nach links: Die dicke Linie ist die Zunge, der rote Punkt zeigt Berührung oder Nähe, rote Linien zeigen die Luft.", "Esquema, rosto virado para a esquerda: a linha grossa é a língua, o ponto vermelho mostra onde toca ou chega perto, as linhas vermelhas mostram o ar.", "示意圖，臉朝左：粗線是舌頭，紅點是接觸或靠近的地方，紅線是氣流。"],
 ["继续学习", "Continue", "Weiterlernen", "Continuar", "繼續學習"],
+["有新版本", "A new version is ready", "Eine neue Version ist da", "Há uma nova versão", "有新版本"],
+["本周练了 {0} 天", "Practised {0} days this week", "Diese Woche {0} Tage geübt", "Treinaste {0} dias esta semana", "本週練了 {0} 天"],
+["你的学习进度只存在这台设备上，还没有备份过。建议导出一份备份文件。", "Your progress is only stored on this device and has not been backed up yet. Export a backup file.", "Dein Lernfortschritt liegt nur auf diesem Gerät und wurde noch nicht gesichert. Exportiere eine Sicherungsdatei.", "O teu progresso está só neste aparelho e ainda não tem backup. Exporta um ficheiro de backup.", "你的學習進度只存在這台裝置上，還沒有備份過。建議匯出一份備份檔案。"],
 ["弱音复习", "Weak-sound review", "Wiederholung schwacher Laute", "Revisão dos sons fracos", "弱音複習"],
 ["我的易错音", "Sounds I get wrong", "Meine Fehlerlaute", "Sons em que erro", "我的易錯音"],
 ["还没有易错音", "No tricky sounds yet", "Noch keine Fehlerlaute", "Ainda não há sons difíceis", "還沒有易錯音"],
@@ -5486,7 +5493,7 @@ function pyVMap(){ const d=PYC().done, nx=pyNext(), tot=pyLessons().length, pn=p
   const started=Object.keys(d).length>0;
   let h=`<div class="pyhead"><h2>拼音课</h2><span class="spacer"></span><button class="btn sm" type="button" data-py="daily">每日练声调</button><button class="btn sm" type="button" data-py="chart">拼音表</button></div>
   <div class="pyprog"><div class="pyprog-a"><b>${pn>=tot?"拼音课全部掌握":`已掌握 ${pn} / ${tot} 课`}</b><div class="bar"><i style="width:${Math.round(pn/tot*100)}%"></i></div></div>
-    <p class="muted small" style="margin:8px 0 0">${nx?(started?`<span>下一步：第 ${nx.id} 课。</span>`:`<span>第一次来？从第 1 课开始，一课约 10 分钟。</span>`):`<span>可以去读第一篇文章了。</span>`}</p><p class="muted small" style="margin:4px 0 0">每课三步：听 → 记 → 练。答对 80% 就算掌握。</p>
+    <p class="muted small" style="margin:8px 0 0">${nx?(started?`<span>下一步：第 ${nx.id} 课。</span>`:`<span>第一次来？从第 1 课开始，一课约 10 分钟。</span>`):`<span>可以去读第一篇文章了。</span>`}</p>${pyWeekDays()?`<p class="muted small" style="margin:4px 0 0">本周练了 ${pyWeekDays()} 天</p>`:""}<p class="muted small" style="margin:4px 0 0">每课三步：听 → 记 → 练。答对 80% 就算掌握。</p>
     ${nx?`<div class="pyact" style="justify-content:flex-start;margin-top:10px"><button class="btn primary" type="button" data-py="lesson:${nx.id}"><span>${started?`继续第 ${nx.id} 课`:`开始第 ${nx.id} 课`}</span> · <span ${pyLA()}>${esc(pyT(nx.title))}</span></button></div>`:`<div class="pyact" style="justify-content:flex-start;margin-top:10px"><button class="btn primary" type="button" data-py="goread">去读第一篇文章</button></div>`}</div>
   ${pyWeakOn()?pyWeakCard():""}${pySpeedRow()}${pyReady().length<pyLessons().length?`<p class="muted small">已上线 ${pyReady().length} 课，其他陆续补上。</p>`:""}<ol class="pymap">`;
   for(const L of pyLessons()){ const r=d[L.id], ready=!!L.groups, ok=pyPass(r);
@@ -5557,10 +5564,11 @@ function pyAnswer(k){ const Q=PY.q, q=Q.list[Q.i]; if(Q.ans!=null) return; Q.ans
   save(); pyRender(); if(!q.ok&&q.it) setTimeout(()=>pyPlay(q.it),300); }
 function pyVResult(back,title){ const Q=PY.q, n=Q.list.length, acc=n?Q.right/n:0, p=PYC();
   if(!Q.saved){ Q.saved=true;
+    { const dys=p.days||(p.days={}); dys[today()]=1; const ks=Object.keys(dys).sort(); while(ks.length>60) delete dys[ks.shift()]; }
     if(Q.weak) p.weakAt=today();
     else if(Q.daily) p.daily={at:today(),acc};
     else { const o=p.done[Q.lid]||{best:0}; p.done[Q.lid]={best:Math.max(o.best||0,acc),last:acc,at:today()}; }
-    save(); pyEntry(); }
+    save(); pyEntry(); try{ renderBackupHint(); renderStrip(); }catch(e){} }
   const win=!Q.daily&&acc>=.8; if(win) onbTick("py"); let h=pyHead(back,title)+`<div class="pyres${win?" win":""}">${win?`<div class="pyconf" aria-hidden="true">${"<i></i>".repeat(14)}</div>`:""}<div class="pyscore">${Q.right}<small>/${n}</small></div><p>答对 ${Q.right} / ${n}</p>`;
   if(!Q.daily) h+=acc>=.8?`<p class="pypass"><b>通过了！</b> <span>这一课算掌握了。</span></p>`:`<p class="pytry">答对 80% 才算掌握。回到课程再听一遍卡片，然后再练一次。</p>`;
   if(!Q.daily&&pyPassed()>=pyLessons().length) h+=`<div class="pytip"><b>拼音课全部通过 🎉</b><p>四个声调、声母、韵母和变调你都练过了。现在可以去读第一篇文章，遇到不会的字点一下就能查。</p><button class="btn primary sm" type="button" data-py="goread">去读文章</button></div>`;
@@ -5743,7 +5751,13 @@ document.addEventListener("input",e=>{ if(e.target&&e.target.id==="wr-t"){ const
   if(WR.res&&t!==WR.text){ WR.res=null; WR.text=null; const out=$("#wr-out"); if(out) out.innerHTML=""; } } });
 document.addEventListener("click",e=>{ const b=e.target.closest&&e.target.closest("#wr-go,[data-wri],[data-wrli],[data-wrfix]"); if(!b) return;
   if(b.id==="wr-go") wrCheck(); else if(b.dataset.wrfix!=null){ e.stopPropagation(); wrFix(+b.dataset.wrfix); } else wrSel(+(b.dataset.wri??b.dataset.wrli)); });
-if("serviceWorker" in navigator&&location.protocol==="https:") navigator.serviceWorker.register("sw.js").catch(()=>{});
+if("serviceWorker" in navigator&&location.protocol==="https:"){
+  const hadSW=!!navigator.serviceWorker.controller; /* first install is not an update */
+  navigator.serviceWorker.register("sw.js").then(reg=>{ document.addEventListener("visibilitychange",()=>{ if(!document.hidden) reg.update().catch(()=>{}); }); }).catch(()=>{});
+  navigator.serviceWorker.addEventListener("controllerchange",()=>{ if(!hadSW||document.querySelector(".updbar")) return;
+    const b=document.createElement("div"); b.className="updbar"; b.innerHTML='<span>有新版本</span><button class="btn sm primary" type="button">刷新</button>';
+    b.querySelector("button").addEventListener("click",()=>location.reload()); document.body.appendChild(b); });
+}
 applyPy(); applyTones(); applyScr();
 // the dictionary loads in the background; once it is there, the open text is split again with it
 zdLoad().then(m=>{ if(m&&MG.cur&&document.querySelector("#mg-body")) mgRender(); });
