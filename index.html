@@ -376,6 +376,12 @@ ol.steps li{margin:3px 0}
 .mg-gl dt{font-family:var(--f-word);font-weight:600}
 .mg-gl dd{margin:0;color:var(--muted)}
 .mg-gram{background:var(--sunk);border-radius:8px;padding:10px 12px}
+.rt-sw{grid-column:1/-1;margin:0 0 4px!important}
+#tab-read[data-rt="today"] #mine-box,#tab-read[data-rt="today"] #mg-fav{display:none}
+#tab-read[data-rt="shelf"] aside{display:none!important}
+#tab-read[data-rt="shelf"],#tab-read[data-rt="mine"]{grid-template-columns:minmax(0,1fr)!important}
+#tab-read[data-rt="mine"] #mg-main,#tab-read[data-rt="mine"] #rbox,#tab-read[data-rt="mine"] #cubox,#tab-read[data-rt="mine"] #mg-arch{display:none}
+#tab-read[data-rt="mine"] aside{position:static;max-height:none;overflow:visible}
 .mg-sw{display:flex;gap:4px;background:var(--sunk);border-radius:99px;padding:3px;width:max-content;margin:0 0 12px}
 .mg-sw button{border:0;background:none;border-radius:99px;padding:5px 16px;font:500 13.5px var(--f-ui);color:var(--muted);cursor:pointer}
 .mg-sw button[aria-pressed="true"]{background:var(--card,#fff);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.12)}
@@ -1372,7 +1378,8 @@ body .py .tn1,body.tones .py .tn1{color:var(--py1)} body .py .tn2,body.tones .py
   </section>
 
   <!-- READ (Marginalia) -->
-  <section id="tab-read" class="grid" hidden>
+  <section id="tab-read" class="grid" data-rt="today" hidden>
+    <div class="mg-sw rt-sw" id="rt-sw" role="tablist"><button type="button" data-rt="today" aria-pressed="true">今日</button><button type="button" data-rt="shelf" aria-pressed="false">书架</button><button type="button" data-rt="mine" aria-pressed="false">我的文章</button></div>
     <div class="panel" id="mg-main"></div>
     <aside style="display:grid;gap:22px;min-width:0">
       <div class="panel rbox" id="rbox" hidden></div>
@@ -2737,7 +2744,12 @@ function mgOutlet(it){ if((it.series&&it.series.name)||it.term) return ""; const
 function mgMinutes(it){ if(it.lang==="zh"){ const n=(it.paragraphs||[]).join("").replace(/[^\u3400-\u9fff]/g,"").length; const r={HSK1:90,HSK2:110,HSK3:140,HSK4:170,HSK5:200,HSK6:230}[it.level]||150; return Math.max(1,Math.round(n/r)); } const w=(it.paragraphs||[]).join(" ").split(/\s+/).filter(Boolean).length; const rate=["A1","A2"].includes(it.level)?110:["B1","B2"].includes(it.level)?160:200; return Math.max(1,Math.round(w/rate)); }
 let MGZH=(()=>{ try{ return localStorage.getItem("zl-glzh")==="1"; }catch(e){ return false; } })();
 function mgFmt(d){ const [y,m,dd]=d.split("-").map(Number); return new Date(y,m-1,dd).toLocaleDateString(uiLocale(),{weekday:"long",month:"long",day:"numeric"}); }
-async function mgRender(){ await mgRender0(); mgSwPut(); mgFavList(); }
+function mgSyncTab(){ const rt=MG.col?"shelf":MG.mineTab?"mine":"today", t=$("#tab-read"); if(!t) return;
+  t.dataset.rt=rt; $$("#rt-sw button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.rt===rt)); }
+async function mgRender(){
+  if(!MG.rtInit){ MG.rtInit=true; /* a brand-new beginner starts on the shelf, at the lowest level, once */
+    const o=S.settings.onb; if(o&&!o.existing&&o.who==="zero"&&!lsGet("zl-rt0","")&&!MG.key&&!MG.mine){ lsSet("zl-rt0","1"); MG.col=true; MG.libLow=true; } }
+  mgSyncTab(); await mgRender0(); mgSyncTab(); mgFavList(); }
 async function mgRender0(){
   const main=$("#mg-main"); if(!main) return;
   if(!MG.idx&&!MG.err){ main.innerHTML='<div class="empty"><b>正在载入文章…</b></div>'; await mgLoad(); if(cur!=="read") return; }
@@ -2810,10 +2822,8 @@ function mgColumn(){
   if(curT){ const t=jqTermNow()||{term:curT,md:cur[0].date.slice(5)};
     h+=`<div class="col-now"><p class="k"><span>现在的节气</span></p><p class="tn zc" lang="zh-CN">${esc(zs(curT))}<small data-noi18n>${esc(nm(t))} · ${esc(mdFmt(t.md))}</small></p><div class="col-t" style="border:0;padding:6px 0 0;grid-template-columns:minmax(0,1fr)"><div class="rs">${cur.map(x=>`<button data-mg="jq|${x.i}"><span class="lv">${esc(x.level)}</span><span class="t zc" lang="zh-CN">${esc(zs(x.title.replace(/^[^：]*：/,"")))}</span>${mgRead("jq",x.i)?'<span class="ok">✓</span>':""}</button>`).join("")}</div></div></div>`; }
   for(const se of SEASONS){ const ts=terms.filter(t=>t.season===se); if(ts.length) h+=`<div class="col-sea zc" lang="zh-CN">${esc(zs(se))}</div>`+ts.map(row).join(""); }
-  return h+mgLibList(null);
+  return mgLibList(null)+h;
 }
-function mgSwPut(){ const m=$("#mg-main"); if(!m||m.querySelector(".mg-sw")) return;
-  m.insertAdjacentHTML("afterbegin",`<div class="mg-sw" role="tablist"><button type="button" id="mg-sw-today" aria-pressed="${!MG.col}">今日</button><button type="button" id="mg-sw-col" aria-pressed="${!!MG.col}">书架</button></div>`); }
 function mgJqList(pick){
   const xs=jqAll(lang()); if(!xs.length) return "";
   return `<h3 style="margin:18px 0 8px"><span>二十四节气</span> · <span>${xs.length} 篇</span></h3>
@@ -2821,8 +2831,8 @@ function mgJqList(pick){
 }
 function mgLibList(pick){
   const l=lang(), xs=mgLibItems(l); if(!xs.length) return "";
-  const lv=MG.libLv||"", show=xs.filter(x=>!lv||x.level===lv), lvs=[...new Set(xs.map(x=>x.level))].sort((a,b)=>LV_ORDER.indexOf(a)-LV_ORDER.indexOf(b));
-  return `<h3 style="margin:18px 0 8px"><span>课文库</span> · <span>${xs.length} 篇</span></h3><div class="mg-lvs" style="margin:0 0 8px"><button type="button" data-liblv="" aria-pressed="${!lv}">全部</button>${lvs.map(v=>`<button type="button" data-liblv="${v}" aria-pressed="${lv===v}">${v}</button>`).join("")}</div>
+  const lvs=[...new Set(xs.map(x=>x.level))].sort((a,b)=>LV_ORDER.indexOf(a)-LV_ORDER.indexOf(b)), lv=MG.libLv!=null?MG.libLv:(MG.libLow?lvs[0]:""), show=xs.filter(x=>!lv||x.level===lv);
+  return `<h3 style="margin:0 0 8px"><span>课文库</span> · <span>${xs.length} 篇</span></h3><div class="mg-lvs" style="margin:0 0 8px"><button type="button" data-liblv="" aria-pressed="${!lv}">全部</button>${lvs.map(v=>`<button type="button" data-liblv="${v}" aria-pressed="${lv===v}">${v}</button>`).join("")}</div>
     <div class="mg-arch">${show.map(x=>`<button data-mg="lib|${x.i}" aria-current="${!!pick&&pick.date==="lib"&&pick.i===x.i}"><span class="k">${esc(x.level)}</span><span class="t zc" lang="zh-CN">${esc(zs(x.title))}</span><span class="m">${mgRead("lib",x.i)?"✓":""}</span></button>`).join("")}</div>`;
 }
 /* 唱片盒 · record box (Mandopop from Hong Kong, Taiwan and Singapore) and 茶余饭后 · small stories of the Chinese-speaking world — reading/records.json */
@@ -3590,7 +3600,7 @@ async function mgJump(key){
   if(!MG.idx&&!MG.err) await mgLoad();
   const k=MG.idx&&MG.idx.days?MG.idx.days.findIndex(x=>x.date===d):-1;
   if(k<0){ toast("这篇文章已经不在最近的文章里了"); return; }
-  showTab("read"); MG.mine=null; MG.col=false; MG.key=d+"|"+(+i); MG.di=k; MG.tr=null;
+  showTab("read"); MG.mineTab=false; MG.mine=null; MG.col=false; MG.key=d+"|"+(+i); MG.di=k; MG.tr=null;
   mgClose(); rdStop(); mgRender();
   window.scrollTo({top:0});
 }
@@ -3601,11 +3611,12 @@ $("#tab-read").addEventListener("click",e=>{
     MG.sIdx=rdNodes("art").indexOf(w.closest(".s"));
     $$(".mg-w.on").forEach(x=>x.classList.remove("on")); w.classList.add("on"); mgOpen(w.dataset.w||zPlain(w),mgSentenceOf(w)); return; }
   if(!b) return;
-  if(b.dataset.mine){ MG.mine=b.dataset.mine; MG.tr=null; mgClose(); mgRender(); mineList(); { const m=$("#mg-main"); const y=m.getBoundingClientRect().top+scrollY-(innerWidth>640?$("#tabs").offsetHeight+4:4); if(scrollY>y) window.scrollTo({top:y,behavior:"smooth"}); } return; }
-  if(b.dataset.liblv!=null){ MG.libLv=b.dataset.liblv||""; if(MG.col) mgRender(); else mgArch(MG.cur); return; }
+  if(b.dataset.rt){ const v=b.dataset.rt; MG.mineTab=v==="mine"; MG.col=v==="shelf"; MG.key=null; MG.mine=null; MG.tr=null; mgClose(); rdStop(); mgRender(); if(v==="mine"){ const d=$("#mine-box"); if(d) d.open=true; } window.scrollTo({top:0}); return; }
+  if(b.dataset.mine){ MG.mineTab=false; MG.mine=b.dataset.mine; MG.tr=null; mgClose(); mgRender(); mineList(); { const m=$("#mg-main"); const y=m.getBoundingClientRect().top+scrollY-(innerWidth>640?$("#tabs").offsetHeight+4:4); if(scrollY>y) window.scrollTo({top:y,behavior:"smooth"}); } return; }
+  if(b.dataset.liblv!=null){ MG.libLow=false; MG.libLv=b.dataset.liblv||""; if(MG.col) mgRender(); else mgArch(MG.cur); return; }
   if(b.dataset.mglv!=null){ S.settings.rdLv=S.settings.rdLv||{}; S.settings.rdLv[lang()]=b.dataset.mglv||null; save(); MG.key=null; MG.tr=null; mgClose(); rdStop(); mgRender(); return; }
   if(b.dataset.mineopen){ const d=$("#mine-box"); d.open=true; d.scrollIntoView({behavior:"smooth",block:"start"}); return; }
-  if(b.dataset.mg){ MG.mine=null; MG.key=b.dataset.mg; if(b.dataset.di!=null) MG.di=+b.dataset.di; else { const d=b.dataset.mg.split("|")[0]; const k=MG.idx.days.findIndex(x=>x.date===d); if(k>=0) MG.di=k; } MG.tr=null; mgClose(); mgRender(); { const m=$("#mg-main"); const y=m.getBoundingClientRect().top+scrollY-(innerWidth>640?$("#tabs").offsetHeight+4:4); if(scrollY>y) window.scrollTo({top:y,behavior:"smooth"}); } return; }
+  if(b.dataset.mg){ MG.mineTab=false; MG.mine=null; MG.key=b.dataset.mg; if(b.dataset.di!=null) MG.di=+b.dataset.di; else { const d=b.dataset.mg.split("|")[0]; const k=MG.idx.days.findIndex(x=>x.date===d); if(k>=0) MG.di=k; } MG.tr=null; mgClose(); mgRender(); { const m=$("#mg-main"); const y=m.getBoundingClientRect().top+scrollY-(innerWidth>640?$("#tabs").offsetHeight+4:4); if(scrollY>y) window.scrollTo({top:y,behavior:"smooth"}); } return; }
   const id=b.id;
   if(id==="mg-sw-today"||id==="mg-sw-col"){ MG.col=id==="mg-sw-col"; MG.key=null; MG.mine=null; MG.tr=null; mgClose(); rdStop(); mgRender(); window.scrollTo({top:0}); return; }
   if(id==="mg-colback"){ MG.key=null; MG.tr=null; mgClose(); rdStop(); mgRender(); return; }
@@ -5055,7 +5066,7 @@ UI_DICT.push(
 ["粘贴一篇中文文章", "Paste a Chinese text", "Einen chinesischen Text einfügen", "Paste a Chinese text", "粘贴一篇中文文章"],
 ["★ 是增强/高级语音，听起来更自然。iPhone 可在「设置 → 辅助功能 → 朗读内容 → 声音 → 中文」里下载，比如 Tingting 或 Lilian（增强版）。", "★ marks enhanced/premium voices, which sound more natural. On iPhone, download one under Settings → Accessibility → Spoken Content → Voices → Chinese, e.g. Tingting or Lilian (Enhanced).", "★ sind erweiterte/Premium-Stimmen, sie klingen natürlicher. Auf dem iPhone unter Einstellungen → Bedienungshilfen → Gesprochene Inhalte → Stimmen → Chinesisch laden, z. B. Tingting oder Lilian (erweitert).", "★ marks enhanced/premium voices, which sound more natural. On iPhone, download one under Settings → Accessibility → Spoken Content → Voices → Chinese, e.g. Tingting or Lilian (Enhanced).", "★ 是增强/高级语音，听起来更自然。iPhone 可在「设置 → 辅助功能 → 朗读内容 → 声音 → 中文」里下载，比如 Tingting 或 Lilian（增强版）。"],
 ["拼音", "Pinyin", "Pinyin", "Pinyin", "拼音"],
-["课文库", "Library", "Textsammlung", "Library", "课文库"],
+["课文库", "Library", "Textsammlung", "Biblioteca de textos", "課文庫"],
 ["二十四节气", "The 24 solar terms", "Die 24 Sonnenperioden", "Os 24 termos solares", "二十四節氣"],
 ["古诗", "Classical poem", "Klassisches Gedicht", "Poema clássico", "古詩"],
 ["今日", "Today", "Heute", "Hoje", "今日"],
