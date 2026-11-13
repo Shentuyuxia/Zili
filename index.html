@@ -316,25 +316,6 @@ nav.tabs button.dict-tab[hidden]{display:none}
 .kpi{border:1px solid var(--line);border-radius:10px;padding:12px;background:var(--bg)}
 .kpi b{display:block;font-family:var(--f-mono);font-size:24px;font-weight:500;font-variant-numeric:tabular-nums}
 .kpi span{font-size:12.5px;color:var(--muted)}
-.heat{max-width:460px}
-.heat .hm,.heat .hg{display:grid;gap:3px}
-.heat .hm{margin-bottom:4px;font-family:var(--f-mono);font-size:10px;color:var(--muted);line-height:1}
-.heat .hm span{white-space:nowrap;overflow:visible}
-.heat .hg{grid-auto-flow:column;grid-template-rows:repeat(7,auto)}
-.g{display:block;aspect-ratio:1;border-radius:4px;background:var(--sunk);position:relative}
-.g.blank{background:transparent}
-.g.l1{background:color-mix(in srgb,var(--acc) 28%,var(--sunk))}
-.g.l2{background:color-mix(in srgb,var(--acc) 52%,var(--sunk))}
-.g.l3{background:color-mix(in srgb,var(--acc) 76%,var(--sunk))}
-.g.l4{background:var(--acc)}
-.g.ck::after{content:"";position:absolute;left:50%;top:50%;width:28%;height:28%;margin:-14% 0 0 -14%;border-radius:50%;background:var(--on-acc);opacity:.9}
-.g.today{outline:2px solid var(--ink);outline-offset:1px}
-.g.sel{outline:2px solid var(--acc);outline-offset:1px}
-.heat-cap{min-height:1.6em;margin:8px 0 0}
-.heat-leg{align-items:center;gap:4px}
-.heat-leg .g{width:12px;height:12px;aspect-ratio:auto;border-radius:3px;display:inline-block}
-.heat-leg span{margin:0 4px}
-.heat-leg span:last-child{margin-left:14px}
 .cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px;max-width:420px}
 .cal .h{font-family:var(--f-mono);font-size:10.5px;color:var(--muted);text-align:center}
 .cal .d{aspect-ratio:1;max-width:100%;border-radius:6px;background:var(--sunk);display:flex;align-items:center;justify-content:center;font-family:var(--f-mono);font-size:10.5px;color:var(--muted)}
@@ -3863,27 +3844,19 @@ $("#b-table").addEventListener("click",e=>{
 });
 
 /* ---------- stats ---------- */
-document.addEventListener("click",e=>{ const g=e.target.closest(".heat .g[data-d]"); if(!g) return; const cap=$("#heat-cap"); if(!cap) return;
-  document.querySelectorAll(".heat .g.sel").forEach(x=>x.classList.remove("sel")); g.classList.add("sel");
-  const T=x=>trOne(x)||x, n=+g.dataset.n, r=+g.dataset.r;
-  cap.textContent=g.dataset.d+(n+r?" · "+T("新 {0}").replace("{0}",n)+" · "+T("复习 {0}").replace("{0}",r):"")+(g.dataset.c==="1"?" · "+T("已打卡"):""); });
 function renderStats(){
   const l=lang(), LL=S[l], srs=LL.srs, d=LANG[l];
   const days=Object.entries(LL.log), chk=days.filter(([k,v])=>v.c).length;
   const learned=Object.values(srs).filter(s=>s.r>0||s.i>0).length, mastered=Object.values(srs).filter(s=>stage(s)===4).length;
   const reviews=days.reduce((a,[k,v])=>a+(v.n||0)+(v.r||0),0);
   const sents=Object.values(LL.mine).reduce((a,x)=>a+x.length,0), imgs=Object.keys(LL.imgs).length, auds=Object.values(LL.auds).reduce((a,x)=>a+Object.keys(x).length,0);
-  /* GitHub-style contribution graph: weeks are columns, Monday on top, the last 20 weeks; shade follows how much was studied */
-  const WK=20, end=new Date(); end.setHours(12,0,0,0);
-  const wd=(end.getDay()+6)%7; const start=new Date(end); start.setDate(end.getDate()-wd-(WK-1)*7);
-  let cells="", mons=""; const t=today(); let lastM=-1;
-  for(let w=0;w<WK;w++){
-    const m0=new Date(start); m0.setDate(start.getDate()+w*7); const mm=m0.getMonth();
-    const nm=new Date(m0); nm.setDate(m0.getDate()+7); mons+=`<span style="grid-column:${w+1}">${mm!==lastM&&!(w===0&&nm.getMonth()!==mm)?(UIL==="zh"||UIL==="zht"?(mm+1)+"月":m0.toLocaleDateString(UIL==="pt"?"pt-BR":UIL==="de"?"de-DE":"en-GB",{month:"short"})):""}</span>`; lastM=mm;
-    for(let r=0;r<7;r++){ const dd=new Date(start); dd.setDate(start.getDate()+w*7+r); const k=dk(dd);
-      if(k>t){ cells+=`<i class="g blank"></i>`; continue; }
-      const v=LL.log[k], n=v?(v.n||0)+(v.r||0):0, lv=n<=0?0:n<6?1:n<16?2:n<31?3:4;
-      cells+=`<i class="g l${v&&v.c?Math.max(lv,2):lv}${v&&v.c?" ck":""}${k===t?" today":""}" data-d="${k}" data-n="${v?v.n||0:0}" data-r="${v?v.r||0:0}" data-c="${v&&v.c?1:0}"></i>`; } }
+  const end=new Date(); end.setHours(12,0,0,0);
+  const wd=(end.getDay()+6)%7; const start=new Date(end); start.setDate(end.getDate()-wd-28);
+  let cells=""; const t=today();
+  for(let i=0;i<35;i++){ const dd=new Date(start); dd.setDate(start.getDate()+i); const k=dk(dd);
+    if(k>t){ cells+=`<div class="d blank"></div>`; continue; }
+    const v=LL.log[k]; const cls=v&&v.c?"chk":v&&(v.n+v.r)>0?"act":"";
+    cells+=`<div class="d ${cls} ${k===t?"today":""}" title="${k}${v?` · 新 ${v.n} · 复习 ${v.r}${v.c?" · 已打卡":""}`:""}">${dd.getDate()}</div>`; }
   const lvRows=LV().map(v=>{ const cs=ALL.filter(c=>c.lvl===v), k=[0,0,0,0,0]; cs.forEach(c=>k[stage(srs[c.id])]++);
     return `<div class="lvrow"><span class="lv lv-${v}" style="text-align:center">${v}</span><span class="stack">${[1,2,3,4].map(s=>cs.length&&k[s]?`<i class="k${s}" style="width:${100*k[s]/cs.length}%"></i>`:"").join("")}</span><span class="n">${cs.length-k[0]} / ${cs.length}</span></div>`; }).join("");
   { const o=$("#ov-sum"); if(o){ o.setAttribute("data-noi18n",""); const T=x=>trOne(x)||x; o.textContent=[T("已学 {0} 词").replace("{0}",learned),T("精通 {0}").replace("{0}",mastered),T("累计打卡 {0} 天").replace("{0}",chk)].join(" · "); } }
@@ -3895,10 +3868,9 @@ function renderStats(){
       <div class="kpi"><b>${learned}</b><span>已学单词</span></div>
       <div class="kpi"><b>${mastered}</b><span>已精通</span></div>
     </div>
-    <h3 class="sec">最近二十周</h3>
-    <div class="heat"><div class="hm" style="grid-template-columns:repeat(${WK},1fr)">${mons}</div><div class="hg" style="grid-template-columns:repeat(${WK},1fr)" id="heat-g">${cells}</div></div>
-    <p class="heat-cap muted small" id="heat-cap" data-noi18n>&nbsp;</p>
-    <div class="legend heat-leg"><span>少</span><i class="g l0"></i><i class="g l1"></i><i class="g l2"></i><i class="g l3"></i><i class="g l4"></i><span>多</span><span><i class="g l4 ck"></i>已打卡</span></div>
+    <h3 class="sec">最近五周</h3>
+    <div class="cal">${uiWeekdays().map(x=>`<div class="h">${x}</div>`).join("")}${cells}</div>
+    <div class="legend"><span><i style="background:var(--acc)"></i>已打卡</span><span><i style="background:var(--acc-soft)"></i>学了但未打卡</span><span><i style="background:var(--sunk)"></i>没学</span></div>
     <h3 class="sec">各级别掌握情况</h3>
     <div class="lvrows">${lvRows}</div>
     <div class="legend">${[1,2,3,4].map(s=>`<span><i class="k${s}"></i>${STAGES[s]}</span>`).join("")}</div>
@@ -4843,9 +4815,6 @@ const UI_DICT=[
 ["累计打卡天数", "Days with goal reached", "Tage mit erreichtem Ziel", "Dias com meta cumprida", "累計打卡天數"],
 ["已学单词", "Words learned", "Gelernte Wörter", "Palavras aprendidas", "已學單詞"],
 ["已精通", "Mastered", "Sicher", "Dominadas", "已精通"],
-["最近二十周", "Last 20 weeks", "Letzte 20 Wochen", "Últimas 20 semanas", "最近二十週"],
-["少", "Less", "Weniger", "Menos", "少"],
-["多", "More", "Mehr", "Mais", "多"],
 ["最近五周", "Last five weeks", "Letzte fünf Wochen", "Últimas cinco semanas", "最近五週"],
 ["已打卡", "Goal reached", "Ziel erreicht", "Meta cumprida", "已打卡"],
 ["学了但未打卡", "Studied, goal not reached", "Gelernt, Ziel offen", "Estudou, sem meta", "學了但未打卡"],
