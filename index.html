@@ -1299,6 +1299,7 @@ body .py .tn1,body.tones .py .tn1{color:var(--py1)} body .py .tn2,body.tones .py
 .mg-sheet .zgl-l .k{display:inline-block;min-width:2.2em;font-size:11px;font-weight:600;color:var(--muted);letter-spacing:.06em}
 .ex .t.zc{font-family:var(--f-cn);font-size:18px}
 .ex .py{font-size:12.5px;color:var(--muted);margin:0 0 1px}
+.ex .t.rb{line-height:2.1}.ex .t.rb ruby{margin:0 .14em}.ex .t.rb rt{font-family:var(--f-ui);font-size:11px;color:var(--muted);letter-spacing:0;font-weight:400}.ex .t.rb b{color:var(--acc)}
 .tb[aria-pressed="true"]{color:var(--acc)}
 .lv-HSK1{color:var(--a1)} .lv-HSK2{color:var(--a2)} .lv-HSK3{color:var(--b1)} .lv-HSK4{color:var(--b2)} .lv-HSK5{color:var(--c1)} .lv-HSK6{color:var(--c2)}
 .libtag{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px;margin-left:6px}
@@ -2268,12 +2269,20 @@ function highlight(ex,w){
   const re=new RegExp("(\\p{L}*"+stem.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+"\\p{L}*)","iu");
   return e.replace(re,"<b>$1</b>");
 }
+/* example sentence with the pinyin on top of each character (ruby), the target word in bold */
+function exRuby(ex,w){
+  const t=[...zs(ex)], a=zPyArr(zs(ex)), x=[...zs(w||"")]; let from=-1, to=-1;
+  if(x.length){ const i=t.join("").indexOf(x.join("")); if(i>=0){ from=[...t.join("").slice(0,i)].length; to=from+x.length; } }
+  let h="", i=0;
+  while(i<t.length){ const hit=i>=from&&i<to, ch=t[i], p=a[i];
+    h+=p?`<ruby>${hit?"<b>"+esc(ch)+"</b>":esc(ch)}<rt>${esc(p)}</rt></ruby>`:(hit?"<b>"+esc(ch)+"</b>":esc(ch)); i++; }
+  return h; }
 function exHTML(c,all){
   if(!c.ex) return "";
   const sel=all?LANG[c.lang].gl:glSel(); const tr=[]; for(const k of sel){ const v=c[EXK[k]]; if(v&&!tr.includes(v)) tr.push(v); }
   if(!tr.length){ const v=c.exen||c.exde||c.expt||c.exzh; if(v) tr.push(v); }
-  const py=c.lang==="zh"&&pyOn()?`<div class="py" data-noi18n>${esc(zPy(c.ex))}</div>`:"";
-  return `<div class="ex" data-noi18n>${py}<div class="t${c.lang==="zh"?" zc":""}">${highlight(c.ex,c.w)}</div>${tr.map(t=>`<div class="tr"${/[\u4e00-\u9fff]/.test(t)?' lang="zh"':""}>${esc(t)}</div>`).join("")}</div>`;
+  const rb=c.lang==="zh"&&pyOn();
+  return `<div class="ex" data-noi18n><div class="t${c.lang==="zh"?" zc":""}${rb?" rb":""}">${rb?exRuby(c.ex,c.w):highlight(c.ex,c.w)}</div>${tr.map(t=>`<div class="tr"${/[\u4e00-\u9fff]/.test(t)?' lang="zh"':""}>${esc(t)}</div>`).join("")}</div>`;
 }
 const stgHTML=st=>{ const s=stage(st); return `<span class="stg s${s}"><i></i>${STAGES[s]}</span>`; };
 function preview(st,g){
