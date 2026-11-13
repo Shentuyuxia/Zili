@@ -2902,10 +2902,10 @@ function rbWords(zh){ // the Chinese text as tappable words (tap = look it up in
   const t=String(zh||""); return zSents(t).map(sen=>zToks(sen,null).map(k=>k.punct?esc(zs(k.w)):`<span class="rb-w" data-rbw="${esc(k.w)}">${esc(zs(k.w))}</span>`).join("")).join(""); }
 function rbDaily(n,off){ return n?Math.floor(new Date(today()+"T12:00:00").getTime()/864e5+off)%n:-1; }
 function rbSeen(k){ const m=S.settings.rbSeen||(S.settings.rbSeen={}); if(!m[k]){ m[k]=1; save(); } }
-function rbOpenWord(w){ if(dtabOn()) showTab("dict"); else dictSheet(true); dicMount(); DIC.last=""; dicShow(w); }
-function rbText(o){ // the Chinese text (simplified/traditional, optional pinyin, read aloud) + the learner's chosen helper languages
+function rbOpenWord(w){ if(!S.settings.hintWord){ S.settings.hintWord=1; save(); } if(dtabOn()) showTab("dict"); else dictSheet(true); dicMount(); DIC.last=""; dicShow(w); }
+function rbText(o,noHint){ // the Chinese text (simplified/traditional, optional pinyin, read aloud) + the learner's chosen helper languages
   const zh=zs(o.zh||""), tr=glOrd().filter(k=>o[k]);
-  return `<p class="rb-zh zc" lang="${scr()==="t"?"zh-TW":"zh-CN"}" data-noi18n>${rbWords(o.zh||"")} <button type="button" class="ib cu-say" data-rbsay="1" aria-label="朗读">${I.spk}</button></p><p class="rb-hint small muted">点任意一个词查字典</p>${tr.map(k=>`<p class="rb-tr" lang="${k}" data-noi18n>${tr.length>1?`<b class="glk">${GLS[k]}</b> `:""}${esc(o[k])}</p>`).join("")}`;
+  return `<p class="rb-zh zc" lang="${scr()==="t"?"zh-TW":"zh-CN"}" data-noi18n>${rbWords(o.zh||"")} <button type="button" class="ib cu-say" data-rbsay="1" aria-label="朗读">${I.spk}</button></p>${noHint||S.settings.hintWord?"":`<p class="rb-hint small muted">点任意一个词查字典</p>`}${tr.map(k=>`<p class="rb-tr" lang="${k}" data-noi18n>${tr.length>1?`<b class="glk">${GLS[k]}</b> `:""}${esc(o[k])}</p>`).join("")}`;
 }
 function rbRender(){
   const box=$("#rbox"); if(!box) return; const list=(MG.rec&&MG.rec.songs)||[];
@@ -2921,7 +2921,7 @@ function cuRender(){
   if(!list.length){ box.hidden=true; return; } box.hidden=false; const dy=rbDaily(list.length,3); if(CU.open===-1&&!CU.touched) CU.open=dy; const cur=list[CU.open];
   box.innerHTML=`<h3 style="margin:0 0 10px">${esc(trOne("茶余饭后")||"茶余饭后")} <span class="small muted">${list.length}</span></h3>
     <div class="rb-shelf" role="list">${list.map((c,i)=>`<button type="button" class="rb-disc cu-card${i===CU.open?" on":""}${i===dy?" today":""}${(S.settings.rbSeen||{})["c:"+c.title]?" seen":""}" data-cu="${i}" role="listitem" style="--h:${rbHue(c.title)}"><span class="rb-sleeve"><i>${esc(c.emoji||"✶")}</i><b class="zc" data-noi18n>${esc(zs(c.title))}</b></span><span class="rb-a zc" data-noi18n>${esc(zs(c.tag||""))}</span></button>`).join("")}</div>
-    ${cur?`<div class="rb-card"><div class="rb-h"><b class="zc" data-noi18n>${esc(cur.emoji||"")} ${esc(zs(cur.title))}</b>${CU.open===dy?`<span class="chip">${esc(trOne("今日一则")||"今日一则")}</span>`:""}<span class="small muted zc" data-noi18n>${esc(zs(cur.tag||""))}</span></div>${rbText(cur)}</div>`:`<p class="small muted" style="margin:8px 0 0">${esc(trOne("点一张小卡片，读一个华语世界的小故事。")||"点一张小卡片，读一个华语世界的小故事。")}</p>`}`;
+    ${cur?`<div class="rb-card"><div class="rb-h"><b class="zc" data-noi18n>${esc(cur.emoji||"")} ${esc(zs(cur.title))}</b>${CU.open===dy?`<span class="chip">${esc(trOne("今日一则")||"今日一则")}</span>`:""}<span class="small muted zc" data-noi18n>${esc(zs(cur.tag||""))}</span></div>${rbText(cur,!$("#rbox").hidden)}</div>`:`<p class="small muted" style="margin:8px 0 0">${esc(trOne("点一张小卡片，读一个华语世界的小故事。")||"点一张小卡片，读一个华语世界的小故事。")}</p>`}`;
 }
 $("#rbox").addEventListener("click",e=>{ const w=e.target.closest("[data-rbw]"); if(w){ const r=((MG.rec&&MG.rec.songs)||[])[RB.open]; if(r) rbSeen("s:"+r.title); rbOpenWord(w.dataset.rbw); return; } const b=e.target.closest("button"); if(!b) return;
   if(b.dataset.rb!=null){ const i=+b.dataset.rb; RB.touched=true; RB.open=RB.open===i?-1:i; if(RB.open>=0){ const r=((MG.rec&&MG.rec.songs)||[])[RB.open]; if(r) rbSeen("s:"+r.title); } rbRender(); }
@@ -3870,7 +3870,6 @@ function renderStats(){
     return `<div class="lvrow"><span class="lv lv-${v}" style="text-align:center">${v}</span><span class="stack">${[1,2,3,4].map(s=>cs.length&&k[s]?`<i class="k${s}" style="width:${100*k[s]/cs.length}%"></i>`:"").join("")}</span><span class="n">${cs.length-k[0]} / ${cs.length}</span></div>`; }).join("");
   { const o=$("#ov-sum"); if(o){ o.setAttribute("data-noi18n",""); const T=x=>trOne(x)||x; o.textContent=[T("已学 {0} 词").replace("{0}",learned),T("精通 {0}").replace("{0}",mastered),T("累计打卡 {0} 天").replace("{0}",chk)].join(" · "); } }
   $("#stats-main").innerHTML=`
-    <h3 class="sec">${d.name} · 总览</h3>
     <div class="kpis">
       <div class="kpi"><b>${streak(l)}</b><span>连续打卡天数</span></div>
       <div class="kpi"><b>${chk}</b><span>累计打卡天数</span></div>
@@ -3882,8 +3881,7 @@ function renderStats(){
     <div class="legend"><span><i style="background:var(--acc)"></i>已打卡</span><span><i style="background:var(--acc-soft)"></i>学了但未打卡</span><span><i style="background:var(--sunk)"></i>没学</span></div>
     <h3 class="sec">各级别掌握情况</h3>
     <div class="lvrows">${lvRows}</div>
-    <div class="legend">${[1,2,3,4].map(s=>`<span><i class="k${s}"></i>${STAGES[s]}</span>`).join("")}</div>
-    <p class="note" style="margin-top:14px">累计学习 ${reviews} 次（新词 + 复习）。录入 ${LL.custom.length} 个自己的词，写了 ${sents} 个例句，配了 ${imgs} 张图，录了 ${auds} 段发音。</p>`;
+    <div class="legend">${[1,2,3,4].map(s=>`<span><i class="k${s}"></i>${STAGES[s]}</span>`).join("")}</div>`;
 }
 $("#stage-legend").innerHTML=STAGES.map((s,i)=>`<div class="row" style="gap:10px"><span class="stg s${i}" style="min-width:64px"><i></i>${s}</span><span class="muted">${STAGE_NOTE[i]}</span></div>`).join("");
 
