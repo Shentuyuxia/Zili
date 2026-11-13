@@ -230,7 +230,7 @@ input[type=range]{accent-color:var(--acc);width:100%}
 .dfab:active{transform:scale(.94)}
 body.dsheet-on .dfab,body.dtab-on .dfab{display:none}
 @media (max-width:640px){ .dfab{bottom:calc(74px + env(safe-area-inset-bottom,0px))} }
-#tab-dict.dsheet{position:fixed;inset:0;z-index:38;background:var(--bg);overflow:auto;-webkit-overflow-scrolling:touch;padding:0 16px calc(28px + env(safe-area-inset-bottom,0px));display:block}
+#tab-dict.dsheet{position:fixed;inset:0;margin:0;z-index:38;background:var(--bg);overflow:auto;-webkit-overflow-scrolling:touch;padding:0 16px calc(28px + env(safe-area-inset-bottom,0px));display:block}
 #tab-dict.dsheet[hidden]{display:none}
 #tab-dict.dsheet > .panel,#tab-dict.dsheet > .dsheet-bar{max-width:820px;margin-left:auto;margin-right:auto}
 nav.tabs button[data-tab="today"]{order:1} nav.tabs button[data-tab="read"]{order:2} nav.tabs button[data-tab="dict"]{order:3} nav.tabs button[data-tab="pinyin"]{order:4} nav.tabs button[data-tab="settings"]{order:5}
@@ -474,6 +474,7 @@ ol.steps li{margin:3px 0}
 .rb-a{display:block;font-size:11.5px;color:var(--muted);margin-top:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .rb-card{border-top:1px solid var(--line);padding-top:10px;display:grid;gap:8px}
 .rb-h{display:grid;gap:2px} .rb-h b{font-size:16px}
+.rb-h .chip{justify-self:start;margin:2px 0}
 .rb-langs{display:inline-flex;border:1px solid var(--line);border-radius:99px;overflow:hidden;justify-self:start}
 .rb-langs button{border:0;background:none;padding:3px 11px;font-size:12.5px;color:var(--muted);cursor:pointer}
 .rb-langs button[aria-pressed="true"]{background:var(--acc-soft);color:var(--acc);font-weight:600}
@@ -489,6 +490,12 @@ ol.steps li{margin:3px 0}
 .cu-pt .cu-say svg{width:15px;height:15px}
 .rb-zh{margin:0;font-family:var(--f-cn);font-size:16.5px;line-height:1.75}
 .rb-zh .cu-say{display:inline-flex;vertical-align:-4px;width:26px;height:26px;margin-left:2px} .rb-zh .cu-say svg{width:15px;height:15px}
+.rb-disc{position:relative}
+.rb-w{border-radius:4px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.rb-w:active,.rb-w:hover{background:var(--acc-soft)}
+.rb-hint{margin:2px 0 6px;font-size:12px}
+.rb-disc.today::after{content:"";position:absolute;top:6px;right:6px;width:8px;height:8px;border-radius:50%;background:var(--acc)}
+.rb-disc.seen:not(.on){opacity:.62}
 .rb-tr{margin:0;font-size:14px;line-height:1.55;color:var(--muted)}
 .rb-sleeve b.zc{font-family:var(--f-cn);font-size:13.5px;font-weight:600}
 .mg-wq{display:grid;gap:6px;margin-top:12px}
@@ -2879,31 +2886,36 @@ function mgLibList(pick){ // 分级阅读: the original library texts plus every
 /* 唱片盒 · record box (Mandopop from Hong Kong, Taiwan and Singapore) and 茶余饭后 · small stories of the Chinese-speaking world — reading/records.json */
 const RB={open:-1}, CU={open:-1};
 function rbHue(t){ let h=0; for(const c of String(t)) h=(h*31+c.charCodeAt(0))%360; return h; }
+function rbWords(zh){ // the Chinese text as tappable words (tap = look it up in the dictionary)
+  const t=String(zh||""); return zSents(t).map(sen=>zToks(sen,null).map(k=>k.punct?esc(zs(k.w)):`<span class="rb-w" data-rbw="${esc(k.w)}">${esc(zs(k.w))}</span>`).join("")).join(""); }
+function rbDaily(n,off){ return n?Math.floor(new Date(today()+"T12:00:00").getTime()/864e5+off)%n:-1; }
+function rbSeen(k){ const m=S.settings.rbSeen||(S.settings.rbSeen={}); if(!m[k]){ m[k]=1; save(); } }
+function rbOpenWord(w){ if(dtabOn()) showTab("dict"); else dictSheet(true); dicMount(); DIC.last=""; dicShow(w); }
 function rbText(o){ // the Chinese text (simplified/traditional, optional pinyin, read aloud) + the learner's chosen helper languages
   const zh=zs(o.zh||""), tr=glOrd().filter(k=>o[k]);
-  return `<p class="rb-zh zc" lang="${scr()==="t"?"zh-TW":"zh-CN"}" data-noi18n>${esc(zh)} <button type="button" class="ib cu-say" data-rbsay="1" aria-label="朗读">${I.spk}</button></p>${tr.map(k=>`<p class="rb-tr" lang="${k}" data-noi18n>${tr.length>1?`<b class="glk">${GLS[k]}</b> `:""}${esc(o[k])}</p>`).join("")}`;
+  return `<p class="rb-zh zc" lang="${scr()==="t"?"zh-TW":"zh-CN"}" data-noi18n>${rbWords(o.zh||"")} <button type="button" class="ib cu-say" data-rbsay="1" aria-label="朗读">${I.spk}</button></p><p class="rb-hint small muted">点任意一个词查字典</p>${tr.map(k=>`<p class="rb-tr" lang="${k}" data-noi18n>${tr.length>1?`<b class="glk">${GLS[k]}</b> `:""}${esc(o[k])}</p>`).join("")}`;
 }
 function rbRender(){
   const box=$("#rbox"); if(!box) return; const list=(MG.rec&&MG.rec.songs)||[];
-  if(!list.length){ box.hidden=true; return; } box.hidden=false; const cur=list[RB.open];
+  if(!list.length){ box.hidden=true; return; } box.hidden=false; const dy=rbDaily(list.length,0); if(RB.open===-1&&!RB.touched) RB.open=dy; const cur=list[RB.open];
   box.innerHTML=`<h3 style="margin:0 0 10px">${esc(trOne("唱片盒")||"唱片盒")} <span class="small muted">${list.length}</span></h3>
-    <div class="rb-shelf" role="list">${list.map((r,i)=>`<button type="button" class="rb-disc${i===RB.open?" on":""}" data-rb="${i}" role="listitem" style="--h:${rbHue(r.artist+r.title)}" title="${esc(zs(r.artist+" · "+r.title))}"><span class="rb-sleeve"><i>♪</i><b class="zc" data-noi18n>${esc(zs(r.title))}</b></span><span class="rb-a zc" data-noi18n>${esc(zs(r.artist))}</span></button>`).join("")}</div>
-    ${cur?`<div class="rb-card"><div class="rb-h"><b class="zc" data-noi18n>${esc(zs(cur.title))}</b><span class="small muted zc" data-noi18n>${esc(zs(cur.artist))} · ${esc(zs(cur.tag||""))}</span></div>
+    <div class="rb-shelf" role="list">${list.map((r,i)=>`<button type="button" class="rb-disc${i===RB.open?" on":""}${i===dy?" today":""}${(S.settings.rbSeen||{})["s:"+r.title]?" seen":""}" data-rb="${i}" role="listitem" style="--h:${rbHue(r.artist+r.title)}" title="${esc(zs(r.artist+" · "+r.title))}"><span class="rb-sleeve"><i>♪</i><b class="zc" data-noi18n>${esc(zs(r.title))}</b></span><span class="rb-a zc" data-noi18n>${esc(zs(r.artist))}</span></button>`).join("")}</div>
+    ${cur?`<div class="rb-card"><div class="rb-h"><b class="zc" data-noi18n>${esc(zs(cur.title))}</b>${RB.open===dy?`<span class="chip">${esc(trOne("今日一首")||"今日一首")}</span>`:""}<span class="small muted zc" data-noi18n>${esc(zs(cur.artist))} · ${esc(zs(cur.tag||""))}</span></div>
       ${rbText(cur)}
       <a class="btn sm" href="${esc(cur.url)}" target="_blank" rel="noopener">▶ ${esc(trOne("去听")||"去听")}</a></div>`:`<p class="small muted" style="margin:8px 0 0">${esc(trOne("点一张唱片，看它的故事。")||"点一张唱片，看它的故事。")}</p>`}`;
 }
 function cuRender(){
   const box=$("#cubox"); if(!box) return; const list=(MG.rec&&MG.rec.curios)||[];
-  if(!list.length){ box.hidden=true; return; } box.hidden=false; const cur=list[CU.open];
+  if(!list.length){ box.hidden=true; return; } box.hidden=false; const dy=rbDaily(list.length,3); if(CU.open===-1&&!CU.touched) CU.open=dy; const cur=list[CU.open];
   box.innerHTML=`<h3 style="margin:0 0 10px">${esc(trOne("茶余饭后")||"茶余饭后")} <span class="small muted">${list.length}</span></h3>
-    <div class="rb-shelf" role="list">${list.map((c,i)=>`<button type="button" class="rb-disc cu-card${i===CU.open?" on":""}" data-cu="${i}" role="listitem" style="--h:${rbHue(c.title)}"><span class="rb-sleeve"><i>${esc(c.emoji||"✶")}</i><b class="zc" data-noi18n>${esc(zs(c.title))}</b></span><span class="rb-a zc" data-noi18n>${esc(zs(c.tag||""))}</span></button>`).join("")}</div>
-    ${cur?`<div class="rb-card"><div class="rb-h"><b class="zc" data-noi18n>${esc(cur.emoji||"")} ${esc(zs(cur.title))}</b><span class="small muted zc" data-noi18n>${esc(zs(cur.tag||""))}</span></div>${rbText(cur)}</div>`:`<p class="small muted" style="margin:8px 0 0">${esc(trOne("点一张小卡片，读一个华语世界的小故事。")||"点一张小卡片，读一个华语世界的小故事。")}</p>`}`;
+    <div class="rb-shelf" role="list">${list.map((c,i)=>`<button type="button" class="rb-disc cu-card${i===CU.open?" on":""}${i===dy?" today":""}${(S.settings.rbSeen||{})["c:"+c.title]?" seen":""}" data-cu="${i}" role="listitem" style="--h:${rbHue(c.title)}"><span class="rb-sleeve"><i>${esc(c.emoji||"✶")}</i><b class="zc" data-noi18n>${esc(zs(c.title))}</b></span><span class="rb-a zc" data-noi18n>${esc(zs(c.tag||""))}</span></button>`).join("")}</div>
+    ${cur?`<div class="rb-card"><div class="rb-h"><b class="zc" data-noi18n>${esc(cur.emoji||"")} ${esc(zs(cur.title))}</b>${CU.open===dy?`<span class="chip">${esc(trOne("今日一则")||"今日一则")}</span>`:""}<span class="small muted zc" data-noi18n>${esc(zs(cur.tag||""))}</span></div>${rbText(cur)}</div>`:`<p class="small muted" style="margin:8px 0 0">${esc(trOne("点一张小卡片，读一个华语世界的小故事。")||"点一张小卡片，读一个华语世界的小故事。")}</p>`}`;
 }
-$("#rbox").addEventListener("click",e=>{ const b=e.target.closest("button"); if(!b) return;
-  if(b.dataset.rb!=null){ const i=+b.dataset.rb; RB.open=RB.open===i?-1:i; rbRender(); }
+$("#rbox").addEventListener("click",e=>{ const w=e.target.closest("[data-rbw]"); if(w){ const r=((MG.rec&&MG.rec.songs)||[])[RB.open]; if(r) rbSeen("s:"+r.title); rbOpenWord(w.dataset.rbw); return; } const b=e.target.closest("button"); if(!b) return;
+  if(b.dataset.rb!=null){ const i=+b.dataset.rb; RB.touched=true; RB.open=RB.open===i?-1:i; if(RB.open>=0){ const r=((MG.rec&&MG.rec.songs)||[])[RB.open]; if(r) rbSeen("s:"+r.title); } rbRender(); }
   else if(b.dataset.rbsay){ const r=((MG.rec&&MG.rec.songs)||[])[RB.open]; if(r) speak(r.zh); } });
-$("#cubox").addEventListener("click",e=>{ const b=e.target.closest("button"); if(!b) return;
-  if(b.dataset.cu!=null){ const i=+b.dataset.cu; CU.open=CU.open===i?-1:i; cuRender(); }
+$("#cubox").addEventListener("click",e=>{ const w=e.target.closest("[data-rbw]"); if(w){ const c=((MG.rec&&MG.rec.curios)||[])[CU.open]; if(c) rbSeen("c:"+c.title); rbOpenWord(w.dataset.rbw); return; } const b=e.target.closest("button"); if(!b) return;
+  if(b.dataset.cu!=null){ const i=+b.dataset.cu; CU.touched=true; CU.open=CU.open===i?-1:i; if(CU.open>=0){ const c=((MG.rec&&MG.rec.curios)||[])[CU.open]; if(c) rbSeen("c:"+c.title); } cuRender(); }
   else if(b.dataset.rbsay){ const c=((MG.rec&&MG.rec.curios)||[])[CU.open]; if(c) speak(c.zh); } });
 /* read-aloud player: sentence by sentence, highlighted */
 const RD_RATES=[0.6,0.75,0.9,1,1.15];
@@ -5141,6 +5153,10 @@ UI_DICT.push(
 ["也可以先读一篇短文", "Or read a short text first", "Oder zuerst einen kurzen Text lesen", "Ou leia primeiro um texto curto", "也可以先讀一篇短文"],
 ["开始学习", "Start", "Starten", "Começar", "開始學習"],
 ["可以选「先学拼音」还是「先学阅读」了：底部栏的顺序和今日页最上面的卡片会跟着变。在「我的」里能随时改。", "You can now choose Pinyin first or Reading first: the order of the bottom bar and the card at the top of Today follow your choice. Change it any time under \"You\".", "Du kannst jetzt „Zuerst Pinyin“ oder „Zuerst Lesen“ wählen: Reihenfolge der unteren Leiste und die Karte oben auf der Heute-Seite richten sich danach. Jederzeit unter „Profil“ änderbar.", "Agora você pode escolher «Primeiro o pinyin» ou «Primeiro a leitura»: a ordem da barra inferior e o cartão no topo de hoje acompanham a escolha. Mude quando quiser em «Perfil».", "可以選「先學拼音」還是「先學閱讀」了：底部欄的順序和今日頁最上面的卡片會跟著變。在「我的」裡能隨時改。"],
+["今日一首", "Today's pick", "Heute empfohlen", "Destaque de hoje", "今日一首"],
+["今日一则", "Today's story", "Heute gelesen", "História de hoje", "今日一則"],
+["点任意一个词查字典", "Tap any word to look it up", "Tippe auf ein Wort, um es nachzuschlagen", "Toque em uma palavra para consultar", "點任意一個詞查字典"],
+["唱片盒和茶余饭后里的词可以点了：点一下就能查字典、收进生词。每天还会固定推荐一首歌和一则小故事。", "Words in the Record box and Over tea are now tappable: one tap to look them up or save them. Every day there is also a fixed pick: one song and one story.", "Wörter in Plattenkiste und Beim Tee sind jetzt antippbar: ein Tipp zum Nachschlagen oder Speichern. Außerdem gibt es jeden Tag einen festen Tipp: ein Lied und eine Geschichte.", "As palavras da Caixa de discos e da Hora do chá agora podem ser tocadas: um toque para consultar ou guardar. Todos os dias também há uma sugestão fixa: uma música e uma história.", "唱片盒和茶餘飯後裡的詞可以點了：點一下就能查字典、收進生詞。每天還會固定推薦一首歌和一則小故事。"],
 ["分级阅读", "Graded reading", "Gestufte Lektüre", "Leitura graduada", "分級閱讀"],
 ["二十四节气", "The 24 solar terms", "Die 24 Sonnenperioden", "Os 24 termos solares", "二十四節氣"],
 ["古诗", "Classical poem", "Klassisches Gedicht", "Poema clássico", "古詩"],
@@ -5775,6 +5791,7 @@ setTimeout(()=>{ try{ pyAnnounce(); }catch(e){} },1800);
 /* ---------- what's new: newest release first; only releases worth telling people about get an entry ---------- */
 const WHATSNEW=[
   {id:"2026-11-13",items:[
+    ["唱片盒和茶余饭后里的词可以点了：点一下就能查字典、收进生词。每天还会固定推荐一首歌和一则小故事。","read"],
     ["字卡现在直接点卡片就能翻面，不用再找按钮。","today"],
     ["字典不再占一个选项卡：每一页右下角都有查字按钮，点开就能查，当前页不会丢。想把字典放回底部栏，在「我的」里打开就行。",""],
     ["可以选「先学拼音」还是「先学阅读」了：底部栏的顺序和今日页最上面的卡片会跟着变。在「我的」里能随时改。","settings"],
