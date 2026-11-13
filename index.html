@@ -1017,6 +1017,7 @@ body{font-variant-numeric:tabular-nums}
 ruby{ruby-position:over;ruby-align:center}
 rt{font-family:var(--f-ui);font-weight:400;font-size:.44em;letter-spacing:0;color:var(--muted);line-height:1.1;font-variant-ligatures:none}
 body.nopy rt{display:none}
+body.nopy .pyforce rt{display:ruby-text}
 .word .zw{font-family:var(--f-cn);font-weight:500;letter-spacing:.04em}
 .word rt{font-size:.34em;letter-spacing:.02em}
 .word .pyl{display:block;font-family:var(--f-ui);font-size:.36em;color:var(--muted);letter-spacing:.02em;margin-top:6px}
@@ -2373,15 +2374,16 @@ function renderCard(){
     <button class="ib" id="c-say" aria-label="系统朗读" title="系统朗读 (S)">${I.spk}</button></div>`;
   const imgEl=hasImg?`<div class="cimg" data-img="${esc(c.id)}"></div>`:"";
   const imgFront=hasImg&&S.settings.imgFront;
-  const extra=c.extra&&c.extra!=="—"&&!(c.lang==="zh"&&pyOn())?`<div class="extra">${esc(c.extra)}</div>`:"";
+  const rubyUp=c.lang==="zh"&&sess.flipped&&/<rt/.test(zRuby(c.w,c.py||c.extra)); /* once the answer is shown the pinyin always sits on top of the characters, even with the pinyin setting off */
+  const extra=c.extra&&c.extra!=="—"&&!(c.lang==="zh"&&(pyOn()||rubyUp))?`<div class="extra">${esc(c.extra)}</div>`:"";
   const backBits=()=>`${memo?`<div class="memo"><b>记忆</b><span data-noi18n>${esc(memo)}</span></div>`:""}${c.from&&String(c.from).includes("|")?`<div class="src-row"><button class="btn ghost sm" id="c-src" type="button">回到这篇文章 →</button></div>`:""}${exHTML(c)}${mine.length?`<div class="mine"><span class="h">我的例句</span>${mine.slice(0,3).map(m=>`<div class="s">${esc(m.t)}${m.fix&&m.fix!==m.t?`<span class="fx">→ ${esc(m.fix)}</span>`:""}</div>`).join("")}</div>`:""}`;
   let body;
   if(dir==="t2g"){
-    body=`${imgFront?imgEl:""}<div class="word${wSize(c)}">${wordHTML(c)}</div><div class="row" style="justify-content:center">${posChip(c)}</div>`;
+    body=`${imgFront?imgEl:""}<div class="word${wSize(c)}${rubyUp?" pyforce":""}">${wordHTML(c)}</div><div class="row" style="justify-content:center">${posChip(c)}</div>`;
     if(sess.flipped) body+=`${extra}<div class="divider"></div>${!imgFront?imgEl:""}${glossHTML(c)}${mzHtml(c)}${backBits()}`;
   } else {
     body=`${imgFront?imgEl:""}${glossHTML(c,true)}<div class="row" style="justify-content:center">${posChip(c)}</div>`;
-    if(sess.flipped) body+=`<div class="divider"></div>${!imgFront?imgEl:""}<div class="word sm">${wordHTML(c)}</div>${extra}${mzHtml(c)}${backBits()}`;
+    if(sess.flipped) body+=`<div class="divider"></div>${!imgFront?imgEl:""}<div class="word sm${rubyUp?" pyforce":""}">${wordHTML(c)}</div>${extra}${mzHtml(c)}${backBits()}`;
   }
   const actions= sess.flipped
     ? `<div class="rate">
