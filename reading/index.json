@@ -1,6 +1,18 @@
 {
- "updated": "2026-11-12T03:41:18Z",
+ "updated": "2026-11-13T03:38:42Z",
  "days": [
+  {
+   "date": "2026-11-13",
+   "items": [
+    {
+     "i": 0,
+     "lang": "zh",
+     "title": "公园里的象棋",
+     "kind": "feature",
+     "level": "HSK2"
+    }
+   ]
+  },
   {
    "date": "2026-11-12",
    "items": [

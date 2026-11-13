@@ -1,0 +1,107 @@
+{
+ "date": "2026-11-13",
+ "createdBy": "claude",
+ "items": [
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "feature",
+   "section": "休闲",
+   "title": "公园里的象棋",
+   "title_en": "Chinese chess in the park",
+   "title_de": "Chinesisches Schach im Park",
+   "title_pt": "Xadrez chinês no parque",
+   "paragraphs": [
+    "在中国，很多城市的公园里都有人下象棋。早上和下午，常常有两个老人坐在小桌子旁边。一个人走一步，另一个人想一想，再走一步。",
+    "下棋的人不太说话，但是看棋的人很多。他们喜欢站在旁边说：“走这儿！”“不对，走那儿！”有时候，看的人比下的人还着急。",
+    "象棋一共有三十二个棋子，红的十六个，黑的十六个。红的先走。棋盘中间有一条“河”，所以下棋的时候，要先“过河”。",
+    "我的朋友马克是英国人，他会下国际象棋。上个周末，他在公园里跟一位爷爷学下中国象棋。他输了三次，但是他很高兴，因为爷爷笑着说：“明天再来！”"
+   ],
+   "paragraphs_en": [
+    "In China, there are people playing Chinese chess in the parks of many cities. In the mornings and afternoons, two old people are often sitting next to a small table. One makes a move, the other thinks for a moment and then makes a move too.",
+    "The players don't talk much, but there are lots of people watching. They like to stand beside the table and say: “Move here!” “No, move there!” Sometimes the people watching are even more impatient than the players.",
+    "Chinese chess has thirty-two pieces in all: sixteen red and sixteen black. Red moves first. In the middle of the board there is a “river”, so during a game you first have to “cross the river”.",
+    "My friend Mark is British, and he can play (international) chess. Last weekend he learned Chinese chess from a grandpa in the park. He lost three times, but he was happy, because the grandpa said with a smile: “Come again tomorrow!”"
+   ],
+   "paragraphs_de": [
+    "In China spielen in den Parks vieler Städte Leute chinesisches Schach. Morgens und nachmittags sitzen oft zwei ältere Menschen an einem kleinen Tisch. Einer macht einen Zug, der andere denkt kurz nach und zieht dann auch.",
+    "Die Spieler reden nicht viel, aber es gibt viele Zuschauer. Sie stehen gern daneben und sagen: „Zieh hierhin!“ „Nein, zieh dorthin!“ Manchmal sind die Zuschauer noch ungeduldiger als die Spieler.",
+    "Chinesisches Schach hat insgesamt zweiunddreißig Steine: sechzehn rote und sechzehn schwarze. Rot zieht zuerst. In der Mitte des Spielbretts gibt es einen „Fluss“, deshalb muss man beim Spielen zuerst „über den Fluss“.",
+    "Mein Freund Mark ist Brite und kann Schach spielen. Letztes Wochenende hat er im Park bei einem Opa chinesisches Schach gelernt. Er hat dreimal verloren, aber er war froh, denn der Opa hat lächelnd gesagt: „Komm morgen wieder!“"
+   ],
+   "paragraphs_pt": [
+    "Na China, nos parques de muitas cidades há gente jogando xadrez chinês. De manhã e à tarde, muitas vezes dois idosos ficam sentados ao lado de uma mesinha. Um faz uma jogada, o outro pensa um pouco e depois joga também.",
+    "Os jogadores não falam muito, mas há muita gente assistindo. Eles gostam de ficar ao lado e dizer: “Joga aqui!” “Não, joga ali!” Às vezes quem assiste fica ainda mais aflito do que quem joga.",
+    "O xadrez chinês tem trinta e duas peças ao todo: dezesseis vermelhas e dezesseis pretas. As vermelhas começam. No meio do tabuleiro há um “rio”, por isso, durante o jogo, primeiro é preciso “atravessar o rio”.",
+    "Meu amigo Mark é britânico e sabe jogar xadrez. No fim de semana passado, ele aprendeu xadrez chinês com um vovô no parque. Ele perdeu três vezes, mas ficou feliz, porque o vovô disse sorrindo: “Volte amanhã!”"
+   ],
+   "glossary": [
+    {
+     "w": "象棋",
+     "p": "xiàng qí",
+     "en": "Chinese chess (xiangqi)",
+     "de": "das chinesische Schach",
+     "pt": "o xadrez chinês"
+    },
+    {
+     "w": "下棋",
+     "p": "xià qí",
+     "en": "to play chess / a board game",
+     "de": "Schach spielen",
+     "pt": "jogar xadrez"
+    },
+    {
+     "w": "老人",
+     "p": "lǎo rén",
+     "en": "old person, elderly",
+     "de": "der ältere Mensch",
+     "pt": "o idoso"
+    },
+    {
+     "w": "着急",
+     "p": "zháo jí",
+     "en": "anxious, impatient",
+     "de": "ungeduldig, aufgeregt",
+     "pt": "aflito, impaciente"
+    },
+    {
+     "w": "棋子",
+     "p": "qí zǐ",
+     "en": "(chess) piece",
+     "de": "der Spielstein",
+     "pt": "a peça (de jogo)"
+    },
+    {
+     "w": "棋盘",
+     "p": "qí pán",
+     "en": "game board, chessboard",
+     "de": "das Spielbrett",
+     "pt": "o tabuleiro"
+    },
+    {
+     "w": "国际象棋",
+     "p": "guó jì xiàng qí",
+     "en": "(international) chess",
+     "de": "das Schach",
+     "pt": "o xadrez"
+    },
+    {
+     "w": "输",
+     "p": "shū",
+     "en": "to lose (a game)",
+     "de": "verlieren",
+     "pt": "perder (um jogo)"
+    }
+   ],
+   "grammar": "A 比 B 还 + adjective means 'A is even more … than B': 看的人比下的人还着急 'the watchers are even more impatient than the players'. 还 adds surprise: you would expect the players to be the nervous ones.",
+   "grammar_de": "A 比 B 还 + Adjektiv bedeutet „A ist noch … als B“: 看的人比下的人还着急 „die Zuschauer sind noch ungeduldiger als die Spieler“. 还 drückt Überraschung aus: Eigentlich würde man erwarten, dass die Spieler nervös sind.",
+   "grammar_pt": "A 比 B 还 + adjetivo significa “A é ainda mais … do que B”: 看的人比下的人还着急 “quem assiste fica ainda mais aflito do que quem joga”. O 还 traz surpresa: o esperado seria que os jogadores ficassem nervosos.",
+   "questions": [
+    "公园里的老人常常做什么？",
+    "象棋有多少个棋子？哪个颜色先走？",
+    "马克输了几次？他为什么很高兴？"
+   ],
+   "sources": []
+  }
+ ]
+}
