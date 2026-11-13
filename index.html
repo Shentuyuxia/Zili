@@ -2851,11 +2851,15 @@ function mgJqList(pick){
   return `<h3 style="margin:18px 0 8px"><span>二十四节气</span> · <span>${xs.length} 篇</span></h3>
     <div class="mg-arch">${xs.map(x=>`<button data-mg="jq|${x.i}" aria-current="${!!pick&&pick.date==="jq"&&pick.i===x.i}"><span class="k">${esc(x.term)}</span><span class="t zc" lang="zh-CN">${esc(zs(x.title))}</span><span class="m">${esc(x.level)}${mgRead("jq",x.i)?" ✓":""}</span></button>`).join("")}</div>`;
 }
-function mgLibList(pick){
-  const l=lang(), xs=mgLibItems(l); if(!xs.length) return "";
-  const lvs=[...new Set(xs.map(x=>x.level))].sort((a,b)=>LV_ORDER.indexOf(a)-LV_ORDER.indexOf(b)), lv=MG.libLv!=null?MG.libLv:(MG.libLow?lvs[0]:""), show=xs.filter(x=>!lv||x.level===lv);
-  return `<h3 style="margin:0 0 8px"><span>课文库</span> · <span>${xs.length} 篇</span></h3><div class="mg-lvs" style="margin:0 0 8px"><button type="button" data-liblv="" aria-pressed="${!lv}">全部</button>${lvs.map(v=>`<button type="button" data-liblv="${v}" aria-pressed="${lv===v}">${v}</button>`).join("")}</div>
-    <div class="mg-arch">${show.map(x=>`<button data-mg="lib|${x.i}" aria-current="${!!pick&&pick.date==="lib"&&pick.i===x.i}"><span class="k">${esc(x.level)}</span><span class="t zc" lang="zh-CN">${esc(zs(x.title))}</span><span class="m">${mgRead("lib",x.i)?"✓":""}</span></button>`).join("")}</div>`;
+function mgLibList(pick){ // 分级阅读: the original library texts plus every daily text, by HSK level
+  const l=lang(), xs0=mgLibItems(l), dl=[];
+  (MG.idx?MG.idx.days:[]).forEach((d,di)=>d.items.forEach(x=>{ if(x.lang===l&&x.level) dl.push({...x,date:d.date,di,daily:true}); }));
+  dl.sort((a,b)=>b.date.localeCompare(a.date)||a.i-b.i);
+  const xs=[...xs0,...dl]; if(!xs.length) return "";
+  const lvs=[...new Set(xs.map(x=>x.level))].sort((a,b)=>LV_ORDER.indexOf(a)-LV_ORDER.indexOf(b)), lv=MG.libLv!=null?MG.libLv:(MG.libLow?lvs[0]:"");
+  const show=xs.filter(x=>!lv||x.level===lv).sort((a,b)=>LV_ORDER.indexOf(a.level)-LV_ORDER.indexOf(b.level));
+  return `<h3 style="margin:0 0 8px"><span>分级阅读</span> · <span>${xs.length} 篇</span></h3><div class="mg-lvs" style="margin:0 0 8px"><button type="button" data-liblv="" aria-pressed="${!lv}">全部</button>${lvs.map(v=>`<button type="button" data-liblv="${v}" aria-pressed="${lv===v}">${v}</button>`).join("")}</div>
+    <div class="mg-arch">${show.map(x=>{ const dk=x.daily?x.date:"lib"; return `<button data-mg="${dk}|${x.i}"${x.daily?` data-di="${x.di}"`:""} aria-current="${!!pick&&pick.date===dk&&pick.i===x.i}"><span class="k">${esc(x.level)}</span><span class="t zc" lang="zh-CN">${esc(zs(x.title))}</span><span class="m">${mgRead(dk,x.i)?"✓":""}</span></button>`; }).join("")}</div>`;
 }
 /* 唱片盒 · record box (Mandopop from Hong Kong, Taiwan and Singapore) and 茶余饭后 · small stories of the Chinese-speaking world — reading/records.json */
 const RB={open:-1}, CU={open:-1};
@@ -5101,6 +5105,8 @@ UI_DICT.push(
 ["★ 是增强/高级语音，听起来更自然。iPhone 可在「设置 → 辅助功能 → 朗读内容 → 声音 → 中文」里下载，比如 Tingting 或 Lilian（增强版）。", "★ marks enhanced/premium voices, which sound more natural. On iPhone, download one under Settings → Accessibility → Spoken Content → Voices → Chinese, e.g. Tingting or Lilian (Enhanced).", "★ sind erweiterte/Premium-Stimmen, sie klingen natürlicher. Auf dem iPhone unter Einstellungen → Bedienungshilfen → Gesprochene Inhalte → Stimmen → Chinesisch laden, z. B. Tingting oder Lilian (erweitert).", "★ marks enhanced/premium voices, which sound more natural. On iPhone, download one under Settings → Accessibility → Spoken Content → Voices → Chinese, e.g. Tingting or Lilian (Enhanced).", "★ 是增强/高级语音，听起来更自然。iPhone 可在「设置 → 辅助功能 → 朗读内容 → 声音 → 中文」里下载，比如 Tingting 或 Lilian（增强版）。"],
 ["拼音", "Pinyin", "Pinyin", "Pinyin", "拼音"],
 ["课文库", "Library", "Textsammlung", "Biblioteca de textos", "課文庫"],
+["书架里的「课文库」改名为「分级阅读」，并且收进了每天推送的文章，HSK 4、5 的文章也能在这里按级别找到。", "On the Bookshelf, the library is now called Graded reading and also holds every daily text, so HSK 4 and 5 texts can be found here by level.", "Im Regal heißt die Textsammlung jetzt „Gestufte Lektüre“ und enthält auch alle Tagestexte, sodass du HSK-4- und HSK-5-Texte hier nach Stufe findest.", "Na estante, a biblioteca agora se chama Leitura graduada e também reúne todos os textos diários; os de HSK 4 e 5 podem ser encontrados aqui por nível.", "書架裡的「課文庫」改名為「分級閱讀」，並且收進了每天推送的文章，HSK 4、5 的文章也能在這裡按級別找到。"],
+["分级阅读", "Graded reading", "Gestufte Lektüre", "Leitura graduada", "分級閱讀"],
 ["二十四节气", "The 24 solar terms", "Die 24 Sonnenperioden", "Os 24 termos solares", "二十四節氣"],
 ["古诗", "Classical poem", "Klassisches Gedicht", "Poema clássico", "古詩"],
 ["今日", "Today", "Heute", "Hoje", "今日"],
@@ -5721,7 +5727,8 @@ setTimeout(()=>{ try{ pyAnnounce(); }catch(e){} },1800);
 const WHATSNEW=[
   {id:"2026-11-13",items:[
     ["字卡现在直接点卡片就能翻面，不用再找按钮。","today"],
-    ["字典不再占一个选项卡：每一页右下角都有查字按钮，点开就能查，当前页不会丢。想把字典放回底部栏，在「我的」里打开就行。",""]]},
+    ["字典不再占一个选项卡：每一页右下角都有查字按钮，点开就能查，当前页不会丢。想把字典放回底部栏，在「我的」里打开就行。",""],
+    ["书架里的「课文库」改名为「分级阅读」，并且收进了每天推送的文章，HSK 4、5 的文章也能在这里按级别找到。","read"]]},
   {id:"2026-11-12",items:[
     ["拼音课新增第 15 课「日常短句」，还有「弱音复习」：练习答错的音会收起来，每天 2 分钟练一练。","pinyin"],
     ["阅读页分成「今日 / 书架 / 我的文章」三个选项卡，课文库按级别挑。","read"],
