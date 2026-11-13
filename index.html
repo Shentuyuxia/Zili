@@ -1289,9 +1289,9 @@ body .py .tn1,body.tones .py .tn1{color:var(--py1)} body .py .tn2,body.tones .py
 .onb-day ol{list-style:none;margin:0;padding:0;display:grid;gap:6px}
 .onb-day li{display:flex;gap:10px;align-items:center}
 .onb-day li .ck{width:20px;height:20px;border-radius:50%;border:1.5px solid var(--line);flex:none;display:grid;place-items:center;color:var(--muted);font-size:11.5px;font-weight:600}
-.onb-day li.done .ck{color:var(--on-acc,#fff)}
-.onb-day li.done .ck{background:var(--acc);border-color:var(--acc)}
-.onb-day li.done .tx{color:var(--muted);text-decoration:line-through}
+.onb-day li.ok .ck{color:var(--on-acc,#fff)}
+.onb-day li.ok .ck{background:var(--acc);border-color:var(--acc)}
+.onb-day li.ok .tx{color:var(--muted);text-decoration:line-through}
 .onb-day li button{margin-left:auto}
 .onb-day .x{float:right;margin:-4px -6px 0 0}
 .onb-tip{display:flex;gap:8px;align-items:flex-start;font-size:14px;background:var(--acc-soft);color:var(--ink);border-radius:10px;padding:8px 12px;margin:0 0 12px}
@@ -1452,7 +1452,7 @@ body .py .tn1,body.tones .py .tn1{color:var(--py1)} body .py .tn2,body.tones .py
       <div class="sesshead"><h2 id="sess-title">今日学习</h2><div class="row" id="sess-actions"></div></div>
       <div class="bar"><i id="sess-bar"></i></div>
       <div id="card-area"><div class="empty"><b>正在载入字匣…</b></div></div>
-      <details class="ov-box" id="ov-box" open><summary><span class="ov-t">学习总览</span><span class="small muted" id="ov-sum"></span></summary>
+      <details class="ov-box" id="ov-box"><summary><span class="ov-t">学习总览</span><span class="small muted" id="ov-sum"></span></summary>
         <div id="stats-main"></div>
         <p class="note hint" style="margin-top:12px">复习间隔：「忘了」当天重来；「模糊」间隔略增；「记得」按 1 → 3 → 约 7 → 约 18 天递增；「简单」跳得更远。间隔达到 30 天以上的词算「精通」。</p>
       </details>
@@ -2358,7 +2358,7 @@ function fhN(){ try{ return +localStorage.getItem("zl-fh")||0; }catch(e){ return
 function wSize(c){ if(c.lang!=="zh") return ""; const n=[...String(c.w||"")].length; return n<=2?" zx":n<=4?" zl":""; }
 function renderCard(){
   const area=$("#card-area");
-  $("#sess-title").textContent=sess?sess.title:"今日学习";
+  $("#sess-title").textContent=sess?sess.title:"今日学习"; { const sh=$("#sess-title").parentElement; if(sh) sh.hidden=!sess||sess.mode==="daily"; }
   $("#sess-actions").innerHTML= sess&&sess.mode!=="daily" ? `<button class="btn ghost sm" id="back-daily">返回今日学习</button>` : "";
   const bd=$("#back-daily"); if(bd) bd.onclick=buildDaily;
   if(!DATA[lang()]) return;
@@ -3483,7 +3483,7 @@ function onbDay(){ const el=$("#onb-day"); if(!el) return; const o=onb(); try{ f
   const t=o.t||{}, TK=onbTasks(), done=TK.filter(([k])=>t[k]).length, all=done===TK.length;
   el.innerHTML=`<div class="onb-day"><button class="ib sm x" type="button" id="onb-hide" aria-label="关闭">${I.x}</button>
     <h3>${all?"第一天完成了 🎉":"你的第一天"}</h3><p class="sub">${all?"明天打开字里，会先复习今天学过的词。":`<span data-noi18n>${done} / ${TK.length}</span>`}</p>
-    <ol>${TK.map(([k,txt,tab],i)=>`<li class="${t[k]?"done":""}"><span class="ck">${t[k]?"✓":i+1}</span><span class="tx">${txt}</span>${!t[k]&&(tab==="read"||tab==="pinyin")&&cur!==tab&&TK.find(([x,,tb])=>tb===tab&&!t[x])[0]===k?`<button class="btn sm ghost" type="button" data-onbgo="${tab}">${tab==="pinyin"?"去学拼音":"去阅读"}</button>`:""}</li>`).join("")}</ol></div>`;
+    <ol>${TK.map(([k,txt,tab],i)=>`<li class="${t[k]?"ok":""}"><span class="ck">${t[k]?"✓":i+1}</span><span class="tx">${txt}</span>${!t[k]&&(tab==="read"||tab==="pinyin")&&cur!==tab&&TK.find(([x,,tb])=>tb===tab&&!t[x])[0]===k?`<button class="btn sm ghost" type="button" data-onbgo="${tab}">${tab==="pinyin"?"去学拼音":"去阅读"}</button>`:""}</li>`).join("")}</ol></div>`;
 }
 document.addEventListener("click",e=>{ const g=e.target.closest("[data-fgo]"); if(g){ showTab(g.dataset.fgo); return; } const b=e.target.closest("#onb-hide,[data-onbgo]"); if(!b) return;
   if(b.id==="onb-hide"){ const o=onb(); if(o){ o.hide=true; save(); } onbDay(); return; }
@@ -5312,7 +5312,7 @@ const TABS=["today","read","dict","pinyin","settings"];
 const dkOn=k=>cur==="dict"&&!!(document.getElementById("dk-"+k)||{}).open;
 $("#dk-browse").addEventListener("toggle",e=>{ if(e.target.open) renderBrowse(); });
 $("#dk-pile").addEventListener("toggle",e=>{ if(e.target.open) renderPile(); });
-{ const ov=$("#ov-box"); ov.open=true; ov.addEventListener("toggle",()=>{ if(ov.open) renderStats(); }); } // the overview is open every time the app starts
+{ const ov=$("#ov-box"); ov.open=false; try{ renderStats(); }catch(e){} ov.addEventListener("toggle",()=>{ if(ov.open) renderStats(); }); } // the overview is one folded line (the summary) until tappeds
 function addOpen(w){ // the old 录入新词 tab now lives in 字匣 → 自己录入
   showTab("browse"); const d=$("#add-box"); if(!d) return; d.open=true; $("#dk-browse").open=true;
   if(w){ const i=$("#n-w"); i.value=w; i.dispatchEvent(new Event("input")); }
