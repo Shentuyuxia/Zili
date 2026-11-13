@@ -489,7 +489,6 @@ ol.steps li{margin:3px 0}
 .cu-pt .cu-say svg{width:15px;height:15px}
 .rb-zh{margin:0;font-family:var(--f-cn);font-size:16.5px;line-height:1.75}
 .rb-zh .cu-say{display:inline-flex;vertical-align:-4px;width:26px;height:26px;margin-left:2px} .rb-zh .cu-say svg{width:15px;height:15px}
-.rb-py{margin:-4px 0 0;font-size:12.5px;color:var(--muted);line-height:1.5}
 .rb-tr{margin:0;font-size:14px;line-height:1.55;color:var(--muted)}
 .rb-sleeve b.zc{font-family:var(--f-cn);font-size:13.5px;font-weight:600}
 .mg-wq{display:grid;gap:6px;margin-top:12px}
@@ -2882,7 +2881,7 @@ const RB={open:-1}, CU={open:-1};
 function rbHue(t){ let h=0; for(const c of String(t)) h=(h*31+c.charCodeAt(0))%360; return h; }
 function rbText(o){ // the Chinese text (simplified/traditional, optional pinyin, read aloud) + the learner's chosen helper languages
   const zh=zs(o.zh||""), tr=glOrd().filter(k=>o[k]);
-  return `<p class="rb-zh zc" lang="${scr()==="t"?"zh-TW":"zh-CN"}" data-noi18n>${esc(zh)} <button type="button" class="ib cu-say" data-rbsay="1" aria-label="朗读">${I.spk}</button></p>${pyOn()?`<p class="rb-py" data-noi18n>${esc(zPy(o.zh||""))}</p>`:""}${tr.map(k=>`<p class="rb-tr" lang="${k}" data-noi18n>${tr.length>1?`<b class="glk">${GLS[k]}</b> `:""}${esc(o[k])}</p>`).join("")}`;
+  return `<p class="rb-zh zc" lang="${scr()==="t"?"zh-TW":"zh-CN"}" data-noi18n>${esc(zh)} <button type="button" class="ib cu-say" data-rbsay="1" aria-label="朗读">${I.spk}</button></p>${tr.map(k=>`<p class="rb-tr" lang="${k}" data-noi18n>${tr.length>1?`<b class="glk">${GLS[k]}</b> `:""}${esc(o[k])}</p>`).join("")}`;
 }
 function rbRender(){
   const box=$("#rbox"); if(!box) return; const list=(MG.rec&&MG.rec.songs)||[];
