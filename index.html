@@ -1409,7 +1409,7 @@ body .py .tn1,body.tones .py .tn1{color:var(--py1)} body .py .tn2,body.tones .py
 
   <!-- READ (Marginalia) -->
   <section id="tab-read" class="grid" data-rt="today" hidden>
-    <div class="mg-sw rt-sw" id="rt-sw" role="tablist"><button type="button" data-rt="today" aria-pressed="true">今日</button><button type="button" data-rt="shelf" aria-pressed="false">书架</button><button type="button" data-rt="mine" aria-pressed="false">我的文章</button></div>
+    <div class="mg-sw rt-sw" id="rt-sw" role="tablist"><button type="button" data-rt="today" aria-pressed="true">今日</button><button type="button" data-rt="shelf" aria-pressed="false">分级阅读</button><button type="button" data-rt="mine" aria-pressed="false">我的文章</button></div>
     <div class="panel" id="mg-main"></div>
     <aside style="display:grid;gap:22px;min-width:0">
       <div class="panel rbox" id="rbox" hidden></div>
@@ -2676,7 +2676,7 @@ function jqTermNow(){ // the solar term we are in now, by month-day (before 小�
   const ts=((MG.jq&&MG.jq.terms)||[]).slice().sort((a,b)=>a.md.localeCompare(b.md)); if(!ts.length) return null;
   const md=today().slice(5); return ts.filter(t=>t.md<=md).pop()||ts[ts.length-1];
 }
-function jqCur(l){ // items of the current term (shown in 今日 and on top of the 书架)
+function jqCur(l){ // items of the current term (shown in 今日 and on top of 分级阅读)
   const t=jqTermNow(); if(!t) return [];
   return jqAll(l).filter(x=>x.term===t.term).sort((a,b)=>LV_ORDER.indexOf(a.level)-LV_ORDER.indexOf(b.level)).map(x=>({...x,date:x.date||("2026-"+t.md)}));
 }
@@ -2802,7 +2802,7 @@ async function mgRender0(){
     pick={date:"mine",i:mine.id,older:false}; es=[]; it=mineItem(mine);
     h=`<div class="mg-head"><button class="btn ghost sm" id="mg-mineback" type="button">← 今日文章</button><span class="spacer"></span><button class="btn ghost sm mine-del" id="mg-minedel" type="button">删除这篇</button></div>`;
   } else {
-  if(MG.col&&MG.key){ const [d,i]=MG.key.split("|"); pick={date:d,i:+i,older:false}; es=[]; h=`<div class="mg-head"><button class="btn ghost sm" id="mg-colback" type="button">← <span>书架</span></button></div>`; } else {
+  if(MG.col&&MG.key){ const [d,i]=MG.key.split("|"); pick={date:d,i:+i,older:false}; es=[]; h=`<div class="mg-head"><button class="btn ghost sm" id="mg-colback" type="button">← <span>分级阅读</span></button></div>`; } else {
   pick=mgPick(); es=mgEntries(MG.di,l);
   h=!days.length?"":`<div class="mg-head"><button class="ib" id="mg-prev" aria-label="前一天" ${MG.di>=days.length-1?"disabled":""}>‹</button><span class="d">${days[MG.di]?mgFmt(days[MG.di].date):""}</span><button class="ib" id="mg-next" aria-label="后一天" ${MG.di<=0?"disabled":""}>›</button><span class="spacer"></span><button class="ib" id="mg-reload" aria-label="刷新" title="刷新">↻</button></div>`;
   { const lvs=mgLevels(MG.di,l); if(lvs.length>1){ const sel=mgLvSel(MG.di,l); h+=`<div class="mg-lvs" role="tablist" aria-label="Level"><button type="button" data-mglv="" aria-pressed="${!sel}">${esc(trOne("全部")||"全部")}</button>${lvs.map(v=>`<button type="button" data-mglv="${v}" aria-pressed="${sel===v}">${v}</button>`).join("")}</div>`; } }
@@ -2855,7 +2855,7 @@ function mgColumn(){
     const body=op.length?`<span class="when">${esc(mdFmt(op[0].date.slice(5)))}</span><div class="rs">`+op.map(x=>`<button data-mg="jq|${x.i}"><span class="lv">${esc(x.level)}</span><span class="t zc" lang="zh-CN">${esc(zs(x.title.replace(/^[^：]*：/,"")))}</span>${mgRead("jq",x.i)?'<span class="ok">✓</span>':""}</button>`).join("")+`</div>`
       :`<span class="when">${esc(mdFmt(xs.length?xs[0].date.slice(5):t.md))}${xs.length?' · <span>开放</span>':""}</span>`;
     return `<div class="col-t${op.length?"":" off"}${t.term===curT?" cur":""}"><span class="nm zc" lang="zh-CN">${esc(zs(t.term))}<small data-noi18n>${esc(nm(t))}</small></span>${body}</div>`; };
-  let h=`<div class="col-h"><h2 class="zc" lang="zh-CN"><span>二十四节气</span></h2><span class="n">${open.length?new Set(open.map(x=>x.term)).size:0} / 24</span></div>
+  let h=`<p class="muted small" style="margin:26px 0 2px"><span>专题系列</span></p><div class="col-h"><h2 class="zc" lang="zh-CN"><span>二十四节气</span></h2><span class="n">${open.length?new Set(open.map(x=>x.term)).size:0} / 24</span></div>
     <p class="col-lead"><span>每个节气两篇：HSK2 和 HSK4，各配一首古诗。节气那天，也会出现在「今日」里。</span></p>`;
   if(curT){ const t=jqTermNow()||{term:curT,md:cur[0].date.slice(5)};
     h+=`<div class="col-now"><p class="k"><span>现在的节气</span></p><p class="tn zc" lang="zh-CN">${esc(zs(curT))}<small data-noi18n>${esc(nm(t))} · ${esc(mdFmt(t.md))}</small></p><div class="col-t" style="border:0;padding:6px 0 0;grid-template-columns:minmax(0,1fr)"><div class="rs">${cur.map(x=>`<button data-mg="jq|${x.i}"><span class="lv">${esc(x.level)}</span><span class="t zc" lang="zh-CN">${esc(zs(x.title.replace(/^[^：]*：/,"")))}</span>${mgRead("jq",x.i)?'<span class="ok">✓</span>':""}</button>`).join("")}</div></div></div>`; }
@@ -2874,7 +2874,7 @@ function mgLibList(pick){ // 分级阅读: the original library texts plus every
   const xs=[...xs0,...dl]; if(!xs.length) return "";
   const lvs=[...new Set(xs.map(x=>x.level))].sort((a,b)=>LV_ORDER.indexOf(a)-LV_ORDER.indexOf(b)), lv=MG.libLv!=null?MG.libLv:(MG.libLow?lvs[0]:"");
   const show=xs.filter(x=>!lv||x.level===lv).sort((a,b)=>LV_ORDER.indexOf(a.level)-LV_ORDER.indexOf(b.level));
-  return `<h3 style="margin:0 0 8px"><span>分级阅读</span> · <span>${xs.length} 篇</span></h3><div class="mg-lvs" style="margin:0 0 8px"><button type="button" data-liblv="" aria-pressed="${!lv}">全部</button>${lvs.map(v=>`<button type="button" data-liblv="${v}" aria-pressed="${lv===v}">${v}</button>`).join("")}</div>
+  return `<p class="muted small" style="margin:0 0 8px"><span>${xs.length} 篇，按 HSK 级别挑</span></p><div class="mg-lvs" style="margin:0 0 8px"><button type="button" data-liblv="" aria-pressed="${!lv}">全部</button>${lvs.map(v=>`<button type="button" data-liblv="${v}" aria-pressed="${lv===v}">${v}</button>`).join("")}</div>
     <div class="mg-arch">${show.map(x=>{ const dk=x.daily?x.date:"lib"; return `<button data-mg="${dk}|${x.i}"${x.daily?` data-di="${x.di}"`:""} aria-current="${!!pick&&pick.date===dk&&pick.i===x.i}"><span class="k">${esc(x.level)}</span><span class="t zc" lang="zh-CN">${esc(zs(x.title))}</span><span class="m">${mgRead(dk,x.i)?"✓":""}</span></button>`; }).join("")}</div>`;
 }
 /* 唱片盒 · record box (Mandopop from Hong Kong, Taiwan and Singapore) and 茶余饭后 · small stories of the Chinese-speaking world — reading/records.json */
@@ -4351,7 +4351,7 @@ const UI_DICT=[
 ["更新记录", "Update history", "Änderungsverlauf", "Histórico de atualizações", "更新記錄"],
 ["字里有新变化", "Zili has changed", "Zili hat sich verändert", "O Zili mudou", "字裡有新變化"],
 ["拼音课新增第 15 课「日常短句」，还有「弱音复习」：练习答错的音会收起来，每天 2 分钟练一练。", "The pinyin course has a new lesson 15, “Everyday phrases”, and a weak-sound review: sounds you get wrong in practice are collected so you can go over them for 2 minutes a day.", "Der Pinyin-Kurs hat eine neue Lektion 15, „Alltagssätze“, und eine Wiederholung schwacher Laute: Laute, die du im Training falsch hast, werden gesammelt, damit du sie täglich 2 Minuten übst.", "O curso de pinyin tem uma nova lição 15, «Frases do dia a dia», e uma revisão dos sons fracos: os sons em que erras no treino ficam guardados para treinares 2 minutos por dia.", "拼音課新增第 15 課「日常短句」，還有「弱音複習」：練習答錯的音會收起來，每天 2 分鐘練一練。"],
-["阅读页分成「今日 / 书架 / 我的文章」三个选项卡，课文库按级别挑。", "The reading page now has three tabs, Today / Bookshelf / My articles, and the text library is sorted by level.", "Die Leseseite hat jetzt drei Reiter: Heute / Bücherregal / Meine Artikel. Die Textsammlung ist nach Niveau sortiert.", "A página de leitura tem agora três separadores: Hoje / Estante / Meus artigos, e a biblioteca de textos está por nível.", "閱讀頁分成「今日 / 書架 / 我的文章」三個選項卡，課文庫按級別挑。"],
+["阅读页分成「今日 / 分级阅读 / 我的文章」三个选项卡，按级别挑文章。", "The reading page now has three tabs, Today / Graded reading / My articles, and texts are sorted by level.", "Die Leseseite hat jetzt drei Reiter: Heute / Gestufte Lektüre / Meine Artikel. Die Texte sind nach Niveau sortiert.", "A página de leitura tem agora três separadores: Hoje / Leitura graduada / Meus artigos, e os textos estão por nível.", "閱讀頁分成「今日 / 分級閱讀 / 我的文章」三個選項卡，按級別挑文章。"],
 ["练拼音也算连续天数，备份提醒现在也会保护你的学习进度。", "Pinyin practice now counts towards your streak, and the backup reminder also protects your progress.", "Pinyin-Übung zählt jetzt für die Serie, und die Sicherungserinnerung schützt jetzt auch deinen Lernfortschritt.", "Treinar pinyin conta agora para a sequência, e o lembrete de backup também protege o teu progresso.", "練拼音也算連續天數，備份提醒現在也會保護你的學習進度。"],
 ["有新版本", "A new version is ready", "Eine neue Version ist da", "Há uma nova versão", "有新版本"],
 ["本周练了 {0} 天", "Practised {0} days this week", "Diese Woche {0} Tage geübt", "Treinaste {0} dias esta semana", "本週練了 {0} 天"],
@@ -5127,7 +5127,7 @@ UI_DICT.push(
 ["★ 是增强/高级语音，听起来更自然。iPhone 可在「设置 → 辅助功能 → 朗读内容 → 声音 → 中文」里下载，比如 Tingting 或 Lilian（增强版）。", "★ marks enhanced/premium voices, which sound more natural. On iPhone, download one under Settings → Accessibility → Spoken Content → Voices → Chinese, e.g. Tingting or Lilian (Enhanced).", "★ sind erweiterte/Premium-Stimmen, sie klingen natürlicher. Auf dem iPhone unter Einstellungen → Bedienungshilfen → Gesprochene Inhalte → Stimmen → Chinesisch laden, z. B. Tingting oder Lilian (erweitert).", "★ marks enhanced/premium voices, which sound more natural. On iPhone, download one under Settings → Accessibility → Spoken Content → Voices → Chinese, e.g. Tingting or Lilian (Enhanced).", "★ 是增强/高级语音，听起来更自然。iPhone 可在「设置 → 辅助功能 → 朗读内容 → 声音 → 中文」里下载，比如 Tingting 或 Lilian（增强版）。"],
 ["拼音", "Pinyin", "Pinyin", "Pinyin", "拼音"],
 ["课文库", "Library", "Textsammlung", "Biblioteca de textos", "課文庫"],
-["书架里的「课文库」改名为「分级阅读」，并且收进了每天推送的文章，HSK 4、5 的文章也能在这里按级别找到。", "On the Bookshelf, the library is now called Graded reading and also holds every daily text, so HSK 4 and 5 texts can be found here by level.", "Im Regal heißt die Textsammlung jetzt „Gestufte Lektüre“ und enthält auch alle Tagestexte, sodass du HSK-4- und HSK-5-Texte hier nach Stufe findest.", "Na estante, a biblioteca agora se chama Leitura graduada e também reúne todos os textos diários; os de HSK 4 e 5 podem ser encontrados aqui por nível.", "書架裡的「課文庫」改名為「分級閱讀」，並且收進了每天推送的文章，HSK 4、5 的文章也能在這裡按級別找到。"],
+["阅读页的「书架」改名为「分级阅读」，收进了每天推送的文章，HSK 4、5 的文章也能在这里按级别找到。二十四节气放在下面，作为专题系列。", "On the Reading page, the Bookshelf is now called Graded reading and also holds every daily text, so HSK 4 and 5 texts can be found here by level. The 24 solar terms sit below as a special topic.", "Im Lesen-Bereich heißt das Bücherregal jetzt „Gestufte Lektüre“ und enthält auch alle Tagestexte, sodass du HSK-4- und HSK-5-Texte hier nach Stufe findest. Die 24 Sonnenperioden folgen darunter als Themenreihe.", "Na página de leitura, a estante agora se chama Leitura graduada e também reúne todos os textos diários; os de HSK 4 e 5 podem ser encontrados aqui por nível. Os 24 termos solares ficam abaixo, como tema especial.", "閱讀頁的「書架」改名為「分級閱讀」，收進了每天推送的文章，HSK 4、5 的文章也能在這裡按級別找到。二十四節氣放在下面，作為專題。"],
 ["你想先从哪里开始？", "Where would you like to start?", "Wo möchtest du anfangen?", "Por onde você quer começar?", "你想先從哪裡開始？"],
 ["底部栏和今日页会先放你选的这一项。以后随时可以在「我的」里改。", "The bottom bar and Today page will put your choice first. You can change it any time under \"You\".", "Untere Leiste und Heute-Seite zeigen deine Wahl zuerst. Du kannst sie jederzeit unter „Profil“ ändern.", "A barra inferior e a página de hoje vão mostrar sua escolha primeiro. Você pode mudar quando quiser em «Perfil».", "底部欄和今日頁會先放你選的這一項。以後隨時可以在「我的」裡改。"],
 ["先学拼音", "Pinyin first", "Zuerst Pinyin", "Primeiro o pinyin", "先學拼音"],
@@ -5147,6 +5147,8 @@ UI_DICT.push(
 ["古诗", "Classical poem", "Klassisches Gedicht", "Poema clássico", "古詩"],
 ["今日", "Today", "Heute", "Hoje", "今日"],
 ["书架", "Bookshelf", "Bücherregal", "Estante", "書架"],
+["{0} 篇，按 HSK 级别挑", "{0} texts, pick by HSK level", "{0} Texte, nach HSK-Stufe wählen", "{0} textos, escolha por nível HSK", "{0} 篇，按 HSK 級別挑"],
+["专题系列", "Special series", "Themenreihe", "Série especial", "專題系列"],
 ["现在的节气", "Current solar term", "Aktuelle Sonnenperiode", "Termo solar atual", "現在的節氣"],
 ["开放", "opens", "öffnet", "abre", "開放"],
 ["每个节气两篇：HSK2 和 HSK4，各配一首古诗。节气那天，也会出现在「今日」里。", "Two texts per term, HSK2 and HSK4, each with a classical poem. On the term's day they also appear under Today.", "Zwei Texte pro Sonnenperiode, HSK2 und HSK4, jeweils mit einem klassischen Gedicht. Am Tag der Sonnenperiode erscheinen sie auch unter „Heute“.", "Dois textos por termo, HSK2 e HSK4, cada um com um poema clássico. No dia do termo aparecem também em Hoje.", "每個節氣兩篇：HSK2 和 HSK4，各配一首古詩。節氣那天，也會出現在「今日」裡。"],
@@ -5777,10 +5779,10 @@ const WHATSNEW=[
     ["字卡现在直接点卡片就能翻面，不用再找按钮。","today"],
     ["字典不再占一个选项卡：每一页右下角都有查字按钮，点开就能查，当前页不会丢。想把字典放回底部栏，在「我的」里打开就行。",""],
     ["可以选「先学拼音」还是「先学阅读」了：底部栏的顺序和今日页最上面的卡片会跟着变。在「我的」里能随时改。","settings"],
-    ["书架里的「课文库」改名为「分级阅读」，并且收进了每天推送的文章，HSK 4、5 的文章也能在这里按级别找到。","read"]]},
+    ["阅读页的「书架」改名为「分级阅读」，收进了每天推送的文章，HSK 4、5 的文章也能在这里按级别找到。二十四节气放在下面，作为专题系列。","read"]]},
   {id:"2026-11-12",items:[
     ["拼音课新增第 15 课「日常短句」，还有「弱音复习」：练习答错的音会收起来，每天 2 分钟练一练。","pinyin"],
-    ["阅读页分成「今日 / 书架 / 我的文章」三个选项卡，课文库按级别挑。","read"],
+    ["阅读页分成「今日 / 分级阅读 / 我的文章」三个选项卡，按级别挑文章。","read"],
     ["练拼音也算连续天数，备份提醒现在也会保护你的学习进度。",""]]}
 ];
 function wnShow(all){ if(document.querySelector(".wnew")) return;
