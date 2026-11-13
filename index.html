@@ -2825,7 +2825,7 @@ async function mgRender0(){
   pick=mgPick(); es=mgEntries(MG.di,l);
   h=!days.length?"":`<div class="mg-head"><button class="ib" id="mg-prev" aria-label="前一天" ${MG.di>=days.length-1?"disabled":""}>‹</button><span class="d">${days[MG.di]?mgFmt(days[MG.di].date):""}</span><button class="ib" id="mg-next" aria-label="后一天" ${MG.di<=0?"disabled":""}>›</button><span class="spacer"></span><button class="ib" id="mg-reload" aria-label="刷新" title="刷新">↻</button></div>`;
   { const lvs=mgLevels(MG.di,l); if(lvs.length>1){ const sel=mgLvSel(MG.di,l); h+=`<div class="mg-lvs" role="tablist" aria-label="Level"><button type="button" data-mglv="" aria-pressed="${!sel}">${esc(trOne("全部")||"全部")}</button>${lvs.map(v=>`<button type="button" data-mglv="${v}" aria-pressed="${sel===v}">${v}</button>`).join("")}</div>`; } }
-  if(es.length) h+=`<nav class="mg-toc">${es.map(e=>`<button data-mg="${e.date}|${e.i}" aria-current="${!!pick&&!pick.older&&pick.date===e.date&&pick.i===e.i}"><span class="k">${esc(e.term||e.hour||MG_KIND[e.kind]||e.kind||"")}</span><span class="t zc" lang="zh-CN">${esc(zs(e.title))}</span><span class="m">${mgRead(e.date,e.i)?"✓":""}</span></button>`).join("")}<button class="mg-addchip" data-mineopen="1" type="button">＋ 我的文章</button></nav>`;
+  if(es.length) h+=`<nav class="mg-toc">${es.map(e=>`<button data-mg="${e.date}|${e.i}" aria-current="${!!pick&&!pick.older&&pick.date===e.date&&pick.i===e.i}"><span class="t zc" lang="zh-CN">${esc(zs(e.title))}</span><span class="m">${mgRead(e.date,e.i)?"✓":""}</span></button>`).join("")}<button class="mg-addchip" data-mineopen="1" type="button">＋ 我的文章</button></nav>`;
   }
   if(!pick){ main.innerHTML=h+`<div class="empty"><b>还没有${LANG[l].zh}文章</b>每天 ${MG_ETA[l]} 左右送到。</div>`; mgArch(null); return; }
   try{ const day=await mgDay(pick.date); it=day.items[pick.i]; }catch(e){ main.innerHTML=h+`<div class="empty"><b>这篇没有载入</b>${esc(e.message)}</div>`; return; }
@@ -2850,7 +2850,7 @@ async function mgRender0(){
     ${qs.length?`<div class="mg-blk"><h3>想一想</h3><ol class="mg-q zc" data-noi18n lang="zh-CN">${qs.map(q=>`<li>${esc(zs(q))}</li>`).join("")}</ol></div>`:""}
     ${lang()==="zh"&&(it.paragraphs||[]).length?wrBlock(pick.date+"|"+pick.i):""}
     ${it.sources&&it.sources.length?`<div class="mg-blk mg-src"><h3>来源</h3><ul>${it.sources.map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>${s.license?`<span class="lic">${esc(s.license)}</span>`:""}</li>`).join("")}</ul></div>`:""}
-    <div class="mg-fin">${(()=>{ const on=mgFavOn(pick.date+"|"+pick.i); return `<button class="btn mg-favb" data-favb="1" type="button" aria-pressed="${on}"><span class="st" aria-hidden="true">${on?"★":"☆"}</span> <span>${on?"已收藏":"收藏"}</span></button>`; })()}<button class="btn" id="mg-exp" type="button" aria-haspopup="menu">${I.exp}<span>导出</span></button>${mgRead(pick.date,pick.i)?'<span class="small muted">✓ 读完了</span>':`<button class="btn primary" id="mg-done" type="button">读完了</button>`}
+    <div class="mg-fin">${(()=>{ const on=mgFavOn(pick.date+"|"+pick.i); return `<button class="btn mg-favb" data-favb="1" type="button" aria-pressed="${on}"><span class="st" aria-hidden="true">${on?"★":"☆"}</span> <span>${on?"已收藏":"收藏"}</span></button>`; })()}<button class="btn" id="mg-share2" type="button" data-sk="${esc(pick.date)}/${esc(pick.i)}"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6"/><path d="M12 15V3M8 7l4-4 4 4"/></svg><span>分享</span></button><button class="btn" id="mg-exp" type="button" aria-haspopup="menu">${I.exp}<span>导出</span></button>${mgRead(pick.date,pick.i)?'<span class="small muted">✓ 读完了</span>':`<button class="btn primary" id="mg-done" type="button">读完了</button>`}
     ${(()=>{ const k=es.findIndex(e=>e.date===pick.date&&e.i===pick.i); const nx=!pick.older&&k>=0?es[k+1]:null; return nx?`<button class="btn" data-mg="${nx.date}|${nx.i}" type="button">下一篇 →</button>`:""; })()}</div>
     ${dlNote()}
   </article>`;
@@ -3714,7 +3714,7 @@ $("#tab-read").addEventListener("click",e=>{
   if(b.dataset.mineopen){ const d=$("#mine-box"); d.open=true; d.scrollIntoView({behavior:"smooth",block:"start"}); return; }
   if(b.dataset.mg){ MG.mineTab=false; MG.mine=null; MG.key=b.dataset.mg; if(b.dataset.di!=null) MG.di=+b.dataset.di; else { const d=b.dataset.mg.split("|")[0]; const k=MG.idx.days.findIndex(x=>x.date===d); if(k>=0) MG.di=k; } MG.tr=null; mgClose(); mgRender(); { const m=$("#mg-main"); const y=m.getBoundingClientRect().top+scrollY-(innerWidth>640?$("#tabs").offsetHeight+4:4); if(scrollY>y) window.scrollTo({top:y,behavior:"smooth"}); } return; }
   const id=b.id;
-  if(id==="mg-share"){ dlShare(b.dataset.sk); return; }
+  if(id==="mg-share"||id==="mg-share2"){ dlShare(b.dataset.sk); return; }
   if(id==="dl-start"){ DL.used=false; onbStart(); return; }
   if(id==="mg-sw-today"||id==="mg-sw-col"){ MG.col=id==="mg-sw-col"; MG.key=null; MG.mine=null; MG.tr=null; mgClose(); rdStop(); mgRender(); window.scrollTo({top:0}); return; }
   if(id==="mg-colback"){ MG.key=null; MG.tr=null; mgClose(); rdStop(); mgRender(); return; }
