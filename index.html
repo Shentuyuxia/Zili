@@ -192,6 +192,10 @@ input[type=range]{accent-color:var(--acc);width:100%}
 .card-body{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px;padding:18px 18px 26px}
 .word{font-family:var(--f-word);font-size:clamp(32px,6.5vw,52px);line-height:1.12;overflow-wrap:anywhere;font-weight:400}
 .word.sm{font-size:clamp(26px,5vw,38px)}
+.word.zx{font-size:clamp(72px,26vw,112px);line-height:1.08}
+.word.zl{font-size:clamp(44px,15vw,72px);line-height:1.12}
+.word.zx .zw,.word.zl .zw{font-weight:400;letter-spacing:.02em}
+.word.zx rt{font-size:.2em}.word.zl rt{font-size:.26em}
 .extra{font-family:var(--f-mono);font-size:13px;color:var(--muted)}
 .gls{display:flex;flex-direction:column;gap:6px;align-items:center}
 .gl{display:flex;gap:10px;align-items:baseline;justify-content:center;flex-wrap:wrap}
@@ -2333,6 +2337,8 @@ function togglePile(id){
 }
 
 function fhN(){ try{ return +localStorage.getItem("zl-fh")||0; }catch(e){ return 0; } }
+/* Chinese words are the star of the card: big for 1-2 characters, a bit smaller for longer ones */
+function wSize(c){ if(c.lang!=="zh") return ""; const n=[...String(c.w||"")].length; return n<=2?" zx":n<=4?" zl":""; }
 function renderCard(){
   const area=$("#card-area");
   $("#sess-title").textContent=sess?sess.title:"今日学习";
@@ -2354,7 +2360,7 @@ function renderCard(){
   const backBits=()=>`${memo?`<div class="memo"><b>记忆</b><span data-noi18n>${esc(memo)}</span></div>`:""}${c.from&&String(c.from).includes("|")?`<div class="src-row"><button class="btn ghost sm" id="c-src" type="button">回到这篇文章 →</button></div>`:""}${exHTML(c)}${mine.length?`<div class="mine"><span class="h">我的例句</span>${mine.slice(0,3).map(m=>`<div class="s">${esc(m.t)}${m.fix&&m.fix!==m.t?`<span class="fx">→ ${esc(m.fix)}</span>`:""}</div>`).join("")}</div>`:""}`;
   let body;
   if(dir==="t2g"){
-    body=`${imgFront?imgEl:""}<div class="word">${wordHTML(c)}</div><div class="row" style="justify-content:center">${posChip(c)}</div>`;
+    body=`${imgFront?imgEl:""}<div class="word${wSize(c)}">${wordHTML(c)}</div><div class="row" style="justify-content:center">${posChip(c)}</div>`;
     if(sess.flipped) body+=`${extra}<div class="divider"></div>${!imgFront?imgEl:""}${glossHTML(c)}${mzHtml(c)}${backBits()}`;
   } else {
     body=`${imgFront?imgEl:""}${glossHTML(c,true)}<div class="row" style="justify-content:center">${posChip(c)}</div>`;
