@@ -218,7 +218,23 @@ input[type=range]{accent-color:var(--acc);width:100%}
 .rate button small{font-family:var(--f-mono);font-weight:400;font-size:11px;color:var(--muted)}
 .rate .g0{color:var(--bad)} .rate .g1{color:var(--warn)} .rate .g2{color:var(--ok)} .rate .g3{color:var(--acc)}
 .rate button:hover{background:var(--sunk)}
-.flipbtn{margin-top:14px;width:100%;padding:13px}
+.fliphint{margin:12px 0 0;text-align:center;font-size:13px;color:var(--muted);min-height:20px}
+.card.tap{cursor:pointer}
+.card.tap:active{background:var(--sunk)}
+.dfab{position:fixed;right:max(14px,env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:35;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:color-mix(in srgb,var(--surface) 88%,transparent);color:var(--acc);display:grid;place-items:center;cursor:pointer;padding:0;box-shadow:0 3px 12px rgba(0,0,0,.14);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.dfab svg{width:22px;height:22px}
+.dfab:active{transform:scale(.94)}
+body.dsheet-on .dfab,body.dtab-on .dfab{display:none}
+@media (max-width:640px){ .dfab{bottom:calc(74px + env(safe-area-inset-bottom,0px))} }
+#tab-dict.dsheet{position:fixed;inset:0;z-index:38;background:var(--bg);overflow:auto;-webkit-overflow-scrolling:touch;padding:0 16px calc(28px + env(safe-area-inset-bottom,0px));display:block}
+#tab-dict.dsheet[hidden]{display:none}
+#tab-dict.dsheet > .panel,#tab-dict.dsheet > .dsheet-bar{max-width:820px;margin-left:auto;margin-right:auto}
+.dsheet-bar{display:none}
+#tab-dict.dsheet .dict-h{display:none}
+#tab-dict.dsheet .dict-hrow{justify-content:flex-end}
+#tab-dict.dsheet > .dsheet-bar{display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:2;background:var(--bg);padding:max(12px,env(safe-area-inset-top,0px)) 0 10px;border-bottom:1px solid var(--line);margin-bottom:12px}
+.dsheet-bar b{flex:1;font-size:17px}
+nav.tabs button.dict-tab[hidden]{display:none}
 .kbd{font-family:var(--f-mono);font-size:11px;border:1px solid var(--line);border-bottom-width:2px;border-radius:4px;padding:0 5px;color:var(--muted);font-weight:400}
 .foot{display:flex;justify-content:space-between;gap:8px;margin-top:10px;font-size:12.5px;color:var(--muted);flex-wrap:wrap;align-items:center}
 .done{text-align:center;padding:36px 12px;display:flex;flex-direction:column;align-items:center;gap:8px}
@@ -1306,6 +1322,7 @@ body .py .tn1,body.tones .py .tn1{color:var(--py1)} body .py .tn2,body.tones .py
 
   <!-- DICTIONARY -->
   <section id="tab-dict" class="grid one" hidden>
+    <div class="dsheet-bar"><b>字典</b><button class="btn ghost sm" type="button" id="dsheet-x">关闭</button></div>
     <div class="panel dict-page"><div class="dict-hrow"><h2 class="dict-h">字典</h2><button class="btn sm" type="button" data-pyopen="chart">拼音表</button><button class="btn sm" type="button" data-pyopen="map">拼音课</button></div><div id="dict-host"></div></div>
     <details class="panel dk-box" id="dk-browse"><summary><span class="dk-t">字匣</span><span class="dk-n">所有学过和收进来的词，可以按级别和掌握程度查找，也可以自己录入新词。</span></summary>
     <details class="adbox" id="add-box">
@@ -1483,6 +1500,8 @@ body .py .tn1,body.tones .py .tn1{color:var(--py1)} body .py .tn2,body.tones .py
 
   <!-- STATS -->
 
+  <button class="dfab" id="dfab" type="button" aria-label="查字典" title="查字典"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg></button>
+
   <!-- SETTINGS -->
   <section id="tab-settings" class="grid" hidden>
     <div class="acct" data-acct></div>
@@ -1490,6 +1509,7 @@ body .py .tn1,body.tones .py .tn1{color:var(--py1)} body .py .tn2,body.tones .py
       <div class="panel">
         <h3 class="ph3">界面</h3>
         <label class="tog"><input type="checkbox" id="opt-hints"> 显示说明文字</label>
+        <label class="tog"><input type="checkbox" id="opt-dtab"> 底部栏显示字典页（关闭时用右下角的查字按钮）</label>
         <button class="btn ghost sm" type="button" id="onb-again" style="margin-top:10px">重新看新手引导</button> <button class="btn ghost sm" type="button" id="wn-open" style="margin-top:10px">更新记录</button>
         <div class="field" id="voice-row" style="margin-top:14px" hidden><label for="opt-voice">朗读语音</label>
           <div class="row" style="flex-wrap:nowrap"><select id="opt-voice"></select><button class="btn sm" id="voice-test" type="button">试听</button></div>
@@ -2268,7 +2288,7 @@ function startCram(list,title,mode){
 }
 function next(){ sess.cur=sess.queue.shift()||null; sess.flipped=false; renderCard(); if(sess.cur&&S.settings.autoSpeak&&S.settings.dir==="t2g") speak(sess.cur.c.w); }
 function flip(){
-  if(!sess||!sess.cur||sess.flipped) return; sess.flipped=true; renderCard();
+  if(!sess||!sess.cur||sess.flipped) return; sess.flipped=true; try{ localStorage.setItem("zl-fh",fhN()+1); }catch(e){} renderCard();
   const id=sess.cur.c.id;
   if(S.settings.autoMine&&(audsOf(id).w||audsOf(id).s)) playMine(id);
   else if(S.settings.autoSpeak&&S.settings.dir==="g2t") speak(sess.cur.c.w);
@@ -2302,6 +2322,7 @@ function togglePile(id){
   save(); renderStrip();
 }
 
+function fhN(){ try{ return +localStorage.getItem("zl-fh")||0; }catch(e){ return 0; } }
 function renderCard(){
   const area=$("#card-area");
   $("#sess-title").textContent=sess?sess.title:"今日学习";
@@ -2335,7 +2356,7 @@ function renderCard(){
         <button class="g1" data-g="1">模糊<small>${preview(st,1)} · 2</small></button>
         <button class="g2" data-g="2">记得<small>${preview(st,2)} · 3</small></button>
         <button class="g3" data-g="3">简单<small>${preview(st,3)} · 4</small></button></div>`
-    : `<button class="btn primary flipbtn" id="c-flip">显示答案 <span class="kbd" style="color:inherit;border-color:currentColor;opacity:.75">空格</span></button>`;
+    : `<p class="fliphint">${fhN()<6?"点一下卡片，看答案":"&nbsp;"}</p>`;
   area.innerHTML=`<div class="card">${top}<div class="card-body">${body}</div></div>${actions}
     <div class="foot"><span>本轮剩余 ${sess.queue.length+1} 张</span>${sess.flipped&&!hasImg&&!mine.length&&!hasAud?`<button class="btn ghost sm" id="c-add">${I.pen} 例句 / 录音</button>`:`<span>${sess.mode==="pile"?"评「简单」会移出生词堆":""}</span>`}</div>`;
   fillImgs(area);
@@ -2345,7 +2366,7 @@ function renderCard(){
   $("#c-pile").onclick=()=>{ togglePile(c.id); renderCard(); };
   $("#c-edit").onclick=()=>openDetail(c.id);
   const ad=$("#c-add"); if(ad) ad.onclick=()=>openDetail(c.id);
-  const f=$("#c-flip"); if(f) f.onclick=flip;
+  if(!sess.flipped){ const cd=area.querySelector(".card"); if(cd){ cd.classList.add("tap"); cd.onclick=e=>{ if(e.target.closest("button,a,input,textarea,select,label")) return; flip(); }; } }
   area.querySelectorAll(".rate button").forEach(b=>b.onclick=()=>grade(+b.dataset.g));
   if(sess.flipped) mzMount(c);
 }
@@ -2372,7 +2393,7 @@ function renderDone0(area){
 document.addEventListener("keydown",e=>{
   if(detailOpen){ if(e.key==="Escape") closeDetail(); return; }
   if(cur!=="today"||e.target.matches("input,textarea,select")||e.metaKey||e.ctrlKey||e.altKey) return;
-  if(e.key===" "){ if(sess&&sess.cur){ e.preventDefault(); flip(); } }
+  if(e.key===" "){ if(document.body.classList.contains("dsheet-on")) return; if(sess&&sess.cur){ e.preventDefault(); flip(); } }
   else if(/^[1-4]$/.test(e.key)) grade(+e.key-1);
   else if(e.key==="s"||e.key==="S"){ if(sess&&sess.cur) speak(sess.cur.c.w); }
   else if(e.key==="m"||e.key==="M"){ if(sess&&sess.cur) playMine(sess.cur.c.id); }
@@ -4170,7 +4191,7 @@ function renderSettings(){
   $("#gl-checks").innerHTML=LANG[l].gl.map(k=>`<label><input type="checkbox" value="${k}" ${S.settings.gloss[l].includes(k)?"checked":""}> ${GLN[k]}</label>`).join("");
   $("#dir-t2g").checked=S.settings.dir==="t2g"; $("#dir-g2t").checked=S.settings.dir==="g2t";
   $("#scr-s").checked=scr()==="s"; $("#scr-t").checked=scr()==="t"; $("#opt-py").checked=pyOn(); { const cs=$("#opt-cardstk"); if(cs) cs.checked=cardStkOn(); }renderToneSw(); { const o=$("#opt-tone"); if(o) o.checked=tonesOn(); $$("[data-tc]").forEach(x=>x.checked=toneSel().includes(+x.dataset.tc)); const tw=$(S.settings.toneWhere==="py"?"#tw-py":"#tw-all"); if(tw) tw.checked=true; }
-  $("#opt-autopile").checked=!!S.settings.autoPile; $("#opt-autospeak").checked=!!S.settings.autoSpeak; $("#opt-imgfront").checked=!!S.settings.imgFront; $("#opt-automine").checked=!!S.settings.autoMine;
+  $("#opt-dtab").checked=dtabOn(); $("#opt-autopile").checked=!!S.settings.autoPile; $("#opt-autospeak").checked=!!S.settings.autoSpeak; $("#opt-imgfront").checked=!!S.settings.imgFront; $("#opt-automine").checked=!!S.settings.autoMine;
   $("#opt-rate").value=S.settings.rate; $("#rate-v").textContent="×"+(+S.settings.rate).toFixed(2);
   $("#pile-lv").innerHTML=`<option value="">全部级别</option>`+LV().map(v=>`<option>${v}</option>`).join("");
 }
@@ -4194,6 +4215,7 @@ document.addEventListener("input",e=>{ const i=e.target.closest('input[type=colo
   if(!tonesOn()){ S.settings.tones=true; const o=$("#opt-tone"); if(o) o.checked=true; } save(); applyTones(); i.closest("label").classList.add("on"); $$(`button[data-swk="${k}"]`).forEach(x=>x.setAttribute("aria-pressed","false")); const n=i.closest(".sw").querySelector(".swn"); if(n) n.textContent=i.value; });
 $$('[name="tonewhere"]').forEach(x=>x.addEventListener("change",()=>{ S.settings.toneWhere=x.value; save(); applyTones(); }));
 $("#opt-tone").addEventListener("change",e=>{ S.settings.tones=e.target.checked; save(); applyTones(); const b=$("#mg-tone"); if(b) b.setAttribute("aria-pressed",tonesOn()); });
+$("#opt-dtab").addEventListener("change",e=>{ S.settings.dictTab=e.target.checked; save(); applyDictMode(); });
 $("#opt-autospeak").addEventListener("change",e=>{ S.settings.autoSpeak=e.target.checked; save(); });
 $("#opt-automine").addEventListener("change",e=>{ S.settings.autoMine=e.target.checked; save(); });
 $("#opt-imgfront").addEventListener("change",e=>{ S.settings.imgFront=e.target.checked; save(); renderCard(); });
@@ -4977,6 +4999,11 @@ const UI_DICT=[
 ["先输入汉字。", "Type the Chinese word first.", "Erst das chinesische Wort eingeben.", "Digite a palavra primeiro.", "先輸入漢字。"],
 ["请输入汉字。", "Please type Chinese characters.", "Bitte chinesische Zeichen eingeben.", "Digite caracteres chineses.", "請輸入漢字。"],
 ["字典", "Dictionary", "Wörterbuch", "Dicionário", "字典"],
+["点一下卡片，看答案", "Tap the card to see the answer", "Auf die Karte tippen, um die Antwort zu sehen", "Toque no cartão para ver a resposta", "點一下卡片，看答案"],
+["查字典", "Look up a word", "Wort nachschlagen", "Consultar dicionário", "查字典"],
+["底部栏显示字典页（关闭时用右下角的查字按钮）", "Show the Dictionary page in the bottom bar (off: use the lookup button at bottom right)", "Wörterbuch-Seite in der unteren Leiste zeigen (aus: Such-Button unten rechts)", "Mostrar a página do dicionário na barra inferior (desligado: botão de busca no canto inferior direito)", "底部欄顯示字典頁（關閉時用右下角的查字按鈕）"],
+["字卡现在直接点卡片就能翻面，不用再找按钮。", "Flashcards now flip when you tap the card; no button to hunt for.", "Karteikarten drehst du jetzt direkt per Tipp auf die Karte um, ohne Button.", "Os cartões agora viram ao tocar neles; não é preciso procurar um botão.", "字卡現在直接點卡片就能翻面，不用再找按鈕。"],
+["字典不再占一个选项卡：每一页右下角都有查字按钮，点开就能查，当前页不会丢。想把字典放回底部栏，在「我的」里打开就行。", "The dictionary is no longer a tab: every page has a lookup button at the bottom right, and the page you are on stays put. To bring it back to the bottom bar, switch it on under \"You\".", "Das Wörterbuch ist kein eigener Tab mehr: Auf jeder Seite gibt es unten rechts einen Such-Button, die aktuelle Seite bleibt erhalten. Wer es in der unteren Leiste möchte, schaltet es unter „Profil“ ein.", "O dicionário deixou de ser uma aba: todas as páginas têm um botão de busca no canto inferior direito, e a página atual não se perde. Para o trazer de volta à barra inferior, ative em «Perfil».", "字典不再占一個選項卡：每一頁右下角都有查字按鈕，點開就能查，當前頁不會丟。想把字典放回底部欄，在「我的」裡打開就行。"],
 ["手写", "Handwriting", "Handschrift", "Escrita à mão", "手寫"],
 ["说", "Speak", "Sprechen", "Falar", "說"],
 ["撤销一笔", "Undo stroke", "Strich zurück", "Desfazer traço", "撤銷一筆"],
@@ -5186,8 +5213,24 @@ function addOpen(w){ // the old 录入新词 tab now lives in 字匣 → 自己�
   if(w){ const i=$("#n-w"); i.value=w; i.dispatchEvent(new Event("input")); }
   setTimeout(()=>{ d.scrollIntoView({behavior:"smooth",block:"start"}); $("#n-w").focus({preventScroll:true}); },60);
 }
+const dtabOn=()=>!!S.settings.dictTab;
+function dictSheet(on){
+  const el=$("#tab-dict"); if(!el) return;
+  if(on&&dtabOn()){ showTab("dict"); return; }
+  el.classList.toggle("dsheet",!!on); el.hidden=!on; document.body.classList.toggle("dsheet-on",!!on);
+  if(on){ dicMount(); if($("#dk-browse").open) renderBrowse(); if($("#dk-pile").open) renderPile(); el.scrollTop=0; }
+  else if(typeof dicStop==="function") dicStop();
+}
+function applyDictMode(){
+  const on=dtabOn(), b=$("#dict-open");
+  if(b) b.hidden=!on; document.body.classList.toggle("dtab-on",on);
+  const el=$("#tab-dict"); if(on&&el&&el.classList.contains("dsheet")){ dictSheet(false); }
+  if(!on&&cur==="dict") showTab("today");
+}
 function showTab(t){
   if(t==="new"){ addOpen(); return; }
+  if(t==="dict"&&!dtabOn()){ dictSheet(true); return; }
+  if(t!=="dict"&&document.body.classList.contains("dsheet-on")) dictSheet(false);
   // former tabs now live inside other pages: 进度 → 今日学习 (学习总览), 字匣 / 生词堆 → 字典
   const sub={stats:["today","ov-box"],browse:["dict","dk-browse"],pile:["dict","dk-pile"]}[t];
   if(sub){ showTab(sub[0]); const d=document.getElementById(sub[1]); if(d){ d.open=true; setTimeout(()=>d.scrollIntoView({behavior:"smooth",block:"start"}),60); } return; }
@@ -5203,6 +5246,9 @@ function showTab(t){
   if(t==="read") mgRender(); else { if(typeof mgClose==="function"&&MG.sheet) mgClose(); if(typeof rdStop==="function") rdStop(); }
   try{ localStorage.setItem("zl-tab",t); }catch(e){}
 }
+$("#dfab").addEventListener("click",()=>dictSheet(true));
+$("#dsheet-x").addEventListener("click",()=>dictSheet(false));
+document.addEventListener("keydown",e=>{ if(e.key==="Escape"&&document.body.classList.contains("dsheet-on")&&!document.querySelector(".scrim:not([hidden])")&&!detailOpen) dictSheet(false); });
 $("#tabs").addEventListener("click",e=>{ const b=e.target.closest("[data-tab]"); if(!b) return; if(b.dataset.tab==="pinyin"&&cur==="pinyin"&&typeof pyOpen==="function"){ pyOpen("map"); return; } showTab(b.dataset.tab); });
 document.addEventListener("click",e=>{ const b=e.target.closest(".subsw [data-sub]"); if(b) showTab(b.dataset.sub); });
 $("#langsw").addEventListener("click",e=>{ const b=e.target.closest("[data-l]"); if(!b||b.dataset.l===lang()) return; S.settings.lang=b.dataset.l; save(); applyLang(); });
@@ -5673,6 +5719,9 @@ function pyAnnounce(){ if(lsGet("zl-new-py","")==="1") return; if(detailOpen||do
 setTimeout(()=>{ try{ pyAnnounce(); }catch(e){} },1800);
 /* ---------- what's new: newest release first; only releases worth telling people about get an entry ---------- */
 const WHATSNEW=[
+  {id:"2026-11-13",items:[
+    ["字卡现在直接点卡片就能翻面，不用再找按钮。","today"],
+    ["字典不再占一个选项卡：每一页右下角都有查字按钮，点开就能查，当前页不会丢。想把字典放回底部栏，在「我的」里打开就行。",""]]},
   {id:"2026-11-12",items:[
     ["拼音课新增第 15 课「日常短句」，还有「弱音复习」：练习答错的音会收起来，每天 2 分钟练一练。","pinyin"],
     ["阅读页分成「今日 / 书架 / 我的文章」三个选项卡，课文库按级别挑。","read"],
@@ -5694,7 +5743,8 @@ setTimeout(()=>{ try{ wnAuto(); }catch(e){} },3200);
 
 /* ---------- boot ---------- */
 applyUILang();
-try{ const t=localStorage.getItem("zl-tab"); if(t) showTab(t); }catch(e){}
+applyDictMode();
+try{ const t=localStorage.getItem("zl-tab"); if(t&&!(t==="dict"&&!dtabOn())) showTab(t); }catch(e){}
 applyLang();
 let lastDay=today();
 setInterval(()=>{ if(today()!==lastDay){ lastDay=today(); if(DATA[lang()]){ buildDaily(); renderStrip(); } } },60000);
