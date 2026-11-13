@@ -229,6 +229,14 @@ body.dsheet-on .dfab,body.dtab-on .dfab{display:none}
 #tab-dict.dsheet{position:fixed;inset:0;z-index:38;background:var(--bg);overflow:auto;-webkit-overflow-scrolling:touch;padding:0 16px calc(28px + env(safe-area-inset-bottom,0px));display:block}
 #tab-dict.dsheet[hidden]{display:none}
 #tab-dict.dsheet > .panel,#tab-dict.dsheet > .dsheet-bar{max-width:820px;margin-left:auto;margin-right:auto}
+nav.tabs button[data-tab="today"]{order:1} nav.tabs button[data-tab="read"]{order:2} nav.tabs button[data-tab="dict"]{order:3} nav.tabs button[data-tab="pinyin"]{order:4} nav.tabs button[data-tab="settings"]{order:5}
+body[data-focus="py"] nav.tabs button[data-tab="pinyin"]{order:2} body[data-focus="py"] nav.tabs button[data-tab="read"]{order:4}
+.focuscard{display:grid;gap:4px;border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:14px 16px;margin:0 0 14px}
+.focuscard .fk{font-size:12px;letter-spacing:.08em;color:var(--acc);font-weight:700}
+.focuscard .ft{font-size:19px;font-weight:700;line-height:1.35}
+.focuscard .fs{font-size:13px;color:var(--muted);margin:0}
+.focuscard .row{margin-top:8px;gap:10px;align-items:center;flex-wrap:wrap}
+.focuscard .flink{background:none;border:0;padding:4px 0;color:var(--muted);font-size:13px;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
 .dsheet-bar{display:none}
 #tab-dict.dsheet .dict-h{display:none}
 #tab-dict.dsheet .dict-hrow{justify-content:flex-end}
@@ -1426,6 +1434,7 @@ body .py .tn1,body.tones .py .tn1{color:var(--py1)} body .py .tn2,body.tones .py
   <section id="tab-today" class="grid">
     <div class="panel">
       <div id="onb-day"></div>
+      <div id="focus-card"></div>
       <div id="py-entry"></div>
       <div class="sesshead"><h2 id="sess-title">今日学习</h2><div class="row" id="sess-actions"></div></div>
       <div class="bar"><i id="sess-bar"></i></div>
@@ -1509,6 +1518,7 @@ body .py .tn1,body.tones .py .tn1{color:var(--py1)} body .py .tn2,body.tones .py
       <div class="panel">
         <h3 class="ph3">界面</h3>
         <label class="tog"><input type="checkbox" id="opt-hints"> 显示说明文字</label>
+        <div class="field" style="margin:10px 0 0"><label for="opt-focus">先学什么</label><select id="opt-focus"><option value="read">先学阅读</option><option value="py">先学拼音</option></select></div>
         <label class="tog"><input type="checkbox" id="opt-dtab"> 底部栏显示字典页（关闭时用右下角的查字按钮）</label>
         <button class="btn ghost sm" type="button" id="onb-again" style="margin-top:10px">重新看新手引导</button> <button class="btn ghost sm" type="button" id="wn-open" style="margin-top:10px">更新记录</button>
         <div class="field" id="voice-row" style="margin-top:14px" hidden><label for="opt-voice">朗读语音</label>
@@ -3434,47 +3444,51 @@ setTimeout(()=>{ const go=()=>{ try{ dicPreload(); }catch(e){} }; if("requestIdl
 /* ---------- first day: three quick questions, then a checklist on Today ---------- */
 const onb=()=>S.settings.onb||null;
 const onbActive=()=>{ const o=onb(); if(!o||o.hide) return false; const days=Math.round((new Date(today())-new Date(o.start))/864e5); return days<=1; };
-const onbTasks=()=>{ const o=onb(); return o&&o.who==="zero"?[["py","先学拼音第 1 课（听、记、练）","pinyin"],...ONB_TASKS]:ONB_TASKS; };
+const focusSet=()=>S.settings.focus||"";
+const onbTasks=()=>{ const o=onb(), f=focusSet()||(o&&o.who==="zero"?"py":"read"); return f==="py"?[["py","先学拼音第 1 课（听、记、练）","pinyin"],...ONB_TASKS]:ONB_TASKS; };
 const ONB_TASKS=[["read","读一篇短文，点一个不认识的词","read"],["save","把一个词收进生词","read"],["cards","学完今天的新词卡","today"],["write","在米字格里跟着写一个字","today"]];
 function onbTick(k){ const o=onb(); if(!o||o.hide||(o.t&&o.t[k])) return; o.t=Object.assign({},o.t,{[k]:Date.now()}); save(); onbDay();
   const left=onbTasks().filter(([x])=>!o.t[x]).length; if(!left) toast(trOne("第一天完成了！明天回来复习今天的词。")||""); }
-function onbDay(){ const el=$("#onb-day"); if(!el) return; const o=onb();
+function onbDay(){ const el=$("#onb-day"); if(!el) return; const o=onb(); try{ focusCard(); }catch(e){}
   if(!onbActive()){ el.innerHTML=""; return; }
   const t=o.t||{}, TK=onbTasks(), done=TK.filter(([k])=>t[k]).length, all=done===TK.length;
   el.innerHTML=`<div class="onb-day"><button class="ib sm x" type="button" id="onb-hide" aria-label="关闭">${I.x}</button>
     <h3>${all?"第一天完成了 🎉":"你的第一天"}</h3><p class="sub">${all?"明天打开字里，会先复习今天学过的词。":`<span data-noi18n>${done} / ${TK.length}</span>`}</p>
     <ol>${TK.map(([k,txt,tab],i)=>`<li class="${t[k]?"done":""}"><span class="ck">${t[k]?"✓":i+1}</span><span class="tx">${txt}</span>${!t[k]&&(tab==="read"||tab==="pinyin")&&cur!==tab&&TK.find(([x,,tb])=>tb===tab&&!t[x])[0]===k?`<button class="btn sm ghost" type="button" data-onbgo="${tab}">${tab==="pinyin"?"去学拼音":"去阅读"}</button>`:""}</li>`).join("")}</ol></div>`;
 }
-document.addEventListener("click",e=>{ const b=e.target.closest("#onb-hide,[data-onbgo]"); if(!b) return;
+document.addEventListener("click",e=>{ const g=e.target.closest("[data-fgo]"); if(g){ showTab(g.dataset.fgo); return; } const b=e.target.closest("#onb-hide,[data-onbgo]"); if(!b) return;
   if(b.id==="onb-hide"){ const o=onb(); if(o){ o.hide=true; save(); } onbDay(); return; }
   if(b.dataset.onbgo==="pinyin") pyOpen("lesson",1); else showTab(b.dataset.onbgo); });
-const ONB={step:0,who:"",goal:10,tone:0,gl:""};
+const ONB={step:0,who:"",goal:10,tone:0,gl:"",focus:"",fset:false};
 function onbStart(){
-  ONB.step=0; ONB.who=""; ONB.goal=10; ONB.tone=0; ONB.gl=["en","de","pt"].includes(UIL)?UIL:(n=>n.startsWith("de")?"de":n.startsWith("pt")?"pt":"en")((navigator.language||"").toLowerCase());
+  ONB.step=0; ONB.who=""; ONB.goal=10; ONB.tone=0; ONB.focus=""; ONB.fset=false; ONB.gl=["en","de","pt"].includes(UIL)?UIL:(n=>n.startsWith("de")?"de":n.startsWith("pt")?"pt":"en")((navigator.language||"").toLowerCase());
   detailOpen="__onb"; document.body.classList.add("modal-open"); onbRender();
 }
 function onbRender(){
-  const st=ONB.step, dots=`<div class="onb-steps">${[0,1,2].map(i=>`<i class="${i<=st?"on":""}"></i>`).join("")}</div>`;
+  const st=ONB.step, dots=`<div class="onb-steps">${[0,1,2,3].map(i=>`<i class="${i<=st?"on":""}"></i>`).join("")}</div>`;
   let body="";
-  if(st===0) body=`<p class="onb-q">欢迎来到字里</p><p class="onb-sub">先回答三个小问题，我们帮你调好难度。</p>
+  if(st===0) body=`<p class="onb-q">欢迎来到字里</p><p class="onb-sub">先回答四个小问题，我们帮你调好难度。</p>
     <p class="onb-q" style="font-size:18px">你的中文是……</p>
     <div class="onb-opts">${[["zero","从零开始","还不认识汉字，先从拼音和最常用的词学起"],["some","学过一点","认识一些常用字，能读简单的句子"],["kid","华裔孩子（家长帮忙设置）","会说一些中文，想学认字和写字"]].map(([k,b,d])=>`<button type="button" data-who="${k}" aria-pressed="${ONB.who===k}"><b>${b}</b><span>${d}</span></button>`).join("")}</div>
     <div class="onb-gl"><span class="small muted">释义用</span>${[["en","English"],["de","Deutsch"],["pt","Português"]].map(([k,t])=>`<button type="button" data-gl="${k}" aria-pressed="${ONB.gl===k}" data-noi18n>${t}</button>`).join("")}</div>`;
-  if(st===1) body=`<p class="onb-q">每天学几个新词？</p><p class="onb-sub">以后随时可以在「学习设定」里改。</p>
+  if(st===1) body=`<p class="onb-q">你想先从哪里开始？</p><p class="onb-sub">底部栏和今日页会先放你选的这一项。以后随时可以在「我的」里改。</p>
+    <div class="onb-opts">${[["py","先学拼音","先把发音和声调打好，再去读文章"],["read","先学阅读","直接读短文，遇到不认识的词随手查"]].map(([k,b,d])=>`<button type="button" data-focus="${k}" aria-pressed="${ONB.focus===k}"><b>${b}</b><span>${d}</span></button>`).join("")}</div>`;
+  if(st===2) body=`<p class="onb-q">每天学几个新词？</p><p class="onb-sub">以后随时可以在「学习设定」里改。</p>
     <div class="onb-opts">${[[5,"轻松","每天 5 个，大约 5 分钟"],[10,"稳步","每天 10 个，大约 10 分钟"],[20,"加速","每天 20 个，大约 20 分钟"]].map(([n,b,d])=>`<button type="button" data-goal="${n}" aria-pressed="${ONB.goal===n}"><b>${b}</b><span>${d}</span></button>`).join("")}</div>`;
-  if(st===2) body=`<p class="onb-q">哪个声调对你最难？</p><p class="onb-sub">我们会在课文里把它轻轻标出来。不确定的话可以跳过。</p>
+  if(st===3) body=`<p class="onb-q">哪个声调对你最难？</p><p class="onb-sub">我们会在课文里把它轻轻标出来。不确定的话可以跳过。</p>
     <div class="onb-opts row4">${[[1,"妈","mā","一声"],[2,"麻","má","二声"],[3,"马","mǎ","三声"],[4,"骂","mà","四声"]].map(([k,c,py,lab])=>`<button type="button" data-tone="${k}" aria-pressed="${ONB.tone===k}"><span class="s" data-noi18n>${c} ${py}</span><span>${lab}</span></button>`).join("")}</div>`;
   const next=st===0?!!ONB.who:true;
   $("#detail-root").innerHTML=`<div class="scrim" id="d-scrim"><div class="modal onb-modal" role="dialog" aria-modal="true" aria-label="欢迎">${dots}${body}
-    <div class="onb-foot"><button class="btn ghost sm" type="button" id="onb-skip">${st===2?"跳过":"以后再说"}</button><button class="btn primary" type="button" id="onb-next" ${next?"":"disabled"}>${st===2?"开始第一天":"下一步"}</button></div></div></div>`;
+    <div class="onb-foot"><button class="btn ghost sm" type="button" id="onb-skip">${st===3?"跳过":"以后再说"}</button><button class="btn primary" type="button" id="onb-next" ${next?"":"disabled"}>${st===3?"开始第一天":"下一步"}</button></div></div></div>`;
   const root=$("#d-scrim");
   root.addEventListener("click",e=>{ const b=e.target.closest("button"); if(!b) return;
     if(b.dataset.who){ ONB.who=b.dataset.who; if(b.dataset.who==="kid") ONB.goal=5; onbRender(); return; }
     if(b.dataset.gl){ ONB.gl=b.dataset.gl; onbRender(); return; }
+    if(b.dataset.focus){ ONB.focus=b.dataset.focus; ONB.fset=true; onbRender(); return; }
     if(b.dataset.goal){ ONB.goal=+b.dataset.goal; onbRender(); return; }
     if(b.dataset.tone){ ONB.tone=ONB.tone===+b.dataset.tone?0:+b.dataset.tone; onbRender(); return; }
-    if(b.id==="onb-next"){ if(ONB.step<2){ ONB.step++; onbRender(); } else onbFinish(); return; }
-    if(b.id==="onb-skip"){ if(ONB.step===2) onbFinish(); else if(ONB.step===0){ S.settings.onb={v:1,start:today(),t:{},hide:true,skipped:true}; save(); closeDetail(); } else { ONB.step++; onbRender(); } return; }
+    if(b.id==="onb-next"){ if(ONB.step===0&&!ONB.fset) ONB.focus=ONB.who==="zero"?"py":"read"; if(ONB.step<3){ ONB.step++; onbRender(); } else onbFinish(); return; }
+    if(b.id==="onb-skip"){ if(ONB.step===3) onbFinish(); else if(ONB.step===0){ S.settings.onb={v:1,start:today(),t:{},hide:true,skipped:true}; save(); closeDetail(); } else { ONB.step++; onbRender(); } return; }
   });
 }
 function onbFinish(){
@@ -3483,7 +3497,8 @@ function onbFinish(){
   S.settings.rdLv=Object.assign({},S.settings.rdLv,{zh:ONB.who==="some"?"HSK2":"HSK1"});
   if(ONB.tone){ S.settings.tones=true; S.settings.toneSel=[ONB.tone]; }
   S.settings.onb={v:1,start:today(),who:ONB.who,t:{},hide:false};
-  save(); applyPy(); applyTones(); renderSettings(); closeDetail(); rebuildCards(); buildDaily(); renderStrip(); onbDay();
+  S.settings.focus=ONB.focus||(ONB.who==="zero"?"py":"read");
+  save(); applyFocus(); applyPy(); applyTones(); renderSettings(); closeDetail(); rebuildCards(); buildDaily(); renderStrip(); onbDay(); pyEntry();
 }
 function onbMaybeStart(){
   if(/[?&]welcome\b/.test(location.search)){ try{ history.replaceState(null,"",location.pathname+location.hash); }catch(e){} onbStart(); return; }
@@ -4195,7 +4210,7 @@ function renderSettings(){
   $("#gl-checks").innerHTML=LANG[l].gl.map(k=>`<label><input type="checkbox" value="${k}" ${S.settings.gloss[l].includes(k)?"checked":""}> ${GLN[k]}</label>`).join("");
   $("#dir-t2g").checked=S.settings.dir==="t2g"; $("#dir-g2t").checked=S.settings.dir==="g2t";
   $("#scr-s").checked=scr()==="s"; $("#scr-t").checked=scr()==="t"; $("#opt-py").checked=pyOn(); { const cs=$("#opt-cardstk"); if(cs) cs.checked=cardStkOn(); }renderToneSw(); { const o=$("#opt-tone"); if(o) o.checked=tonesOn(); $$("[data-tc]").forEach(x=>x.checked=toneSel().includes(+x.dataset.tc)); const tw=$(S.settings.toneWhere==="py"?"#tw-py":"#tw-all"); if(tw) tw.checked=true; }
-  $("#opt-dtab").checked=dtabOn(); $("#opt-autopile").checked=!!S.settings.autoPile; $("#opt-autospeak").checked=!!S.settings.autoSpeak; $("#opt-imgfront").checked=!!S.settings.imgFront; $("#opt-automine").checked=!!S.settings.autoMine;
+  $("#opt-dtab").checked=dtabOn(); $("#opt-focus").value=focusSet()||"read"; $("#opt-autopile").checked=!!S.settings.autoPile; $("#opt-autospeak").checked=!!S.settings.autoSpeak; $("#opt-imgfront").checked=!!S.settings.imgFront; $("#opt-automine").checked=!!S.settings.autoMine;
   $("#opt-rate").value=S.settings.rate; $("#rate-v").textContent="×"+(+S.settings.rate).toFixed(2);
   $("#pile-lv").innerHTML=`<option value="">全部级别</option>`+LV().map(v=>`<option>${v}</option>`).join("");
 }
@@ -4219,6 +4234,7 @@ document.addEventListener("input",e=>{ const i=e.target.closest('input[type=colo
   if(!tonesOn()){ S.settings.tones=true; const o=$("#opt-tone"); if(o) o.checked=true; } save(); applyTones(); i.closest("label").classList.add("on"); $$(`button[data-swk="${k}"]`).forEach(x=>x.setAttribute("aria-pressed","false")); const n=i.closest(".sw").querySelector(".swn"); if(n) n.textContent=i.value; });
 $$('[name="tonewhere"]').forEach(x=>x.addEventListener("change",()=>{ S.settings.toneWhere=x.value; save(); applyTones(); }));
 $("#opt-tone").addEventListener("change",e=>{ S.settings.tones=e.target.checked; save(); applyTones(); const b=$("#mg-tone"); if(b) b.setAttribute("aria-pressed",tonesOn()); });
+$("#opt-focus").addEventListener("change",e=>{ S.settings.focus=e.target.value==="py"?"py":"read"; save(); applyFocus(); pyEntry(); });
 $("#opt-dtab").addEventListener("change",e=>{ S.settings.dictTab=e.target.checked; save(); applyDictMode(); });
 $("#opt-autospeak").addEventListener("change",e=>{ S.settings.autoSpeak=e.target.checked; save(); });
 $("#opt-automine").addEventListener("change",e=>{ S.settings.autoMine=e.target.checked; save(); });
@@ -4956,7 +4972,7 @@ const UI_DICT=[
 ["识别没成功：", "Recognition failed: ", "Erkennung fehlgeschlagen: ", "Falha no reconhecimento: ", "辨識沒成功："],
 ["重新看新手引导", "Show the welcome guide again", "Einführung erneut zeigen", "Ver o guia inicial de novo", "重新看新手引導"],
 ["欢迎来到字里", "Welcome to Zili", "Willkommen bei Zili", "Bem-vindo ao Zili", "歡迎來到字里"],
-["先回答三个小问题，我们帮你调好难度。", "Three quick questions, so we can set the right level for you.", "Drei kurze Fragen, damit wir das passende Niveau einstellen.", "Três perguntas rápidas para ajustar o nível.", "先回答三個小問題，我們幫你調好難度。"],
+["先回答四个小问题，我们帮你调好难度。", "Four quick questions, so we can set the right level for you.", "Vier kurze Fragen, damit wir das passende Niveau einstellen.", "Quatro perguntas rápidas para ajustar o nível.", "先回答四個小問題，我們幫你調好難度。"],
 ["你的中文是……", "Your Chinese is…", "Dein Chinesisch ist …", "Seu chinês é…", "你的中文是……"],
 ["从零开始", "Starting from zero", "Ganz am Anfang", "Começando do zero", "從零開始"],
 ["还不认识汉字，先从拼音和最常用的词学起", "No characters yet — start with pinyin and the most common words", "Noch keine Zeichen – mit Pinyin und den häufigsten Wörtern beginnen", "Ainda não sei caracteres — começar com pinyin e as palavras mais comuns", "還不認識漢字，先從拼音和最常用的詞學起"],
@@ -5106,6 +5122,20 @@ UI_DICT.push(
 ["拼音", "Pinyin", "Pinyin", "Pinyin", "拼音"],
 ["课文库", "Library", "Textsammlung", "Biblioteca de textos", "課文庫"],
 ["书架里的「课文库」改名为「分级阅读」，并且收进了每天推送的文章，HSK 4、5 的文章也能在这里按级别找到。", "On the Bookshelf, the library is now called Graded reading and also holds every daily text, so HSK 4 and 5 texts can be found here by level.", "Im Regal heißt die Textsammlung jetzt „Gestufte Lektüre“ und enthält auch alle Tagestexte, sodass du HSK-4- und HSK-5-Texte hier nach Stufe findest.", "Na estante, a biblioteca agora se chama Leitura graduada e também reúne todos os textos diários; os de HSK 4 e 5 podem ser encontrados aqui por nível.", "書架裡的「課文庫」改名為「分級閱讀」，並且收進了每天推送的文章，HSK 4、5 的文章也能在這裡按級別找到。"],
+["你想先从哪里开始？", "Where would you like to start?", "Wo möchtest du anfangen?", "Por onde você quer começar?", "你想先從哪裡開始？"],
+["底部栏和今日页会先放你选的这一项。以后随时可以在「我的」里改。", "The bottom bar and Today page will put your choice first. You can change it any time under \"You\".", "Untere Leiste und Heute-Seite zeigen deine Wahl zuerst. Du kannst sie jederzeit unter „Profil“ ändern.", "A barra inferior e a página de hoje vão mostrar sua escolha primeiro. Você pode mudar quando quiser em «Perfil».", "底部欄和今日頁會先放你選的這一項。以後隨時可以在「我的」裡改。"],
+["先学拼音", "Pinyin first", "Zuerst Pinyin", "Primeiro o pinyin", "先學拼音"],
+["先学阅读", "Reading first", "Zuerst Lesen", "Primeiro a leitura", "先學閱讀"],
+["先把发音和声调打好，再去读文章", "Get sounds and tones right first, then read texts", "Erst Aussprache und Töne festigen, dann Texte lesen", "Firme a pronúncia e os tons primeiro, depois leia os textos", "先把發音和聲調打好，再去讀文章"],
+["直接读短文，遇到不认识的词随手查", "Jump into short texts and look up words as you go", "Direkt kurze Texte lesen und unbekannte Wörter nachschlagen", "Vá direto aos textos curtos e consulte as palavras que não conhece", "直接讀短文，遇到不認識的詞隨手查"],
+["先学什么", "Start with", "Zuerst lernen", "Começar por", "先學什麼"],
+["今天读一篇短文", "Read a short text today", "Lies heute einen kurzen Text", "Leia um texto curto hoje", "今天讀一篇短文"],
+["遇到不认识的词，点一下就能查，还能收进生词。", "Tap any word you don't know to look it up, and save it to your words.", "Tippe auf ein unbekanntes Wort, um es nachzuschlagen und zu speichern.", "Toque numa palavra desconhecida para consultá-la e guardá-la.", "遇到不認識的詞，點一下就能查，還能收進生詞。"],
+["想练发音？去拼音课", "Want to practise sounds? Go to the pinyin course", "Aussprache üben? Zum Pinyin-Kurs", "Quer treinar a pronúncia? Vá ao curso de pinyin", "想練發音？去拼音課"],
+["听、记、练，大约 5 分钟。", "Listen, remember, practise: about 5 minutes.", "Hören, merken, üben: etwa 5 Minuten.", "Ouvir, memorizar, praticar: cerca de 5 minutos.", "聽、記、練，大約 5 分鐘。"],
+["也可以先读一篇短文", "Or read a short text first", "Oder zuerst einen kurzen Text lesen", "Ou leia primeiro um texto curto", "也可以先讀一篇短文"],
+["开始学习", "Start", "Starten", "Começar", "開始學習"],
+["可以选「先学拼音」还是「先学阅读」了：底部栏的顺序和今日页最上面的卡片会跟着变。在「我的」里能随时改。", "You can now choose Pinyin first or Reading first: the order of the bottom bar and the card at the top of Today follow your choice. Change it any time under \"You\".", "Du kannst jetzt „Zuerst Pinyin“ oder „Zuerst Lesen“ wählen: Reihenfolge der unteren Leiste und die Karte oben auf der Heute-Seite richten sich danach. Jederzeit unter „Profil“ änderbar.", "Agora você pode escolher «Primeiro o pinyin» ou «Primeiro a leitura»: a ordem da barra inferior e o cartão no topo de hoje acompanham a escolha. Mude quando quiser em «Perfil».", "可以選「先學拼音」還是「先學閱讀」了：底部欄的順序和今日頁最上面的卡片會跟著變。在「我的」裡能隨時改。"],
 ["分级阅读", "Graded reading", "Gestufte Lektüre", "Leitura graduada", "分級閱讀"],
 ["二十四节气", "The 24 solar terms", "Die 24 Sonnenperioden", "Os 24 termos solares", "二十四節氣"],
 ["古诗", "Classical poem", "Klassisches Gedicht", "Poema clássico", "古詩"],
@@ -5667,7 +5697,19 @@ function pyChartCell(s){ const cs=(PY.chart||{})[s]||[], el=$("#py-cd"); if(!el)
   $$("[data-pysyl]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.pysyl===s));
   el.hidden=false; el.innerHTML=`<div class="pycdh"><b data-noi18n>${esc(s)}</b><button class="btn sm" type="button" data-pyseq="${esc(cs.filter(Boolean).join(","))}">${I.play}<span data-noi18n>${[1,2,3,4].filter(t=>cs[t-1]).map(t=>esc(pyMark(s,t))).join(" ")}</span></button></div><div class="pycd4">${[1,2,3,4].map(t=>{ const c=cs[t-1]; return c?`<button type="button" class="pycard" data-pyplay="${esc(c)}" data-pypy="${esc(pyMark(s,t))}" data-pyt="${t}"><b class="pyp tn${t}" data-noi18n>${esc(pyMark(s,t))}</b><span class="pyc">${pyH(c)}</span>${pyCurve(t)}</button>`:`<div class="pycard none"><b class="pyp" data-noi18n>${esc(pyMark(s,t))}</b><span class="muted">–</span></div>`; }).join("")}</div>${pyChartMouth(s)}`;
   const seq=cs.filter(Boolean); if(seq.length) pySeq(seq.flatMap(c=>[{say:c},{wait:250}])); }
-function pyEntry(){ const el=$("#py-entry"); if(!el) return; /* the Today page only carries one pinyin prompt: weak-sound review, when there is something to review */
+function applyFocus(){ document.body.dataset.focus=focusSet()||"read"; }
+function focusCard(){ const el=$("#focus-card"); if(!el) return; const f=focusSet(); el.innerHTML=""; if(!f||onbActive()) return; /* day one: the checklist already says it */
+  const d=today(), readToday=Object.keys((typeof MGS!=="undefined"&&MGS.read)||{}).some(k=>k.startsWith(d+"|"));
+  const pyDone=!!(PYC().days&&PYC().days[d]), nx=PY.course?pyNext():null;
+  const readCard=()=>`<div class="focuscard"><span class="fk">先学阅读</span><span class="ft">今天读一篇短文</span><p class="fs">遇到不认识的词，点一下就能查，还能收进生词。</p><div class="row"><button class="btn primary" type="button" data-fgo="read">去阅读</button><button class="flink" type="button" data-pyopen="map">想练发音？去拼音课</button></div></div>`;
+  if(f==="py"){
+    if(!PY.course) return;
+    if(nx){ if(pyDone) return; const started=Object.keys(PYC().done||{}).length>0;
+      el.innerHTML=`<div class="focuscard"><span class="fk">先学拼音</span><span class="ft">${started?"继续":"开始"}第 ${nx.id} 课 · <span data-noi18n ${pyLA()}>${esc(pyT(nx.title))}</span></span><p class="fs">听、记、练，大约 5 分钟。</p><div class="row"><button class="btn primary" type="button" data-pyopen="lesson:${nx.id}">${started?"继续学习":"开始学习"}</button><button class="flink" type="button" data-fgo="read">也可以先读一篇短文</button></div></div>`; }
+    else if(!readToday) el.innerHTML=readCard();
+  } else if(!readToday) el.innerHTML=readCard();
+}
+function pyEntry(){ focusCard(); const el=$("#py-entry"); if(!el) return; /* the Today page only carries one pinyin prompt: weak-sound review, when there is something to review */
   if(!PY.course||PYC().hide||!pyWeakOn()||PYC().weakAt===today()){ el.innerHTML=""; return; }
   const n=pyMissList().length, wt=pyWeakTone();
   el.innerHTML=`<div class="pyweak"><div><b>弱音复习</b>${n?`<p class="muted small" style="margin:2px 0 0">有 ${n} 个音容易错，花 2 分钟练一练。</p>`:`<p class="muted small" style="margin:2px 0 0">第 ${wt} 声最容易错，花 2 分钟练一练。</p>`}</div><div class="row"><button class="btn primary sm" type="button" data-pyopen="weak">开始</button></div></div>`; }
@@ -5728,6 +5770,7 @@ const WHATSNEW=[
   {id:"2026-11-13",items:[
     ["字卡现在直接点卡片就能翻面，不用再找按钮。","today"],
     ["字典不再占一个选项卡：每一页右下角都有查字按钮，点开就能查，当前页不会丢。想把字典放回底部栏，在「我的」里打开就行。",""],
+    ["可以选「先学拼音」还是「先学阅读」了：底部栏的顺序和今日页最上面的卡片会跟着变。在「我的」里能随时改。","settings"],
     ["书架里的「课文库」改名为「分级阅读」，并且收进了每天推送的文章，HSK 4、5 的文章也能在这里按级别找到。","read"]]},
   {id:"2026-11-12",items:[
     ["拼音课新增第 15 课「日常短句」，还有「弱音复习」：练习答错的音会收起来，每天 2 分钟练一练。","pinyin"],
@@ -5750,7 +5793,7 @@ setTimeout(()=>{ try{ wnAuto(); }catch(e){} },3200);
 
 /* ---------- boot ---------- */
 applyUILang();
-applyDictMode();
+applyDictMode(); applyFocus();
 try{ const t=localStorage.getItem("zl-tab"); if(t&&!(t==="dict"&&!dtabOn())) showTab(t); }catch(e){}
 applyLang();
 let lastDay=today();
