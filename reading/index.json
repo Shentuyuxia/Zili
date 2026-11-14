@@ -1,6 +1,18 @@
 {
- "updated": "2026-11-13T03:38:42Z",
+ "updated": "2026-11-14T03:38:33Z",
  "days": [
+  {
+   "date": "2026-11-14",
+   "items": [
+    {
+     "i": 0,
+     "lang": "zh",
+     "title": "送什么礼物好？",
+     "kind": "dialogue",
+     "level": "HSK3"
+    }
+   ]
+  },
   {
    "date": "2026-11-13",
    "items": [
