@@ -1506,6 +1506,7 @@ nav.tabs{margin:24px 0 26px}
     box-shadow:0 6px 22px rgba(60,50,30,.16),inset 0 0 0 1px rgba(255,255,255,.45)}
   .wrap{padding-bottom:110px}
 }
+.tr-sw{margin:0;align-self:center;padding:2px}
 </style>
 </head>
 <body>
@@ -2956,7 +2957,8 @@ function pkRuby(text,gx){ // → [seg…]: the reader's own words and pinyin (sa
 function mgTrBtns(it){ // translation toggles: the learner's helper languages first, then the others; one translation shown at a time
   const ids={en:["mg-enb","English","English translation"],de:["mg-deb","Deutsch","Deutsche Übersetzung"],pt:["mg-ptb","Português","Tradução em português"]};
   const order=[...glSel(),"en","de","pt"].filter((k,n,a)=>ids[k]&&a.indexOf(k)===n);
-  return order.filter(k=>(it["paragraphs_"+k]||[]).length).map(k=>`<button class="tb" id="${ids[k][0]}" aria-pressed="${MG.tr===k}" aria-label="${ids[k][2]}" data-noi18n>${({en:"En",de:"De",pt:"Pt"})[k]}</button>`).join("");
+  const btns=order.filter(k=>(it["paragraphs_"+k]||[]).length).map(k=>`<button class="tb" id="${ids[k][0]}" aria-pressed="${MG.tr===k}" aria-label="${ids[k][2]}" data-noi18n>${({en:"En",de:"De",pt:"Pt"})[k]}</button>`).join("");
+  return btns?`<div class="mg-sw tr-sw" role="group" aria-label="译文">${btns}</div>`:"";
 }
 function pkDoc(it,date){
   const gx=new Set((it.glossary||[]).map(g=>String(g.w||"").trim()).filter(w=>HAN.test(w)));
