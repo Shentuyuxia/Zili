@@ -228,7 +228,7 @@ input[type=range]{accent-color:var(--acc);width:100%}
 .dfab{position:fixed;right:max(14px,env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:35;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:color-mix(in srgb,var(--surface) 88%,transparent);color:var(--acc);display:grid;place-items:center;cursor:pointer;padding:0;box-shadow:0 3px 12px rgba(0,0,0,.14);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
 .dfab svg{width:22px;height:22px}
 .hq{display:inline-block;vertical-align:middle;margin-left:6px}
-.hq summary{list-style:none;cursor:pointer;width:20px;height:20px;border-radius:50%;border:1px solid var(--line);color:var(--muted);font-size:12px;font-weight:600;line-height:18px;text-align:center;display:inline-block}
+.hq summary{list-style:none;cursor:pointer;width:20px;height:20px;border-radius:50%;border:1px solid var(--line);color:var(--muted);font-family:Georgia,serif;font-style:italic;font-size:13px;font-weight:600;line-height:18px;text-align:center;display:inline-block}
 .hq summary::-webkit-details-marker{display:none}
 .hq[open] summary{background:var(--sunk);color:var(--ink)}
 .hq p{display:block;max-width:46ch;margin:8px 0 0;font-size:13.5px;line-height:1.6;color:var(--muted)}
@@ -4333,7 +4333,7 @@ function renderAcct(){
   $$("[data-acct]").forEach(el=>{
     el.innerHTML= on||gh
       ? `<div class="acct-in"><span class="av">${on?esc(ini):I.check}</span><div class="who"><b>${on?esc(email):"GitHub · "+esc(SY.repo)}</b><span>${SY.err?esc(SY.err):(last?"已同步 · "+esc(last):"已开启多设备同步")}</span></div><button class="btn sm" type="button" data-acctgo="1">管理账户</button></div>`
-      : `<div class="acct-out"><div><b>多设备同步</b><details class="hq"><summary aria-label="说明">?</summary><p>登录后，学习进度、自录单词和「我的文章」会在 iPhone、iPad 和电脑之间自动同步；换手机或清理浏览器也不会丢。不登录也能完整使用，数据只保存在这台设备上。只用邮箱来登录，不发其他邮件，也不收集别的信息。<a href="privacy.html" target="_blank" rel="noopener">隐私说明</a></p></details></div><button class="btn primary sm" type="button" data-acctgo="1">用邮箱登录</button></div>`;
+      : `<div class="acct-out"><div><b>多设备同步</b><details class="hq"><summary aria-label="说明">i</summary><p>登录后，学习进度、自录单词和「我的文章」会在 iPhone、iPad 和电脑之间自动同步；换手机或清理浏览器也不会丢。不登录也能完整使用，数据只保存在这台设备上。只用邮箱来登录，不发其他邮件，也不收集别的信息。<a href="privacy.html" target="_blank" rel="noopener">隐私说明</a></p></details></div><button class="btn primary sm" type="button" data-acctgo="1">用邮箱登录</button></div>`;
   });
 }
 document.addEventListener("click",e=>{ const b=e.target.closest("[data-acctgo]"); if(!b) return; showTab("settings"); syView=SY.mode==="gh"?"gh":"sb"; renderSync(); setTimeout(()=>{ const p=$("#sy-panel"); if(p) p.scrollIntoView({behavior:"smooth",block:"start"}); const em=$("#sb-email"); if(em&&!em.closest("[hidden]")) em.focus({preventScroll:true}); },60); });
