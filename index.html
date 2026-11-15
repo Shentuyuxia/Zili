@@ -1720,7 +1720,7 @@ nav.tabs button[aria-selected="true"]{border-bottom-color:var(--ink)}
         <button class="btn ghost sm" type="button" id="onb-again" style="margin-top:10px">重新看新手引导</button> <button class="btn ghost sm" type="button" id="wn-open" style="margin-top:10px">更新记录</button>
         <div class="field" id="voice-row" style="margin-top:14px" hidden><label for="opt-voice">朗读语音</label>
           <div class="row" style="flex-wrap:nowrap"><select id="opt-voice"></select><button class="btn sm" id="voice-test" type="button">试听</button></div>
-          <details class="hq"><summary aria-label="说明">i</summary><p class="note hint">★ 是增强/高级语音，听起来更自然。iPhone 可在「设置 → 辅助功能 → 朗读内容 → 声音 → 中文」里下载，比如 Tingting 或 Lilian（增强版）。</p></details></div>
+          <p class="note hint">★ 是增强/高级语音，听起来更自然。iPhone 可在「设置 → 辅助功能 → 朗读内容 → 声音 → 中文」里下载，比如 Tingting 或 Lilian（增强版）。</p></div>
         <div class="field nt" id="nt-row" hidden><select id="nt-voice"></select><input type="checkbox" id="nt-on"><button id="nt-get" type="button"></button><div class="nt-bar" id="nt-prog" hidden><i></i><span></span></div><p id="nt-status" hidden></p><button id="nt-del" type="button" hidden></button></div>
       </div>
       <div class="panel">
@@ -1755,7 +1755,7 @@ nav.tabs button[aria-selected="true"]{border-bottom-color:var(--ink)}
             </details>
           </div>
           <div id="sb-in" hidden>
-            <p class="note" style="margin-top:10px">已登录：<b id="sb-who"></b><br><span id="sb-last"></span></p>
+            <p class="note" style="margin-top:10px"><b id="sb-who" hidden></b><span id="sb-last"></span></p>
             <div id="sb-needpass" hidden>
               <div class="field" style="margin-top:8px"><label for="sb-pass-in">这个账号的数据已加密，请输入加密密码</label><input type="password" id="sb-pass-in" autocomplete="current-password"></div>
               <div class="row"><button class="btn primary sm" id="sb-pass-go" type="button">解锁</button></div>
