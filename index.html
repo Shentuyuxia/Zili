@@ -2195,8 +2195,24 @@ const SPK_STOP=/^(意思|内容|注意|比如|例如|提示|时间|地点|答案
 function noSpk(t){ t=String(t==null?"":t);
   return t.replace(/(^|[\n。！？!?”」]\s*)([\u4e00-\u9fff·]{1,5})\s*[：:]\s*/g,(m,a,n)=>SPK_STOP.test(n)||/[说问道讲喊想写是们话法为告诉到着了的在]$/.test(n)?m:a)
     .replace(/(^|\n)\s*([A-ZÀ-Ý][\p{L}'’-]{0,14}(?: [A-ZÀ-Ý][\p{L}'’-]{0,14})?)\s*:\s+/gu,(m,a,n)=>/^(Note|Tip|Hint|Example|Hinweis|Tipp|Beispiel|Nota|Dica|Exemplo|Q|A)$/i.test(n)?m:a); }
+/* ---------- pre-generated neural voice (audio/tts/<hash>.mp3, built by tools/build_tts.py); falls back to the device voice ---------- */
+function ttsKey(s){ let h1=0xdeadbeef, h2=0x41c6ce57; for(let i=0;i<s.length;i++){ const c=s.charCodeAt(i); h1=Math.imul(h1^c,2654435761); h2=Math.imul(h2^c,1597334677); }
+  h1=Math.imul(h1^(h1>>>16),2246822507)^Math.imul(h2^(h2>>>13),3266489909); h2=Math.imul(h2^(h2>>>16),2246822507)^Math.imul(h1^(h1>>>13),3266489909);
+  return (h2&0x1FFFFF).toString(16).padStart(6,"0")+(h1>>>0).toString(16).padStart(8,"0"); }
+const TTSMISS=new Set();
+function ttsPlay(t,fallback){
+  if(lang()!=="zh"||S.settings.natVoice===false) return false; const k=ttsKey(t.trim()); if(TTSMISS.has(k)) return false;
+  try{ if(hasTTS) speechSynthesis.cancel(); ntStop(); if(player) player.pause();
+    const a=new Audio("audio/tts/"+k+".mp3"); a.playbackRate=Math.min(1,(S.settings.rate||0.85)+0.1); player=a;
+    let done=false; const fb=()=>{ if(done) return; done=true; TTSMISS.add(k); if(player===a) fallback(); };
+    a.onerror=fb; const p=a.play(); if(p&&p.catch) p.catch(fb); return true; }catch(e){ return false; }
+}
 function speak(t){
   if(!t) return; t=noSpk(String(t)).replace(/\.\s/g,"。"); if(!t.trim()) return;
+  if(ttsPlay(t,()=>speakDevice(t))) return;
+  speakDevice(t);
+}
+function speakDevice(t){
   if(ntOn()){ try{ if(player) player.pause(); if(typeof RD!=="undefined"&&RD.on) rdPause(); if(hasTTS) speechSynthesis.cancel(); }catch(e){} ntSpeak(t.replace(/\s*\/\s*/g,", ").replace(/…/g,", "),S.settings.rate,()=>sysSpeak(t)); return; }
   sysSpeak(t);
 }
