@@ -1720,7 +1720,7 @@ nav.tabs button[aria-selected="true"]{border-bottom-color:var(--ink)}
         <button class="btn ghost sm" type="button" id="onb-again" style="margin-top:10px">重新看新手引导</button> <button class="btn ghost sm" type="button" id="wn-open" style="margin-top:10px">更新记录</button>
         <div class="field" id="voice-row" style="margin-top:14px" hidden><label for="opt-voice">朗读语音</label>
           <div class="row" style="flex-wrap:nowrap"><select id="opt-voice"></select><button class="btn sm" id="voice-test" type="button">试听</button></div>
-          <p class="note hint">★ 是增强/高级语音，听起来更自然。iPhone 可在「设置 → 辅助功能 → 朗读内容 → 声音 → 中文」里下载，比如 Tingting 或 Lilian（增强版）。</p></div>
+          <details class="hq"><summary aria-label="说明">i</summary><p class="note hint">★ 是增强/高级语音，听起来更自然。iPhone 可在「设置 → 辅助功能 → 朗读内容 → 声音 → 中文」里下载，比如 Tingting 或 Lilian（增强版）。</p></details></div>
         <div class="field nt" id="nt-row" hidden><select id="nt-voice"></select><input type="checkbox" id="nt-on"><button id="nt-get" type="button"></button><div class="nt-bar" id="nt-prog" hidden><i></i><span></span></div><p id="nt-status" hidden></p><button id="nt-del" type="button" hidden></button></div>
       </div>
       <div class="panel">
@@ -1777,7 +1777,7 @@ nav.tabs button[aria-selected="true"]{border-bottom-color:var(--ink)}
         </div>
 
         <div id="sy-gh" hidden>
-          <p class="note" style="margin-top:10px">把数据加密后存进你自己的私有 GitHub 仓库。适合有 GitHub 账号、不想用邮箱的人。</p>
+          <details class="hq"><summary aria-label="说明">i</summary><p class="note" style="margin-top:10px">把数据加密后存进你自己的私有 GitHub 仓库。适合有 GitHub 账号、不想用邮箱的人。</p></details>
           <div id="sy-on" hidden>
             <p class="note" style="margin-top:10px">已连接：<b id="sy-repo-t"></b><br><span id="sy-last"></span></p>
             <label class="tog" style="margin-top:6px"><input type="checkbox" id="sy-mine-on" checked> 也同步「我的文章」</label>
@@ -1818,7 +1818,7 @@ nav.tabs button[aria-selected="true"]{border-bottom-color:var(--ink)}
         <h3>存储</h3>
         <p class="note" id="st-usage">正在计算…</p>
         <button class="btn sm" id="st-persist" type="button" style="margin-top:8px">请求长期保存</button>
-        <p class="note hint" style="margin-top:8px">浏览器空间紧张时可能清理网站数据。点上面的按钮，请浏览器把这里的数据标记为「不要自动删除」。iPhone 上装到主屏幕后更稳妥。</p>
+        <details class="hq"><summary aria-label="说明">i</summary><p class="note hint" style="margin-top:8px">浏览器空间紧张时可能清理网站数据。点上面的按钮，请浏览器把这里的数据标记为「不要自动删除」。iPhone 上装到主屏幕后更稳妥。</p></details>
       </div>
     </aside>
         <p class="note copy" style="grid-column:1/-1;margin:18px 0 4px;font-size:12.5px;color:var(--muted)" data-noi18n>© 2026 申屠余夏 · 字里 Zili · 保留所有权利 · All rights reserved. 个人学习免费使用；复制、再发布或商业、机构使用须事先获得书面许可。Private learning is free; copying, redistribution or commercial / institutional use needs written permission. <a href="privacy.html#copyright" target="_blank" rel="noopener">版权与开源组件 / Copyright</a></p>
@@ -4333,7 +4333,7 @@ function renderAcct(){
   $$("[data-acct]").forEach(el=>{
     el.innerHTML= on||gh
       ? `<div class="acct-in"><span class="av">${on?esc(ini):I.check}</span><div class="who"><b>${on?esc(email):"GitHub · "+esc(SY.repo)}</b><span>${SY.err?esc(SY.err):(last?"已同步 · "+esc(last):"已开启多设备同步")}</span></div><button class="btn sm" type="button" data-acctgo="1">管理账户</button></div>`
-      : `<div class="acct-out"><div><b>多设备同步</b><details class="hq"><summary aria-label="说明">i</summary><p>登录后，学习进度、自录单词和「我的文章」会在 iPhone、iPad 和电脑之间自动同步；换手机或清理浏览器也不会丢。不登录也能完整使用，数据只保存在这台设备上。只用邮箱来登录，不发其他邮件，也不收集别的信息。<a href="privacy.html" target="_blank" rel="noopener">隐私说明</a></p></details></div><button class="btn primary sm" type="button" data-acctgo="1">用邮箱登录</button></div>`;
+      : `<div class="acct-out"><div><b>多设备同步</b><details class="hq"><summary aria-label="说明">i</summary><p>登录后，学习进度、自录单词和「我的文章」会在你的所有设备之间自动同步；换手机或清理浏览器也不会丢。不登录也能完整使用，数据只保存在这台设备上。只用邮箱来登录，不发其他邮件，也不收集别的信息。<a href="privacy.html" target="_blank" rel="noopener">隐私说明</a></p></details></div><button class="btn primary sm" type="button" data-acctgo="1">用邮箱登录</button></div>`;
   });
 }
 document.addEventListener("click",e=>{ const b=e.target.closest("[data-acctgo]"); if(!b) return; showTab("settings"); syView=SY.mode==="gh"?"gh":"sb"; renderSync(); setTimeout(()=>{ const p=$("#sy-panel"); if(p) p.scrollIntoView({behavior:"smooth",block:"start"}); const em=$("#sb-email"); if(em&&!em.closest("[hidden]")) em.focus({preventScroll:true}); },60); });
@@ -5156,14 +5156,14 @@ const UI_DICT=[
 ["登录账户", "Sign in", "Anmelden", "Entrar", "登入帳戶"],
 ["用邮箱登录", "Sign in with email", "Mit E-Mail anmelden", "Entrar com e-mail", "用電子郵件登入"],
 ["管理账户", "Manage account", "Konto verwalten", "Gerenciar conta", "管理帳戶"],
-["登录后，学习进度、自录单词和「我的文章」会在 iPhone、iPad 和电脑之间自动同步；换手机或清理浏览器也不会丢。不登录也能完整使用，数据只保存在这台设备上。", "Sign in and your progress, your own words and “My articles” sync automatically across iPhone, iPad and computer — nothing is lost if you change phones or clear your browser. Without signing in, everything still works; your data just stays on this device.", "Mit Anmeldung werden Lernstand, eigene Wörter und „Meine Artikel“ automatisch zwischen iPhone, iPad und Computer synchronisiert – auch bei einem neuen Handy geht nichts verloren. Ohne Anmeldung funktioniert alles genauso, die Daten bleiben nur auf diesem Gerät.", "Entrando, seu progresso, suas palavras e “Meus artigos” sincronizam sozinhos entre iPhone, iPad e computador — nada se perde ao trocar de celular. Sem entrar, tudo funciona igual; os dados ficam só neste aparelho.", "登入後，學習進度、自錄單字和「我的文章」會在 iPhone、iPad 和電腦之間自動同步；換手機或清理瀏覽器也不會遺失。不登入也能完整使用，資料只儲存在這台裝置上。"],
+["登录后，学习进度、自录单词和「我的文章」会在你的所有设备之间自动同步；换手机或清理浏览器也不会丢。不登录也能完整使用，数据只保存在这台设备上。", "Sign in and your progress, your own words and “My articles” sync automatically across all your devices — nothing is lost if you change phones or clear your browser. Without signing in, everything still works; your data just stays on this device.", "Mit Anmeldung werden Lernstand, eigene Wörter und „Meine Artikel“ automatisch auf allen deinen Geräten synchronisiert – auch bei einem neuen Handy geht nichts verloren. Ohne Anmeldung funktioniert alles genauso, die Daten bleiben nur auf diesem Gerät.", "Entrando, seu progresso, suas palavras e “Meus artigos” sincronizam sozinhos em todos os seus aparelhos — nada se perde ao trocar de celular. Sem entrar, tudo funciona igual; os dados ficam só neste aparelho.", "登入後，學習進度、自錄單字和「我的文章」會在你的所有裝置之間自動同步；換手機或清理瀏覽器也不會遺失。不登入也能完整使用，資料只儲存在這台裝置上。"],
 ["导入", "Import", "Importieren", "Importar", "匯入"],
 ["导入文件", "Import file", "Datei importieren", "Importar arquivo", "匯入檔案"],
 ["可导入 PDF、Word (.docx)、TXT、Markdown、网页 (.html) 和字幕 (.srt)。", "Imports PDF, Word (.docx), TXT, Markdown, web pages (.html) and subtitles (.srt).", "Importiert PDF, Word (.docx), TXT, Markdown, Webseiten (.html) und Untertitel (.srt).", "Importa PDF, Word (.docx), TXT, Markdown, páginas web (.html) e legendas (.srt).", "可匯入 PDF、Word (.docx)、TXT、Markdown、網頁 (.html) 和字幕 (.srt)。"],
 ["保存在你的设备上；开了多设备同步时，会加密后存进你自己的私有仓库。", "Stored on your device; with sync on, it is encrypted and kept in your own private repository.", "Wird auf deinem Gerät gespeichert; mit Sync verschlüsselt in deinem eigenen privaten Repository.", "Fica no seu aparelho; com a sincronização ativa, vai criptografado para o seu próprio repositório privado.", "儲存在你的裝置上；開了多裝置同步時，會加密後存進你自己的私有倉庫。"],
 ["＋ 我的文章", "+ My articles", "+ Meine Artikel", "+ Meus artigos", "＋ 我的文章"],
 ["多设备同步", "Sync across devices", "Geräte synchronisieren", "Sincronizar aparelhos", "多裝置同步"],
-["让 iPhone、iPad 和电脑共用同一份学习进度、自录单词和我的文章。数据先在设备上用你的同步密码加密，再存进你自己的私有 GitHub 仓库。不用邮箱，不经过别人的服务器，GitHub 也只能看到一串乱码。", "Keep your progress, your own words and your articles the same on iPhone, iPad and computer. Data is encrypted on the device with your sync password, then stored in your own private GitHub repository. No email, no third-party server — GitHub only sees scrambled text.", "Lernstand, eigene Wörter und Artikel auf iPhone, iPad und Computer gleich halten. Die Daten werden auf dem Gerät mit deinem Sync-Passwort verschlüsselt und dann in deinem eigenen privaten GitHub-Repository gespeichert. Keine E-Mail, kein fremder Server – GitHub sieht nur Zeichensalat.", "Mantenha progresso, palavras e artigos iguais no iPhone, iPad e computador. Os dados são criptografados no aparelho com a sua senha de sincronização e guardados no seu próprio repositório privado do GitHub. Sem e-mail, sem servidor de terceiros — o GitHub só vê texto embaralhado.", "讓 iPhone、iPad 和電腦共用同一份學習進度、自錄單詞和我的文章。資料先在裝置上用你的同步密碼加密，再存進你自己的私有 GitHub 倉庫。不用郵箱，不經過別人的伺服器，GitHub 也只能看到一串亂碼。"],
+["让你的所有设备共用同一份学习进度、自录单词和我的文章。数据先在设备上用你的同步密码加密，再存进你自己的私有 GitHub 仓库。不用邮箱，不经过别人的服务器，GitHub 也只能看到一串乱码。", "Keep your progress, your own words and your articles the same on all your devices. Data is encrypted on the device with your sync password, then stored in your own private GitHub repository. No email, no third-party server — GitHub only sees scrambled text.", "Lernstand, eigene Wörter und Artikel auf allen deinen Geräten gleich halten. Die Daten werden auf dem Gerät mit deinem Sync-Passwort verschlüsselt und dann in deinem eigenen privaten GitHub-Repository gespeichert. Keine E-Mail, kein fremder Server – GitHub sieht nur Zeichensalat.", "Mantenha progresso, palavras e artigos iguais em todos os seus aparelhos. Os dados são criptografados no aparelho com a sua senha de sincronização e guardados no seu próprio repositório privado do GitHub. Sem e-mail, sem servidor de terceiros — o GitHub só vê texto embaralhado.", "讓你的所有裝置共用同一份學習進度、自錄單詞和我的文章。資料先在裝置上用你的同步密碼加密，再存進你自己的私有 GitHub 倉庫。不用郵箱，不經過別人的伺服器，GitHub 也只能看到一串亂碼。"],
 ["已连接：", "Connected:", "Verbunden:", "Conectado:", "已連線："],
 ["也同步「我的文章」", "Also sync “My articles”", "Auch „Meine Artikel“ synchronisieren", "Sincronizar também “Meus artigos”", "也同步「我的文章」"],
 ["立即同步", "Sync now", "Jetzt synchronisieren", "Sincronizar agora", "立即同步"],
@@ -5197,7 +5197,7 @@ const UI_DICT=[
 ["删除账号和云端数据", "Delete account and cloud data", "Konto und Cloud-Daten löschen", "Excluir conta e dados na nuvem", "刪除賬號和雲端資料"],
 ["解锁", "Unlock", "Entsperren", "Desbloquear", "解鎖"],
 ["隐私说明", "Privacy", "Datenschutz", "Privacidade", "隱私說明"],
-["用同一个邮箱登录，iPhone、iPad 和电脑就共用同一份学习进度、自录单词和我的文章。只用邮箱来登录，不发其他邮件，也不收集别的信息。", "Log in with the same email and your iPhone, iPad and computer share one set of progress, words and articles. The email is only used to log in — no other mail, nothing else collected.", "Mit derselben E-Mail anmelden, und iPhone, iPad und Computer teilen Lernstand, Wörter und Artikel. Die E-Mail dient nur der Anmeldung – keine weiteren Mails, keine weiteren Daten.", "Entre com o mesmo e-mail e iPhone, iPad e computador compartilham progresso, palavras e artigos. O e-mail serve só para entrar — nada de outros e-mails ou dados.", "用同一個郵箱登入，iPhone、iPad 和電腦就共用同一份學習進度、自錄單詞和我的文章。只用郵箱來登入，不發其他郵件，也不收集別的資訊。"],
+["用同一个邮箱登录，你的所有设备就共用同一份学习进度、自录单词和我的文章。只用邮箱来登录，不发其他邮件，也不收集别的信息。", "Log in with the same email and all your devices share one set of progress, words and articles. The email is only used to log in — no other mail, nothing else collected.", "Mit derselben E-Mail anmelden, und iPhone, iPad und Computer teilen Lernstand, Wörter und Artikel. Die E-Mail dient nur der Anmeldung – keine weiteren Mails, keine weiteren Daten.", "Entre com o mesmo e-mail e iPhone, iPad e computador compartilham progresso, palavras e artigos. O e-mail serve só para entrar — nada de outros e-mails ou dados.", "用同一個郵箱登入，iPhone、iPad 和電腦就共用同一份學習進度、自錄單詞和我的文章。只用郵箱來登入，不發其他郵件，也不收集別的資訊。"],
 ["邮箱登录还在准备中，开通后这里就能用。", "Email login is being set up and will work here soon.", "Der E-Mail-Login wird gerade eingerichtet.", "O login por e-mail está sendo preparado.", "郵箱登入還在準備中，開通後這裡就能用。"],
 ["把数据加密后存进你自己的私有 GitHub 仓库。适合有 GitHub 账号、不想用邮箱的人。", "Encrypts your data and stores it in your own private GitHub repository — for people with a GitHub account who prefer not to use email.", "Verschlüsselt deine Daten in deinem eigenen privaten GitHub-Repository – für alle mit GitHub-Konto, die keine E-Mail nutzen möchten.", "Criptografa seus dados num repositório privado seu no GitHub — para quem tem conta no GitHub e prefere não usar e-mail.", "把資料加密後存進你自己的私有 GitHub 倉庫。適合有 GitHub 賬號、不想用郵箱的人。"],
 ["我的文章", "My articles", "Meine Artikel", "Meus artigos", "我的文章"],
