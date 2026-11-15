@@ -1306,6 +1306,11 @@ body .py .tn1,body.tones .py .tn1{color:var(--py1)} body .py .tn2,body.tones .py
 .libtag{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0 5px;margin-left:6px}
 .mg-favb .st{font-size:16px;line-height:1}.mg-favb[aria-pressed="true"] .st{color:#d4a017}
 .mg-favx{margin-top:10px}.mg-fin .btn svg{width:16px;height:16px;margin-right:6px;vertical-align:-3px}.mg-favx .btn svg{width:16px;height:16px;margin-right:6px;vertical-align:-3px}
+.frontrow{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;min-height:260px}
+.frontrow .word{margin:0}
+.bigspk{flex:none;width:60px;height:60px;border-radius:50%;border:1.5px solid var(--line);background:transparent;color:var(--muted);display:grid;place-items:center;cursor:pointer;padding:0}
+.bigspk svg{width:26px;height:26px}
+.bigspk:active{background:var(--acc-soft,rgba(0,0,0,.06));color:var(--acc,inherit)}
 </style>
 </head>
 <body>
@@ -2367,7 +2372,8 @@ function renderCard(){
   if(!sess||!sess.cur){ renderDone(area); return; }
   const it=sess.cur, c=it.c, LL=L(), st=LL.srs[c.id], inPile=!!LL.pile[c.id], dir=S.settings.dir;
   const hasImg=false, memo=memoOf(c), mine=mineOf(c), au=audsOf(c.id), hasAud=!!(au.w||au.s);
-  const top=`<div class="card-top"><span class="lv lv-${esc(c.lvl)}">${esc(c.lvl)}</span>${it.isNew?'<span class="chip new">新词</span>':stgHTML(st)}${c.custom?'<span class="chip">我录入的</span>':""}<span class="spacer"></span>
+  const big=`<button class="bigspk" id="c-say" type="button" aria-label="系统朗读" title="系统朗读 (S)">${I.spk}</button>`;
+  const top=!sess.flipped?"":`<div class="card-top"><span class="lv lv-${esc(c.lvl)}">${esc(c.lvl)}</span>${it.isNew?'<span class="chip new">新词</span>':stgHTML(st)}${c.custom?'<span class="chip">我录入的</span>':""}<span class="spacer"></span>
     <button class="ib" id="c-edit" aria-label="例句、录音" title="例句、录音 (E)">${I.pen}</button>
     <button class="ib ${inPile?"on":""}" id="c-pile" aria-label="${inPile?"移出生词堆":"放进生词堆"}" title="${inPile?"移出生词堆":"放进生词堆"} (P)">${inPile?I.starF:I.star}</button>
     ${hasAud?`<button class="ib me" id="c-mine" aria-label="播放我的录音" title="我的录音 (M)">${I.mic}</button>`:""}
@@ -2379,10 +2385,12 @@ function renderCard(){
   const backBits=()=>`${memo?`<div class="memo"><b>记忆</b><span data-noi18n>${esc(memo)}</span></div>`:""}${c.from&&String(c.from).includes("|")?`<div class="src-row"><button class="btn ghost sm" id="c-src" type="button">回到这篇文章 →</button></div>`:""}${exHTML(c)}${mine.length?`<div class="mine"><span class="h">我的例句</span>${mine.slice(0,3).map(m=>`<div class="s">${esc(m.t)}${m.fix&&m.fix!==m.t?`<span class="fx">→ ${esc(m.fix)}</span>`:""}</div>`).join("")}</div>`:""}`;
   let body;
   if(dir==="t2g"){
-    body=`${imgFront?imgEl:""}<div class="word${wSize(c)}${rubyUp?" pyforce":""}">${wordHTML(c)}</div><div class="row" style="justify-content:center">${posChip(c)}</div>`;
+    body=sess.flipped?`${imgFront?imgEl:""}<div class="word${wSize(c)}${rubyUp?" pyforce":""}">${wordHTML(c)}</div><div class="row" style="justify-content:center">${posChip(c)}</div>`
+      :`${imgFront?imgEl:""}<div class="frontrow"><div class="word${wSize(c)}">${wordHTML(c)}</div>${big}</div>`;
     if(sess.flipped) body+=`${extra}<div class="divider"></div>${!imgFront?imgEl:""}${glossHTML(c)}${mzHtml(c)}${backBits()}`;
   } else {
-    body=`${imgFront?imgEl:""}${glossHTML(c,true)}<div class="row" style="justify-content:center">${posChip(c)}</div>`;
+    body=sess.flipped?`${imgFront?imgEl:""}${glossHTML(c,true)}<div class="row" style="justify-content:center">${posChip(c)}</div>`
+      :`${imgFront?imgEl:""}<div class="frontrow"><div>${glossHTML(c,true)}</div>${big}</div>`;
     if(sess.flipped) body+=`<div class="divider"></div>${!imgFront?imgEl:""}<div class="word sm${rubyUp?" pyforce":""}">${wordHTML(c)}</div>${extra}${mzHtml(c)}${backBits()}`;
   }
   const actions= sess.flipped
@@ -2391,15 +2399,15 @@ function renderCard(){
         <button class="g1" data-g="1">模糊<small>${preview(st,1)} · 2</small></button>
         <button class="g2" data-g="2">记得<small>${preview(st,2)} · 3</small></button>
         <button class="g3" data-g="3">简单<small>${preview(st,3)} · 4</small></button></div>`
-    : `<p class="fliphint">${fhN()<6?"点一下卡片，看答案":"&nbsp;"}</p>`;
+    : "";
   area.innerHTML=`<div class="card">${top}<div class="card-body">${body}</div></div>${actions}
     <div class="foot"><span>本轮剩余 ${sess.queue.length+1} 张</span>${sess.flipped&&!hasImg&&!mine.length&&!hasAud?`<button class="btn ghost sm" id="c-add">${I.pen} 例句 / 录音</button>`:`<span>${sess.mode==="pile"?"评「简单」会移出生词堆":""}</span>`}</div>`;
   fillImgs(area);
   $("#c-say").onclick=()=>speak(sess.flipped&&c.ex?c.w+"。"+c.ex:c.w);
   const cs=$("#c-src"); if(cs) cs.onclick=()=>mgJump(c.from);
   const cm=$("#c-mine"); if(cm) cm.onclick=()=>playMine(c.id,sess.flipped&&au.s?"s":"w");
-  $("#c-pile").onclick=()=>{ togglePile(c.id); renderCard(); };
-  $("#c-edit").onclick=()=>openDetail(c.id);
+  { const b=$("#c-pile"); if(b) b.onclick=()=>{ togglePile(c.id); renderCard(); }; }
+  { const b=$("#c-edit"); if(b) b.onclick=()=>openDetail(c.id); }
   const ad=$("#c-add"); if(ad) ad.onclick=()=>openDetail(c.id);
   if(!sess.flipped){ const cd=area.querySelector(".card"); if(cd){ cd.classList.add("tap"); cd.onclick=e=>{ if(e.target.closest("button,a,input,textarea,select,label")) return; flip(); }; } }
   area.querySelectorAll(".rate button").forEach(b=>b.onclick=()=>grade(+b.dataset.g));
