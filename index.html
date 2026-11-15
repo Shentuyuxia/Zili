@@ -1518,7 +1518,7 @@ body .py .tn1,body.tones .py .tn1{color:var(--py1)} body .py .tn2,body.tones .py
           <div class="checks tone-where"><label><input type="radio" name="tonewhere" value="all" id="tw-all"> 汉字和拼音</label><label><input type="radio" name="tonewhere" value="py" id="tw-py"> 只给拼音上色</label></div>
           <p class="note hint" style="margin-top:6px">勾上你觉得难的声调，再给每个声调挑一个颜色；没勾的声调保持黑色。</p>
         </div>
-        <label class="tog" style="margin-top:12px"><input type="checkbox" id="opt-cardstk"> 生词卡翻面后显示笔顺米字格</label>
+        <label class="tog" style="margin-top:12px"><input type="checkbox" id="opt-cardstk"> 学笔顺：卡片翻面后显示米字格，可看笔顺、跟着写</label>
       </div>
       <div class="panel tset">
         <h3>释义语言</h3>
@@ -3256,7 +3256,7 @@ function zStkAct(act,i){ const o=STK.w[i]; if(!o) return;
 }
 /* ---------- 米字格 on the flashcard: watch the strokes, then write along ---------- */
 const MZ={key:"",cs:[],i:0,hw:null,quiz:false};
-const cardStkOn=()=>S.settings.cardStk!==false;
+const cardStkOn=()=>S.settings.cardStk===true; /* stroke order is opt-in */
 function mzHtml(c){
   if(c.lang!=="zh"||!cardStkOn()) return ""; const cs=zStkChars(c.w); if(!cs.length) return "";
   return `<div class="mz" id="mz">${onbActive()&&!(onb().t||{}).write?`<p class="onb-tip" style="margin:0">✍️ <span>先看一遍笔顺，再点「跟着写」，用手指在格子里写。</span></p>`:""}${cs.length>1?`<div class="mz-chips" data-noi18n>${cs.map((ch,i)=>`<button type="button" data-mzi="${i}" aria-pressed="${i===0}">${esc(ch)}</button>`).join("")}</div>`:""}
@@ -3513,7 +3513,7 @@ setTimeout(()=>{ const go=()=>{ try{ dicPreload(); }catch(e){} }; if("requestIdl
 const onb=()=>S.settings.onb||null;
 const onbActive=()=>{ const o=onb(); if(!o||o.hide) return false; const days=Math.round((new Date(today())-new Date(o.start))/864e5); return days<=1; };
 const focusSet=()=>S.settings.focus||"";
-const onbTasks=()=>{ const o=onb(), f=focusSet()||(o&&o.who==="zero"?"py":"read"); return f==="py"?[["py","先学拼音第 1 课（听、记、练）","pinyin"],...ONB_TASKS]:ONB_TASKS; };
+const onbTasks=()=>{ const o=onb(), f=focusSet()||(o&&o.who==="zero"?"py":"read"); const base=ONB_TASKS.filter(t=>t[0]!=="write"||cardStkOn()); return f==="py"?[["py","先学拼音第 1 课（听、记、练）","pinyin"],...base]:base; };
 const ONB_TASKS=[["read","读一篇短文，点一个不认识的词","read"],["save","把一个词收进生词","read"],["cards","学完今天的新词卡","today"],["write","在米字格里跟着写一个字","today"]];
 function onbTick(k){ const o=onb(); if(!o||o.hide||(o.t&&o.t[k])) return; o.t=Object.assign({},o.t,{[k]:Date.now()}); save(); onbDay();
   const left=onbTasks().filter(([x])=>!o.t[x]).length; if(!left) toast(trOne("第一天完成了！明天回来复习今天的词。")||""); }
@@ -5093,6 +5093,7 @@ const UI_DICT=[
 ["读一篇短文，点一个不认识的词", "Read a short text and tap a word you don’t know", "Lies einen kurzen Text und tippe auf ein unbekanntes Wort", "Leia um texto curto e toque numa palavra desconhecida", "讀一篇短文，點一個不認識的詞"],
 ["把一个词收进生词", "Save a word to your list", "Speichere ein Wort", "Salve uma palavra", "把一個詞收進生詞"],
 ["学完今天的新词卡", "Finish today’s new cards", "Schließe die heutigen neuen Karten ab", "Termine os cartões de hoje", "學完今天的新詞卡"],
+["学笔顺：卡片翻面后显示米字格，可看笔顺、跟着写","Learn stroke order: show the writing grid after flipping a card, to watch the strokes and write along","Strichfolge lernen: nach dem Umdrehen das Schreibraster zeigen, zum Zuschauen und Nachschreiben","Aprender a ordem dos traços: mostrar a grade após virar o cartão, para ver os traços e escrever junto","學筆順：卡片翻面後顯示米字格，可看筆順、跟著寫"],
 ["在米字格里跟着写一个字", "Write one character in the grid", "Schreib ein Zeichen im Raster nach", "Escreva um caractere na grade", "在米字格裡跟著寫一個字"],
 ["先学拼音第 1 课（听、记、练）", "First, pinyin lesson 1 (listen, remember, practise)", "Zuerst Pinyin-Lektion 1 (hören, merken, üben)", "Primeiro, a lição 1 de pinyin (ouvir, lembrar, praticar)", "先學拼音第 1 課（聽、記、練）"],
 ["去学拼音", "Go to Pinyin", "Zum Pinyin", "Ir para o pinyin", "去學拼音"],
