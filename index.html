@@ -1918,10 +1918,10 @@ const LV=()=>LANG[lang()].levels;
 function lg(){ const k=today(), lo=L().log; return lo[k]||(lo[k]={n:0,r:0,c:false}); }
 const goal=()=>planActive()?planQuota():S.settings.goal[lang()];
 const lvSel=()=>S.settings.levels[lang()].filter(v=>LV().includes(v));
-function auxL(){ const g=glSel(); return g.includes(UIL)?UIL:(g[0]||"en"); } // language for notes (grammar, poem explanations)
+function auxL(){ if(MG.tr) return MG.tr; const g=glSel(); return g.includes(UIL)?UIL:(g[0]||"en"); } // when a translation is open, notes use that same language // language for notes (grammar, poem explanations)
 // every helper-language block in an article shows exactly the chosen helper languages, in the same order (interface language first)
 function glOrd(){ const g=glSel(), a=auxL(); return [a,...g.filter(k=>k!==a)]; }
-function auxAll(o,base,enKey){ const key=k=>k==="en"?(enKey||base+"_en"):base+"_"+k; let r=glOrd().filter(k=>o[key(k)]).map(k=>({k,t:o[key(k)]}));
+function auxAll(o,base,enKey){ const key=k=>k==="en"?(enKey||base+"_en"):base+"_"+k; let r=[auxL()].filter(k=>o[key(k)]).map(k=>({k,t:o[key(k)]}));
   if(!r.length){ const f=["en","de","pt"].find(k=>o[key(k)]); if(f) r=[{k:f,t:o[key(f)],fb:true}]; } return r; }
 function auxHTML(list,cls){ const tag=list.length>1||list.some(x=>x.fb); return list.map(x=>`<p class="${cls||""}" lang="${x.k==="pt"?"pt-BR":x.k}" data-noi18n>${tag?`<b class="glk">${GLS[x.k]}</b> `:""}${esc(x.t)}</p>`).join(""); }
 function auxGet(o,base,enKey){ const l=auxL(), k=l==="en"?(enKey||base+"_en"):base+"_"+l; return o[k]||o[enKey||base+"_en"]||o[base+"_de"]||o[base+"_pt"]||""; }
@@ -2972,7 +2972,7 @@ function pkDoc(it,date){
       (it.picks||[]).length?{label:pkL("推荐"),early:true,paras:it.picks.map(x=>[[x.outlet,x.title].filter(Boolean).join(": ")+(x.url?"  "+x.url:"")])}:null,
       gtxt?{label:pkL("语法"),paras:[[gtxt]]}:null,
       (it.questions||[]).length?{label:pkL("想一想"),paras:it.questions.map((q,i)=>[(i+1)+". ",...segs(q)])}:null].filter(Boolean),
-    gloss:(it.glossary||[]).length?{label:pkL("重点词汇"),rows:it.glossary.map(g=>({w:zs(g.w),r:g.p||zPy(g.w),m:glSel().filter(k=>g[k]).map(k=>g[k]).concat(glSel().some(k=>g[k])?[]:[g.en||g.de||g.pt||""])}))}:null,
+    gloss:(it.glossary||[]).length?{label:pkL("重点词汇"),rows:it.glossary.map(g=>({w:zs(g.w),r:g.p||zPy(g.w),m:(g[auxL()]?[g[auxL()]]:glSel().filter(k=>g[k]).map(k=>g[k]).concat(glSel().some(k=>g[k])?[]:[g.en||g.de||g.pt||""]))}))}:null,
     trans:tk?{label:pkL("译文")+" · "+({en:"English",de:"Deutsch",pt:"Português"}[tk]||tk),lang:tk,paras:it["paragraphs_"+tk]}:null,
     src:it.sources||[],srcLabel:pkL("来源")};
 }
@@ -3047,7 +3047,7 @@ async function mgRender0(){
         <div class="pl zc${easy?" easy":""}" lang="zh-CN" data-noi18n>${pm.lines.map(x=>`<p>${zWrap(x,own,gx)}</p>`).join("")}</div>
         ${pm.explain_zh?`<p class="px zc" lang="zh-CN" data-noi18n>${zWrap(pm.explain_zh,own,gx)}</p>`:""}${tr.length?auxHTML(tr,"px tr"):""}</div></div>`; })():""}
     ${it.grammar||it.grammar_de||it.grammar_pt?`<div class="mg-blk"><h3>语法</h3><div class="mg-gram" data-noi18n>${auxHTML(auxAll(it,"grammar","grammar"))}</div></div>`:""}
-    ${it.glossary&&it.glossary.length?`<div class="mg-blk mg-glb"><div class="mg-glsw"><span>释义语言</span>${["en","de","pt"].map(k=>`<button class="tb" type="button" data-glsw="${k}" aria-pressed="${glSel().includes(k)}" data-noi18n>${GLS[k]}</button>`).join("")}</div><dl class="mg-gl zgl" data-noi18n>${it.glossary.map(g=>`<dt><span class="zc" lang="zh-CN">${esc(zs(g.w))}</span><span class="py">${esc(g.p||zPy(g.w))}</span></dt><dd>${(()=>{ const ks=glOrd().filter(k=>g[k]), tag=ks.length>1; return ks.map(k=>`<span lang="${k}">${tag?`<b class="glk">${GLS[k]}</b> `:""}${esc(g[k])}</span>`).join("")||esc(g.en||g.de||g.pt||ptOf(g.w)||""); })()}</dd>`).join("")}</dl></div>`:""}
+    ${it.glossary&&it.glossary.length?`<div class="mg-blk mg-glb"><dl class="mg-gl zgl" data-noi18n>${it.glossary.map(g=>`<dt><span class="zc" lang="zh-CN">${esc(zs(g.w))}</span><span class="py">${esc(g.p||zPy(g.w))}</span></dt><dd>${(()=>{ const one=[auxL()].filter(k=>g[k]), ks=one.length?one:glOrd().filter(k=>g[k]), tag=ks.length>1; return ks.map(k=>`<span lang="${k}">${tag?`<b class="glk">${GLS[k]}</b> `:""}${esc(g[k])}</span>`).join("")||esc(g.en||g.de||g.pt||ptOf(g.w)||""); })()}</dd>`).join("")}</dl></div>`:""}
     ${qs.length?`<div class="mg-blk"><h3>想一想</h3><ol class="mg-q zc" data-noi18n lang="zh-CN">${qs.map(q=>`<li>${esc(zs(q))}</li>`).join("")}</ol></div>`:""}
     ${lang()==="zh"&&(it.paragraphs||[]).length?wrBlock(pick.date+"|"+pick.i):""}
     ${it.sources&&it.sources.length?`<div class="mg-blk mg-src"><h3>来源</h3><ul>${it.sources.map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>${s.license?`<span class="lic">${esc(s.license)}</span>`:""}</li>`).join("")}</ul></div>`:""}
