@@ -2402,7 +2402,7 @@ function renderCard(){
         <button class="g1" data-g="1">模糊<small>${preview(st,1)} · 2</small></button>
         <button class="g2" data-g="2">记得<small>${preview(st,2)} · 3</small></button>
         <button class="g3" data-g="3">简单<small>${preview(st,3)} · 4</small></button></div>`
-    : "";
+    : (fhN()<5?`<p class="fliphint">点一下卡片，看答案</p>`:"");
   area.innerHTML=`<div class="card">${top}<div class="card-body">${body}</div></div>${actions}
     <div class="foot"><span>本轮剩余 ${sess.queue.length+1} 张</span>${sess.flipped&&!hasImg&&!mine.length&&!hasAud?`<button class="btn ghost sm" id="c-add">${I.pen} 例句 / 录音</button>`:`<span>${sess.mode==="pile"?"评「简单」会移出生词堆":""}</span>`}</div>`;
   fillImgs(area);
