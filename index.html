@@ -1736,7 +1736,6 @@ nav.tabs button[aria-selected="true"]{border-bottom-color:var(--ink)}
         
       </div>
       <div class="panel" id="sy-panel">
-                <div class="segs" id="sy-modes" role="tablist"><button type="button" data-sym="sb" aria-pressed="true">邮箱登录</button></div>
 
         <div id="sy-sb">
           <p class="note" id="sb-off" hidden>邮箱登录还在准备中，开通后这里就能用。</p>
@@ -1776,31 +1775,6 @@ nav.tabs button[aria-selected="true"]{border-bottom-color:var(--ink)}
           </div>
         </div>
 
-        <div id="sy-gh" hidden>
-          <details class="hq"><summary aria-label="说明">i</summary><p class="note" style="margin-top:10px">把数据加密后存进你自己的私有 GitHub 仓库。适合有 GitHub 账号、不想用邮箱的人。</p></details>
-          <div id="sy-on" hidden>
-            <p class="note" style="margin-top:10px">已连接：<b id="sy-repo-t"></b><br><span id="sy-last"></span></p>
-            <label class="tog" style="margin-top:6px"><input type="checkbox" id="sy-mine-on" checked> 也同步「我的文章」</label>
-            <div class="row" style="margin-top:10px"><button class="btn sm" id="sy-now" type="button">立即同步</button><button class="btn sm" id="sy-copy" type="button">复制设置码</button><button class="btn ghost sm" id="sy-off" type="button">在本机停用</button></div>
-          </div>
-          <div id="sy-setup">
-            <details class="sy-how" style="margin-top:10px"><summary>第一次设置（约 3 分钟）</summary>
-              <ol class="note" style="padding-left:1.3em;margin:8px 0 0;display:grid;gap:6px">
-                <li>在 GitHub 新建一个<b>私有</b>仓库，名字例如 <code>zili-sync</code>：<a href="https://github.com/new" target="_blank" rel="noopener">github.com/new</a>，选 Private。</li>
-                <li>新建一个 token：<a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">Fine-grained token</a>。Repository access 选 <i>Only select repositories</i> → 只勾这个仓库；Permissions → Repository → <i>Contents</i> 选 <i>Read and write</i>。有效期最长一年，到期再换一个。</li>
-                <li>把仓库名和 token 填在下面，再想一个同步密码。每台设备都用同一个密码；忘了就解不开，没有找回办法。</li>
-              </ol></details>
-            <div class="field" style="margin-top:10px"><label for="sy-repo">仓库</label><input type="text" id="sy-repo" placeholder="yourname/zili-sync" autocomplete="off" autocapitalize="off" spellcheck="false"></div>
-            <div class="field"><label for="sy-token">Token</label><input type="password" id="sy-token" placeholder="github_pat_…" autocomplete="off"></div>
-            <div class="field"><label for="sy-pass">同步密码</label><input type="password" id="sy-pass" autocomplete="new-password"></div>
-            <div class="row"><button class="btn primary sm" id="sy-go" type="button">连接并同步</button></div>
-            <details class="sy-how" style="margin-top:14px"><summary>已经在别的设备上设置过？用设置码</summary>
-              <textarea id="sy-code" rows="3" placeholder="EL1.…" style="width:100%;margin-top:8px;font-family:var(--f-mono);font-size:12px"></textarea>
-              <div class="field" style="margin-top:6px"><label for="sy-pass2">同步密码</label><input type="password" id="sy-pass2" autocomplete="current-password"></div>
-              <div class="row"><button class="btn sm" id="sy-code-go" type="button">用设置码连接</button></div>
-            </details>
-          </div>
-        </div>
         <p class="small muted" id="sy-msg" style="margin:8px 0 0" aria-live="polite"></p>
       </div>
     </div>
@@ -4161,21 +4135,6 @@ async function syEnc(obj,pass){ const salt=crypto.getRandomValues(new Uint8Array
 async function syDec(txt,pass){ let o; try{ o=JSON.parse(txt); }catch(e){ throw new Error("format"); } if(!o||o.app!=="zili-sync") throw new Error("format");
   try{ const pt=await crypto.subtle.decrypt({name:"AES-GCM",iv:b64d(o.iv)},await syKey(pass,b64d(o.salt)),b64d(o.ct)); return JSON.parse(new TextDecoder().decode(pt)); }
   catch(e){ throw new Error("pass"); } }
-function ghH(raw){ return {Authorization:"Bearer "+SY.token,Accept:raw?"application/vnd.github.raw+json":"application/vnd.github+json","X-GitHub-Api-Version":"2022-11-28"}; }
-const ghURL=()=>`https://api.github.com/repos/${SY.repo}/contents/${SYF}`;
-function ghErr(r){ const e=new Error("http"); e.status=r.status; return e; }
-async function ghGet(){
-  const r=await fetch(ghURL(),{headers:ghH(),cache:"no-store"});
-  if(r.status===404) return null; if(!r.ok) throw ghErr(r);
-  const j=await r.json(); let text="";
-  if(j.content&&j.encoding==="base64") text=atob(j.content.replace(/\s/g,""));
-  else { const r2=await fetch(ghURL(),{headers:ghH(true),cache:"no-store"}); if(!r2.ok) throw ghErr(r2); text=await r2.text(); }
-  return {sha:j.sha,text};
-}
-const devName=()=>{ const u=navigator.userAgent; return /iPad/.test(u)||(/Macintosh/.test(u)&&navigator.maxTouchPoints>1)?"iPad":/iPhone/.test(u)?"iPhone":/Android/.test(u)?"Android":/Mac/.test(u)?"Mac":/Windows/.test(u)?"Windows":"browser"; };
-async function ghPut(text,sha){
-  return fetch(ghURL(),{method:"PUT",headers:Object.assign(ghH(),{"Content-Type":"application/json"}),body:JSON.stringify({message:"sync from "+devName(),content:btoa(text),sha:sha||undefined})});
-}
 function mineDel(){ try{ return JSON.parse(localStorage.getItem(MINEDK))||{}; }catch(e){ return {}; } }
 function syPack(){ return {v:1,state:S,mine:SY.mine===false?null:mineAll(),mineDel:mineDel(),read:MGS.read||{},fav:MGS.fav||{}}; }
 const tsMax=(a,b)=>{ const o=Object.assign({},a||{}); for(const k in (b||{})) o[k]=Math.max(o[k]||0,b[k]||0); return o; };
@@ -4237,7 +4196,7 @@ async function canon(P){
   const h=new Uint8Array(await crypto.subtle.digest("SHA-256",new TextEncoder().encode(txt)));
   return [...h].map(x=>x.toString(16).padStart(2,"0")).join("");
 }
-/* backends: "sb" = email login (Supabase, Frankfurt), "gh" = own private GitHub repo */
+/* backend: email login (Supabase, Frankfurt) */
 const SB_URL="https://zueejqmjkanifgryznzc.supabase.co", SB_KEY="sb_publishable_sEdjNv2QlXrdNzZyVQqeww_iTBFPPdB", SB_APP="zili";
 const sbReady=()=>!!(SB_URL&&SB_KEY);
 function sbErrOf(r,j){ const e=new Error((j&&(j.msg||j.error_description||j.message))||("http "+r.status)); e.status=r.status; e.code=j&&(j.error_code||j.code); e.sb=1; return e; }
@@ -4261,11 +4220,6 @@ async function sbFetch(path,opt={}){
   }
 }
 const BK={
-  gh:{
-    async get(){ const g=await ghGet(); return g&&{ver:g.sha,text:g.text}; },
-    async put(text,ver){ const r=await ghPut(text,ver); if(r.ok){ const j=await r.json().catch(()=>({})); return {ok:true,ver:j.content&&j.content.sha}; }
-      if(r.status===409||r.status===422) return {conflict:true}; throw ghErr(r); }
-  },
   sb:{
     async get(){ const r=await sbFetch(`/rest/v1/user_data?app=eq.${SB_APP}&select=data,version`); const j=await r.json().catch(()=>null); if(!r.ok) throw sbErrOf(r,j); return j&&j.length?{ver:j[0].version,text:j[0].data}:null; },
     async put(text,ver){
@@ -4275,8 +4229,7 @@ const BK={
       const j=await r.json().catch(()=>null); if(!r.ok) throw sbErrOf(r,j); return j&&j.length?{ok:true,ver:ver+1}:{conflict:true}; }
   }
 };
-const syMode=()=>SY.mode==="sb"?"sb":"gh";
-function syOn(){ return syMode()==="sb"? !!(sbReady()&&SY.refresh&&!SY.needPass) : !!(SY.repo&&SY.token&&SY.pass); }
+function syOn(){ return !!(sbReady()&&SY.refresh&&!SY.needPass); }
 async function syEncode(P){ return SY.pass? syEnc(P,SY.pass) : JSON.stringify(P); }
 async function syDecode(txt){
   let o; try{ o=JSON.parse(txt); }catch(e){ throw new Error("format"); }
@@ -4286,22 +4239,19 @@ async function syDecode(txt){
 let syBusy=false, syAgain=false;
 function syMsg(t){ const m=$("#sy-msg"); if(m) m.textContent=t; }
 function syErrText(e){
-  if(e.message==="pass") return syMode()==="sb"?"加密密码不对。":"同步密码不对：和其他设备上设的不一样。";
+  if(e.message==="pass") return "加密密码不对。";
   if(e.message==="needpass") return "这个账号的数据已加密，请输入加密密码。";
   if(e.message==="signedout") return "登录已过期，请重新用邮箱登录。";
   if(e.message==="format") return "云端的同步数据格式不对。";
   if(e instanceof TypeError) return "暂时连不上网络，稍后会自动再试。";
   if(e.sb){ if(e.status===429) return "操作太频繁，请过一会儿再试。"; return "同步失败（"+(e.code||e.status)+"），稍后会自动再试。"; }
-  if(e.status===401) return "Token 无效或已过期，请换一个新的。";
-  if(e.status===403) return "Token 没有写入权限：Contents 要选 Read and write。";
-  if(e.status===404) return "找不到这个仓库，或 token 没有授权给它。";
   return "同步失败（"+(e.status||e.message||"网络")+"），稍后会自动再试。";
 }
 async function syncNow(manual){
   if(!syOn()) return; if(syBusy){ syAgain=true; return; }
   if(!navigator.onLine){ if(manual) syMsg("现在离线，联网后会自动同步。"); return; }
   syBusy=true; if(manual) syMsg("正在同步…");
-  const bk=BK[syMode()];
+  const bk=BK.sb;
   try{
     let changed=false;
     for(let k=0;k<3;k++){
@@ -4325,40 +4275,29 @@ let syT=null;
 function syLater(){ if(!syOn()) return; clearTimeout(syT); syT=setTimeout(()=>syncNow(),20000); }
 document.addEventListener("visibilitychange",()=>{ if(!syOn()) return; if(document.hidden){ clearTimeout(syT); syncNow(); } else if(!sess||!sess.flipped) syncNow(); });
 window.addEventListener("online",()=>syncNow());
-let syView=null;
 function renderAcct(){
-  const on=SY.mode==="sb"&&!!SY.refresh, gh=SY.mode==="gh"&&!!SY.repo, email=SY.email||"";
+  const on=SY.mode==="sb"&&!!SY.refresh, email=SY.email||"";
   const ini=(email[0]||"·").toUpperCase();
   const last=SY.last?new Date(SY.last).toLocaleString(uiLocale(),{month:"short",day:"numeric",hour:"2-digit",minute:"2-digit"}):"";
   $$("[data-acct]").forEach(el=>{
-    el.innerHTML= on||gh
-      ? `<div class="acct-in"><span class="av">${on?esc(ini):I.check}</span><div class="who"><b>${on?esc(email):"GitHub · "+esc(SY.repo)}</b><span>${SY.err?esc(SY.err):(last?"已同步 · "+esc(last):"已开启多设备同步")}</span></div><button class="btn sm" type="button" data-acctgo="1">管理账户</button></div>`
+    el.innerHTML= on
+      ? `<div class="acct-in"><span class="av">${esc(ini)}</span><div class="who"><b>${esc(email)}</b><span>${SY.err?esc(SY.err):(last?"已同步 · "+esc(last):"已开启多设备同步")}</span></div><button class="btn sm" type="button" data-acctgo="1">管理账户</button></div>`
       : `<div class="acct-out"><div><b>多设备同步</b><details class="hq"><summary aria-label="说明">i</summary><p>登录后，学习进度、自录单词和「我的文章」会在你的所有设备之间自动同步；换手机或清理浏览器也不会丢。不登录也能完整使用，数据只保存在这台设备上。只用邮箱来登录，不发其他邮件，也不收集别的信息。<a href="privacy.html" target="_blank" rel="noopener">隐私说明</a></p></details></div><button class="btn primary sm" type="button" data-acctgo="1">用邮箱登录</button></div>`;
   });
 }
-document.addEventListener("click",e=>{ const b=e.target.closest("[data-acctgo]"); if(!b) return; showTab("settings"); syView=SY.mode==="gh"?"gh":"sb"; renderSync(); setTimeout(()=>{ const p=$("#sy-panel"); if(p) p.scrollIntoView({behavior:"smooth",block:"start"}); const em=$("#sb-email"); if(em&&!em.closest("[hidden]")) em.focus({preventScroll:true}); },60); });
+document.addEventListener("click",e=>{ const b=e.target.closest("[data-acctgo]"); if(!b) return; showTab("settings"); renderSync(); setTimeout(()=>{ const p=$("#sy-panel"); if(p) p.scrollIntoView({behavior:"smooth",block:"start"}); const em=$("#sb-email"); if(em&&!em.closest("[hidden]")) em.focus({preventScroll:true}); },60); });
 function renderSync(){
   renderAcct();
-  const mode=syView||(SY.mode==="gh"?"gh":"sb");
-  $$("#sy-modes [data-sym]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.sym===mode));
-  $("#sy-sb").hidden=mode!=="sb"; $("#sy-gh").hidden=mode!=="gh";
-  // email
   const sbIn=SY.mode==="sb"&&!!SY.refresh;
   $("#sb-off").hidden=sbReady(); $("#sb-out").hidden=!sbReady()||sbIn; $("#sb-in").hidden=!sbIn;
   if(sbIn){ $("#sb-who").textContent=SY.email||""; $("#sb-last").textContent=SY.err||(SY.last?"上次同步："+new Date(SY.last).toLocaleString(uiLocale()):"还没同步过。");
     $("#sb-mine-on").checked=SY.mine!==false; $("#sb-enc").checked=!!SY.pass; $("#sb-needpass").hidden=!SY.needPass; if(!SY.pass&&!$("#sb-enc").checked) $("#sb-encset").hidden=true; }
-  // github
-  const ghOn=SY.mode!=="sb"&&!!(SY.repo&&SY.token&&SY.pass);
-  $("#sy-setup").hidden=ghOn; $("#sy-on").hidden=!ghOn;
-  if(ghOn){ $("#sy-repo-t").textContent=SY.repo; $("#sy-last").textContent=SY.err||(SY.last?"上次同步："+new Date(SY.last).toLocaleString(uiLocale()):"还没同步过。"); $("#sy-mine-on").checked=SY.mine!==false; }
 }
-$("#sy-modes").addEventListener("click",e=>{ const b=e.target.closest("[data-sym]"); if(!b) return; syView=b.dataset.sym; syMsg(""); renderSync(); });
 /* --- email login --- */
 const emailOK=v=>/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
 let sbEmail="";
 async function sbSend(){
   const em=$("#sb-email").value.trim().toLowerCase(); if(!emailOK(em)){ syMsg("请填一个有效的邮箱。"); return; }
-  if(syOn()&&syMode()==="gh"&&!confirm("这台设备正在用 GitHub 同步。改用邮箱登录后，GitHub 同步会在本机停用（本机数据保留）。继续？")) return;
   syMsg("正在发送…");
   try{ const otp=c=>sbAuth("otp?redirect_to="+encodeURIComponent(location.origin+location.pathname),{email:em,create_user:c});
     try{ await otp(true); }catch(e1){ if(/duplicate key|users_email|already registered|exists/i.test(e1.message||"")) await otp(false); else throw e1; } sbEmail=em; $("#sb-step2").hidden=false; $("#sb-code").focus(); syMsg("验证码已发到 "+em+"。没收到的话看看垃圾邮件。"); }
@@ -4375,16 +4314,15 @@ async function sbVerify(){
   } else { const code=raw.replace(/\s/g,""); if(!/^\d{6,10}$/.test(code)){ syMsg("请输入邮件里的数字验证码，或者粘贴邮件里的登录链接。"); return; } body={type:"email",email:sbEmail,token:code}; }
   syMsg("正在登录…");
   try{ const j=await sbAuth("verify",body);
-    SY={mode:"sb",mine:true}; sbSession(j); $("#sb-code").value=""; $("#sb-step2").hidden=true; syView=null; renderSync(); await syncNow(true); }
+    SY={mode:"sb",mine:true}; sbSession(j); $("#sb-code").value=""; $("#sb-step2").hidden=true; renderSync(); await syncNow(true); }
   catch(e){ syMsg(/expired|invalid/i.test(e.code||e.message||"")||e.status===403?"验证码不对或已过期，请重新发送。":"登录失败："+(e.message||e.status)); }
 }
 $("#sb-verify").addEventListener("click",sbVerify);
 async function sbPwLogin(){
   const em=$("#sb-email").value.trim().toLowerCase(), pw=$("#sb-pw").value;
   if(!emailOK(em)){ syMsg("请先在上面填邮箱。"); $("#sb-email").focus(); return; } if(!pw){ syMsg("请输入密码。"); return; }
-  if(syOn()&&syMode()==="gh"&&!confirm("这台设备正在用 GitHub 同步。改用邮箱登录后，GitHub 同步会在本机停用（本机数据保留）。继续？")) return;
   syMsg("正在登录…");
-  try{ const j=await sbAuth("token?grant_type=password",{email:em,password:pw}); SY={mode:"sb",mine:true}; sbSession(j); $("#sb-pw").value=""; syView=null; renderSync(); await syncNow(true); }
+  try{ const j=await sbAuth("token?grant_type=password",{email:em,password:pw}); SY={mode:"sb",mine:true}; sbSession(j); $("#sb-pw").value=""; renderSync(); await syncNow(true); }
   catch(e){ syMsg(e.status===400?"邮箱或密码不对。还没设过密码的话，请先用验证码登录。":e.status===429?"操作太频繁，请过一会儿再试。":"登录失败："+(e.message||e.status)); }
 }
 $("#sb-pwgo").addEventListener("click",sbPwLogin);
@@ -4415,47 +4353,14 @@ $("#sb-delete").addEventListener("click",async()=>{
     SY={}; sySave(); renderSync(); renderBackupHint(); syMsg("账号和云端数据已删除。"); }
   catch(e){ syMsg("没能删除："+syErrText(e)); }
 });
-/* --- GitHub (advanced) --- */
-const repoNorm=v=>String(v||"").trim().replace(/^https?:\/\/github\.com\//i,"").replace(/\.git$/,"").replace(/\/+$/,"");
-async function syConnect(repo,token,pass){
-  repo=repoNorm(repo); token=String(token||"").trim();
-  if(!/^[\w.-]+\/[\w.-]+$/.test(repo)){ syMsg("仓库要写成「用户名/仓库名」，例如 Shentuyuxia/zili-sync。"); return; }
-  if(!token){ syMsg("请粘贴 token。"); return; }
-  if(!pass||pass.length<6){ syMsg("同步密码至少 6 位。每台设备都用同一个。"); return; }
-  if(SY.mode==="sb"&&SY.refresh&&!confirm("这台设备正在用邮箱同步。改用 GitHub 后，邮箱同步会在本机退出（本机数据保留）。继续？")) return;
-  syMsg("正在连接…");
-  try{ const r=await fetch("https://api.github.com/repos/"+repo,{headers:{Authorization:"Bearer "+token,Accept:"application/vnd.github+json"},cache:"no-store"});
-    if(!r.ok) throw ghErr(r); const j=await r.json();
-    if(!j.private){ syMsg("这个仓库是公开的。请用一个私有（Private）仓库，免得别人看到同步文件。"); return; }
-  }catch(e){ syMsg(syErrText(e)); return; }
-  SY={mode:"gh",repo,token,pass,mine:true}; sySave(); renderSync(); await syncNow(true);
-  if(SY.err){ const keep=SY.err; if(/密码/.test(keep)){ SY={}; sySave(); renderSync(); } syMsg(keep); }
-}
-$("#sy-go").addEventListener("click",()=>syConnect($("#sy-repo").value,$("#sy-token").value,$("#sy-pass").value));
-$("#sy-code-go").addEventListener("click",async()=>{
-  const code=$("#sy-code").value.trim(), pass=$("#sy-pass2").value;
-  if(!code||!pass){ syMsg("请粘贴设置码，并输入同步密码。"); return; }
-  try{ const o=await syDec(atob(code.replace(/^EL1\./,"").replace(/\s/g,"")),pass); await syConnect(o.repo,o.token,pass); }
-  catch(e){ syMsg(e.message==="pass"?"设置码和同步密码对不上。":"这个设置码不完整，请重新复制。"); }
-});
-$("#sy-now").addEventListener("click",()=>syncNow(true));
-$("#sy-copy").addEventListener("click",async()=>{
-  const code="EL1."+btoa(await syEnc({repo:SY.repo,token:SY.token},SY.pass));
-  try{ await navigator.clipboard.writeText(code); syMsg("设置码已复制。在另一台设备的「设置 → 多设备同步 → GitHub」里粘贴，再输入同一个同步密码。设置码本身也是加密的。"); }
-  catch(e){ prompt("复制这段设置码：",code); }
-});
-$("#sy-off").addEventListener("click",()=>{ if(!confirm("在这台设备上停用同步？本机数据会保留，仓库里的数据也不会删除。")) return; SY={}; sySave(); renderSync(); syMsg("已停用。"); renderBackupHint(); });
-$("#sy-mine-on").addEventListener("change",e=>{ SY.mine=e.target.checked; sySave(); syncNow(true); });
-if(SY.repo&&!SY.mode) SY.mode="gh";
 async function sbFromHash(){
   const h=location.hash||""; if(!/access_token=|error_code=|error=/.test(h)) return false;
   const q=new URLSearchParams(h.replace(/^#/,"")); history.replaceState(null,"",location.pathname+location.search);
-  if(q.get("error")||q.get("error_code")){ const c=q.get("error_code")||q.get("error"); setTimeout(()=>{ showTab("settings"); syView="sb"; renderSync(); syMsg(/expired|invalid/i.test(c)?"这个登录链接已过期或已用过。请回到 app 重新发送验证码。":"登录没有成功（"+c+"）。请重新发送验证码。"); },300); return true; }
+  if(q.get("error")||q.get("error_code")){ const c=q.get("error_code")||q.get("error"); setTimeout(()=>{ showTab("settings"); renderSync(); syMsg(/expired|invalid/i.test(c)?"这个登录链接已过期或已用过。请回到 app 重新发送验证码。":"登录没有成功（"+c+"）。请重新发送验证码。"); },300); return true; }
   if(!sbReady()) return false;
   const j={access_token:q.get("access_token"),refresh_token:q.get("refresh_token"),expires_in:+q.get("expires_in")||3600};
   try{ const r=await fetch(SB_URL+"/auth/v1/user",{headers:{apikey:SB_KEY,Authorization:"Bearer "+j.access_token}}); if(r.ok) j.user=await r.json(); }catch(e){}
-  if(SY.mode==="gh"&&SY.repo&&!confirm("这台设备正在用 GitHub 同步。改用邮箱登录吗？（本机数据保留）")) return true;
-  SY={mode:"sb",mine:true}; sbSession(j); setTimeout(()=>{ showTab("settings"); syView=null; renderSync(); syncNow(true); },300); return true;
+  SY={mode:"sb",mine:true}; sbSession(j); setTimeout(()=>{ showTab("settings"); renderSync(); syncNow(true); },300); return true;
 }
 setTimeout(async()=>{ const viaLink=await sbFromHash(); renderSync(); if(!viaLink&&syOn()) setTimeout(()=>syncNow(),1200); },0); // after the UI-language code below has initialised
 
