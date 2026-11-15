@@ -234,7 +234,7 @@ body.dsheet-on .dfab,body.dtab-on .dfab{display:none}
 #tab-dict.dsheet[hidden]{display:none}
 #tab-dict.dsheet > .panel,#tab-dict.dsheet > .dsheet-bar{max-width:820px;margin-left:auto;margin-right:auto}
 nav.tabs button[data-tab="today"]{order:1} nav.tabs button[data-tab="read"]{order:2} nav.tabs button[data-tab="dict"]{order:3} nav.tabs button[data-tab="pinyin"]{order:4} nav.tabs button[data-tab="settings"]{order:5}
-body[data-focus="py"] nav.tabs button[data-tab="pinyin"]{order:2} body[data-focus="py"] nav.tabs button[data-tab="read"]{order:4}
+body[data-focus="py"] nav.tabs button[data-tab="pinyin"]{order:2} body[data-focus="py"] nav.tabs button[data-tab="read"]{order:3} body[data-focus="py"] nav.tabs button[data-tab="dict"]{order:4}
 .focuscard{display:grid;gap:4px;border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:14px 16px;margin:0 0 14px}
 .focuscard .fk{font-size:12px;letter-spacing:.08em;color:var(--acc);font-weight:700}
 .focuscard .ft{font-size:19px;font-weight:700;line-height:1.35}
@@ -407,7 +407,10 @@ ol.steps li{margin:3px 0}
 .rt-sw{grid-column:1/-1;margin:0 0 4px!important}
 #tab-read[data-rt="today"] #mine-box,#tab-read[data-rt="today"] #mg-fav{display:none}
 #tab-read[data-rt="shelf"] aside{display:none!important}
-#tab-read[data-rt="shelf"],#tab-read[data-rt="mine"]{grid-template-columns:minmax(0,1fr)!important}
+#tab-read[data-rt="shelf"],#tab-read[data-rt="mine"],#tab-read[data-rt="topic"]{grid-template-columns:minmax(0,1fr)!important}
+#tab-read[data-rt="today"] #rbox,#tab-read[data-rt="today"] #cubox{display:none}
+#tab-read[data-rt="topic"] #mg-main,#tab-read[data-rt="topic"] #mine-box,#tab-read[data-rt="topic"] #mg-fav{display:none}
+#tab-read[data-rt="topic"] aside{position:static;max-height:none;overflow:visible}
 #tab-read[data-rt="mine"] #mg-main,#tab-read[data-rt="mine"] #rbox,#tab-read[data-rt="mine"] #cubox,#tab-read[data-rt="mine"] #mg-arch{display:none}
 #tab-read[data-rt="mine"] aside{position:static;max-height:none;overflow:visible}
 .mg-sw{display:flex;gap:4px;background:var(--sunk);border-radius:99px;padding:3px;width:max-content;margin:0 0 12px}
@@ -1594,7 +1597,7 @@ nav.tabs button[aria-selected="true"]{border-bottom-color:var(--ink)}
 
   <!-- READ (Marginalia) -->
   <section id="tab-read" class="grid" data-rt="today" hidden>
-    <div class="mg-sw rt-sw" id="rt-sw" role="tablist"><button type="button" data-rt="today" aria-pressed="true">今日</button><button type="button" data-rt="shelf" aria-pressed="false">分级阅读</button><button type="button" data-rt="mine" aria-pressed="false">我的文章</button></div>
+    <div class="mg-sw rt-sw" id="rt-sw" role="tablist"><button type="button" data-rt="today" aria-pressed="true">今日</button><button type="button" data-rt="shelf" aria-pressed="false">分级阅读</button><button type="button" data-rt="topic" aria-pressed="false">专题</button><button type="button" data-rt="mine" aria-pressed="false">我的文章</button></div>
     <div class="panel" id="mg-main"></div>
     <aside style="display:grid;gap:22px;min-width:0">
       <div class="panel rbox" id="rbox" hidden></div>
@@ -2865,7 +2868,7 @@ function addFromReader0(v){
 }
 
 /* ---------- reading tab (Marginalia) ---------- */
-const MG={tr:null,mine:null,idx:null,days:{},di:0,key:null,zh:false,err:"",loading:false,week:null,wpick:{},sheet:null,ctl:null};
+const MG={topic:false,tr:null,mine:null,idx:null,days:{},di:0,key:null,zh:false,err:"",loading:false,week:null,wpick:{},sheet:null,ctl:null};
 const MGK="zili-read-v1";
 let MGS=(()=>{ try{ return JSON.parse(localStorage.getItem(MGK))||{}; }catch(e){ return {}; } })(); MGS.read=MGS.read||{}; MGS.fav=MGS.fav||{};
 function mgSave(){ try{ localStorage.setItem(MGK,JSON.stringify(MGS)); }catch(e){} }
@@ -3004,7 +3007,7 @@ function mgOutlet(it){ if((it.series&&it.series.name)||it.term) return ""; const
 function mgMinutes(it){ if(it.lang==="zh"){ const n=(it.paragraphs||[]).join("").replace(/[^\u3400-\u9fff]/g,"").length; const r={HSK1:90,HSK2:110,HSK3:140,HSK4:170,HSK5:200,HSK6:230}[it.level]||150; return Math.max(1,Math.round(n/r)); } const w=(it.paragraphs||[]).join(" ").split(/\s+/).filter(Boolean).length; const rate=["A1","A2"].includes(it.level)?110:["B1","B2"].includes(it.level)?160:200; return Math.max(1,Math.round(w/rate)); }
 let MGZH=(()=>{ try{ return localStorage.getItem("zl-glzh")==="1"; }catch(e){ return false; } })();
 function mgFmt(d){ const [y,m,dd]=d.split("-").map(Number); return new Date(y,m-1,dd).toLocaleDateString(uiLocale(),{weekday:"long",month:"long",day:"numeric"}); }
-function mgSyncTab(){ const rt=MG.col?"shelf":MG.mineTab?"mine":"today", t=$("#tab-read"); if(!t) return;
+function mgSyncTab(){ const rt=MG.col?"shelf":MG.mineTab?"mine":MG.topic?"topic":"today", t=$("#tab-read"); if(!t) return;
   t.dataset.rt=rt; $$("#rt-sw button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.rt===rt)); }
 async function mgRender(){
   if(!MG.rtInit){ MG.rtInit=true; /* a brand-new beginner starts on the shelf, at the lowest level, once */
@@ -3066,7 +3069,7 @@ function mgArch(pick){
   const l=lang(), rows=[]; (MG.idx?MG.idx.days:[]).forEach((d,di)=>d.items.forEach(x=>{ if(x.lang===l) rows.push({...x,date:d.date,di}); }));
   rows.sort((a,b)=>b.date.localeCompare(a.date)||(MG_ORD(a)-MG_ORD(b)));
   const show=MG.archAll?rows:rows.slice(0,12);
-  $("#mg-arch").innerHTML=`<h3 style="margin:0 0 8px"><span>往期</span> · <span>${rows.length} 篇</span></h3>${rows.length?`<div class="mg-arch">${show.map(x=>`<button data-mg="${x.date}|${x.i}" data-di="${x.di}" aria-current="${!!pick&&pick.date===x.date&&pick.i===x.i}"><span class="k">${new Date(x.date+"T12:00").toLocaleDateString(uiLocale(),{month:"short",day:"numeric"})}</span><span class="t zc" lang="zh-CN">${esc(zs(x.title))}</span><span class="m">${mgRead(x.date,x.i)?"✓":""}</span></button>`).join("")}</div>${rows.length>12&&!MG.archAll?'<button class="btn ghost sm" id="mg-archall" type="button">显示全部</button>':""}`:'<p class="note">还没有往期文章。</p>'}`; // 二十四节气 and 课文库 live on the 书架 page
+  $("#mg-arch").innerHTML=MG.topic?mgTopicHTML():`<h3 style="margin:0 0 8px"><span>往期</span> · <span>${rows.length} 篇</span></h3>${rows.length?`<div class="mg-arch">${show.map(x=>`<button data-mg="${x.date}|${x.i}" data-di="${x.di}" aria-current="${!!pick&&pick.date===x.date&&pick.i===x.i}"><span class="k">${new Date(x.date+"T12:00").toLocaleDateString(uiLocale(),{month:"short",day:"numeric"})}</span><span class="t zc" lang="zh-CN">${esc(zs(x.title))}</span><span class="m">${mgRead(x.date,x.i)?"✓":""}</span></button>`).join("")}</div>${rows.length>12&&!MG.archAll?'<button class="btn ghost sm" id="mg-archall" type="button">显示全部</button>':""}`:'<p class="note">还没有往期文章。</p>'}`; // 二十四节气 and 课文库 live on the 书架 page
 }
 /* 书架: fixed collections — 二十四节气 (all 24 terms by season; unopened ones show their date) and the library */
 const SEASONS=["春","夏","秋","冬"];
@@ -3089,6 +3092,15 @@ function mgJqList(pick){
   const xs=jqAll(lang()); if(!xs.length) return "";
   return `<h3 style="margin:18px 0 8px"><span>二十四节气</span> · <span>${xs.length} 篇</span></h3>
     <div class="mg-arch">${xs.map(x=>`<button data-mg="jq|${x.i}" aria-current="${!!pick&&pick.date==="jq"&&pick.i===x.i}"><span class="k">${esc(x.term)}</span><span class="t zc" lang="zh-CN">${esc(zs(x.title))}</span><span class="m">${esc(x.level)}${mgRead("jq",x.i)?" ✓":""}</span></button>`).join("")}</div>`;
+}
+/* 专题: only the solar term we are in now is shown; the other terms are folded under 往期 */
+function mgTopicHTML(){
+  const l=lang(), cur=jqCur(l), all=jqAll(l), past=all.filter(x=>!cur.some(c=>c.i===x.i));
+  const btn=x=>`<button data-mg="jq|${x.i}" aria-current="${MG.key==="jq|"+x.i}"><span class="k">${esc(x.level)}</span><span class="t zc" lang="zh-CN">${esc(zs(x.title))}</span><span class="m"></span></button>`;
+  const t=jqTermNow();
+  return `<h3 style="margin:0 0 8px"><span>节气</span>${t?` · <span class="zc" lang="zh-CN">${esc(zs(t.term))}</span>`:""}</h3>`
+    +(cur.length?`<div class="mg-arch">${cur.map(btn).join("")}</div>`:`<p class="muted small">这个节气还没有文章。</p>`)
+    +(past.length?`<details class="mg-past" style="margin-top:12px"><summary class="small muted">往期节气 · ${past.length} 篇</summary><div class="mg-arch">${past.map(btn).join("")}</div></details>`:"");
 }
 function mgLibList(pick){ // 分级阅读: the original library texts plus every daily text, by HSK level
   const l=lang(), xs0=mgLibItems(l), dl=[];
@@ -3910,12 +3922,12 @@ $("#tab-read").addEventListener("click",e=>{
     MG.sIdx=rdNodes("art").indexOf(w.closest(".s"));
     $$(".mg-w.on").forEach(x=>x.classList.remove("on")); w.classList.add("on"); mgOpen(w.dataset.w||zPlain(w),mgSentenceOf(w)); return; }
   if(!b) return;
-  if(b.dataset.rt){ const v=b.dataset.rt; MG.mineTab=v==="mine"; MG.col=v==="shelf"; MG.key=null; MG.mine=null; MG.tr=null; mgClose(); rdStop(); mgRender(); if(v==="mine"){ const d=$("#mine-box"); if(d) d.open=true; } window.scrollTo({top:0}); return; }
+  if(b.dataset.rt){ const v=b.dataset.rt; MG.topic=v==="topic"; MG.mineTab=v==="mine"; MG.col=v==="shelf"; MG.key=null; MG.mine=null; MG.tr=null; mgClose(); rdStop(); mgRender(); if(v==="mine"){ const d=$("#mine-box"); if(d) d.open=true; } window.scrollTo({top:0}); return; }
   if(b.dataset.mine){ MG.mineTab=false; MG.mine=b.dataset.mine; MG.tr=null; mgClose(); mgRender(); mineList(); { const m=$("#mg-main"); const y=m.getBoundingClientRect().top+scrollY-(tabsOff()+4); if(scrollY>y) window.scrollTo({top:y,behavior:"smooth"}); } return; }
   if(b.dataset.liblv!=null){ MG.libLow=false; MG.libLv=b.dataset.liblv||""; if(MG.col) mgRender(); else mgArch(MG.cur); return; }
   if(b.dataset.mglv!=null){ S.settings.rdLv=S.settings.rdLv||{}; S.settings.rdLv[lang()]=b.dataset.mglv||null; save(); MG.key=null; MG.tr=null; mgClose(); rdStop(); mgRender(); return; }
   if(b.dataset.mineopen){ const d=$("#mine-box"); d.open=true; d.scrollIntoView({behavior:"smooth",block:"start"}); return; }
-  if(b.dataset.mg){ MG.mineTab=false; MG.mine=null; MG.key=b.dataset.mg; if(b.dataset.di!=null) MG.di=+b.dataset.di; else { const d=b.dataset.mg.split("|")[0]; const k=MG.idx.days.findIndex(x=>x.date===d); if(k>=0) MG.di=k; } MG.tr=null; mgClose(); mgRender(); { const m=$("#mg-main"); const y=m.getBoundingClientRect().top+scrollY-(tabsOff()+4); if(scrollY>y) window.scrollTo({top:y,behavior:"smooth"}); } return; }
+  if(b.dataset.mg){ MG.topic=false; MG.mineTab=false; MG.mine=null; MG.key=b.dataset.mg; if(b.dataset.di!=null) MG.di=+b.dataset.di; else { const d=b.dataset.mg.split("|")[0]; const k=MG.idx.days.findIndex(x=>x.date===d); if(k>=0) MG.di=k; } MG.tr=null; mgClose(); mgRender(); { const m=$("#mg-main"); const y=m.getBoundingClientRect().top+scrollY-(tabsOff()+4); if(scrollY>y) window.scrollTo({top:y,behavior:"smooth"}); } return; }
   const id=b.id;
   if(id==="mg-share"||id==="mg-share2"){ dlShare(b.dataset.sk); return; }
   if(id==="dl-start"){ DL.used=false; onbStart(); return; }
@@ -5325,6 +5337,9 @@ const UI_DICT=[
 ["读完了", "Mark as read", "Gelesen", "Marcar como lido", "讀完了"],
 ["下一篇 →", "Next →", "Weiter →", "Próximo →", "下一篇 →"],
 ["往期", "Archive", "Archiv", "Arquivo", "往期"],
+["节气", "Solar terms", "Sonnenbegriffe", "Termos solares", "節氣"],
+["往期节气", "Past solar terms", "Frühere Sonnenbegriffe", "Termos solares anteriores", "往期節氣"],
+["这个节气还没有文章。", "No articles for this term yet.", "Zu diesem Begriff gibt es noch keine Artikel.", "Ainda não há artigos para este termo.", "這個節氣還沒有文章。"],
 ["收藏", "Save", "Merken", "Guardar", "收藏"],
 ["已收藏", "Saved", "Gemerkt", "Guardado", "已收藏"],
 ["我的收藏", "Saved texts", "Gemerkte Texte", "Textos guardados", "我的收藏"],
@@ -5345,7 +5360,7 @@ const UI_DICT=[
 ["短讯", "Brief", "Kurzmeldung", "Nota", "短訊"],
 ["短评", "Short", "Kommentar", "Comentário", "短評"],
 ["随笔", "Essay", "Essay", "Ensaio", "隨筆"],
-["专题", "Feature", "Hintergrund", "Reportagem", "專題"],
+["专题", "Topics", "Themen", "Temas", "專題"],
 ["故事", "Story", "Geschichte", "Conto", "故事"],
 ["对话", "Dialogue", "Dialog", "Diálogo", "對話"],
 ["这个词已经在字匣里了，点保存会放进生词堆。", "This word is already in your list; saving puts it in the practice pile.", "Das Wort ist schon im Wortkästchen; Speichern legt es in den Übungsstapel.", "Esta palavra já está no vocabulário; salvar a põe na pilha.", "這個詞已經在字匣裡了，點儲存會放進生詞堆。"],
@@ -5524,7 +5539,7 @@ function addOpen(w){ // the old 录入新词 tab now lives in 字匣 → 自己�
   if(w){ const i=$("#n-w"); i.value=w; i.dispatchEvent(new Event("input")); }
   setTimeout(()=>{ d.scrollIntoView({behavior:"smooth",block:"start"}); $("#n-w").focus({preventScroll:true}); },60);
 }
-const dtabOn=()=>!!S.settings.dictTab;
+const dtabOn=()=>S.settings.dictTab!==false; /* 字典默认是独立板块；关掉后才变成浮动字典 */
 function dictSheet(on){
   const el=$("#tab-dict"); if(!el) return;
   if(on&&dtabOn()){ showTab("dict"); return; }
