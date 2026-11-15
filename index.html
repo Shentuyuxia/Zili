@@ -1496,6 +1496,16 @@ nav.tabs{margin:24px 0 26px}
 #tab-today .card{min-height:380px}
 .mg-toc button,.mg-arch button{padding-block:15px}
 .onb-day{padding:18px 20px;margin:0 0 20px}
+/* 苹果结构：悬浮底栏、分组列表（字里标志和分段控件保持不变） */
+.mg-arch,.mg-toc{background:var(--surface);border-radius:14px;overflow:hidden;padding:0 2px;border:1px solid var(--line)}
+.mg-arch button,.mg-toc button{padding:13px 14px!important;border-bottom:1px solid var(--line)!important;border-top:0!important}
+.mg-arch button:last-child,.mg-toc button:last-child{border-bottom:0!important}
+@media (max-width:640px){
+  nav.tabs{left:12px!important;right:12px!important;bottom:calc(12px + env(safe-area-inset-bottom,0px))!important;border:0!important;border-radius:22px;
+    background:color-mix(in srgb,var(--surface) 72%,transparent)!important;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+    box-shadow:0 6px 22px rgba(60,50,30,.16),inset 0 0 0 1px rgba(255,255,255,.45)}
+  .wrap{padding-bottom:110px}
+}
 </style>
 </head>
 <body>
@@ -2946,7 +2956,7 @@ function pkRuby(text,gx){ // → [seg…]: the reader's own words and pinyin (sa
 function mgTrBtns(it){ // translation toggles: the learner's helper languages first, then the others; one translation shown at a time
   const ids={en:["mg-enb","English","English translation"],de:["mg-deb","Deutsch","Deutsche Übersetzung"],pt:["mg-ptb","Português","Tradução em português"]};
   const order=[...glSel(),"en","de","pt"].filter((k,n,a)=>ids[k]&&a.indexOf(k)===n);
-  return order.filter(k=>(it["paragraphs_"+k]||[]).length).map(k=>`<button class="tb" id="${ids[k][0]}" aria-pressed="${MG.tr===k}" aria-label="${ids[k][2]}" data-noi18n>${ids[k][1]}</button>`).join("");
+  return order.filter(k=>(it["paragraphs_"+k]||[]).length).map(k=>`<button class="tb" id="${ids[k][0]}" aria-pressed="${MG.tr===k}" aria-label="${ids[k][2]}" data-noi18n>${({en:"En",de:"De",pt:"Pt"})[k]}</button>`).join("");
 }
 function pkDoc(it,date){
   const gx=new Set((it.glossary||[]).map(g=>String(g.w||"").trim()).filter(w=>HAN.test(w)));
