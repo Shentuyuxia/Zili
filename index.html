@@ -1333,6 +1333,11 @@ body .py .tn1,body.tones .py .tn1{color:var(--py1)} body .py .tn2,body.tones .py
 #card-area .bigspk{width:48px;height:48px;border:0!important;border-radius:12px;background:none!important;color:var(--muted)}
 #card-area .bigspk svg{width:30px;height:30px}
 #card-area .bigspk:active{color:var(--ink);background:none!important}
+#card-area .say-on{color:var(--ink)!important}
+#card-area .say-on .w1{animation:sayw 1s ease-in-out infinite}
+#card-area .say-on .w2{animation:sayw 1s ease-in-out .25s infinite}
+@keyframes sayw{0%,100%{opacity:1}50%{opacity:.2}}
+@media (prefers-reduced-motion:reduce){#card-area .say-on .w1,#card-area .say-on .w2{animation:none}}
 </style>
 </head>
 <body>
@@ -1697,7 +1702,7 @@ const XLAB={zh:["拼音","yǔ sǎn"],fr:["变形 / 备注（可选）","les para
 const SLOTS=[["w","单词"],["s","例句"]];
 const I={
  exp:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6"/><rect x="3" y="9" width="18" height="8" rx="2"/><path d="M7 14h10v7H7z"/></svg>',
- say:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 10v4M8 7v10M12 4v16M16 7v10M20 10v4"/></svg>',
+ say:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path class="w1" d="M15.5 8.5a5 5 0 0 1 0 7"/><path class="w2" d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>',
  spk:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>',
  star:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>',
  starF:'<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>',
@@ -2427,7 +2432,7 @@ function renderCard(){
   area.innerHTML=`<div class="card">${top}<div class="card-body">${body}</div>${tools}</div>${actions}
     <div class="foot"><span>本轮剩余 ${sess.queue.length+1} 张</span>${sess.flipped&&!hasImg&&!mine.length&&!hasAud?`<button class="btn ghost sm" id="c-add">${I.pen} 例句 / 录音</button>`:`<span>${sess.mode==="pile"?"评「简单」会移出生词堆":""}</span>`}</div>`;
   fillImgs(area);
-  $("#c-say").onclick=()=>speak(sess.flipped&&c.ex?c.w+"。"+c.ex:c.w);
+  $$("#c-say").forEach(b=>b.onclick=()=>{ const t=sess.flipped&&c.ex?c.w+"。"+c.ex:c.w; speak(t); b.classList.add("say-on"); clearTimeout(b._st); b._st=setTimeout(()=>b.classList.remove("say-on"),Math.min(7000,700+t.length*75)); });
   const cs=$("#c-src"); if(cs) cs.onclick=()=>mgJump(c.from);
   const cm=$("#c-mine"); if(cm) cm.onclick=()=>playMine(c.id,sess.flipped&&au.s?"s":"w");
   { const b=$("#c-pile"); if(b) b.onclick=()=>{ togglePile(c.id); renderCard(); }; }
