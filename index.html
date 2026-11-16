@@ -2621,7 +2621,7 @@ function renderCard(){
   const it=sess.cur, c=it.c, LL=L(), st=LL.srs[c.id], inPile=!!LL.pile[c.id], dir=S.settings.dir;
   const hasImg=false, memo=memoOf(c), mine=mineOf(c), au=audsOf(c.id), hasAud=!!(au.w||au.s);
   const big=`<button class="bigspk" id="c-say" type="button" aria-label="系统朗读" title="系统朗读 (S)"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="bs-body" d="M4.5 9.5h3l4.5-3.6v12.2l-4.5-3.6h-3z"/><path d="M15.2 9.2c1.3 1.1 1.3 4.5 0 5.6M17.9 6.8c2.5 2.1 2.5 7.4 0 9.6"/></svg></button>`;
-  const top=!sess.flipped?"":`<div class="card-top"><span class="lv lv-${esc(c.lvl)}">${esc(c.lvl)}</span>${it.isNew?'<span class="chip new">新词</span>':stgHTML(st)}${c.custom?'<span class="chip">我录入的</span>':""}</div>`;
+  const top=!sess.flipped?"":`<div class="card-top"><span class="lv lv-${esc(c.lvl)}">${esc(c.lvl)}</span>${it.isNew?"":stgHTML(st)}${c.custom?'<span class="chip">我录入的</span>':""}</div>`;
   const tools=!sess.flipped?"":`<div class="card-tools">
     <button class="ib" id="c-say" aria-label="系统朗读" title="系统朗读 (S)">${I.say}</button>
     ${hasAud?`<button class="ib me" id="c-mine" aria-label="播放我的录音" title="我的录音 (M)">${I.mic}</button>`:""}
