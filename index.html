@@ -2995,7 +2995,10 @@ function pkRuby(text,gx){ // → [seg…]: the reader's own words and pinyin (sa
   }); });
   flush(); return out;
 }
-function mgTrBtns(it){ return ""; } // 译文已跟随界面语言，阅读页不再显示 En/De/Pt 切换
+/* 段落译文：默认隐藏，由工具栏的「译文」按钮打开（记住上次的选择） */
+function trV(){ try{ return localStorage.getItem("zl-trv")==="1"; }catch(e){ return false; } }
+function mgTrBtns(it){ if(!trL()||!(it&&it["paragraphs_"+trL()])) return "";
+  const on=trV(); return `<button class="tb" id="mg-trv" type="button" aria-pressed="${on}" aria-label="${on?"隐藏译文":"显示译文"}">译文</button>`; }
 function mgTrBtnsOld(it){ // translation toggles: the learner's helper languages first, then the others; one translation shown at a time
   const ids={en:["mg-enb","English","English translation"],de:["mg-deb","Deutsch","Deutsche Übersetzung"],pt:["mg-ptb","Português","Tradução em português"]};
   const order=[...glSel(),"en","de","pt"].filter((k,n,a)=>ids[k]&&a.indexOf(k)===n);
@@ -3093,7 +3096,7 @@ async function mgRender0(){
     ${it.dek?`<p class="mg-dek zc" data-noi18n lang="zh-CN">${esc(zs(it.dek))}</p>`:""}
     <div class="mg-tools"><button class="tb" id="mg-say" aria-label="朗读全文">${I.spk}<span>朗读</span></button>${mgTrBtns(it)}${pick.date!=="mine"?``:""}<span class="spacer"></span><button class="tb" id="mg-py" aria-pressed="${pyOn()}">拼音</button><button class="tb" id="mg-tone" aria-pressed="${tonesOn()}">声调</button><button class="tb" id="mg-scr" aria-pressed="${scr()==="t"}" data-noi18n>${scr()==="t"?"繁體":"简体"}</button></div>
     ${onbActive()&&!(onb().t||{}).read?`<p class="onb-tip">💡 <span>点任何一个词，看读音、意思和笔顺，还可以收进生词。</span></p>`:""}
-    <div class="mg-body zhb zc${easy?" easy":""}${it.kind==="dialogue"?" dlg":""}" id="mg-body" data-noi18n lang="zh-CN">${(it.paragraphs||[]).map((p,k)=>`<p>${zWrap(p,own,gx)}</p>${trL()&&it["paragraphs_"+trL()]&&it["paragraphs_"+trL()][k]?`<span class="mg-zh mg-tr-${trL()}" lang="${trL()}">${esc(it["paragraphs_"+trL()][k])}</span>`:""}`).join("")}</div>
+    <div class="mg-body zhb zc${easy?" easy":""}${it.kind==="dialogue"?" dlg":""}" id="mg-body" data-noi18n lang="zh-CN">${(it.paragraphs||[]).map((p,k)=>`<p>${zWrap(p,own,gx)}</p>${trV()&&trL()&&it["paragraphs_"+trL()]&&it["paragraphs_"+trL()][k]?`<span class="mg-zh mg-tr-${trL()}" lang="${trL()}">${esc(it["paragraphs_"+trL()][k])}</span>`:""}`).join("")}</div>
     ${it.kind==="picks"?mgPicks(it):""}
     ${it.poem&&it.poem.lines?(()=>{ const pm=it.poem, tr=auxAll(pm,"explain");
       return `<div class="mg-blk"><h3>古诗</h3><div class="mg-poem"><p class="pt zc" lang="zh-CN" data-noi18n>${zWrap(pm.title,own,gx)}</p><p class="pa zc" lang="zh-CN" data-noi18n>${esc(zs([pm.dynasty,pm.author].filter(Boolean).join(" · ")))}</p>
@@ -4003,6 +4006,7 @@ $("#tab-read").addEventListener("click",e=>{
   else if(id==="mg-zhb"){ MG.tr=MG.tr==="zh"?null:"zh"; mgRender(); }
   else if(id==="mg-deb"){ MG.tr=MG.tr==="de"?null:"de"; mgRender(); }
   else if(id==="mg-ptb"){ MG.tr=MG.tr==="pt"?null:"pt"; mgRender(); }
+  else if(id==="mg-trv"){ const v=!trV(); try{ localStorage.setItem("zl-trv",v?"1":"0"); }catch(e){} mgRender(); }
   else if(id==="mg-py"){ S.settings.py=!pyOn(); save(); applyPy(); b.setAttribute("aria-pressed",pyOn()); renderSettings(); }
   else if(id==="mg-tone"){ S.settings.tones=!tonesOn(); save(); applyTones(); b.setAttribute("aria-pressed",tonesOn()); renderSettings(); }
   else if(id==="mg-scr"){ S.settings.script=scr()==="t"?"s":"t"; save(); applyScr(); renderSettings(); mgRender(); }
