@@ -1572,8 +1572,12 @@ nav.tabs{margin:24px 0 26px}
 /* 字典页：所有板块同一列、同宽、居中；手写板与输入框左对齐 */
 #tab-dict:not(.dsheet) > .panel,#tab-dict:not(.dsheet) > details.panel{width:min(680px,100%)!important;max-width:680px!important;margin-left:auto!important;margin-right:auto!important;justify-self:center}
 #tab-dict:not(.dsheet) .dict-page{padding-left:26px;padding-right:26px}
-#tab-dict .dic-pad{justify-items:start}
-#tab-dict .dic-cands,#tab-dict .dic-padacts{justify-self:start}
+#tab-dict:not(.dsheet) .dict-page{text-align:center}
+#tab-dict:not(.dsheet) .dict-hrow{justify-content:center}
+#tab-dict:not(.dsheet) #dict-host > *{margin-left:auto;margin-right:auto}
+#tab-dict:not(.dsheet) #dict-host .dict-search,#tab-dict:not(.dsheet) #dict-host form,#tab-dict:not(.dsheet) #dict-host .dict-row{display:flex;justify-content:center;flex-wrap:wrap;align-items:center;gap:8px}
+#tab-dict .dic-pad{justify-items:center}
+#tab-dict .dic-cands,#tab-dict .dic-padacts{justify-self:center;justify-content:center}
 </style>
 </head>
 <body>
