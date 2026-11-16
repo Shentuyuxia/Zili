@@ -1501,9 +1501,9 @@ nav.tabs{margin:24px 0 26px}
 .mg-arch button{padding:13px 14px!important;border-bottom:1px solid var(--line)!important;border-top:0!important}
 .mg-arch button:last-child{border-bottom:0!important}
 @media (max-width:640px){
-  nav.tabs{left:12px!important;right:12px!important;bottom:calc(12px + env(safe-area-inset-bottom,0px))!important;border:0!important;border-radius:22px;
+  nav.tabs{left:0!important;right:0!important;bottom:0!important;padding-bottom:env(safe-area-inset-bottom,0px)!important;border:0!important;border-radius:22px 22px 0 0;
     background:color-mix(in srgb,var(--surface) 72%,transparent)!important;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
-    box-shadow:0 6px 22px rgba(60,50,30,.16),inset 0 0 0 1px rgba(255,255,255,.45)}
+    box-shadow:0 -4px 16px rgba(60,50,30,.10)}
   nav.tabs{padding:6px 6px 4px!important;height:auto!important;min-height:0!important;align-items:center}
   .wrap{padding-bottom:110px}
 }
