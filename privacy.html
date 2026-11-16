@@ -14,11 +14,13 @@ h1{font-size:24px;margin:0 0 4px;font-weight:600}h2{font-size:18px;margin:28px 0
 p,li{margin:6px 0}.m{color:var(--muted);font-size:14px}a{color:var(--acc)}
 section+section{border-top:1px solid var(--line);margin-top:32px;padding-top:12px}
 section[lang=en],section[lang=de]{font-family:"Source Serif 4",Georgia,serif}
+.lnav{font-size:14px;margin:0 0 18px}.lnav a{text-decoration:none;font-weight:500}
 </style>
 </head>
 <body>
 <main>
-<section lang="en">
+<nav class="lnav"><a href="#en">English</a> · <a href="#zh">中文</a></nav>
+<section lang="en" id="en">
 <h1>Privacy</h1>
 <p class="m">字里 · Zili is a private, non-commercial learning tool. Last updated: November 2026.</p>
 <h2>By default, everything stays on your device</h2>
@@ -43,7 +45,7 @@ section[lang=en],section[lang=de]{font-family:"Source Serif 4",Georgia,serif}
 <h2>Contact</h2>
 <p>Questions or deletion requests: <a href="https://github.com/Shentuyuxia/zili" target="_blank" rel="noopener">GitHub</a> or <a href="https://shentuyuxia.com">shentuyuxia.com</a>.</p>
 </section>
-<section lang="zh-CN">
+<section lang="zh-CN" id="zh">
   <h2>隐私说明（中文）</h2>
   <p class="m">字里 · Zili 是一个私人维护、非商业的学习工具。最后更新：2026 年 10 月</p>
   <h2>默认：一切都只在你的设备上</h2>
@@ -68,5 +70,6 @@ section[lang=en],section[lang=de]{font-family:"Source Serif 4",Georgia,serif}
   <p>有问题或想删除数据，请联系介绍你使用这个工具的人，或在 <a href="https://github.com/Shentuyuxia/zili" target="_blank" rel="noopener">GitHub</a> 上留言。</p>
 </section>
 </main>
+<script>if(!location.hash&&/^zh/i.test(navigator.language||""))addEventListener("DOMContentLoaded",()=>{const z=document.getElementById("zh");if(z)z.scrollIntoView();});</script>
 </body>
 </html>
