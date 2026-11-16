@@ -3108,7 +3108,10 @@ function mgLibList(pick){ // 分级阅读: the original library texts plus every
   const lvs=[...new Set(xs.map(x=>x.level))].sort((a,b)=>LV_ORDER.indexOf(a)-LV_ORDER.indexOf(b)), lv=MG.libLv!=null?MG.libLv:(MG.libLow?lvs[0]:"");
   const show=xs.filter(x=>!lv||x.level===lv).sort((a,b)=>LV_ORDER.indexOf(a.level)-LV_ORDER.indexOf(b.level));
   return `<p class="muted small" style="margin:0 0 8px"><span>${xs.length} 篇，按 HSK 级别挑</span></p><div class="mg-lvs" style="margin:0 0 8px"><button type="button" data-liblv="" aria-pressed="${!lv}">全部</button>${lvs.map(v=>`<button type="button" data-liblv="${v}" aria-pressed="${lv===v}">${v}</button>`).join("")}</div>
-    <div class="mg-arch">${show.map(x=>{ const dk=x.daily?x.date:"lib"; return `<button data-mg="${dk}|${x.i}"${x.daily?` data-di="${x.di}"`:""} aria-current="${!!pick&&pick.date===dk&&pick.i===x.i}"><span class="k">${esc(x.level)}</span><span class="t zc" lang="zh-CN">${esc(zs(x.title))}</span><span class="m">${mgRead(dk,x.i)?"✓":""}</span></button>`; }).join("")}</div>`;
+    ${lvs.filter(v=>!lv||v===lv).map(v=>{ // each level: first 3 texts, then 展开
+      const grp=show.filter(x=>x.level===v), open=!!(MG.libExp&&MG.libExp[v]), n=open?grp.length:Math.min(3,grp.length);
+      const btn=x=>{ const dk=x.daily?x.date:"lib"; return `<button data-mg="${dk}|${x.i}"${x.daily?` data-di="${x.di}"`:""} aria-current="${!!pick&&pick.date===dk&&pick.i===x.i}"><span class="k">${esc(x.level)}</span><span class="t zc" lang="zh-CN">${esc(zs(x.title))}</span><span class="m">${mgRead(dk,x.i)?"✓":""}</span></button>`; };
+      return grp.length?`<div class="mg-arch">${grp.slice(0,n).map(btn).join("")}</div>`+(grp.length>3?`<button type="button" class="btn ghost sm" data-libexp="${v}" style="margin:6px 0 16px">${open?"收起":"展开全部（"+grp.length+" 篇）"}</button>`:""):""; }).join("")}`;
 }
 /* 唱片盒 · record box (Mandopop from Hong Kong, Taiwan and Singapore) and 茶余饭后 · small stories of the Chinese-speaking world — reading/records.json */
 const RB={open:-1}, CU={open:-1};
@@ -3922,6 +3925,7 @@ $("#tab-read").addEventListener("click",e=>{
   if(!b) return;
   if(b.dataset.rt){ const v=b.dataset.rt; MG.topic=v==="topic"; MG.mineTab=v==="mine"; MG.col=v==="shelf"; MG.key=null; MG.mine=null; MG.tr=null; mgClose(); rdStop(); mgRender(); if(v==="mine"){ const d=$("#mine-box"); if(d) d.open=true; } window.scrollTo({top:0}); return; }
   if(b.dataset.mine){ MG.mineTab=false; MG.mine=b.dataset.mine; MG.tr=null; mgClose(); mgRender(); mineList(); { const m=$("#mg-main"); const y=m.getBoundingClientRect().top+scrollY-(tabsOff()+4); if(scrollY>y) window.scrollTo({top:y,behavior:"smooth"}); } return; }
+  if(b.dataset.libexp!=null){ MG.libExp=MG.libExp||{}; MG.libExp[b.dataset.libexp]=!MG.libExp[b.dataset.libexp]; mgRender(); return; }
   if(b.dataset.liblv!=null){ MG.libLow=false; MG.libLv=b.dataset.liblv||""; if(MG.col) mgRender(); else mgArch(MG.cur); return; }
   if(b.dataset.mglv!=null){ S.settings.rdLv=S.settings.rdLv||{}; S.settings.rdLv[lang()]=b.dataset.mglv||null; save(); MG.key=null; MG.tr=null; mgClose(); rdStop(); mgRender(); return; }
   if(b.dataset.mineopen){ const d=$("#mine-box"); d.open=true; d.scrollIntoView({behavior:"smooth",block:"start"}); return; }
