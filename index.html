@@ -1569,6 +1569,11 @@ nav.tabs{margin:24px 0 26px}
 #card-area .bigspk:hover{color:var(--acc)}
 #card-area .bigspk:active{background:var(--acc-soft,rgba(79,117,100,.12));color:var(--acc);transform:scale(.96)}
 #card-area .bigspk:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+/* 字典页：所有板块同一列、同宽、居中；手写板与输入框左对齐 */
+#tab-dict:not(.dsheet) > .panel,#tab-dict:not(.dsheet) > details.panel{width:min(680px,100%)!important;max-width:680px!important;margin-left:auto!important;margin-right:auto!important;justify-self:center}
+#tab-dict:not(.dsheet) .dict-page{padding-left:26px;padding-right:26px}
+#tab-dict .dic-pad{justify-items:start}
+#tab-dict .dic-cands,#tab-dict .dic-padacts{justify-self:start}
 </style>
 </head>
 <body>
