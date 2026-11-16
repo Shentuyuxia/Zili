@@ -1541,6 +1541,11 @@ nav.tabs{margin:24px 0 26px}
 .mg-gl dt .mg-hb{position:absolute;right:0;top:50%;transform:translateY(-50%);margin:0;width:30px;height:30px;color:var(--muted);opacity:.45}
 .mg-gl dt .mg-hb[aria-pressed="true"]{opacity:1;color:#c0392b}
 .mg-gl dt .mg-hb:hover,.mg-gl dt .mg-hb:focus-visible{opacity:1}
+/* 小字典：拼音在字的上方，单色；爱心在右上 */
+.mg-sheet .wp{display:inline-flex;flex-direction:column;align-items:flex-start;line-height:1.1;min-width:0}
+.mg-sheet .wp .py{font-size:13px;color:var(--muted);font-weight:400;letter-spacing:.02em;margin:0 0 3px 2px}
+.mg-sheet .py{color:var(--muted)}
+.mg-sheet .mg-sheart[aria-pressed="true"]{color:#c0392b}
 </style>
 </head>
 <body>
@@ -3903,8 +3908,9 @@ function mgPaint(){
   const s=MG.sheet, el=$("#mg-sheet"); if(!s){ el.hidden=true; return; }
   el.hidden=false;
   if(s.zh){ const gl=glSel(), glm=gl.some(k=>s[k])?gl:["en","de","pt"].filter(k=>s[k]).slice(0,1);
-    $("#mg-sheet-in").innerHTML=`<div class="row"><span class="w zc${[...s.lemma].length>3?" long":""}" lang="zh-CN" data-noi18n>${zToneText(s.lemma,s.py)}</span><span class="py" data-noi18n>${zTonePy(s.py||"")}</span><span class="small muted">${esc(s.pos||"")}</span><span class="spacer"></span><button class="ib" id="mg-ssay" aria-label="朗读">${I.spk}</button>${hasTTS&&MG.sIdx>=0?`<button class="ib" id="mg-sfrom" aria-label="从这句读">${I.play}</button>`:""}<button class="ib" id="mg-sx" aria-label="关闭">${I.x}</button></div>
-    ${s.have?'<p class="small muted" style="margin:0">这个词已经在字匣里了，点保存会放进生词堆。</p>':""}
+    const sEx=syFind("zh",s.lemma), sOn=!!(sEx&&S.zh.pile[sEx.id]);
+    $("#mg-sheet-in").innerHTML=`<div class="row"><span class="wp"><span class="py" data-noi18n>${esc(s.py||"")}</span><span class="w zc${[...s.lemma].length>3?" long":""}" lang="zh-CN" data-noi18n>${zToneText(s.lemma,s.py)}</span></span><span class="small muted">${esc(s.pos||"")}</span><span class="spacer"></span><button class="ib" id="mg-ssay" aria-label="朗读">${I.spk}</button>${hasTTS&&MG.sIdx>=0?`<button class="ib" id="mg-sfrom" aria-label="从这句读">${I.play}</button>`:""}<button class="ib mg-sheart" id="mg-sheart" type="button" aria-pressed="${sOn}" aria-label="${sOn?"已放进生词堆":"放进生词堆"}" title="${sOn?"已放进生词堆":"放进生词堆"}">${svgI(HEART_P,sOn?"currentColor":"",20)}</button><button class="ib" id="mg-sx" aria-label="关闭">${I.x}</button></div>
+    ${s.have&&!sOn?'<p class="small muted" style="margin:0">这个词已经在字匣里了，点爱心放进生词堆。</p>':""}
     ${s.en||s.de||s.pt?`<div class="zgl-l" data-noi18n>${glm.filter(k=>s[k]).map(k=>`<div lang="${k}"><span class="k">${GLS[k]}</span>${esc(s[k])}</div>`).join("")}</div>`:""}
     ${s.dict&&s.dict.length?`<details class="zd"${!(s.en||s.de||s.pt)||s.dict.length>1?" open":""}><summary>词典${s.hsk?` <span class="zd-h" data-noi18n>HSK ${s.hsk}</span>`:""}${s.dict.length>1?` <span class="zd-n" data-noi18n>${s.dict.length} × pinyin</span>`:""}</summary>${s.dict.map((r,i)=>{ const m={en:r[1],de:r[2],pt:i===0?ptOf(s.lemma):""}, ks=gl.some(k=>m[k])?gl:["en","de"].filter(k=>m[k]).slice(0,1); return `<div class="zd-r" data-noi18n><span class="zd-p">${esc(r[0])}</span>${ks.filter(k=>m[k]).map(k=>`<div lang="${k}"><span class="k">${GLS[k]}</span>${esc(m[k])}</div>`).join("")}</div>`; }).join("")}<p class="zd-src" data-noi18n>CC-CEDICT · HanDeDict</p></details>`:s.dstate==="load"&&!s.en&&!s.de?`<p class="small muted wk-msg">正在查词典…</p>`:""}
     ${s.wk&&s.wk.state==="ok"&&!s.en?`<div class="wk" lang="en" data-noi18n>${s.wk.senses.map(x=>`<div class="wk-s"><span class="wk-p">${esc(x.pos)}</span><ol>${x.defs.map(d=>`<li>${esc(d.t)}</li>`).join("")}</ol></div>`).join("")}<a class="wk-src" href="${esc(s.wk.url)}" target="_blank" rel="noopener">Wiktionary ↗</a></div>`
@@ -3915,7 +3921,7 @@ function mgPaint(){
     ${s.sentence?`<p class="ex small zc" style="margin:0;font-style:normal" lang="zh-CN" data-noi18n>${esc(zs(s.sentence))}</p>`:""}
     ${s.sentence&&(hasTTS||canRecord)?shPaint():""}
     ${zStkHtml(s.lemma)}
-    <div class="row"><button class="btn primary" id="mg-ssave" type="button">${s.have?"放进生词堆":"收进生词"}</button><span class="small muted" id="mg-smsg"></span></div>`;
+    <span class="small muted" id="mg-smsg"></span>`;
     zStkMount(s.lemma); return; }
   $("#mg-sheet-in").innerHTML=`<div class="row"><span class="w" lang="${lang()}">${esc(s.lemma)}</span><span class="small muted">${esc([s.gender,s.pos].filter(Boolean).join(" · "))}</span><span class="spacer"></span><button class="ib" id="mg-ssay" aria-label="朗读">${I.spk}</button>${hasTTS&&MG.sIdx>=0?`<button class="ib" id="mg-sfrom" aria-label="从这句读">${I.play}</button>`:""}<button class="ib" id="mg-sx" aria-label="关闭">${I.x}</button></div>
     ${s.have?'<p class="small muted" style="margin:0">这个词已经在字匣里了，点保存会放进生词堆。</p>':""}
@@ -3930,6 +3936,9 @@ function mgPaint(){
 }
 /* 记下生词来自哪一篇（只记每日文章，「我的文章」「课文库」没有固定日期，不记） */
 function mgFromKey(){ const c=MG.cur; return c&&/^\d{4}-\d{2}-\d{2}$/.test(String(c.date))?c.date+"|"+c.i:undefined; }
+function mgSheart(){ const s=MG.sheet; if(!s) return; const ex=syFind("zh",s.lemma);
+  if(ex&&S.zh.pile[ex.id]){ pileRm(S.zh,ex.id); save(); renderStrip(); toast("已移出生词堆"); mgPaint(); return; }
+  mgSaveWord(); }
 function mgSaveWord(){
   const s=MG.sheet, it=MG.cur&&MG.cur.it; if(!s||!it) return;
   if(s.zh){
@@ -4014,7 +4023,7 @@ $("#tab-read").addEventListener("click",e=>{
 $("#mg-sheet").addEventListener("click",e=>{ const b=e.target.closest("button"); if(!b) return;
   if(b.id&&b.id.startsWith("sh-")){ shClick(b.id); return; }
   if(b.dataset.stk){ zStkAct(b.dataset.stk,+b.dataset.i); return; }
-  if(b.id==="mg-sx") mgClose(); else if(b.id==="mg-ssave") mgSaveWord(); else if(b.id==="mg-ssay"&&MG.sheet) speak(MG.sheet.lemma); else if(b.id==="mg-sfrom"){ const k=MG.sIdx; mgClose(); rdStart("art",k); } });
+  if(b.id==="mg-sx") mgClose(); else if(b.id==="mg-ssave") mgSaveWord(); else if(b.id==="mg-sheart") mgSheart(); else if(b.id==="mg-ssay"&&MG.sheet) speak(MG.sheet.lemma); else if(b.id==="mg-sfrom"){ const k=MG.sIdx; mgClose(); rdStart("art",k); } });
 $("#mg-sheet").addEventListener("keydown",e=>{ if(e.key==="Enter"&&e.target.id==="mg-zh-in"){ e.preventDefault(); mgSaveWord(); } });
 document.addEventListener("selectionchange",()=>{
   const btn=$("#mg-selbtn"); if(cur!=="read"){ btn.hidden=true; return; }
