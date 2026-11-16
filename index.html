@@ -1552,6 +1552,8 @@ nav.tabs{margin:24px 0 26px}
 /* 同步面板：邮箱登录在上，同步信息在下；面板内不再重复「用邮箱登录」按钮 */
 #sy-panel .acct-out{margin-top:14px}
 #sy-panel .acct-out .btn{display:none}
+/* 说明符号「i」用普通字体，不用斜体花体 */
+.hq summary{font-family:inherit!important;font-style:normal!important;font-weight:600!important;font-size:12px!important}
 </style>
 </head>
 <body>
@@ -5168,6 +5170,7 @@ const UI_DICT=[
 ["登录账户", "Sign in", "Anmelden", "Entrar", "登入帳戶"],
 ["用邮箱登录", "Sign in with email", "Mit E-Mail anmelden", "Entrar com e-mail", "用電子郵件登入"],
 ["管理账户", "Manage account", "Konto verwalten", "Gerenciar conta", "管理帳戶"],
+["登录后，学习进度、自录单词和「我的文章」会在你的所有设备之间自动同步；换手机或清理浏览器也不会丢。不登录也能完整使用，数据只保存在这台设备上。只用邮箱来登录，不发其他邮件，也不收集别的信息。", "Sign in and your progress, your own words and “My articles” sync automatically across all your devices — nothing is lost if you change phones or clear your browser. Without signing in, everything still works; your data just stays on this device. You sign in with email only: no other emails are sent, and no other information is collected.", "Mit Anmeldung werden Lernstand, eigene Wörter und „Meine Artikel“ automatisch auf allen deinen Geräten synchronisiert – auch bei einem neuen Handy geht nichts verloren. Ohne Anmeldung funktioniert alles genauso, die Daten bleiben nur auf diesem Gerät. Angemeldet wird nur mit der E-Mail-Adresse: Es werden keine anderen E-Mails verschickt und keine weiteren Informationen gesammelt.", "Entrando, seu progresso, suas palavras e “Meus artigos” sincronizam sozinhos em todos os seus aparelhos — nada se perde ao trocar de celular. Sem entrar, tudo continua funcionando; seus dados ficam só neste aparelho. O login é feito apenas por e-mail: nenhum outro e-mail é enviado e nenhuma outra informação é coletada.", "登入後，學習進度、自錄單字和「我的文章」會在你的所有裝置之間自動同步；換手機或清除瀏覽器也不會遺失。不登入也能完整使用，資料只保存在這台裝置上。只用電子郵件登入，不發其他郵件，也不收集其他資訊。"],
 ["登录后，学习进度、自录单词和「我的文章」会在你的所有设备之间自动同步；换手机或清理浏览器也不会丢。不登录也能完整使用，数据只保存在这台设备上。", "Sign in and your progress, your own words and “My articles” sync automatically across all your devices — nothing is lost if you change phones or clear your browser. Without signing in, everything still works; your data just stays on this device.", "Mit Anmeldung werden Lernstand, eigene Wörter und „Meine Artikel“ automatisch auf allen deinen Geräten synchronisiert – auch bei einem neuen Handy geht nichts verloren. Ohne Anmeldung funktioniert alles genauso, die Daten bleiben nur auf diesem Gerät.", "Entrando, seu progresso, suas palavras e “Meus artigos” sincronizam sozinhos em todos os seus aparelhos — nada se perde ao trocar de celular. Sem entrar, tudo funciona igual; os dados ficam só neste aparelho.", "登入後，學習進度、自錄單字和「我的文章」會在你的所有裝置之間自動同步；換手機或清理瀏覽器也不會遺失。不登入也能完整使用，資料只儲存在這台裝置上。"],
 ["导入", "Import", "Importieren", "Importar", "匯入"],
 ["导入文件", "Import file", "Datei importieren", "Importar arquivo", "匯入檔案"],
@@ -5536,6 +5539,7 @@ function uiObserve(){ UIMO.observe(document.body,{subtree:true,childList:true,ch
 function applyUILang(){
   document.documentElement.lang=uiLocale();
   document.title=UIL==="zh"?"字里 · Zili":UIL==="zht"?"字裡 · Zili":"Zili · 字里";
+  { const bz=document.querySelector(".brand-zh"); if(bz) bz.textContent=(UIL==="zh"||UIL==="zht")?"字里":"Zili"; }
   UIMO.disconnect(); trTree(document.body); uiObserve();
   const sel=$("#ui-lang"); if(sel) sel.value=UIL;
   const code=$("#ui-code"); if(code) code.textContent={zh:"简中",zht:"繁中",en:"EN",de:"DE",pt:"PT"}[UIL]||"EN";
