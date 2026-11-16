@@ -3084,7 +3084,7 @@ function mgColumn(){
   if(curT){ const t=jqTermNow()||{term:curT,md:cur[0].date.slice(5)};
     h+=`<div class="col-now"><p class="k"><span>现在的节气</span></p><p class="tn zc" lang="zh-CN">${esc(zs(curT))}<small data-noi18n>${esc(nm(t))} · ${esc(mdFmt(t.md))}</small></p><div class="col-t" style="border:0;padding:6px 0 0;grid-template-columns:minmax(0,1fr)"><div class="rs">${cur.map(x=>`<button data-mg="jq|${x.i}"><span class="lv">${esc(x.level)}</span><span class="t zc" lang="zh-CN">${esc(zs(x.title.replace(/^[^：]*：/,"")))}</span>${mgRead("jq",x.i)?'<span class="ok">✓</span>':""}</button>`).join("")}</div></div></div>`; }
   for(const se of SEASONS){ const ts=terms.filter(t=>t.season===se); if(ts.length) h+=`<div class="col-sea zc" lang="zh-CN">${esc(zs(se))}</div>`+ts.map(row).join(""); }
-  return mgLibList(null)+h;
+  return mgLibList(null); // 节气已经放在「专题」里，分级阅读不再重复显示
 }
 function mgJqList(pick){
   const xs=jqAll(lang()); if(!xs.length) return "";
