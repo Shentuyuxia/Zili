@@ -2971,7 +2971,8 @@ function pkRuby(text,gx){ // → [seg…]: the reader's own words and pinyin (sa
   }); });
   flush(); return out;
 }
-function mgTrBtns(it){ // translation toggles: the learner's helper languages first, then the others; one translation shown at a time
+function mgTrBtns(it){ return ""; } // 译文已跟随界面语言，阅读页不再显示 En/De/Pt 切换
+function mgTrBtnsOld(it){ // translation toggles: the learner's helper languages first, then the others; one translation shown at a time
   const ids={en:["mg-enb","English","English translation"],de:["mg-deb","Deutsch","Deutsche Übersetzung"],pt:["mg-ptb","Português","Tradução em português"]};
   const order=[...glSel(),"en","de","pt"].filter((k,n,a)=>ids[k]&&a.indexOf(k)===n);
   const btns=order.filter(k=>(it["paragraphs_"+k]||[]).length).map(k=>`<button class="tb" id="${ids[k][0]}" aria-pressed="${trL()===k}" aria-label="${ids[k][2]}" data-noi18n>${({en:"En",de:"De",pt:"Pt"})[k]}</button>`).join("");
