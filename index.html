@@ -1531,11 +1531,16 @@ nav.tabs{margin:24px 0 26px}
 .mg-ib svg{width:20px;height:20px;margin:0!important;display:block}
 .mg-ib.on{color:var(--muted)}
 .mg-ib.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.mg-favb[aria-pressed="true"]{color:#d4a017}
+.mg-favb[aria-pressed="true"]{color:#c0392b}
 .mg-hb{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;margin:-6px 0 -6px 4px;border:0;background:none;padding:0;color:var(--muted);cursor:pointer;vertical-align:middle;border-radius:50%}
 .mg-hb svg{width:18px;height:18px;display:block}
 .mg-hb[aria-pressed="true"]{color:#c0392b}
 .mg-blk h3 .mg-hb-gram{margin:-6px 0 -6px 8px}
+/* 收藏统一用爱心；词汇行的爱心靠右、淡色，不挤在词后面 */
+.mg-gl dt{position:relative;padding-right:34px}
+.mg-gl dt .mg-hb{position:absolute;right:0;top:50%;transform:translateY(-50%);margin:0;width:30px;height:30px;color:var(--muted);opacity:.45}
+.mg-gl dt .mg-hb[aria-pressed="true"]{opacity:1;color:#c0392b}
+.mg-gl dt .mg-hb:hover,.mg-gl dt .mg-hb:focus-visible{opacity:1}
 </style>
 </head>
 <body>
@@ -3093,7 +3098,7 @@ async function mgRender0(){
     ${qs.length?`<div class="mg-blk"><h3>想一想</h3><ol class="mg-q zc" data-noi18n lang="zh-CN">${qs.map(q=>`<li>${esc(zs(q))}</li>`).join("")}</ol></div>`:""}
     ${lang()==="zh"&&(it.paragraphs||[]).length?wrBlock(pick.date+"|"+pick.i):""}
     ${it.sources&&it.sources.length?`<div class="mg-blk mg-src"><h3>来源</h3><ul>${it.sources.map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>${s.license?`<span class="lic">${esc(s.license)}</span>`:""}</li>`).join("")}</ul></div>`:""}
-    <div class="mg-fin">${(()=>{ const on=mgFavOn(pick.date+"|"+pick.i); return `<button class="mg-ib mg-favb" data-favb="1" type="button" aria-pressed="${on}" aria-label="${on?"已收藏":"收藏"}" title="${on?"已收藏":"收藏"}">${svgI(STAR_P,on?"currentColor":"")}</button>`; })()}<button class="mg-ib" id="mg-share2" type="button" data-sk="${esc(pick.date)}/${esc(pick.i)}" aria-label="分享" title="分享">${svgI(SHARE_P)}</button><button class="mg-ib" id="mg-exp" type="button" aria-haspopup="menu" aria-label="导出" title="导出">${svgI('<path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 19.5h14"/>')}</button>${mgRead(pick.date,pick.i)?`<span class="mg-ib on" aria-label="已读" title="已读">${svgI(CHECK_P)}</span>`:`<button class="mg-ib primary" id="mg-done" type="button" aria-label="读完了" title="读完了">${svgI(CHECK_P)}</button>`}
+    <div class="mg-fin">${(()=>{ const on=mgFavOn(pick.date+"|"+pick.i); return `<button class="mg-ib mg-favb" data-favb="1" type="button" aria-pressed="${on}" aria-label="${on?"已收藏":"收藏"}" title="${on?"已收藏":"收藏"}">${svgI(HEART_P,on?"currentColor":"")}</button>`; })()}<button class="mg-ib" id="mg-share2" type="button" data-sk="${esc(pick.date)}/${esc(pick.i)}" aria-label="分享" title="分享">${svgI(SHARE_P)}</button><button class="mg-ib" id="mg-exp" type="button" aria-haspopup="menu" aria-label="导出" title="导出">${svgI('<path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 19.5h14"/>')}</button>${mgRead(pick.date,pick.i)?`<span class="mg-ib on" aria-label="已读" title="已读">${svgI(CHECK_P)}</span>`:`<button class="mg-ib primary" id="mg-done" type="button" aria-label="读完了" title="读完了">${svgI(CHECK_P)}</button>`}
     ${(()=>{ const k=es.findIndex(e=>e.date===pick.date&&e.i===pick.i); const nx=!pick.older&&k>=0?es[k+1]:null; return nx?`<button class="mg-ib" data-mg="${nx.date}|${nx.i}" type="button" aria-label="下一篇" title="下一篇">${svgI(ARROW_P)}</button>`:""; })()}</div>
     ${dlNote()}
   </article>`;
@@ -3996,7 +4001,7 @@ $("#tab-read").addEventListener("click",e=>{
       toast("已放进生词堆，可以在字卡里复习"); }
     const now=!on; b.setAttribute("aria-pressed",String(now)); b.innerHTML=svgI(HEART_P,now?"currentColor":"",18);
     b.setAttribute("aria-label",now?"已放进生词堆":"放进生词堆（字卡复习）"); b.setAttribute("title",b.getAttribute("aria-label")); return; }
-  else if(b.dataset.favb){ mgFavToggle(); const on=mgFavOn(MG.cur.date+"|"+MG.cur.i); $$("[data-favb]").forEach(x=>{ x.setAttribute("aria-pressed",on); if(x.classList.contains("mg-ib")){ x.innerHTML=svgI(STAR_P,on?"currentColor":""); x.setAttribute("aria-label",on?"已收藏":"收藏"); x.setAttribute("title",on?"已收藏":"收藏"); return; } x.innerHTML=`<span class="st" aria-hidden="true">${on?"★":"☆"}</span>${x.classList.contains("btn")?" ":""}<span>${esc(trOne(on?"已收藏":"收藏")||(on?"已收藏":"收藏"))}</span>`; }); mgFavList(); syLater(); }
+  else if(b.dataset.favb){ mgFavToggle(); const on=mgFavOn(MG.cur.date+"|"+MG.cur.i); $$("[data-favb]").forEach(x=>{ x.setAttribute("aria-pressed",on); if(x.classList.contains("mg-ib")){ x.innerHTML=svgI(HEART_P,on?"currentColor":""); x.setAttribute("aria-label",on?"已收藏":"收藏"); x.setAttribute("title",on?"已收藏":"收藏"); return; } x.innerHTML=`<span class="st" aria-hidden="true">${on?"★":"☆"}</span>${x.classList.contains("btn")?" ":""}<span>${esc(trOne(on?"已收藏":"收藏")||(on?"已收藏":"收藏"))}</span>`; }); mgFavList(); syLater(); }
   else if(id==="mg-exp"){ const c=MG.cur; if(c&&c.it) pkMenu(b,async()=>[pkDoc(c.it,c.date)],zs(c.it.title||"Zili").slice(0,60)); }
   else if(id==="mg-favexp"){ pkMenu(b,pkFavDocs,pkL("我的收藏")+" "+today()); }
   else if(id==="mg-done"){ const k=MG.cur.date+"|"+MG.cur.i; MGS.read[k]=1; mgSave(); mgRender();
