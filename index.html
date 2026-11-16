@@ -1554,6 +1554,9 @@ nav.tabs{margin:24px 0 26px}
 #sy-panel .acct-out .btn{display:none}
 /* 说明符号「i」用普通字体，不用斜体花体 */
 .hq summary{font-family:inherit!important;font-style:normal!important;font-weight:600!important;font-size:12px!important}
+.ownex-ed textarea,.ownex-ed input{width:100%}
+.ownex-ed .lab2{display:block;margin-bottom:4px}
+.ownex-acts .btn svg{width:14px;height:14px;vertical-align:-2px}
 </style>
 </head>
 <body>
@@ -2702,8 +2705,18 @@ function recRowsHTML(prefix,has){
 /* ---------- detail modal ---------- */
 let detailOpen=null;
 function openDetail(id){ const c=BYID.get(id); if(!c) return; detailOpen=id; document.body.classList.add("modal-open"); renderDetail(); }
-function closeDetail(){ cancelRec(); dicStop(); detailOpen=null; document.body.classList.remove("modal-open"); $("#detail-root").innerHTML="";
+function closeDetail(){ exEdit=null; cancelRec(); dicStop(); detailOpen=null; document.body.classList.remove("modal-open"); $("#detail-root").innerHTML="";
   if(cur==="today") renderCard(); else if(dkOn("browse")) renderBrowse(); else if(dkOn("pile")) renderPile(); }
+let exEdit=null;
+function exTrKey(){ const k=(typeof UIL!=="undefined"&&UIL==="de")?"exde":(typeof UIL!=="undefined"&&UIL==="pt")?"expt":"exen"; return k; }
+function ownRec(id){ return L().custom.find(x=>x.id===id); }
+function ownExHTML(c){ // example of a word you added yourself: edit or delete it here
+  const k=exTrKey();
+  if(exEdit===c.id) return `<div class="ownex-ed"><label class="lab2" for="d-ex">例句</label><textarea id="d-ex" rows="2" lang="${c.lang||""}">${esc(c.ex||"")}</textarea>
+    <label class="lab2" for="d-extr" style="margin-top:8px">例句翻译</label><input type="text" id="d-extr" value="${esc(c[k]||"")}">
+    <div class="row" style="margin-top:8px"><button class="btn primary sm" id="d-exsave" type="button">保存</button><button class="btn ghost sm" id="d-excancel" type="button">取消</button></div></div>`;
+  return (c.ex?exHTML(c,true):"")+`<div class="row ownex-acts" style="margin-top:6px">${c.ex?`<button class="btn ghost sm" id="d-exedit" type="button">${I.pen} 修改例句</button><button class="btn ghost sm" id="d-exdel" type="button">${I.x} 删除例句</button>`:`<button class="btn ghost sm" id="d-exedit" type="button">${I.pen} 添加例句</button>`}</div>`;
+}
 function renderDetail(note){
   const id=detailOpen, c=BYID.get(id); if(!c) return;
   const LL=L(), hasImg=!!LL.imgs[id], mine=mineOf(c), au=audsOf(id);
@@ -2714,7 +2727,7 @@ function renderDetail(note){
     <div class="mgrid">
       <div>
         ${glossHTML(c,false)}
-        <div style="margin-top:12px">${exHTML(c)}</div>
+        <div style="margin-top:12px">${c.custom?ownExHTML(c):exHTML(c)}</div>
         ${c.from&&String(c.from).includes("|")?(()=>{ const st=LL.srs[id], t=today(); const rv=!st?"还没开始学":st.d<=t?"今天该复习":"下次复习 "+st.d; return `<div class="src-row" style="margin-top:10px"><span class="small muted">读文章时收的 · ${esc(rv)}</span><span class="spacer"></span><button class="btn ghost sm" id="d-src" type="button">回到这篇文章 →</button></div>`; })():""}
         <div class="field" style="margin-top:16px"><label for="d-memo">记忆提示</label><div class="row" style="flex-wrap:nowrap"><input type="text" id="d-memo" value="${esc(memoOf(c))}" placeholder="谐音、画面、词根……"><button class="btn sm" id="d-memo-save" type="button">保存</button></div></div>
         <div class="field" style="margin-top:6px"><span class="lab2">我的例句</span>
@@ -2742,6 +2755,17 @@ function renderDetail(note){
   const root=$("#detail-root");
   $("#d-scrim").addEventListener("mousedown",e=>{ if(e.target.id==="d-scrim") closeDetail(); });
   $("#d-close").onclick=closeDetail;
+  { const r=ownRec(id);
+    const ed=$("#d-exedit"); if(ed) ed.onclick=()=>{ exEdit=id; renderDetail(); const t=$("#d-ex"); if(t) t.focus(); };
+    const cc=$("#d-excancel"); if(cc) cc.onclick=()=>{ exEdit=null; renderDetail(); };
+    const sv=$("#d-exsave"); if(sv) sv.onclick=()=>{ if(!r) return; const k=exTrKey(), ex=$("#d-ex").value.trim(), tr=$("#d-extr").value.trim();
+      if(ex!==(r.ex||"")){ r.ex=ex; ["exzh","exen","exde","expt"].forEach(x=>{ if(x!==k) delete r[x]; }); }
+      if(tr) r[k]=tr; else delete r[k]; if(!ex) ["exzh","exen","exde","expt"].forEach(x=>delete r[x]);
+      r.u=Date.now(); exEdit=null; save(); rebuildCards(); renderDetail(ex?"例句已保存":"例句已删除"); };
+    const dl=$("#d-exdel"); if(dl) dl.onclick=()=>{ if(!r) return;
+      if(dl.dataset.sure!=="1"){ dl.dataset.sure="1"; dl.innerHTML="再点一次确认删除"; return; }
+      r.ex=""; r.u=Date.now(); ["exzh","exen","exde","expt"].forEach(x=>delete r[x]); save(); rebuildCards(); renderDetail("例句已删除"); };
+  }
   $("#d-say").onclick=()=>speak(c.w);
   { const ds=$("#d-src"); if(ds) ds.onclick=()=>{ closeDetail(); mgJump(c.from); }; }
   $("#d-std").onclick=()=>speak(c.ex?c.w+"。"+c.ex:c.w);
@@ -4259,8 +4283,8 @@ function syMergeState(A,B){
   for(const l of Object.keys(LANG)){
     const a=A[l]||blank(), b=B[l]||blank(), m=o[l];
     const del=m.del=tsMax(a.del,b.del), pdel=m.pileDel=tsMax(a.pileDel,b.pileDel);
-    const ids=new Set(a.custom.map(c=>c.id));
-    m.custom=[...a.custom,...b.custom.filter(c=>!ids.has(c.id))].filter(c=>!del[c.id]);
+    const bm=new Map(b.custom.map(c=>[c.id,c])), ids=new Set(a.custom.map(c=>c.id));
+    m.custom=[...a.custom.map(c=>{ const o=bm.get(c.id); return o&&(o.u||0)>(c.u||0)?o:c; }),...b.custom.filter(c=>!ids.has(c.id))].filter(c=>!del[c.id]);
     m.srs={}; for(const id of new Set([...Object.keys(a.srs),...Object.keys(b.srs)])){ if(del[id]) continue;
       const x=a.srs[id], y=b.srs[id]; const sc=s=>s?[(s.t||0),(s.r||0)+(s.l||0),String(s.d||"")]:null;
       if(!x||!y){ m.srs[id]=x||y; continue; } const p=sc(x), q=sc(y);
