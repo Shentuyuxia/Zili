@@ -2,7 +2,7 @@
 // App files: served from cache, refreshed in the background.
 // Reading texts (reading/*) and word lists (data/*): network first, so new texts show up right away; cache is the offline fallback.
 // Only caches named "zili-…" are touched: other apps on the same site keep theirs.
-const CACHE = "zili-v146"
+const CACHE = "zili-v147"
 const OCRC = "zili-ocr-v1"; // photo-recognition models (~18 MB): cache first, kept across app updates
 const DICT = "zili-dict-v3"; // dictionary and stroke files: cache first (they only change when DICT is bumped)
 const SHELL = ["./", "./index.html", "./manifest.webmanifest", "./fonts/fonts.css", "./vendor/pinyin-pro.js", "./vendor/printkit.js"];
@@ -17,6 +17,10 @@ self.addEventListener("fetch", e => {
   if (req.method !== "GET") return;
   const url = new URL(req.url);
   if (url.origin !== self.location.origin) return; // never touch API calls
+  if (/\/(privacy|copyright)\.html$/.test(url.pathname)) { // info pages: always the newest text, cache only offline
+    e.respondWith(fetch(req).then(res => { if (res && res.ok) { const copy = res.clone(); caches.open(CACHE).then(c => c.put(req, copy)); } return res; }).catch(() => caches.match(req)));
+    return;
+  }
   if (url.pathname.includes("/dict/") || url.pathname.includes("/strokes/") || url.pathname.includes("/vendor/ocr/")) {
     e.respondWith(caches.open(url.pathname.includes("/vendor/ocr/") ? OCRC : DICT).then(async c => {
       const hit = await c.match(req, { ignoreSearch: true });
