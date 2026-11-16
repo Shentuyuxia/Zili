@@ -5539,7 +5539,6 @@ function uiObserve(){ UIMO.observe(document.body,{subtree:true,childList:true,ch
 function applyUILang(){
   document.documentElement.lang=uiLocale();
   document.title=UIL==="zh"?"字里 · Zili":UIL==="zht"?"字裡 · Zili":"Zili · 字里";
-  { const bz=document.querySelector(".brand-zh"); if(bz) bz.textContent=(UIL==="zh"||UIL==="zht")?"字里":"Zili"; }
   UIMO.disconnect(); trTree(document.body); uiObserve();
   const sel=$("#ui-lang"); if(sel) sel.value=UIL;
   const code=$("#ui-code"); if(code) code.textContent={zh:"简中",zht:"繁中",en:"EN",de:"DE",pt:"PT"}[UIL]||"EN";
