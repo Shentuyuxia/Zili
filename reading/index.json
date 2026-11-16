@@ -1,6 +1,18 @@
 {
- "updated": "2026-11-15T03:38:59Z",
+ "updated": "2026-11-16T03:39:43Z",
  "days": [
+  {
+   "date": "2026-11-16",
+   "items": [
+    {
+     "i": 0,
+     "lang": "zh",
+     "title": "慢慢走的“叮叮”",
+     "kind": "feature",
+     "level": "HSK5"
+    }
+   ]
+  },
   {
    "date": "2026-11-15",
    "items": [
