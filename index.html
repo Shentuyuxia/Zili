@@ -3909,13 +3909,14 @@ function mgPaint(){
   el.hidden=false;
   if(s.zh){ const gl=glSel(), glm=gl.some(k=>s[k])?gl:["en","de","pt"].filter(k=>s[k]).slice(0,1);
     const sEx=syFind("zh",s.lemma), sOn=!!(sEx&&S.zh.pile[sEx.id]);
+    if(sOn&&!s.mine) s.mine=mgNoteOf(sEx.id);
     $("#mg-sheet-in").innerHTML=`<div class="row"><span class="wp"><span class="py" data-noi18n>${esc(s.py||"")}</span><span class="w zc${[...s.lemma].length>3?" long":""}" lang="zh-CN" data-noi18n>${zToneText(s.lemma,s.py)}</span></span><span class="small muted">${esc(s.pos||"")}</span><span class="spacer"></span><button class="ib" id="mg-ssay" aria-label="朗读">${I.spk}</button>${hasTTS&&MG.sIdx>=0?`<button class="ib" id="mg-sfrom" aria-label="从这句读">${I.play}</button>`:""}<button class="ib mg-sheart" id="mg-sheart" type="button" aria-pressed="${sOn}" aria-label="${sOn?"已放进生词堆":"放进生词堆"}" title="${sOn?"已放进生词堆":"放进生词堆"}">${svgI(HEART_P,sOn?"currentColor":"",20)}</button><button class="ib" id="mg-sx" aria-label="关闭">${I.x}</button></div>
     ${s.have&&!sOn?'<p class="small muted" style="margin:0">这个词已经在字匣里了，点爱心放进生词堆。</p>':""}
     ${s.en||s.de||s.pt?`<div class="zgl-l" data-noi18n>${glm.filter(k=>s[k]).map(k=>`<div lang="${k}"><span class="k">${GLS[k]}</span>${esc(s[k])}</div>`).join("")}</div>`:""}
     ${s.dict&&s.dict.length?`<details class="zd"${!(s.en||s.de||s.pt)||s.dict.length>1?" open":""}><summary>词典${s.hsk?` <span class="zd-h" data-noi18n>HSK ${s.hsk}</span>`:""}${s.dict.length>1?` <span class="zd-n" data-noi18n>${s.dict.length} × pinyin</span>`:""}</summary>${s.dict.map((r,i)=>{ const m={en:r[1],de:r[2],pt:i===0?ptOf(s.lemma):""}, ks=gl.some(k=>m[k])?gl:["en","de"].filter(k=>m[k]).slice(0,1); return `<div class="zd-r" data-noi18n><span class="zd-p">${esc(r[0])}</span>${ks.filter(k=>m[k]).map(k=>`<div lang="${k}"><span class="k">${GLS[k]}</span>${esc(m[k])}</div>`).join("")}</div>`; }).join("")}<p class="zd-src" data-noi18n>CC-CEDICT · HanDeDict</p></details>`:s.dstate==="load"&&!s.en&&!s.de?`<p class="small muted wk-msg">正在查词典…</p>`:""}
     ${s.wk&&s.wk.state==="ok"&&!s.en?`<div class="wk" lang="en" data-noi18n>${s.wk.senses.map(x=>`<div class="wk-s"><span class="wk-p">${esc(x.pos)}</span><ol>${x.defs.map(d=>`<li>${esc(d.t)}</li>`).join("")}</ol></div>`).join("")}<a class="wk-src" href="${esc(s.wk.url)}" target="_blank" rel="noopener">Wiktionary ↗</a></div>`
       :s.wk&&s.wk.state==="load"&&!s.en&&!s.de?`<p class="small muted wk-msg">正在查 Wiktionary…</p>`:s.wk&&s.wk.state==="none"&&!s.en&&!s.de?`<p class="small muted wk-msg">Wiktionary 没有收这个词</p>`:""}
-    <label class="small muted" for="mg-zh-in">我的释义（可选）</label>
+    <label class="small muted" for="mg-zh-in">我的笔记（可选）</label>
     <input type="text" id="mg-zh-in" value="${esc(s.mine||"")}" autocomplete="off">
     ${s.note?`<p class="small muted" style="margin:0" data-noi18n>${esc(s.note)}</p>`:""}
     ${s.sentence?`<p class="ex small zc" style="margin:0;font-style:normal" lang="zh-CN" data-noi18n>${esc(zs(s.sentence))}</p>`:""}
@@ -3936,6 +3937,13 @@ function mgPaint(){
 }
 /* 记下生词来自哪一篇（只记每日文章，「我的文章」「课文库」没有固定日期，不记） */
 function mgFromKey(){ const c=MG.cur; return c&&/^\d{4}-\d{2}-\d{2}$/.test(String(c.date))?c.date+"|"+c.i:undefined; }
+/* 笔记：存在生词的 memo 里（第一行是笔记，「出自…」那行保留） */
+function mgNoteOf(id){ return String(S.zh.memo[id]||"").split("\n").filter(x=>x&&!x.startsWith("出自")).join("\n"); }
+function mgSaveNote(id,mine){ const src=String(S.zh.memo[id]||"").split("\n").filter(x=>x.startsWith("出自"));
+  const m=[mine,...src].filter(Boolean).join("\n"); if(m) S.zh.memo[id]=m; else delete S.zh.memo[id]; save(); }
+$("#mg-sheet").addEventListener("focusout",e=>{ if(e.target.id!=="mg-zh-in") return; const s=MG.sheet; if(!s||!s.zh) return;
+  const ex=syFind("zh",s.lemma); if(!(ex&&S.zh.pile[ex.id])) return;
+  const mine=(e.target.value||"").trim(); if(mine===mgNoteOf(ex.id)) return; s.mine=mine; mgSaveNote(ex.id,mine); toast("笔记已保存"); });
 function mgSheart(){ const s=MG.sheet; if(!s) return; const ex=syFind("zh",s.lemma);
   if(ex&&S.zh.pile[ex.id]){ pileRm(S.zh,ex.id); save(); renderStrip(); toast("已移出生词堆"); mgPaint(); return; }
   mgSaveWord(); }
@@ -3943,10 +3951,10 @@ function mgSaveWord(){
   const s=MG.sheet, it=MG.cur&&MG.cur.it; if(!s||!it) return;
   if(s.zh){
     const mine=($("#mg-zh-in").value||"").trim(); s.mine=mine;
-    const v={lang:"zh",word:s.word,lemma:s.lemma,py:s.py,en:s.en||(!s.de&&!s.pt?wkShort(s):""),de:s.de,pt:s.pt,pos:s.pos,note:s.note,sentence:s.sentence,source:it.title,date:MG.cur.date,level:it.level,from:mgFromKey()};
-    if(mine) v[glSel()[0]]=mine;
+    const v={lang:"zh",word:s.word,lemma:s.lemma,py:s.py,en:s.en||(!s.de&&!s.pt?wkShort(s):""),de:s.de,pt:s.pt,pos:s.pos,note:[mine,s.note].filter(Boolean).join("\n"),sentence:s.sentence,source:it.title,date:MG.cur.date,level:it.level,from:mgFromKey()};
     if(!v.en&&!v.de&&!v.pt){ $("#mg-smsg").textContent="先填一个释义。"; $("#mg-zh-in").focus(); return; }
     const r=addFromReader(v);
+    { const ex=syFind("zh",s.lemma); if(mine&&ex&&r!=="bad") mgSaveNote(ex.id,mine); }
     toast(r==="ok"?"已收进「"+zs(s.lemma)+"」，在生词堆里":r==="dup"?"已经在字匣里，放进了生词堆":"没有保存");
     MG.sheet=null; mgPaint(); $$(".mg-w.on").forEach(x=>x.classList.remove("on"));
     if(r==="ok") mgRender(); return; }
