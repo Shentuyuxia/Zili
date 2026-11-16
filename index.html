@@ -1548,9 +1548,10 @@ nav.tabs{margin:24px 0 26px}
 .mg-sheet .mg-sheart[aria-pressed="true"]{color:#c0392b}
 .mg-sw button[aria-pressed="true"]{background:var(--surface)!important;color:var(--ink)!important}
 /* 多设备同步：放在面板里，样式与其他面板一致（不再是单独的框） */
-#sy-panel .acct-out,#sy-panel .acct-in{background:none;border:0;padding:0;margin:0 0 6px}
+/* 账号卡片：面板顶部的小窗口，下面紧接同步信息 */
+#sy-panel .acct{margin:0 0 12px}
+#sy-panel .acct-out,#sy-panel .acct-in{padding:10px 14px;margin:0}
 /* 同步面板：邮箱登录在上，同步信息在下；面板内不再重复「用邮箱登录」按钮 */
-#sy-panel .acct-out{margin-top:14px}
 #sy-panel .acct-out .btn{display:none}
 /* 说明符号「i」用普通字体，不用斜体花体 */
 .hq summary{font-family:inherit!important;font-style:normal!important;font-weight:600!important;font-size:12px!important}
@@ -1793,6 +1794,7 @@ nav.tabs{margin:24px 0 26px}
     <div class="side" style="gap:22px">
       <div class="panel" id="sy-panel">
 
+        <div class="acct" data-acct></div>
         <div id="sy-sb">
           <p class="note" id="sb-off" hidden>邮箱登录还在准备中，开通后这里就能用。</p>
           <div id="sb-out">
@@ -1831,7 +1833,6 @@ nav.tabs{margin:24px 0 26px}
           </div>
         </div>
 
-        <div class="acct" data-acct></div>
         <p class="small muted" id="sy-msg" style="margin:8px 0 0" aria-live="polite"></p>
       </div>
       <div class="panel">
