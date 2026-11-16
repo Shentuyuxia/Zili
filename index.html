@@ -1523,6 +1523,8 @@ nav.tabs{margin:24px 0 26px}
 @media (max-width:640px){ nav.tabs{padding-top:6px!important;padding-bottom:calc(6px + env(safe-area-inset-bottom,0px))!important;align-items:center!important} }
 /* 底部选项卡：图标和文字在栏的中线上 */
 @media (max-width:640px){ nav.tabs{align-items:center!important} nav.tabs>*{align-self:center!important} nav.tabs button{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%} }
+/* 底栏：图标+文字作为整体居中 */
+@media (max-width:640px){ nav.tabs button.dict-tab svg{margin-top:0!important} nav.tabs button .tl{line-height:1.25} }
 </style>
 </head>
 <body>
