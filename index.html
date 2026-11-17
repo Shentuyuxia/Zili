@@ -1589,6 +1589,11 @@ nav.tabs{margin:24px 0 26px}
 #sy-panel .hq > p{flex-basis:100%;order:5;margin:4px 0 0}
 #sy-panel .hq:not([open]) > p{display:none}
 #sy-panel .acct-out{background:none!important;border:0!important;box-shadow:none!important;padding:0!important;margin:14px 0 0!important}
+/* 同步面板（登录后）：账号卡在最上；说明行用标题 + i；按钮前留间距 */
+#sy-panel .sy-about{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin:18px 0 6px}
+#sy-panel .sy-about > b{font-weight:600}
+#sy-panel #sb-in > .row{margin-top:22px!important;gap:10px}
+#sy-panel #sb-in > .tog{margin-top:12px}
 </style>
 </head>
 <body>
@@ -1814,6 +1819,7 @@ nav.tabs{margin:24px 0 26px}
   <section id="tab-settings" class="grid" hidden>
     <div class="side" style="gap:22px">
       <div class="panel" id="sy-panel">
+        <div class="acct" data-acct></div>
         <div id="sy-sb">
           <p class="note" id="sb-off" hidden>邮箱登录还在准备中，开通后这里就能用。</p>
           <div id="sb-out">
@@ -1824,12 +1830,14 @@ nav.tabs{margin:24px 0 26px}
               <div class="row"><button class="btn primary sm" id="sb-verify" type="button">登录</button><button class="btn ghost sm" id="sb-resend" type="button">重新发送</button></div>
             </div>
             <p class="note hint" style="margin-top:8px">第一次登录会自动创建账号。验证码 1 小时内有效。</p>
+            <p class="note" style="margin-top:8px">如果你需要在不同设备使用，并同步学习进度，建议注册一个账号。</p>
             <details class="sy-how" id="sb-pwbox" style="margin-top:12px"><summary>用密码登录</summary>
               <div class="field" style="margin-top:8px"><label for="sb-pw">密码</label><input type="password" id="sb-pw" autocomplete="current-password"></div>
               <div class="row"><button class="btn sm" id="sb-pwgo" type="button">登录</button></div>
               <p class="note hint" style="margin-top:6px">登录后可以在这里设置密码，以后就不用每次收邮件。</p>
             </details>
           </div>
+          <div class="sy-about"><b>多设备同步</b><details class="hq"><summary aria-label="说明">i</summary><p>登录后，学习进度、自录单词和「我的文章」会在你的所有设备之间自动同步；换手机或清理浏览器也不会丢。不登录也能完整使用，数据只保存在这台设备上。只用邮箱来登录，不发其他邮件，也不收集别的信息。<a href="privacy.html" target="_blank" rel="noopener">隐私说明</a></p></details></div>
           <div id="sb-in" hidden>
             <p class="note" style="margin-top:10px"><b id="sb-who" hidden></b><span id="sb-last"></span></p>
             <div id="sb-needpass" hidden>
@@ -1852,7 +1860,6 @@ nav.tabs{margin:24px 0 26px}
           </div>
         </div>
 
-        <div class="acct" data-acct></div>
         <p class="small muted" id="sy-msg" style="margin:8px 0 0" aria-live="polite"></p>
       </div>
       <div class="panel">
@@ -4450,7 +4457,7 @@ function renderAcct(){
   $$("[data-acct]").forEach(el=>{
     el.innerHTML= on
       ? `<div class="acct-in"><span class="av">${esc(ini)}</span><div class="who"><b>${esc(email)}</b><span>${SY.err?esc(SY.err):(last?"已同步 · "+esc(last):"已开启多设备同步")}</span></div><button class="btn sm" type="button" data-acctgo="1">管理账户</button></div>`
-      : `<div class="acct-out"><div><b>多设备同步</b><details class="hq"><summary aria-label="说明">i</summary><p>登录后，学习进度、自录单词和「我的文章」会在你的所有设备之间自动同步；换手机或清理浏览器也不会丢。不登录也能完整使用，数据只保存在这台设备上。只用邮箱来登录，不发其他邮件，也不收集别的信息。<a href="privacy.html" target="_blank" rel="noopener">隐私说明</a></p></details></div><button class="btn primary sm" type="button" data-acctgo="1">用邮箱登录</button></div>`;
+      : "";
   });
 }
 document.addEventListener("click",e=>{ const b=e.target.closest("[data-acctgo]"); if(!b) return; showTab("settings"); renderSync(); setTimeout(()=>{ const p=$("#sy-panel"); if(p) p.scrollIntoView({behavior:"smooth",block:"start"}); const em=$("#sb-email"); if(em&&!em.closest("[hidden]")) em.focus({preventScroll:true}); },60); });
@@ -4458,7 +4465,7 @@ function renderSync(){
   renderAcct();
   const sbIn=SY.mode==="sb"&&!!SY.refresh;
   $("#sb-off").hidden=sbReady(); $("#sb-out").hidden=!sbReady()||sbIn; $("#sb-in").hidden=!sbIn;
-  if(sbIn){ $("#sb-who").textContent=SY.email||""; $("#sb-last").textContent=SY.err||(SY.last?"上次同步："+new Date(SY.last).toLocaleString(uiLocale()):"还没同步过。");
+  if(sbIn){ $("#sb-who").textContent=SY.email||""; $("#sb-last").textContent=SY.err||(SY.last?(trOne("上次同步：")||"上次同步：")+new Date(SY.last).toLocaleString(uiLocale()):(trOne("还没同步过。")||"还没同步过。"));
     $("#sb-mine-on").checked=SY.mine!==false; $("#sb-enc").checked=!!SY.pass; $("#sb-needpass").hidden=!SY.needPass; if(!SY.pass&&!$("#sb-enc").checked) $("#sb-encset").hidden=true; }
 }
 /* --- email login --- */
@@ -5308,6 +5315,8 @@ const UI_DICT=[
 ["原句 → 我的", "Original → mine", "Original → meins", "Original → minha", "原句 → 我的"],
 ["关闭笔顺功能", "Turn off stroke order", "Strichfolge ausschalten", "Desativar ordem dos traços", "關閉筆順功能"],
 ["（在「设置」里可以再打开）", "(you can turn it back on in Settings)", "(in den Einstellungen wieder einschaltbar)", "(pode reativar em Configurações)", "（在「設定」裡可以再開啟）"],
+["邮件里的验证码（或长按邮件里的登录链接，拷贝后粘贴到这里）", "Code from the email (or long-press the sign-in link in the email, copy it and paste here)", "Code aus der E-Mail (oder lang auf den Anmeldelink in der E-Mail drücken, kopieren und hier einfügen)", "Código do e-mail (ou pressione e segure o link de login no e-mail, copie e cole aqui)", "郵件裡的驗證碼（或長按郵件裡的登入連結，複製後貼到這裡）"],
+["如果你需要在不同设备使用，并同步学习进度，建议注册一个账号。", "If you want to use Zili on several devices and keep your progress in sync, we recommend creating an account.", "Wenn du Zili auf mehreren Geräten nutzen und deinen Lernstand synchron halten willst, empfehlen wir ein Konto.", "Se quiser usar a Zili em vários aparelhos e manter seu progresso sincronizado, recomendamos criar uma conta.", "如果你需要在不同裝置使用，並同步學習進度，建議註冊一個帳號。"],
 ["笔顺", "Stroke order", "Strichfolge", "Ordem dos traços", "筆順"],
 ["画", "strokes", "Striche", "traços", "畫"],
 ["描", "Trace", "Nachfahren", "Traçar", "描"],
