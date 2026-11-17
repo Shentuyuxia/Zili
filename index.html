@@ -1578,6 +1578,17 @@ nav.tabs{margin:24px 0 26px}
 #tab-dict:not(.dsheet) #dict-host .dict-search,#tab-dict:not(.dsheet) #dict-host form,#tab-dict:not(.dsheet) #dict-host .dict-row{display:flex;justify-content:center;flex-wrap:wrap;align-items:center;gap:8px}
 #tab-dict .dic-pad{justify-items:center}
 #tab-dict .dic-cands,#tab-dict .dic-padacts{justify-self:center;justify-content:center}
+/* 笔顺提示：放在卡片下方、总览上方 */
+.stk-tip{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:10px 0 4px}
+.stk-tip[hidden]{display:none}
+/* 同步：说明文字后面的「i」，点开展示说明 */
+#sy-panel .acct-out > div:first-child{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px}
+#sy-panel .hq{display:contents}
+#sy-panel .hq > summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;border:1px solid var(--line);background:var(--surface);font-family:inherit!important;font-style:normal!important;font-size:12px;font-weight:600;color:var(--muted)}
+#sy-panel .hq > summary::-webkit-details-marker{display:none}
+#sy-panel .hq > p{flex-basis:100%;order:5;margin:4px 0 0}
+#sy-panel .hq:not([open]) > p{display:none}
+#sy-panel .acct-out{background:none!important;border:0!important;box-shadow:none!important;padding:0!important;margin:14px 0 0!important}
 </style>
 </head>
 <body>
@@ -1726,6 +1737,7 @@ nav.tabs{margin:24px 0 26px}
       <div class="sesshead"><h2 id="sess-title">今日学习</h2><div class="row" id="sess-actions"></div></div>
       <div class="bar"><i id="sess-bar"></i></div>
       <div id="card-area"><div class="empty"><b>正在载入字匣…</b></div></div>
+      <p class="stk-tip" id="stk-tip" hidden><button class="btn ghost sm" type="button" id="stk-off">关闭笔顺功能</button><span class="small muted">（在「设置」里可以再打开）</span></p>
       <details class="ov-box" id="ov-box"><summary><span class="ov-t">学习总览</span><span class="small muted" id="ov-sum"></span></summary>
         <div id="stats-main"></div>
         <p class="note hint" style="margin-top:12px">复习间隔：「忘了」当天重来；「模糊」间隔略增；「记得」按 1 → 3 → 约 7 → 约 18 天递增；「简单」跳得更远。间隔达到 30 天以上的词算「精通」。</p>
@@ -1802,8 +1814,6 @@ nav.tabs{margin:24px 0 26px}
   <section id="tab-settings" class="grid" hidden>
     <div class="side" style="gap:22px">
       <div class="panel" id="sy-panel">
-
-        <div class="acct" data-acct></div>
         <div id="sy-sb">
           <p class="note" id="sb-off" hidden>邮箱登录还在准备中，开通后这里就能用。</p>
           <div id="sb-out">
@@ -1842,14 +1852,14 @@ nav.tabs{margin:24px 0 26px}
           </div>
         </div>
 
+        <div class="acct" data-acct></div>
         <p class="small muted" id="sy-msg" style="margin:8px 0 0" aria-live="polite"></p>
       </div>
       <div class="panel">
         <h3 class="ph3">界面</h3>
         <label class="tog"><input type="checkbox" id="opt-hints"> 显示说明文字</label>
         <div class="field" style="margin:10px 0 0"><label for="opt-focus">先学什么</label><select id="opt-focus"><option value="read">先学阅读</option><option value="py">先学拼音</option></select></div>
-        <label class="tog"><input type="checkbox" id="opt-dtab"> 底部栏显示字典页（关闭时用右下角的查字按钮）</label>
-        <button class="btn ghost sm" type="button" id="onb-again" style="margin-top:10px">重新看新手引导</button> <button class="btn ghost sm" type="button" id="wn-open" style="margin-top:10px">更新记录</button>
+        <button class="btn ghost sm" type="button" id="onb-again" style="margin-top:10px">重新看新手引导</button>
         <div class="field" id="voice-row" style="margin-top:14px" hidden><label for="opt-voice">朗读语音</label>
           <div class="row" style="flex-wrap:nowrap"><select id="opt-voice"></select><button class="btn sm" id="voice-test" type="button">试听</button></div>
           <p class="note hint">★ 是增强/高级语音，听起来更自然。iPhone 可在「设置 → 辅助功能 → 朗读内容 → 声音 → 中文」里下载，比如 Tingting 或 Lilian（增强版）。</p></div>
@@ -2591,6 +2601,7 @@ function flip(){
 function grade(g){
   if(!sess||!sess.cur||!sess.flipped) return;
   const c=sess.cur.c, LL=L(), log=lg();
+  S.settings.cardN=(S.settings.cardN||0)+1; stkTip();
   let st=LL.srs[c.id]; const isNew=!st;
   if(!st) st={e:2.5,i:0,r:0,l:0,f:today()};
   if(g===0){ st.l=(st.l||0)+1; st.e=Math.max(1.3,st.e-0.2); st.i=0; st.r=0; st.d=today();
@@ -2620,7 +2631,7 @@ function togglePile(id){
 function fhN(){ try{ return +localStorage.getItem("zl-fh")||0; }catch(e){ return 0; } }
 /* Chinese words are the star of the card: big for 1-2 characters, a bit smaller for longer ones */
 function wSize(c){ if(c.lang!=="zh") return ""; const n=[...String(c.w||"")].length; return n<=2?" zx":n<=4?" zl":""; }
-function renderCard(){
+function renderCard(){ stkTip();
   const area=$("#card-area");
   $("#sess-title").textContent=sess?sess.title:"今日学习"; { const sh=$("#sess-title").parentElement; if(sh) sh.hidden=!sess||sess.mode==="daily"; }
   $("#sess-actions").innerHTML= sess&&sess.mode!=="daily" ? `<button class="btn ghost sm" id="back-daily">返回今日学习</button>` : "";
@@ -3540,7 +3551,9 @@ function zStkAct(act,i){ const o=STK.w[i]; if(!o) return;
 }
 /* ---------- 米字格 on the flashcard: watch the strokes, then write along ---------- */
 const MZ={key:"",cs:[],i:0,hw:null,quiz:false};
-const cardStkOn=()=>S.settings.cardStk===true; /* stroke order is opt-in */
+const cardStkOn=()=>S.settings.cardStk!==false; /* 笔顺默认开启；在「设置」里可以关 */
+const stkTipOn=()=>cardStkOn()&&(S.settings.cardN||0)<5; /* 刷满 5 次词汇卡后，「关闭笔顺」提示消失 */
+function stkTip(){ const el=$("#stk-tip"); if(el) el.hidden=!stkTipOn(); }
 function mzHtml(c){
   if(c.lang!=="zh"||!cardStkOn()) return ""; const cs=zStkChars(c.w); if(!cs.length) return "";
   return `<div class="mz" id="mz">${onbActive()&&!(onb().t||{}).write?`<p class="onb-tip" style="margin:0">✍️ <span>先看一遍笔顺，再点「跟着写」，用手指在格子里写。</span></p>`:""}${cs.length>1?`<div class="mz-chips" data-noi18n>${cs.map((ch,i)=>`<button type="button" data-mzi="${i}" aria-pressed="${i===0}">${esc(ch)}</button>`).join("")}</div>`:""}
@@ -3801,7 +3814,8 @@ const onbTasks=()=>{ const o=onb(), f=focusSet()||(o&&o.who==="zero"?"py":"read"
 const ONB_TASKS=[["read","读一篇短文，点一个不认识的词","read"],["save","把一个词收进生词","read"],["cards","学完今天的新词卡","today"],["write","在米字格里跟着写一个字","today"]];
 function onbTick(k){ const o=onb(); if(!o||o.hide||(o.t&&o.t[k])) return; o.t=Object.assign({},o.t,{[k]:Date.now()}); save(); onbDay();
   const left=onbTasks().filter(([x])=>!o.t[x]).length; if(!left) toast(trOne("第一天完成了！明天回来复习今天的词。")||""); }
-function onbDay(){ const el=$("#onb-day"); if(!el) return; const o=onb(); try{ focusCard(); }catch(e){}
+function onbDay(){ const el=$("#onb-day"); if(!el) return; try{ focusCard(); }catch(e){}
+  el.innerHTML=""; return; /* 「你的第一天」区域已取消 */
   if(!onbActive()){ el.innerHTML=""; return; }
   const t=o.t||{}, TK=onbTasks(), done=TK.filter(([k])=>t[k]).length, all=done===TK.length;
   el.innerHTML=`<div class="onb-day"><button class="ib sm x" type="button" id="onb-hide" aria-label="关闭">${I.x}</button>
@@ -4542,7 +4556,7 @@ function renderSettings(){
   $("#gl-checks").innerHTML=LANG[l].gl.map(k=>`<label><input type="checkbox" value="${k}" ${S.settings.gloss[l].includes(k)?"checked":""}> ${GLN[k]}</label>`).join("");
   $("#dir-t2g").checked=S.settings.dir==="t2g"; $("#dir-g2t").checked=S.settings.dir==="g2t";
   $("#scr-s").checked=scr()==="s"; $("#scr-t").checked=scr()==="t"; $("#opt-py").checked=pyOn(); { const cs=$("#opt-cardstk"); if(cs) cs.checked=cardStkOn(); }renderToneSw(); { const o=$("#opt-tone"); if(o) o.checked=tonesOn(); $$("[data-tc]").forEach(x=>x.checked=toneSel().includes(+x.dataset.tc)); const tw=$(S.settings.toneWhere==="py"?"#tw-py":"#tw-all"); if(tw) tw.checked=true; }
-  $("#opt-dtab").checked=dtabOn(); $("#opt-focus").value=focusSet()||"read"; $("#opt-autopile").checked=!!S.settings.autoPile; $("#opt-autospeak").checked=!!S.settings.autoSpeak; $("#opt-imgfront").checked=!!S.settings.imgFront; $("#opt-automine").checked=!!S.settings.autoMine;
+$("#opt-focus").value=focusSet()||"read"; $("#opt-autopile").checked=!!S.settings.autoPile; $("#opt-autospeak").checked=!!S.settings.autoSpeak; $("#opt-imgfront").checked=!!S.settings.imgFront; $("#opt-automine").checked=!!S.settings.autoMine;
   $("#opt-rate").value=S.settings.rate; $("#rate-v").textContent="×"+(+S.settings.rate).toFixed(2);
   $("#pile-lv").innerHTML=`<option value="">全部级别</option>`+LV().map(v=>`<option>${v}</option>`).join("");
 }
@@ -4557,7 +4571,8 @@ $("#opt-autopile").addEventListener("change",e=>{ S.settings.autoPile=e.target.c
 $$('input[name="zscr"]').forEach(r=>r.addEventListener("change",e=>{ S.settings.script=e.target.value; save(); applyScr(); renderCard(); if(cur==="read") mgRender(); if(dkOn("browse")) renderBrowse(); if(dkOn("pile")) renderPile(); }));
 $("#opt-py").addEventListener("change",e=>{ S.settings.py=e.target.checked; save(); applyPy(); renderCard(); });
 $$("[data-tc]").forEach(x=>x.addEventListener("change",()=>{ S.settings.toneSel=$$("[data-tc]").filter(y=>y.checked).map(y=>+y.dataset.tc); if(!tonesOn()&&S.settings.toneSel.length){ S.settings.tones=true; const o=$("#opt-tone"); if(o) o.checked=true; const b=$("#mg-tone"); if(b) b.setAttribute("aria-pressed","true"); } save(); applyTones(); }));
-$("#opt-cardstk").addEventListener("change",e=>{ S.settings.cardStk=e.target.checked; save(); renderCard(); });
+$("#opt-cardstk").addEventListener("change",e=>{ S.settings.cardStk=e.target.checked; save(); renderCard(); stkTip(); });
+document.addEventListener("click",e=>{ if(e.target.closest&&e.target.closest("#stk-off")){ S.settings.cardStk=false; save(); const cs=$("#opt-cardstk"); if(cs) cs.checked=false; renderCard(); stkTip(); } });
 document.addEventListener("click",e=>{ const b=e.target.closest("button[data-swc]"); if(!b) return; const k=+b.dataset.swk;
   S.settings.toneCol=Object.assign({},S.settings.toneCol,{[k]:b.dataset.swc}); if(!toneSel().includes(k)){ S.settings.toneSel=toneSel().concat(k).sort(); const c=$(`[data-tc="${k}"]`); if(c) c.checked=true; }
   if(!tonesOn()){ S.settings.tones=true; const o=$("#opt-tone"); if(o) o.checked=true; const t=$("#mg-tone"); if(t) t.setAttribute("aria-pressed","true"); } save(); applyTones(); renderToneSw(); });
@@ -4567,7 +4582,7 @@ document.addEventListener("input",e=>{ const i=e.target.closest('input[type=colo
 $$('[name="tonewhere"]').forEach(x=>x.addEventListener("change",()=>{ S.settings.toneWhere=x.value; save(); applyTones(); }));
 $("#opt-tone").addEventListener("change",e=>{ S.settings.tones=e.target.checked; save(); applyTones(); const b=$("#mg-tone"); if(b) b.setAttribute("aria-pressed",tonesOn()); });
 $("#opt-focus").addEventListener("change",e=>{ S.settings.focus=e.target.value==="py"?"py":"read"; save(); applyFocus(); pyEntry(); });
-$("#opt-dtab").addEventListener("change",e=>{ S.settings.dictTab=e.target.checked; save(); applyDictMode(); });
+
 $("#opt-autospeak").addEventListener("change",e=>{ S.settings.autoSpeak=e.target.checked; save(); });
 $("#opt-automine").addEventListener("change",e=>{ S.settings.autoMine=e.target.checked; save(); });
 $("#opt-imgfront").addEventListener("change",e=>{ S.settings.imgFront=e.target.checked; save(); renderCard(); });
@@ -6155,7 +6170,7 @@ function wnAuto(){ if(DL.used||dlHash()||lsGet("zl-wn","")===WHATSNEW[0].id) ret
   const o=S.settings.onb; if(o&&!o.existing){ lsSet("zl-wn",WHATSNEW[0].id); return; } /* a new person has nothing to compare with */
   if(lsGet("zl-new-py","")!=="1"||detailOpen||document.querySelector(".pynew,.wnew")) return; wnShow(false); }
 setTimeout(()=>{ try{ wnAuto(); }catch(e){} },3200);
-{ const b=$("#wn-open"); if(b) b.addEventListener("click",()=>wnShow(true)); }
+
 
 
 /* ---------- boot ---------- */
