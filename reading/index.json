@@ -1,6 +1,18 @@
 {
- "updated": "2026-11-16T03:39:43Z",
+ "updated": "2026-11-17T03:39:33Z",
  "days": [
+  {
+   "date": "2026-11-17",
+   "items": [
+    {
+     "i": 0,
+     "lang": "zh",
+     "title": "在面包店",
+     "kind": "dialogue",
+     "level": "HSK1"
+    }
+   ]
+  },
   {
    "date": "2026-11-16",
    "items": [

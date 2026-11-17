@@ -1,0 +1,127 @@
+{
+ "date": "2026-11-17",
+ "createdBy": "claude",
+ "items": [
+  {
+   "lang": "zh",
+   "level": "HSK1",
+   "kind": "dialogue",
+   "section": "饮食",
+   "title": "在面包店",
+   "title_en": "At the bakery",
+   "title_de": "In der Bäckerei",
+   "title_pt": "Na padaria",
+   "paragraphs": [
+    "小月：你好！我想买面包。",
+    "店员：你好！你想买什么面包？",
+    "小月：这个面包叫什么？",
+    "店员：它叫 Brezel。这是德国面包，很好吃！",
+    "小月：一个多少钱？",
+    "店员：一个一块五。",
+    "小月：我买三个。一个给妈妈，一个给爸爸，一个给我。",
+    "店员：好的，四块五。谢谢！",
+    "小月：谢谢！再见！"
+   ],
+   "paragraphs_en": [
+    "Xiaoyue: Hello! I'd like to buy some bread.",
+    "Shop assistant: Hello! What bread would you like?",
+    "Xiaoyue: What is this bread called?",
+    "Shop assistant: It's called a Brezel. It's German bread, it's really tasty!",
+    "Xiaoyue: How much is one?",
+    "Shop assistant: One euro fifty each.",
+    "Xiaoyue: I'll take three. One for Mum, one for Dad and one for me.",
+    "Shop assistant: OK, that's four fifty. Thank you!",
+    "Xiaoyue: Thank you! Goodbye!"
+   ],
+   "paragraphs_de": [
+    "Xiaoyue: Hallo! Ich möchte Brot kaufen.",
+    "Verkäuferin: Hallo! Was für Brot möchtest du?",
+    "Xiaoyue: Wie heißt dieses Brot?",
+    "Verkäuferin: Das heißt Brezel. Das ist ein deutsches Gebäck, sehr lecker!",
+    "Xiaoyue: Wie viel kostet eine?",
+    "Verkäuferin: Eine kostet einen Euro fünfzig.",
+    "Xiaoyue: Ich nehme drei. Eine für Mama, eine für Papa und eine für mich.",
+    "Verkäuferin: Gut, das macht vier fünfzig. Danke!",
+    "Xiaoyue: Danke! Tschüss!"
+   ],
+   "paragraphs_pt": [
+    "Xiaoyue: Olá! Eu quero comprar pão.",
+    "Atendente: Olá! Que pão você quer?",
+    "Xiaoyue: Como se chama este pão?",
+    "Atendente: Ele se chama Brezel. É um pão alemão, muito gostoso!",
+    "Xiaoyue: Quanto custa um?",
+    "Atendente: Um custa um euro e cinquenta.",
+    "Xiaoyue: Vou levar três. Um para a mamãe, um para o papai e um para mim.",
+    "Atendente: Certo, são quatro e cinquenta. Obrigada!",
+    "Xiaoyue: Obrigada! Tchau!"
+   ],
+   "glossary": [
+    {
+     "w": "面包",
+     "p": "miàn bāo",
+     "en": "bread",
+     "de": "das Brot",
+     "pt": "o pão"
+    },
+    {
+     "w": "店员",
+     "p": "diàn yuán",
+     "en": "shop assistant",
+     "de": "der Verkäufer / die Verkäuferin",
+     "pt": "o atendente / a atendente"
+    },
+    {
+     "w": "想",
+     "p": "xiǎng",
+     "en": "would like to; want to",
+     "de": "möchten; wollen",
+     "pt": "querer; ter vontade de"
+    },
+    {
+     "w": "叫",
+     "p": "jiào",
+     "en": "to be called",
+     "de": "heißen",
+     "pt": "chamar-se"
+    },
+    {
+     "w": "多少钱",
+     "p": "duō shao qián",
+     "en": "how much (money)?",
+     "de": "wie viel kostet …?",
+     "pt": "quanto custa?"
+    },
+    {
+     "w": "块",
+     "p": "kuài",
+     "en": "(spoken) unit of money: yuan, euro …",
+     "de": "umgangssprachlich: Geldeinheit (Yuan, Euro …)",
+     "pt": "(coloquial) unidade de dinheiro: yuan, euro …"
+    },
+    {
+     "w": "给",
+     "p": "gěi",
+     "en": "for; to (someone)",
+     "de": "für; (jemandem) geben",
+     "pt": "para; dar (a alguém)"
+    },
+    {
+     "w": "好吃",
+     "p": "hǎo chī",
+     "en": "tasty, delicious",
+     "de": "lecker",
+     "pt": "gostoso"
+    }
+   ],
+   "grammar": "给 (gěi) + person means 'for someone': 一个给妈妈 'one for Mum'. You can also use it as a verb: 我给你一个面包 'I give you a bread roll'.",
+   "grammar_de": "给 (gěi) + Person bedeutet „für jemanden“: 一个给妈妈 „eine für Mama“. Man kann es auch als Verb benutzen: 我给你一个面包 „Ich gebe dir ein Brötchen“.",
+   "grammar_pt": "给 (gěi) + pessoa significa “para alguém”: 一个给妈妈 “um para a mamãe”. Também pode ser verbo: 我给你一个面包 “eu te dou um pão”.",
+   "questions": [
+    "小月想买什么？",
+    "一个 Brezel 多少钱？",
+    "小月买了几个？"
+   ],
+   "sources": []
+  }
+ ]
+}
