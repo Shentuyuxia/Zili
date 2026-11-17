@@ -647,7 +647,7 @@ body.lean .hint, body.lean .help{display:none!important}
   .mg-body{font-size:20px}
 }
 @media (min-width:1100px){ #tab-read.grid{grid-template-columns:minmax(0,1fr) 340px} }
-@media (min-width:881px){ #tab-dict:not(.dsheet) > .panel, #tab-dict:not(.dsheet) > details.panel{ translate:var(--dict-shift,0px) 0 } }
+@media (min-width:881px){ #tab-dict:not(.dsheet) > .panel, #tab-dict:not(.dsheet) > details.panel, #tab-pinyin > .panel, #tab-pinyin > details.panel{ translate:var(--dict-shift,0px) 0 } }
 @media (min-width:881px){ #tab-read aside{position:sticky;top:calc(64px + env(safe-area-inset-top,0px));max-height:calc(100vh - 80px);overflow:auto} }
 /* phone */
 @media (max-width:640px){
@@ -5659,8 +5659,8 @@ function applyDictMode(){
   if(!on&&cur==="dict") showTab("today");
 }
 /* 字典页按窗口中心对齐（侧栏让内容列偏右，这里做一次补偿） */
-function dictCenter(){ const d=document.getElementById("tab-dict"); if(!d) return; d.style.removeProperty("--dict-shift"); if(d.hidden||d.classList.contains("dsheet")) return; const p=d.querySelector(":scope > .panel"); if(!p) return; const r=p.getBoundingClientRect(); const cw=document.documentElement.clientWidth; d.style.setProperty("--dict-shift",(cw/2-(r.left+r.width/2))+"px"); }
-addEventListener("resize",()=>{ if(cur==="dict") dictCenter(); });
+function dictCenter(){ for(const id of ["tab-dict","tab-pinyin"]){ const d=document.getElementById(id); if(!d) continue; d.style.removeProperty("--dict-shift"); if(d.hidden||d.classList.contains("dsheet")) continue; const p=d.querySelector(":scope > .panel"); if(!p) continue; const r=p.getBoundingClientRect(); const cw=document.documentElement.clientWidth; d.style.setProperty("--dict-shift",(cw/2-(r.left+r.width/2))+"px"); } }
+addEventListener("resize",()=>{ if(cur==="dict"||cur==="pinyin") dictCenter(); });
 function showTab(t){
   if(t==="new"){ addOpen(); return; }
   if(t==="dict"&&!dtabOn()){ dictSheet(true); return; }
@@ -5675,6 +5675,7 @@ function showTab(t){
   $$(".subsw button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.sub===t));
   TABS.forEach(k=>document.getElementById("tab-"+k).hidden=k!==t);
   if(t==="dict"){ dicMount(); if($("#dk-browse").open) renderBrowse(); if($("#dk-pile").open) renderPile(); requestAnimationFrame(dictCenter); } else if(typeof dicStop==="function") dicStop();
+  if(t==="pinyin") requestAnimationFrame(dictCenter);
   if(t==="today") renderStats();
   if(t==="settings"){ renderAISettings(); renderStorage(); renderBackupHint(); }
   if(t==="today"&&sess) renderCard(); if(t==="today") pyEntry(); if(t==="pinyin") pyRender();
