@@ -1583,6 +1583,9 @@ nav.tabs{margin:24px 0 26px}
 /* 笔顺提示：放在卡片下方、总览上方 */
 .stk-tip{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:10px 0 4px}
 .stk-tip[hidden]{display:none}
+.stk-tip .stk-note{flex-basis:100%;margin:0}
+.stk-tip{border:1px solid var(--acc);border-radius:12px;background:var(--surface);padding:12px 14px;margin:10px 0 14px}
+.stk-tip .small{font-size:13px;line-height:1.5}
 /* 同步：说明文字后面的「i」，点开展示说明 */
 #sy-panel .acct-out > div:first-child{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px}
 #sy-panel .hq{display:contents}
@@ -1744,7 +1747,7 @@ nav.tabs{margin:24px 0 26px}
       <div class="sesshead"><h2 id="sess-title">今日学习</h2><div class="row" id="sess-actions"></div></div>
       <div class="bar"><i id="sess-bar"></i></div>
       <div id="card-area"><div class="empty"><b>正在载入字匣…</b></div></div>
-      <p class="stk-tip" id="stk-tip" hidden><button class="btn ghost sm" type="button" id="stk-off">关闭笔顺功能</button><span class="small muted">（在「设置」里可以再打开）</span></p>
+      <p class="stk-tip" id="stk-tip" hidden><button class="btn ghost sm" type="button" id="stk-off">关闭笔顺功能</button><span class="small muted">（在「设置」里可以再打开）</span><span class="small muted stk-note">先看一遍笔顺，再点「跟着写」，用手指在格子里写。</span></p>
       <details class="ov-box" id="ov-box"><summary><span class="ov-t">学习总览</span><span class="small muted" id="ov-sum"></span></summary>
         <div id="stats-main"></div>
         <p class="note hint" style="margin-top:12px">复习间隔：「忘了」当天重来；「模糊」间隔略增；「记得」按 1 → 3 → 约 7 → 约 18 天递增；「简单」跳得更远。间隔达到 30 天以上的词算「精通」。</p>
