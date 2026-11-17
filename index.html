@@ -1599,6 +1599,14 @@ nav.tabs{margin:24px 0 26px}
 #sy-panel .sy-about > b{font-weight:600}
 #sy-panel #sb-in > .row{margin-top:22px!important;gap:10px}
 #sy-panel #sb-in > .tog{margin-top:12px}
+
+/* 桌面：减少胶囊，改用文字链接和裸图标 */
+@media (min-width:881px){
+  #tab-dict .dict-hrow .btn.sm{border:0;background:none;box-shadow:none;color:var(--acc);padding:4px 2px;font-weight:600}
+  #tab-dict .dict-hrow .btn.sm:hover{text-decoration:underline;background:none}
+  #tab-dict .ib{border-color:transparent;background:none}
+  #tab-dict .ib:hover{background:var(--sunk)}
+}
 </style>
 </head>
 <body>
