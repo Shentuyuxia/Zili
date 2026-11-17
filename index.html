@@ -5653,6 +5653,7 @@ function showTab(t){
   if(sub){ showTab(sub[0]); const d=document.getElementById(sub[1]); if(d){ d.open=true; setTimeout(()=>d.scrollIntoView({behavior:"smooth",block:"start"}),60); } return; }
   if(!TABS.includes(t)) t="today";
   cur=t; const grp=t;
+  { const st=document.querySelector("section.strip"); if(st) st.hidden=(t!=="today"); } /* 数字条只在「今日」出现 */
   $$("#tabs button").forEach(b=>{ b.setAttribute("aria-selected",b.dataset.tab===t); b.classList.toggle("grp-on",b.dataset.tab===grp); });
   $$(".subsw button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.sub===t));
   TABS.forEach(k=>document.getElementById("tab-"+k).hidden=k!==t);
