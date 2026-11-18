@@ -2,12 +2,12 @@
 // App files: served from cache, refreshed in the background.
 // Reading texts (reading/*) and word lists (data/*): network first, so new texts show up right away; cache is the offline fallback.
 // Only caches named "zili-…" are touched: other apps on the same site keep theirs.
-const CACHE = "zili-v169"
+const CACHE = "zili-v170"
 const OCRC = "zili-ocr-v1"; // photo-recognition models (~18 MB): cache first, kept across app updates
 const DICT = "zili-dict-v3"; // dictionary and stroke files: cache first (they only change when DICT is bumped)
 const SHELL = ["./", "./index.html", "./manifest.webmanifest", "./fonts/fonts.css", "./vendor/pinyin-pro.js", "./vendor/printkit.js"];
 self.addEventListener("install", e => {
-  e.waitUntil(caches.open(CACHE).then(c => Promise.all(SHELL.map(u => c.add(u).catch(() => null)))).then(() => self.skipWaiting()));
+  e.waitUntil(caches.open(CACHE).then(c => Promise.all(SHELL.map(u => c.add(new Request(u, { cache: "reload" })).catch(() => null)))).then(() => self.skipWaiting()));
 });
 self.addEventListener("activate", e => {
   e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k.startsWith("zili-") && k !== CACHE && k !== DICT && k !== OCRC).map(k => caches.delete(k)))).then(() => self.clients.claim()));
@@ -44,7 +44,7 @@ self.addEventListener("fetch", e => {
   e.respondWith(
     caches.open(CACHE).then(async cache => {
       const cached = await cache.match(req, { ignoreSearch: true });
-      const fresh = fetch(req).then(res => {
+      const fresh = fetch(new Request(req.url, { cache: "no-cache", credentials: "same-origin" })).then(res => {
         if (res && res.ok) cache.put(req, res.clone());
         return res;
       }).catch(() => cached);
