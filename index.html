@@ -1607,6 +1607,18 @@ nav.tabs{margin:24px 0 26px}
   #tab-dict .ib{border-color:transparent;background:none}
   #tab-dict .ib:hover{background:var(--sunk)}
 }
+
+/* 色块：每页只留一个主色块，其余用细线和文字 */
+.btn.primary{background:var(--ink)!important;color:var(--bg)!important;border:0!important;border-radius:4px!important;box-shadow:none!important}
+#tab-pinyin .btn.sm:not(.primary){background:none!important;border:0!important;box-shadow:none!important;padding:4px 0!important;color:var(--acc)!important;font-weight:500!important}
+.pymap .pyli{background:none!important;border:0!important;border-bottom:1px solid var(--line)!important;border-radius:0!important;box-shadow:none!important}
+.pymap .pyli.next{background:var(--acc-soft)!important;border-bottom-color:transparent!important;border-radius:4px!important}
+.pymap .pyli > :first-child{background:none!important;border:0!important;color:var(--muted)!important}
+#stk-off{background:none!important;border:0!important;padding:0!important;color:var(--ink)!important;text-decoration:underline;text-underline-offset:3px;font-weight:500!important;min-height:0!important}
+.stk-tip{border:0!important;background:var(--acc-soft)!important;border-radius:4px!important;padding:12px 14px!important;gap:6px 10px!important;align-items:baseline}
+/* 今日页：去掉数字条上下两条线和空进度条的底线 */
+.strip{border-top:0!important;border-bottom:0!important}
+.bar:has(> #sess-bar){background:transparent!important}
 </style>
 </head>
 <body>
