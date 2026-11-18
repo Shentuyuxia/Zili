@@ -1,0 +1,111 @@
+{
+ "date": "2026-11-18",
+ "createdBy": "claude",
+ "items": [
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "story",
+   "section": "网络用语",
+   "title": "kkkk和哈哈哈",
+   "title_en": "kkkk and hahaha",
+   "title_de": "kkkk und hahaha",
+   "title_pt": "kkkk e hahaha",
+   "paragraphs": [
+    "卢卡斯是巴西人，住在圣保罗。他在学中文。他有一个中国朋友，叫小月。他们常常在手机上聊天。",
+    "有一天，小月给他发了一个很好笑的小视频。卢卡斯回答：“kkkkk”。小月不懂，问他：“kkkkk是什么意思？你的手机坏了吗？”",
+    "卢卡斯笑了。他说：“没坏！在巴西，我们觉得好笑的时候，就写kkkk。k越多，就越好笑。”",
+    "小月说：“原来是这样！我们写‘哈哈哈’，也有人写‘233’。”卢卡斯问：“233？是数字吗？”小月说：“是数字，但是在网上，它的意思也是‘哈哈哈’。”",
+    "后来，卢卡斯用中文给小月写了一句很长的话。小月回答：“666！”这一次，卢卡斯没有问，因为他的中文老师说过：666的意思是“你真厉害”。"
+   ],
+   "paragraphs_en": [
+    "Lucas is Brazilian and lives in São Paulo. He is learning Chinese. He has a Chinese friend called Xiaoyue. They often chat on their phones.",
+    "One day Xiaoyue sent him a very funny short video. Lucas replied: “kkkkk”. Xiaoyue didn't understand and asked him: “What does kkkkk mean? Is your phone broken?”",
+    "Lucas laughed. He said: “It's not broken! In Brazil, when we find something funny, we write kkkk. The more k's, the funnier it is.”",
+    "Xiaoyue said: “Oh, so that's it! We write ‘哈哈哈’ (hahaha), and some people write ‘233’.” Lucas asked: “233? Is that a number?” Xiaoyue said: “It is a number, but online it also means ‘hahaha’.”",
+    "Later, Lucas wrote Xiaoyue a long sentence in Chinese. Xiaoyue replied: “666!” This time Lucas didn't ask, because his Chinese teacher had told him: 666 means “you're really good”."
+   ],
+   "paragraphs_de": [
+    "Lucas ist Brasilianer und wohnt in São Paulo. Er lernt Chinesisch. Er hat eine chinesische Freundin, sie heißt Xiaoyue. Die beiden chatten oft auf dem Handy.",
+    "Eines Tages schickte Xiaoyue ihm ein sehr lustiges kurzes Video. Lucas antwortete: „kkkkk“. Xiaoyue verstand das nicht und fragte ihn: „Was bedeutet kkkkk? Ist dein Handy kaputt?“",
+    "Lucas lachte. Er sagte: „Nicht kaputt! Wenn wir in Brasilien etwas lustig finden, schreiben wir kkkk. Je mehr k, desto lustiger.“",
+    "Xiaoyue sagte: „Ach, so ist das! Wir schreiben ‚哈哈哈‘ (hahaha), und manche schreiben auch ‚233‘.“ Lucas fragte: „233? Ist das eine Zahl?“ Xiaoyue sagte: „Ja, eine Zahl, aber im Internet bedeutet sie auch ‚hahaha‘.“",
+    "Später schrieb Lucas Xiaoyue einen langen Satz auf Chinesisch. Xiaoyue antwortete: „666!“ Diesmal fragte Lucas nicht nach, denn seine Chinesischlehrerin hatte ihm gesagt: 666 bedeutet „Du bist echt super“."
+   ],
+   "paragraphs_pt": [
+    "Lucas é brasileiro e mora em São Paulo. Ele está aprendendo chinês. Ele tem uma amiga chinesa chamada Xiaoyue. Os dois conversam muito pelo celular.",
+    "Um dia, Xiaoyue mandou para ele um vídeo curtinho muito engraçado. Lucas respondeu: “kkkkk”. Xiaoyue não entendeu e perguntou: “O que quer dizer kkkkk? Seu celular quebrou?”",
+    "Lucas riu. Ele disse: “Não quebrou! No Brasil, quando a gente acha algo engraçado, escreve kkkk. Quanto mais k, mais engraçado.”",
+    "Xiaoyue disse: “Ah, então é isso! A gente escreve ‘哈哈哈’ (hahaha), e algumas pessoas escrevem ‘233’.” Lucas perguntou: “233? É um número?” Xiaoyue disse: “É um número, mas na internet também quer dizer ‘hahaha’.”",
+    "Depois, Lucas escreveu uma frase longa em chinês para Xiaoyue. Xiaoyue respondeu: “666!” Desta vez Lucas não perguntou, porque a professora de chinês dele já tinha explicado: 666 quer dizer “você manda muito bem”."
+   ],
+   "glossary": [
+    {
+     "w": "圣保罗",
+     "p": "Shèng Bǎo luó",
+     "en": "São Paulo",
+     "de": "São Paulo",
+     "pt": "São Paulo"
+    },
+    {
+     "w": "聊天",
+     "p": "liáo tiān",
+     "en": "to chat",
+     "de": "plaudern; chatten",
+     "pt": "conversar; bater papo"
+    },
+    {
+     "w": "视频",
+     "p": "shì pín",
+     "en": "video",
+     "de": "das Video",
+     "pt": "o vídeo"
+    },
+    {
+     "w": "好笑",
+     "p": "hǎo xiào",
+     "en": "funny",
+     "de": "lustig",
+     "pt": "engraçado"
+    },
+    {
+     "w": "坏",
+     "p": "huài",
+     "en": "broken; bad",
+     "de": "kaputt; schlecht",
+     "pt": "quebrado; ruim"
+    },
+    {
+     "w": "原来",
+     "p": "yuán lái",
+     "en": "so that's it; it turns out",
+     "de": "ach so; es stellt sich heraus",
+     "pt": "então é isso; na verdade"
+    },
+    {
+     "w": "数字",
+     "p": "shù zì",
+     "en": "number; digit",
+     "de": "die Zahl; die Ziffer",
+     "pt": "o número"
+    },
+    {
+     "w": "厉害",
+     "p": "lì hai",
+     "en": "awesome; really good (at sth.)",
+     "de": "toll; echt gut (in etw.)",
+     "pt": "incrível; muito bom (em algo)"
+    }
+   ],
+   "grammar": "……的时候 means 'when …': the whole situation comes first, then 的时候, then what happens. 我们觉得好笑的时候，就写kkkk 'when we find something funny, we write kkkk'. 就 here links the two parts: 'then'.",
+   "grammar_de": "……的时候 bedeutet „wenn / als …“: Zuerst kommt die ganze Situation, dann 的时候, dann das, was passiert. 我们觉得好笑的时候，就写kkkk „wenn wir etwas lustig finden, schreiben wir kkkk“. 就 verbindet hier die beiden Teile: „dann“.",
+   "grammar_pt": "……的时候 quer dizer “quando …”: primeiro vem a situação inteira, depois 的时候, depois o que acontece. 我们觉得好笑的时候，就写kkkk “quando a gente acha algo engraçado, escreve kkkk”. Aqui 就 liga as duas partes: “então”.",
+   "questions": [
+    "卢卡斯住在哪儿？",
+    "在巴西，人们觉得好笑的时候写什么？",
+    "666是什么意思？"
+   ],
+   "sources": []
+  }
+ ]
+}
