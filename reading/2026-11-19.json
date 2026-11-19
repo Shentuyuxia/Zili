@@ -1,0 +1,140 @@
+{
+ "date": "2026-11-19",
+ "createdBy": "claude",
+ "items": [
+  {
+   "lang": "zh",
+   "level": "HSK3",
+   "kind": "feature",
+   "section": "学习与工作",
+   "title": "考试周，找座位",
+   "title_en": "Exam week: looking for a seat",
+   "title_de": "Prüfungswoche: auf der Suche nach einem Platz",
+   "title_pt": "Semana de provas: à procura de um lugar",
+   "dek": "在中国的大学里，考试周最难找的东西是什么？",
+   "paragraphs": [
+    "每到学期末，中国很多大学就到了考试周。这个时候，最难找的不是考试的答案，而是图书馆里的一个座位。",
+    "早上七点，图书馆还没开门，门口已经站着很多学生了。有的人手里拿着包子，有的人一边排队一边看书。门一开，大家就很快地走进去，找一个靠窗的好位子。",
+    "有些学生来得早，可是不一定坐得久。他们把一本书或者一个杯子放在桌子上，意思是“这里有人了”，然后去吃早饭，或者回宿舍睡觉。这就叫“占座”。没有座位的同学看着空空的椅子，心里很着急。",
+    "所以现在不少大学让学生用手机预约座位。你可以在网上选时间和位子，如果离开太久，座位就会自动给别人。很多同学觉得这个办法比以前公平多了。",
+    "考试结束以后，图书馆一下子安静了。桌子上没有书了，也没有杯子了。大家终于可以睡个懒觉了。"
+   ],
+   "paragraphs_en": [
+    "At the end of every semester, many universities in China reach exam week. At this time, the hardest thing to find isn't the answer to an exam question, but a seat in the library.",
+    "At seven in the morning, before the library has even opened, lots of students are already standing at the door. Some are holding steamed buns, others read while they wait in line. As soon as the door opens, everyone hurries in to find a good spot by the window.",
+    "Some students come early but don't necessarily stay long. They put a book or a cup on the desk, meaning “this seat is taken”, and then go off to have breakfast or back to the dorm to sleep. This is called “zhànzuò” – saving a seat. Students without a seat look at the empty chairs and feel anxious.",
+    "That's why many universities now let students book seats with their phones. You can choose a time and a seat online, and if you are away for too long, the seat automatically goes to someone else. Many students think this is much fairer than before.",
+    "After the exams are over, the library suddenly goes quiet. There are no more books on the desks, and no more cups. At last, everyone can have a lie-in."
+   ],
+   "paragraphs_de": [
+    "Am Ende jedes Semesters beginnt an vielen Universitäten in China die Prüfungswoche. In dieser Zeit ist das Schwierigste nicht, die Antworten für die Prüfung zu finden, sondern einen Platz in der Bibliothek.",
+    "Um sieben Uhr morgens, wenn die Bibliothek noch gar nicht geöffnet hat, stehen schon viele Studierende vor der Tür. Manche haben gedämpfte Teigtaschen in der Hand, andere lesen, während sie Schlange stehen. Sobald die Tür aufgeht, eilen alle hinein und suchen sich einen guten Platz am Fenster.",
+    "Manche Studierende kommen früh, bleiben aber nicht unbedingt lange. Sie legen ein Buch oder einen Becher auf den Tisch – das heißt „hier sitzt schon jemand“ – und gehen dann frühstücken oder zurück ins Wohnheim, um zu schlafen. Das nennt man „zhànzuò“, Plätze reservieren. Wer keinen Platz hat, schaut auf die leeren Stühle und wird ungeduldig.",
+    "Deshalb lassen heute viele Universitäten die Studierenden ihre Plätze per Handy buchen. Man wählt online eine Zeit und einen Platz, und wer zu lange weg ist, dessen Platz geht automatisch an jemand anderen. Viele finden diese Lösung viel gerechter als früher.",
+    "Nach den Prüfungen wird es in der Bibliothek auf einmal still. Auf den Tischen liegen keine Bücher mehr und stehen keine Becher mehr. Endlich können alle ausschlafen."
+   ],
+   "paragraphs_pt": [
+    "Todo fim de semestre, muitas universidades na China entram na semana de provas. Nessa época, o mais difícil de encontrar não são as respostas da prova, e sim um lugar na biblioteca.",
+    "Às sete da manhã, a biblioteca ainda nem abriu e já tem muitos estudantes parados na porta. Alguns seguram pãezinhos recheados no vapor, outros leem enquanto esperam na fila. Assim que a porta abre, todo mundo entra rápido para achar um lugar bom perto da janela.",
+    "Alguns estudantes chegam cedo, mas não necessariamente ficam muito tempo. Eles deixam um livro ou um copo em cima da mesa, querendo dizer “aqui já tem gente”, e depois vão tomar café da manhã ou voltam para o alojamento para dormir. Isso se chama “zhànzuò”, guardar lugar. Quem não tem lugar olha para as cadeiras vazias e fica aflito.",
+    "Por isso, hoje muitas universidades deixam os alunos reservarem lugares pelo celular. Você escolhe o horário e o lugar pela internet e, se ficar fora por muito tempo, o lugar passa automaticamente para outra pessoa. Muitos estudantes acham esse sistema bem mais justo do que antes.",
+    "Quando as provas terminam, a biblioteca fica silenciosa de repente. Não há mais livros nem copos nas mesas. Finalmente, todo mundo pode dormir até mais tarde."
+   ],
+   "glossary": [
+    {
+     "w": "考试周",
+     "p": "kǎo shì zhōu",
+     "en": "exam week",
+     "de": "die Prüfungswoche",
+     "pt": "a semana de provas"
+    },
+    {
+     "w": "座位",
+     "p": "zuò wèi",
+     "en": "seat",
+     "de": "der Sitzplatz",
+     "pt": "o assento; o lugar"
+    },
+    {
+     "w": "排队",
+     "p": "pái duì",
+     "en": "to queue, stand in line",
+     "de": "Schlange stehen",
+     "pt": "fazer fila"
+    },
+    {
+     "w": "包子",
+     "p": "bāo zi",
+     "en": "steamed bun (with filling)",
+     "de": "die gedämpfte Teigtasche",
+     "pt": "o pãozinho recheado no vapor"
+    },
+    {
+     "w": "靠窗",
+     "p": "kào chuāng",
+     "en": "by the window",
+     "de": "am Fenster",
+     "pt": "perto da janela"
+    },
+    {
+     "w": "占座",
+     "p": "zhàn zuò",
+     "en": "to save / reserve a seat",
+     "de": "einen Platz besetzen, freihalten",
+     "pt": "guardar lugar"
+    },
+    {
+     "w": "宿舍",
+     "p": "sù shè",
+     "en": "dormitory",
+     "de": "das Wohnheim",
+     "pt": "o alojamento; o dormitório"
+    },
+    {
+     "w": "着急",
+     "p": "zháo jí",
+     "en": "anxious, worried",
+     "de": "ungeduldig; besorgt",
+     "pt": "aflito; ansioso"
+    },
+    {
+     "w": "预约",
+     "p": "yù yuē",
+     "en": "to book, make a reservation",
+     "de": "reservieren, buchen",
+     "pt": "reservar; agendar"
+    },
+    {
+     "w": "自动",
+     "p": "zì dòng",
+     "en": "automatically",
+     "de": "automatisch",
+     "pt": "automaticamente"
+    },
+    {
+     "w": "公平",
+     "p": "gōng píng",
+     "en": "fair",
+     "de": "gerecht, fair",
+     "pt": "justo"
+    },
+    {
+     "w": "睡懒觉",
+     "p": "shuì lǎn jiào",
+     "en": "to sleep in, have a lie-in",
+     "de": "ausschlafen",
+     "pt": "dormir até tarde"
+    }
+   ],
+   "grammar": "不是 A，而是 B means 'not A, but B'. It corrects an expectation: 最难找的不是考试的答案，而是图书馆里的一个座位 'the hardest thing to find is not the exam answers, but a seat in the library'. 而是 is a bit more written than 是.",
+   "grammar_de": "不是 A，而是 B bedeutet „nicht A, sondern B“. Damit korrigiert man eine Erwartung: 最难找的不是考试的答案，而是图书馆里的一个座位 „am schwersten zu finden sind nicht die Prüfungsantworten, sondern ein Platz in der Bibliothek“. 而是 klingt etwas schriftlicher als 是.",
+   "grammar_pt": "不是 A，而是 B significa 'não A, e sim B'. Serve para corrigir uma expectativa: 最难找的不是考试的答案，而是图书馆里的一个座位 'o mais difícil de achar não são as respostas da prova, e sim um lugar na biblioteca'. 而是 soa um pouco mais escrito do que 是.",
+   "questions": [
+    "考试周的时候，什么最难找？",
+    "什么是“占座”？",
+    "现在很多大学用什么办法让学生找座位？"
+   ],
+   "sources": []
+  }
+ ]
+}
