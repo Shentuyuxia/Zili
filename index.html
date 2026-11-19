@@ -218,6 +218,8 @@ input[type=range]{accent-color:var(--acc);width:100%}
 .mine .h{font-size:11.5px;font-weight:700;color:var(--muted);letter-spacing:.04em}
 .mine .s{font-family:var(--f-word);font-size:15px}
 .mine .s .fx{display:block;font-size:13px;color:var(--ok)}
+.gapnote{font-size:12.5px;line-height:1.55;color:var(--muted);margin:10px auto 0;max-width:46ch;text-align:center}
+.modal .gapnote{text-align:left;margin:8px 0 0;max-width:none}
 .mine .s{display:flex;gap:6px;align-items:flex-start}
 .mine .s .msay{flex:none;width:26px;height:26px;margin-top:-2px;color:var(--muted)}
 .mine .s .msay svg{width:15px;height:15px}
@@ -2573,6 +2575,14 @@ function glossHTML(c,big,all){
   if(!rows.length){ const k=LANG[c.lang].gl.find(k=>c[k]); if(k) rows.push(glRow(c,k)); }
   return `<div class="gls${big?" big":""}">${rows.join("")}</div>`;
 }
+function gapNote(c){ // words you added yourself only carry what was saved at the time: say what is missing, so it doesn't look like a bug
+  if(!c||!c.custom) return "";
+  const T=x=>(typeof trOne==="function"&&trOne(x))||x, N={zh:"中文释义",en:"英文释义",def:"英文释义",fr:"法文释义",de:"德文释义",pt:"葡文释义"};
+  const miss=[...new Set(glSel().filter(k=>!c[k]).map(k=>N[k]).filter(Boolean))];
+  const exNo=!!c.ex&&!(c.exzh||c.exen||c.exde||c.expt); if(exNo) miss.push("例句的翻译");
+  if(!miss.length) return "";
+  return `<div class="gapnote" data-noi18n>${esc(T("这是你自己加的词，还没有："))}${miss.map(x=>esc(T(x))).join(esc(T("、")))}${esc(T("。"))}${exNo?"<br>"+esc(T("例句翻译可以在词条详情里点「修改例句」补上。")):""}</div>`;
+}
 function firstGloss(c){ if(c.mean) return c.mean; for(const k of glSel()) if(c[k]) return c[k]; return c.zh||c.en||c.def||""; }
 function highlight(ex,w){
   if(HAN.test(w||"")){ const e=esc(zs(ex)), x=esc(zs(w)); return x&&e.includes(x)?e.split(x).join("<b>"+x+"</b>"):e; }
@@ -2692,7 +2702,7 @@ function renderCard(){ stkTip();
   const imgFront=hasImg&&S.settings.imgFront;
   const rubyUp=c.lang==="zh"&&sess.flipped&&/<rt/.test(zRuby(c.w,c.py||c.extra)); /* once the answer is shown the pinyin always sits on top of the characters, even with the pinyin setting off */
   const extra=c.extra&&c.extra!=="—"&&!(c.lang==="zh"&&(pyOn()||rubyUp))?`<div class="extra">${esc(c.extra)}</div>`:"";
-  const backBits=()=>`${memo?`<div class="memo"><b>记忆</b><span data-noi18n>${esc(memo)}</span></div>`:""}${c.from&&String(c.from).includes("|")?`<div class="src-row"><button class="btn ghost sm" id="c-src" type="button">回到这篇文章 →</button></div>`:""}${exHTML(c)}${mine.length?`<div class="mine"><span class="h">我的例句</span>${mine.slice(0,3).map((m,i)=>`<div class="s"><button class="ib sm msay" type="button" data-msay="${i}" aria-label="朗读这句" title="朗读这句">${I.spk}</button><span>${esc(m.t)}${m.fix&&m.fix!==m.t?`<span class="fx">→ ${esc(m.fix)}</span>`:""}</span></div>`).join("")}</div>`:""}`;
+  const backBits=()=>`${memo?`<div class="memo"><b>记忆</b><span data-noi18n>${esc(memo)}</span></div>`:""}${c.from&&String(c.from).includes("|")?`<div class="src-row"><button class="btn ghost sm" id="c-src" type="button">回到这篇文章 →</button></div>`:""}${exHTML(c)}${gapNote(c)}${mine.length?`<div class="mine"><span class="h">我的例句</span>${mine.slice(0,3).map((m,i)=>`<div class="s"><button class="ib sm msay" type="button" data-msay="${i}" aria-label="朗读这句" title="朗读这句">${I.spk}</button><span>${esc(m.t)}${m.fix&&m.fix!==m.t?`<span class="fx">→ ${esc(m.fix)}</span>`:""}</span></div>`).join("")}</div>`:""}`;
   let body;
   if(dir==="t2g"){
     body=sess.flipped?`${imgFront?imgEl:""}<div class="word${wSize(c)}${rubyUp?" pyforce":""}">${wordHTML(c)}</div><div class="row" style="justify-content:center">${posChip(c)}</div>`
@@ -2800,7 +2810,7 @@ function renderDetail(note){
     <div class="mgrid">
       <div>
         ${glossHTML(c,false)}
-        <div style="margin-top:12px">${c.custom?ownExHTML(c):exHTML(c)}</div>
+        <div style="margin-top:12px">${c.custom?ownExHTML(c):exHTML(c)}${exEdit===c.id?"":gapNote(c)}</div>
         ${c.from&&String(c.from).includes("|")?(()=>{ const st=LL.srs[id], t=today(); const rv=!st?"还没开始学":st.d<=t?"今天该复习":"下次复习 "+st.d; return `<div class="src-row" style="margin-top:10px"><span class="small muted">读文章时收的 · ${esc(rv)}</span><span class="spacer"></span><button class="btn ghost sm" id="d-src" type="button">回到这篇文章 →</button></div>`; })():""}
         <div class="field" style="margin-top:16px"><label for="d-memo">记忆提示</label><div class="row" style="flex-wrap:nowrap"><input type="text" id="d-memo" value="${esc(memoOf(c))}" placeholder="谐音、画面、词根……"><button class="btn sm" id="d-memo-save" type="button">保存</button></div></div>
         <div class="field" style="margin-top:6px"><span class="lab2">我的例句</span>
@@ -4920,6 +4930,16 @@ const UI_DICT=[
 ["「{0}」已保存，会作为新词优先出现。", "“{0}” saved. It will come up first as a new word.", "„{0}“ gespeichert. Es kommt als Nächstes als neues Wort.", "“{0}” salva. Vai aparecer primeiro como palavra nova.", "「{0}」已儲存，會作為新詞優先出現。"],
 // photo scan
 ["拍照识词需要 AI：先到「设置与备份」里填上 API key。", "Photo scanning needs AI: add your API key under “Settings & backup” first.", "Foto-Erkennung braucht KI: erst unter „Einstellungen & Sicherung“ den API-Key eintragen.", "A leitura de fotos precisa de IA: adicione a chave da API em “Ajustes e backup”.", "拍照識詞需要 AI：先到「設定與備份」裡填上 API key。"],
+["这是你自己加的词，还没有：", "You added this word yourself. Still missing: ", "Dieses Wort hast du selbst hinzugefügt. Es fehlt noch: ", "Você mesmo adicionou esta palavra. Ainda falta: ", "這是你自己加的詞，還沒有："],
+["、", ", ", ", ", ", ", "、"],
+["。", ".", ".", ".", "。"],
+["中文释义", "Chinese meaning", "chinesische Bedeutung", "significado em chinês", "中文釋義"],
+["英文释义", "English meaning", "englische Bedeutung", "significado em inglês", "英文釋義"],
+["法文释义", "French meaning", "französische Bedeutung", "significado em francês", "法文釋義"],
+["德文释义", "German meaning", "deutsche Bedeutung", "significado em alemão", "德文釋義"],
+["葡文释义", "Portuguese meaning", "portugiesische Bedeutung", "significado em português", "葡文釋義"],
+["例句的翻译", "translation of the example", "Übersetzung des Beispielsatzes", "tradução do exemplo", "例句的翻譯"],
+["例句翻译可以在词条详情里点「修改例句」补上。", "You can add it under “Edit example” in the word details.", "Du kannst sie in den Wortdetails unter „Beispiel bearbeiten“ ergänzen.", "Você pode adicioná-la em “Editar exemplo” nos detalhes da palavra.", "例句翻譯可以在詞條詳情裡點「修改例句」補上。"],
 ["图片读不出来，换一张试试。", "Couldn't read the picture. Try another one.", "Bild nicht lesbar. Versuch ein anderes.", "Não deu para ler a imagem. Tente outra.", "圖片讀不出來，換一張試試。"],
 ["AI 正在看图、挑词…（通常 20–60 秒）", "AI is reading the picture and picking words… (usually 20–60 s)", "Die KI liest das Bild und wählt Wörter … (meist 20–60 s)", "A IA está lendo a imagem e escolhendo palavras… (geralmente 20–60 s)", "AI 正在看圖、挑詞…（通常 20–60 秒）"],
 ["找到 {0} 个词。", "Found {0} words.", "{0} Wörter gefunden.", "{0} palavras encontradas.", "找到 {0} 個詞。"],
