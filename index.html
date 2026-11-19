@@ -218,6 +218,10 @@ input[type=range]{accent-color:var(--acc);width:100%}
 .mine .h{font-size:11.5px;font-weight:700;color:var(--muted);letter-spacing:.04em}
 .mine .s{font-family:var(--f-word);font-size:15px}
 .mine .s .fx{display:block;font-size:13px;color:var(--ok)}
+.mine .s{display:flex;gap:6px;align-items:flex-start}
+.mine .s .msay{flex:none;width:26px;height:26px;margin-top:-2px;color:var(--muted)}
+.mine .s .msay svg{width:15px;height:15px}
+.mine .s .msay:hover{color:var(--acc)}
 .rate{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:14px}
 .rate button{display:flex;flex-direction:column;align-items:center;gap:1px;padding:12px 4px;border-radius:10px;border:1px solid var(--line);background:var(--surface);cursor:pointer;font-weight:700}
 .rate button small{font-family:var(--f-mono);font-weight:400;font-size:11px;color:var(--muted)}
@@ -1981,7 +1985,7 @@ const I={
 
 /* ---------- state (localStorage) ---------- */
 const LS="zili-v1";
-const blank=()=>({srs:{},pile:{},custom:[],log:{},imgs:{},mine:{},memo:{},auds:{},plan:null,del:{},pileDel:{}});
+const blank=()=>({srs:{},pile:{},custom:[],log:{},imgs:{},mine:{},mdel:{},memo:{},auds:{},plan:null,del:{},pileDel:{}});
 const DEF={v:3,settings:{voice:{},lang:"zh",dir:"t2g",autoPile:true,autoSpeak:false,autoMine:false,imgFront:false,rate:0.85,script:"s",py:true,
   gloss:{zh:["en"]},goal:{zh:10},levels:{zh:["HSK1","HSK2"]}},
   zh:blank(),updated:0,lastBackup:0};
@@ -2675,7 +2679,7 @@ function renderCard(){ stkTip();
   if(!DATA[lang()]) return;
   $("#sess-bar").style.width= sess&&sess.total? Math.min(100,100*sess.done/sess.total)+"%" : (sess&&!sess.cur?"100%":"0");
   if(!sess||!sess.cur){ renderDone(area); return; }
-  const it=sess.cur, c=it.c, LL=L(), st=LL.srs[c.id], inPile=!!LL.pile[c.id], dir=S.settings.dir;
+  const it=sess.cur, c=BYID.get(it.c.id)||it.c, LL=L(), st=LL.srs[c.id], inPile=!!LL.pile[c.id], dir=S.settings.dir;
   const hasImg=false, memo=memoOf(c), mine=mineOf(c), au=audsOf(c.id), hasAud=!!(au.w||au.s);
   const big=`<button class="bigspk" id="c-say" type="button" aria-label="系统朗读" title="系统朗读 (S)"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="bs-body" d="M4.5 9.5h3l4.5-3.6v12.2l-4.5-3.6h-3z"/><path d="M15.2 9.2c1.3 1.1 1.3 4.5 0 5.6M17.9 6.8c2.5 2.1 2.5 7.4 0 9.6"/></svg></button>`;
   const top=!sess.flipped?"":`<div class="card-top"><span class="lv lv-${esc(c.lvl)}">${esc(c.lvl)}</span>${it.isNew?"":stgHTML(st)}${c.custom?'<span class="chip">我录入的</span>':""}</div>`;
@@ -2688,7 +2692,7 @@ function renderCard(){ stkTip();
   const imgFront=hasImg&&S.settings.imgFront;
   const rubyUp=c.lang==="zh"&&sess.flipped&&/<rt/.test(zRuby(c.w,c.py||c.extra)); /* once the answer is shown the pinyin always sits on top of the characters, even with the pinyin setting off */
   const extra=c.extra&&c.extra!=="—"&&!(c.lang==="zh"&&(pyOn()||rubyUp))?`<div class="extra">${esc(c.extra)}</div>`:"";
-  const backBits=()=>`${memo?`<div class="memo"><b>记忆</b><span data-noi18n>${esc(memo)}</span></div>`:""}${c.from&&String(c.from).includes("|")?`<div class="src-row"><button class="btn ghost sm" id="c-src" type="button">回到这篇文章 →</button></div>`:""}${exHTML(c)}${mine.length?`<div class="mine"><span class="h">我的例句</span>${mine.slice(0,3).map(m=>`<div class="s">${esc(m.t)}${m.fix&&m.fix!==m.t?`<span class="fx">→ ${esc(m.fix)}</span>`:""}</div>`).join("")}</div>`:""}`;
+  const backBits=()=>`${memo?`<div class="memo"><b>记忆</b><span data-noi18n>${esc(memo)}</span></div>`:""}${c.from&&String(c.from).includes("|")?`<div class="src-row"><button class="btn ghost sm" id="c-src" type="button">回到这篇文章 →</button></div>`:""}${exHTML(c)}${mine.length?`<div class="mine"><span class="h">我的例句</span>${mine.slice(0,3).map((m,i)=>`<div class="s"><button class="ib sm msay" type="button" data-msay="${i}" aria-label="朗读这句" title="朗读这句">${I.spk}</button><span>${esc(m.t)}${m.fix&&m.fix!==m.t?`<span class="fx">→ ${esc(m.fix)}</span>`:""}</span></div>`).join("")}</div>`:""}`;
   let body;
   if(dir==="t2g"){
     body=sess.flipped?`${imgFront?imgEl:""}<div class="word${wSize(c)}${rubyUp?" pyforce":""}">${wordHTML(c)}</div><div class="row" style="justify-content:center">${posChip(c)}</div>`
@@ -2709,6 +2713,7 @@ function renderCard(){ stkTip();
   area.innerHTML=`<div class="card">${top}<div class="card-body">${body}</div>${tools}</div>${actions}
     <div class="foot"><span>本轮剩余 ${sess.queue.length+1} 张</span>${sess.flipped&&!hasImg&&!mine.length&&!hasAud?`<button class="btn ghost sm" id="c-add">${I.pen} 例句 / 录音</button>`:`<span>${sess.mode==="pile"?"评「简单」会移出生词堆":""}</span>`}</div>`;
   fillImgs(area);
+  area.querySelectorAll("[data-msay]").forEach(b=>b.onclick=e=>{ e.stopPropagation(); const m=mine[+b.dataset.msay]; if(m) speak(m.fix&&m.fix!==m.t?m.fix:m.t); });
   $$("#c-say").forEach(b=>b.onclick=()=>{ const t=sess.flipped&&c.ex?c.w+"。"+c.ex:c.w; speak(t); b.classList.add("say-on"); clearTimeout(b._st); b._st=setTimeout(()=>b.classList.remove("say-on"),Math.min(7000,700+t.length*75)); });
   const cs=$("#c-src"); if(cs) cs.onclick=()=>mgJump(c.from);
   const cm=$("#c-mine"); if(cm) cm.onclick=()=>playMine(c.id,sess.flipped&&au.s?"s":"w");
@@ -2844,7 +2849,7 @@ function renderDetail(note){
   };
   $("#d-add").onclick=()=>addSent();
   root.querySelectorAll("[data-use]").forEach(b=>b.onclick=()=>{ const m=mineOf(c)[+b.dataset.use]; m.t=m.fix; m.ok=true; save(); renderDetail("已改用修改后的句子"); });
-  root.querySelectorAll(".sent [data-del]").forEach(b=>b.onclick=()=>{ const arr=mineOf(c); arr.splice(+b.dataset.del,1); if(!arr.length) delete L().mine[id]; save(); renderDetail(); });
+  root.querySelectorAll(".sent [data-del]").forEach(b=>b.onclick=()=>{ const arr=mineOf(c); const gone=arr.splice(+b.dataset.del,1)[0]; const LM=L(); if(gone){ (LM.mdel||(LM.mdel={}))[id]=Object.assign({},LM.mdel[id]||{},{[gone.t+"|"+(gone.ts||"")]:Date.now()}); } if(!arr.length) delete LM.mine[id]; save(); renderDetail(); });
   root.querySelectorAll(".sent [data-say]").forEach(b=>b.onclick=()=>{ const m=mineOf(c)[+b.dataset.say]; speak(m.fix||m.t); });
   bindRecs($("#d-recs"),"d",{
     has:()=>audsOf(id),
@@ -4364,8 +4369,9 @@ function syMergeState(A,B){
     m.log={}; for(const d of new Set([...Object.keys(a.log),...Object.keys(b.log)])){ const x=a.log[d]||{n:0,r:0,c:false}, y=b.log[d]||{n:0,r:0,c:false};
       m.log[d]={n:Math.max(x.n||0,y.n||0),r:Math.max(x.r||0,y.r||0),c:!!(x.c||y.c)}; const pn=Math.max(x.pn||0,y.pn||0); if(pn) m.log[d].pn=pn; }
     for(const k of ["memo","imgs","auds"]){ m[k]=Object.assign({},b[k]||{},a[k]||{}); for(const id in m[k]) if(del[id]) delete m[k][id]; }
-    m.mine={}; for(const id of new Set([...Object.keys(a.mine||{}),...Object.keys(b.mine||{})])){ if(del[id]) continue;
-      const seen=new Set(), arr=[]; for(const s of [...((a.mine||{})[id]||[]),...((b.mine||{})[id]||[])]){ const k=s.t+"|"+(s.ts||""); if(!seen.has(k)){ seen.add(k); arr.push(s); } }
+    m.mine={}; m.mdel={}; for(const id of new Set([...Object.keys(a.mine||{}),...Object.keys(b.mine||{})])){ if(del[id]) continue;
+      const dl=m.mdel[id]=tsMax((a.mdel||{})[id],(b.mdel||{})[id]);
+      const seen=new Set(), arr=[]; for(const s of [...((a.mine||{})[id]||[]),...((b.mine||{})[id]||[])]){ const k=s.t+"|"+(s.ts||""); if(!seen.has(k)&&!dl[k]){ seen.add(k); arr.push(s); } }
       arr.sort((p,q)=>(q.ts||0)-(p.ts||0)); m.mine[id]=arr; }
     m.plan=a.plan||b.plan||null;
     m.essays={}; for(const k of new Set([...Object.keys(a.essays||{}),...Object.keys(b.essays||{})])){ const x=(a.essays||{})[k], y=(b.essays||{})[k]; m.essays[k]=!x?y:!y?x:((y.at||0)>(x.at||0)?y:x); }
