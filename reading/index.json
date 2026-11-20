@@ -1,6 +1,18 @@
 {
- "updated": "2026-11-19T03:38:30Z",
+ "updated": "2026-11-20T03:39:41Z",
  "days": [
+  {
+   "date": "2026-11-20",
+   "items": [
+    {
+     "i": 0,
+     "lang": "zh",
+     "title": "星期六早上九点",
+     "kind": "dialogue",
+     "level": "HSK4"
+    }
+   ]
+  },
   {
    "date": "2026-11-19",
    "items": [

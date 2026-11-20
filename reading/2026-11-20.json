@@ -1,0 +1,172 @@
+{
+ "date": "2026-11-20",
+ "createdBy": "claude",
+ "items": [
+  {
+   "lang": "zh",
+   "level": "HSK4",
+   "kind": "dialogue",
+   "section": "休闲",
+   "title": "星期六早上九点",
+   "title_en": "Saturday, nine in the morning",
+   "title_de": "Samstag, neun Uhr morgens",
+   "title_pt": "Sábado, nove da manhã",
+   "dek": "在英国，很多人星期六一早就去公园，一起跑五公里——也可以走。",
+   "paragraphs": [
+    "小月：Emily，你周六早上那么早出门，是去哪儿啊？",
+    "Emily：去公园跑步。我们这儿有一个活动，每个星期六早上九点，大家一起在公园里跑五公里。不用花钱，只要提前在网上报个名就行。",
+    "小月：五公里？我连一公里都跑不下来。去的人都是运动员吧？",
+    "Emily：一点儿也不是。有人跑，有人走，还有人推着婴儿车、带着狗。上次有位老爷爷走了一个小时，他最后到的时候，大家都给他鼓掌。",
+    "小月：听起来挺热闹的。可是既然不是比赛，为什么还要计时呢？",
+    "Emily：计时是给自己看的。你不用跟别人比，只跟上个星期的自己比。就算只快了十秒，也会特别开心。",
+    "小月：那些帮忙计时、指路的人呢？他们是工作人员吗？",
+    "Emily：都是志愿者，跟我们一样是普通人。我上个月也做过一次，站在路口给大家加油，嗓子都喊哑了，可是感觉比自己跑还有意思。",
+    "小月：说实话，我周末最大的爱好就是睡懒觉。英国的冬天早上又冷又湿，从被子里出来对我来说太难了。",
+    "Emily：我刚开始也这么想。不过跑完以后，大家会一起去附近的咖啡馆喝杯热茶，聊聊天。我很多朋友都是在那儿认识的。",
+    "小月：原来跑步只是一个借口，喝茶聊天才是重点吧？",
+    "Emily：被你发现了！怎么样，这个星期六跟我一起去吧？走完全程也算完成。",
+    "小月：好吧，那我先定个闹钟。要是我起不来，你可得来敲我的门。"
+   ],
+   "paragraphs_en": [
+    "Xiaoyue: Emily, where are you off to so early on Saturday mornings?",
+    "Emily: Running in the park. There's an event here: every Saturday at nine in the morning, everyone runs five kilometres together in the park. It's free – you just register online beforehand.",
+    "Xiaoyue: Five kilometres? I can't even run one. Everyone who goes must be an athlete, right?",
+    "Emily: Not at all. Some people run, some walk, and some push prams or bring their dogs. Last time an old man walked for an hour, and when he finally came in, everyone clapped for him.",
+    "Xiaoyue: Sounds pretty lively. But if it isn't a race, why do they time it?",
+    "Emily: The time is just for you. You don't compete with others, only with yourself from last week. Even if you're only ten seconds faster, you feel really happy.",
+    "Xiaoyue: And the people who help with timing and show the way? Are they staff?",
+    "Emily: They're all volunteers, ordinary people just like us. I did it once last month too – I stood at a corner cheering everyone on and shouted myself hoarse, but it felt even more fun than running myself.",
+    "Xiaoyue: To be honest, my biggest weekend hobby is sleeping in. British winter mornings are cold and damp, and getting out from under the duvet is just too hard for me.",
+    "Emily: I thought the same at first. But after the run, everyone goes to a café nearby for a hot cup of tea and a chat. I met lots of my friends there.",
+    "Xiaoyue: So the running is just an excuse, and the tea and chatting are the real point?",
+    "Emily: You've found me out! So how about it – come with me this Saturday? Walking the whole way counts as finishing too.",
+    "Xiaoyue: All right, I'll set an alarm first. If I can't get up, you'll have to come and knock on my door."
+   ],
+   "paragraphs_de": [
+    "Xiaoyue: Emily, wohin gehst du samstags so früh am Morgen?",
+    "Emily: Im Park laufen. Hier gibt es eine Veranstaltung: Jeden Samstag um neun Uhr morgens laufen alle zusammen fünf Kilometer im Park. Es kostet nichts, man muss sich nur vorher online anmelden.",
+    "Xiaoyue: Fünf Kilometer? Ich schaffe nicht mal einen. Die Leute, die da hingehen, sind bestimmt alle Sportler, oder?",
+    "Emily: Überhaupt nicht. Manche laufen, manche gehen, und manche schieben einen Kinderwagen oder haben ihren Hund dabei. Letztes Mal ist ein alter Herr eine Stunde lang gegangen, und als er als Letzter ankam, haben alle für ihn geklatscht.",
+    "Xiaoyue: Klingt ganz schön lebendig. Aber wenn es kein Wettkampf ist, warum wird dann die Zeit gemessen?",
+    "Emily: Die Zeit ist nur für dich selbst. Du musst dich nicht mit anderen vergleichen, nur mit dir selbst von letzter Woche. Selbst wenn du nur zehn Sekunden schneller bist, freust du dich riesig.",
+    "Xiaoyue: Und die Leute, die beim Zeitnehmen helfen und den Weg zeigen? Sind das Angestellte?",
+    "Emily: Das sind alles Ehrenamtliche, ganz normale Leute wie wir. Ich habe das letzten Monat auch einmal gemacht: Ich stand an einer Ecke, habe alle angefeuert und mich heiser geschrien – aber es hat sogar mehr Spaß gemacht, als selbst zu laufen.",
+    "Xiaoyue: Ehrlich gesagt ist mein liebstes Wochenendhobby Ausschlafen. Die britischen Wintermorgen sind kalt und nass, und unter der Bettdecke hervorzukommen ist für mich einfach zu schwer.",
+    "Emily: Das dachte ich am Anfang auch. Aber nach dem Lauf gehen alle zusammen in ein Café in der Nähe, trinken einen heißen Tee und plaudern. Viele meiner Freunde habe ich dort kennengelernt.",
+    "Xiaoyue: Dann ist das Laufen also nur ein Vorwand, und Teetrinken und Plaudern sind die Hauptsache?",
+    "Emily: Erwischt! Na, wie wär's – kommst du diesen Samstag mit? Wenn du die ganze Strecke gehst, zählt das auch.",
+    "Xiaoyue: Na gut, dann stelle ich mir erst mal einen Wecker. Wenn ich nicht aufstehe, musst du aber an meine Tür klopfen."
+   ],
+   "paragraphs_pt": [
+    "Xiaoyue: Emily, aonde você vai tão cedo no sábado de manhã?",
+    "Emily: Correr no parque. Aqui tem um evento: todo sábado, às nove da manhã, todo mundo corre cinco quilômetros junto no parque. Não custa nada, é só se inscrever antes pela internet.",
+    "Xiaoyue: Cinco quilômetros? Eu não consigo correr nem um. Quem vai deve ser tudo atleta, né?",
+    "Emily: Nada disso. Uns correm, outros caminham, e tem gente empurrando carrinho de bebê ou levando o cachorro. Da última vez, um senhor idoso caminhou uma hora, e quando ele chegou por último, todo mundo aplaudiu.",
+    "Xiaoyue: Parece bem animado. Mas, se não é uma competição, por que marcam o tempo?",
+    "Emily: O tempo é só para você. Você não precisa se comparar com os outros, só com você mesma da semana passada. Mesmo que seja só dez segundos mais rápido, dá uma alegria enorme.",
+    "Xiaoyue: E as pessoas que ajudam a marcar o tempo e mostram o caminho? São funcionários?",
+    "Emily: São todos voluntários, gente comum como a gente. Eu também fiz isso uma vez no mês passado: fiquei numa esquina torcendo por todo mundo e gritei até ficar rouca, mas achei ainda mais divertido do que correr.",
+    "Xiaoyue: Para ser sincera, meu maior hobby no fim de semana é dormir até tarde. As manhãs de inverno na Inglaterra são frias e úmidas, e sair de baixo do edredom é difícil demais para mim.",
+    "Emily: No começo eu também pensava assim. Mas depois da corrida, todo mundo vai junto a um café ali perto tomar um chá quente e bater papo. Conheci muitos dos meus amigos lá.",
+    "Xiaoyue: Então correr é só uma desculpa, e o chá e o papo é que são o principal?",
+    "Emily: Você me pegou! E aí, vem comigo neste sábado? Fazer o percurso todo caminhando também conta.",
+    "Xiaoyue: Tá bom, então primeiro vou pôr o despertador. Se eu não conseguir levantar, você vai ter que vir bater na minha porta."
+   ],
+   "glossary": [
+    {
+     "w": "报名",
+     "p": "bào míng",
+     "en": "to sign up, to register",
+     "de": "sich anmelden",
+     "pt": "inscrever-se"
+    },
+    {
+     "w": "婴儿车",
+     "p": "yīng ér chē",
+     "en": "pram, baby stroller",
+     "de": "der Kinderwagen",
+     "pt": "o carrinho de bebê"
+    },
+    {
+     "w": "鼓掌",
+     "p": "gǔ zhǎng",
+     "en": "to clap, to applaud",
+     "de": "klatschen, applaudieren",
+     "pt": "aplaudir"
+    },
+    {
+     "w": "既然",
+     "p": "jì rán",
+     "en": "since, given that",
+     "de": "da ja, wenn schon",
+     "pt": "já que"
+    },
+    {
+     "w": "计时",
+     "p": "jì shí",
+     "en": "to time, to measure time",
+     "de": "die Zeit messen",
+     "pt": "marcar o tempo, cronometrar"
+    },
+    {
+     "w": "志愿者",
+     "p": "zhì yuàn zhě",
+     "en": "volunteer",
+     "de": "der/die Ehrenamtliche, der Freiwillige",
+     "pt": "o voluntário"
+    },
+    {
+     "w": "加油",
+     "p": "jiā yóu",
+     "en": "to cheer on; 'come on!'",
+     "de": "anfeuern; „Los, weiter!“",
+     "pt": "torcer por; força!"
+    },
+    {
+     "w": "嗓子",
+     "p": "sǎng zi",
+     "en": "throat; voice",
+     "de": "die Kehle; die Stimme",
+     "pt": "a garganta; a voz"
+    },
+    {
+     "w": "哑",
+     "p": "yǎ",
+     "en": "hoarse",
+     "de": "heiser",
+     "pt": "rouco"
+    },
+    {
+     "w": "睡懒觉",
+     "p": "shuì lǎn jiào",
+     "en": "to sleep in, to lie in",
+     "de": "ausschlafen",
+     "pt": "dormir até tarde"
+    },
+    {
+     "w": "借口",
+     "p": "jiè kǒu",
+     "en": "excuse, pretext",
+     "de": "der Vorwand, die Ausrede",
+     "pt": "a desculpa, o pretexto"
+    },
+    {
+     "w": "闹钟",
+     "p": "nào zhōng",
+     "en": "alarm clock",
+     "de": "der Wecker",
+     "pt": "o despertador"
+    }
+   ],
+   "grammar": "连 A 都/也 + negative verb means 'not even A': 我连一公里都跑不下来 'I can't even run one kilometre'. 连 puts the smallest, easiest case first, so the sentence stresses how little is possible. Here 跑不下来 is a potential complement: 'can't manage to run (all the way)'.",
+   "grammar_de": "连 A 都/也 + verneintes Verb bedeutet „nicht einmal A“: 我连一公里都跑不下来 „Ich schaffe nicht einmal einen Kilometer.“ 连 stellt den kleinsten, leichtesten Fall nach vorn – so betont der Satz, wie wenig möglich ist. 跑不下来 ist ein Potenzialkomplement: „es nicht (bis zum Ende) laufen können“.",
+   "grammar_pt": "连 A 都/也 + verbo negativo significa “nem mesmo A”: 我连一公里都跑不下来 “Não consigo correr nem um quilômetro.” 连 coloca na frente o caso menor e mais fácil, e assim a frase enfatiza o pouco que é possível. 跑不下来 é um complemento potencial: “não conseguir correr (até o fim)”.",
+   "questions": [
+    "这个跑步活动是什么时候？要花钱吗？",
+    "Emily说计时是为了什么？",
+    "小月为什么不想星期六早起？"
+   ],
+   "sources": []
+  }
+ ]
+}
