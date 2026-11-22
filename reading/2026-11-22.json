@@ -1,0 +1,107 @@
+{
+ "date": "2026-11-22",
+ "createdBy": "claude",
+ "items": [
+  {
+   "lang": "zh",
+   "level": "HSK1",
+   "kind": "feature",
+   "section": "自然与生活",
+   "title": "下雪的星期天",
+   "title_en": "A snowy Sunday",
+   "title_de": "Ein verschneiter Sonntag",
+   "title_pt": "Um domingo de neve",
+   "paragraphs": [
+    "我叫小月，我家在哈尔滨。十一月的哈尔滨很冷。",
+    "今天早上，我看外面：下雪了！地上都是白色的。",
+    "妈妈说：“天气很冷，多穿衣服。”我和小狗去外面玩儿。小狗很喜欢雪。",
+    "中午，我们回家喝热茶。下雪的星期天，我很高兴。"
+   ],
+   "paragraphs_en": [
+    "My name is Xiaoyue, and my home is in Harbin. Harbin in November is very cold.",
+    "This morning I looked outside: it was snowing! The ground was all white.",
+    "Mum said, “It’s very cold, put on more clothes.” My little dog and I went outside to play. The dog loves snow.",
+    "At noon we went home and drank hot tea. On a snowy Sunday, I’m very happy."
+   ],
+   "paragraphs_de": [
+    "Ich heiße Xiaoyue, mein Zuhause ist in Harbin. Im November ist es in Harbin sehr kalt.",
+    "Heute Morgen habe ich nach draußen geschaut: Es schneit! Der Boden war ganz weiß.",
+    "Mama hat gesagt: „Es ist sehr kalt, zieh mehr an.“ Mein kleiner Hund und ich sind zum Spielen nach draußen gegangen. Der Hund mag Schnee sehr.",
+    "Mittags sind wir nach Hause gegangen und haben heißen Tee getrunken. An einem verschneiten Sonntag bin ich sehr froh."
+   ],
+   "paragraphs_pt": [
+    "Meu nome é Xiaoyue e minha casa fica em Harbin. Em novembro, Harbin é muito fria.",
+    "Hoje de manhã eu olhei lá fora: estava nevando! O chão estava todo branco.",
+    "A mamãe disse: “Está muito frio, vista mais roupa.” Eu e meu cachorrinho fomos brincar lá fora. O cachorro adora neve.",
+    "Ao meio-dia voltamos para casa e tomamos chá quente. Num domingo de neve, eu fico muito feliz."
+   ],
+   "glossary": [
+    {
+     "w": "哈尔滨",
+     "p": "Hā ěr bīn",
+     "en": "Harbin (city in northeast China)",
+     "de": "Harbin (Stadt in Nordostchina)",
+     "pt": "Harbin (cidade no nordeste da China)"
+    },
+    {
+     "w": "冷",
+     "p": "lěng",
+     "en": "cold",
+     "de": "kalt",
+     "pt": "frio"
+    },
+    {
+     "w": "外面",
+     "p": "wài miàn",
+     "en": "outside",
+     "de": "draußen",
+     "pt": "lá fora"
+    },
+    {
+     "w": "下雪",
+     "p": "xià xuě",
+     "en": "to snow",
+     "de": "schneien",
+     "pt": "nevar"
+    },
+    {
+     "w": "白色",
+     "p": "bái sè",
+     "en": "white",
+     "de": "weiß; das Weiß",
+     "pt": "branco; o branco"
+    },
+    {
+     "w": "穿",
+     "p": "chuān",
+     "en": "to wear; to put on (clothes)",
+     "de": "anziehen; tragen",
+     "pt": "vestir; usar (roupa)"
+    },
+    {
+     "w": "衣服",
+     "p": "yī fu",
+     "en": "clothes",
+     "de": "die Kleidung",
+     "pt": "a roupa"
+    },
+    {
+     "w": "热",
+     "p": "rè",
+     "en": "hot",
+     "de": "heiß",
+     "pt": "quente"
+    }
+   ],
+   "grammar": "了 at the end of a sentence can show a change: 下雪了 means 'it's snowing now' (it wasn't before). Compare 天冷了 'it has got cold'.",
+   "grammar_de": "了 am Satzende kann eine Veränderung zeigen: 下雪了 heißt „jetzt schneit es“ (vorher nicht). Vergleiche 天冷了 „es ist kalt geworden“.",
+   "grammar_pt": "了 no fim da frase pode mostrar uma mudança: 下雪了 quer dizer 'agora está nevando' (antes não estava). Compare 天冷了 'ficou frio'.",
+   "questions": [
+    "小月的家在哪儿？",
+    "今天早上天气怎么样？",
+    "中午他们喝什么？"
+   ],
+   "sources": []
+  }
+ ]
+}

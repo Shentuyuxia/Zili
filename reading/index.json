@@ -1,6 +1,18 @@
 {
- "updated": "2026-11-21T03:39:05Z",
+ "updated": "2026-11-22T03:38:36Z",
  "days": [
+  {
+   "date": "2026-11-22",
+   "items": [
+    {
+     "i": 0,
+     "lang": "zh",
+     "title": "下雪的星期天",
+     "kind": "feature",
+     "level": "HSK1"
+    }
+   ]
+  },
   {
    "date": "2026-11-21",
    "items": [
