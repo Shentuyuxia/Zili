@@ -1,0 +1,131 @@
+{
+ "date": "2026-11-23",
+ "createdBy": "claude",
+ "items": [
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "dialogue",
+   "section": "城市生活",
+   "title": "在台北坐捷运",
+   "title_en": "Taking the MRT in Taipei",
+   "title_de": "Mit der MRT in Taipeh",
+   "title_pt": "Pegando o metrô em Taipé",
+   "paragraphs": [
+    "Lucas：小月，我想坐捷运去动物园。我要买票吗？",
+    "小月：你可以买一张悠游卡，坐车很方便。",
+    "Lucas：在哪儿买？",
+    "小月：这儿就有，便利店也有。卡里的钱不多了，还可以去便利店加钱。",
+    "Lucas：太好了！我们进站吧。我先喝一口咖啡。",
+    "小月：等一下！在捷运里不能吃东西，也不能喝东西，水也不行。",
+    "Lucas：真的吗？那我现在就喝完。",
+    "小月：哈哈，你慢慢喝。下一班车三分钟以后才来。",
+    "Lucas：因为大家都不在车上吃东西，所以车里这么干净，对吗？",
+    "小月：对！到了动物园，你就可以吃东西了。"
+   ],
+   "paragraphs_en": [
+    "Lucas: Xiaoyue, I want to take the MRT to the zoo. Do I need to buy a ticket?",
+    "Xiaoyue: You can buy an EasyCard. It makes taking the train really convenient.",
+    "Lucas: Where can I buy one?",
+    "Xiaoyue: Right here, and convenience stores have them too. When there isn't much money left on the card, you can also top it up at a convenience store.",
+    "Lucas: Great! Let's go into the station. I'll just have a sip of coffee first.",
+    "Xiaoyue: Wait! On the MRT you can't eat, and you can't drink either. Not even water.",
+    "Lucas: Really? Then I'll finish it right now.",
+    "Xiaoyue: Haha, take your time. The next train only comes in three minutes.",
+    "Lucas: Because nobody eats on the train, the train is this clean, right?",
+    "Xiaoyue: Right! Once we get to the zoo, you can eat again."
+   ],
+   "paragraphs_de": [
+    "Lucas: Xiaoyue, ich möchte mit der MRT zum Zoo fahren. Muss ich ein Ticket kaufen?",
+    "Xiaoyue: Du kannst dir eine EasyCard kaufen. Damit ist das Fahren sehr bequem.",
+    "Lucas: Wo kann man die kaufen?",
+    "Xiaoyue: Gleich hier, und im Convenience Store gibt es sie auch. Wenn nicht mehr viel Geld auf der Karte ist, kannst du sie auch im Convenience Store aufladen.",
+    "Lucas: Super! Gehen wir in die Station. Ich trinke vorher noch einen Schluck Kaffee.",
+    "Xiaoyue: Warte! In der MRT darf man nichts essen und auch nichts trinken. Nicht einmal Wasser.",
+    "Lucas: Echt? Dann trinke ich ihn jetzt gleich aus.",
+    "Xiaoyue: Haha, trink ruhig langsam. Der nächste Zug kommt erst in drei Minuten.",
+    "Lucas: Weil niemand im Zug isst, ist der Zug so sauber, oder?",
+    "Xiaoyue: Genau! Wenn wir am Zoo sind, kannst du wieder essen."
+   ],
+   "paragraphs_pt": [
+    "Lucas: Xiaoyue, quero pegar o metrô para ir ao zoológico. Preciso comprar bilhete?",
+    "Xiaoyue: Você pode comprar um EasyCard. Com ele, andar de metrô fica muito prático.",
+    "Lucas: Onde eu compro?",
+    "Xiaoyue: Aqui mesmo, e as lojas de conveniência também têm. Quando estiver acabando o dinheiro no cartão, você também pode recarregar numa loja de conveniência.",
+    "Lucas: Ótimo! Vamos entrar na estação. Só vou tomar um gole de café antes.",
+    "Xiaoyue: Espera! No metrô não pode comer nem beber. Nem água.",
+    "Lucas: Sério? Então vou terminar agora mesmo.",
+    "Xiaoyue: Haha, pode beber com calma. O próximo trem só chega daqui a três minutos.",
+    "Lucas: Como ninguém come no trem, o trem é tão limpo assim, né?",
+    "Xiaoyue: Isso! Quando a gente chegar no zoológico, você pode comer de novo."
+   ],
+   "glossary": [
+    {
+     "w": "捷运",
+     "p": "jié yùn",
+     "en": "MRT; metro (in Taiwan)",
+     "de": "die MRT; die U-Bahn (in Taiwan)",
+     "pt": "o metrô (em Taiwan)"
+    },
+    {
+     "w": "动物园",
+     "p": "dòng wù yuán",
+     "en": "zoo",
+     "de": "der Zoo",
+     "pt": "o zoológico"
+    },
+    {
+     "w": "悠游卡",
+     "p": "yōu yóu kǎ",
+     "en": "EasyCard (Taipei transport card)",
+     "de": "die EasyCard (Verkehrskarte in Taipeh)",
+     "pt": "o EasyCard (cartão de transporte de Taipé)"
+    },
+    {
+     "w": "方便",
+     "p": "fāng biàn",
+     "en": "convenient",
+     "de": "bequem; praktisch",
+     "pt": "prático; conveniente"
+    },
+    {
+     "w": "便利店",
+     "p": "biàn lì diàn",
+     "en": "convenience store",
+     "de": "der Convenience Store; der Späti",
+     "pt": "a loja de conveniência"
+    },
+    {
+     "w": "加钱",
+     "p": "jiā qián",
+     "en": "to top up (a card)",
+     "de": "aufladen (eine Karte)",
+     "pt": "recarregar (um cartão)"
+    },
+    {
+     "w": "一口",
+     "p": "yì kǒu",
+     "en": "a sip; a mouthful",
+     "de": "der Schluck; der Bissen",
+     "pt": "o gole; a mordida"
+    },
+    {
+     "w": "干净",
+     "p": "gān jing",
+     "en": "clean",
+     "de": "sauber",
+     "pt": "limpo"
+    }
+   ],
+   "grammar": "因为 A，所以 B means 'because A, (so) B'. The reason comes first, the result second: 因为大家都不在车上吃东西，所以车里这么干净 'because nobody eats on the train, it is so clean'. In English you use only 'because' or 'so', but in Chinese you often use both words together.",
+   "grammar_de": "因为 A，所以 B bedeutet „weil A, (deshalb) B“. Zuerst kommt der Grund, dann die Folge: 因为大家都不在车上吃东西，所以车里这么干净 „weil niemand im Zug isst, ist er so sauber“. Im Deutschen sagt man nur „weil“ oder „deshalb“, im Chinesischen benutzt man oft beide Wörter zusammen.",
+   "grammar_pt": "因为 A，所以 B significa 'porque A, (por isso) B'. Primeiro vem a causa, depois o resultado: 因为大家都不在车上吃东西，所以车里这么干净 'como ninguém come no trem, ele é tão limpo'. Em português usamos só 'porque' ou 'por isso', mas em chinês muitas vezes usamos as duas palavras juntas.",
+   "questions": [
+    "Lucas想去哪儿？",
+    "在哪儿可以买悠游卡？",
+    "在捷运里可以喝水吗？"
+   ],
+   "sources": []
+  }
+ ]
+}

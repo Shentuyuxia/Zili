@@ -1,6 +1,18 @@
 {
- "updated": "2026-11-22T03:38:36Z",
+ "updated": "2026-11-23T03:38:35Z",
  "days": [
+  {
+   "date": "2026-11-23",
+   "items": [
+    {
+     "i": 0,
+     "lang": "zh",
+     "title": "在台北坐捷运",
+     "kind": "dialogue",
+     "level": "HSK2"
+    }
+   ]
+  },
   {
    "date": "2026-11-22",
    "items": [
