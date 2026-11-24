@@ -1,0 +1,140 @@
+{
+ "date": "2026-11-24",
+ "createdBy": "claude",
+ "items": [
+  {
+   "lang": "zh",
+   "level": "HSK3",
+   "kind": "story",
+   "section": "饮食",
+   "title": "不甜的布丁",
+   "title_en": "The pudding that isn't sweet",
+   "title_de": "Der Pudding, der nicht süß ist",
+   "title_pt": "O pudim que não é doce",
+   "dek": "一顿英国的星期天午饭，一个让小月很意外的“布丁”。",
+   "paragraphs": [
+    "小月在英国曼彻斯特读书。上个星期六，她的同学Emily问她：“明天中午你有空吗？来我家吃Sunday roast吧！”小月不知道这是什么，可是她很高兴地说：“好啊！”",
+    "Emily告诉她，Sunday roast就是“星期天的烤肉”。很多英国家庭星期天会一起吃这顿饭，有烤牛肉或者烤鸡，还有土豆、胡萝卜和别的蔬菜。“对了，还有约克郡布丁，”Emily说，“我奶奶做的最好吃。”",
+    "小月听了很开心。她最喜欢吃布丁了，以为饭后会有一个甜甜的小点心。",
+    "星期天，Emily的奶奶把一盘热热的东西放在桌子上。它们黄黄的，中间是空的，样子像一个小碗。小月尝了一口——一点儿也不甜！奶奶笑着说：“这就是约克郡布丁，是用鸡蛋、面粉和牛奶做的。要和肉一起吃，上面再放一点儿肉汁。”",
+    "小月又吃了两个，觉得比她想的还好吃。吃完饭，她说：“下次我请你们吃饺子吧！我做的饺子没有奶奶的布丁好看，但是也很好吃。”大家都笑了。"
+   ],
+   "paragraphs_en": [
+    "Xiaoyue is studying in Manchester, England. Last Saturday her classmate Emily asked her: “Are you free tomorrow at lunchtime? Come to my place for a Sunday roast!” Xiaoyue didn't know what that was, but she happily said: “Sure!”",
+    "Emily told her that a Sunday roast is “the roast on Sunday”. Many British families eat this meal together on Sundays: roast beef or roast chicken, with potatoes, carrots and other vegetables. “Oh, and there are Yorkshire puddings,” Emily said. “My grandma makes the best ones.”",
+    "Xiaoyue was very pleased to hear that. She loves pudding more than anything, and thought there would be a sweet little treat after the meal.",
+    "On Sunday, Emily's grandma put a plate of something hot on the table. They were golden yellow and hollow in the middle, shaped like little bowls. Xiaoyue took a bite — not sweet at all! Grandma said with a smile: “This is Yorkshire pudding. It's made from eggs, flour and milk. You eat it with the meat and pour a little gravy on top.”",
+    "Xiaoyue ate two more and thought they were even tastier than she had imagined. After the meal she said: “Next time I'll treat you to dumplings! My dumplings don't look as nice as Grandma's puddings, but they taste very good too.” Everyone laughed."
+   ],
+   "paragraphs_de": [
+    "Xiaoyue studiert in Manchester in England. Letzten Samstag fragte ihre Kommilitonin Emily sie: „Hast du morgen Mittag Zeit? Komm zu uns zum Sunday Roast!“ Xiaoyue wusste nicht, was das ist, aber sie sagte fröhlich: „Gern!“",
+    "Emily erklärte ihr, dass Sunday Roast „der Sonntagsbraten“ ist. Viele britische Familien essen diese Mahlzeit sonntags zusammen: Roastbeef oder Brathähnchen, dazu Kartoffeln, Karotten und anderes Gemüse. „Ach ja, und es gibt Yorkshire Puddings“, sagte Emily. „Meine Oma macht die besten.“",
+    "Xiaoyue freute sich sehr, als sie das hörte. Pudding mag sie am allerliebsten, und sie dachte, nach dem Essen gäbe es eine kleine süße Nachspeise.",
+    "Am Sonntag stellte Emilys Oma einen Teller mit etwas Heißem auf den Tisch. Die Dinger waren goldgelb, in der Mitte hohl und sahen aus wie kleine Schüsseln. Xiaoyue probierte einen Bissen – überhaupt nicht süß! Die Oma sagte lächelnd: „Das ist Yorkshire Pudding. Er wird aus Eiern, Mehl und Milch gemacht. Man isst ihn zum Fleisch und gibt oben ein bisschen Bratensoße darauf.“",
+    "Xiaoyue aß noch zwei und fand sie noch leckerer, als sie gedacht hatte. Nach dem Essen sagte sie: „Nächstes Mal lade ich euch zu Jiaozi ein! Meine Teigtaschen sehen nicht so schön aus wie Omas Puddings, aber sie schmecken auch sehr gut.“ Alle lachten."
+   ],
+   "paragraphs_pt": [
+    "Xiaoyue estuda em Manchester, na Inglaterra. No sábado passado, a colega dela, Emily, perguntou: “Você está livre amanhã na hora do almoço? Vem almoçar um Sunday roast lá em casa!” Xiaoyue não sabia o que era isso, mas respondeu toda contente: “Claro!”",
+    "Emily explicou que Sunday roast é “o assado de domingo”. Muitas famílias britânicas comem essa refeição juntas aos domingos: rosbife ou frango assado, com batatas, cenouras e outros legumes. “Ah, e tem Yorkshire pudding”, disse Emily. “O da minha avó é o melhor.”",
+    "Xiaoyue ficou muito feliz ao ouvir isso. Ela adora pudim e achou que depois da comida teria um docinho.",
+    "No domingo, a avó da Emily colocou na mesa um prato com uma coisa quentinha. Eram douradinhos, ocos no meio e tinham a forma de tigelinhas. Xiaoyue deu uma mordida — não era nada doce! A avó disse sorrindo: “Isto é Yorkshire pudding. É feito com ovos, farinha e leite. Come-se com a carne, com um pouco de molho por cima.”",
+    "Xiaoyue comeu mais dois e achou ainda mais gostoso do que tinha imaginado. Depois do almoço, ela disse: “Da próxima vez eu convido vocês para comer jiaozi! Os meus jiaozi não são tão bonitos quanto os puddings da vovó, mas também são muito gostosos.” Todo mundo riu."
+   ],
+   "glossary": [
+    {
+     "w": "烤",
+     "p": "kǎo",
+     "en": "to roast; to bake",
+     "de": "braten; backen (im Ofen)",
+     "pt": "assar"
+    },
+    {
+     "w": "家庭",
+     "p": "jiā tíng",
+     "en": "family; household",
+     "de": "die Familie; der Haushalt",
+     "pt": "a família"
+    },
+    {
+     "w": "土豆",
+     "p": "tǔ dòu",
+     "en": "potato",
+     "de": "die Kartoffel",
+     "pt": "a batata"
+    },
+    {
+     "w": "胡萝卜",
+     "p": "hú luó bo",
+     "en": "carrot",
+     "de": "die Karotte",
+     "pt": "a cenoura"
+    },
+    {
+     "w": "蔬菜",
+     "p": "shū cài",
+     "en": "vegetables",
+     "de": "das Gemüse",
+     "pt": "os legumes; as verduras"
+    },
+    {
+     "w": "布丁",
+     "p": "bù dīng",
+     "en": "pudding",
+     "de": "der Pudding",
+     "pt": "o pudim"
+    },
+    {
+     "w": "以为",
+     "p": "yǐ wéi",
+     "en": "to think (wrongly); to assume",
+     "de": "(fälschlich) annehmen, glauben",
+     "pt": "achar (erradamente); supor"
+    },
+    {
+     "w": "点心",
+     "p": "diǎn xin",
+     "en": "snack; small sweet treat",
+     "de": "der Snack; das Gebäck",
+     "pt": "o lanchinho; o docinho"
+    },
+    {
+     "w": "盘",
+     "p": "pán",
+     "en": "plate; (measure word for dishes)",
+     "de": "der Teller; (Zählwort für Gerichte)",
+     "pt": "o prato; (classificador para pratos)"
+    },
+    {
+     "w": "尝",
+     "p": "cháng",
+     "en": "to taste; to try (food)",
+     "de": "probieren, kosten",
+     "pt": "provar (comida)"
+    },
+    {
+     "w": "面粉",
+     "p": "miàn fěn",
+     "en": "flour",
+     "de": "das Mehl",
+     "pt": "a farinha"
+    },
+    {
+     "w": "肉汁",
+     "p": "ròu zhī",
+     "en": "gravy; meat juices",
+     "de": "die Bratensoße",
+     "pt": "o molho de carne"
+    }
+   ],
+   "grammar": "A 没有 B + adjective means 'A is not as … as B': 我做的饺子没有奶奶的布丁好看 'my dumplings don't look as nice as Grandma's puddings'. Compare A 比 B 还 + adjective, 'A is even more … than B': 比她想的还好吃 'even tastier than she imagined'.",
+   "grammar_de": "A 没有 B + Adjektiv bedeutet „A ist nicht so … wie B“: 我做的饺子没有奶奶的布丁好看 „meine Jiaozi sehen nicht so schön aus wie Omas Puddings“. Vergleiche A 比 B 还 + Adjektiv, „A ist noch …er als B“: 比她想的还好吃 „noch leckerer, als sie gedacht hatte“.",
+   "grammar_pt": "A 没有 B + adjetivo significa “A não é tão … quanto B”: 我做的饺子没有奶奶的布丁好看 “os meus jiaozi não são tão bonitos quanto os puddings da vovó”. Compare com A 比 B 还 + adjetivo, “A é ainda mais … que B”: 比她想的还好吃 “ainda mais gostoso do que ela tinha imaginado”.",
+   "questions": [
+    "Sunday roast一般有哪些菜？",
+    "小月为什么以为饭后有甜的东西？",
+    "约克郡布丁是用什么做的？要怎么吃？"
+   ],
+   "sources": []
+  }
+ ]
+}
