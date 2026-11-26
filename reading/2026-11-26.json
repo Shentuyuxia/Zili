@@ -1,0 +1,164 @@
+{
+ "date": "2026-11-26",
+ "createdBy": "claude",
+ "items": [
+  {
+   "lang": "zh",
+   "level": "HSK5",
+   "kind": "dialogue",
+   "section": "学习与工作",
+   "title": "下班以后，手机静音",
+   "title_en": "After work, phone on silent",
+   "title_de": "Nach Feierabend: Handy auf lautlos",
+   "title_pt": "Depois do trabalho, celular no silencioso",
+   "dek": "刚到德国工作的王明发现，同事们对“下班”这两个字有自己的理解。",
+   "paragraphs": [
+    "王明：苏菲，昨天晚上八点我给你发了一封邮件，问下周开会的事。你今天早上才回，我还以为你生我的气了。",
+    "苏菲：怎么会呢！我六点就下班了。下班以后，我一般不看工作邮件，手机也调成静音。德语里有个词叫“Feierabend”，意思差不多是“一天的工作结束了，剩下的时间属于自己”。",
+    "王明：原来如此！我以前的公司可不一样。领导晚上十点在群里发消息，大家都得马上回复，不然好像就是不认真。刚工作那几年，我几乎是废寝忘食，后来才发现，忙不等于效率高。",
+    "苏菲：我明白。不过这里也不是人人都这样。项目特别忙的时候，有的同事也会加班，只是大家会提前说好，不会默认别人随时在线。",
+    "王明：那如果有特别紧急的事呢？",
+    "苏菲：那就直接打电话。真正紧急的事其实很少。我们组有一个不成文的规定：邮件第二天回就可以，电话才代表“现在需要你”。这样一来，每个人都知道什么时候该紧张，什么时候可以放松。",
+    "王明：听你这么一说，我恍然大悟。我一直以为晚上马上回消息是负责任的表现，其实别人可能根本没希望我马上回。",
+    "苏菲：对啊。不过你也不用一下子全改，入乡随俗嘛，慢慢来。今天下班以后，你打算做什么？",
+    "王明：说实话，我还没想好。以前下了班，脑子里也全是工作。现在突然有了一个完整的晚上，我反而有点不习惯。",
+    "苏菲：那跟我们一起去河边散散步，再找个地方喝杯热饮吧。劳逸结合，明天上班的时候精神会更好。",
+    "王明：好！不过出发以前，我得先做一件重要的事——把工作群的通知关掉。"
+   ],
+   "paragraphs_en": [
+    "Wang Ming: Sophie, I sent you an email at eight last night asking about next week's meeting. You only replied this morning — I thought you were angry with me.",
+    "Sophie: Of course not! I finished work at six. After work I usually don't read work emails, and I put my phone on silent too. German has a word, “Feierabend”, which roughly means “the day's work is over, and the rest of the time belongs to you”.",
+    "Wang Ming: I see! My old company was quite different. The boss would post messages in the group chat at ten at night, and everyone had to reply right away, otherwise it looked as if you weren't serious. In my first few years of working I hardly ate or slept, and only later did I realise that being busy doesn't mean being efficient.",
+    "Sophie: I understand. But not everyone here is like this either. When a project is really busy, some colleagues work overtime too — it's just that people agree on it in advance and don't assume others are online all the time.",
+    "Wang Ming: And what if something is really urgent?",
+    "Sophie: Then you just call. Truly urgent things are actually rare. Our team has an unwritten rule: it's fine to answer an email the next day; only a phone call means “I need you now”. That way everyone knows when to be on alert and when they can relax.",
+    "Wang Ming: Hearing you put it that way, it suddenly makes sense. I always thought replying to messages straight away in the evening showed I was responsible, but other people may never have expected me to reply at once.",
+    "Sophie: Exactly. But you don't have to change everything at once — when in Rome, do as the Romans do, just take it slowly. What are you planning to do after work today?",
+    "Wang Ming: To be honest, I haven't decided yet. Before, even after work my head was full of work. Now that I suddenly have a whole evening, I actually feel a bit strange about it.",
+    "Sophie: Then come with us for a walk by the river, and we'll find somewhere for a hot drink. Work and rest go together — you'll have more energy at work tomorrow.",
+    "Wang Ming: Great! But before we go, I have to do one important thing first — turn off the notifications for the work group chat."
+   ],
+   "paragraphs_de": [
+    "Wang Ming: Sophie, ich habe dir gestern Abend um acht eine E-Mail geschickt und nach dem Meeting nächste Woche gefragt. Du hast erst heute Morgen geantwortet – ich dachte schon, du bist sauer auf mich.",
+    "Sophie: Ach was! Ich hatte um sechs schon Feierabend. Nach der Arbeit lese ich normalerweise keine Arbeitsmails, und mein Handy stelle ich auch auf lautlos. Im Deutschen gibt es das Wort „Feierabend“, das ungefähr bedeutet: „Die Arbeit des Tages ist vorbei, die restliche Zeit gehört dir.“",
+    "Wang Ming: Ach so! In meiner alten Firma war das ganz anders. Der Chef hat um zehn Uhr abends Nachrichten in die Gruppe geschickt, und alle mussten sofort antworten, sonst sah es so aus, als würde man es nicht ernst nehmen. In meinen ersten Berufsjahren habe ich fast vergessen zu essen und zu schlafen, und erst später habe ich gemerkt: Viel zu tun heißt nicht, effizient zu sein.",
+    "Sophie: Das verstehe ich. Aber hier sind auch nicht alle so. Wenn ein Projekt besonders stressig ist, machen manche Kollegen auch Überstunden – nur wird das vorher abgesprochen, und niemand geht einfach davon aus, dass die anderen ständig online sind.",
+    "Wang Ming: Und wenn etwas wirklich dringend ist?",
+    "Sophie: Dann ruft man einfach an. Wirklich dringende Sachen gibt es eigentlich selten. In unserem Team gibt es eine ungeschriebene Regel: Auf eine E-Mail reicht es, am nächsten Tag zu antworten; erst ein Anruf heißt „Ich brauche dich jetzt“. So weiß jeder, wann er angespannt sein muss und wann er sich entspannen kann.",
+    "Wang Ming: Wenn du das so sagst, geht mir ein Licht auf. Ich dachte immer, abends sofort zu antworten zeigt, dass man verantwortungsbewusst ist. Dabei haben die anderen vielleicht gar nicht erwartet, dass ich sofort antworte.",
+    "Sophie: Genau. Aber du musst nicht alles auf einmal ändern – andere Länder, andere Sitten, mach langsam. Was hast du heute nach der Arbeit vor?",
+    "Wang Ming: Ehrlich gesagt weiß ich es noch nicht. Früher hatte ich auch nach Feierabend nur Arbeit im Kopf. Jetzt habe ich plötzlich einen ganzen Abend frei, und das ist für mich eher ungewohnt.",
+    "Sophie: Dann komm mit uns am Fluss spazieren, und danach suchen wir uns ein Plätzchen für ein warmes Getränk. Arbeit und Erholung gehören zusammen – morgen bei der Arbeit hast du dann mehr Energie.",
+    "Wang Ming: Gern! Aber bevor wir losgehen, muss ich noch etwas Wichtiges erledigen – die Benachrichtigungen für die Arbeitsgruppe ausschalten."
+   ],
+   "paragraphs_pt": [
+    "Wang Ming: Sophie, ontem às oito da noite eu te mandei um e-mail perguntando sobre a reunião da semana que vem. Você só respondeu hoje de manhã — achei que você estava brava comigo.",
+    "Sophie: Imagina! Eu saí do trabalho às seis. Depois do expediente, normalmente não leio e-mails de trabalho e também deixo o celular no silencioso. Em alemão existe uma palavra, “Feierabend”, que quer dizer mais ou menos “o trabalho do dia acabou, o resto do tempo é seu”.",
+    "Wang Ming: Ah, entendi! Na minha antiga empresa era bem diferente. O chefe mandava mensagem no grupo às dez da noite, e todo mundo tinha que responder na hora, senão parecia que você não levava o trabalho a sério. Nos meus primeiros anos de trabalho eu quase esquecia de comer e dormir, e só depois percebi que estar ocupado não é o mesmo que ser eficiente.",
+    "Sophie: Eu entendo. Mas aqui também não é todo mundo assim. Quando um projeto está muito corrido, alguns colegas também fazem hora extra — só que isso é combinado antes, e ninguém parte do princípio de que os outros estão online o tempo todo.",
+    "Wang Ming: E se for algo muito urgente?",
+    "Sophie: Aí é só ligar. Coisas realmente urgentes são raras, na verdade. Nossa equipe tem uma regra não escrita: e-mail pode ser respondido no dia seguinte; só uma ligação quer dizer “preciso de você agora”. Assim todo mundo sabe quando é hora de ficar alerta e quando dá para relaxar.",
+    "Wang Ming: Ouvindo você falar assim, caiu a ficha. Eu sempre achei que responder mensagens na hora, à noite, era sinal de responsabilidade, mas talvez os outros nem esperassem que eu respondesse logo.",
+    "Sophie: Pois é. Mas você não precisa mudar tudo de uma vez — em Roma, como os romanos, vai com calma. O que você vai fazer hoje depois do trabalho?",
+    "Wang Ming: Para ser sincero, ainda não sei. Antes, mesmo depois do expediente, minha cabeça continuava cheia de trabalho. Agora que de repente tenho uma noite inteira livre, é até meio estranho para mim.",
+    "Sophie: Então vem com a gente dar uma volta na beira do rio, e depois a gente procura um lugar para tomar uma bebida quente. Trabalho e descanso andam juntos — amanhã você vai chegar ao trabalho com mais energia.",
+    "Wang Ming: Combinado! Mas antes de sair, preciso fazer uma coisa importante — desativar as notificações do grupo do trabalho."
+   ],
+   "glossary": [
+    {
+     "w": "静音",
+     "p": "jìng yīn",
+     "en": "silent mode (phone)",
+     "de": "der Lautlos-Modus",
+     "pt": "o modo silencioso"
+    },
+    {
+     "w": "原来如此",
+     "p": "yuán lái rú cǐ",
+     "en": "so that's how it is; I see",
+     "de": "ach so; so ist das also",
+     "pt": "ah, então é isso; entendi"
+    },
+    {
+     "w": "废寝忘食",
+     "p": "fèi qǐn wàng shí",
+     "en": "idiom: to forget to eat and sleep (from working so hard)",
+     "de": "Redewendung: vor lauter Arbeit Essen und Schlafen vergessen",
+     "pt": "expressão: esquecer de comer e dormir (de tanto trabalhar)"
+    },
+    {
+     "w": "效率",
+     "p": "xiào lǜ",
+     "en": "efficiency",
+     "de": "die Effizienz",
+     "pt": "a eficiência"
+    },
+    {
+     "w": "默认",
+     "p": "mò rèn",
+     "en": "to assume tacitly; to take for granted",
+     "de": "stillschweigend annehmen; voraussetzen",
+     "pt": "presumir; dar como certo"
+    },
+    {
+     "w": "在线",
+     "p": "zài xiàn",
+     "en": "online",
+     "de": "online",
+     "pt": "online; conectado"
+    },
+    {
+     "w": "紧急",
+     "p": "jǐn jí",
+     "en": "urgent",
+     "de": "dringend",
+     "pt": "urgente"
+    },
+    {
+     "w": "不成文",
+     "p": "bù chéng wén",
+     "en": "unwritten (rule)",
+     "de": "ungeschrieben (Regel)",
+     "pt": "não escrito (regra)"
+    },
+    {
+     "w": "恍然大悟",
+     "p": "huǎng rán dà wù",
+     "en": "idiom: to suddenly understand; the penny drops",
+     "de": "Redewendung: plötzlich begreifen; ein Licht geht auf",
+     "pt": "expressão: entender de repente; cair a ficha"
+    },
+    {
+     "w": "负责任",
+     "p": "fù zé rèn",
+     "en": "responsible; conscientious",
+     "de": "verantwortungsbewusst",
+     "pt": "responsável"
+    },
+    {
+     "w": "入乡随俗",
+     "p": "rù xiāng suí sú",
+     "en": "idiom: when in Rome, do as the Romans do",
+     "de": "Redewendung: andere Länder, andere Sitten",
+     "pt": "expressão: em Roma, como os romanos"
+    },
+    {
+     "w": "劳逸结合",
+     "p": "láo yì jié hé",
+     "en": "idiom: to balance work and rest",
+     "de": "Redewendung: Arbeit und Erholung im Gleichgewicht halten",
+     "pt": "expressão: equilibrar trabalho e descanso"
+    }
+   ],
+   "grammar": "反而 (fǎn'ér) means 'on the contrary; instead': the result goes against what you would expect. 现在突然有了一个完整的晚上，我反而有点不习惯 — you'd expect a free evening to feel good, but instead it feels strange. 反而 stands before the verb or adjective, after the subject.",
+   "grammar_de": "反而 (fǎn'ér) bedeutet „im Gegenteil; stattdessen; eher“: Das Ergebnis ist anders, als man erwarten würde. 现在突然有了一个完整的晚上，我反而有点不习惯 – man würde erwarten, dass ein freier Abend angenehm ist, aber stattdessen ist er ungewohnt. 反而 steht nach dem Subjekt, vor dem Verb oder Adjektiv.",
+   "grammar_pt": "反而 (fǎn'ér) significa “pelo contrário; em vez disso“: o resultado vai contra o que se esperaria. 现在突然有了一个完整的晚上，我反而有点不习惯 — seria de esperar que uma noite livre fosse boa, mas, ao contrário, ela parece estranha. 反而 fica depois do sujeito, antes do verbo ou do adjetivo.",
+   "questions": [
+    "苏菲为什么第二天早上才回王明的邮件？",
+    "在苏菲的小组里，邮件和电话分别代表什么？",
+    "有了一个完整的晚上，王明为什么反而不习惯？"
+   ],
+   "sources": []
+  }
+ ]
+}

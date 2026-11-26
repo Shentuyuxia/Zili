@@ -1,6 +1,18 @@
 {
- "updated": "2026-11-25T03:38:57Z",
+ "updated": "2026-11-26T03:39:01Z",
  "days": [
+  {
+   "date": "2026-11-26",
+   "items": [
+    {
+     "i": 0,
+     "lang": "zh",
+     "title": "下班以后，手机静音",
+     "kind": "dialogue",
+     "level": "HSK5"
+    }
+   ]
+  },
   {
    "date": "2026-11-25",
    "items": [
