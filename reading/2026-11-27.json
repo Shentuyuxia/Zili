@@ -1,0 +1,111 @@
+{
+ "date": "2026-11-27",
+ "createdBy": "claude",
+ "items": [
+  {
+   "lang": "zh",
+   "level": "HSK1",
+   "kind": "story",
+   "section": "休闲",
+   "title": "星期五看电影",
+   "title_en": "Friday film night",
+   "title_de": "Filmabend am Freitag",
+   "title_pt": "Sexta-feira de cinema em casa",
+   "paragraphs": [
+    "今天是星期五。晚上七点，王明和爸爸妈妈都在家。",
+    "妈妈说：“我们看电影吧！”王明很高兴。",
+    "爸爸去买水果。王明做茶。小猫也来了，它坐在椅子上。",
+    "电影很好看。八点半，小猫睡觉了。九点，王明也想睡觉了。",
+    "王明说：“下个星期五，我们再看电影，好吗？”爸爸妈妈说：“好！”"
+   ],
+   "paragraphs_en": [
+    "Today is Friday. At seven in the evening, Wang Ming and his mum and dad are all at home.",
+    "Mum says, “Let's watch a film!” Wang Ming is very happy.",
+    "Dad goes to buy fruit. Wang Ming makes tea. The kitten comes too; it sits on a chair.",
+    "The film is really good. At half past eight, the kitten falls asleep. At nine, Wang Ming wants to go to sleep too.",
+    "Wang Ming says, “Next Friday, shall we watch a film again?” Mum and Dad say, “OK!”"
+   ],
+   "paragraphs_de": [
+    "Heute ist Freitag. Um sieben Uhr abends sind Wang Ming und seine Mama und sein Papa alle zu Hause.",
+    "Mama sagt: „Lass uns einen Film schauen!“ Wang Ming freut sich sehr.",
+    "Papa geht Obst kaufen. Wang Ming macht Tee. Das Kätzchen kommt auch; es sitzt auf einem Stuhl.",
+    "Der Film ist sehr schön. Um halb neun schläft das Kätzchen ein. Um neun möchte Wang Ming auch schlafen.",
+    "Wang Ming sagt: „Nächsten Freitag schauen wir wieder einen Film, ja?“ Mama und Papa sagen: „Gut!“"
+   ],
+   "paragraphs_pt": [
+    "Hoje é sexta-feira. Às sete da noite, Wang Ming, a mãe e o pai estão todos em casa.",
+    "A mãe diz: “Vamos ver um filme!” Wang Ming fica muito feliz.",
+    "O pai vai comprar frutas. Wang Ming faz chá. O gatinho também vem; ele senta na cadeira.",
+    "O filme é muito bom. Às oito e meia, o gatinho dorme. Às nove, Wang Ming também quer dormir.",
+    "Wang Ming diz: “Na próxima sexta, vamos ver um filme de novo, tá bom?” A mãe e o pai dizem: “Tá bom!”"
+   ],
+   "glossary": [
+    {
+     "w": "星期五",
+     "p": "xīng qī wǔ",
+     "en": "Friday",
+     "de": "der Freitag",
+     "pt": "a sexta-feira"
+    },
+    {
+     "w": "电影",
+     "p": "diàn yǐng",
+     "en": "film; movie",
+     "de": "der Film",
+     "pt": "o filme"
+    },
+    {
+     "w": "高兴",
+     "p": "gāo xìng",
+     "en": "happy; glad",
+     "de": "froh; sich freuen",
+     "pt": "feliz; contente"
+    },
+    {
+     "w": "水果",
+     "p": "shuǐ guǒ",
+     "en": "fruit",
+     "de": "das Obst",
+     "pt": "a fruta"
+    },
+    {
+     "w": "椅子",
+     "p": "yǐ zi",
+     "en": "chair",
+     "de": "der Stuhl",
+     "pt": "a cadeira"
+    },
+    {
+     "w": "睡觉",
+     "p": "shuì jiào",
+     "en": "to sleep; to go to bed",
+     "de": "schlafen",
+     "pt": "dormir"
+    },
+    {
+     "w": "下个",
+     "p": "xià ge",
+     "en": "next (week, month …)",
+     "de": "nächste(r)",
+     "pt": "o próximo / a próxima"
+    },
+    {
+     "w": "再",
+     "p": "zài",
+     "en": "again (in the future)",
+     "de": "wieder; noch einmal",
+     "pt": "de novo; outra vez"
+    }
+   ],
+   "grammar": "吧 (ba) at the end of a sentence makes a friendly suggestion: 我们看电影吧！ 'Let's watch a film!' Without 吧, 我们看电影 is just a statement: 'We watch a film.'",
+   "grammar_de": "吧 (ba) am Satzende macht einen freundlichen Vorschlag: 我们看电影吧！ „Lass uns einen Film schauen!“ Ohne 吧 ist 我们看电影 nur eine Aussage: „Wir schauen einen Film.“",
+   "grammar_pt": "吧 (ba) no fim da frase faz uma sugestão simpática: 我们看电影吧！ “Vamos ver um filme!” Sem 吧, 我们看电影 é só uma afirmação: “Nós vemos um filme.”",
+   "questions": [
+    "星期五晚上，王明和谁在家？",
+    "爸爸去买什么？",
+    "小猫几点睡觉了？"
+   ],
+   "sources": []
+  }
+ ]
+}
