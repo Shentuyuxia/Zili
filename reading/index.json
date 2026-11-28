@@ -1,6 +1,18 @@
 {
- "updated": "2026-11-27T03:38:15Z",
+ "updated": "2026-11-28T03:38:34Z",
  "days": [
+  {
+   "date": "2026-11-28",
+   "items": [
+    {
+     "i": 0,
+     "lang": "zh",
+     "title": "第一次过感恩节",
+     "kind": "feature",
+     "level": "HSK2"
+    }
+   ]
+  },
   {
    "date": "2026-11-27",
    "items": [

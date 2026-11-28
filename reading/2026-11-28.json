@@ -1,0 +1,111 @@
+{
+ "date": "2026-11-28",
+ "createdBy": "claude",
+ "items": [
+  {
+   "lang": "zh",
+   "level": "HSK2",
+   "kind": "feature",
+   "section": "文化与节日",
+   "title": "第一次过感恩节",
+   "title_en": "My first Thanksgiving",
+   "title_de": "Mein erstes Thanksgiving",
+   "title_pt": "Meu primeiro Dia de Ação de Graças",
+   "paragraphs": [
+    "十一月的第四个星期四是美国的感恩节。我在美国上大学，今年我的同学Emily请我去她家吃饭。",
+    "她家来了很多人：爷爷、奶奶、叔叔、阿姨，还有两只小狗。桌子上有火鸡、土豆和玉米，还有一个很大的南瓜派。",
+    "吃饭以前，大家一个一个地说今年想感谢的事。我有点儿紧张，因为我的英语说得不太好。但是我还是说了：“谢谢你们请我来，在这里我不是一个人。”",
+    "奶奶笑了，给了我一块很大的南瓜派。火鸡很好吃，南瓜派更好吃！",
+    "回家的路上，我想：说“谢谢”不用等感恩节。明天我要给妈妈打电话，跟她说一声“谢谢”。"
+   ],
+   "paragraphs_en": [
+    "The fourth Thursday of November is Thanksgiving in the United States. I'm at university in the US, and this year my classmate Emily invited me to her home for dinner.",
+    "Lots of people came to her house: her grandpa, grandma, uncle and aunt, plus two little dogs. On the table there was turkey, potatoes and corn, and a really big pumpkin pie.",
+    "Before we ate, everyone took turns saying what they wanted to be thankful for this year. I was a bit nervous, because my English isn't very good. But I still said: “Thank you for inviting me. Here, I'm not on my own.”",
+    "Grandma smiled and gave me a really big piece of pumpkin pie. The turkey was delicious, and the pumpkin pie was even better!",
+    "On the way home I thought: you don't have to wait for Thanksgiving to say “thank you”. Tomorrow I'll call my mum and say “thank you” to her."
+   ],
+   "paragraphs_de": [
+    "Der vierte Donnerstag im November ist in den USA Thanksgiving. Ich studiere in den USA, und dieses Jahr hat mich meine Kommilitonin Emily zum Essen zu sich nach Hause eingeladen.",
+    "Bei ihr waren viele Leute: Opa, Oma, Onkel und Tante und dazu zwei kleine Hunde. Auf dem Tisch gab es Truthahn, Kartoffeln und Mais und noch einen sehr großen Kürbiskuchen.",
+    "Vor dem Essen hat einer nach dem anderen erzählt, wofür er dieses Jahr dankbar ist. Ich war ein bisschen nervös, weil mein Englisch nicht so gut ist. Aber ich habe trotzdem gesagt: „Danke, dass ihr mich eingeladen habt. Hier bin ich nicht allein.“",
+    "Oma hat gelächelt und mir ein sehr großes Stück Kürbiskuchen gegeben. Der Truthahn war lecker, der Kürbiskuchen noch leckerer!",
+    "Auf dem Heimweg dachte ich: Um „Danke“ zu sagen, muss man nicht auf Thanksgiving warten. Morgen rufe ich meine Mama an und sage ihr „Danke“."
+   ],
+   "paragraphs_pt": [
+    "A quarta quinta-feira de novembro é o Dia de Ação de Graças nos Estados Unidos. Eu faço faculdade nos EUA, e este ano a minha colega Emily me convidou para jantar na casa dela.",
+    "Muita gente foi à casa dela: o avô, a avó, o tio, a tia e ainda dois cachorrinhos. Na mesa tinha peru, batata e milho, e também uma torta de abóbora bem grande.",
+    "Antes de comer, cada um falou, um por um, pelo que queria agradecer este ano. Eu fiquei um pouco nervoso, porque o meu inglês não é muito bom. Mas mesmo assim eu disse: “Obrigado por me convidarem. Aqui eu não estou sozinho.”",
+    "A avó sorriu e me deu um pedaço bem grande de torta de abóbora. O peru estava gostoso, e a torta de abóbora, mais gostosa ainda!",
+    "No caminho de volta para casa, pensei: para dizer “obrigado” não precisa esperar o Dia de Ação de Graças. Amanhã vou ligar para a minha mãe e dizer “obrigado” para ela."
+   ],
+   "glossary": [
+    {
+     "w": "感恩节",
+     "p": "gǎn ēn jié",
+     "en": "Thanksgiving",
+     "de": "das Thanksgiving; das Erntedankfest (USA)",
+     "pt": "o Dia de Ação de Graças"
+    },
+    {
+     "w": "感谢",
+     "p": "gǎn xiè",
+     "en": "to thank; to be grateful for",
+     "de": "danken; dankbar sein",
+     "pt": "agradecer"
+    },
+    {
+     "w": "火鸡",
+     "p": "huǒ jī",
+     "en": "turkey",
+     "de": "der Truthahn",
+     "pt": "o peru"
+    },
+    {
+     "w": "南瓜派",
+     "p": "nán guā pài",
+     "en": "pumpkin pie",
+     "de": "der Kürbiskuchen",
+     "pt": "a torta de abóbora"
+    },
+    {
+     "w": "玉米",
+     "p": "yù mǐ",
+     "en": "corn; maize",
+     "de": "der Mais",
+     "pt": "o milho"
+    },
+    {
+     "w": "土豆",
+     "p": "tǔ dòu",
+     "en": "potato",
+     "de": "die Kartoffel",
+     "pt": "a batata"
+    },
+    {
+     "w": "紧张",
+     "p": "jǐn zhāng",
+     "en": "nervous",
+     "de": "nervös",
+     "pt": "nervoso"
+    },
+    {
+     "w": "一个一个地",
+     "p": "yí gè yí gè de",
+     "en": "one by one; one after another",
+     "de": "einer nach dem anderen",
+     "pt": "um por um"
+    }
+   ],
+   "grammar": "但是……还是 + verb means 'but … still (did it anyway)': 我有点儿紧张，但是我还是说了 'I was a bit nervous, but I still said it.' 还是 goes right before the verb.",
+   "grammar_de": "但是……还是 + Verb bedeutet „aber … trotzdem“: 我有点儿紧张，但是我还是说了 „Ich war ein bisschen nervös, aber ich habe es trotzdem gesagt.“ 还是 steht direkt vor dem Verb.",
+   "grammar_pt": "但是……还是 + verbo significa “mas … mesmo assim”: 我有点儿紧张，但是我还是说了 “Eu estava um pouco nervoso, mas mesmo assim falei.” 还是 vem logo antes do verbo.",
+   "questions": [
+    "Emily家的桌子上有什么菜？",
+    "吃饭以前，大家做了什么？",
+    "“我”明天想做什么？"
+   ],
+   "sources": []
+  }
+ ]
+}
